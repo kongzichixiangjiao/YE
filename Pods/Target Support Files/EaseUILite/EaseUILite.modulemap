@@ -1,0 +1,6 @@
+framework module EaseUILite {
+  umbrella header "EaseUILite-umbrella.h"
+
+  export *
+  module * { export * }
+}

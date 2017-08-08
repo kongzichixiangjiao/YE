@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11EE240506B9841A6F5B3228 /* Pods_YE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381C7D52E9006ACBDEED168B /* Pods_YE.framework */; };
 		94D388821F39BE4100F974A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388811F39BE4100F974A6 /* AppDelegate.swift */; };
 		94D388841F39BE4100F974A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388831F39BE4100F974A6 /* ViewController.swift */; };
 		94D388871F39BE4100F974A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D388851F39BE4100F974A6 /* Main.storyboard */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		381C7D52E9006ACBDEED168B /* Pods_YE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		678318913B05B3CFC6F3F7B8 /* Pods-YE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YE.release.xcconfig"; path = "Pods/Target Support Files/Pods-YE/Pods-YE.release.xcconfig"; sourceTree = "<group>"; };
 		94D3887E1F39BE4100F974A6 /* YE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D388811F39BE4100F974A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94D388831F39BE4100F974A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		94D3889D1F39BE4100F974A6 /* YEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D388A11F39BE4100F974A6 /* YEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YEUITests.swift; sourceTree = "<group>"; };
 		94D388A31F39BE4100F974A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDF16BF32666F3D156E4C355 /* Pods-YE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YE/Pods-YE.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11EE240506B9841A6F5B3228 /* Pods_YE.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +86,8 @@
 				94D388951F39BE4100F974A6 /* YETests */,
 				94D388A01F39BE4100F974A6 /* YEUITests */,
 				94D3887F1F39BE4100F974A6 /* Products */,
+				9C47080CBCA45A60DE8F4723 /* Pods */,
+				9EE863FD7AA7DD3F3BC3AFD7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +132,23 @@
 			path = YEUITests;
 			sourceTree = "<group>";
 		};
+		9C47080CBCA45A60DE8F4723 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CDF16BF32666F3D156E4C355 /* Pods-YE.debug.xcconfig */,
+				678318913B05B3CFC6F3F7B8 /* Pods-YE.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9EE863FD7AA7DD3F3BC3AFD7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				381C7D52E9006ACBDEED168B /* Pods_YE.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94D388A61F39BE4100F974A6 /* Build configuration list for PBXNativeTarget "YE" */;
 			buildPhases = (
+				A2B4F4067260BAC69C109755 /* [CP] Check Pods Manifest.lock */,
 				94D3887A1F39BE4100F974A6 /* Sources */,
 				94D3887B1F39BE4100F974A6 /* Frameworks */,
 				94D3887C1F39BE4100F974A6 /* Resources */,
+				E31950EE4AC96E7D491BFE25 /* [CP] Embed Pods Frameworks */,
+				8E9EE1FE72E5BD189C4E729E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -253,6 +280,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8E9EE1FE72E5BD189C4E729E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YE/Pods-YE-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2B4F4067260BAC69C109755 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E31950EE4AC96E7D491BFE25 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YE/Pods-YE-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		94D3887A1F39BE4100F974A6 /* Sources */ = {
@@ -410,6 +485,7 @@
 		};
 		94D388A71F39BE4100F974A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDF16BF32666F3D156E4C355 /* Pods-YE.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YE/Info.plist;
@@ -422,6 +498,7 @@
 		};
 		94D388A81F39BE4100F974A6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 678318913B05B3CFC6F3F7B8 /* Pods-YE.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YE/Info.plist;

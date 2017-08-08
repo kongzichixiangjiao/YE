@@ -1,0 +1,12 @@
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
+FRAMEWORK_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/DACircularProgress" "$PODS_CONFIGURATION_BUILD_DIR/EaseUILite" "$PODS_CONFIGURATION_BUILD_DIR/HandyJSON" "$PODS_CONFIGURATION_BUILD_DIR/MBProgressHUD" "$PODS_CONFIGURATION_BUILD_DIR/MJRefresh" "$PODS_CONFIGURATION_BUILD_DIR/MWPhotoBrowser" "$PODS_CONFIGURATION_BUILD_DIR/ReactiveSwift" "$PODS_CONFIGURATION_BUILD_DIR/Result" "$PODS_CONFIGURATION_BUILD_DIR/SDWebImage" "${PODS_ROOT}/HyphenateLite/ios_IM_HyphenateLite_sdk_3.3.2/HyphenateSDK"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1 ENABLE_LITE=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/HyphenateLite"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
+OTHER_CFLAGS = $(inherited) -iquote "$PODS_CONFIGURATION_BUILD_DIR/DACircularProgress/DACircularProgress.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/EaseUILite/EaseUILite.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/HandyJSON/HandyJSON.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/MBProgressHUD/MBProgressHUD.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/MJRefresh/MJRefresh.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/MWPhotoBrowser/MWPhotoBrowser.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/ReactiveSwift/ReactiveSwift.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/Result/Result.framework/Headers" -iquote "$PODS_CONFIGURATION_BUILD_DIR/SDWebImage/SDWebImage.framework/Headers" -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/HyphenateLite"
+OTHER_LDFLAGS = $(inherited) -ObjC -framework "DACircularProgress" -framework "EaseUILite" -framework "HandyJSON" -framework "HyphenateLite" -framework "MBProgressHUD" -framework "MJRefresh" -framework "MWPhotoBrowser" -framework "ReactiveSwift" -framework "Result" -framework "SDWebImage"
+OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
+PODS_BUILD_DIR = $BUILD_DIR
+PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods
