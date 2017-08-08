@@ -8,13 +8,199 @@
 
 /* Begin PBXBuildFile section */
 		11EE240506B9841A6F5B3228 /* Pods_YE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381C7D52E9006ACBDEED168B /* Pods_YE.framework */; };
-		94D388821F39BE4100F974A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388811F39BE4100F974A6 /* AppDelegate.swift */; };
-		94D388841F39BE4100F974A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388831F39BE4100F974A6 /* ViewController.swift */; };
-		94D388871F39BE4100F974A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D388851F39BE4100F974A6 /* Main.storyboard */; };
-		94D388891F39BE4100F974A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94D388881F39BE4100F974A6 /* Assets.xcassets */; };
-		94D3888C1F39BE4100F974A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D3888A1F39BE4100F974A6 /* LaunchScreen.storyboard */; };
 		94D388971F39BE4100F974A6 /* YETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388961F39BE4100F974A6 /* YETests.swift */; };
 		94D388A21F39BE4100F974A6 /* YEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388A11F39BE4100F974A6 /* YEUITests.swift */; };
+		94D3899F1F39C23A00F974A6 /* YYBaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388B11F39C23900F974A6 /* YYBaseCollectionViewController.swift */; };
+		94D389A01F39C23A00F974A6 /* YYBaseImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388B21F39C23900F974A6 /* YYBaseImagePickerController.swift */; };
+		94D389A11F39C23A00F974A6 /* YYBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388B31F39C23900F974A6 /* YYBaseTableViewController.swift */; };
+		94D389A21F39C23A00F974A6 /* YYBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388B41F39C23900F974A6 /* YYBaseViewController.swift */; };
+		94D389A31F39C23A00F974A6 /* YYBaseNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388B71F39C23900F974A6 /* YYBaseNavigationView.swift */; };
+		94D389A41F39C23A00F974A6 /* YYBaseNavigationViewImageButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D388B81F39C23900F974A6 /* YYBaseNavigationViewImageButton.xib */; };
+		94D389A51F39C23A00F974A6 /* YYBaseNavigationViewIMGroupDetailsButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D388B91F39C23900F974A6 /* YYBaseNavigationViewIMGroupDetailsButton.xib */; };
+		94D389A61F39C23A00F974A6 /* YYBaseNavigationViewServiceButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D388BA1F39C23900F974A6 /* YYBaseNavigationViewServiceButton.xib */; };
+		94D389A71F39C23A00F974A6 /* YYBaseNavigationViewTextButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D388BB1F39C23900F974A6 /* YYBaseNavigationViewTextButton.xib */; };
+		94D389A81F39C23A00F974A6 /* YYBaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388BC1F39C23900F974A6 /* YYBaseCollectionView.swift */; };
+		94D389A91F39C23A00F974A6 /* YYBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388BD1F39C23900F974A6 /* YYBaseTableViewCell.swift */; };
+		94D389AA1F39C23A00F974A6 /* YYBaseTableViewFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388BE1F39C23900F974A6 /* YYBaseTableViewFooterView.swift */; };
+		94D389AB1F39C23A00F974A6 /* YYBaseTableViewFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D388BF1F39C23900F974A6 /* YYBaseTableViewFooterView.xib */; };
+		94D389AC1F39C23A00F974A6 /* YYBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388C01F39C23900F974A6 /* YYBaseView.swift */; };
+		94D389AD1F39C23A00F974A6 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388C31F39C23900F974A6 /* Bundle+Extension.swift */; };
+		94D389AE1F39C23A00F974A6 /* CGFloat+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388C41F39C23900F974A6 /* CGFloat+Extension.swift */; };
+		94D389AF1F39C23A00F974A6 /* NSMutableAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388C51F39C23900F974A6 /* NSMutableAttributedString+Extension.swift */; };
+		94D389B01F39C23A00F974A6 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388C61F39C23900F974A6 /* NSObject+Extension.swift */; };
+		94D389B11F39C23A00F974A6 /* ScrollView+BaneHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388C71F39C23900F974A6 /* ScrollView+BaneHeader.swift */; };
+		94D389B21F39C23A00F974A6 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388C81F39C23900F974A6 /* String+Extension.swift */; };
+		94D389B31F39C23A00F974A6 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388C91F39C23900F974A6 /* UIColor+Extension.swift */; };
+		94D389B41F39C23A00F974A6 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388CA1F39C23900F974A6 /* UIImage+Extension.swift */; };
+		94D389B51F39C23A00F974A6 /* UITableViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388CB1F39C23900F974A6 /* UITableViewCell+Extension.swift */; };
+		94D389B61F39C23A00F974A6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388CC1F39C23900F974A6 /* UIView+Extension.swift */; };
+		94D389B71F39C23A00F974A6 /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388CD1F39C23900F974A6 /* URL+Extension.swift */; };
+		94D389B81F39C23A00F974A6 /* cgts.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94D388CF1F39C23900F974A6 /* cgts.jpg */; };
+		94D389B91F39C23A00F974A6 /* IMG_0361.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94D388D01F39C23900F974A6 /* IMG_0361.jpg */; };
+		94D389BA1F39C23A00F974A6 /* IMG_0407.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94D388D11F39C23900F974A6 /* IMG_0407.jpg */; };
+		94D389BB1F39C23A00F974A6 /* IMG_0487.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94D388D21F39C23900F974A6 /* IMG_0487.jpg */; };
+		94D389BC1F39C23A00F974A6 /* IMG_0490.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94D388D31F39C23900F974A6 /* IMG_0490.jpg */; };
+		94D389BD1F39C23A00F974A6 /* IMG_2473.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94D388D41F39C23900F974A6 /* IMG_2473.jpg */; };
+		94D389BE1F39C23A00F974A6 /* IMG_2478.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94D388D51F39C23900F974A6 /* IMG_2478.jpg */; };
+		94D389BF1F39C23A00F974A6 /* IMG_2719.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94D388D61F39C23900F974A6 /* IMG_2719.jpg */; };
+		94D389C01F39C23A00F974A6 /* IMG_2772.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94D388D71F39C23900F974A6 /* IMG_2772.jpg */; };
+		94D389C11F39C23A00F974A6 /* IMG_2787.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94D388D81F39C23900F974A6 /* IMG_2787.jpg */; };
+		94D389C21F39C23A00F974A6 /* IMG_2898.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94D388D91F39C23900F974A6 /* IMG_2898.jpg */; };
+		94D389C31F39C23A00F974A6 /* IMG_3026.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94D388DA1F39C23900F974A6 /* IMG_3026.jpg */; };
+		94D389C41F39C23A00F974A6 /* IMG_3027.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94D388DB1F39C23900F974A6 /* IMG_3027.jpg */; };
+		94D389C51F39C23A00F974A6 /* IMG_3065.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94D388DC1F39C23900F974A6 /* IMG_3065.jpg */; };
+		94D389C61F39C23A00F974A6 /* IMG_3091.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94D388DD1F39C23900F974A6 /* IMG_3091.jpg */; };
+		94D389C71F39C23A00F974A6 /* IMG_3260.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 94D388DE1F39C23900F974A6 /* IMG_3260.JPG */; };
+		94D389C81F39C23A00F974A6 /* IMG_3269.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 94D388DF1F39C23900F974A6 /* IMG_3269.JPG */; };
+		94D389C91F39C23A00F974A6 /* IMG_3278.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 94D388E01F39C23900F974A6 /* IMG_3278.jpg */; };
+		94D389CA1F39C23A00F974A6 /* IMG_8227.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 94D388E11F39C23900F974A6 /* IMG_8227.JPG */; };
+		94D389CB1F39C23A00F974A6 /* IMG_8235.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 94D388E21F39C23900F974A6 /* IMG_8235.JPG */; };
+		94D389CC1F39C23A00F974A6 /* YYNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388E41F39C23900F974A6 /* YYNavigationViewController.swift */; };
+		94D389CD1F39C23A00F974A6 /* YYTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388E51F39C23900F974A6 /* YYTabBarController.swift */; };
+		94D389CE1F39C23A00F974A6 /* HuanXinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388E71F39C23900F974A6 /* HuanXinManager.swift */; };
+		94D389CF1F39C23A00F974A6 /* YYApplyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388E91F39C23900F974A6 /* YYApplyModel.swift */; };
+		94D389D01F39C23A00F974A6 /* YYCompetitionCommentSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388EA1F39C23900F974A6 /* YYCompetitionCommentSectionModel.swift */; };
+		94D389D11F39C23A00F974A6 /* AppDelegate+HuanXin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388EC1F39C23900F974A6 /* AppDelegate+HuanXin.swift */; };
+		94D389D21F39C23A00F974A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388ED1F39C23900F974A6 /* AppDelegate.swift */; };
+		94D389D31F39C23A00F974A6 /* HuanXin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388EE1F39C23900F974A6 /* HuanXin.swift */; };
+		94D389D41F39C23A00F974A6 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388EF1F39C23900F974A6 /* Theme.swift */; };
+		94D389D51F39C23A00F974A6 /* YYKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388F11F39C23900F974A6 /* YYKey.swift */; };
+		94D389D61F39C23A00F974A6 /* apply.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94D388F31F39C23900F974A6 /* apply.plist */; };
+		94D389D71F39C23A00F974A6 /* comment.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94D388F41F39C23900F974A6 /* comment.plist */; };
+		94D389D81F39C23A00F974A6 /* IMGroupSetting.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94D388F51F39C23900F974A6 /* IMGroupSetting.plist */; };
+		94D389D91F39C23A00F974A6 /* my.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94D388F61F39C23900F974A6 /* my.plist */; };
+		94D389DA1F39C23A00F974A6 /* setting.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94D388F71F39C23900F974A6 /* setting.plist */; };
+		94D389DB1F39C23A00F974A6 /* YYAlertAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388FA1F39C23900F974A6 /* YYAlertAnimation.swift */; };
+		94D389DC1F39C23A00F974A6 /* YYAlertBirthdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388FB1F39C23900F974A6 /* YYAlertBirthdayView.swift */; };
+		94D389DD1F39C23A00F974A6 /* YYAlertBirthdayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D388FC1F39C23900F974A6 /* YYAlertBirthdayView.xib */; };
+		94D389DE1F39C23A00F974A6 /* YYAlertLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388FD1F39C23900F974A6 /* YYAlertLoadingView.swift */; };
+		94D389DF1F39C23A00F974A6 /* YYAlertSelectedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388FE1F39C23900F974A6 /* YYAlertSelectedCell.swift */; };
+		94D389E01F39C23A00F974A6 /* YYAlertSelectedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D388FF1F39C23900F974A6 /* YYAlertSelectedCell.xib */; };
+		94D389E11F39C23A00F974A6 /* YYAlertSelectedTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389001F39C23900F974A6 /* YYAlertSelectedTableViewHeaderView.swift */; };
+		94D389E21F39C23A00F974A6 /* YYAlertSelectedTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D389011F39C23900F974A6 /* YYAlertSelectedTableViewHeaderView.xib */; };
+		94D389E31F39C23A00F974A6 /* YYAlertSelectedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389021F39C23900F974A6 /* YYAlertSelectedView.swift */; };
+		94D389E41F39C23A00F974A6 /* YYAlertTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389031F39C23900F974A6 /* YYAlertTextView.swift */; };
+		94D389E51F39C23A00F974A6 /* YYAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389041F39C23900F974A6 /* YYAlertView.swift */; };
+		94D389E61F39C23A00F974A6 /* YYAlertWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389051F39C23900F974A6 /* YYAlertWindowView.swift */; };
+		94D389E71F39C23A00F974A6 /* YYAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389071F39C23900F974A6 /* YYAlertViewController.swift */; };
+		94D389E81F39C23A00F974A6 /* YYSelfViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389081F39C23900F974A6 /* YYSelfViewManager.swift */; };
+		94D389E91F39C23A00F974A6 /* YYPagingHeaderScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3890A1F39C23900F974A6 /* YYPagingHeaderScrollView.swift */; };
+		94D389EA1F39C23A00F974A6 /* YYPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3890B1F39C23900F974A6 /* YYPagingView.swift */; };
+		94D389EB1F39C23A00F974A6 /* GA_AnimationRefreshHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3890D1F39C23900F974A6 /* GA_AnimationRefreshHeaderView.swift */; };
+		94D389EC1F39C23A00F974A6 /* GA_AnimationRefreshHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D3890E1F39C23900F974A6 /* GA_AnimationRefreshHeaderView.xib */; };
+		94D389ED1F39C23A00F974A6 /* GA_CircleRefreshHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3890F1F39C23900F974A6 /* GA_CircleRefreshHeaderView.swift */; };
+		94D389EE1F39C23A00F974A6 /* GA_LoadFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389101F39C23900F974A6 /* GA_LoadFooterView.swift */; };
+		94D389EF1F39C23A00F974A6 /* GA_RefreshHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389111F39C23900F974A6 /* GA_RefreshHeaderView.swift */; };
+		94D389F01F39C23A00F974A6 /* GA_RefreshOther.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389121F39C23900F974A6 /* GA_RefreshOther.swift */; };
+		94D389F11F39C23A00F974A6 /* GA_XIBRefreshHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389131F39C23900F974A6 /* GA_XIBRefreshHeaderView.swift */; };
+		94D389F21F39C23A00F974A6 /* ScrollView+RefreshExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389141F39C23900F974A6 /* ScrollView+RefreshExtension.swift */; };
+		94D389F31F39C23A00F974A6 /* YYBorderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389151F39C23900F974A6 /* YYBorderLabel.swift */; };
+		94D389F41F39C23A00F974A6 /* YYCircleScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389161F39C23900F974A6 /* YYCircleScrollView.swift */; };
+		94D389F51F39C23A00F974A6 /* YYDrawerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389171F39C23900F974A6 /* YYDrawerTableViewCell.swift */; };
+		94D389F61F39C23A00F974A6 /* YYEmptyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389181F39C23900F974A6 /* YYEmptyTableView.swift */; };
+		94D389F71F39C23A00F974A6 /* YYIconLableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389191F39C23900F974A6 /* YYIconLableView.swift */; };
+		94D389F81F39C23A00F974A6 /* YYOnePixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3891A1F39C23900F974A6 /* YYOnePixView.swift */; };
+		94D389F91F39C23A00F974A6 /* YYPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3891B1F39C23900F974A6 /* YYPlayerView.swift */; };
+		94D389FA1F39C23A00F974A6 /* YYShotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3891D1F39C23900F974A6 /* YYShotView.swift */; };
+		94D389FB1F39C23A00F974A6 /* YYShotViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3891E1F39C23900F974A6 /* YYShotViewButton.swift */; };
+		94D389FC1F39C23A00F974A6 /* YYSpaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3891F1F39C23900F974A6 /* YYSpaceCell.swift */; };
+		94D389FD1F39C23A00F974A6 /* YYSpaceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D389201F39C23900F974A6 /* YYSpaceCell.xib */; };
+		94D389FE1F39C23A00F974A6 /* YYWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389211F39C23900F974A6 /* YYWebView.swift */; };
+		94D389FF1F39C23A00F974A6 /* Compare.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389231F39C23900F974A6 /* Compare.swift */; };
+		94D38A001F39C23A00F974A6 /* KeyPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389241F39C23900F974A6 /* KeyPath.swift */; };
+		94D38A011F39C23A00F974A6 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389251F39C23900F974A6 /* Protocol.swift */; };
+		94D38A021F39C23A00F974A6 /* YBAttributeTextTapForSwfit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389261F39C23900F974A6 /* YBAttributeTextTapForSwfit.swift */; };
+		94D38A031F39C23A00F974A6 /* YYApplyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3892A1F39C23900F974A6 /* YYApplyViewController.swift */; };
+		94D38A041F39C23A00F974A6 /* YYEventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3892C1F39C23900F974A6 /* YYEventDetailViewController.swift */; };
+		94D38A051F39C23A00F974A6 /* YYYeEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3892D1F39C23900F974A6 /* YYYeEventViewController.swift */; };
+		94D38A061F39C23A00F974A6 /* YYHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3892F1F39C23900F974A6 /* YYHomeViewController.swift */; };
+		94D38A071F39C23A00F974A6 /* YYIMBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389321F39C23900F974A6 /* YYIMBaseViewController.swift */; };
+		94D38A081F39C23A00F974A6 /* YYEaseConversationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389341F39C23900F974A6 /* YYEaseConversationListViewController.swift */; };
+		94D38A091F39C23A00F974A6 /* YYEaseUsersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389351F39C23900F974A6 /* YYEaseUsersListViewController.swift */; };
+		94D38A0A1F39C23A00F974A6 /* YYIMContactSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389361F39C23900F974A6 /* YYIMContactSelectionViewController.swift */; };
+		94D38A0B1F39C23A00F974A6 /* YYIMConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389371F39C23900F974A6 /* YYIMConversationViewController.swift */; };
+		94D38A0C1F39C23A00F974A6 /* YYIMCreatChatGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389381F39C23900F974A6 /* YYIMCreatChatGroupViewController.swift */; };
+		94D38A0D1F39C23A00F974A6 /* YYIMCreatChatGroupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D389391F39C23900F974A6 /* YYIMCreatChatGroupViewController.xib */; };
+		94D38A0E1F39C23A00F974A6 /* YYIMCreatChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3893A1F39C23900F974A6 /* YYIMCreatChatRoomViewController.swift */; };
+		94D38A0F1F39C23A00F974A6 /* YYIMCreatChatRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D3893B1F39C23900F974A6 /* YYIMCreatChatRoomViewController.xib */; };
+		94D38A101F39C23A00F974A6 /* YYIMFriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3893C1F39C23900F974A6 /* YYIMFriendListViewController.swift */; };
+		94D38A111F39C23A00F974A6 /* YYIMGroupInfoSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3893D1F39C23900F974A6 /* YYIMGroupInfoSettingViewController.swift */; };
+		94D38A121F39C23A00F974A6 /* YYIMGroupInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3893E1F39C23900F974A6 /* YYIMGroupInfoViewController.swift */; };
+		94D38A131F39C23A00F974A6 /* YYIMGroupListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3893F1F39C23900F974A6 /* YYIMGroupListViewController.swift */; };
+		94D38A141F39C23A00F974A6 /* YYIMGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389401F39C23900F974A6 /* YYIMGroupViewController.swift */; };
+		94D38A151F39C23A00F974A6 /* YYIMRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389411F39C23900F974A6 /* YYIMRoomViewController.swift */; };
+		94D38A161F39C23A00F974A6 /* YYMyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389431F39C23900F974A6 /* YYMyViewController.swift */; };
+		94D38A171F39C23A00F974A6 /* YYNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389451F39C23900F974A6 /* YYNewsViewController.swift */; };
+		94D38A181F39C23A00F974A6 /* YYSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389471F39C23900F974A6 /* YYSettingViewController.swift */; };
+		94D38A191F39C23A00F974A6 /* YYActivityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3894A1F39C23900F974A6 /* YYActivityListViewController.swift */; };
+		94D38A1A1F39C23A00F974A6 /* YYArticleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3894C1F39C23900F974A6 /* YYArticleListViewController.swift */; };
+		94D38A1B1F39C23A00F974A6 /* YYApplyQueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3894E1F39C23900F974A6 /* YYApplyQueryViewController.swift */; };
+		94D38A1C1F39C23A00F974A6 /* YYCompetitionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3894F1F39C23900F974A6 /* YYCompetitionDetailsViewController.swift */; };
+		94D38A1D1F39C23A00F974A6 /* YYCompetitionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389501F39C23900F974A6 /* YYCompetitionListViewController.swift */; };
+		94D38A1E1F39C23A00F974A6 /* YYLiveListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389521F39C23900F974A6 /* YYLiveListViewController.swift */; };
+		94D38A1F1F39C23A00F974A6 /* YYPhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389541F39C23900F974A6 /* YYPhotoListViewController.swift */; };
+		94D38A201F39C23A00F974A6 /* YYSurroundingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389561F39C23A00F974A6 /* YYSurroundingListViewController.swift */; };
+		94D38A211F39C23A00F974A6 /* YYApplyAddImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389591F39C23A00F974A6 /* YYApplyAddImageTableViewCell.swift */; };
+		94D38A221F39C23A00F974A6 /* YYApplyAddImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D3895A1F39C23A00F974A6 /* YYApplyAddImageTableViewCell.xib */; };
+		94D38A231F39C23A00F974A6 /* YYApplyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3895B1F39C23A00F974A6 /* YYApplyHeaderView.swift */; };
+		94D38A241F39C23A00F974A6 /* YYApplyHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D3895C1F39C23A00F974A6 /* YYApplyHeaderView.xib */; };
+		94D38A251F39C23A00F974A6 /* YYApplySelectedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3895D1F39C23A00F974A6 /* YYApplySelectedTableViewCell.swift */; };
+		94D38A261F39C23A00F974A6 /* YYApplySelectedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D3895E1F39C23A00F974A6 /* YYApplySelectedTableViewCell.xib */; };
+		94D38A271F39C23A00F974A6 /* YYApplyTextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3895F1F39C23A00F974A6 /* YYApplyTextTableViewCell.swift */; };
+		94D38A281F39C23A00F974A6 /* YYApplyTextTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D389601F39C23A00F974A6 /* YYApplyTextTableViewCell.xib */; };
+		94D38A291F39C23A00F974A6 /* YYLinkmanHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389611F39C23A00F974A6 /* YYLinkmanHeaderView.swift */; };
+		94D38A2A1F39C23A00F974A6 /* YYEventVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389631F39C23A00F974A6 /* YYEventVideoCell.swift */; };
+		94D38A2B1F39C23A00F974A6 /* YYEventVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D389641F39C23A00F974A6 /* YYEventVideoCell.xib */; };
+		94D38A2C1F39C23A00F974A6 /* YYHomeTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389671F39C23A00F974A6 /* YYHomeTopView.swift */; };
+		94D38A2D1F39C23A00F974A6 /* YYModuleSelectedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389681F39C23A00F974A6 /* YYModuleSelectedCell.swift */; };
+		94D38A2E1F39C23A00F974A6 /* YYModuleSelectedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D389691F39C23A00F974A6 /* YYModuleSelectedCell.xib */; };
+		94D38A2F1F39C23A00F974A6 /* YYModuleSelectedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3896A1F39C23A00F974A6 /* YYModuleSelectedView.swift */; };
+		94D38A301F39C23A00F974A6 /* YYHomeBasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3896B1F39C23A00F974A6 /* YYHomeBasicCell.swift */; };
+		94D38A311F39C23A00F974A6 /* YYHomeBasicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D3896C1F39C23A00F974A6 /* YYHomeBasicCell.xib */; };
+		94D38A321F39C23A00F974A6 /* YYHomeSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D3896D1F39C23A00F974A6 /* YYHomeSectionView.xib */; };
+		94D38A331F39C23A00F974A6 /* YYConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3896F1F39C23A00F974A6 /* YYConversationCell.swift */; };
+		94D38A341F39C23A00F974A6 /* YYConversationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D389701F39C23A00F974A6 /* YYConversationCell.xib */; };
+		94D38A351F39C23A00F974A6 /* YYIMAddFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389711F39C23A00F974A6 /* YYIMAddFriendCell.swift */; };
+		94D38A361F39C23A00F974A6 /* YYIMAddFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D389721F39C23A00F974A6 /* YYIMAddFriendCell.xib */; };
+		94D38A371F39C23A00F974A6 /* YYIMDetailsAddFriendButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D389731F39C23A00F974A6 /* YYIMDetailsAddFriendButton.xib */; };
+		94D38A381F39C23A00F974A6 /* YYIMFriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389741F39C23A00F974A6 /* YYIMFriendCell.swift */; };
+		94D38A391F39C23A00F974A6 /* YYIMFriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D389751F39C23A00F974A6 /* YYIMFriendCell.xib */; };
+		94D38A3A1F39C23A00F974A6 /* YYIMGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389761F39C23A00F974A6 /* YYIMGroupCell.swift */; };
+		94D38A3B1F39C23A00F974A6 /* YYIMGroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D389771F39C23A00F974A6 /* YYIMGroupCell.xib */; };
+		94D38A3C1F39C23A00F974A6 /* YYIMGroupInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389781F39C23A00F974A6 /* YYIMGroupInfoCell.swift */; };
+		94D38A3D1F39C23A00F974A6 /* YYIMGroupInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D389791F39C23A00F974A6 /* YYIMGroupInfoCell.xib */; };
+		94D38A3E1F39C23A00F974A6 /* YYIMGroupInfoSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3897A1F39C23A00F974A6 /* YYIMGroupInfoSectionView.swift */; };
+		94D38A3F1F39C23A00F974A6 /* YYIMGroupInfoSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D3897B1F39C23A00F974A6 /* YYIMGroupInfoSectionView.xib */; };
+		94D38A401F39C23A00F974A6 /* YYIMGroupInfoSettingButtonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3897C1F39C23A00F974A6 /* YYIMGroupInfoSettingButtonCell.swift */; };
+		94D38A411F39C23A00F974A6 /* YYIMGroupInfoSettingButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D3897D1F39C23A00F974A6 /* YYIMGroupInfoSettingButtonCell.xib */; };
+		94D38A421F39C23A00F974A6 /* YYIMGroupInfoSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3897E1F39C23A00F974A6 /* YYIMGroupInfoSettingCell.swift */; };
+		94D38A431F39C23A00F974A6 /* YYIMGroupInfoSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D3897F1F39C23A00F974A6 /* YYIMGroupInfoSettingCell.xib */; };
+		94D38A441F39C23A00F974A6 /* YYMyBasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389811F39C23A00F974A6 /* YYMyBasicCell.swift */; };
+		94D38A451F39C23A00F974A6 /* YYMyBasicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D389821F39C23A00F974A6 /* YYMyBasicCell.xib */; };
+		94D38A461F39C23A00F974A6 /* YYMyTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389831F39C23A00F974A6 /* YYMyTopView.swift */; };
+		94D38A471F39C23A00F974A6 /* YYSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389851F39C23A00F974A6 /* YYSettingCell.swift */; };
+		94D38A481F39C23A00F974A6 /* YYSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D389861F39C23A00F974A6 /* YYSettingCell.xib */; };
+		94D38A491F39C23A00F974A6 /* YYSettingFooterChangeButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D389871F39C23A00F974A6 /* YYSettingFooterChangeButton.xib */; };
+		94D38A4A1F39C23A00F974A6 /* YYActivityListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3898A1F39C23A00F974A6 /* YYActivityListCell.swift */; };
+		94D38A4B1F39C23A00F974A6 /* YYActivityListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D3898B1F39C23A00F974A6 /* YYActivityListCell.xib */; };
+		94D38A4C1F39C23A00F974A6 /* YYCompetitionCommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3898E1F39C23A00F974A6 /* YYCompetitionCommentCell.swift */; };
+		94D38A4D1F39C23A00F974A6 /* YYCompetitionCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D3898F1F39C23A00F974A6 /* YYCompetitionCommentCell.xib */; };
+		94D38A4E1F39C23A00F974A6 /* YYCompetitionCommentSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389901F39C23A00F974A6 /* YYCompetitionCommentSectionView.swift */; };
+		94D38A4F1F39C23A00F974A6 /* YYCompetitionCommentSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D389911F39C23A00F974A6 /* YYCompetitionCommentSectionView.xib */; };
+		94D38A501F39C23A00F974A6 /* YYCompetitionDetailsBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389921F39C23A00F974A6 /* YYCompetitionDetailsBottomView.swift */; };
+		94D38A511F39C23A00F974A6 /* YYCompetitionDetailsBottomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D389931F39C23A00F974A6 /* YYCompetitionDetailsBottomView.xib */; };
+		94D38A521F39C23A00F974A6 /* YYCompetitionDetailsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389941F39C23A00F974A6 /* YYCompetitionDetailsHeaderView.swift */; };
+		94D38A531F39C23A00F974A6 /* YYCompetitionDetailsHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D389951F39C23A00F974A6 /* YYCompetitionDetailsHeaderView.xib */; };
+		94D38A541F39C23A00F974A6 /* YYCompetitionListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389961F39C23A00F974A6 /* YYCompetitionListCell.swift */; };
+		94D38A551F39C23A00F974A6 /* YYCompetitionListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D389971F39C23A00F974A6 /* YYCompetitionListCell.xib */; };
+		94D38A561F39C23A00F974A6 /* YYCompetitionReplyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389981F39C23A00F974A6 /* YYCompetitionReplyCell.swift */; };
+		94D38A571F39C23A00F974A6 /* YYCompetitionReplyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D389991F39C23A00F974A6 /* YYCompetitionReplyCell.xib */; };
+		94D38A581F39C23A00F974A6 /* YYLiveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3899B1F39C23A00F974A6 /* YYLiveCollectionViewCell.swift */; };
+		94D38A591F39C23A00F974A6 /* YYLiveCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D3899C1F39C23A00F974A6 /* YYLiveCollectionViewCell.xib */; };
+		94D38A5B1F39C2EE00F974A6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94D38A5A1F39C2EE00F974A6 /* Info.plist */; };
+		94D38A601F39C2F600F974A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D38A5C1F39C2F600F974A6 /* LaunchScreen.storyboard */; };
+		94D38A611F39C2F600F974A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D38A5E1F39C2F600F974A6 /* Main.storyboard */; };
+		94D38A631F39C33300F974A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94D38A621F39C33300F974A6 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,18 +224,204 @@
 		381C7D52E9006ACBDEED168B /* Pods_YE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		678318913B05B3CFC6F3F7B8 /* Pods-YE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YE.release.xcconfig"; path = "Pods/Target Support Files/Pods-YE/Pods-YE.release.xcconfig"; sourceTree = "<group>"; };
 		94D3887E1F39BE4100F974A6 /* YE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YE.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		94D388811F39BE4100F974A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		94D388831F39BE4100F974A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		94D388861F39BE4100F974A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		94D388881F39BE4100F974A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		94D3888B1F39BE4100F974A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		94D3888D1F39BE4100F974A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94D388921F39BE4100F974A6 /* YETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D388961F39BE4100F974A6 /* YETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YETests.swift; sourceTree = "<group>"; };
 		94D388981F39BE4100F974A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94D3889D1F39BE4100F974A6 /* YEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D388A11F39BE4100F974A6 /* YEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YEUITests.swift; sourceTree = "<group>"; };
 		94D388A31F39BE4100F974A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94D388B11F39C23900F974A6 /* YYBaseCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYBaseCollectionViewController.swift; sourceTree = "<group>"; };
+		94D388B21F39C23900F974A6 /* YYBaseImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYBaseImagePickerController.swift; sourceTree = "<group>"; };
+		94D388B31F39C23900F974A6 /* YYBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYBaseTableViewController.swift; sourceTree = "<group>"; };
+		94D388B41F39C23900F974A6 /* YYBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYBaseViewController.swift; sourceTree = "<group>"; };
+		94D388B71F39C23900F974A6 /* YYBaseNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYBaseNavigationView.swift; sourceTree = "<group>"; };
+		94D388B81F39C23900F974A6 /* YYBaseNavigationViewImageButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYBaseNavigationViewImageButton.xib; sourceTree = "<group>"; };
+		94D388B91F39C23900F974A6 /* YYBaseNavigationViewIMGroupDetailsButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYBaseNavigationViewIMGroupDetailsButton.xib; sourceTree = "<group>"; };
+		94D388BA1F39C23900F974A6 /* YYBaseNavigationViewServiceButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYBaseNavigationViewServiceButton.xib; sourceTree = "<group>"; };
+		94D388BB1F39C23900F974A6 /* YYBaseNavigationViewTextButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYBaseNavigationViewTextButton.xib; sourceTree = "<group>"; };
+		94D388BC1F39C23900F974A6 /* YYBaseCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYBaseCollectionView.swift; sourceTree = "<group>"; };
+		94D388BD1F39C23900F974A6 /* YYBaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYBaseTableViewCell.swift; sourceTree = "<group>"; };
+		94D388BE1F39C23900F974A6 /* YYBaseTableViewFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYBaseTableViewFooterView.swift; sourceTree = "<group>"; };
+		94D388BF1F39C23900F974A6 /* YYBaseTableViewFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYBaseTableViewFooterView.xib; sourceTree = "<group>"; };
+		94D388C01F39C23900F974A6 /* YYBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYBaseView.swift; sourceTree = "<group>"; };
+		94D388C31F39C23900F974A6 /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		94D388C41F39C23900F974A6 /* CGFloat+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Extension.swift"; sourceTree = "<group>"; };
+		94D388C51F39C23900F974A6 /* NSMutableAttributedString+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extension.swift"; sourceTree = "<group>"; };
+		94D388C61F39C23900F974A6 /* NSObject+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
+		94D388C71F39C23900F974A6 /* ScrollView+BaneHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ScrollView+BaneHeader.swift"; sourceTree = "<group>"; };
+		94D388C81F39C23900F974A6 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		94D388C91F39C23900F974A6 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		94D388CA1F39C23900F974A6 /* UIImage+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		94D388CB1F39C23900F974A6 /* UITableViewCell+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Extension.swift"; sourceTree = "<group>"; };
+		94D388CC1F39C23900F974A6 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		94D388CD1F39C23900F974A6 /* URL+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
+		94D388CF1F39C23900F974A6 /* cgts.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cgts.jpg; sourceTree = "<group>"; };
+		94D388D01F39C23900F974A6 /* IMG_0361.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0361.jpg; sourceTree = "<group>"; };
+		94D388D11F39C23900F974A6 /* IMG_0407.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0407.jpg; sourceTree = "<group>"; };
+		94D388D21F39C23900F974A6 /* IMG_0487.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0487.jpg; sourceTree = "<group>"; };
+		94D388D31F39C23900F974A6 /* IMG_0490.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0490.jpg; sourceTree = "<group>"; };
+		94D388D41F39C23900F974A6 /* IMG_2473.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2473.jpg; sourceTree = "<group>"; };
+		94D388D51F39C23900F974A6 /* IMG_2478.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2478.jpg; sourceTree = "<group>"; };
+		94D388D61F39C23900F974A6 /* IMG_2719.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2719.jpg; sourceTree = "<group>"; };
+		94D388D71F39C23900F974A6 /* IMG_2772.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2772.jpg; sourceTree = "<group>"; };
+		94D388D81F39C23900F974A6 /* IMG_2787.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2787.jpg; sourceTree = "<group>"; };
+		94D388D91F39C23900F974A6 /* IMG_2898.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2898.jpg; sourceTree = "<group>"; };
+		94D388DA1F39C23900F974A6 /* IMG_3026.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_3026.jpg; sourceTree = "<group>"; };
+		94D388DB1F39C23900F974A6 /* IMG_3027.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_3027.jpg; sourceTree = "<group>"; };
+		94D388DC1F39C23900F974A6 /* IMG_3065.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_3065.jpg; sourceTree = "<group>"; };
+		94D388DD1F39C23900F974A6 /* IMG_3091.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_3091.jpg; sourceTree = "<group>"; };
+		94D388DE1F39C23900F974A6 /* IMG_3260.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_3260.JPG; sourceTree = "<group>"; };
+		94D388DF1F39C23900F974A6 /* IMG_3269.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_3269.JPG; sourceTree = "<group>"; };
+		94D388E01F39C23900F974A6 /* IMG_3278.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_3278.jpg; sourceTree = "<group>"; };
+		94D388E11F39C23900F974A6 /* IMG_8227.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_8227.JPG; sourceTree = "<group>"; };
+		94D388E21F39C23900F974A6 /* IMG_8235.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_8235.JPG; sourceTree = "<group>"; };
+		94D388E41F39C23900F974A6 /* YYNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYNavigationViewController.swift; sourceTree = "<group>"; };
+		94D388E51F39C23900F974A6 /* YYTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYTabBarController.swift; sourceTree = "<group>"; };
+		94D388E71F39C23900F974A6 /* HuanXinManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HuanXinManager.swift; sourceTree = "<group>"; };
+		94D388E91F39C23900F974A6 /* YYApplyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYApplyModel.swift; sourceTree = "<group>"; };
+		94D388EA1F39C23900F974A6 /* YYCompetitionCommentSectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYCompetitionCommentSectionModel.swift; sourceTree = "<group>"; };
+		94D388EC1F39C23900F974A6 /* AppDelegate+HuanXin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+HuanXin.swift"; sourceTree = "<group>"; };
+		94D388ED1F39C23900F974A6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		94D388EE1F39C23900F974A6 /* HuanXin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HuanXin.swift; sourceTree = "<group>"; };
+		94D388EF1F39C23900F974A6 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		94D388F01F39C23900F974A6 /* YYHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHeader.h; sourceTree = "<group>"; };
+		94D388F11F39C23900F974A6 /* YYKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYKey.swift; sourceTree = "<group>"; };
+		94D388F31F39C23900F974A6 /* apply.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = apply.plist; sourceTree = "<group>"; };
+		94D388F41F39C23900F974A6 /* comment.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = comment.plist; sourceTree = "<group>"; };
+		94D388F51F39C23900F974A6 /* IMGroupSetting.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = IMGroupSetting.plist; sourceTree = "<group>"; };
+		94D388F61F39C23900F974A6 /* my.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = my.plist; sourceTree = "<group>"; };
+		94D388F71F39C23900F974A6 /* setting.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = setting.plist; sourceTree = "<group>"; };
+		94D388FA1F39C23900F974A6 /* YYAlertAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertAnimation.swift; sourceTree = "<group>"; };
+		94D388FB1F39C23900F974A6 /* YYAlertBirthdayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertBirthdayView.swift; sourceTree = "<group>"; };
+		94D388FC1F39C23900F974A6 /* YYAlertBirthdayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYAlertBirthdayView.xib; sourceTree = "<group>"; };
+		94D388FD1F39C23900F974A6 /* YYAlertLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertLoadingView.swift; sourceTree = "<group>"; };
+		94D388FE1F39C23900F974A6 /* YYAlertSelectedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertSelectedCell.swift; sourceTree = "<group>"; };
+		94D388FF1F39C23900F974A6 /* YYAlertSelectedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYAlertSelectedCell.xib; sourceTree = "<group>"; };
+		94D389001F39C23900F974A6 /* YYAlertSelectedTableViewHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertSelectedTableViewHeaderView.swift; sourceTree = "<group>"; };
+		94D389011F39C23900F974A6 /* YYAlertSelectedTableViewHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYAlertSelectedTableViewHeaderView.xib; sourceTree = "<group>"; };
+		94D389021F39C23900F974A6 /* YYAlertSelectedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertSelectedView.swift; sourceTree = "<group>"; };
+		94D389031F39C23900F974A6 /* YYAlertTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertTextView.swift; sourceTree = "<group>"; };
+		94D389041F39C23900F974A6 /* YYAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertView.swift; sourceTree = "<group>"; };
+		94D389051F39C23900F974A6 /* YYAlertWindowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertWindowView.swift; sourceTree = "<group>"; };
+		94D389071F39C23900F974A6 /* YYAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertViewController.swift; sourceTree = "<group>"; };
+		94D389081F39C23900F974A6 /* YYSelfViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYSelfViewManager.swift; sourceTree = "<group>"; };
+		94D3890A1F39C23900F974A6 /* YYPagingHeaderScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYPagingHeaderScrollView.swift; sourceTree = "<group>"; };
+		94D3890B1F39C23900F974A6 /* YYPagingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYPagingView.swift; sourceTree = "<group>"; };
+		94D3890D1F39C23900F974A6 /* GA_AnimationRefreshHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GA_AnimationRefreshHeaderView.swift; sourceTree = "<group>"; };
+		94D3890E1F39C23900F974A6 /* GA_AnimationRefreshHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GA_AnimationRefreshHeaderView.xib; sourceTree = "<group>"; };
+		94D3890F1F39C23900F974A6 /* GA_CircleRefreshHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GA_CircleRefreshHeaderView.swift; sourceTree = "<group>"; };
+		94D389101F39C23900F974A6 /* GA_LoadFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GA_LoadFooterView.swift; sourceTree = "<group>"; };
+		94D389111F39C23900F974A6 /* GA_RefreshHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GA_RefreshHeaderView.swift; sourceTree = "<group>"; };
+		94D389121F39C23900F974A6 /* GA_RefreshOther.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GA_RefreshOther.swift; sourceTree = "<group>"; };
+		94D389131F39C23900F974A6 /* GA_XIBRefreshHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GA_XIBRefreshHeaderView.swift; sourceTree = "<group>"; };
+		94D389141F39C23900F974A6 /* ScrollView+RefreshExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ScrollView+RefreshExtension.swift"; sourceTree = "<group>"; };
+		94D389151F39C23900F974A6 /* YYBorderLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYBorderLabel.swift; sourceTree = "<group>"; };
+		94D389161F39C23900F974A6 /* YYCircleScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYCircleScrollView.swift; sourceTree = "<group>"; };
+		94D389171F39C23900F974A6 /* YYDrawerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYDrawerTableViewCell.swift; sourceTree = "<group>"; };
+		94D389181F39C23900F974A6 /* YYEmptyTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYEmptyTableView.swift; sourceTree = "<group>"; };
+		94D389191F39C23900F974A6 /* YYIconLableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYIconLableView.swift; sourceTree = "<group>"; };
+		94D3891A1F39C23900F974A6 /* YYOnePixView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYOnePixView.swift; sourceTree = "<group>"; };
+		94D3891B1F39C23900F974A6 /* YYPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYPlayerView.swift; sourceTree = "<group>"; };
+		94D3891D1F39C23900F974A6 /* YYShotView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYShotView.swift; sourceTree = "<group>"; };
+		94D3891E1F39C23900F974A6 /* YYShotViewButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYShotViewButton.swift; sourceTree = "<group>"; };
+		94D3891F1F39C23900F974A6 /* YYSpaceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYSpaceCell.swift; sourceTree = "<group>"; };
+		94D389201F39C23900F974A6 /* YYSpaceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYSpaceCell.xib; sourceTree = "<group>"; };
+		94D389211F39C23900F974A6 /* YYWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYWebView.swift; sourceTree = "<group>"; };
+		94D389231F39C23900F974A6 /* Compare.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Compare.swift; sourceTree = "<group>"; };
+		94D389241F39C23900F974A6 /* KeyPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyPath.swift; sourceTree = "<group>"; };
+		94D389251F39C23900F974A6 /* Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		94D389261F39C23900F974A6 /* YBAttributeTextTapForSwfit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YBAttributeTextTapForSwfit.swift; sourceTree = "<group>"; };
+		94D3892A1F39C23900F974A6 /* YYApplyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYApplyViewController.swift; sourceTree = "<group>"; };
+		94D3892C1F39C23900F974A6 /* YYEventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYEventDetailViewController.swift; sourceTree = "<group>"; };
+		94D3892D1F39C23900F974A6 /* YYYeEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYYeEventViewController.swift; sourceTree = "<group>"; };
+		94D3892F1F39C23900F974A6 /* YYHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYHomeViewController.swift; sourceTree = "<group>"; };
+		94D389321F39C23900F974A6 /* YYIMBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYIMBaseViewController.swift; sourceTree = "<group>"; };
+		94D389341F39C23900F974A6 /* YYEaseConversationListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYEaseConversationListViewController.swift; sourceTree = "<group>"; };
+		94D389351F39C23900F974A6 /* YYEaseUsersListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYEaseUsersListViewController.swift; sourceTree = "<group>"; };
+		94D389361F39C23900F974A6 /* YYIMContactSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYIMContactSelectionViewController.swift; sourceTree = "<group>"; };
+		94D389371F39C23900F974A6 /* YYIMConversationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYIMConversationViewController.swift; sourceTree = "<group>"; };
+		94D389381F39C23900F974A6 /* YYIMCreatChatGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYIMCreatChatGroupViewController.swift; sourceTree = "<group>"; };
+		94D389391F39C23900F974A6 /* YYIMCreatChatGroupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYIMCreatChatGroupViewController.xib; sourceTree = "<group>"; };
+		94D3893A1F39C23900F974A6 /* YYIMCreatChatRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYIMCreatChatRoomViewController.swift; sourceTree = "<group>"; };
+		94D3893B1F39C23900F974A6 /* YYIMCreatChatRoomViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYIMCreatChatRoomViewController.xib; sourceTree = "<group>"; };
+		94D3893C1F39C23900F974A6 /* YYIMFriendListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYIMFriendListViewController.swift; sourceTree = "<group>"; };
+		94D3893D1F39C23900F974A6 /* YYIMGroupInfoSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYIMGroupInfoSettingViewController.swift; sourceTree = "<group>"; };
+		94D3893E1F39C23900F974A6 /* YYIMGroupInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYIMGroupInfoViewController.swift; sourceTree = "<group>"; };
+		94D3893F1F39C23900F974A6 /* YYIMGroupListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYIMGroupListViewController.swift; sourceTree = "<group>"; };
+		94D389401F39C23900F974A6 /* YYIMGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYIMGroupViewController.swift; sourceTree = "<group>"; };
+		94D389411F39C23900F974A6 /* YYIMRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYIMRoomViewController.swift; sourceTree = "<group>"; };
+		94D389431F39C23900F974A6 /* YYMyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYMyViewController.swift; sourceTree = "<group>"; };
+		94D389451F39C23900F974A6 /* YYNewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYNewsViewController.swift; sourceTree = "<group>"; };
+		94D389471F39C23900F974A6 /* YYSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYSettingViewController.swift; sourceTree = "<group>"; };
+		94D3894A1F39C23900F974A6 /* YYActivityListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYActivityListViewController.swift; sourceTree = "<group>"; };
+		94D3894C1F39C23900F974A6 /* YYArticleListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYArticleListViewController.swift; sourceTree = "<group>"; };
+		94D3894E1F39C23900F974A6 /* YYApplyQueryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYApplyQueryViewController.swift; sourceTree = "<group>"; };
+		94D3894F1F39C23900F974A6 /* YYCompetitionDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYCompetitionDetailsViewController.swift; sourceTree = "<group>"; };
+		94D389501F39C23900F974A6 /* YYCompetitionListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYCompetitionListViewController.swift; sourceTree = "<group>"; };
+		94D389521F39C23900F974A6 /* YYLiveListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYLiveListViewController.swift; sourceTree = "<group>"; };
+		94D389541F39C23900F974A6 /* YYPhotoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYPhotoListViewController.swift; sourceTree = "<group>"; };
+		94D389561F39C23A00F974A6 /* YYSurroundingListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYSurroundingListViewController.swift; sourceTree = "<group>"; };
+		94D389591F39C23A00F974A6 /* YYApplyAddImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYApplyAddImageTableViewCell.swift; sourceTree = "<group>"; };
+		94D3895A1F39C23A00F974A6 /* YYApplyAddImageTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYApplyAddImageTableViewCell.xib; sourceTree = "<group>"; };
+		94D3895B1F39C23A00F974A6 /* YYApplyHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYApplyHeaderView.swift; sourceTree = "<group>"; };
+		94D3895C1F39C23A00F974A6 /* YYApplyHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYApplyHeaderView.xib; sourceTree = "<group>"; };
+		94D3895D1F39C23A00F974A6 /* YYApplySelectedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYApplySelectedTableViewCell.swift; sourceTree = "<group>"; };
+		94D3895E1F39C23A00F974A6 /* YYApplySelectedTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYApplySelectedTableViewCell.xib; sourceTree = "<group>"; };
+		94D3895F1F39C23A00F974A6 /* YYApplyTextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYApplyTextTableViewCell.swift; sourceTree = "<group>"; };
+		94D389601F39C23A00F974A6 /* YYApplyTextTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYApplyTextTableViewCell.xib; sourceTree = "<group>"; };
+		94D389611F39C23A00F974A6 /* YYLinkmanHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYLinkmanHeaderView.swift; sourceTree = "<group>"; };
+		94D389631F39C23A00F974A6 /* YYEventVideoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYEventVideoCell.swift; sourceTree = "<group>"; };
+		94D389641F39C23A00F974A6 /* YYEventVideoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYEventVideoCell.xib; sourceTree = "<group>"; };
+		94D389671F39C23A00F974A6 /* YYHomeTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYHomeTopView.swift; sourceTree = "<group>"; };
+		94D389681F39C23A00F974A6 /* YYModuleSelectedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYModuleSelectedCell.swift; sourceTree = "<group>"; };
+		94D389691F39C23A00F974A6 /* YYModuleSelectedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYModuleSelectedCell.xib; sourceTree = "<group>"; };
+		94D3896A1F39C23A00F974A6 /* YYModuleSelectedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYModuleSelectedView.swift; sourceTree = "<group>"; };
+		94D3896B1F39C23A00F974A6 /* YYHomeBasicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYHomeBasicCell.swift; sourceTree = "<group>"; };
+		94D3896C1F39C23A00F974A6 /* YYHomeBasicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYHomeBasicCell.xib; sourceTree = "<group>"; };
+		94D3896D1F39C23A00F974A6 /* YYHomeSectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYHomeSectionView.xib; sourceTree = "<group>"; };
+		94D3896F1F39C23A00F974A6 /* YYConversationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYConversationCell.swift; sourceTree = "<group>"; };
+		94D389701F39C23A00F974A6 /* YYConversationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYConversationCell.xib; sourceTree = "<group>"; };
+		94D389711F39C23A00F974A6 /* YYIMAddFriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYIMAddFriendCell.swift; sourceTree = "<group>"; };
+		94D389721F39C23A00F974A6 /* YYIMAddFriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYIMAddFriendCell.xib; sourceTree = "<group>"; };
+		94D389731F39C23A00F974A6 /* YYIMDetailsAddFriendButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYIMDetailsAddFriendButton.xib; sourceTree = "<group>"; };
+		94D389741F39C23A00F974A6 /* YYIMFriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYIMFriendCell.swift; sourceTree = "<group>"; };
+		94D389751F39C23A00F974A6 /* YYIMFriendCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYIMFriendCell.xib; sourceTree = "<group>"; };
+		94D389761F39C23A00F974A6 /* YYIMGroupCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYIMGroupCell.swift; sourceTree = "<group>"; };
+		94D389771F39C23A00F974A6 /* YYIMGroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYIMGroupCell.xib; sourceTree = "<group>"; };
+		94D389781F39C23A00F974A6 /* YYIMGroupInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYIMGroupInfoCell.swift; sourceTree = "<group>"; };
+		94D389791F39C23A00F974A6 /* YYIMGroupInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYIMGroupInfoCell.xib; sourceTree = "<group>"; };
+		94D3897A1F39C23A00F974A6 /* YYIMGroupInfoSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYIMGroupInfoSectionView.swift; sourceTree = "<group>"; };
+		94D3897B1F39C23A00F974A6 /* YYIMGroupInfoSectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYIMGroupInfoSectionView.xib; sourceTree = "<group>"; };
+		94D3897C1F39C23A00F974A6 /* YYIMGroupInfoSettingButtonCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYIMGroupInfoSettingButtonCell.swift; sourceTree = "<group>"; };
+		94D3897D1F39C23A00F974A6 /* YYIMGroupInfoSettingButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYIMGroupInfoSettingButtonCell.xib; sourceTree = "<group>"; };
+		94D3897E1F39C23A00F974A6 /* YYIMGroupInfoSettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYIMGroupInfoSettingCell.swift; sourceTree = "<group>"; };
+		94D3897F1F39C23A00F974A6 /* YYIMGroupInfoSettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYIMGroupInfoSettingCell.xib; sourceTree = "<group>"; };
+		94D389811F39C23A00F974A6 /* YYMyBasicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYMyBasicCell.swift; sourceTree = "<group>"; };
+		94D389821F39C23A00F974A6 /* YYMyBasicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYMyBasicCell.xib; sourceTree = "<group>"; };
+		94D389831F39C23A00F974A6 /* YYMyTopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYMyTopView.swift; sourceTree = "<group>"; };
+		94D389851F39C23A00F974A6 /* YYSettingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYSettingCell.swift; sourceTree = "<group>"; };
+		94D389861F39C23A00F974A6 /* YYSettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYSettingCell.xib; sourceTree = "<group>"; };
+		94D389871F39C23A00F974A6 /* YYSettingFooterChangeButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYSettingFooterChangeButton.xib; sourceTree = "<group>"; };
+		94D3898A1F39C23A00F974A6 /* YYActivityListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYActivityListCell.swift; sourceTree = "<group>"; };
+		94D3898B1F39C23A00F974A6 /* YYActivityListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYActivityListCell.xib; sourceTree = "<group>"; };
+		94D3898E1F39C23A00F974A6 /* YYCompetitionCommentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYCompetitionCommentCell.swift; sourceTree = "<group>"; };
+		94D3898F1F39C23A00F974A6 /* YYCompetitionCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYCompetitionCommentCell.xib; sourceTree = "<group>"; };
+		94D389901F39C23A00F974A6 /* YYCompetitionCommentSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYCompetitionCommentSectionView.swift; sourceTree = "<group>"; };
+		94D389911F39C23A00F974A6 /* YYCompetitionCommentSectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYCompetitionCommentSectionView.xib; sourceTree = "<group>"; };
+		94D389921F39C23A00F974A6 /* YYCompetitionDetailsBottomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYCompetitionDetailsBottomView.swift; sourceTree = "<group>"; };
+		94D389931F39C23A00F974A6 /* YYCompetitionDetailsBottomView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYCompetitionDetailsBottomView.xib; sourceTree = "<group>"; };
+		94D389941F39C23A00F974A6 /* YYCompetitionDetailsHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYCompetitionDetailsHeaderView.swift; sourceTree = "<group>"; };
+		94D389951F39C23A00F974A6 /* YYCompetitionDetailsHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYCompetitionDetailsHeaderView.xib; sourceTree = "<group>"; };
+		94D389961F39C23A00F974A6 /* YYCompetitionListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYCompetitionListCell.swift; sourceTree = "<group>"; };
+		94D389971F39C23A00F974A6 /* YYCompetitionListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYCompetitionListCell.xib; sourceTree = "<group>"; };
+		94D389981F39C23A00F974A6 /* YYCompetitionReplyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYCompetitionReplyCell.swift; sourceTree = "<group>"; };
+		94D389991F39C23A00F974A6 /* YYCompetitionReplyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYCompetitionReplyCell.xib; sourceTree = "<group>"; };
+		94D3899B1F39C23A00F974A6 /* YYLiveCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYLiveCollectionViewCell.swift; sourceTree = "<group>"; };
+		94D3899C1F39C23A00F974A6 /* YYLiveCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYLiveCollectionViewCell.xib; sourceTree = "<group>"; };
+		94D38A5A1F39C2EE00F974A6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94D38A5D1F39C2F600F974A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		94D38A5F1F39C2F600F974A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
+		94D38A621F39C33300F974A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDF16BF32666F3D156E4C355 /* Pods-YE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YE/Pods-YE.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,12 +476,21 @@
 		94D388801F39BE4100F974A6 /* YE */ = {
 			isa = PBXGroup;
 			children = (
-				94D388811F39BE4100F974A6 /* AppDelegate.swift */,
-				94D388831F39BE4100F974A6 /* ViewController.swift */,
-				94D388851F39BE4100F974A6 /* Main.storyboard */,
-				94D388881F39BE4100F974A6 /* Assets.xcassets */,
-				94D3888A1F39BE4100F974A6 /* LaunchScreen.storyboard */,
-				94D3888D1F39BE4100F974A6 /* Info.plist */,
+				94D38A621F39C33300F974A6 /* Assets.xcassets */,
+				94D38A5A1F39C2EE00F974A6 /* Info.plist */,
+				94D388AF1F39C23900F974A6 /* BASE */,
+				94D388C11F39C23900F974A6 /* Base.lproj */,
+				94D388C21F39C23900F974A6 /* EXTENSION */,
+				94D388CE1F39C23900F974A6 /* IMAGE */,
+				94D388E31F39C23900F974A6 /* MAIN */,
+				94D388E61F39C23900F974A6 /* Manager */,
+				94D388E81F39C23900F974A6 /* MODEL */,
+				94D388EB1F39C23900F974A6 /* OTHER */,
+				94D388F21F39C23900F974A6 /* PLIST */,
+				94D388F81F39C23900F974A6 /* PUBLIC */,
+				94D389221F39C23900F974A6 /* TOOL */,
+				94D389271F39C23900F974A6 /* VC */,
+				94D389571F39C23A00F974A6 /* VIEW */,
 			);
 			path = YE;
 			sourceTree = "<group>";
@@ -130,6 +511,599 @@
 				94D388A31F39BE4100F974A6 /* Info.plist */,
 			);
 			path = YEUITests;
+			sourceTree = "<group>";
+		};
+		94D388AF1F39C23900F974A6 /* BASE */ = {
+			isa = PBXGroup;
+			children = (
+				94D388B01F39C23900F974A6 /* VC */,
+				94D388B51F39C23900F974A6 /* VIEW */,
+			);
+			path = BASE;
+			sourceTree = "<group>";
+		};
+		94D388B01F39C23900F974A6 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				94D388B11F39C23900F974A6 /* YYBaseCollectionViewController.swift */,
+				94D388B21F39C23900F974A6 /* YYBaseImagePickerController.swift */,
+				94D388B31F39C23900F974A6 /* YYBaseTableViewController.swift */,
+				94D388B41F39C23900F974A6 /* YYBaseViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		94D388B51F39C23900F974A6 /* VIEW */ = {
+			isa = PBXGroup;
+			children = (
+				94D388B61F39C23900F974A6 /* navigationView */,
+				94D388BC1F39C23900F974A6 /* YYBaseCollectionView.swift */,
+				94D388BD1F39C23900F974A6 /* YYBaseTableViewCell.swift */,
+				94D388BE1F39C23900F974A6 /* YYBaseTableViewFooterView.swift */,
+				94D388BF1F39C23900F974A6 /* YYBaseTableViewFooterView.xib */,
+				94D388C01F39C23900F974A6 /* YYBaseView.swift */,
+			);
+			path = VIEW;
+			sourceTree = "<group>";
+		};
+		94D388B61F39C23900F974A6 /* navigationView */ = {
+			isa = PBXGroup;
+			children = (
+				94D388B71F39C23900F974A6 /* YYBaseNavigationView.swift */,
+				94D388B81F39C23900F974A6 /* YYBaseNavigationViewImageButton.xib */,
+				94D388B91F39C23900F974A6 /* YYBaseNavigationViewIMGroupDetailsButton.xib */,
+				94D388BA1F39C23900F974A6 /* YYBaseNavigationViewServiceButton.xib */,
+				94D388BB1F39C23900F974A6 /* YYBaseNavigationViewTextButton.xib */,
+			);
+			path = navigationView;
+			sourceTree = "<group>";
+		};
+		94D388C11F39C23900F974A6 /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				94D38A5C1F39C2F600F974A6 /* LaunchScreen.storyboard */,
+				94D38A5E1F39C2F600F974A6 /* Main.storyboard */,
+			);
+			path = Base.lproj;
+			sourceTree = "<group>";
+		};
+		94D388C21F39C23900F974A6 /* EXTENSION */ = {
+			isa = PBXGroup;
+			children = (
+				94D388C31F39C23900F974A6 /* Bundle+Extension.swift */,
+				94D388C41F39C23900F974A6 /* CGFloat+Extension.swift */,
+				94D388C51F39C23900F974A6 /* NSMutableAttributedString+Extension.swift */,
+				94D388C61F39C23900F974A6 /* NSObject+Extension.swift */,
+				94D388C71F39C23900F974A6 /* ScrollView+BaneHeader.swift */,
+				94D388C81F39C23900F974A6 /* String+Extension.swift */,
+				94D388C91F39C23900F974A6 /* UIColor+Extension.swift */,
+				94D388CA1F39C23900F974A6 /* UIImage+Extension.swift */,
+				94D388CB1F39C23900F974A6 /* UITableViewCell+Extension.swift */,
+				94D388CC1F39C23900F974A6 /* UIView+Extension.swift */,
+				94D388CD1F39C23900F974A6 /* URL+Extension.swift */,
+			);
+			path = EXTENSION;
+			sourceTree = "<group>";
+		};
+		94D388CE1F39C23900F974A6 /* IMAGE */ = {
+			isa = PBXGroup;
+			children = (
+				94D388CF1F39C23900F974A6 /* cgts.jpg */,
+				94D388D01F39C23900F974A6 /* IMG_0361.jpg */,
+				94D388D11F39C23900F974A6 /* IMG_0407.jpg */,
+				94D388D21F39C23900F974A6 /* IMG_0487.jpg */,
+				94D388D31F39C23900F974A6 /* IMG_0490.jpg */,
+				94D388D41F39C23900F974A6 /* IMG_2473.jpg */,
+				94D388D51F39C23900F974A6 /* IMG_2478.jpg */,
+				94D388D61F39C23900F974A6 /* IMG_2719.jpg */,
+				94D388D71F39C23900F974A6 /* IMG_2772.jpg */,
+				94D388D81F39C23900F974A6 /* IMG_2787.jpg */,
+				94D388D91F39C23900F974A6 /* IMG_2898.jpg */,
+				94D388DA1F39C23900F974A6 /* IMG_3026.jpg */,
+				94D388DB1F39C23900F974A6 /* IMG_3027.jpg */,
+				94D388DC1F39C23900F974A6 /* IMG_3065.jpg */,
+				94D388DD1F39C23900F974A6 /* IMG_3091.jpg */,
+				94D388DE1F39C23900F974A6 /* IMG_3260.JPG */,
+				94D388DF1F39C23900F974A6 /* IMG_3269.JPG */,
+				94D388E01F39C23900F974A6 /* IMG_3278.jpg */,
+				94D388E11F39C23900F974A6 /* IMG_8227.JPG */,
+				94D388E21F39C23900F974A6 /* IMG_8235.JPG */,
+			);
+			path = IMAGE;
+			sourceTree = "<group>";
+		};
+		94D388E31F39C23900F974A6 /* MAIN */ = {
+			isa = PBXGroup;
+			children = (
+				94D388E41F39C23900F974A6 /* YYNavigationViewController.swift */,
+				94D388E51F39C23900F974A6 /* YYTabBarController.swift */,
+			);
+			path = MAIN;
+			sourceTree = "<group>";
+		};
+		94D388E61F39C23900F974A6 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				94D388E71F39C23900F974A6 /* HuanXinManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		94D388E81F39C23900F974A6 /* MODEL */ = {
+			isa = PBXGroup;
+			children = (
+				94D388E91F39C23900F974A6 /* YYApplyModel.swift */,
+				94D388EA1F39C23900F974A6 /* YYCompetitionCommentSectionModel.swift */,
+			);
+			path = MODEL;
+			sourceTree = "<group>";
+		};
+		94D388EB1F39C23900F974A6 /* OTHER */ = {
+			isa = PBXGroup;
+			children = (
+				94D388EC1F39C23900F974A6 /* AppDelegate+HuanXin.swift */,
+				94D388ED1F39C23900F974A6 /* AppDelegate.swift */,
+				94D388EE1F39C23900F974A6 /* HuanXin.swift */,
+				94D388EF1F39C23900F974A6 /* Theme.swift */,
+				94D388F01F39C23900F974A6 /* YYHeader.h */,
+				94D388F11F39C23900F974A6 /* YYKey.swift */,
+			);
+			path = OTHER;
+			sourceTree = "<group>";
+		};
+		94D388F21F39C23900F974A6 /* PLIST */ = {
+			isa = PBXGroup;
+			children = (
+				94D388F31F39C23900F974A6 /* apply.plist */,
+				94D388F41F39C23900F974A6 /* comment.plist */,
+				94D388F51F39C23900F974A6 /* IMGroupSetting.plist */,
+				94D388F61F39C23900F974A6 /* my.plist */,
+				94D388F71F39C23900F974A6 /* setting.plist */,
+			);
+			path = PLIST;
+			sourceTree = "<group>";
+		};
+		94D388F81F39C23900F974A6 /* PUBLIC */ = {
+			isa = PBXGroup;
+			children = (
+				94D388F91F39C23900F974A6 /* Alert */,
+				94D389061F39C23900F974A6 /* AlertViewController */,
+				94D389091F39C23900F974A6 /* Paging */,
+				94D3890C1F39C23900F974A6 /* Refresh */,
+				94D389151F39C23900F974A6 /* YYBorderLabel.swift */,
+				94D389161F39C23900F974A6 /* YYCircleScrollView.swift */,
+				94D389171F39C23900F974A6 /* YYDrawerTableViewCell.swift */,
+				94D389181F39C23900F974A6 /* YYEmptyTableView.swift */,
+				94D389191F39C23900F974A6 /* YYIconLableView.swift */,
+				94D3891A1F39C23900F974A6 /* YYOnePixView.swift */,
+				94D3891B1F39C23900F974A6 /* YYPlayerView.swift */,
+				94D3891C1F39C23900F974A6 /* YYShotView */,
+				94D3891F1F39C23900F974A6 /* YYSpaceCell.swift */,
+				94D389201F39C23900F974A6 /* YYSpaceCell.xib */,
+				94D389211F39C23900F974A6 /* YYWebView.swift */,
+			);
+			path = PUBLIC;
+			sourceTree = "<group>";
+		};
+		94D388F91F39C23900F974A6 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				94D388FA1F39C23900F974A6 /* YYAlertAnimation.swift */,
+				94D388FB1F39C23900F974A6 /* YYAlertBirthdayView.swift */,
+				94D388FC1F39C23900F974A6 /* YYAlertBirthdayView.xib */,
+				94D388FD1F39C23900F974A6 /* YYAlertLoadingView.swift */,
+				94D388FE1F39C23900F974A6 /* YYAlertSelectedCell.swift */,
+				94D388FF1F39C23900F974A6 /* YYAlertSelectedCell.xib */,
+				94D389001F39C23900F974A6 /* YYAlertSelectedTableViewHeaderView.swift */,
+				94D389011F39C23900F974A6 /* YYAlertSelectedTableViewHeaderView.xib */,
+				94D389021F39C23900F974A6 /* YYAlertSelectedView.swift */,
+				94D389031F39C23900F974A6 /* YYAlertTextView.swift */,
+				94D389041F39C23900F974A6 /* YYAlertView.swift */,
+				94D389051F39C23900F974A6 /* YYAlertWindowView.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		94D389061F39C23900F974A6 /* AlertViewController */ = {
+			isa = PBXGroup;
+			children = (
+				94D389071F39C23900F974A6 /* YYAlertViewController.swift */,
+				94D389081F39C23900F974A6 /* YYSelfViewManager.swift */,
+			);
+			path = AlertViewController;
+			sourceTree = "<group>";
+		};
+		94D389091F39C23900F974A6 /* Paging */ = {
+			isa = PBXGroup;
+			children = (
+				94D3890A1F39C23900F974A6 /* YYPagingHeaderScrollView.swift */,
+				94D3890B1F39C23900F974A6 /* YYPagingView.swift */,
+			);
+			path = Paging;
+			sourceTree = "<group>";
+		};
+		94D3890C1F39C23900F974A6 /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				94D3890D1F39C23900F974A6 /* GA_AnimationRefreshHeaderView.swift */,
+				94D3890E1F39C23900F974A6 /* GA_AnimationRefreshHeaderView.xib */,
+				94D3890F1F39C23900F974A6 /* GA_CircleRefreshHeaderView.swift */,
+				94D389101F39C23900F974A6 /* GA_LoadFooterView.swift */,
+				94D389111F39C23900F974A6 /* GA_RefreshHeaderView.swift */,
+				94D389121F39C23900F974A6 /* GA_RefreshOther.swift */,
+				94D389131F39C23900F974A6 /* GA_XIBRefreshHeaderView.swift */,
+				94D389141F39C23900F974A6 /* ScrollView+RefreshExtension.swift */,
+			);
+			path = Refresh;
+			sourceTree = "<group>";
+		};
+		94D3891C1F39C23900F974A6 /* YYShotView */ = {
+			isa = PBXGroup;
+			children = (
+				94D3891D1F39C23900F974A6 /* YYShotView.swift */,
+				94D3891E1F39C23900F974A6 /* YYShotViewButton.swift */,
+			);
+			path = YYShotView;
+			sourceTree = "<group>";
+		};
+		94D389221F39C23900F974A6 /* TOOL */ = {
+			isa = PBXGroup;
+			children = (
+				94D389231F39C23900F974A6 /* Compare.swift */,
+				94D389241F39C23900F974A6 /* KeyPath.swift */,
+				94D389251F39C23900F974A6 /* Protocol.swift */,
+				94D389261F39C23900F974A6 /* YBAttributeTextTapForSwfit.swift */,
+			);
+			path = TOOL;
+			sourceTree = "<group>";
+		};
+		94D389271F39C23900F974A6 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				94D389281F39C23900F974A6 /* Alert */,
+				94D389291F39C23900F974A6 /* Apply */,
+				94D3892B1F39C23900F974A6 /* Event */,
+				94D3892E1F39C23900F974A6 /* Home */,
+				94D389301F39C23900F974A6 /* IM */,
+				94D389421F39C23900F974A6 /* My */,
+				94D389441F39C23900F974A6 /* News */,
+				94D389461F39C23900F974A6 /* Setting */,
+				94D389481F39C23900F974A6 /* Sort */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		94D389281F39C23900F974A6 /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		94D389291F39C23900F974A6 /* Apply */ = {
+			isa = PBXGroup;
+			children = (
+				94D3892A1F39C23900F974A6 /* YYApplyViewController.swift */,
+			);
+			path = Apply;
+			sourceTree = "<group>";
+		};
+		94D3892B1F39C23900F974A6 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				94D3892C1F39C23900F974A6 /* YYEventDetailViewController.swift */,
+				94D3892D1F39C23900F974A6 /* YYYeEventViewController.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		94D3892E1F39C23900F974A6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				94D3892F1F39C23900F974A6 /* YYHomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		94D389301F39C23900F974A6 /* IM */ = {
+			isa = PBXGroup;
+			children = (
+				94D389311F39C23900F974A6 /* BaseIM */,
+				94D389331F39C23900F974A6 /* Easy */,
+				94D389361F39C23900F974A6 /* YYIMContactSelectionViewController.swift */,
+				94D389371F39C23900F974A6 /* YYIMConversationViewController.swift */,
+				94D389381F39C23900F974A6 /* YYIMCreatChatGroupViewController.swift */,
+				94D389391F39C23900F974A6 /* YYIMCreatChatGroupViewController.xib */,
+				94D3893A1F39C23900F974A6 /* YYIMCreatChatRoomViewController.swift */,
+				94D3893B1F39C23900F974A6 /* YYIMCreatChatRoomViewController.xib */,
+				94D3893C1F39C23900F974A6 /* YYIMFriendListViewController.swift */,
+				94D3893D1F39C23900F974A6 /* YYIMGroupInfoSettingViewController.swift */,
+				94D3893E1F39C23900F974A6 /* YYIMGroupInfoViewController.swift */,
+				94D3893F1F39C23900F974A6 /* YYIMGroupListViewController.swift */,
+				94D389401F39C23900F974A6 /* YYIMGroupViewController.swift */,
+				94D389411F39C23900F974A6 /* YYIMRoomViewController.swift */,
+			);
+			path = IM;
+			sourceTree = "<group>";
+		};
+		94D389311F39C23900F974A6 /* BaseIM */ = {
+			isa = PBXGroup;
+			children = (
+				94D389321F39C23900F974A6 /* YYIMBaseViewController.swift */,
+			);
+			path = BaseIM;
+			sourceTree = "<group>";
+		};
+		94D389331F39C23900F974A6 /* Easy */ = {
+			isa = PBXGroup;
+			children = (
+				94D389341F39C23900F974A6 /* YYEaseConversationListViewController.swift */,
+				94D389351F39C23900F974A6 /* YYEaseUsersListViewController.swift */,
+			);
+			path = Easy;
+			sourceTree = "<group>";
+		};
+		94D389421F39C23900F974A6 /* My */ = {
+			isa = PBXGroup;
+			children = (
+				94D389431F39C23900F974A6 /* YYMyViewController.swift */,
+			);
+			path = My;
+			sourceTree = "<group>";
+		};
+		94D389441F39C23900F974A6 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				94D389451F39C23900F974A6 /* YYNewsViewController.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		94D389461F39C23900F974A6 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				94D389471F39C23900F974A6 /* YYSettingViewController.swift */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		94D389481F39C23900F974A6 /* Sort */ = {
+			isa = PBXGroup;
+			children = (
+				94D389491F39C23900F974A6 /* Activity */,
+				94D3894B1F39C23900F974A6 /* Article */,
+				94D3894D1F39C23900F974A6 /* Competition */,
+				94D389511F39C23900F974A6 /* Live */,
+				94D389531F39C23900F974A6 /* Photo */,
+				94D389551F39C23900F974A6 /* Surrounding */,
+			);
+			path = Sort;
+			sourceTree = "<group>";
+		};
+		94D389491F39C23900F974A6 /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				94D3894A1F39C23900F974A6 /* YYActivityListViewController.swift */,
+			);
+			path = Activity;
+			sourceTree = "<group>";
+		};
+		94D3894B1F39C23900F974A6 /* Article */ = {
+			isa = PBXGroup;
+			children = (
+				94D3894C1F39C23900F974A6 /* YYArticleListViewController.swift */,
+			);
+			path = Article;
+			sourceTree = "<group>";
+		};
+		94D3894D1F39C23900F974A6 /* Competition */ = {
+			isa = PBXGroup;
+			children = (
+				94D3894E1F39C23900F974A6 /* YYApplyQueryViewController.swift */,
+				94D3894F1F39C23900F974A6 /* YYCompetitionDetailsViewController.swift */,
+				94D389501F39C23900F974A6 /* YYCompetitionListViewController.swift */,
+			);
+			path = Competition;
+			sourceTree = "<group>";
+		};
+		94D389511F39C23900F974A6 /* Live */ = {
+			isa = PBXGroup;
+			children = (
+				94D389521F39C23900F974A6 /* YYLiveListViewController.swift */,
+			);
+			path = Live;
+			sourceTree = "<group>";
+		};
+		94D389531F39C23900F974A6 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				94D389541F39C23900F974A6 /* YYPhotoListViewController.swift */,
+			);
+			path = Photo;
+			sourceTree = "<group>";
+		};
+		94D389551F39C23900F974A6 /* Surrounding */ = {
+			isa = PBXGroup;
+			children = (
+				94D389561F39C23A00F974A6 /* YYSurroundingListViewController.swift */,
+			);
+			path = Surrounding;
+			sourceTree = "<group>";
+		};
+		94D389571F39C23A00F974A6 /* VIEW */ = {
+			isa = PBXGroup;
+			children = (
+				94D389581F39C23A00F974A6 /* Apply */,
+				94D389621F39C23A00F974A6 /* Event */,
+				94D389651F39C23A00F974A6 /* Home */,
+				94D3896E1F39C23A00F974A6 /* IM */,
+				94D389801F39C23A00F974A6 /* My */,
+				94D389841F39C23A00F974A6 /* Setting */,
+				94D389881F39C23A00F974A6 /* Sort */,
+			);
+			path = VIEW;
+			sourceTree = "<group>";
+		};
+		94D389581F39C23A00F974A6 /* Apply */ = {
+			isa = PBXGroup;
+			children = (
+				94D389591F39C23A00F974A6 /* YYApplyAddImageTableViewCell.swift */,
+				94D3895A1F39C23A00F974A6 /* YYApplyAddImageTableViewCell.xib */,
+				94D3895B1F39C23A00F974A6 /* YYApplyHeaderView.swift */,
+				94D3895C1F39C23A00F974A6 /* YYApplyHeaderView.xib */,
+				94D3895D1F39C23A00F974A6 /* YYApplySelectedTableViewCell.swift */,
+				94D3895E1F39C23A00F974A6 /* YYApplySelectedTableViewCell.xib */,
+				94D3895F1F39C23A00F974A6 /* YYApplyTextTableViewCell.swift */,
+				94D389601F39C23A00F974A6 /* YYApplyTextTableViewCell.xib */,
+				94D389611F39C23A00F974A6 /* YYLinkmanHeaderView.swift */,
+			);
+			path = Apply;
+			sourceTree = "<group>";
+		};
+		94D389621F39C23A00F974A6 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				94D389631F39C23A00F974A6 /* YYEventVideoCell.swift */,
+				94D389641F39C23A00F974A6 /* YYEventVideoCell.xib */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		94D389651F39C23A00F974A6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				94D389661F39C23A00F974A6 /* Top */,
+				94D3896B1F39C23A00F974A6 /* YYHomeBasicCell.swift */,
+				94D3896C1F39C23A00F974A6 /* YYHomeBasicCell.xib */,
+				94D3896D1F39C23A00F974A6 /* YYHomeSectionView.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		94D389661F39C23A00F974A6 /* Top */ = {
+			isa = PBXGroup;
+			children = (
+				94D389671F39C23A00F974A6 /* YYHomeTopView.swift */,
+				94D389681F39C23A00F974A6 /* YYModuleSelectedCell.swift */,
+				94D389691F39C23A00F974A6 /* YYModuleSelectedCell.xib */,
+				94D3896A1F39C23A00F974A6 /* YYModuleSelectedView.swift */,
+			);
+			path = Top;
+			sourceTree = "<group>";
+		};
+		94D3896E1F39C23A00F974A6 /* IM */ = {
+			isa = PBXGroup;
+			children = (
+				94D3896F1F39C23A00F974A6 /* YYConversationCell.swift */,
+				94D389701F39C23A00F974A6 /* YYConversationCell.xib */,
+				94D389711F39C23A00F974A6 /* YYIMAddFriendCell.swift */,
+				94D389721F39C23A00F974A6 /* YYIMAddFriendCell.xib */,
+				94D389731F39C23A00F974A6 /* YYIMDetailsAddFriendButton.xib */,
+				94D389741F39C23A00F974A6 /* YYIMFriendCell.swift */,
+				94D389751F39C23A00F974A6 /* YYIMFriendCell.xib */,
+				94D389761F39C23A00F974A6 /* YYIMGroupCell.swift */,
+				94D389771F39C23A00F974A6 /* YYIMGroupCell.xib */,
+				94D389781F39C23A00F974A6 /* YYIMGroupInfoCell.swift */,
+				94D389791F39C23A00F974A6 /* YYIMGroupInfoCell.xib */,
+				94D3897A1F39C23A00F974A6 /* YYIMGroupInfoSectionView.swift */,
+				94D3897B1F39C23A00F974A6 /* YYIMGroupInfoSectionView.xib */,
+				94D3897C1F39C23A00F974A6 /* YYIMGroupInfoSettingButtonCell.swift */,
+				94D3897D1F39C23A00F974A6 /* YYIMGroupInfoSettingButtonCell.xib */,
+				94D3897E1F39C23A00F974A6 /* YYIMGroupInfoSettingCell.swift */,
+				94D3897F1F39C23A00F974A6 /* YYIMGroupInfoSettingCell.xib */,
+			);
+			path = IM;
+			sourceTree = "<group>";
+		};
+		94D389801F39C23A00F974A6 /* My */ = {
+			isa = PBXGroup;
+			children = (
+				94D389811F39C23A00F974A6 /* YYMyBasicCell.swift */,
+				94D389821F39C23A00F974A6 /* YYMyBasicCell.xib */,
+				94D389831F39C23A00F974A6 /* YYMyTopView.swift */,
+			);
+			path = My;
+			sourceTree = "<group>";
+		};
+		94D389841F39C23A00F974A6 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				94D389851F39C23A00F974A6 /* YYSettingCell.swift */,
+				94D389861F39C23A00F974A6 /* YYSettingCell.xib */,
+				94D389871F39C23A00F974A6 /* YYSettingFooterChangeButton.xib */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		94D389881F39C23A00F974A6 /* Sort */ = {
+			isa = PBXGroup;
+			children = (
+				94D389891F39C23A00F974A6 /* Activity(活动) */,
+				94D3898C1F39C23A00F974A6 /* Article(文章) */,
+				94D3898D1F39C23A00F974A6 /* Competition(赛事) */,
+				94D3899A1F39C23A00F974A6 /* Live(直播) */,
+				94D3899D1F39C23A00F974A6 /* Photo(照片) */,
+				94D3899E1F39C23A00F974A6 /* Surrounding(周边) */,
+			);
+			path = Sort;
+			sourceTree = "<group>";
+		};
+		94D389891F39C23A00F974A6 /* Activity(活动) */ = {
+			isa = PBXGroup;
+			children = (
+				94D3898A1F39C23A00F974A6 /* YYActivityListCell.swift */,
+				94D3898B1F39C23A00F974A6 /* YYActivityListCell.xib */,
+			);
+			path = "Activity(活动)";
+			sourceTree = "<group>";
+		};
+		94D3898C1F39C23A00F974A6 /* Article(文章) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Article(文章)";
+			sourceTree = "<group>";
+		};
+		94D3898D1F39C23A00F974A6 /* Competition(赛事) */ = {
+			isa = PBXGroup;
+			children = (
+				94D3898E1F39C23A00F974A6 /* YYCompetitionCommentCell.swift */,
+				94D3898F1F39C23A00F974A6 /* YYCompetitionCommentCell.xib */,
+				94D389901F39C23A00F974A6 /* YYCompetitionCommentSectionView.swift */,
+				94D389911F39C23A00F974A6 /* YYCompetitionCommentSectionView.xib */,
+				94D389921F39C23A00F974A6 /* YYCompetitionDetailsBottomView.swift */,
+				94D389931F39C23A00F974A6 /* YYCompetitionDetailsBottomView.xib */,
+				94D389941F39C23A00F974A6 /* YYCompetitionDetailsHeaderView.swift */,
+				94D389951F39C23A00F974A6 /* YYCompetitionDetailsHeaderView.xib */,
+				94D389961F39C23A00F974A6 /* YYCompetitionListCell.swift */,
+				94D389971F39C23A00F974A6 /* YYCompetitionListCell.xib */,
+				94D389981F39C23A00F974A6 /* YYCompetitionReplyCell.swift */,
+				94D389991F39C23A00F974A6 /* YYCompetitionReplyCell.xib */,
+			);
+			path = "Competition(赛事)";
+			sourceTree = "<group>";
+		};
+		94D3899A1F39C23A00F974A6 /* Live(直播) */ = {
+			isa = PBXGroup;
+			children = (
+				94D3899B1F39C23A00F974A6 /* YYLiveCollectionViewCell.swift */,
+				94D3899C1F39C23A00F974A6 /* YYLiveCollectionViewCell.xib */,
+			);
+			path = "Live(直播)";
+			sourceTree = "<group>";
+		};
+		94D3899D1F39C23A00F974A6 /* Photo(照片) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Photo(照片)";
+			sourceTree = "<group>";
+		};
+		94D3899E1F39C23A00F974A6 /* Surrounding(周边) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Surrounding(周边)";
 			sourceTree = "<group>";
 		};
 		9C47080CBCA45A60DE8F4723 /* Pods */ = {
@@ -220,6 +1194,7 @@
 				TargetAttributes = {
 					94D3887D1F39BE4100F974A6 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 8975PEGCVX;
 						ProvisioningStyle = Automatic;
 					};
 					94D388911F39BE4100F974A6 = {
@@ -259,9 +1234,75 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94D3888C1F39BE4100F974A6 /* LaunchScreen.storyboard in Resources */,
-				94D388891F39BE4100F974A6 /* Assets.xcassets in Resources */,
-				94D388871F39BE4100F974A6 /* Main.storyboard in Resources */,
+				94D38A4D1F39C23A00F974A6 /* YYCompetitionCommentCell.xib in Resources */,
+				94D389EC1F39C23A00F974A6 /* GA_AnimationRefreshHeaderView.xib in Resources */,
+				94D38A391F39C23A00F974A6 /* YYIMFriendCell.xib in Resources */,
+				94D38A551F39C23A00F974A6 /* YYCompetitionListCell.xib in Resources */,
+				94D38A631F39C33300F974A6 /* Assets.xcassets in Resources */,
+				94D389C91F39C23A00F974A6 /* IMG_3278.jpg in Resources */,
+				94D38A4F1F39C23A00F974A6 /* YYCompetitionCommentSectionView.xib in Resources */,
+				94D389C61F39C23A00F974A6 /* IMG_3091.jpg in Resources */,
+				94D38A531F39C23A00F974A6 /* YYCompetitionDetailsHeaderView.xib in Resources */,
+				94D38A5B1F39C2EE00F974A6 /* Info.plist in Resources */,
+				94D38A361F39C23A00F974A6 /* YYIMAddFriendCell.xib in Resources */,
+				94D38A491F39C23A00F974A6 /* YYSettingFooterChangeButton.xib in Resources */,
+				94D389C11F39C23A00F974A6 /* IMG_2787.jpg in Resources */,
+				94D38A241F39C23A00F974A6 /* YYApplyHeaderView.xib in Resources */,
+				94D389C71F39C23A00F974A6 /* IMG_3260.JPG in Resources */,
+				94D389C81F39C23A00F974A6 /* IMG_3269.JPG in Resources */,
+				94D389D71F39C23A00F974A6 /* comment.plist in Resources */,
+				94D38A3F1F39C23A00F974A6 /* YYIMGroupInfoSectionView.xib in Resources */,
+				94D38A4B1F39C23A00F974A6 /* YYActivityListCell.xib in Resources */,
+				94D38A3D1F39C23A00F974A6 /* YYIMGroupInfoCell.xib in Resources */,
+				94D389BE1F39C23A00F974A6 /* IMG_2478.jpg in Resources */,
+				94D38A371F39C23A00F974A6 /* YYIMDetailsAddFriendButton.xib in Resources */,
+				94D38A571F39C23A00F974A6 /* YYCompetitionReplyCell.xib in Resources */,
+				94D389C21F39C23A00F974A6 /* IMG_2898.jpg in Resources */,
+				94D38A611F39C2F600F974A6 /* Main.storyboard in Resources */,
+				94D389A71F39C23A00F974A6 /* YYBaseNavigationViewTextButton.xib in Resources */,
+				94D389AB1F39C23A00F974A6 /* YYBaseTableViewFooterView.xib in Resources */,
+				94D38A321F39C23A00F974A6 /* YYHomeSectionView.xib in Resources */,
+				94D38A431F39C23A00F974A6 /* YYIMGroupInfoSettingCell.xib in Resources */,
+				94D38A2B1F39C23A00F974A6 /* YYEventVideoCell.xib in Resources */,
+				94D38A3B1F39C23A00F974A6 /* YYIMGroupCell.xib in Resources */,
+				94D38A311F39C23A00F974A6 /* YYHomeBasicCell.xib in Resources */,
+				94D389BD1F39C23A00F974A6 /* IMG_2473.jpg in Resources */,
+				94D38A511F39C23A00F974A6 /* YYCompetitionDetailsBottomView.xib in Resources */,
+				94D389CA1F39C23A00F974A6 /* IMG_8227.JPG in Resources */,
+				94D389DD1F39C23A00F974A6 /* YYAlertBirthdayView.xib in Resources */,
+				94D389BA1F39C23A00F974A6 /* IMG_0407.jpg in Resources */,
+				94D389C01F39C23A00F974A6 /* IMG_2772.jpg in Resources */,
+				94D389D61F39C23A00F974A6 /* apply.plist in Resources */,
+				94D38A261F39C23A00F974A6 /* YYApplySelectedTableViewCell.xib in Resources */,
+				94D38A601F39C2F600F974A6 /* LaunchScreen.storyboard in Resources */,
+				94D389E21F39C23A00F974A6 /* YYAlertSelectedTableViewHeaderView.xib in Resources */,
+				94D389C31F39C23A00F974A6 /* IMG_3026.jpg in Resources */,
+				94D389A51F39C23A00F974A6 /* YYBaseNavigationViewIMGroupDetailsButton.xib in Resources */,
+				94D389FD1F39C23A00F974A6 /* YYSpaceCell.xib in Resources */,
+				94D38A281F39C23A00F974A6 /* YYApplyTextTableViewCell.xib in Resources */,
+				94D389BB1F39C23A00F974A6 /* IMG_0487.jpg in Resources */,
+				94D38A0F1F39C23A00F974A6 /* YYIMCreatChatRoomViewController.xib in Resources */,
+				94D389B91F39C23A00F974A6 /* IMG_0361.jpg in Resources */,
+				94D38A2E1F39C23A00F974A6 /* YYModuleSelectedCell.xib in Resources */,
+				94D389D91F39C23A00F974A6 /* my.plist in Resources */,
+				94D389D81F39C23A00F974A6 /* IMGroupSetting.plist in Resources */,
+				94D389DA1F39C23A00F974A6 /* setting.plist in Resources */,
+				94D389BC1F39C23A00F974A6 /* IMG_0490.jpg in Resources */,
+				94D38A481F39C23A00F974A6 /* YYSettingCell.xib in Resources */,
+				94D389A61F39C23A00F974A6 /* YYBaseNavigationViewServiceButton.xib in Resources */,
+				94D389B81F39C23A00F974A6 /* cgts.jpg in Resources */,
+				94D389C41F39C23A00F974A6 /* IMG_3027.jpg in Resources */,
+				94D38A341F39C23A00F974A6 /* YYConversationCell.xib in Resources */,
+				94D389E01F39C23A00F974A6 /* YYAlertSelectedCell.xib in Resources */,
+				94D38A591F39C23A00F974A6 /* YYLiveCollectionViewCell.xib in Resources */,
+				94D389CB1F39C23A00F974A6 /* IMG_8235.JPG in Resources */,
+				94D38A0D1F39C23A00F974A6 /* YYIMCreatChatGroupViewController.xib in Resources */,
+				94D38A221F39C23A00F974A6 /* YYApplyAddImageTableViewCell.xib in Resources */,
+				94D389A41F39C23A00F974A6 /* YYBaseNavigationViewImageButton.xib in Resources */,
+				94D389BF1F39C23A00F974A6 /* IMG_2719.jpg in Resources */,
+				94D389C51F39C23A00F974A6 /* IMG_3065.jpg in Resources */,
+				94D38A411F39C23A00F974A6 /* YYIMGroupInfoSettingButtonCell.xib in Resources */,
+				94D38A451F39C23A00F974A6 /* YYMyBasicCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,8 +1375,128 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94D388841F39BE4100F974A6 /* ViewController.swift in Sources */,
-				94D388821F39BE4100F974A6 /* AppDelegate.swift in Sources */,
+				94D389E11F39C23A00F974A6 /* YYAlertSelectedTableViewHeaderView.swift in Sources */,
+				94D38A051F39C23A00F974A6 /* YYYeEventViewController.swift in Sources */,
+				94D389E51F39C23A00F974A6 /* YYAlertView.swift in Sources */,
+				94D38A3C1F39C23A00F974A6 /* YYIMGroupInfoCell.swift in Sources */,
+				94D38A091F39C23A00F974A6 /* YYEaseUsersListViewController.swift in Sources */,
+				94D389FA1F39C23A00F974A6 /* YYShotView.swift in Sources */,
+				94D389A11F39C23A00F974A6 /* YYBaseTableViewController.swift in Sources */,
+				94D389AD1F39C23A00F974A6 /* Bundle+Extension.swift in Sources */,
+				94D38A1C1F39C23A00F974A6 /* YYCompetitionDetailsViewController.swift in Sources */,
+				94D389EB1F39C23A00F974A6 /* GA_AnimationRefreshHeaderView.swift in Sources */,
+				94D389E91F39C23A00F974A6 /* YYPagingHeaderScrollView.swift in Sources */,
+				94D38A141F39C23A00F974A6 /* YYIMGroupViewController.swift in Sources */,
+				94D389E41F39C23A00F974A6 /* YYAlertTextView.swift in Sources */,
+				94D389AF1F39C23A00F974A6 /* NSMutableAttributedString+Extension.swift in Sources */,
+				94D389F01F39C23A00F974A6 /* GA_RefreshOther.swift in Sources */,
+				94D389F61F39C23A00F974A6 /* YYEmptyTableView.swift in Sources */,
+				94D38A351F39C23A00F974A6 /* YYIMAddFriendCell.swift in Sources */,
+				94D38A0A1F39C23A00F974A6 /* YYIMContactSelectionViewController.swift in Sources */,
+				94D389D31F39C23A00F974A6 /* HuanXin.swift in Sources */,
+				94D389E81F39C23A00F974A6 /* YYSelfViewManager.swift in Sources */,
+				94D389DE1F39C23A00F974A6 /* YYAlertLoadingView.swift in Sources */,
+				94D38A301F39C23A00F974A6 /* YYHomeBasicCell.swift in Sources */,
+				94D389A81F39C23A00F974A6 /* YYBaseCollectionView.swift in Sources */,
+				94D38A191F39C23A00F974A6 /* YYActivityListViewController.swift in Sources */,
+				94D389A21F39C23A00F974A6 /* YYBaseViewController.swift in Sources */,
+				94D389CC1F39C23A00F974A6 /* YYNavigationViewController.swift in Sources */,
+				94D38A2C1F39C23A00F974A6 /* YYHomeTopView.swift in Sources */,
+				94D38A151F39C23A00F974A6 /* YYIMRoomViewController.swift in Sources */,
+				94D38A3A1F39C23A00F974A6 /* YYIMGroupCell.swift in Sources */,
+				94D389F71F39C23A00F974A6 /* YYIconLableView.swift in Sources */,
+				94D38A461F39C23A00F974A6 /* YYMyTopView.swift in Sources */,
+				94D389EA1F39C23A00F974A6 /* YYPagingView.swift in Sources */,
+				94D389CE1F39C23A00F974A6 /* HuanXinManager.swift in Sources */,
+				94D389A31F39C23A00F974A6 /* YYBaseNavigationView.swift in Sources */,
+				94D38A031F39C23A00F974A6 /* YYApplyViewController.swift in Sources */,
+				94D389AA1F39C23A00F974A6 /* YYBaseTableViewFooterView.swift in Sources */,
+				94D38A381F39C23A00F974A6 /* YYIMFriendCell.swift in Sources */,
+				94D389F21F39C23A00F974A6 /* ScrollView+RefreshExtension.swift in Sources */,
+				94D38A521F39C23A00F974A6 /* YYCompetitionDetailsHeaderView.swift in Sources */,
+				94D389E61F39C23A00F974A6 /* YYAlertWindowView.swift in Sources */,
+				94D38A161F39C23A00F974A6 /* YYMyViewController.swift in Sources */,
+				94D38A1B1F39C23A00F974A6 /* YYApplyQueryViewController.swift in Sources */,
+				94D389F41F39C23A00F974A6 /* YYCircleScrollView.swift in Sources */,
+				94D38A0B1F39C23A00F974A6 /* YYIMConversationViewController.swift in Sources */,
+				94D389B31F39C23A00F974A6 /* UIColor+Extension.swift in Sources */,
+				94D38A501F39C23A00F974A6 /* YYCompetitionDetailsBottomView.swift in Sources */,
+				94D389EF1F39C23A00F974A6 /* GA_RefreshHeaderView.swift in Sources */,
+				94D38A4E1F39C23A00F974A6 /* YYCompetitionCommentSectionView.swift in Sources */,
+				94D38A1D1F39C23A00F974A6 /* YYCompetitionListViewController.swift in Sources */,
+				94D389D11F39C23A00F974A6 /* AppDelegate+HuanXin.swift in Sources */,
+				94D389E31F39C23A00F974A6 /* YYAlertSelectedView.swift in Sources */,
+				94D389B01F39C23A00F974A6 /* NSObject+Extension.swift in Sources */,
+				94D38A0E1F39C23A00F974A6 /* YYIMCreatChatRoomViewController.swift in Sources */,
+				94D38A561F39C23A00F974A6 /* YYCompetitionReplyCell.swift in Sources */,
+				94D38A131F39C23A00F974A6 /* YYIMGroupListViewController.swift in Sources */,
+				94D38A081F39C23A00F974A6 /* YYEaseConversationListViewController.swift in Sources */,
+				94D38A001F39C23A00F974A6 /* KeyPath.swift in Sources */,
+				94D38A2D1F39C23A00F974A6 /* YYModuleSelectedCell.swift in Sources */,
+				94D38A581F39C23A00F974A6 /* YYLiveCollectionViewCell.swift in Sources */,
+				94D389AE1F39C23A00F974A6 /* CGFloat+Extension.swift in Sources */,
+				94D38A231F39C23A00F974A6 /* YYApplyHeaderView.swift in Sources */,
+				94D38A041F39C23A00F974A6 /* YYEventDetailViewController.swift in Sources */,
+				94D38A2F1F39C23A00F974A6 /* YYModuleSelectedView.swift in Sources */,
+				94D389F11F39C23A00F974A6 /* GA_XIBRefreshHeaderView.swift in Sources */,
+				94D389DF1F39C23A00F974A6 /* YYAlertSelectedCell.swift in Sources */,
+				94D38A2A1F39C23A00F974A6 /* YYEventVideoCell.swift in Sources */,
+				94D38A271F39C23A00F974A6 /* YYApplyTextTableViewCell.swift in Sources */,
+				94D389FF1F39C23A00F974A6 /* Compare.swift in Sources */,
+				94D389D01F39C23A00F974A6 /* YYCompetitionCommentSectionModel.swift in Sources */,
+				94D389DB1F39C23A00F974A6 /* YYAlertAnimation.swift in Sources */,
+				94D389EE1F39C23A00F974A6 /* GA_LoadFooterView.swift in Sources */,
+				94D38A291F39C23A00F974A6 /* YYLinkmanHeaderView.swift in Sources */,
+				94D38A0C1F39C23A00F974A6 /* YYIMCreatChatGroupViewController.swift in Sources */,
+				94D389F51F39C23A00F974A6 /* YYDrawerTableViewCell.swift in Sources */,
+				94D38A1E1F39C23A00F974A6 /* YYLiveListViewController.swift in Sources */,
+				94D389FE1F39C23A00F974A6 /* YYWebView.swift in Sources */,
+				94D389DC1F39C23A00F974A6 /* YYAlertBirthdayView.swift in Sources */,
+				94D389A01F39C23A00F974A6 /* YYBaseImagePickerController.swift in Sources */,
+				94D389A91F39C23A00F974A6 /* YYBaseTableViewCell.swift in Sources */,
+				94D389D51F39C23A00F974A6 /* YYKey.swift in Sources */,
+				94D38A4A1F39C23A00F974A6 /* YYActivityListCell.swift in Sources */,
+				94D38A541F39C23A00F974A6 /* YYCompetitionListCell.swift in Sources */,
+				94D389B61F39C23A00F974A6 /* UIView+Extension.swift in Sources */,
+				94D38A3E1F39C23A00F974A6 /* YYIMGroupInfoSectionView.swift in Sources */,
+				94D38A101F39C23A00F974A6 /* YYIMFriendListViewController.swift in Sources */,
+				94D38A471F39C23A00F974A6 /* YYSettingCell.swift in Sources */,
+				94D389B71F39C23A00F974A6 /* URL+Extension.swift in Sources */,
+				94D38A121F39C23A00F974A6 /* YYIMGroupInfoViewController.swift in Sources */,
+				94D389B41F39C23A00F974A6 /* UIImage+Extension.swift in Sources */,
+				94D389B51F39C23A00F974A6 /* UITableViewCell+Extension.swift in Sources */,
+				94D38A251F39C23A00F974A6 /* YYApplySelectedTableViewCell.swift in Sources */,
+				94D389E71F39C23A00F974A6 /* YYAlertViewController.swift in Sources */,
+				94D389FC1F39C23A00F974A6 /* YYSpaceCell.swift in Sources */,
+				94D3899F1F39C23A00F974A6 /* YYBaseCollectionViewController.swift in Sources */,
+				94D38A181F39C23A00F974A6 /* YYSettingViewController.swift in Sources */,
+				94D389D41F39C23A00F974A6 /* Theme.swift in Sources */,
+				94D38A061F39C23A00F974A6 /* YYHomeViewController.swift in Sources */,
+				94D38A441F39C23A00F974A6 /* YYMyBasicCell.swift in Sources */,
+				94D38A201F39C23A00F974A6 /* YYSurroundingListViewController.swift in Sources */,
+				94D38A111F39C23A00F974A6 /* YYIMGroupInfoSettingViewController.swift in Sources */,
+				94D38A421F39C23A00F974A6 /* YYIMGroupInfoSettingCell.swift in Sources */,
+				94D389D21F39C23A00F974A6 /* AppDelegate.swift in Sources */,
+				94D389B11F39C23A00F974A6 /* ScrollView+BaneHeader.swift in Sources */,
+				94D38A4C1F39C23A00F974A6 /* YYCompetitionCommentCell.swift in Sources */,
+				94D38A211F39C23A00F974A6 /* YYApplyAddImageTableViewCell.swift in Sources */,
+				94D38A331F39C23A00F974A6 /* YYConversationCell.swift in Sources */,
+				94D38A171F39C23A00F974A6 /* YYNewsViewController.swift in Sources */,
+				94D38A1A1F39C23A00F974A6 /* YYArticleListViewController.swift in Sources */,
+				94D389B21F39C23A00F974A6 /* String+Extension.swift in Sources */,
+				94D389F91F39C23A00F974A6 /* YYPlayerView.swift in Sources */,
+				94D38A1F1F39C23A00F974A6 /* YYPhotoListViewController.swift in Sources */,
+				94D389AC1F39C23A00F974A6 /* YYBaseView.swift in Sources */,
+				94D389ED1F39C23A00F974A6 /* GA_CircleRefreshHeaderView.swift in Sources */,
+				94D389FB1F39C23A00F974A6 /* YYShotViewButton.swift in Sources */,
+				94D38A011F39C23A00F974A6 /* Protocol.swift in Sources */,
+				94D389CF1F39C23A00F974A6 /* YYApplyModel.swift in Sources */,
+				94D389F81F39C23A00F974A6 /* YYOnePixView.swift in Sources */,
+				94D38A021F39C23A00F974A6 /* YBAttributeTextTapForSwfit.swift in Sources */,
+				94D38A401F39C23A00F974A6 /* YYIMGroupInfoSettingButtonCell.swift in Sources */,
+				94D389F31F39C23A00F974A6 /* YYBorderLabel.swift in Sources */,
+				94D389CD1F39C23A00F974A6 /* YYTabBarController.swift in Sources */,
+				94D38A071F39C23A00F974A6 /* YYIMBaseViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,20 +1532,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		94D388851F39BE4100F974A6 /* Main.storyboard */ = {
+		94D38A5C1F39C2F600F974A6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				94D388861F39BE4100F974A6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		94D3888A1F39BE4100F974A6 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				94D3888B1F39BE4100F974A6 /* Base */,
+				94D38A5D1F39C2F600F974A6 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		94D38A5E1F39C2F600F974A6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				94D38A5F1F39C2F600F974A6 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -436,6 +1597,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/OTHER/YYHeader.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -478,6 +1640,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/OTHER/YYHeader.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -488,6 +1651,7 @@
 			baseConfigurationReference = CDF16BF32666F3D156E4C355 /* Pods-YE.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8975PEGCVX;
 				INFOPLIST_FILE = YE/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jianan.YE;
@@ -501,6 +1665,7 @@
 			baseConfigurationReference = 678318913B05B3CFC6F3F7B8 /* Pods-YE.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8975PEGCVX;
 				INFOPLIST_FILE = YE/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jianan.YE;
@@ -582,6 +1747,7 @@
 				94D388A81F39BE4100F974A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		94D388A91F39BE4100F974A6 /* Build configuration list for PBXNativeTarget "YETests" */ = {
 			isa = XCConfigurationList;
@@ -590,6 +1756,7 @@
 				94D388AB1F39BE4100F974A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		94D388AC1F39BE4100F974A6 /* Build configuration list for PBXNativeTarget "YEUITests" */ = {
 			isa = XCConfigurationList;
@@ -598,6 +1765,7 @@
 				94D388AE1F39BE4100F974A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
