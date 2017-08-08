@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="YYCompetitionCommentSectionView" customModule="YueYe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="95"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comptition_header_normal" translatesAutoresizingMaskIntoConstraints="NO" id="1bi-Y7-F98">
+                    <rect key="frame" x="15" y="15" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="0r1-dT-448"/>
+                        <constraint firstAttribute="height" constant="35" id="iU7-xI-PaV"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大帅帅" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DH1-e1-F1W">
+                    <rect key="frame" x="60" y="15" width="43" height="17"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EWb-lZ-CEg">
+                    <rect key="frame" x="60" y="42" width="235" height="14.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llc-oA-tnz">
+                    <rect key="frame" x="340" y="32" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="125-6U-K8p"/>
+                        <constraint firstAttribute="height" constant="20" id="IFa-4j-sZN"/>
+                    </constraints>
+                    <state key="normal" image="like_normal"/>
+                    <state key="selected" image="like_selected"/>
+                    <connections>
+                        <action selector="likeAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="xkb-yv-DF5"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99+" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9an-XW-HN7">
+                    <rect key="frame" x="305" y="37" width="30" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="k2k-vh-ZfG"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jfu-kc-OE2" customClass="YYOnePixView" customModule="YueYe" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="94" width="375" height="1"/>
+                    <color key="backgroundColor" red="1" green="0.43137254899999999" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="JuZ-Tv-g3C"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="onePix" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="9an-XW-HN7" firstAttribute="leading" secondItem="EWb-lZ-CEg" secondAttribute="trailing" constant="10" id="0th-nu-86A"/>
+                <constraint firstItem="llc-oA-tnz" firstAttribute="top" secondItem="DH1-e1-F1W" secondAttribute="bottom" id="36j-ee-Tbc"/>
+                <constraint firstItem="llc-oA-tnz" firstAttribute="bottom" secondItem="9an-XW-HN7" secondAttribute="bottom" id="Bwe-eW-rPj"/>
+                <constraint firstItem="Jfu-kc-OE2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Sft-3D-ckC"/>
+                <constraint firstItem="llc-oA-tnz" firstAttribute="leading" secondItem="9an-XW-HN7" secondAttribute="trailing" constant="5" id="UX8-BH-e39"/>
+                <constraint firstAttribute="bottom" secondItem="Jfu-kc-OE2" secondAttribute="bottom" id="VeG-9L-yBm"/>
+                <constraint firstItem="1bi-Y7-F98" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="Yyw-9D-of7"/>
+                <constraint firstItem="DH1-e1-F1W" firstAttribute="top" secondItem="1bi-Y7-F98" secondAttribute="top" id="dPU-wR-uCq"/>
+                <constraint firstItem="EWb-lZ-CEg" firstAttribute="leading" secondItem="1bi-Y7-F98" secondAttribute="trailing" constant="10" id="ex2-Ar-Eja"/>
+                <constraint firstAttribute="trailing" secondItem="Jfu-kc-OE2" secondAttribute="trailing" id="jt4-Pf-QVi"/>
+                <constraint firstItem="1bi-Y7-F98" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="mFv-8q-AoE"/>
+                <constraint firstAttribute="trailing" secondItem="llc-oA-tnz" secondAttribute="trailing" constant="15" id="mmm-Kk-Rpc"/>
+                <constraint firstItem="EWb-lZ-CEg" firstAttribute="top" secondItem="DH1-e1-F1W" secondAttribute="bottom" constant="10" id="p1m-60-J9P"/>
+                <constraint firstItem="DH1-e1-F1W" firstAttribute="leading" secondItem="1bi-Y7-F98" secondAttribute="trailing" constant="10" id="rVY-hA-FTU"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="contentLabel" destination="EWb-lZ-CEg" id="KrF-q3-a6X"/>
+                <outlet property="headerImageView" destination="1bi-Y7-F98" id="jGS-ap-yaI"/>
+                <outlet property="likeButton" destination="llc-oA-tnz" id="yHR-u1-oQs"/>
+                <outlet property="likeNumberLabel" destination="9an-XW-HN7" id="1PX-DI-0d9"/>
+                <outlet property="titleLabel" destination="DH1-e1-F1W" id="FZh-VU-F21"/>
+            </connections>
+            <point key="canvasLocation" x="-51.5" y="-262.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="comptition_header_normal" width="48" height="48"/>
+        <image name="like_normal" width="32" height="32"/>
+        <image name="like_selected" width="32" height="32"/>
+    </resources>
+</document>

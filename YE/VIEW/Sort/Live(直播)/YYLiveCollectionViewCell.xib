@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="YYLiveCollectionViewCell" id="gTV-IL-0wX" customClass="YYLiveCollectionViewCell" customModule="YueYe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="133" height="145"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="133" height="145"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0490.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="eSC-NT-C5O">
+                        <rect key="frame" x="0.0" y="0.0" width="133" height="85"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="85" id="4JC-NS-xXG"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10赞" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JEE-E9-8o9">
+                        <rect key="frame" x="0.0" y="122" width="133" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="HJC-Us-pv2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.20392156859999999" green="0.20392156859999999" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQm-xy-JGY">
+                        <rect key="frame" x="0.0" y="95" width="133" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.94503453078055566" green="0.93611813217222206" blue="0.92711205578333322" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="JEE-E9-8o9" secondAttribute="trailing" id="CRh-hZ-4Vf"/>
+                <constraint firstItem="XQm-xy-JGY" firstAttribute="top" secondItem="eSC-NT-C5O" secondAttribute="bottom" constant="10" id="YCn-3s-LEm"/>
+                <constraint firstItem="JEE-E9-8o9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="dpp-ev-ENS"/>
+                <constraint firstItem="XQm-xy-JGY" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="eCV-TR-2h7"/>
+                <constraint firstItem="JEE-E9-8o9" firstAttribute="top" secondItem="XQm-xy-JGY" secondAttribute="bottom" constant="10" id="lZP-Zi-Cty"/>
+                <constraint firstAttribute="trailing" secondItem="XQm-xy-JGY" secondAttribute="trailing" id="r1d-aW-fPh"/>
+                <constraint firstItem="eSC-NT-C5O" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="sC8-Ve-7DG"/>
+                <constraint firstAttribute="trailing" secondItem="eSC-NT-C5O" secondAttribute="trailing" id="tud-sa-KFV"/>
+                <constraint firstItem="eSC-NT-C5O" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="vjE-Hw-4NA"/>
+            </constraints>
+            <size key="customSize" width="133" height="142"/>
+            <connections>
+                <outlet property="bigImageView" destination="eSC-NT-C5O" id="TRN-p0-hVL"/>
+                <outlet property="titleLabel" destination="JEE-E9-8o9" id="iGb-4A-xGQ"/>
+            </connections>
+            <point key="canvasLocation" x="25.5" y="95"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="IMG_0490.jpg" width="4032" height="3024"/>
+    </resources>
+</document>

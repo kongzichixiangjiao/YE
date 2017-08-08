@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="YYCompetitionDetailsBottomView" customModule="YueYe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0Q-aK-vBJ">
+                    <rect key="frame" x="295" y="0.0" width="80" height="40"/>
+                    <color key="backgroundColor" red="0.0" green="0.46274509800000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="Df6-ub-HTg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="立即报名">
+                        <color key="titleColor" red="0.98431372549999996" green="0.98431372549999996" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="applyAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="EYm-Qi-m44"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1co-Oc-QKe">
+                    <rect key="frame" x="215" y="0.0" width="80" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="jIG-Wf-qnZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="报名查询">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="ga_borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="ga_borderColor">
+                            <color key="value" red="0.89411764709999997" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="demandAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="o9L-t6-0KL"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="说点儿啥吧..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ost-Rx-BmM">
+                    <rect key="frame" x="10" y="12.5" width="195" height="15"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="KXL-Y7-B2T"/>
+                    </connections>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0hz-vM-gne" customClass="YYOnePixView" customModule="YueYe" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.89411764709999997" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="vnN-QD-ApB"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="onePix" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="1co-Oc-QKe" firstAttribute="leading" secondItem="ost-Rx-BmM" secondAttribute="trailing" constant="10" id="0Bx-Cn-ETM"/>
+                <constraint firstItem="F0Q-aK-vBJ" firstAttribute="leading" secondItem="1co-Oc-QKe" secondAttribute="trailing" id="6az-aP-3gJ"/>
+                <constraint firstItem="ost-Rx-BmM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="767-tC-y7F"/>
+                <constraint firstItem="0hz-vM-gne" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="AEv-Jk-Qh4"/>
+                <constraint firstItem="1co-Oc-QKe" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FGZ-o6-DAk"/>
+                <constraint firstAttribute="trailing" secondItem="F0Q-aK-vBJ" secondAttribute="trailing" id="L8r-1g-aAw"/>
+                <constraint firstItem="ost-Rx-BmM" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="LWY-MG-d2q"/>
+                <constraint firstAttribute="bottom" secondItem="F0Q-aK-vBJ" secondAttribute="bottom" id="Lg1-Xy-7fr"/>
+                <constraint firstItem="F0Q-aK-vBJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="M8d-4l-pTb"/>
+                <constraint firstAttribute="bottom" secondItem="1co-Oc-QKe" secondAttribute="bottom" id="ZnA-8z-tsf"/>
+                <constraint firstItem="0hz-vM-gne" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mUh-LI-vsE"/>
+                <constraint firstAttribute="trailing" secondItem="0hz-vM-gne" secondAttribute="trailing" id="rSi-c0-uOn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="applyButton" destination="F0Q-aK-vBJ" id="mSS-Lr-gIG"/>
+                <outlet property="commentTextField" destination="ost-Rx-BmM" id="azl-R8-mRE"/>
+                <outlet property="demandButton" destination="1co-Oc-QKe" id="web-c8-fsy"/>
+            </connections>
+            <point key="canvasLocation" x="44.5" y="79"/>
+        </view>
+    </objects>
+</document>

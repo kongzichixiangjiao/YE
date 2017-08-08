@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="YYAlertBirthdayView" customModule="YueYe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="260"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="oOs-KU-F8b">
+                    <rect key="frame" x="0.0" y="44" width="375" height="216"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="216" id="60c-St-lBI"/>
+                    </constraints>
+                    <date key="date" timeIntervalSinceReferenceDate="520221559.405729">
+                        <!--2017-06-27 01:59:19 +0000-->
+                    </date>
+                    <locale key="locale" localeIdentifier="zh-Hans"/>
+                    <connections>
+                        <action selector="valueChangedAction:" destination="iN0-l3-epB" eventType="valueChanged" id="IU5-fU-m8l"/>
+                    </connections>
+                </datePicker>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x5Z-jl-uHr">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6e-nt-oal">
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="xeM-nJ-AgL"/>
+                            </constraints>
+                            <state key="normal" title="取消"/>
+                            <connections>
+                                <action selector="cancleAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="kyd-L1-bnE"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JTt-Xu-Me2">
+                            <rect key="frame" x="325" y="0.0" width="50" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="0AA-rU-YGC"/>
+                            </constraints>
+                            <state key="normal" title="确定"/>
+                            <connections>
+                                <action selector="confirmAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="4jA-mW-g94"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="JTt-Xu-Me2" secondAttribute="bottom" id="1Eo-uF-cLt"/>
+                        <constraint firstAttribute="trailing" secondItem="JTt-Xu-Me2" secondAttribute="trailing" id="5RL-CG-bSg"/>
+                        <constraint firstAttribute="bottom" secondItem="v6e-nt-oal" secondAttribute="bottom" id="DG0-WL-xQt"/>
+                        <constraint firstItem="v6e-nt-oal" firstAttribute="leading" secondItem="x5Z-jl-uHr" secondAttribute="leading" id="Dei-Jq-w9o"/>
+                        <constraint firstItem="v6e-nt-oal" firstAttribute="top" secondItem="x5Z-jl-uHr" secondAttribute="top" id="Os1-vt-CdG"/>
+                        <constraint firstAttribute="height" constant="44" id="U15-9S-jWv"/>
+                        <constraint firstItem="JTt-Xu-Me2" firstAttribute="top" secondItem="x5Z-jl-uHr" secondAttribute="top" id="sBd-sw-muk"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="oOs-KU-F8b" firstAttribute="top" secondItem="x5Z-jl-uHr" secondAttribute="bottom" id="18R-1M-RUM"/>
+                <constraint firstItem="x5Z-jl-uHr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="DI6-uY-7Ul"/>
+                <constraint firstItem="x5Z-jl-uHr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="XMD-nX-5MN"/>
+                <constraint firstItem="oOs-KU-F8b" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="dOK-yP-0uL"/>
+                <constraint firstAttribute="trailing" secondItem="oOs-KU-F8b" secondAttribute="trailing" id="mFJ-Jn-jLh"/>
+                <constraint firstAttribute="trailing" secondItem="x5Z-jl-uHr" secondAttribute="trailing" id="pll-c5-XWr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="cancleButton" destination="v6e-nt-oal" id="Wwk-WY-peQ"/>
+                <outlet property="confirmButton" destination="JTt-Xu-Me2" id="NeP-9e-rQo"/>
+                <outlet property="datePicker" destination="oOs-KU-F8b" id="fyo-dx-w12"/>
+            </connections>
+            <point key="canvasLocation" x="58.5" y="-149"/>
+        </view>
+    </objects>
+</document>

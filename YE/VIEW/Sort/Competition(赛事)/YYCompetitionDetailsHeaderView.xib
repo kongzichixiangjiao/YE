@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="YYCompetitionDetailsHeaderView" customModule="YueYe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="270"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_2719.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="2hC-JH-6Si">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="180" id="SuZ-yi-RZh"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zVE-k9-nvs" customClass="YYIconLableView" customModule="YueYe" customModuleProvider="target">
+                    <rect key="frame" x="15" y="221" width="63" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="63" id="q3O-P0-ve9"/>
+                        <constraint firstAttribute="height" constant="12" id="swD-kP-dq4"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="icon" value="apply_time"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="content" value="测试"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="space">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="contentColor">
+                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="contentFontSize">
+                            <real key="value" value="9"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="iconPosition">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZMa-gO-saS" customClass="YYIconLableView" customModule="YueYe" customModuleProvider="target">
+                    <rect key="frame" x="15" y="238" width="63" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="63" id="9Q9-0x-siQ"/>
+                        <constraint firstAttribute="height" constant="12" id="ayL-ca-8Gz"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="icon" value="apply_site"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="content" value="崇礼"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="space">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="contentColor">
+                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="contentFontSize">
+                            <real key="value" value="9"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="iconPosition">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Columbia 168超级越野赛崇礼站" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEg-Hj-Lxb">
+                    <rect key="frame" x="15" y="195" width="203" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulu-Ik-Nom">
+                    <rect key="frame" x="320" y="210" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="Glk-x2-NPO"/>
+                        <constraint firstAttribute="height" constant="25" id="Sc2-rB-qcw"/>
+                    </constraints>
+                    <state key="normal" image="like_normal"/>
+                    <state key="selected" image="like_selected"/>
+                    <connections>
+                        <action selector="likeAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="dqS-p4-dOS"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpA-9v-Vch">
+                    <rect key="frame" x="300" y="220.5" width="15" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="ZMa-gO-saS" firstAttribute="top" secondItem="zVE-k9-nvs" secondAttribute="bottom" constant="5" id="DXi-R0-gmQ"/>
+                <constraint firstItem="ZMa-gO-saS" firstAttribute="leading" secondItem="zVE-k9-nvs" secondAttribute="leading" id="HLJ-4q-SOi"/>
+                <constraint firstItem="ulu-Ik-Nom" firstAttribute="bottom" secondItem="hpA-9v-Vch" secondAttribute="bottom" id="TOu-as-gZ1"/>
+                <constraint firstItem="ulu-Ik-Nom" firstAttribute="leading" secondItem="hpA-9v-Vch" secondAttribute="trailing" constant="5" id="dpn-rd-9bk"/>
+                <constraint firstItem="ulu-Ik-Nom" firstAttribute="top" secondItem="2hC-JH-6Si" secondAttribute="bottom" constant="30" id="gP1-TS-xpM"/>
+                <constraint firstItem="2hC-JH-6Si" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hvC-WK-6Dd"/>
+                <constraint firstItem="NEg-Hj-Lxb" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="ikb-Ev-BEO"/>
+                <constraint firstItem="zVE-k9-nvs" firstAttribute="top" secondItem="NEg-Hj-Lxb" secondAttribute="bottom" constant="9" id="inG-ej-Bs3"/>
+                <constraint firstAttribute="trailing" secondItem="2hC-JH-6Si" secondAttribute="trailing" id="nnZ-JU-6WP"/>
+                <constraint firstItem="NEg-Hj-Lxb" firstAttribute="top" secondItem="2hC-JH-6Si" secondAttribute="bottom" constant="15" id="rce-4b-Fv0"/>
+                <constraint firstAttribute="trailing" secondItem="ulu-Ik-Nom" secondAttribute="trailing" constant="30" id="spY-CQ-HmV"/>
+                <constraint firstItem="2hC-JH-6Si" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="uTI-o1-ZiA"/>
+                <constraint firstItem="zVE-k9-nvs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="yc7-cp-wiJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageView" destination="2hC-JH-6Si" id="6CZ-K2-6r8"/>
+                <outlet property="likeButton" destination="ulu-Ik-Nom" id="GyS-yE-zHf"/>
+                <outlet property="likeNumberLabel" destination="hpA-9v-Vch" id="xf5-Uu-yNt"/>
+                <outlet property="placeLabel" destination="ZMa-gO-saS" id="jnZ-ny-PdR"/>
+                <outlet property="tileLabel" destination="zVE-k9-nvs" id="3b3-mH-CM1"/>
+                <outlet property="titleLabel" destination="NEg-Hj-Lxb" id="S55-Wk-JF3"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="-146"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="IMG_2719.jpg" width="4032" height="3024"/>
+        <image name="like_normal" width="32" height="32"/>
+        <image name="like_selected" width="32" height="32"/>
+    </resources>
+</document>

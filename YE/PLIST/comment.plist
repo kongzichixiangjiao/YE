@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>isLike</key>
+		<false/>
+		<key>likeNumber</key>
+		<integer>2</integer>
+		<key>reply</key>
+		<array>
+			<dict>
+				<key>from</key>
+				<string>佳男</string>
+				<key>to</key>
+				<string>大帅帅帅</string>
+				<key>content</key>
+				<string>你少说话 被跟这儿吵吵</string>
+				<key>date</key>
+				<string>2017-06-20</string>
+			</dict>
+			<dict>
+				<key>date</key>
+				<string>2017-06-20</string>
+				<key>from</key>
+				<string>大帅帅</string>
+				<key>to</key>
+				<string>佳男</string>
+				<key>content</key>
+				<string>管你什么事儿 欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿</string>
+			</dict>
+			<dict>
+				<key>date</key>
+				<string>2017-06-20</string>
+				<key>from</key>
+				<string>大雪</string>
+				<key>to</key>
+				<string>小雪</string>
+				<key>content</key>
+				<string>又下雨了</string>
+			</dict>
+		</array>
+		<key>content</key>
+		<string>我是测试回复内容 我这么回复可以吗？</string>
+		<key>heaerUrl</key>
+		<string></string>
+		<key>title</key>
+		<string>假名字</string>
+	</dict>
+	<dict>
+		<key>likeNumber</key>
+		<integer>5</integer>
+		<key>isLike</key>
+		<false/>
+		<key>reply</key>
+		<array>
+			<dict>
+				<key>date</key>
+				<string>2017-06-20</string>
+				<key>from</key>
+				<string>佳男</string>
+				<key>to</key>
+				<string>大帅帅</string>
+				<key>content</key>
+				<string>你少说话 被跟这儿吵吵</string>
+			</dict>
+			<dict>
+				<key>date</key>
+				<string>2017-06-20</string>
+				<key>from</key>
+				<string>大帅帅</string>
+				<key>to</key>
+				<string>佳男</string>
+				<key>content</key>
+				<string>管你什么事儿 欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿欠儿</string>
+			</dict>
+			<dict>
+				<key>date</key>
+				<string>2017-06-20</string>
+				<key>from</key>
+				<string>大雪</string>
+				<key>to</key>
+				<string>小雪</string>
+				<key>content</key>
+				<string>又下雨了</string>
+			</dict>
+		</array>
+		<key>content</key>
+		<string>这一定是假的回复内容。这么短？</string>
+		<key>heaerUrl</key>
+		<string></string>
+		<key>title</key>
+		<string>真名字</string>
+	</dict>
+</array>
+</plist>

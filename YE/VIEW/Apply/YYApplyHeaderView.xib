@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="YYApplyHeaderView" customModule="YueYe" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="崇礼超级越野赛" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYW-Tj-Mup">
+                    <rect key="frame" x="15" y="30" width="345" height="24"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥499.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpI-nM-Ndc">
+                    <rect key="frame" x="294" y="61.5" width="61" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="1" green="0.43137254899999999" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="报名" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DJv-5q-3V3">
+                    <rect key="frame" x="20" y="69" width="26" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="26" id="Kj7-ad-qqq"/>
+                        <constraint firstAttribute="height" constant="12" id="VgI-Wa-ckZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                    <color key="textColor" red="0.0" green="0.46274509800000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="ga_cornerRadius">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="ga_borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="ga_borderColor">
+                            <color key="value" red="0.0" green="0.46274509800000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vGc-KR-sDR" customClass="YYIconLableView" customModule="YueYe" customModuleProvider="target">
+                    <rect key="frame" x="20" y="91" width="63" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="63" id="Efd-ps-vBd"/>
+                        <constraint firstAttribute="height" constant="12" id="GRH-fC-0MG"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="icon" value="apply_time"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="content" value="测试"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="space">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="contentColor">
+                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="contentFontSize">
+                            <real key="value" value="9"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="iconPosition">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UD4-2h-Ni3" customClass="YYIconLableView" customModule="YueYe" customModuleProvider="target">
+                    <rect key="frame" x="20" y="108" width="63" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="63" id="1Jr-Oz-yR2"/>
+                        <constraint firstAttribute="height" constant="12" id="Vl3-xJ-W3Y"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="icon" value="apply_site"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="content" value="崇礼"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="space">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="contentColor">
+                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="contentFontSize">
+                            <real key="value" value="9"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="iconPosition">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ccB-vO-st4" customClass="YYIconLableView" customModule="YueYe" customModuleProvider="target">
+                    <rect key="frame" x="98" y="108" width="257" height="12"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="12" id="nMX-Gh-z9v"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="icon" value="apply_time"/>
+                        <userDefinedRuntimeAttribute type="string" keyPath="content" value="2017-07-10 9:00"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="space">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="contentColor">
+                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="contentFontSize">
+                            <real key="value" value="9"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="iconPosition">
+                            <integer key="value" value="0"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yJU-pJ-qnZ">
+                    <rect key="frame" x="0.0" y="130" width="375" height="10"/>
+                    <color key="backgroundColor" red="0.89411764709999997" green="0.88235294119999996" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="10" id="j9e-Rm-Rte"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vGc-KR-sDR" firstAttribute="top" secondItem="DJv-5q-3V3" secondAttribute="bottom" constant="10" id="5ZM-kg-Y0j"/>
+                <constraint firstItem="yJU-pJ-qnZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="6pq-sK-KvL"/>
+                <constraint firstAttribute="trailing" secondItem="yJU-pJ-qnZ" secondAttribute="trailing" id="8Ln-JZ-MGB"/>
+                <constraint firstAttribute="trailing" secondItem="LYW-Tj-Mup" secondAttribute="trailing" constant="15" id="9HS-qE-qO6"/>
+                <constraint firstItem="UD4-2h-Ni3" firstAttribute="top" secondItem="vGc-KR-sDR" secondAttribute="bottom" constant="5" id="HVq-aT-JCl"/>
+                <constraint firstItem="UD4-2h-Ni3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="IRc-f6-306"/>
+                <constraint firstItem="vGc-KR-sDR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="NaB-fF-WTc"/>
+                <constraint firstAttribute="bottom" secondItem="yJU-pJ-qnZ" secondAttribute="bottom" id="SBD-bJ-OXI"/>
+                <constraint firstAttribute="trailing" secondItem="bpI-nM-Ndc" secondAttribute="trailing" constant="20" id="cJF-jV-gCb"/>
+                <constraint firstItem="ccB-vO-st4" firstAttribute="bottom" secondItem="UD4-2h-Ni3" secondAttribute="bottom" id="dKD-nd-Mb8"/>
+                <constraint firstItem="DJv-5q-3V3" firstAttribute="top" secondItem="LYW-Tj-Mup" secondAttribute="bottom" constant="15" id="kiY-kH-bbx"/>
+                <constraint firstItem="LYW-Tj-Mup" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="30" id="osh-d1-GbC"/>
+                <constraint firstItem="ccB-vO-st4" firstAttribute="leading" secondItem="UD4-2h-Ni3" secondAttribute="trailing" constant="15" id="s4v-DN-8nr"/>
+                <constraint firstItem="bpI-nM-Ndc" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="xpU-1I-6YB"/>
+                <constraint firstItem="DJv-5q-3V3" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="xpk-Tr-yan"/>
+                <constraint firstAttribute="trailing" secondItem="ccB-vO-st4" secondAttribute="trailing" constant="20" id="zap-6n-wdN"/>
+                <constraint firstItem="LYW-Tj-Mup" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="zwE-on-oaK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="34.5" y="-211"/>
+        </view>
+    </objects>
+</document>
