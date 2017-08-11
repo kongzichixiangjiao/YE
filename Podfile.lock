@@ -18,12 +18,16 @@ PODS:
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
+  - SQLite.swift (0.11.3):
+    - SQLite.swift/standard (= 0.11.3)
+  - SQLite.swift/standard (0.11.3)
 
 DEPENDENCIES:
   - EaseUILite (from `https://github.com/easemob/easeui-ios-hyphenate-cocoapods.git`, tag `3.3.2`)
-  - HandyJSON (~> 1.7.2)
+  - HandyJSON
   - HyphenateLite
   - ReactiveSwift
+  - SQLite.swift
 
 EXTERNAL SOURCES:
   EaseUILite:
@@ -46,7 +50,8 @@ SPEC CHECKSUMS:
   ReactiveSwift: f54ba12c2e799003432930fa55495315ae44f32b
   Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SQLite.swift: 99b36c22084427f0abbeb957556ce1528cf10bb3
 
-PODFILE CHECKSUM: 6d8b0a9c58f7615d37a0839e886088ecd29eda90
+PODFILE CHECKSUM: 9173c607e3fcac65b35046fc628821fa36a5e826
 
 COCOAPODS: 1.2.1

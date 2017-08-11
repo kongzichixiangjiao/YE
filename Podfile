@@ -3,9 +3,9 @@ inhibit_all_warnings!
 use_frameworks!
 
 target 'YE’ do 
-pod 'HandyJSON', '~> 1.7.2'
+pod 'HandyJSON'
 pod 'ReactiveSwift'
-
+pod 'SQLite.swift'
 
 pod 'HyphenateLite'
 pod 'EaseUILite', :git =>'https://github.com/easemob/easeui-ios-hyphenate-cocoapods.git', :tag => '3.3.2'

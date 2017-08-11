@@ -7,13 +7,32 @@
 //
 
 import UIKit
+import SQLite
 
 class YYHomeViewController: YYBaseTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initNavigationView()
-
+        
+        sqliteMethod()
+        
+    }
+    
+    func sqliteMethod() {
+        let path = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+        let db = try? Connection("\(path)/db.sqlite3")
+        
+        let users = Table("users")
+        let id = Expression<Int64>("id")
+        let name = Expression<String?>("name")
+        let email = Expression<String>("email")
+        
+        try! db?.run(users.create(ifNotExists: true, block: { (table) in
+            table.column(id, primaryKey: true)
+            table.column(name)
+            table.column(email, unique: true)
+        }))
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

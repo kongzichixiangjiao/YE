@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		11EE240506B9841A6F5B3228 /* Pods_YE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381C7D52E9006ACBDEED168B /* Pods_YE.framework */; };
+		94A61ABB1F3DA37B0014A335 /* YYSQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A61ABA1F3DA37A0014A335 /* YYSQLite.swift */; };
 		94D388971F39BE4100F974A6 /* YETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388961F39BE4100F974A6 /* YETests.swift */; };
 		94D388A21F39BE4100F974A6 /* YEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388A11F39BE4100F974A6 /* YEUITests.swift */; };
 		94D3899F1F39C23A00F974A6 /* YYBaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388B11F39C23900F974A6 /* YYBaseCollectionViewController.swift */; };
@@ -223,6 +224,7 @@
 /* Begin PBXFileReference section */
 		381C7D52E9006ACBDEED168B /* Pods_YE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		678318913B05B3CFC6F3F7B8 /* Pods-YE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YE.release.xcconfig"; path = "Pods/Target Support Files/Pods-YE/Pods-YE.release.xcconfig"; sourceTree = "<group>"; };
+		94A61ABA1F3DA37A0014A335 /* YYSQLite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYSQLite.swift; sourceTree = "<group>"; };
 		94D3887E1F39BE4100F974A6 /* YE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D388921F39BE4100F974A6 /* YETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D388961F39BE4100F974A6 /* YETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YETests.swift; sourceTree = "<group>"; };
@@ -753,6 +755,7 @@
 				94D389241F39C23900F974A6 /* KeyPath.swift */,
 				94D389251F39C23900F974A6 /* Protocol.swift */,
 				94D389261F39C23900F974A6 /* YBAttributeTextTapForSwfit.swift */,
+				94A61ABA1F3DA37A0014A335 /* YYSQLite.swift */,
 			);
 			path = TOOL;
 			sourceTree = "<group>";
@@ -1493,6 +1496,7 @@
 				94D389CF1F39C23A00F974A6 /* YYApplyModel.swift in Sources */,
 				94D389F81F39C23A00F974A6 /* YYOnePixView.swift in Sources */,
 				94D38A021F39C23A00F974A6 /* YBAttributeTextTapForSwfit.swift in Sources */,
+				94A61ABB1F3DA37B0014A335 /* YYSQLite.swift in Sources */,
 				94D38A401F39C23A00F974A6 /* YYIMGroupInfoSettingButtonCell.swift in Sources */,
 				94D389F31F39C23A00F974A6 /* YYBorderLabel.swift in Sources */,
 				94D389CD1F39C23A00F974A6 /* YYTabBarController.swift in Sources */,
