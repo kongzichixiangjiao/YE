@@ -12,7 +12,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="uze-Kk-Jgm">
             <objects>
-                <tabBarController id="ymc-Gu-Cz4" customClass="YYTabBarController" customModule="YeShi" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="ymc-Gu-Cz4" customClass="YYTabBarController" customModule="YE" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Jd9-iB-J5n">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -33,7 +33,7 @@
         <!--首页-->
         <scene sceneID="4jm-9l-JFi">
             <objects>
-                <navigationController id="vLb-0C-QhP" customClass="YYNavigationViewController" customModule="YeShi" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="vLb-0C-QhP" customClass="YYNavigationViewController" customModule="YE" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="首页" image="tabbar_home" id="Mo0-Bk-AzM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mBS-oB-SaE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -50,7 +50,7 @@
         <!--Home View Controller-->
         <scene sceneID="Ku9-Gg-jhr">
             <objects>
-                <viewController id="AqQ-ZL-qu0" customClass="YYHomeViewController" customModule="YeShi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AqQ-ZL-qu0" customClass="YYHomeViewController" customModule="YE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wnt-f2-SQh"/>
                         <viewControllerLayoutGuide type="bottom" id="96v-ov-6qx"/>
@@ -69,7 +69,7 @@
         <!--野事er-->
         <scene sceneID="aPo-qF-Okc">
             <objects>
-                <navigationController id="57V-i5-q8n" customClass="YYNavigationViewController" customModule="YeShi" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="57V-i5-q8n" customClass="YYNavigationViewController" customModule="YE" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="野事er" image="tabbar_event" id="glz-QK-bSW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="L1g-Kg-ZgI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -86,7 +86,7 @@
         <!--Ye Event View Controller-->
         <scene sceneID="nDT-Ry-v8U">
             <objects>
-                <viewController id="LiR-IV-oVJ" customClass="YYYeEventViewController" customModule="YeShi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="LiR-IV-oVJ" customClass="YYYeEventViewController" customModule="YE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XdI-fo-SBc"/>
                         <viewControllerLayoutGuide type="bottom" id="VnR-WK-7eu"/>
@@ -105,7 +105,7 @@
         <!--消息-->
         <scene sceneID="CFd-MW-336">
             <objects>
-                <navigationController id="nVH-Tj-59U" customClass="YYNavigationViewController" customModule="YeShi" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="nVH-Tj-59U" customClass="YYNavigationViewController" customModule="YE" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="消息" image="tabbar_news" id="icO-zE-bQN"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eFH-75-0Go">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -122,7 +122,7 @@
         <!--News View Controller-->
         <scene sceneID="xBX-cI-aDF">
             <objects>
-                <viewController id="4Wd-3Q-97T" customClass="YYNewsViewController" customModule="YeShi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4Wd-3Q-97T" customClass="YYNewsViewController" customModule="YE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pLG-s0-ico"/>
                         <viewControllerLayoutGuide type="bottom" id="zD9-Ag-qdr"/>
@@ -158,7 +158,7 @@
         <!--我的-->
         <scene sceneID="Thu-E3-MNr">
             <objects>
-                <navigationController id="txM-q4-hWv" customClass="YYNavigationViewController" customModule="YeShi" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="txM-q4-hWv" customClass="YYNavigationViewController" customModule="YE" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="我的" image="tabbar_my" id="hYy-dU-zDO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FDh-Dq-Is5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -172,10 +172,10 @@
             </objects>
             <point key="canvasLocation" x="-162" y="846"/>
         </scene>
-        <!--View Controller-->
+        <!--Competition View Controller-->
         <scene sceneID="UXR-dZ-Fhs">
             <objects>
-                <viewController id="k0g-kV-OHF" sceneMemberID="viewController">
+                <viewController id="k0g-kV-OHF" customClass="YYCompetitionViewController" customModule="YE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="1ZO-sH-j7F"/>
                         <viewControllerLayoutGuide type="bottom" id="Tix-L6-4nb"/>
@@ -189,12 +189,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d4F-nh-OKW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1132" y="1545"/>
+            <point key="canvasLocation" x="-1162" y="1588"/>
         </scene>
         <!--My View Controller-->
         <scene sceneID="F5x-YJ-Szl">
             <objects>
-                <viewController id="aZi-3P-WcA" customClass="YYMyViewController" customModule="YeShi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aZi-3P-WcA" customClass="YYMyViewController" customModule="YE" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xwh-wY-dZC"/>
                         <viewControllerLayoutGuide type="bottom" id="vfp-xL-FqY"/>

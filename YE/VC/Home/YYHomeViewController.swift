@@ -16,7 +16,7 @@ class YYHomeViewController: YYBaseTableViewController {
         initNavigationView()
         
         sqliteMethod()
-        
+
     }
     
     func sqliteMethod() {

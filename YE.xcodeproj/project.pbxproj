@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		11EE240506B9841A6F5B3228 /* Pods_YE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381C7D52E9006ACBDEED168B /* Pods_YE.framework */; };
+		946BB2A51F44277E0062D173 /* Beverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946BB2A41F44277E0062D173 /* Beverage.swift */; };
+		946BB2A81F44285A0062D173 /* HouseBlend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946BB2A71F44285A0062D173 /* HouseBlend.swift */; };
+		946BB2AA1F44291C0062D173 /* CondimentDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946BB2A91F44291C0062D173 /* CondimentDecorator.swift */; };
+		946BB2AC1F4429EB0062D173 /* Milk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946BB2AB1F4429EB0062D173 /* Milk.swift */; };
+		946BB2AE1F4430480062D173 /* DecoratorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946BB2AD1F4430480062D173 /* DecoratorBase.swift */; };
+		949634581F41875D0079886E /* YYCompetitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 949634571F41875D0079886E /* YYCompetitionViewController.swift */; };
+		9496345C1F41880F0079886E /* YYCompetitionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9496345A1F41880F0079886E /* YYCompetitionCell.swift */; };
+		9496345D1F41880F0079886E /* YYCompetitionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9496345B1F41880F0079886E /* YYCompetitionCell.xib */; };
 		94A61ABB1F3DA37B0014A335 /* YYSQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A61ABA1F3DA37A0014A335 /* YYSQLite.swift */; };
 		94D388971F39BE4100F974A6 /* YETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388961F39BE4100F974A6 /* YETests.swift */; };
 		94D388A21F39BE4100F974A6 /* YEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388A11F39BE4100F974A6 /* YEUITests.swift */; };
@@ -224,6 +232,14 @@
 /* Begin PBXFileReference section */
 		381C7D52E9006ACBDEED168B /* Pods_YE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		678318913B05B3CFC6F3F7B8 /* Pods-YE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YE.release.xcconfig"; path = "Pods/Target Support Files/Pods-YE/Pods-YE.release.xcconfig"; sourceTree = "<group>"; };
+		946BB2A41F44277E0062D173 /* Beverage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beverage.swift; sourceTree = "<group>"; };
+		946BB2A71F44285A0062D173 /* HouseBlend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseBlend.swift; sourceTree = "<group>"; };
+		946BB2A91F44291C0062D173 /* CondimentDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CondimentDecorator.swift; sourceTree = "<group>"; };
+		946BB2AB1F4429EB0062D173 /* Milk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Milk.swift; sourceTree = "<group>"; };
+		946BB2AD1F4430480062D173 /* DecoratorBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecoratorBase.swift; sourceTree = "<group>"; };
+		949634571F41875D0079886E /* YYCompetitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYCompetitionViewController.swift; sourceTree = "<group>"; };
+		9496345A1F41880F0079886E /* YYCompetitionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYCompetitionCell.swift; sourceTree = "<group>"; };
+		9496345B1F41880F0079886E /* YYCompetitionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYCompetitionCell.xib; sourceTree = "<group>"; };
 		94A61ABA1F3DA37A0014A335 /* YYSQLite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYSQLite.swift; sourceTree = "<group>"; };
 		94D3887E1F39BE4100F974A6 /* YE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D388921F39BE4100F974A6 /* YETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -453,6 +469,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		946BB29F1F4426B00062D173 /* DecoratorPattern（装饰者模式） */ = {
+			isa = PBXGroup;
+			children = (
+				946BB2A61F44283C0062D173 /* concreteComponent（具体物） */,
+				946BB2A01F4426B00062D173 /* component（组成） */,
+				946BB2A21F4426B00062D173 /* condimentDecorator（调料装饰） */,
+				946BB2A31F4426B00062D173 /* condiment（调料） */,
+				946BB2AD1F4430480062D173 /* DecoratorBase.swift */,
+			);
+			path = "DecoratorPattern（装饰者模式）";
+			sourceTree = "<group>";
+		};
+		946BB2A01F4426B00062D173 /* component（组成） */ = {
+			isa = PBXGroup;
+			children = (
+				946BB2A41F44277E0062D173 /* Beverage.swift */,
+			);
+			path = "component（组成）";
+			sourceTree = "<group>";
+		};
+		946BB2A21F4426B00062D173 /* condimentDecorator（调料装饰） */ = {
+			isa = PBXGroup;
+			children = (
+				946BB2AB1F4429EB0062D173 /* Milk.swift */,
+			);
+			path = "condimentDecorator（调料装饰）";
+			sourceTree = "<group>";
+		};
+		946BB2A31F4426B00062D173 /* condiment（调料） */ = {
+			isa = PBXGroup;
+			children = (
+				946BB2A91F44291C0062D173 /* CondimentDecorator.swift */,
+			);
+			path = "condiment（调料）";
+			sourceTree = "<group>";
+		};
+		946BB2A61F44283C0062D173 /* concreteComponent（具体物） */ = {
+			isa = PBXGroup;
+			children = (
+				946BB2A71F44285A0062D173 /* HouseBlend.swift */,
+			);
+			path = "concreteComponent（具体物）";
+			sourceTree = "<group>";
+		};
+		949634561F41872F0079886E /* Competition */ = {
+			isa = PBXGroup;
+			children = (
+				949634571F41875D0079886E /* YYCompetitionViewController.swift */,
+			);
+			path = Competition;
+			sourceTree = "<group>";
+		};
+		949634591F4187F60079886E /* Competition */ = {
+			isa = PBXGroup;
+			children = (
+				9496345A1F41880F0079886E /* YYCompetitionCell.swift */,
+				9496345B1F41880F0079886E /* YYCompetitionCell.xib */,
+			);
+			path = Competition;
+			sourceTree = "<group>";
+		};
 		94D388751F39BE4100F974A6 = {
 			isa = PBXGroup;
 			children = (
@@ -643,6 +720,7 @@
 		94D388EB1F39C23900F974A6 /* OTHER */ = {
 			isa = PBXGroup;
 			children = (
+				946BB29F1F4426B00062D173 /* DecoratorPattern（装饰者模式） */,
 				94D388EC1F39C23900F974A6 /* AppDelegate+HuanXin.swift */,
 				94D388ED1F39C23900F974A6 /* AppDelegate.swift */,
 				94D388EE1F39C23900F974A6 /* HuanXin.swift */,
@@ -763,6 +841,7 @@
 		94D389271F39C23900F974A6 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				949634561F41872F0079886E /* Competition */,
 				94D389281F39C23900F974A6 /* Alert */,
 				94D389291F39C23900F974A6 /* Apply */,
 				94D3892B1F39C23900F974A6 /* Event */,
@@ -936,6 +1015,7 @@
 		94D389571F39C23A00F974A6 /* VIEW */ = {
 			isa = PBXGroup;
 			children = (
+				949634591F4187F60079886E /* Competition */,
 				94D389581F39C23A00F974A6 /* Apply */,
 				94D389621F39C23A00F974A6 /* Event */,
 				94D389651F39C23A00F974A6 /* Home */,
@@ -1268,6 +1348,7 @@
 				94D38A431F39C23A00F974A6 /* YYIMGroupInfoSettingCell.xib in Resources */,
 				94D38A2B1F39C23A00F974A6 /* YYEventVideoCell.xib in Resources */,
 				94D38A3B1F39C23A00F974A6 /* YYIMGroupCell.xib in Resources */,
+				9496345D1F41880F0079886E /* YYCompetitionCell.xib in Resources */,
 				94D38A311F39C23A00F974A6 /* YYHomeBasicCell.xib in Resources */,
 				94D389BD1F39C23A00F974A6 /* IMG_2473.jpg in Resources */,
 				94D38A511F39C23A00F974A6 /* YYCompetitionDetailsBottomView.xib in Resources */,
@@ -1402,6 +1483,7 @@
 				94D38A301F39C23A00F974A6 /* YYHomeBasicCell.swift in Sources */,
 				94D389A81F39C23A00F974A6 /* YYBaseCollectionView.swift in Sources */,
 				94D38A191F39C23A00F974A6 /* YYActivityListViewController.swift in Sources */,
+				9496345C1F41880F0079886E /* YYCompetitionCell.swift in Sources */,
 				94D389A21F39C23A00F974A6 /* YYBaseViewController.swift in Sources */,
 				94D389CC1F39C23A00F974A6 /* YYNavigationViewController.swift in Sources */,
 				94D38A2C1F39C23A00F974A6 /* YYHomeTopView.swift in Sources */,
@@ -1415,6 +1497,7 @@
 				94D38A031F39C23A00F974A6 /* YYApplyViewController.swift in Sources */,
 				94D389AA1F39C23A00F974A6 /* YYBaseTableViewFooterView.swift in Sources */,
 				94D38A381F39C23A00F974A6 /* YYIMFriendCell.swift in Sources */,
+				946BB2AE1F4430480062D173 /* DecoratorBase.swift in Sources */,
 				94D389F21F39C23A00F974A6 /* ScrollView+RefreshExtension.swift in Sources */,
 				94D38A521F39C23A00F974A6 /* YYCompetitionDetailsHeaderView.swift in Sources */,
 				94D389E61F39C23A00F974A6 /* YYAlertWindowView.swift in Sources */,
@@ -1422,6 +1505,7 @@
 				94D38A1B1F39C23A00F974A6 /* YYApplyQueryViewController.swift in Sources */,
 				94D389F41F39C23A00F974A6 /* YYCircleScrollView.swift in Sources */,
 				94D38A0B1F39C23A00F974A6 /* YYIMConversationViewController.swift in Sources */,
+				949634581F41875D0079886E /* YYCompetitionViewController.swift in Sources */,
 				94D389B31F39C23A00F974A6 /* UIColor+Extension.swift in Sources */,
 				94D38A501F39C23A00F974A6 /* YYCompetitionDetailsBottomView.swift in Sources */,
 				94D389EF1F39C23A00F974A6 /* GA_RefreshHeaderView.swift in Sources */,
@@ -1431,6 +1515,7 @@
 				94D389E31F39C23A00F974A6 /* YYAlertSelectedView.swift in Sources */,
 				94D389B01F39C23A00F974A6 /* NSObject+Extension.swift in Sources */,
 				94D38A0E1F39C23A00F974A6 /* YYIMCreatChatRoomViewController.swift in Sources */,
+				946BB2AA1F44291C0062D173 /* CondimentDecorator.swift in Sources */,
 				94D38A561F39C23A00F974A6 /* YYCompetitionReplyCell.swift in Sources */,
 				94D38A131F39C23A00F974A6 /* YYIMGroupListViewController.swift in Sources */,
 				94D38A081F39C23A00F974A6 /* YYEaseConversationListViewController.swift in Sources */,
@@ -1448,6 +1533,7 @@
 				94D389FF1F39C23A00F974A6 /* Compare.swift in Sources */,
 				94D389D01F39C23A00F974A6 /* YYCompetitionCommentSectionModel.swift in Sources */,
 				94D389DB1F39C23A00F974A6 /* YYAlertAnimation.swift in Sources */,
+				946BB2A81F44285A0062D173 /* HouseBlend.swift in Sources */,
 				94D389EE1F39C23A00F974A6 /* GA_LoadFooterView.swift in Sources */,
 				94D38A291F39C23A00F974A6 /* YYLinkmanHeaderView.swift in Sources */,
 				94D38A0C1F39C23A00F974A6 /* YYIMCreatChatGroupViewController.swift in Sources */,
@@ -1466,6 +1552,7 @@
 				94D38A471F39C23A00F974A6 /* YYSettingCell.swift in Sources */,
 				94D389B71F39C23A00F974A6 /* URL+Extension.swift in Sources */,
 				94D38A121F39C23A00F974A6 /* YYIMGroupInfoViewController.swift in Sources */,
+				946BB2A51F44277E0062D173 /* Beverage.swift in Sources */,
 				94D389B41F39C23A00F974A6 /* UIImage+Extension.swift in Sources */,
 				94D389B51F39C23A00F974A6 /* UITableViewCell+Extension.swift in Sources */,
 				94D38A251F39C23A00F974A6 /* YYApplySelectedTableViewCell.swift in Sources */,
@@ -1482,6 +1569,7 @@
 				94D389D21F39C23A00F974A6 /* AppDelegate.swift in Sources */,
 				94D389B11F39C23A00F974A6 /* ScrollView+BaneHeader.swift in Sources */,
 				94D38A4C1F39C23A00F974A6 /* YYCompetitionCommentCell.swift in Sources */,
+				946BB2AC1F4429EB0062D173 /* Milk.swift in Sources */,
 				94D38A211F39C23A00F974A6 /* YYApplyAddImageTableViewCell.swift in Sources */,
 				94D38A331F39C23A00F974A6 /* YYConversationCell.swift in Sources */,
 				94D38A171F39C23A00F974A6 /* YYNewsViewController.swift in Sources */,
