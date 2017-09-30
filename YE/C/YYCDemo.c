@@ -6,8 +6,7 @@
 //  Copyright © 2017年 侯佳男. All rights reserved.
 //
 
-#include <stdio.h>
-#include <string.h>
+#include "YYCDemo.h"
 
 int c_sum(int a, int b) {
     return a + b;
@@ -216,6 +215,7 @@ void dc_main() {
     test();
     
 }
+
 
 
 

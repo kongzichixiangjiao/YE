@@ -426,9 +426,9 @@
 		94D38A5F1F39C2F600F974A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		94D38A621F39C33300F974A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		94DED68B1F7F3AC40036AE1F /* libc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libc.tbd; path = usr/lib/libc.tbd; sourceTree = SDKROOT; };
+		94DED6911F7F3F2F0036AE1F /* YYCDemo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYCDemo.h; sourceTree = "<group>"; };
 		94DFE4111F5819F8004D71F3 /* YE-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YE-Bridging-Header.h"; sourceTree = "<group>"; };
 		94DFE4131F581B6B004D71F3 /* YYCDemo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = YYCDemo.c; sourceTree = "<group>"; };
-		94DFE4151F582C52004D71F3 /* YYCHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYCHeader.h; sourceTree = "<group>"; };
 		9B059CB7E9DD2575F5847CD7 /* Pods-YE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YE.release.xcconfig"; path = "Pods/Target Support Files/Pods-YE/Pods-YE.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -688,7 +688,6 @@
 			isa = PBXGroup;
 			children = (
 				94DFE4111F5819F8004D71F3 /* YE-Bridging-Header.h */,
-				94DFE4151F582C52004D71F3 /* YYCHeader.h */,
 				946BB29F1F4426B00062D173 /* DecoratorPattern（装饰者模式） */,
 				94D388EC1F39C23900F974A6 /* AppDelegate+HuanXin.swift */,
 				94D388ED1F39C23900F974A6 /* AppDelegate.swift */,
@@ -1160,6 +1159,7 @@
 		94DFE4121F581B47004D71F3 /* C */ = {
 			isa = PBXGroup;
 			children = (
+				94DED6911F7F3F2F0036AE1F /* YYCDemo.h */,
 				94DFE4131F581B6B004D71F3 /* YYCDemo.c */,
 			);
 			path = C;

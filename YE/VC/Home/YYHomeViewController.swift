@@ -77,8 +77,8 @@ class YYHomeViewController: YYBaseTableViewController {
         
         let _ = YYChildTestView(frame: CGRect.zero)
         
-        c_main()
-//        c_sum(2, 2)
+//        c_main()
+        c_sum(2, 2)
 //
 //        let a = 10
 //        print( a * 10 )
