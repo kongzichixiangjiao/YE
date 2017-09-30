@@ -29,12 +29,12 @@ class YYIMCreatChatGroupViewController: YYBaseViewController {
     
     func createChatGroup() {
         
-        HXManager.share.hx_createChatGroup(isGroupJurisdiction: groupJurisdictionSwitch.isOn, isMemberAddJurisdiction: memberAddJurisdictionSwitch.isOn, subject: groupNameTextField.text!, description: groupContenTextView.text, message: "加入吧 骚年") { (success) in
+        HXManager.share.hx_createChatGroup(groupJurisdictionSwitch.isOn, isMemberAddJurisdiction: memberAddJurisdictionSwitch.isOn, subject: groupNameTextField.text!, description: groupContenTextView.text, message: "加入吧 骚年") { (success) in
             if success {
-                self.view.ga_showView(text: "创建成功", deplay: 0.5)
+                self.view.ga_showView("创建成功", deplay: 0.5)
                 return
             }
-            self.view.ga_showView(text: "失败！！", deplay: 0.5)
+            self.view.ga_showView("失败！！", deplay: 0.5)
         }
     }
 
@@ -47,7 +47,7 @@ class YYIMCreatChatGroupViewController: YYBaseViewController {
         myRegignFirstResponder()
     }
     
-    private func myRegignFirstResponder() {
+    fileprivate func myRegignFirstResponder() {
         groupNameTextField.resignFirstResponder()
         groupContenTextView.resignFirstResponder()
     }

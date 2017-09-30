@@ -29,23 +29,23 @@ extension AppDelegate {
         EMClient.shared().applicationWillEnterForeground(application)
     }
     
-    private func hx_regist() {
+    fileprivate func hx_regist() {
         HXManager.hx_register {
             [weak self] success in
             if let weakSelf = self {
                 if success {
-                    weakSelf.window?.ga_showView(text: "注册成功", deplay: 1.22)
+                    weakSelf.window?.ga_showView("注册成功", deplay: 1.22)
                 }
             }
         }
     }
     
-    private func hx_login() {
+    fileprivate func hx_login() {
         HXManager.hx_login {
             [weak self] success in
             if let weakSelf = self {
                 if success {
-                    weakSelf.window?.ga_showView(text: "登陆成功", deplay: 1.22)
+                    weakSelf.window?.ga_showView("登陆成功", deplay: 1.22)
                 }
             }
         }

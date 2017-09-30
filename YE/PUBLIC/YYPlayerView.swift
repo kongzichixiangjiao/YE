@@ -54,7 +54,7 @@ class YYPlayerView: UIView {
         // 初始化视频显示layer
         playerLayer = AVPlayerLayer(player: player)
         // 设置显示模式
-        playerLayer.videoGravity = AVLayerVideoGravityResizeAspect
+        playerLayer.videoGravity = AVLayerVideoGravity.resizeAspect
         playerLayer.contentsScale = UIScreen.main.scale
         playerLayer.frame = self.bounds
         // 赋值给自定义的View
@@ -89,11 +89,11 @@ class YYPlayerView: UIView {
         self.addSubview(slider)
         
         // 按下的时候
-        slider.addTarget(self, action: #selector(sliderTouchDown(slider:)), for: .touchDown)
+        slider.addTarget(self, action: #selector(sliderTouchDown(_:)), for: .touchDown)
         // 弹起的时候
-        slider.addTarget(self, action: #selector(sliderTouchUpOut(slider:)), for: .touchUpOutside)
-        slider.addTarget(self, action: #selector(sliderTouchUpOut(slider:)), for: .touchUpInside)
-        slider.addTarget(self, action: #selector(sliderTouchUpOut(slider:)), for: .touchCancel)
+        slider.addTarget(self, action: #selector(sliderTouchUpOut(_:)), for: .touchUpOutside)
+        slider.addTarget(self, action: #selector(sliderTouchUpOut(_:)), for: .touchUpInside)
+        slider.addTarget(self, action: #selector(sliderTouchUpOut(_:)), for: .touchCancel)
     }
     
     func initProgressView() {
@@ -114,11 +114,11 @@ class YYPlayerView: UIView {
         return result
     }
     
-    func sliderTouchDown(slider:UISlider){
+    @objc func sliderTouchDown(_ slider:UISlider){
         self.sliding = true
     }
     
-    func sliderTouchUpOut(slider:UISlider){
+    @objc func sliderTouchUpOut(_ slider:UISlider){
         // TODO: -代理处理
         player(sliderTouchUpOut: slider)
     }
@@ -137,7 +137,7 @@ class YYPlayerView: UIView {
         }
     }
     
-    func update(){
+    @objc func update(){
         //暂停的时候
         
         // 当前播放到的时间
@@ -145,7 +145,7 @@ class YYPlayerView: UIView {
         // 总时间
         let totalTime   = TimeInterval(playerItem.duration.value) / TimeInterval(playerItem.duration.timescale)
         // timescale 这里表示压缩比例
-        let timeStr = "\(formatPlayTime(secounds: currentTime))/\(formatPlayTime(secounds: totalTime))" // 拼接字符串
+        let timeStr = "\(formatPlayTime(currentTime))/\(formatPlayTime(totalTime))" // 拼接字符串
         self.timeLabel.text = timeStr // 赋值
         // TODO: 播放进度
         slider.value = Float(currentTime/totalTime)
@@ -156,7 +156,7 @@ class YYPlayerView: UIView {
         }
     }
     
-    func formatPlayTime(secounds:TimeInterval)->String{
+    func formatPlayTime(_ secounds:TimeInterval)->String{
         if secounds.isNaN{
             return "00:00"
         }
@@ -166,11 +166,11 @@ class YYPlayerView: UIView {
     }
     
     func initTapAction() {
-        let tap = UITapGestureRecognizer(target: self, action: #selector(tapAction(sender:)))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapAction(_:)))
         self.addGestureRecognizer(tap)
     }
-    
-    func tapAction(sender: UITapGestureRecognizer) {
+    @objc  
+    func tapAction(_ sender: UITapGestureRecognizer) {
         
         play()
     }

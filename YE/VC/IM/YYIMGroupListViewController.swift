@@ -16,7 +16,7 @@ class YYIMGroupListViewController: YYBaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.ga_addRefreshHeaderXIB(headerView: GA_AnimationRefreshHeaderView.loadView()) {
+        self.tableView.ga_addRefreshHeaderXIB(GA_AnimationRefreshHeaderView.loadView()) {
             [weak self] in
             if let weakSelf = self {
                 weakSelf.hx_groupList()
@@ -72,6 +72,6 @@ extension YYIMGroupListViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.pushAction(model: self.dataSource[indexPath.row], type: .group)
+        delegate?.pushAction(self.dataSource[indexPath.row], type: .group)
     }
 }

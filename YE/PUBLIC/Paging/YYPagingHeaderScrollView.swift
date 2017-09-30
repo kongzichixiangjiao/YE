@@ -12,8 +12,8 @@ public let kScrollHeaderViewHeight: CGFloat = 44
 
 class YYPagingHeaderScrollView: UIView {
     
-    private let kFontSize: CGFloat = 12
-    private let kBigFontSize: CGFloat = 13
+    fileprivate let kFontSize: CGFloat = 12
+    fileprivate let kBigFontSize: CGFloat = 13
     
     var selectedButton: UIButton!
     
@@ -66,7 +66,7 @@ class YYPagingHeaderScrollView: UIView {
             b.setTitleColor("999999".color0X, for: .normal)
             b.setTitleColor("FF6E35".color0X, for: .selected)
             b.isSelected = i == 0
-            b.addTarget(self, action: #selector(buttonAction(sender:)), for: .touchUpInside)
+            b.addTarget(self, action: #selector(buttonAction(_:)), for: .touchUpInside)
             self.scrollView.addSubview(b)
             
             if i == 0 {
@@ -88,11 +88,11 @@ class YYPagingHeaderScrollView: UIView {
         self.addSubview(lineView)
     }
     
-    func buttonAction(sender: UIButton) {
-        setupViews(sender: sender)
+    @objc func buttonAction(_ sender: UIButton) {
+        setupViews(sender)
     }
     
-    private func setupViews(sender: UIButton) {
+    fileprivate func setupViews(_ sender: UIButton) {
         if sender.tag == selectedButton.tag {
             return
         }
@@ -106,12 +106,12 @@ class YYPagingHeaderScrollView: UIView {
         sender.isSelected = !sender.isSelected
         selectedButton = sender
         
-        setupOffset(sender: sender)
+        setupOffset(sender)
         
         clickedHandler(sender.tag)
     }
     
-    private func setupOffset(sender: UIButton) {
+    fileprivate func setupOffset(_ sender: UIButton) {
         UIView.animate(withDuration: 0.35) {
             (sender.subviews.last!).alpha = 1
         }
@@ -135,12 +135,12 @@ class YYPagingHeaderScrollView: UIView {
         }
     }
     
-    func updateHeaderScrollView(tag: Int) {
+    func updateHeaderScrollViewWithTag(_ tag: Int) {
         let b = self.viewWithTag(tag)
-        setupViews(sender: b as! UIButton)
+        setupViews(b as! UIButton)
     }
     
-    func updateHeaderScrollView(offsetX: CGFloat) {
+    func updateHeaderScrollView(_ offsetX: CGFloat) {
         print(offsetX)
         /*
             + 向右
@@ -150,14 +150,14 @@ class YYPagingHeaderScrollView: UIView {
             if selectedButton.tag == titles.count - 1 {
                 return
             }
-            let b = self.viewWithTag(selectedButton.tag + 1) as! UIButton
+            let _ = self.viewWithTag(selectedButton.tag + 1) as! UIButton
 //            b.setTitleColor(UIColor(red: 255.color255, green: 110.color255, blue: (53 + Int(offsetX)).color255, alpha: 1), for: .normal)
 //            b.titleLabel?.font = UIFont.systemFont(ofSize: kFontSize + (-offsetX / self.frame.size.width))
         } else {
             if selectedButton.tag == 0 {
                 return
             }
-            let b = self.viewWithTag(selectedButton.tag - 1) as! UIButton
+            let _ = self.viewWithTag(selectedButton.tag - 1) as! UIButton
 //            b.setTitleColor(UIColor(red: 255.color255, green: 110.color255, blue: (53 + Int(offsetX)).color255, alpha: 1), for: .normal)
 //            b.titleLabel?.font = UIFont.systemFont(ofSize: kFontSize + (offsetX / self.frame.size.width))
         }

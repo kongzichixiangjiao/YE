@@ -57,10 +57,10 @@ extension YYNewsViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        HXManager.share.agreenAddFriendRequest(forUserName: self.dataSource[indexPath.row] as! String) {
+        HXManager.share.agreenAddFriendRequest(self.dataSource[indexPath.row] as! String) {
             [weak self] success in
             if let weakSelf = self {
-                weakSelf.view.ga_showView(text: "通过好友请求", deplay: 0.3)
+                weakSelf.view.ga_showView("通过好友请求", deplay: 0.3)
             }
         }
     }
@@ -72,7 +72,7 @@ extension YYNewsViewController: EMContactManagerDelegate {
      *  用户B同意用户A的加好友请求后，用户A会收到这个回调
      */
     func friendRequestDidApprove(byUser aUsername: String!) {
-        self.view.ga_showView(text: aUsername)
+        self.view.ga_showView(aUsername)
     }
     
     /*!
@@ -93,7 +93,7 @@ extension YYNewsViewController: EMContactManagerDelegate {
      *  用户B同意用户A的好友申请后，用户A和用户B都会收到这个回调
      */
     func friendshipDidAdd(byUser aUsername: String!) {
-        self.view.ga_showView(text: aUsername)
+        self.view.ga_showView(aUsername)
     }
     
     /*!

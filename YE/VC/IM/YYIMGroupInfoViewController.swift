@@ -23,7 +23,7 @@ class YYIMGroupInfoViewController: YYBaseTableViewController {
         
         self.myTitle = "群详情"
         
-        self.setupRightButton(type: .imSetting)
+        self.setupRightButton(.imSetting)
         
         requestGroupInfo()
         
@@ -35,15 +35,15 @@ class YYIMGroupInfoViewController: YYBaseTableViewController {
         let space: CGFloat = 15
         let v = "YYIMDetailsAddFriendButton".xibLoadView() as! UIButton
         v.frame = CGRect(x: MainScreenWidth - w - space, y: MainScreenHeight - TabBarHeight - w - space, width: w, height: w)
-        v.addTarget(self, action: #selector(addFriendButtonAction(sender:)), for: .touchUpInside)
+        v.addTarget(self, action: #selector(addFriendButtonAction(_:)), for: .touchUpInside)
         self.view.addSubview(v)
     }
     
-    func addFriendButtonAction(sender: UIButton) {
+    @objc func addFriendButtonAction(_ sender: UIButton) {
         let vc = YYIMFriendListViewController()
         vc.group = group
         vc.isCanSelected = true
-        self.push(vc: vc)
+        self.push(vc)
     }
     
     override func initTableView() {
@@ -98,10 +98,10 @@ class YYIMGroupInfoViewController: YYBaseTableViewController {
         }
     }
     
-    override func clickedRightButtonAction(sender: UIButton) {
+    override func clickedRightButtonAction(_ sender: UIButton) {
         let vc = YYIMGroupInfoSettingViewController()
         vc.group = self.group
-        self.push(vc: vc)
+        self.push(vc)
     }
     func addMemberAction() {
         let occupants = [self.group.owner, self.group.adminList, self.group.memberList] as [Any]

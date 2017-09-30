@@ -29,7 +29,7 @@ extension UIImage: UIImageSizeProtocol {
 
 extension UIImage {
     ///对指定图片进行拉伸
-    func resizableImage(name: String) -> UIImage {
+    func resizableImage(_ name: String) -> UIImage {
         var normal = UIImage(named: name)!
         let imageWidth = normal.size.width * 0.5
         let imageHeight = normal.size.height * 0.5
@@ -46,10 +46,10 @@ extension UIImage {
      *
      *  return 压缩后图片的二进制
      */
-    func compressImage(maxLength: Int) -> Data? {
+    func compressImage(_ maxLength: Int) -> Data? {
         
-        let newSize = self.scaleImage(image: self, imageLength: 300)
-        let newImage = self.resizeImage(image: self, newSize: newSize)
+        let newSize = self.scaleImage(self, imageLength: 300)
+        let newImage = self.resizeImage(self, newSize: newSize)
         
         var compress:CGFloat = 0.9
         var data = UIImageJPEGRepresentation(newImage, compress)
@@ -70,7 +70,7 @@ extension UIImage {
      *
      *  return 获得等比例的size
      */
-    func scaleImage(image: UIImage, imageLength: CGFloat) -> CGSize {
+    func scaleImage(_ image: UIImage, imageLength: CGFloat) -> CGSize {
         
         var newWidth:CGFloat = 0.0
         var newHeight:CGFloat = 0.0
@@ -107,7 +107,7 @@ extension UIImage {
      *
      *  return 调整后的图片
      */
-    func resizeImage(image: UIImage, newSize: CGSize) -> UIImage {
+    func resizeImage(_ image: UIImage, newSize: CGSize) -> UIImage {
         UIGraphicsBeginImageContext(newSize)
         image.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
         

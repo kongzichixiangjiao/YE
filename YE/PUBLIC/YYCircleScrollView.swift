@@ -43,17 +43,17 @@ class YYCircleScrollView: UIView {
         self.isTimer = isTimer
     }
     
-    private func initViews() {
+    fileprivate func initViews() {
         initScrollView()
         initImageViews()
         initPageControl()
     }
     
-    private func initTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(change(timer:)), userInfo: nil, repeats: true)
+    fileprivate func initTimer() {
+        timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(change(_:)), userInfo: nil, repeats: true)
     }
     
-    private func initScrollView() {
+    fileprivate func initScrollView() {
         //初始化轮播图
         scrollView = UIScrollView.init(frame: self.bounds)
         //ScrollView背景颜色
@@ -71,7 +71,7 @@ class YYCircleScrollView: UIView {
         self.addSubview(scrollView!)
     }
     
-    private func initImageViews() {
+    fileprivate func initImageViews() {
         guard let _ = scArray else {
             return;
         }
@@ -91,7 +91,7 @@ class YYCircleScrollView: UIView {
             scrollView?.addSubview(imgV)
             
             //轻拍手势
-            let tap = UITapGestureRecognizer.init(target: self, action: #selector(tapImageV(tap:)))
+            let tap = UITapGestureRecognizer.init(target: self, action: #selector(tapImageV(_:)))
             imgV.tag = 1000 + i
             //打开用户交互
             imgV.isUserInteractionEnabled = true
@@ -100,7 +100,7 @@ class YYCircleScrollView: UIView {
         }
     }
     
-    private func initPageControl() {
+    fileprivate func initPageControl() {
         //设置小点的位置大小
         pageC = UIPageControl.init(frame: CGRect(x: (SCROLL_WIDTH - 200) / 2, y: SCROLL_HEIGHT - 50, width: 200, height: 50))
         //设置小点背景色
@@ -117,7 +117,7 @@ class YYCircleScrollView: UIView {
     }
     
     //定时器执行方法
-    func change(timer :Timer) {
+    @objc func change(_ timer :Timer) {
         
         if pageC?.currentPage == (pageC?.numberOfPages)! - 1 {
             pageC?.currentPage = 0
@@ -129,7 +129,7 @@ class YYCircleScrollView: UIView {
     
     //开启定时器
     func addTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(change(timer:)), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(change(_:)), userInfo: nil, repeats: true)
     }
     
     //关闭定时器
@@ -138,13 +138,13 @@ class YYCircleScrollView: UIView {
     }
     
     //开始拖拽时调用
-    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         //关闭定时器
         removeTimer()
     }
     
     //拖拽结束后调用
-    func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
         //开启定时器
         if isTimer {
             addTimer()
@@ -152,7 +152,7 @@ class YYCircleScrollView: UIView {
     }
     
     //轻拍事件
-    func tapImageV(tap :UITapGestureRecognizer) {
+    @objc func tapImageV(_ tap :UITapGestureRecognizer) {
         
         print((tap.view?.tag)! - 1001)
         

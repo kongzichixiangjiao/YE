@@ -55,7 +55,7 @@ class YYIMCreatChatRoomViewController: YYBaseViewController {
         myRegignFirstResponder()
     }
     
-    private func myRegignFirstResponder() {
+    fileprivate func myRegignFirstResponder() {
         introTextView.resignFirstResponder()
         roomTitleTextField.resignFirstResponder()
     }

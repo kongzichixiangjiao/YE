@@ -10,7 +10,7 @@ import UIKit
 
 class YYMyTopView: UIView {
 
-    private let space: CGFloat = 10
+    fileprivate let space: CGFloat = 10
     
     lazy var backImageView: UIImageView = {
         let v = UIImageView()
@@ -39,7 +39,7 @@ class YYMyTopView: UIView {
         let y: CGFloat = self.center.y - w / 2 - 40
         v.frame = CGRect(x: x, y: y, width: w, height: w)
         v.setImage(UIImage.init(named: "IMG_1948"), for: .normal)
-        v.addTarget(self, action: #selector(clickedHeader(sender:)), for: .touchUpInside)
+        v.addTarget(self, action: #selector(clickedHeader(_:)), for: .touchUpInside)
         return v
     }()
     
@@ -62,15 +62,15 @@ class YYMyTopView: UIView {
         
     }
     
-    func clickedHeader(sender: UIButton) {
+    @objc func clickedHeader(_ sender: UIButton) {
         
     }
     
-    private func initViews() {
+    fileprivate func initViews() {
         self.addSubview(headerButton);
     }
     
-    private func initBackViews() {
+    fileprivate func initBackViews() {
         self.addSubview(spaceView)
         self.addSubview(backImageView)
         self.addSubview(effectView)

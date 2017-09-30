@@ -11,7 +11,7 @@ import Foundation
 
 protocol YYAlertViewTextPotocol {
     var yy_textLabel: UILabel { set get }
-    func showView(text: String)
+    func showView(_ text: String)
 }
 
 extension UIView: YYAlertViewTextPotocol {
@@ -54,23 +54,23 @@ extension UIView: YYAlertViewTextPotocol {
         }
     }
     
-    func heightWith(text: String, fontSize: CGFloat, width: CGFloat) -> CGFloat {
+    func heightWith(_ text: String, fontSize: CGFloat, width: CGFloat) -> CGFloat {
         let font = UIFont.systemFont(ofSize: fontSize)
-        let rect = NSString(string: text).boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
+        let rect = NSString(string: text).boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
         return ceil(rect.height)
     }
     
-    func showView(text: String) {
+    func showView(_ text: String) {
         self.yy_textLabel.text = text
         let w: CGFloat = UIScreen.main.bounds.width * 0.4
-        let h = self.heightWith(text: text, fontSize: self.yy_textLabel.font.pointSize, width: w)
+        let h = self.heightWith(text, fontSize: self.yy_textLabel.font.pointSize, width: w)
         self.textToastView.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: w + 40, height: h + 40))
         self.textToastView.center = self.alertWhiteWindow.center
         self.yy_textLabel.frame = CGRect(origin: self.textToastView.frame.origin, size: CGSize(width: w, height: h))
         self.yy_textLabel.center = self.alertWhiteWindow.center
         
-        showAnimation(view: self.textToastView, isWhiteWindow: true)
-        showAnimation(view: self.yy_textLabel, isWhiteWindow: true)
+        showAnimation(self.textToastView, isWhiteWindow: true)
+        showAnimation(self.yy_textLabel, isWhiteWindow: true)
     }
     
     func hideTextView() {

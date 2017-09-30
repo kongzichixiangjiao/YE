@@ -15,7 +15,7 @@ class YYCompetitionCommentSectionView: UIView {
             titleLabel.text = model.title
             likeButton.isSelected = model.isLike
             likeNumberLabel.text = String(model.likeNumber)
-            contentLabel.attributedText = NSAttributedString.yy_contentStyle(text: model.content)
+            contentLabel.attributedText = NSAttributedString.yy_contentStyle(model.content)
         }
     }
     

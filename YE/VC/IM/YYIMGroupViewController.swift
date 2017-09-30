@@ -15,11 +15,11 @@ class YYIMGroupViewController: YYIMBaseMessageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.imTitle = "群"
-        self.navigationView.setupRightButton(type: .details)
+        self.navigationView.setupRightButton(.details)
     }
     
-    override func clickedRightButtonAction(sender: UIButton) {
-        super.clickedRightButtonAction(sender: sender)
+    override func clickedRightButtonAction(_ sender: UIButton) {
+        super.clickedRightButtonAction(sender)
         let vc = YYIMGroupInfoViewController()
         vc.group = self.group
         self.navigationController?.pushViewController(vc, animated: true)

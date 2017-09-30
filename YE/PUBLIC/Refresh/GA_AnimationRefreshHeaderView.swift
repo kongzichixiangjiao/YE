@@ -40,3 +40,4 @@ class GA_AnimationRefreshHeaderView: GA_XIBRefreshHeaderView {
         self.stateLabel.text = "向下拉..."
     }
 }
+

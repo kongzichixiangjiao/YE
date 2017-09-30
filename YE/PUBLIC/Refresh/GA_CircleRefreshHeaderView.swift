@@ -14,7 +14,7 @@ class aaa<T>: UIView {
 
 class GA_CircleRefreshHeaderView: GA_RefreshHeaderView {
     
-    private let kShaperHeight: CGFloat = 35
+    fileprivate let kShaperHeight: CGFloat = 35
     
     fileprivate let kRotationAnimation = "kRotationAnimation"
     
@@ -76,7 +76,7 @@ class GA_CircleRefreshHeaderView: GA_RefreshHeaderView {
         willShaperAnimation()
     }
     
-    private func willShaperAnimation() {
+    fileprivate func willShaperAnimation() {
         let scrollView = self.superview as! UIScrollView
         let newY = scrollView.contentOffset.y
         let progress = abs(newY / RefreshKey.kContentInsetTop)

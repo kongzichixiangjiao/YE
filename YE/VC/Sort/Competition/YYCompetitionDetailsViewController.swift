@@ -43,7 +43,7 @@ class YYCompetitionDetailsViewController: YYBaseTableViewController {
         
         let path = Bundle.ga_path("comment.plist")
         let data: [[String : Any]] = NSArray.init(contentsOfFile: path) as! [[String : Any]]
-        self.dataSource = YYCompetitionCommentSectionModel.getModels(arr: data)
+        self.dataSource = YYCompetitionCommentSectionModel.getModels(data)
         tableView.reloadData()
     }
     
@@ -82,7 +82,7 @@ class YYCompetitionDetailsViewController: YYBaseTableViewController {
 
 // MARK: 监听键盘
 extension YYCompetitionDetailsViewController {
-    func handleWillShowKeyboard(notification: NSNotification) {
+    @objc func handleWillShowKeyboard(notification: NSNotification) {
         
         let userInfo: NSDictionary = notification.userInfo! as NSDictionary
         
@@ -97,7 +97,7 @@ extension YYCompetitionDetailsViewController {
         }, completion: nil)
     }
     
-    func handleWillHideKeyboard(notification: NSNotification) {
+    @objc func handleWillHideKeyboard(notification: NSNotification) {
         let userInfo: NSDictionary = notification.userInfo! as NSDictionary
         
         let v : NSValue = userInfo.object(forKey: UIKeyboardFrameBeginUserInfoKey) as! NSValue
@@ -137,7 +137,7 @@ extension YYCompetitionDetailsViewController {
 }
 
 extension YYCompetitionDetailsViewController: YYWebViewDelegate {
-    func webViewDidFinish(height: CGFloat) {
+    func webViewDidFinish(_ height: CGFloat) {
         tableView.tableFooterView = self.webView
     }
 }
@@ -177,13 +177,13 @@ extension YYCompetitionDetailsViewController {
 }
 
 extension YYCompetitionDetailsViewController: YYCompetitionDetailsBottomViewDelegate {
-    func applyQuery(id: String) {
-        self.push(vc: YYApplyQueryViewController())
+    func applyQuery(_ id: String) {
+        self.push(YYApplyQueryViewController())
     }
     
-    func apply(id: String){
+    func apply(_ id: String){
         let vc = YYApplyViewController()
         vc.myType = .apply
-        self.push(vc: vc)
+        self.push(vc)
     }
 }

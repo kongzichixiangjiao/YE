@@ -19,7 +19,7 @@ extension YYShotView {
                 alertWindow.makeKeyAndVisible()
                 alertWindow.isHidden = false
                 
-                let tap = UITapGestureRecognizer(target: self, action: #selector(tapshotWindow(sender:)))
+                let tap = UITapGestureRecognizer(target: self, action: #selector(tapshotWindow(_:)))
                 alertWindow.addGestureRecognizer(tap)
                 
                 objc_setAssociatedObject(self, &YYShotView.kShotWindow, alertWindow, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
@@ -35,7 +35,7 @@ extension YYShotView {
 }
 
 extension YYShotView {
-    func tapshotWindow(sender: UITapGestureRecognizer) {
+    @objc func tapshotWindow(_ sender: UITapGestureRecognizer) {
         shotDismissWindow()
     }
     
@@ -54,18 +54,18 @@ class YYShotView: UIView {
     
     static let shotViewW: CGFloat = UIScreen.main.bounds.width * 0.34
     
-    private let space: CGFloat = 10
-    private let triangleLength: CGFloat = 10
-    private let buttonH: CGFloat = 35
+    fileprivate let space: CGFloat = 10
+    fileprivate let triangleLength: CGFloat = 10
+    fileprivate let buttonH: CGFloat = 35
     
-    private var buttons: [UIButton] = []
+    fileprivate var buttons: [UIButton] = []
     
     typealias YYShotViewHandler = (_: String) -> ()
     var shotViewHandler: YYShotViewHandler?
 
     var pointX: CGFloat = 0
     
-    class func show(point: UIView, items: [String] = [], handler: @escaping YYShotViewHandler) {
+    class func show(_ point: UIView, items: [String] = [], handler: @escaping YYShotViewHandler) {
         let _ = YYShotView(size: CGSize(width: YYShotView.shotViewW, height: 100), pointView: point, items: items,  handler: handler)
     }
 
@@ -74,11 +74,11 @@ class YYShotView: UIView {
         
         self.shotViewHandler = handler
         
-        initViews(pointView: pointView, items: items)
-        initPointX(pointView: pointView)
+        initViews(pointView, items: items)
+        initPointX(pointView)
     }
     
-    func initViews(pointView: UIView, items: [String] = []) {
+    func initViews(_ pointView: UIView, items: [String] = []) {
         
         let pointViewFrame = pointView.convert(pointView.bounds, to: self.shotWindow)
         let x: CGFloat = UIScreen.main.bounds.width - YYShotView.shotViewW - space
@@ -101,7 +101,7 @@ class YYShotView: UIView {
         }
     }
     
-    func initPointX(pointView: UIView) {
+    func initPointX(_ pointView: UIView) {
         let centerRight = UIScreen.main.bounds.width - pointView.center.x
         self.pointX = YYShotView.shotViewW - centerRight + space / 2
     }

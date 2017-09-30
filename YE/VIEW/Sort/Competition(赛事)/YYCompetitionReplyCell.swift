@@ -22,14 +22,14 @@ class YYCompetitionReplyCell: UITableViewCell {
             
             let attStr = NSMutableAttributedString.init(string: str)
             
-            attStr.addAttribute(NSFontAttributeName, value: UIFont.systemFont(ofSize: 12), range: NSMakeRange(0, str.characters.count))
+            attStr.addAttribute(NSAttributedStringKey.font, value: UIFont.systemFont(ofSize: 12), range: NSMakeRange(0, str.characters.count))
             
-            attStr.addAttribute(NSForegroundColorAttributeName, value: UIColor.blue, range: NSMakeRange(0, reply.from.characters.count))
-            attStr.addAttribute(NSForegroundColorAttributeName, value: UIColor.blue, range: NSMakeRange(reply.from.characters.count + 2, reply.to.characters.count))
+            attStr.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.blue, range: NSMakeRange(0, reply.from.characters.count))
+            attStr.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.blue, range: NSMakeRange(reply.from.characters.count + 2, reply.to.characters.count))
             
             self.contentLabel.attributedText = attStr
             
-            self.contentLabel.yy_addAttributeTapAction(row: self.myRow, [reply.from, reply.to]) { (row, string, range, int) in
+            self.contentLabel.yy_addAttributeTapAction(self.myRow, [reply.from, reply.to]) { (row, string, range, int) in
                 print("点击了\(string)标签 - {\(range.location) , \(range.length)} - \(int)")
             }
             self.dateLabel.text = reply.date

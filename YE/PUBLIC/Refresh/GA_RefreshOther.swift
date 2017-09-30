@@ -26,6 +26,7 @@ enum RefreshState: Int {
     case normal = -1, start = 0, ing = 1, ed = 2, will = 3, pull = 4
 }
 
+@objc
 protocol GA_RefreshAnimationProtocol {
     func startAnimation()
     func willAnimation()

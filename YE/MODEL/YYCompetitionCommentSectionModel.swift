@@ -30,9 +30,9 @@ struct YYCompetitionCommentSectionModel {
         self.title = dic["title"] as? String ?? ""
         self.likeNumber = dic["likeNumber"] as? Int ?? 0
         self.isLike = dic["isLike"] as? Bool ?? false
-        self.reply = YYCompetitionReplyModel.getModels(arr: dic["reply"] as? [[String : String]] ?? [["":""]])
+        self.reply = YYCompetitionReplyModel.getModels(dic["reply"] as? [[String : String]] ?? [["":""]])
         self.content = dic["content"] as? String ?? ""
-        self.height = self.content.ga_heightWith(fontSize: fontSize, width: width, style: NSAttributedString.yy_paragraphStyle()) + defaultHeight
+        self.height = self.content.ga_heightWith(fontSize, width: width, style: NSAttributedString.yy_paragraphStyle()) + defaultHeight
         
         self.replyHeight = replyDefaultHeight
         for (_,value) in self.reply.enumerated() {
@@ -40,7 +40,7 @@ struct YYCompetitionCommentSectionModel {
         }
     }
     
-    static func getModels(arr: [[String : Any]]) -> [YYCompetitionCommentSectionModel] {
+    static func getModels(_ arr: [[String : Any]]) -> [YYCompetitionCommentSectionModel] {
         var models: [YYCompetitionCommentSectionModel] = []
         for dic in arr {
             let model = YYCompetitionCommentSectionModel(dic: dic)
@@ -65,10 +65,13 @@ struct YYCompetitionReplyModel {
         self.from = dic["from"] as? String ?? ""
         self.to = dic["to"] as? String ?? ""
         self.content = dic["content"] as? String ?? ""
-        self.height = (self.from + "回复" + self.to + ":" + self.content).ga_heightWith(fontSize: fontSize, width: width) + defaultHeight
+        
+        let content = self.from + "回复" + self.to + ":" + self.content
+        self.height = content.ga_heightWith(fontSize, width: width) + defaultHeight
+        
         self.date = dic["date"] as? String ?? ""
     }
-    static func getModels(arr: [[String : Any]]) -> [YYCompetitionReplyModel] {
+    static func getModels(_ arr: [[String : Any]]) -> [YYCompetitionReplyModel] {
         var models: [YYCompetitionReplyModel] = []
         for dic in arr {
             let model = YYCompetitionReplyModel(dic: dic)

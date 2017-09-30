@@ -20,7 +20,7 @@ class YYBaseTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.showLineView(space: lineViewSpace, position: .bottom, color: lineViewColor)
+        self.showLineView(lineViewSpace, position: .bottom, color: lineViewColor)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

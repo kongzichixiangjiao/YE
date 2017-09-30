@@ -42,7 +42,7 @@ class YYApplyViewController: YYBaseTableViewController {
         super.viewDidLoad()
         
         self.myTitle = myType.rawValue
-        self.setupRightButton(type: .finished)
+        self.setupRightButton(.finished)
         self.rightButtonState = .normal
         
         initData()
@@ -103,7 +103,7 @@ class YYApplyViewController: YYBaseTableViewController {
         imgV.addSubview(effectView)
     }
     
-    override func clickedRightButtonAction(sender: UIButton) {
+    override func clickedRightButtonAction(_ sender: UIButton) {
 
     }
     
@@ -160,13 +160,13 @@ extension YYApplyViewController {
         if model.type == YYApplyCellType.text.rawValue {
             tableView.deselectRow(at: indexPath, animated: true)
         } else if model.type == YYApplyCellType.selected.rawValue {
-            self.view.ga_showSelectedLoading(title: model.key, data: model.data!, handler: { (row, obj) in
+            self.view.ga_showSelectedLoading(model.key, data: model.data!, handler: { (row, obj) in
                 model.value = model.data?[row]
                 self.dataSource[indexPath.row] = model
                 self.tableView.reloadData()
             })
         } else if model.type == YYApplyCellType.picker.rawValue {
-            self.view.ga_showBirthdayView(handler: { (row, obj) in
+            self.view.ga_showBirthdayView({ (row, obj) in
                 model.value = (obj as! Date).description
                 self.dataSource[indexPath.row] = model
                 self.tableView.reloadData()
@@ -178,7 +178,7 @@ extension YYApplyViewController {
 }
 
 extension YYApplyViewController: YYApplyContentDelegate {
-    func finishedContent(content: String?, andRow row: Int) {
+    func finishedContent(_ content: String?, andRow row: Int) {
         var model: YYApplyModel = self.dataSource[row] as! YYApplyModel
         model.value = content
         self.dataSource[row] = model
@@ -186,7 +186,7 @@ extension YYApplyViewController: YYApplyContentDelegate {
 }
 
 extension YYApplyViewController: YYApplyAddImageTableViewCellDelegate {
-    func didSelectedImage(tag: Int, row: Int) {
+    func didSelectedImage(_ tag: Int, row: Int) {
         let picker = YYBaseImagePickerController()
         picker.delegate = self
         picker.model = YYBaseImagePickerControllerModel(row: row, tag: tag)
@@ -201,7 +201,7 @@ extension YYApplyViewController: UIImagePickerControllerDelegate, UINavigationCo
         let p = picker as! YYBaseImagePickerController
         var model: YYApplyModel = self.dataSource[p.model!.row] as! YYApplyModel
 
-        model.imageData?[p.model.tag] = (info["UIImagePickerControllerOriginalImage"] as! UIImage).compressImage(maxLength: 1024*1024*1)!
+        model.imageData?[p.model.tag] = (info["UIImagePickerControllerOriginalImage"] as! UIImage).compressImage(1024*1024*1)!
         self.dataSource[p.model!.row] = model
         self.tableView.reloadData()
     }

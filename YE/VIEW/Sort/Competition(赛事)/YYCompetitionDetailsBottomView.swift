@@ -25,27 +25,27 @@ class YYCompetitionDetailsBottomView: UIView {
     @IBOutlet weak var demandButton: UIButton!
     
     @IBAction func applyAction(_ sender: UIButton) {
-        self.myDelegate?.apply(id: "")
+        self.myDelegate?.apply("")
     }
     
     @IBAction func demandAction(_ sender: UIButton) {
-        self.myDelegate?.applyQuery(id: "")
+        self.myDelegate?.applyQuery("")
     }
     
-    public func hideBottomView() {
+    open func hideBottomView() {
         UIView.animate(withDuration: 0.3) { 
             self.frame = CGRect(x: 0, y: MainScreenHeight - TabBarHeight, width: MainScreenWidth, height: YYCompetitionDetailsBottomView.height)
         }
         myResignFirstResponder()
     }
     
-    public func showBottomView() {
+    open func showBottomView() {
         UIView.animate(withDuration: 0.3) {
             self.frame = CGRect(x: 0, y: MainScreenHeight - YYCompetitionDetailsBottomView.height - TabBarHeight, width: MainScreenWidth, height: YYCompetitionDetailsBottomView.height)
         }
     }
     
-    public func myResignFirstResponder() {
+    open func myResignFirstResponder() {
         self.commentTextField.resignFirstResponder()
     }
 }

@@ -4,7 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Alamofire.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>DACircularProgress.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Differentiator.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -44,12 +54,17 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>ReactiveSwift.xcscheme</key>
+		<key>RxCocoa.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Result.xcscheme</key>
+		<key>RxDataSources.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RxSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -59,15 +74,10 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SQLite.swift.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>02DDB7ACD476B9C53CB6B2C6041E3130</key>
+		<key>1465651EBBC44AD3276DDE2476CDA450</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,12 +92,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2771B241FCE337E606D5617826A23443</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>3BE577F979B7A4ACED362EB28934609D</key>
+		<key>22ED4AE288552E4FBDB1A61C74D2278E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,12 +102,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>711B4739682FCFC6C91755EDBC5A4516</key>
+		<key>7AB86008C8A79E0E3037398AAC2FB368</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7AB86008C8A79E0E3037398AAC2FB368</key>
+		<key>844C9B244CEFA2F26288789C423101B4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,12 +127,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D8D01E5C955E93A9F8BA63DBEF7FF55B</key>
+		<key>9591D110BAAF8CA0F5D8AE00FA04211A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DE8036F97ABC708EB21BF829645657E5</key>
+		<key>A45C914E5A7FB75CB4A0DCD8C5175F91</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B17330FC63E0A3B53D637F0501C9B419</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D8D01E5C955E93A9F8BA63DBEF7FF55B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -36,7 +36,7 @@ class YYIMBaseMessageViewController: EaseMessageViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    public func initNavigationView(_ title: String, _ isHiddenLeftButton: Bool = false) {
+    open func initNavigationView(_ title: String, _ isHiddenLeftButton: Bool = false) {
         navigationView.myTitle = "首页"
         navigationView.isHiddenLeftButton = isHiddenLeftButton
     }
@@ -45,7 +45,7 @@ class YYIMBaseMessageViewController: EaseMessageViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-    func clickedRightButtonAction(sender: UIButton) {
+    func clickedRightButtonAction(_ sender: UIButton) {
         
     }
     
@@ -61,7 +61,7 @@ extension YYIMBaseMessageViewController: YYBaseNavigationViewProtocol {
         self.navigationController?.popViewController(animated: true)
     }
     
-    func clickedNavigationViewRightButton(sender: UIButton) {
-        clickedRightButtonAction(sender: sender)
+    func clickedNavigationViewRightButton(_ sender: UIButton) {
+        clickedRightButtonAction(sender)
     }
 }

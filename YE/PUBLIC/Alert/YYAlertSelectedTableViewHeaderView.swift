@@ -23,6 +23,7 @@ class YYAlertSelectedTableViewHeaderView: UIView {
     @IBOutlet weak var myTitleLabel: UILabel!
     @IBOutlet weak var closed: UIButton!
     @IBAction func closedAction(_ sender: UIButton) {
+        
     }
 
 }

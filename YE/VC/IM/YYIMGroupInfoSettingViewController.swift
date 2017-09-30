@@ -36,11 +36,11 @@ class YYIMGroupInfoSettingViewController: YYBaseTableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func clearAction(sender: UIButton) {
+    @objc func clearAction(_ sender: UIButton) {
         
     }
     
-    func quiteGroupAction(sender: UIButton) {
+    @objc func quiteGroupAction(_ sender: UIButton) {
         
     }
     
@@ -65,10 +65,10 @@ extension YYIMGroupInfoSettingViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: YYIMGroupInfoSettingButtonCell.identifier) as! YYIMGroupInfoSettingButtonCell
             cell.button.setTitle(model[YYKey.name] as? String, for: .normal)
             if model[YYKey.name] as! String == YYKey.quiteGroup {
-                cell.button.addTarget(self, action: #selector(quiteGroupAction(sender:)), for: .touchUpInside)
+                cell.button.addTarget(self, action: #selector(quiteGroupAction(_:)), for: .touchUpInside)
                 cell.button.backgroundColor = "D7292A".color0X
             } else {
-                cell.button.addTarget(self, action: #selector(clearAction(sender:)), for: .touchUpInside)
+                cell.button.addTarget(self, action: #selector(clearAction(_:)), for: .touchUpInside)
                 cell.button.backgroundColor = "0076FF".color0X
             }
             return cell

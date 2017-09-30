@@ -43,7 +43,7 @@ extension YYCompetitionListViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.push(vc: YYCompetitionDetailsViewController())
+        self.push(YYCompetitionDetailsViewController())
         tableView.deselectRow(at: indexPath, animated: true)
         
     }

@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11EE240506B9841A6F5B3228 /* Pods_YE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 381C7D52E9006ACBDEED168B /* Pods_YE.framework */; };
+		9400411E1F67CCD7008BF928 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9400411D1F67CCD7008BF928 /* Dictionary+Extension.swift */; };
+		940041201F67CD4B008BF928 /* YYRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9400411F1F67CD4B008BF928 /* YYRequestManager.swift */; };
 		946BB2A51F44277E0062D173 /* Beverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946BB2A41F44277E0062D173 /* Beverage.swift */; };
 		946BB2A81F44285A0062D173 /* HouseBlend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946BB2A71F44285A0062D173 /* HouseBlend.swift */; };
 		946BB2AA1F44291C0062D173 /* CondimentDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946BB2A91F44291C0062D173 /* CondimentDecorator.swift */; };
@@ -17,8 +18,9 @@
 		9496345C1F41880F0079886E /* YYCompetitionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9496345A1F41880F0079886E /* YYCompetitionCell.swift */; };
 		9496345D1F41880F0079886E /* YYCompetitionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9496345B1F41880F0079886E /* YYCompetitionCell.xib */; };
 		94A61ABB1F3DA37B0014A335 /* YYSQLite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A61ABA1F3DA37A0014A335 /* YYSQLite.swift */; };
-		94D388971F39BE4100F974A6 /* YETests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388961F39BE4100F974A6 /* YETests.swift */; };
-		94D388A21F39BE4100F974A6 /* YEUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388A11F39BE4100F974A6 /* YEUITests.swift */; };
+		94A95D451F502A7000E556DD /* YYRxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A95D431F502A7000E556DD /* YYRxSwiftViewController.swift */; };
+		94A95D461F502A7000E556DD /* YYRxSwiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94A95D441F502A7000E556DD /* YYRxSwiftViewController.xib */; };
+		94D18E3B1F50111E00750F87 /* YYRxSwiftBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D18E3A1F50111E00750F87 /* YYRxSwiftBaseViewController.swift */; };
 		94D3899F1F39C23A00F974A6 /* YYBaseCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388B11F39C23900F974A6 /* YYBaseCollectionViewController.swift */; };
 		94D389A01F39C23A00F974A6 /* YYBaseImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388B21F39C23900F974A6 /* YYBaseImagePickerController.swift */; };
 		94D389A11F39C23A00F974A6 /* YYBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388B31F39C23900F974A6 /* YYBaseTableViewController.swift */; };
@@ -206,32 +208,19 @@
 		94D38A571F39C23A00F974A6 /* YYCompetitionReplyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D389991F39C23A00F974A6 /* YYCompetitionReplyCell.xib */; };
 		94D38A581F39C23A00F974A6 /* YYLiveCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3899B1F39C23A00F974A6 /* YYLiveCollectionViewCell.swift */; };
 		94D38A591F39C23A00F974A6 /* YYLiveCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D3899C1F39C23A00F974A6 /* YYLiveCollectionViewCell.xib */; };
-		94D38A5B1F39C2EE00F974A6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94D38A5A1F39C2EE00F974A6 /* Info.plist */; };
 		94D38A601F39C2F600F974A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D38A5C1F39C2F600F974A6 /* LaunchScreen.storyboard */; };
 		94D38A611F39C2F600F974A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D38A5E1F39C2F600F974A6 /* Main.storyboard */; };
 		94D38A631F39C33300F974A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94D38A621F39C33300F974A6 /* Assets.xcassets */; };
+		94DED68A1F7F38030036AE1F /* YYCDemo.c in Sources */ = {isa = PBXBuildFile; fileRef = 94DFE4131F581B6B004D71F3 /* YYCDemo.c */; };
+		A1E51B0C8B82F381C3F93DEE /* Pods_YE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521CBA8AFB6F01FB382C7CD8 /* Pods_YE.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		94D388931F39BE4100F974A6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 94D388761F39BE4100F974A6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 94D3887D1F39BE4100F974A6;
-			remoteInfo = YE;
-		};
-		94D3889E1F39BE4100F974A6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 94D388761F39BE4100F974A6 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 94D3887D1F39BE4100F974A6;
-			remoteInfo = YE;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		381C7D52E9006ACBDEED168B /* Pods_YE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		678318913B05B3CFC6F3F7B8 /* Pods-YE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YE.release.xcconfig"; path = "Pods/Target Support Files/Pods-YE/Pods-YE.release.xcconfig"; sourceTree = "<group>"; };
+		521CBA8AFB6F01FB382C7CD8 /* Pods_YE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A68C82C0DC81948F659BFEA /* Pods-YE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YE/Pods-YE.debug.xcconfig"; sourceTree = "<group>"; };
+		9400411D1F67CCD7008BF928 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
+		9400411F1F67CD4B008BF928 /* YYRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYRequestManager.swift; sourceTree = "<group>"; };
+		94681B481F7E3F1F007C2A26 /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		946BB2A41F44277E0062D173 /* Beverage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Beverage.swift; sourceTree = "<group>"; };
 		946BB2A71F44285A0062D173 /* HouseBlend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseBlend.swift; sourceTree = "<group>"; };
 		946BB2A91F44291C0062D173 /* CondimentDecorator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CondimentDecorator.swift; sourceTree = "<group>"; };
@@ -241,13 +230,10 @@
 		9496345A1F41880F0079886E /* YYCompetitionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYCompetitionCell.swift; sourceTree = "<group>"; };
 		9496345B1F41880F0079886E /* YYCompetitionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYCompetitionCell.xib; sourceTree = "<group>"; };
 		94A61ABA1F3DA37A0014A335 /* YYSQLite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYSQLite.swift; sourceTree = "<group>"; };
+		94A95D431F502A7000E556DD /* YYRxSwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYRxSwiftViewController.swift; sourceTree = "<group>"; };
+		94A95D441F502A7000E556DD /* YYRxSwiftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYRxSwiftViewController.xib; sourceTree = "<group>"; };
+		94D18E3A1F50111E00750F87 /* YYRxSwiftBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYRxSwiftBaseViewController.swift; sourceTree = "<group>"; };
 		94D3887E1F39BE4100F974A6 /* YE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YE.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		94D388921F39BE4100F974A6 /* YETests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YETests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		94D388961F39BE4100F974A6 /* YETests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YETests.swift; sourceTree = "<group>"; };
-		94D388981F39BE4100F974A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		94D3889D1F39BE4100F974A6 /* YEUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YEUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		94D388A11F39BE4100F974A6 /* YEUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YEUITests.swift; sourceTree = "<group>"; };
-		94D388A31F39BE4100F974A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		94D388B11F39C23900F974A6 /* YYBaseCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYBaseCollectionViewController.swift; sourceTree = "<group>"; };
 		94D388B21F39C23900F974A6 /* YYBaseImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYBaseImagePickerController.swift; sourceTree = "<group>"; };
 		94D388B31F39C23900F974A6 /* YYBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYBaseTableViewController.swift; sourceTree = "<group>"; };
@@ -302,7 +288,6 @@
 		94D388ED1F39C23900F974A6 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94D388EE1F39C23900F974A6 /* HuanXin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HuanXin.swift; sourceTree = "<group>"; };
 		94D388EF1F39C23900F974A6 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
-		94D388F01F39C23900F974A6 /* YYHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYHeader.h; sourceTree = "<group>"; };
 		94D388F11F39C23900F974A6 /* YYKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYKey.swift; sourceTree = "<group>"; };
 		94D388F31F39C23900F974A6 /* apply.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = apply.plist; sourceTree = "<group>"; };
 		94D388F41F39C23900F974A6 /* comment.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = comment.plist; sourceTree = "<group>"; };
@@ -440,7 +425,11 @@
 		94D38A5D1F39C2F600F974A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		94D38A5F1F39C2F600F974A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		94D38A621F39C33300F974A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CDF16BF32666F3D156E4C355 /* Pods-YE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YE.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YE/Pods-YE.debug.xcconfig"; sourceTree = "<group>"; };
+		94DED68B1F7F3AC40036AE1F /* libc.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libc.tbd; path = usr/lib/libc.tbd; sourceTree = SDKROOT; };
+		94DFE4111F5819F8004D71F3 /* YE-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YE-Bridging-Header.h"; sourceTree = "<group>"; };
+		94DFE4131F581B6B004D71F3 /* YYCDemo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = YYCDemo.c; sourceTree = "<group>"; };
+		94DFE4151F582C52004D71F3 /* YYCHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YYCHeader.h; sourceTree = "<group>"; };
+		9B059CB7E9DD2575F5847CD7 /* Pods-YE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YE.release.xcconfig"; path = "Pods/Target Support Files/Pods-YE/Pods-YE.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -448,21 +437,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11EE240506B9841A6F5B3228 /* Pods_YE.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94D3888F1F39BE4100F974A6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94D3889A1F39BE4100F974A6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				A1E51B0C8B82F381C3F93DEE /* Pods_YE.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,15 +505,22 @@
 			path = Competition;
 			sourceTree = "<group>";
 		};
+		94A95D421F502A5800E556DD /* RxSwfit */ = {
+			isa = PBXGroup;
+			children = (
+				94A95D431F502A7000E556DD /* YYRxSwiftViewController.swift */,
+				94A95D441F502A7000E556DD /* YYRxSwiftViewController.xib */,
+			);
+			path = RxSwfit;
+			sourceTree = "<group>";
+		};
 		94D388751F39BE4100F974A6 = {
 			isa = PBXGroup;
 			children = (
 				94D388801F39BE4100F974A6 /* YE */,
-				94D388951F39BE4100F974A6 /* YETests */,
-				94D388A01F39BE4100F974A6 /* YEUITests */,
 				94D3887F1F39BE4100F974A6 /* Products */,
-				9C47080CBCA45A60DE8F4723 /* Pods */,
-				9EE863FD7AA7DD3F3BC3AFD7 /* Frameworks */,
+				F6634C116253C070E929F191 /* Pods */,
+				D2FFF76E3F1D14BC37818B38 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -546,8 +528,6 @@
 			isa = PBXGroup;
 			children = (
 				94D3887E1F39BE4100F974A6 /* YE.app */,
-				94D388921F39BE4100F974A6 /* YETests.xctest */,
-				94D3889D1F39BE4100F974A6 /* YEUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -555,8 +535,10 @@
 		94D388801F39BE4100F974A6 /* YE */ = {
 			isa = PBXGroup;
 			children = (
+				94DFE4121F581B47004D71F3 /* C */,
 				94D38A621F39C33300F974A6 /* Assets.xcassets */,
 				94D38A5A1F39C2EE00F974A6 /* Info.plist */,
+				94A95D421F502A5800E556DD /* RxSwfit */,
 				94D388AF1F39C23900F974A6 /* BASE */,
 				94D388C11F39C23900F974A6 /* Base.lproj */,
 				94D388C21F39C23900F974A6 /* EXTENSION */,
@@ -572,24 +554,6 @@
 				94D389571F39C23A00F974A6 /* VIEW */,
 			);
 			path = YE;
-			sourceTree = "<group>";
-		};
-		94D388951F39BE4100F974A6 /* YETests */ = {
-			isa = PBXGroup;
-			children = (
-				94D388961F39BE4100F974A6 /* YETests.swift */,
-				94D388981F39BE4100F974A6 /* Info.plist */,
-			);
-			path = YETests;
-			sourceTree = "<group>";
-		};
-		94D388A01F39BE4100F974A6 /* YEUITests */ = {
-			isa = PBXGroup;
-			children = (
-				94D388A11F39BE4100F974A6 /* YEUITests.swift */,
-				94D388A31F39BE4100F974A6 /* Info.plist */,
-			);
-			path = YEUITests;
 			sourceTree = "<group>";
 		};
 		94D388AF1F39C23900F974A6 /* BASE */ = {
@@ -608,6 +572,7 @@
 				94D388B21F39C23900F974A6 /* YYBaseImagePickerController.swift */,
 				94D388B31F39C23900F974A6 /* YYBaseTableViewController.swift */,
 				94D388B41F39C23900F974A6 /* YYBaseViewController.swift */,
+				94D18E3A1F50111E00750F87 /* YYRxSwiftBaseViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -660,6 +625,7 @@
 				94D388CB1F39C23900F974A6 /* UITableViewCell+Extension.swift */,
 				94D388CC1F39C23900F974A6 /* UIView+Extension.swift */,
 				94D388CD1F39C23900F974A6 /* URL+Extension.swift */,
+				9400411D1F67CCD7008BF928 /* Dictionary+Extension.swift */,
 			);
 			path = EXTENSION;
 			sourceTree = "<group>";
@@ -704,6 +670,7 @@
 			isa = PBXGroup;
 			children = (
 				94D388E71F39C23900F974A6 /* HuanXinManager.swift */,
+				9400411F1F67CD4B008BF928 /* YYRequestManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -720,12 +687,13 @@
 		94D388EB1F39C23900F974A6 /* OTHER */ = {
 			isa = PBXGroup;
 			children = (
+				94DFE4111F5819F8004D71F3 /* YE-Bridging-Header.h */,
+				94DFE4151F582C52004D71F3 /* YYCHeader.h */,
 				946BB29F1F4426B00062D173 /* DecoratorPattern（装饰者模式） */,
 				94D388EC1F39C23900F974A6 /* AppDelegate+HuanXin.swift */,
 				94D388ED1F39C23900F974A6 /* AppDelegate.swift */,
 				94D388EE1F39C23900F974A6 /* HuanXin.swift */,
 				94D388EF1F39C23900F974A6 /* Theme.swift */,
-				94D388F01F39C23900F974A6 /* YYHeader.h */,
 				94D388F11F39C23900F974A6 /* YYKey.swift */,
 			);
 			path = OTHER;
@@ -1189,21 +1157,31 @@
 			path = "Surrounding(周边)";
 			sourceTree = "<group>";
 		};
-		9C47080CBCA45A60DE8F4723 /* Pods */ = {
+		94DFE4121F581B47004D71F3 /* C */ = {
 			isa = PBXGroup;
 			children = (
-				CDF16BF32666F3D156E4C355 /* Pods-YE.debug.xcconfig */,
-				678318913B05B3CFC6F3F7B8 /* Pods-YE.release.xcconfig */,
+				94DFE4131F581B6B004D71F3 /* YYCDemo.c */,
 			);
-			name = Pods;
+			path = C;
 			sourceTree = "<group>";
 		};
-		9EE863FD7AA7DD3F3BC3AFD7 /* Frameworks */ = {
+		D2FFF76E3F1D14BC37818B38 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				381C7D52E9006ACBDEED168B /* Pods_YE.framework */,
+				94DED68B1F7F3AC40036AE1F /* libc.tbd */,
+				94681B481F7E3F1F007C2A26 /* libstdc++.6.0.9.tbd */,
+				521CBA8AFB6F01FB382C7CD8 /* Pods_YE.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6634C116253C070E929F191 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8A68C82C0DC81948F659BFEA /* Pods-YE.debug.xcconfig */,
+				9B059CB7E9DD2575F5847CD7 /* Pods-YE.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1229,42 +1207,6 @@
 			productReference = 94D3887E1F39BE4100F974A6 /* YE.app */;
 			productType = "com.apple.product-type.application";
 		};
-		94D388911F39BE4100F974A6 /* YETests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 94D388A91F39BE4100F974A6 /* Build configuration list for PBXNativeTarget "YETests" */;
-			buildPhases = (
-				94D3888E1F39BE4100F974A6 /* Sources */,
-				94D3888F1F39BE4100F974A6 /* Frameworks */,
-				94D388901F39BE4100F974A6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				94D388941F39BE4100F974A6 /* PBXTargetDependency */,
-			);
-			name = YETests;
-			productName = YETests;
-			productReference = 94D388921F39BE4100F974A6 /* YETests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		94D3889C1F39BE4100F974A6 /* YEUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 94D388AC1F39BE4100F974A6 /* Build configuration list for PBXNativeTarget "YEUITests" */;
-			buildPhases = (
-				94D388991F39BE4100F974A6 /* Sources */,
-				94D3889A1F39BE4100F974A6 /* Frameworks */,
-				94D3889B1F39BE4100F974A6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				94D3889F1F39BE4100F974A6 /* PBXTargetDependency */,
-			);
-			name = YEUITests;
-			productName = YEUITests;
-			productReference = 94D3889D1F39BE4100F974A6 /* YEUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1272,23 +1214,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "侯佳男";
 				TargetAttributes = {
 					94D3887D1F39BE4100F974A6 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 8975PEGCVX;
+						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
-					};
-					94D388911F39BE4100F974A6 = {
-						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 94D3887D1F39BE4100F974A6;
-					};
-					94D3889C1F39BE4100F974A6 = {
-						CreatedOnToolsVersion = 8.3.3;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 94D3887D1F39BE4100F974A6;
 					};
 				};
 			};
@@ -1306,8 +1239,6 @@
 			projectRoot = "";
 			targets = (
 				94D3887D1F39BE4100F974A6 /* YE */,
-				94D388911F39BE4100F974A6 /* YETests */,
-				94D3889C1F39BE4100F974A6 /* YEUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -1326,7 +1257,6 @@
 				94D38A4F1F39C23A00F974A6 /* YYCompetitionCommentSectionView.xib in Resources */,
 				94D389C61F39C23A00F974A6 /* IMG_3091.jpg in Resources */,
 				94D38A531F39C23A00F974A6 /* YYCompetitionDetailsHeaderView.xib in Resources */,
-				94D38A5B1F39C2EE00F974A6 /* Info.plist in Resources */,
 				94D38A361F39C23A00F974A6 /* YYIMAddFriendCell.xib in Resources */,
 				94D38A491F39C23A00F974A6 /* YYSettingFooterChangeButton.xib in Resources */,
 				94D389C11F39C23A00F974A6 /* IMG_2787.jpg in Resources */,
@@ -1345,6 +1275,7 @@
 				94D389A71F39C23A00F974A6 /* YYBaseNavigationViewTextButton.xib in Resources */,
 				94D389AB1F39C23A00F974A6 /* YYBaseTableViewFooterView.xib in Resources */,
 				94D38A321F39C23A00F974A6 /* YYHomeSectionView.xib in Resources */,
+				94A95D461F502A7000E556DD /* YYRxSwiftViewController.xib in Resources */,
 				94D38A431F39C23A00F974A6 /* YYIMGroupInfoSettingCell.xib in Resources */,
 				94D38A2B1F39C23A00F974A6 /* YYEventVideoCell.xib in Resources */,
 				94D38A3B1F39C23A00F974A6 /* YYIMGroupCell.xib in Resources */,
@@ -1387,20 +1318,6 @@
 				94D389C51F39C23A00F974A6 /* IMG_3065.jpg in Resources */,
 				94D38A411F39C23A00F974A6 /* YYIMGroupInfoSettingButtonCell.xib in Resources */,
 				94D38A451F39C23A00F974A6 /* YYMyBasicCell.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94D388901F39BE4100F974A6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94D3889B1F39BE4100F974A6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1459,6 +1376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94DED68A1F7F38030036AE1F /* YYCDemo.c in Sources */,
 				94D389E11F39C23A00F974A6 /* YYAlertSelectedTableViewHeaderView.swift in Sources */,
 				94D38A051F39C23A00F974A6 /* YYYeEventViewController.swift in Sources */,
 				94D389E51F39C23A00F974A6 /* YYAlertView.swift in Sources */,
@@ -1472,6 +1390,7 @@
 				94D389E91F39C23A00F974A6 /* YYPagingHeaderScrollView.swift in Sources */,
 				94D38A141F39C23A00F974A6 /* YYIMGroupViewController.swift in Sources */,
 				94D389E41F39C23A00F974A6 /* YYAlertTextView.swift in Sources */,
+				94A95D451F502A7000E556DD /* YYRxSwiftViewController.swift in Sources */,
 				94D389AF1F39C23A00F974A6 /* NSMutableAttributedString+Extension.swift in Sources */,
 				94D389F01F39C23A00F974A6 /* GA_RefreshOther.swift in Sources */,
 				94D389F61F39C23A00F974A6 /* YYEmptyTableView.swift in Sources */,
@@ -1499,8 +1418,10 @@
 				94D38A381F39C23A00F974A6 /* YYIMFriendCell.swift in Sources */,
 				946BB2AE1F4430480062D173 /* DecoratorBase.swift in Sources */,
 				94D389F21F39C23A00F974A6 /* ScrollView+RefreshExtension.swift in Sources */,
+				9400411E1F67CCD7008BF928 /* Dictionary+Extension.swift in Sources */,
 				94D38A521F39C23A00F974A6 /* YYCompetitionDetailsHeaderView.swift in Sources */,
 				94D389E61F39C23A00F974A6 /* YYAlertWindowView.swift in Sources */,
+				940041201F67CD4B008BF928 /* YYRequestManager.swift in Sources */,
 				94D38A161F39C23A00F974A6 /* YYMyViewController.swift in Sources */,
 				94D38A1B1F39C23A00F974A6 /* YYApplyQueryViewController.swift in Sources */,
 				94D389F41F39C23A00F974A6 /* YYCircleScrollView.swift in Sources */,
@@ -1547,6 +1468,7 @@
 				94D38A4A1F39C23A00F974A6 /* YYActivityListCell.swift in Sources */,
 				94D38A541F39C23A00F974A6 /* YYCompetitionListCell.swift in Sources */,
 				94D389B61F39C23A00F974A6 /* UIView+Extension.swift in Sources */,
+				94D18E3B1F50111E00750F87 /* YYRxSwiftBaseViewController.swift in Sources */,
 				94D38A3E1F39C23A00F974A6 /* YYIMGroupInfoSectionView.swift in Sources */,
 				94D38A101F39C23A00F974A6 /* YYIMFriendListViewController.swift in Sources */,
 				94D38A471F39C23A00F974A6 /* YYSettingCell.swift in Sources */,
@@ -1592,36 +1514,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		94D3888E1F39BE4100F974A6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				94D388971F39BE4100F974A6 /* YETests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		94D388991F39BE4100F974A6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				94D388A21F39BE4100F974A6 /* YEUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		94D388941F39BE4100F974A6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 94D3887D1F39BE4100F974A6 /* YE */;
-			targetProxy = 94D388931F39BE4100F974A6 /* PBXContainerItemProxy */;
-		};
-		94D3889F1F39BE4100F974A6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 94D3887D1F39BE4100F974A6 /* YE */;
-			targetProxy = 94D3889E1F39BE4100F974A6 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		94D38A5C1F39C2F600F974A6 /* LaunchScreen.storyboard */ = {
@@ -1653,7 +1546,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1661,7 +1556,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1674,6 +1573,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1684,13 +1584,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LIBRARY_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/OTHER/YYHeader.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -1704,7 +1609,9 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1712,7 +1619,11 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1723,100 +1634,71 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LIBRARY_SEARCH_PATHS = "";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PROJECT_NAME)/OTHER/YYHeader.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		94D388A71F39BE4100F974A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CDF16BF32666F3D156E4C355 /* Pods-YE.debug.xcconfig */;
+			baseConfigurationReference = 8A68C82C0DC81948F659BFEA /* Pods-YE.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8975PEGCVX;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/HyphenateLite\"",
+				);
 				INFOPLIST_FILE = YE/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = jianan.YE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/YE/OTHER/YE-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
 		94D388A81F39BE4100F974A6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 678318913B05B3CFC6F3F7B8 /* Pods-YE.release.xcconfig */;
+			baseConfigurationReference = 9B059CB7E9DD2575F5847CD7 /* Pods-YE.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 8975PEGCVX;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/HyphenateLite\"",
+				);
 				INFOPLIST_FILE = YE/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = jianan.YE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		94D388AA1F39BE4100F974A6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = YETests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jianan.YETests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YE.app/YE";
-			};
-			name = Debug;
-		};
-		94D388AB1F39BE4100F974A6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = YETests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jianan.YETests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YE.app/YE";
-			};
-			name = Release;
-		};
-		94D388AD1F39BE4100F974A6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = YEUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jianan.YEUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = YE;
-			};
-			name = Debug;
-		};
-		94D388AE1F39BE4100F974A6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = YEUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = jianan.YEUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = YE;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/YE/OTHER/YE-Bridging-Header.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
@@ -1837,24 +1719,6 @@
 			buildConfigurations = (
 				94D388A71F39BE4100F974A6 /* Debug */,
 				94D388A81F39BE4100F974A6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		94D388A91F39BE4100F974A6 /* Build configuration list for PBXNativeTarget "YETests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				94D388AA1F39BE4100F974A6 /* Debug */,
-				94D388AB1F39BE4100F974A6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		94D388AC1F39BE4100F974A6 /* Build configuration list for PBXNativeTarget "YEUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				94D388AD1F39BE4100F974A6 /* Debug */,
-				94D388AE1F39BE4100F974A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

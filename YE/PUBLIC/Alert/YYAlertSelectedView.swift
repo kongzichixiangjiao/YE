@@ -23,7 +23,7 @@ extension UIView: SelectedProtocol {
         get {
             guard let h: YYAlertSelectedTableViewHeaderView = objc_getAssociatedObject(self, &YYAlertKey.kSelectedHeaderView) as? YYAlertSelectedTableViewHeaderView else {
                 let headerView = Bundle.main.loadNibNamed("YYAlertSelectedTableViewHeaderView", owner: self, options: nil)?.last as! YYAlertSelectedTableViewHeaderView
-                headerView.showLineView(space: 0)
+                headerView.showLineView(0)
                 headerView.clipStaticViewRectCorner(.topLeft, cornerRadius: 5)
                 headerView.closed.addTarget(self, action: #selector(closedAction), for: .touchUpInside)
                 objc_setAssociatedObject(self, &YYAlertKey.kSelectedHeaderView, headerView, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
@@ -89,11 +89,11 @@ extension UIView: SelectedProtocol {
         }
     }
     
-    func closedAction() {
+    @objc func closedAction() {
         ga_dissmissBlackWindow()
     }
     
-    func showSelectedLoading(title: String = "请选择", data: [Any], _ handler: @escaping DidSelectedHandler) {
+    func showSelectedLoading(_ title: String = "请选择", data: [Any], _ handler: @escaping DidSelectedHandler) {
         self.selectedData = data
         objc_setAssociatedObject(self, &YYAlertKey.kSelectedData, data, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         

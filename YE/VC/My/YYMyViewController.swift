@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
 
 class YYMyViewController: YYBaseTableViewController {
 
@@ -14,14 +16,14 @@ class YYMyViewController: YYBaseTableViewController {
         super.viewDidLoad()
         initNavigationView()
 
-        let _ = tableView.yy_addBaneHeaderView(type: .header, bgImage: UIImage(named: "cgts.jpg")!, height: YYBaneHeaderKey.kHeight, handler: {
+        let _ = tableView.yy_addBaneHeaderView(.header, bgImage: UIImage(named: "cgts.jpg")!, height: YYBaneHeaderKey.kHeight, handler: {
             [weak self] in
             if let _ = self {
                 
             }
         })
         
-        tableView.setupHeaderViewData(headerImage: UIImage(named: "cgts.jpg")!, userName: "huakunamtata")
+        tableView.setupHeaderViewData(UIImage(named: "cgts.jpg")!, userName: "huakunamtata")
         
         let arr = NSArray(contentsOfFile: Bundle.ga_path("my.plist"))
         self.dataSource = arr as! [Any]
@@ -30,7 +32,7 @@ class YYMyViewController: YYBaseTableViewController {
     func initNavigationView() {
         self.myTitle = "我的"
         self.isHiddenLeftButton = true
-        self.setupRightButton(type: .mySetting)
+        self.setupRightButton(.mySetting)
     }
     
     override func initTableView() {
@@ -52,9 +54,9 @@ class YYMyViewController: YYBaseTableViewController {
         return v
     }
     
-    override func clickedNavigationViewRightButton(sender: UIButton) {
-        super.clickedNavigationViewRightButton(sender: sender)
-        self.push(vc: YYSettingViewController())
+    override func clickedNavigationViewRightButton(_ sender: UIButton) {
+        super.clickedNavigationViewRightButton(sender)
+        self.push(YYSettingViewController())
     }
     
     override func didReceiveMemoryWarning() {
@@ -102,7 +104,15 @@ extension YYMyViewController {
         if indexPath.row == 1 {
             let vc = YYApplyViewController()
             vc.myType = .linkman
-            push(vc: vc)
+            push(vc)
         }
+        
+        let dic = self.dataSource[indexPath.row - 1] as! [String : Any]
+        
+        if dic[YYKey.myTitle] as! String == "RxSwift" {
+            push(YYRxSwiftViewController(nibName: "YYRxSwiftViewController", bundle: nil))
+        }
+        
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

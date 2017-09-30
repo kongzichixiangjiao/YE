@@ -18,7 +18,7 @@ class Compare {
         }
     }
     
-    static func ga_isEquals<T: Comparable>(a: T, b: T) -> Bool {
+    static func ga_isEquals<T: Comparable>(_ a: T, b: T) -> Bool {
         return (a == b)
     }
 }

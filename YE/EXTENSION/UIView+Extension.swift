@@ -9,12 +9,12 @@ import UIKit
 
 extension UIView {
     
-    public class func xibViewFrom<T: UIView>(viewType: T.Type) -> T {
+    public class func xibViewFrom<T: UIView>(_ viewType: T.Type) -> T {
         return Bundle.main.loadNibNamed(String(describing: viewType), owner: nil, options: nil)?.first as! T
     }
     
     public class func xibView() -> Self {
-        return xibViewFrom(viewType: self)
+        return xibViewFrom(self)
     }
 }
 
@@ -32,12 +32,12 @@ extension UIView {
         layer.mask = maskLayer
     }
     
-    func clipRectCorner(cornerRadius: CGFloat) {
+    func clipRectCorner(_ cornerRadius: CGFloat) {
         layer.cornerRadius = cornerRadius
         layer.masksToBounds = true
     }
     
-    func strokeBorder(width: CGFloat, color: UIColor) {
+    func strokeBorder(_ width: CGFloat, color: UIColor) {
         layer.borderColor = color.cgColor
         layer.borderWidth = width
     }
@@ -251,7 +251,7 @@ enum LineViewPosition {
 
 extension UIView {
     
-    func showLineView(space: CGFloat, position: LineViewPosition = .bottom, color: UIColor = UIColor.lightGray) {
+    func showLineView(_ space: CGFloat, position: LineViewPosition = .bottom, color: UIColor = UIColor.lightGray) {
         if let _ = objc_getAssociatedObject(self, "lineView") {
             return
         }

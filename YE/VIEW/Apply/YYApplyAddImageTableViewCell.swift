@@ -41,7 +41,7 @@ class YYApplyAddImageTableViewCell: UITableViewCell {
     }
     
     @IBAction func selectedAction(_ sender: UIButton) {
-        self.myDelegate?.didSelectedImage(tag: sender.tag - 1, row: self.myRow!)
+        self.myDelegate?.didSelectedImage(sender.tag - 1, row: self.myRow!)
         
     }
     

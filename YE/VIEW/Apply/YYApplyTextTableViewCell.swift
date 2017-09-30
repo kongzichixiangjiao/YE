@@ -48,7 +48,7 @@ extension YYApplyTextTableViewCell: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         self.model.value = textField.text
-        myDelegate?.finishedContent(content: textField.text, andRow: row)
+        myDelegate?.finishedContent(textField.text, andRow: row)
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

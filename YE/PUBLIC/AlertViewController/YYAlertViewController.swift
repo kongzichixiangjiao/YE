@@ -102,24 +102,24 @@ class YYAlertViewController: UIViewController {
         return headerView
     }()
     
-    func closedAction() {
+    @objc func closedAction() {
         removeViews()
         dismissAlertWindow()
     }
     
-    public func yy_showText(text: String) {
+    open func yy_showText(_ text: String) {
         showText(text: text)
     }
     
-    public func yy_showLoading() {
+    open func yy_showLoading() {
         showLoading()
     }
     
-    public func yy_showImage_text(imageType: YYAlertImageType, text: String) {
+    open func yy_showImage_text(_ imageType: YYAlertImageType, text: String) {
         showImage_text(imageType: imageType, text: text)
     }
     
-    public func yy_showSelected(title: String, data: [Any], handler: @escaping DidSelectedHandler) {
+    open func yy_showSelected(_ title: String, data: [Any], handler: @escaping DidSelectedHandler) {
         showSelected(title: title, data: data, handler: handler)
     }
     
@@ -172,7 +172,7 @@ extension YYAlertViewController {
         self.view.frame = manager.frame ?? self.view.frame
     }
     
-    func tapViewAction(sender: UITapGestureRecognizer) {
+    @objc func tapViewAction(sender: UITapGestureRecognizer) {
         removeViews()
         dismissAlertWindow()
     }
@@ -183,7 +183,7 @@ extension YYAlertViewController {
     fileprivate func addOrientationNotification() {
         NotificationCenter.default.addObserver(self, selector: #selector(screenChange), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
     }
-    
+    @objc  
     func screenChange() {
         if UIScreen.main.bounds.width > UIScreen.main.bounds.height {
             print("横屏")
@@ -269,7 +269,7 @@ extension YYAlertViewController {
     
     fileprivate func heightWith(text: String, fontSize: CGFloat, width: CGFloat) -> CGFloat {
         let font = UIFont.systemFont(ofSize: fontSize)
-        let rect = NSString(string: text).boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
+        let rect = NSString(string: text).boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
         return ceil(rect.height)
     }
 }

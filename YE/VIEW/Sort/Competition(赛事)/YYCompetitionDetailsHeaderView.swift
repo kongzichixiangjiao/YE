@@ -27,6 +27,6 @@ class YYCompetitionDetailsHeaderView: UIView {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        showLineView(space: 0)
+        showLineView(0)
     }
 }

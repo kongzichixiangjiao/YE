@@ -13,9 +13,9 @@ class YYActivityListViewController: YYBaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.myTitle = "活动"
-        self.setupRightButton(type: .service)
+        self.setupRightButton(.service)
         
-        let _ = tableView.yy_addBaneHeaderView(type: .header, bgImage: UIImage(named: "cgts.jpg")!, height: YYBaneHeaderKey.kHeight, handler: nil)
+        let _ = tableView.yy_addBaneHeaderView(.header, bgImage: UIImage(named: "cgts.jpg")!, height: YYBaneHeaderKey.kHeight, handler: nil)
         
 //        tableView.contentInset = UIEdgeInsets(top: YYBaneHeaderKey.kHeight, left: 0, bottom: 0, right: 0)
         
@@ -44,7 +44,7 @@ class YYActivityListViewController: YYBaseTableViewController {
         
         self.tableView.yy_empty(.noData)
         
-        self.tableView.ga_addRefreshHeaderXIB(headerView: GA_AnimationRefreshHeaderView.loadView()) {
+        self.tableView.ga_addRefreshHeaderXIB(GA_AnimationRefreshHeaderView.loadView()) {
             [weak self] in
             if let weakSelf = self {
                 print("开始刷新")
@@ -108,7 +108,7 @@ extension YYActivityListViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.push(vc: YYCompetitionDetailsViewController())
+        self.push(YYCompetitionDetailsViewController())
         tableView.deselectRow(at: indexPath, animated: true)
         
     }

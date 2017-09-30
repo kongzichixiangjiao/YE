@@ -16,8 +16,8 @@ class YYLinkmanHeaderView: UIView {
     var linkmanHandler: LinkmanHandler!
     
     var titles: [String] = []
-    private let bW: CGFloat = 50
-    private let space: CGFloat = 10
+    fileprivate let bW: CGFloat = 50
+    fileprivate let space: CGFloat = 10
     
     lazy var scrollView: UIScrollView = {
         let v = UIScrollView.init(frame: self.bounds)
@@ -32,7 +32,7 @@ class YYLinkmanHeaderView: UIView {
         self.init(frame: frame)
         linkmanHandler = handler
         self.titles = titles
-        initViews(titles: titles)
+        initViews(titles)
     }
     
     override init(frame: CGRect) {
@@ -43,7 +43,7 @@ class YYLinkmanHeaderView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func initViews(titles: [String]) {
+    func initViews(_ titles: [String]) {
         for (i, title) in titles.enumerated() {
             let b = UIButton()
             b.tag = i 
@@ -51,12 +51,12 @@ class YYLinkmanHeaderView: UIView {
             b.setTitle(title, for: .normal)
             b.titleLabel?.font = UIFont.systemFont(ofSize: 12)
             b.setTitleColor(UIColor.black, for: .normal)
-            b.addTarget(self, action: #selector(buttonAction(sender:)), for: .touchUpInside)
+            b.addTarget(self, action: #selector(buttonAction(_:)), for: .touchUpInside)
             scrollView.addSubview(b)
         }
     }
     
-    func buttonAction(sender: UIButton) {
+    @objc func buttonAction(_ sender: UIButton) {
         linkmanHandler(sender.tag)
     }
     

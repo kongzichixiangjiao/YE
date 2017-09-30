@@ -6,6 +6,7 @@
 //  Copyright © 2017年 侯佳男. All rights reserved.
 //
 
+/*
 import UIKit
 import SQLite
 
@@ -152,3 +153,4 @@ struct SQLiteManager {
         }
     }
 }
+*/

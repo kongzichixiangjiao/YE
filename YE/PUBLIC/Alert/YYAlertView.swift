@@ -53,9 +53,9 @@ extension UIView: AlertTypeProtocol {
         }
     }
     
-    func ga_showView(text: String, deplay: Double = 0) {
-        setup(type: .text)
-        showView(text: text)
+    func ga_showView(_ text: String, deplay: Double = 0) {
+        setup(.text)
+        showView(text)
         if deplay != 0 {
             let queue = DispatchQueue.global(qos: .default)
             queue.asyncAfter(deadline: DispatchTime.now() + Double(Int64(deplay * 1000 * 1000000)) / Double(NSEC_PER_SEC), execute: {
@@ -73,9 +73,9 @@ extension UIView: AlertTypeProtocol {
         ga_dissmissWhiteWindow()
     }
     
-    func ga_showBirthdayView(handler: @escaping DidSelectedHandler) {
-        setup(type: .birthday)
-        showBirthdayView(handler: handler)
+    func ga_showBirthdayView(_ handler: @escaping DidSelectedHandler) {
+        setup(.birthday)
+        showBirthdayView(handler)
     }
     
     func ga_hideBirthdayView() {
@@ -84,9 +84,9 @@ extension UIView: AlertTypeProtocol {
     
     // MARK: selected
     // MARK: loading
-    func ga_showSelectedLoading(title: String = "请选择", data: [Any], handler: @escaping DidSelectedHandler) {
-        setup(type: .selected)
-        showSelectedLoading(title: title, data: data, handler)
+    func ga_showSelectedLoading(_ title: String = "请选择", data: [Any], handler: @escaping DidSelectedHandler) {
+        setup(.selected)
+        showSelectedLoading(title, data: data, handler)
     }
     
     public func ga_hideSelectedLoading() {
@@ -95,7 +95,7 @@ extension UIView: AlertTypeProtocol {
     
     // MARK: loading
     public func ga_showLoading() {
-        setup(type: .loading)
+        setup(.loading)
         showLoadingView()
     }
     
@@ -104,16 +104,16 @@ extension UIView: AlertTypeProtocol {
     }
     
     // MARK: text loading
-    func ga_showTextLoading(type: YYAlertViewTextType, text: String) {
-        setup(type: .textLoading)
-        showTextLoadingView(type: type, text: text)
+    func ga_showTextLoading(_ type: YYAlertViewTextType, text: String) {
+        setup(.textLoading)
+        showTextLoadingView(type, text: text)
     }
     
     public func ga_hideTextLoading() {
         ga_dissmissBlackWindow()
     }
     
-    private func setup(type: YYAlertType) {
+    fileprivate func setup(_ type: YYAlertType) {
         objc_setAssociatedObject(self, &YYAlertKey.kAlertType, type, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
     }
 }

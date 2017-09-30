@@ -21,11 +21,11 @@ public let SearchBarViewHeight: CGFloat = 44
 
 class YYBaseTableViewController: YYBaseViewController {
 
-    public var dataSource: [Any] = []
+    open var dataSource: [Any] = []
     
-    public var isShowTabbar: Bool = false
+    open var isShowTabbar: Bool = false
     
-    public var showSearchBar: Bool = false {
+    open var showSearchBar: Bool = false {
         didSet {
             if showSearchBar {
                 self.view.addSubview(searchBarView)
@@ -33,7 +33,7 @@ class YYBaseTableViewController: YYBaseViewController {
         }
     }
     
-    public var tableViewFrameType: TableViewFrameType! {
+    open var tableViewFrameType: TableViewFrameType! {
         didSet {
             let y: CGFloat = tableViewFrameType.rawValue
             self.tableView.frame = CGRect(x: 0, y: y, width: MainScreenWidth, height: MainScreenHeight - y - (self.isShowTabbar ? TabBarHeight : 0))
@@ -72,20 +72,20 @@ class YYBaseTableViewController: YYBaseViewController {
         return v
     }()
     
-    private func initFooterView() -> YYBaseTableViewFooterView{
+    fileprivate func initFooterView() -> YYBaseTableViewFooterView{
         let footerView = Bundle.main.loadNibNamed("YYBaseTableViewFooterView", owner: self, options: nil)?.last as! YYBaseTableViewFooterView
         return footerView
     }
     
-    public func footerView() {
+    open func footerView() {
 //        self.tableView.tableFooterView = initFooterView()
     }
     
-    public func registerClassWithIdentifier(_ identifier: String) {
+    open func registerClassWithIdentifier(_ identifier: String) {
         tableView.register(NSClassFromString(identifier), forCellReuseIdentifier: identifier)
     }
     
-    public func registerNibWithIdentifier(_ identifier: String) {
+    open func registerNibWithIdentifier(_ identifier: String) {
         tableView.register(UINib(nibName: identifier, bundle: nil), forCellReuseIdentifier: identifier)
     }
     
@@ -100,10 +100,15 @@ class YYBaseTableViewController: YYBaseViewController {
         
     }
     
-    func textFieldShouldReturn(text: String) {
+//    func textFieldShouldReturn(_ text: String) {
+//
+//    }
+    
+    func myTextFieldShouldReturn(_ text: String) {
         
     }
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -112,7 +117,7 @@ class YYBaseTableViewController: YYBaseViewController {
 extension YYBaseTableViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        textFieldShouldReturn(text: textField.text!)
+        myTextFieldShouldReturn(textField.text!)
         return true
     }
 }

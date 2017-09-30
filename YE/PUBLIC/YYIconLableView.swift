@@ -46,9 +46,9 @@ class YYIconLableView: UIView {
     lazy var contentLable: UILabel = {
         let v = UILabel()
         if self.iconPosition == IconPosition.left.rawValue {
-            v.frame = CGRect(x: self.iconImageView.maxX + self.space, y: self.height / 2 - self.contentFontSize / 2, width: self.content.ga_widthWith(fontSize: self.contentFontSize, height: self.contentFontSize), height: self.contentFontSize)
+            v.frame = CGRect(x: self.iconImageView.maxX + self.space, y: self.height / 2 - self.contentFontSize / 2, width: self.content.ga_widthWith(self.contentFontSize, height: self.contentFontSize), height: self.contentFontSize)
         } else {
-            let w: CGFloat = self.content.ga_widthWith(fontSize: self.contentFontSize, height: self.contentFontSize)
+            let w: CGFloat = self.content.ga_widthWith(self.contentFontSize, height: self.contentFontSize)
             v.frame = CGRect(x: self.width / 2 - w / 2, y: self.iconImageView.maxY + self.space, width: w, height: self.contentFontSize)
             v.textAlignment = .center
         }
@@ -59,7 +59,7 @@ class YYIconLableView: UIView {
         return v
     }()
     
-    private func initViews() {
+    fileprivate func initViews() {
         if self.iconPosition == IconPosition.left.rawValue {
             self.bounds = CGRect(x: 0, y: 0, width: self.iconImageView.width + space + self.contentLable.width, height: Compare.ga_MAX(self.iconImageView.height, self.contentLable.height))
         } else {

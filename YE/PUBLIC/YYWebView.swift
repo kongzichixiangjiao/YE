@@ -60,7 +60,7 @@ extension YYWebView: WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler 
         print("didFinish")
         self.webView.frame = CGRect(origin: CGPoint.zero, size: self.webView.scrollView.contentSize)
         self.height = self.webView.frame.height
-        self.myDelegate?.webViewDidFinish(height: self.height)
+        self.myDelegate?.webViewDidFinish(self.height)
     }
     // 页面加载失败
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {

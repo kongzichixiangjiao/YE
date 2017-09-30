@@ -17,41 +17,41 @@ protocol YYBaseNavigationViewProtocol: NSObjectProtocol {
     func back()
     func back(_ model: Any?)
     @objc optional
-    func clickedNavigationViewRightButton(sender: UIButton)
+    func clickedNavigationViewRightButton(_ sender: UIButton)
 }
 
 class YYBaseNavigationView: YYBaseView {
     
     static let height: CGFloat = 64
-    private let space: CGFloat = 10
+    fileprivate let space: CGFloat = 10
     
     weak var myDelegate: YYBaseNavigationViewProtocol?
     
-    public var myTitle: String? {
+    open var myTitle: String? {
         didSet {
             self.titleLabel.text = myTitle
         }
     }
     
-    public var isHiddenLeftButton: Bool? {
+    open var isHiddenLeftButton: Bool? {
         didSet {
             self.backButton.isHidden = isHiddenLeftButton!
         }
     }
     
-    public var isShowRightButton: Bool? {
+    open var isShowRightButton: Bool? {
         didSet {
             self.rightButton?.isHidden = !isShowRightButton!
         }
     }
     
-    public var rightButtonIsEnabled: Bool! {
+    open var rightButtonIsEnabled: Bool! {
         didSet {
             self.rightButton?.isEnabled = rightButtonIsEnabled
         }
     }
     
-    public var rightButtonState: UIControlState? {
+    open var rightButtonState: UIControlState? {
         didSet {
             switch self.rightButtonType! {
             case .finished:
@@ -74,14 +74,14 @@ class YYBaseNavigationView: YYBaseView {
         }
     }
     
-    public var leftButtonTitle: String? {
+    open var leftButtonTitle: String? {
         didSet {
             self.backButton.setImage(UIImage(named: leftButtonTitle!), for: .normal)
         }
     }
     
-    public var lineColor: UIColor = UIColor.lightGray
-    public var isShowLine: Bool = true
+    open var lineColor: UIColor = UIColor.lightGray
+    open var isShowLine: Bool = true
     
     static let bW: CGFloat = 40
     static let bH: CGFloat = 40
@@ -89,21 +89,21 @@ class YYBaseNavigationView: YYBaseView {
     
     lazy var backButton: UIButton = {
         let b = UIButton()
-        b.frame = CGRect(x: 0, y: self.frame.size.height - bH, width: bW, height: bH)
-        b.setImage(bImage, for: .normal)
-        b.addTarget(self, action: #selector(backAction(sender:)), for: .touchUpInside)
+        b.frame = CGRect(x: 0, y: self.frame.size.height - YYBaseNavigationView.bH, width: YYBaseNavigationView.bW, height: YYBaseNavigationView.bH)
+        b.setImage(YYBaseNavigationView.bImage, for: .normal)
+        b.addTarget(self, action: #selector(YYBaseNavigationView.backAction(_:)), for: .touchUpInside)
         return b
     }()
     
     var rightButton: UIButton?
     var rightButtonType: YYBaseNavigationViewRightButtonTyep?
     
-    func rightButtonAction(sender: UIButton) {
+    @objc func rightButtonAction(_ sender: UIButton) {
         
-        myDelegate?.clickedNavigationViewRightButton!(sender: sender)
+        myDelegate?.clickedNavigationViewRightButton!(sender)
     }
     
-    func backAction(sender: UIButton) {
+    @objc func backAction(_ sender: UIButton) {
         myDelegate?.back()
         //        myDelegate?.back(nil)
     }
@@ -132,7 +132,7 @@ class YYBaseNavigationView: YYBaseView {
         initView()
     }
     
-    private func initView() {
+    fileprivate func initView() {
         self.addSubview(backButton)
         self.addSubview(titleLabel)
         if (isShowLine) {
@@ -140,7 +140,7 @@ class YYBaseNavigationView: YYBaseView {
         }
     }
     
-    func setupRightButton(type: YYBaseNavigationViewRightButtonTyep) {
+    func setupRightButton(_ type: YYBaseNavigationViewRightButtonTyep) {
         self.rightButtonType = type
         
         var b: UIButton
@@ -173,7 +173,7 @@ class YYBaseNavigationView: YYBaseView {
             break
         }
         b.frame = CGRect(x: self.frame.size.width - YYBaseNavigationView.bW - space, y: self.frame.size.height - YYBaseNavigationView.bH, width: YYBaseNavigationView.bW, height: YYBaseNavigationView.bH)
-        b.addTarget(self, action: #selector(rightButtonAction(sender:)), for: .touchUpInside)
+        b.addTarget(self, action: #selector(rightButtonAction(_:)), for: .touchUpInside)
         self.addSubview(b)
         
         self.rightButton = b

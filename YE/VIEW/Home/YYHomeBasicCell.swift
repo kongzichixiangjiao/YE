@@ -18,7 +18,7 @@ class YYHomeBasicCell: YYBaseTableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.showLineView(space: 10)
+        self.showLineView(10)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

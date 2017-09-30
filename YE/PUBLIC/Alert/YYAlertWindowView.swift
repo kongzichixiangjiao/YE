@@ -30,7 +30,7 @@ extension UIView: WindowProtocol {
                 alertWindow.makeKeyAndVisible()
                 alertWindow.isHidden = false
                 
-                let tap = UITapGestureRecognizer(target: self, action: #selector(tapWhiteWindow(sender:)))
+                let tap = UITapGestureRecognizer(target: self, action: #selector(tapWhiteWindow(_:)))
                 alertWindow.addGestureRecognizer(tap)
                 
                 objc_setAssociatedObject(self, &YYAlertKey.kAlertWhiteWindow, alertWindow, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
@@ -61,7 +61,7 @@ extension UIView: WindowProtocol {
                 v.backgroundColor = UIColor.black
                 alertWindow.addSubview(v)
                 
-                let tap = UITapGestureRecognizer(target: self, action: #selector(tapBackView(sender:)))
+                let tap = UITapGestureRecognizer(target: self, action: #selector(tapBackView(_:)))
                 alertWindow.addGestureRecognizer(tap)
                 
                 objc_setAssociatedObject(self, &YYAlertKey.kAlertWindow, alertWindow, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
@@ -75,23 +75,23 @@ extension UIView: WindowProtocol {
         }
     }
     
-    func tapWhiteWindow(sender: UITapGestureRecognizer) {
+    @objc func tapWhiteWindow(_ sender: UITapGestureRecognizer) {
         ga_dissmissWhiteWindow()
     }
     
-    func tapBackView(sender: UITapGestureRecognizer) {
+    @objc func tapBackView(_ sender: UITapGestureRecognizer) {
         ga_dissmissBlackWindow()
     }
     
     func ga_dissmissBlackWindow() {
-        ga_hideOtherView(isWhite: false)
+        ga_hideOtherView(false)
     }
     
     func ga_dissmissWhiteWindow() {
-        ga_hideOtherView(isWhite: true)
+        ga_hideOtherView(true)
     }
     
-    public func ga_hideOtherView(isWhite: Bool) {
+    public func ga_hideOtherView(_ isWhite: Bool) {
         switch self.alertType {
         case .normal:
             hideLoadingView()
@@ -112,10 +112,10 @@ extension UIView: WindowProtocol {
             hideTextLoadingView()
             break 
         }
-        ga_hideWindow(isWhite: isWhite)
+        ga_hideWindow(isWhite)
     }
     
-    func ga_hideWindow(isWhite: Bool) {
+    func ga_hideWindow(_ isWhite: Bool) {
         objc_setAssociatedObject(self, &YYAlertKey.kAlertType, nil, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         if isWhite {
             self.alertWhiteWindow.resignKey()

@@ -32,14 +32,14 @@ class YYPagingView: UIView {
         let v = YYPagingHeaderScrollView(frame: CGRect(x: 0, y: 0, width: self.frame.width, height: kScrollHeaderViewHeight), handler: {
             [weak self] tag in
             if let weakSelf = self {
-                weakSelf.setupScrollViewOffset(tag: tag)
+                weakSelf.setupScrollViewOffset(tag)
             }
         })
         self.addSubview(v)
         return v
     }()
     
-    func setupScrollViewOffset(tag: Int) {
+    func setupScrollViewOffset(_ tag: Int) {
         UIView.animate(withDuration: 0.25) {
             self.scrollView.contentOffset = CGPoint(x: tag.cgFloat * self.scrollView.frame.size.width, y: 0)
         }
@@ -69,12 +69,12 @@ class YYPagingView: UIView {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        scrollHeaderView.updateHeaderScrollView(offsetX: endOffsetX - scrollView.contentOffset.x)
+        scrollHeaderView.updateHeaderScrollView(endOffsetX - scrollView.contentOffset.x)
     }
     
     var endOffsetX: CGFloat = 0
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        scrollHeaderView.updateHeaderScrollView(tag: Int(scrollView.contentOffset.x / self.frame.size.width))
+        scrollHeaderView.updateHeaderScrollViewWithTag(Int(scrollView.contentOffset.x / self.frame.size.width))
         endOffsetX = scrollView.contentOffset.x
     }
     

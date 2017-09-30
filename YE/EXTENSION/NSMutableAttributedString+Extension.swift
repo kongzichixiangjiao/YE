@@ -19,10 +19,10 @@ extension NSAttributedString {
         return style
     }
     
-    class func yy_contentStyle(text: String) -> NSAttributedString {
+    class func yy_contentStyle(_ text: String) -> NSAttributedString {
         let attributed = NSMutableAttributedString(string: text)
         let style = yy_paragraphStyle()
-        attributed.addAttributes([NSParagraphStyleAttributeName : style], range: NSMakeRange(0, attributed.length))
+        attributed.addAttributes([NSAttributedStringKey.paragraphStyle : style], range: NSMakeRange(0, attributed.length))
         return attributed
     }
 

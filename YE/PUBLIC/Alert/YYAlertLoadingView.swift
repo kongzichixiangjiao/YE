@@ -91,27 +91,27 @@ extension UIView: LoadingProtocol {
         activity.center = alertWindow.center
         toastView.frame = CGRect(origin: alertWindow.center, size: CGSize(width: 100, height: 100))
         toastView.center = alertWindow.center
-        showAnimation(view: toastView)
-        showAnimation(view: activity)
+        showAnimation(toastView)
+        showAnimation(activity)
     }
     
-    func showTextLoadingView(type: YYAlertViewTextType, text: String) {
-        showLoadingTextLabel(type: type, text: text)
+    func showTextLoadingView(_ type: YYAlertViewTextType, text: String) {
+        showLoadingTextLabel(type, text: text)
     }
     
-    func showLoadingTextLabel(type: YYAlertViewTextType, text: String) {
-        showAnimation(view: toastView)
+    func showLoadingTextLabel(_ type: YYAlertViewTextType, text: String) {
+        showAnimation(toastView)
         let space: CGFloat = 10
         switch type {
         case .error, .success:
-            showAnimation(view: loadingIconImageView)
+            showAnimation(loadingIconImageView)
             let image = UIImage(named: type.rawValue)
             let w: CGFloat = 30
             loadingIconImageView.frame = CGRect(x: toastView.center.x - w / 2, y: toastView.frame.origin.y + space * 2, width: w, height: w)
             loadingIconImageView.image = image
             break
         case .loading:
-            showAnimation(view: activity)
+            showAnimation(activity)
             activity.frame = CGRect(x: activity.frame.origin.x, y: activity.frame.origin.y - space, width: activity.frame.size.width, height: activity.frame.size.height)
             break
         }
@@ -119,18 +119,18 @@ extension UIView: LoadingProtocol {
         let lH: CGFloat = 13
         loadingTextLabel.frame = CGRect(x: self.toastView.frame.origin.x, y: self.toastView.frame.origin.y + self.toastView.frame.size.height - space * 2 - lH, width: self.toastView.frame.size.width, height: lH)
         loadingTextLabel.text = text
-        showAnimation(view: loadingTextLabel)    
+        showAnimation(loadingTextLabel)
     }
     
     func hideLoadingView() {
-        hideAnimation(view: toastView)
-        hideAnimation(view: activity)
+        hideAnimation(toastView)
+        hideAnimation(activity)
     }
     
     func hideTextLoadingView() {
-        hideAnimation(view: toastView)
-        hideAnimation(view: loadingTextLabel)
-        hideAnimation(view: loadingIconImageView)
+        hideAnimation(toastView)
+        hideAnimation(loadingTextLabel)
+        hideAnimation(loadingIconImageView)
     }
 }
 

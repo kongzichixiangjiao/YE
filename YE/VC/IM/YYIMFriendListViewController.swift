@@ -23,12 +23,12 @@ class YYIMFriendListViewController: YYBaseTableViewController {
     
         if isCanSelected {
             self.myTitle = "选择好友"
-            self.setupRightButton(type: .finished)
+            self.setupRightButton(.finished)
         }
         
         EMClient.shared().contactManager.add(self, delegateQueue: nil)
         
-        self.tableView.ga_addRefreshHeaderXIB(headerView: GA_AnimationRefreshHeaderView.loadView()) {
+        self.tableView.ga_addRefreshHeaderXIB(GA_AnimationRefreshHeaderView.loadView()) {
             [weak self] in
             if let weakSelf = self {
                 weakSelf.refreshFriendList()
@@ -65,8 +65,8 @@ class YYIMFriendListViewController: YYBaseTableViewController {
         }
     }
     
-    override func clickedRightButtonAction(sender: UIButton) {
-        super.clickedRightButtonAction(sender: sender)
+    override func clickedRightButtonAction(_ sender: UIButton) {
+        super.clickedRightButtonAction(sender)
         DispatchQueue.global().async {
             [weak self] in
             if let weakSelf = self {
@@ -79,9 +79,9 @@ class YYIMFriendListViewController: YYBaseTableViewController {
                 DispatchQueue.main.async {
                     if let e = error {
                         print("error: \(e.errorDescription)")
-                        weakSelf.view.ga_showView(text: "加入失败", deplay: 0.3)
+                        weakSelf.view.ga_showView("加入失败", deplay: 0.3)
                     }
-                    weakSelf.view.ga_showView(text: "成功入坑", deplay: 0.3)
+                    weakSelf.view.ga_showView("成功入坑", deplay: 0.3)
                 }
             }
         }
@@ -133,7 +133,7 @@ extension YYIMFriendListViewController {
             }
             self.rightButtonIsEnabled = selectedData.count > 0
         } else {
-            delegate?.pushAction(model: model, type: .friend)
+            delegate?.pushAction(model, type: .friend)
         }
     }
 }

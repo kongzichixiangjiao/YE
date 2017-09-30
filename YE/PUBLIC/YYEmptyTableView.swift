@@ -37,6 +37,10 @@ public protocol YYEmptyProtocol {
 }
 
 extension UIScrollView: YYEmptyProtocol {
+    public func yy_emptyWithReset(_ type: YYEmptyDataEnum, handler: YYEmptyProtocol.YYEmptyHandler?) {
+        
+    }
+    
     public var emptyHandler: YYEmptyProtocol.YYEmptyHandler? {
         get {
             guard let handler = objc_getAssociatedObject(self, &YYEmptyKey.kEmptyHandlerKey) else {
@@ -104,7 +108,7 @@ extension UIScrollView: YYEmptyProtocol {
     }
     
     // 如果初始化错误 emptyHandler = nil
-    func alertButtonAction() {
+    @objc func alertButtonAction() {
         self.emptyHandler?()
     }
     
@@ -139,33 +143,33 @@ extension UIScrollView: YYEmptyProtocol {
     // MARK: 调用方法
     public func yy_empty(_ type: YYEmptyDataEnum) {
         if (type == .noDataReset) { return }
-        updateEmptyView(type: type, alertTitle: "", handler: nil)
+        updateEmptyView(type, alertTitle: "", handler: nil)
     }
     
     public func yy_empty(_ type: YYEmptyDataEnum, alertTitle: String) {
         if (type == .noDataReset) { return }
-        updateEmptyView(type: type, alertTitle: alertTitle, handler: nil)
+        updateEmptyView(type, alertTitle: alertTitle, handler: nil)
     }
     
-    public func yy_emptyWithReset(_ type: YYEmptyDataEnum = .noDataReset, handler: YYEmptyProtocol.YYEmptyHandler?) {
-        updateEmptyView(type: type, alertTitle: "", handler: handler)
+    public func yy_emptyWithReset(_ type: YYEmptyDataEnum = .noDataReset, handler: @escaping YYEmptyProtocol.YYEmptyHandler) {
+        updateEmptyView(type, alertTitle: "", handler: handler)
     }
     
-    private func updateEmptyView(type: YYEmptyDataEnum, alertTitle: String, handler: YYEmptyProtocol.YYEmptyHandler?) {
+    fileprivate func updateEmptyView(_ type: YYEmptyDataEnum, alertTitle: String, handler: YYEmptyProtocol.YYEmptyHandler?) {
         
         guard let _: YYEmptyDataEnum = objc_getAssociatedObject(self, &YYEmptyKey.kEmptyTypeKey) as? YYEmptyDataEnum else {
             
-            self.initEmptyView(type: type, alertTitle: alertTitle, handler: handler)
+            self.initEmptyView(type, alertTitle: alertTitle, handler: handler)
             return
         }
         
         self.updateNoEmpty()
         
-        self.initEmptyView(type: type, alertTitle: alertTitle, handler: handler)
+        self.initEmptyView(type, alertTitle: alertTitle, handler: handler)
         
     }
     
-    private func updateNoEmpty() {
+    fileprivate func updateNoEmpty() {
         guard let _: UIImageView = objc_getAssociatedObject(self, &YYEmptyKey.kAlertImageViewKey) as? UIImageView else {
             return
         }
@@ -194,7 +198,7 @@ extension UIScrollView: YYEmptyProtocol {
         }
     }
     
-    private func initEmptyView(type: YYEmptyDataEnum, alertTitle: String, handler: YYEmptyProtocol.YYEmptyHandler?) {
+    fileprivate func initEmptyView(_ type: YYEmptyDataEnum, alertTitle: String, handler: YYEmptyProtocol.YYEmptyHandler?) {
         objc_setAssociatedObject(self, &YYEmptyKey.kEmptyTypeKey, type, .OBJC_ASSOCIATION_COPY_NONATOMIC)
         
         switch type {

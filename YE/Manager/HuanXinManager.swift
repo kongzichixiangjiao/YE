@@ -9,6 +9,7 @@
 import Foundation
 import EaseUILite
 
+
 class HXManager {
     static let manager = HXManager()
     
@@ -25,7 +26,7 @@ class HXManager {
         return EMClient.shared().currentUsername
     }
     
-    func getJoinedGroupsFromServer(handler: @escaping GetJoinedGroupsHandler) {
+    func getJoinedGroupsFromServer(_ handler: @escaping GetJoinedGroupsHandler) {
 
         EMClient.shared().groupManager.getJoinedGroupsFromServer(withPage: 1, pageSize: 10) { (result, error) in
             if let e = error {
@@ -42,7 +43,7 @@ class HXManager {
     }
     
     // MARK: 通过好友请求
-    func agreenAddFriendRequest(forUserName: String, handler: @escaping FinishedHandler) {
+    func agreenAddFriendRequest(_ forUserName: String, handler: @escaping FinishedHandler) {
         guard let error = EMClient.shared().contactManager.acceptInvitation(forUsername: forUserName) else {
             handler(true)
             return
@@ -61,7 +62,7 @@ class HXManager {
     }
     
     // MARK: 创建群组
-    func hx_createChatGroup(isGroupJurisdiction: Bool, isMemberAddJurisdiction: Bool, subject: String, description: String, message: String, maxUsersCount: Int = 500, handler: FinishedHandler) {
+    func hx_createChatGroup(_ isGroupJurisdiction: Bool, isMemberAddJurisdiction: Bool, subject: String, description: String, message: String, maxUsersCount: Int = 500, handler: FinishedHandler) {
         let setting = EMGroupOptions()
         setting.maxUsersCount = maxUsersCount
         
@@ -98,7 +99,7 @@ class HXManager {
     }
     
     //MARK: 注册
-    class func hx_register(handler: @escaping FinishedHandler) {
+    class func hx_register(_ handler: @escaping FinishedHandler) {
         guard let error = EMClient.shared().register(withUsername: HuanXin.userId, password: HuanXin.password) else {
             handler(true)
             return
@@ -108,7 +109,7 @@ class HXManager {
     }
     
     //MARK: 登录
-    class func hx_login(handler: @escaping FinishedHandler)  {
+    class func hx_login(_ handler: @escaping FinishedHandler)  {
         EMClient.shared().login(withUsername: HuanXin.userId, password: HuanXin.password, completion: { (string, error) in
             if let e = error {
                 print("error: \(e.debugDescription)")

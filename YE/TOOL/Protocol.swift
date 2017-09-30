@@ -10,21 +10,21 @@ import Foundation
 import UIKit
 
 protocol YYApplyContentDelegate: NSObjectProtocol {
-    func finishedContent(content: String?, andRow row: Int)
+    func finishedContent(_ content: String?, andRow row: Int)
 }
 
 protocol YYWebViewDelegate: NSObjectProtocol {
-    func webViewDidFinish(height: CGFloat)
+    func webViewDidFinish(_ height: CGFloat)
 }
 
 protocol YYCompetitionDetailsBottomViewDelegate: NSObjectProtocol {
     // 报名查询
-    func applyQuery(id: String)
-    func apply(id: String)
+    func applyQuery(_ id: String)
+    func apply(_ id: String)
 }
 
 protocol YYApplyAddImageTableViewCellDelegate: NSObjectProtocol {
-    func didSelectedImage(tag: Int, row: Int)
+    func didSelectedImage(_ tag: Int, row: Int)
 }
 
 
@@ -33,5 +33,5 @@ enum YYPushDelegateType: Int {
 }
 
 protocol YYPushDelegate: NSObjectProtocol {
-    func pushAction(model: Any, type: YYPushDelegateType)
+    func pushAction(_ model: Any, type: YYPushDelegateType)
 }

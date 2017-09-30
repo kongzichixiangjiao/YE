@@ -69,9 +69,9 @@ extension UILabel {
      - parameter strings:   需要点击的字符串数组
      - parameter tapAction: 点击事件回调
      */
-    func yy_addAttributeTapAction(row: Int, _ strings : [String] , tapAction : @escaping ((Int, String , NSRange , Int) -> Void)) -> Void {
+    func yy_addAttributeTapAction(_ row: Int, _ strings : [String] , tapAction : @escaping ((Int, String , NSRange , Int) -> Void)) -> Void {
         
-        yy_getRange(row: row, strings)
+        yy_getRange(row, strings)
         
         tapBlock = tapAction
         
@@ -106,7 +106,7 @@ extension UILabel {
         }
     }
     
-    open override func touchesCancelled(_ touches: Set<UITouch>?, with event: UIEvent?) {
+    open override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         if isTapEffect {
             self.performSelector(onMainThread: #selector(self.yy_tapEffectWithStatus(_:)), with: nil, waitUntilDone: false)
         }
@@ -143,7 +143,7 @@ extension UILabel {
         
         if self.attributedText?.length > range.length {
             var m_font : UIFont
-            let n_font = self.attributedText?.attribute(NSFontAttributeName, at: 0, effectiveRange: nil)
+            let n_font = self.attributedText?.attribute(NSAttributedStringKey.font, at: 0, effectiveRange: nil)
             if n_font != nil {
                 m_font = n_font as! UIFont
             }else if (self.font != nil) {
@@ -190,7 +190,7 @@ extension UILabel {
             
             rect = rect.offsetBy(dx: 0, dy: CGFloat(verticalOffset))
             
-            let style = self.attributedText?.attribute(NSParagraphStyleAttributeName, at: 0, effectiveRange: nil)
+            let style = self.attributedText?.attribute(NSAttributedStringKey.paragraphStyle, at: 0, effectiveRange: nil)
             
             var lineSpace : CGFloat = 0.0
             
@@ -255,7 +255,7 @@ extension UILabel {
     }
     
     // MARK: - getRange
-    fileprivate func yy_getRange(row: Int, _ strings :  [String]) -> Void {
+    fileprivate func yy_getRange(_ row: Int, _ strings :  [String]) -> Void {
         
         if self.attributedText?.length == 0 {
             return;
@@ -315,7 +315,7 @@ extension UILabel {
             let range = NSRangeFromString(effectDic!.keys.first!)
             
             if status {
-                subAtt.addAttribute(NSBackgroundColorAttributeName, value: UIColor.lightGray, range: NSMakeRange(0, subAtt.length))
+                subAtt.addAttribute(NSAttributedStringKey.backgroundColor, value: UIColor.lightGray, range: NSMakeRange(0, subAtt.length))
                 attStr.replaceCharacters(in: range, with: subAtt)
             }else {
                 attStr.replaceCharacters(in: range, with: subAtt)
@@ -325,7 +325,7 @@ extension UILabel {
     }
 }
 
-class YYAttributeModel: AnyObject {
+class YYAttributeModel: Any {
     
     var range : NSRange?
     var str : String?
@@ -333,11 +333,25 @@ class YYAttributeModel: AnyObject {
 }
 
 private extension String {
+    
     func nsRange(from range: Range<String.Index>) -> NSRange {
-        let from = range.lowerBound.samePosition(in: utf16)
-        let to = range.upperBound.samePosition(in: utf16)
-        return NSRange(location: utf16.distance(from: utf16.startIndex, to: from),length: utf16.distance(from: from, to: to))
+        _ = range.lowerBound.samePosition(in: self)
+        _ = range.upperBound.samePosition(in: self)
+//        let loc =
+        
+        return NSMakeRange(0, 0)
     }
+    
+
+//    func nsRange(from range: Range<String.Index>) -> NSRange {
+//        let from = range.lowerBound.samePosition(in: utf16)
+//        let to = range.upperBound.samePosition(in: utf16)
+//        let rangeFrom = utf16.distance(from: utf16.startIndex, to: from)
+//        let rangeTo = utf16.distance(from: from, to: to)
+//        return NSMakeRange(utf16.index, rangeTo)
+//        return NSMakeRange(rangeFrom, rangeTo)
+//        return NSRange(location: utf16.distance(from: utf16.startIndex, to: from),length: utf16.distance(from: from, to: to))
+//    }
     func range(from nsRange: NSRange) -> Range<String.Index>? {
         guard
             let from16 = utf16.index(utf16.startIndex, offsetBy: nsRange.location, limitedBy: utf16.endIndex),

@@ -10,7 +10,7 @@ import UIKit
 // MARK: 动画
 extension UIView {
     
-    fileprivate func loadingViewAnimation(v: UIView) {
+    fileprivate func loadingViewAnimation(_ v: UIView) {
         let b          = CABasicAnimation(keyPath: KeyPath.z.rawValue)
         
         b.fromValue    = 0
@@ -22,7 +22,7 @@ extension UIView {
         v.layer.add(b, forKey: "");
     }
     
-    func showAnimation(view: UIView, isWhiteWindow: Bool = false) {
+    func showAnimation(_ view: UIView, isWhiteWindow: Bool = false) {
         let basicAnimation          = CABasicAnimation(keyPath: KeyPath.scale.rawValue)
         basicAnimation.fromValue    = 0
         basicAnimation.toValue      = 0.8
@@ -36,7 +36,7 @@ extension UIView {
         }
     }
     
-    func hideAnimation(view: UIView) {
+    func hideAnimation(_ view: UIView) {
         let basicAnimation          = CABasicAnimation(keyPath: KeyPath.scale.rawValue)
         basicAnimation.delegate     = self;
         basicAnimation.fromValue    = 1

@@ -9,7 +9,7 @@
 import UIKit
 
 protocol UIScrollViewRefreshProtocol {
-    func ga_addRefreshHeader(headerView: GA_RefreshHeaderView, _ handler: @escaping RefreshKey.RefreshFinishedHandler)
+    func ga_addRefreshHeader(_ headerView: GA_RefreshHeaderView, _ handler: @escaping RefreshKey.RefreshFinishedHandler)
     
     func ga_beginRefreshing()
     
@@ -17,7 +17,7 @@ protocol UIScrollViewRefreshProtocol {
 }
 
 protocol UIScrollViewLoadProtocol {
-    func ga_addLoadFooter(footerView: GA_LoadFooterView, _ handler: @escaping RefreshKey.RefreshFinishedHandler)
+    func ga_addLoadFooter(_ footerView: GA_LoadFooterView, _ handler: @escaping RefreshKey.RefreshFinishedHandler)
     
     func ga_beginLoadFooter()
     
@@ -25,7 +25,7 @@ protocol UIScrollViewLoadProtocol {
 }
 
 protocol UIScrollViewRefreshXIBProtocol {
-    func ga_addRefreshHeaderXIB(headerView: GA_XIBRefreshHeaderView, _ handler: @escaping RefreshKey.RefreshFinishedHandler)
+    func ga_addRefreshHeaderXIB(_ headerView: GA_XIBRefreshHeaderView, _ handler: @escaping RefreshKey.RefreshFinishedHandler)
     
     func ga_XIBbeginRefreshing()
     
@@ -38,7 +38,7 @@ protocol UIScrollViewRemoveAllViewsProtocol {
 
 extension UIScrollView: UIScrollViewRefreshProtocol {
     
-    func ga_addRefreshHeader(headerView: GA_RefreshHeaderView, _ handler: @escaping RefreshKey.RefreshFinishedHandler) {
+    func ga_addRefreshHeader(_ headerView: GA_RefreshHeaderView, _ handler: @escaping RefreshKey.RefreshFinishedHandler) {
         headerView.tag = RefreshKey.kRefreshHeaderViewTag
         self.addSubview(headerView)
         headerView.scrollView = self
@@ -61,7 +61,7 @@ extension UIScrollView: UIScrollViewRefreshProtocol {
 
 extension UIScrollView: UIScrollViewRefreshXIBProtocol {
     
-    func ga_addRefreshHeaderXIB(headerView: GA_XIBRefreshHeaderView, _ handler: @escaping RefreshKey.RefreshFinishedHandler) {
+    func ga_addRefreshHeaderXIB(_ headerView: GA_XIBRefreshHeaderView, _ handler: @escaping RefreshKey.RefreshFinishedHandler) {
         headerView.tag = RefreshKey.kRefreshHeaderViewTag
         self.addSubview(headerView)
         headerView.scrollView = self
@@ -99,7 +99,7 @@ extension UIScrollView: UIScrollViewRemoveAllViewsProtocol {
 }
 
 extension UIScrollView: UIScrollViewLoadProtocol {
-    func ga_addLoadFooter(footerView: GA_LoadFooterView, _ handler: @escaping RefreshKey.RefreshFinishedHandler) {
+    func ga_addLoadFooter(_ footerView: GA_LoadFooterView, _ handler: @escaping RefreshKey.RefreshFinishedHandler) {
         footerView.tag = RefreshKey.kLoadFooterViewTag
         footerView.frame = CGRect(x: 0, y: self.frame.size.height, width: self.frame.size.width, height: 64)
         self.addSubview(footerView)

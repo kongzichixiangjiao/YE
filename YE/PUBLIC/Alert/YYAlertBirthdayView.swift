@@ -29,7 +29,7 @@ extension UIView: BirthdayProtocol {
         }
     }
     
-    func showBirthdayView(handler: @escaping DidSelectedHandler) {
+    func showBirthdayView(_ handler: @escaping DidSelectedHandler) {
         self.alertWindow.addSubview(self.birthdayView)
         UIView.animate(withDuration: 0.25) {
             self.birthdayView.frame = CGRect(x: 0, y: MainScreenHeight - YYAlertBirthdayView.height, width: MainScreenWidth, height: YYAlertBirthdayView.height)
@@ -54,7 +54,7 @@ extension UIView: YYAlertBirthdayViewDelegate {
         ga_dissmissBlackWindow()
     }
     
-    func value(date: Date) {
+    func value(_ date: Date) {
         self.didSelectedHandler!(9999, date)
         ga_dissmissBlackWindow()
     }
@@ -62,7 +62,7 @@ extension UIView: YYAlertBirthdayViewDelegate {
 
 protocol YYAlertBirthdayViewDelegate: NSObjectProtocol {
     func cancle()
-    func value(date: Date)
+    func value(_ date: Date)
 }
 
 class YYAlertBirthdayView: UIView {
@@ -79,7 +79,7 @@ class YYAlertBirthdayView: UIView {
     }
     
     @IBAction func confirmAction(_ sender: UIButton) {
-        myDelegate?.value(date: self.datePicker.date)
+        myDelegate?.value(self.datePicker.date)
     }
     
     @IBAction func valueChangedAction(_ sender: UIDatePicker) {

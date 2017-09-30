@@ -32,7 +32,7 @@ class YYIMContactSelectionViewController: YYBaseTableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func textFieldShouldReturn(text: String) {
+    override func myTextFieldShouldReturn(_ text: String) {
         if text != "" {
             self.dataSource.append(text)
             self.tableView.reloadData()
@@ -57,10 +57,10 @@ extension YYIMContactSelectionViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let error = EMClient.shared().contactManager.addContact(self.dataSource[indexPath.row] as! String, message: "加加加！") else {
-            self.view.ga_showView(text: "成功添加好友", deplay: 1)
+            self.view.ga_showView("成功添加好友", deplay: 1)
             return
         }
         print("error: \(error)")
-        self.view.ga_showView(text: "添加失败")
+        self.view.ga_showView("添加失败")
     }
 }

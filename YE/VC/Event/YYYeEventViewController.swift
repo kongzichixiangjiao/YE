@@ -35,7 +35,7 @@ class YYYeEventViewController: YYBaseTableViewController {
     func initNavigationView() {
         self.myTitle = "野事er"
         self.isHiddenLeftButton = true
-        self.setupRightButton(type: .add)
+        self.setupRightButton(.add)
     }
     
     override func initTableView() {
@@ -48,22 +48,22 @@ class YYYeEventViewController: YYBaseTableViewController {
         super.didReceiveMemoryWarning()
     }
 
-    override func clickedRightButtonAction(sender: UIButton) {
-        YYShotView.show(point: sender, items: [YYEventShotViewList.creatGroup.rawValue, YYEventShotViewList.addFriend.rawValue, YYEventShotViewList.presentStepNumber.rawValue]) {
+    override func clickedRightButtonAction(_ sender: UIButton) {
+        YYShotView.show(sender, items: [YYEventShotViewList.creatGroup.rawValue, YYEventShotViewList.addFriend.rawValue, YYEventShotViewList.presentStepNumber.rawValue]) {
             [weak self] title in
             if let weakSelf = self {
-                weakSelf.clickedShotViewList(title: title)
+                weakSelf.clickedShotViewList(title)
             }
         }
     }
     
-    func clickedShotViewList(title: String) {
+    func clickedShotViewList(_ title: String) {
         switch title {
         case YYEventShotViewList.creatGroup.rawValue:
-            self.push(vc: YYIMCreatChatGroupViewController())
+            self.push(YYIMCreatChatGroupViewController())
             break
         case YYEventShotViewList.addFriend.rawValue:
-            self.push(vc: YYIMContactSelectionViewController())
+            self.push(YYIMContactSelectionViewController())
             break
         case YYEventShotViewList.presentStepNumber.rawValue:
             break
@@ -92,22 +92,22 @@ extension YYYeEventViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = YYIMGroupInfoViewController()
         vc.groupId = (self.dataSource[indexPath.row] as! EMGroup).groupId
-        self.push(vc: vc)
+        self.push(vc)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
 extension YYYeEventViewController: YYPushDelegate {
-    func pushAction(model: Any, type: YYPushDelegateType) {
+    func pushAction(_ model: Any, type: YYPushDelegateType) {
         switch type {
         case .group:
             let vc = YYIMGroupViewController(conversationChatter: (model as! EMGroup).groupId, conversationType: EMConversationTypeGroupChat)
             vc?.group = model as! EMGroup
-            self.push(vc: vc!)
+            self.push(vc!)
             break
         case .friend:
             let vc = YYIMConversationViewController(conversationChatter: (model as! EaseUserModel).buddy, conversationType: EMConversationTypeChat)
-            self.push(vc: vc!)
+            self.push(vc!)
             break
         }
     }

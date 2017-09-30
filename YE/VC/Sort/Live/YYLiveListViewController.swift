@@ -15,7 +15,7 @@ class YYLiveListViewController: YYBaseCollectionViewController {
         self.myTitle = "直播"
         initCollectionView()
      
-        self.collectionView.ga_addRefreshHeaderXIB(headerView: GA_AnimationRefreshHeaderView.loadView()) {
+        self.collectionView.ga_addRefreshHeaderXIB(GA_AnimationRefreshHeaderView.loadView()) {
             [weak self] in
             if let weakSelf = self {
                 print("开始刷新")
@@ -65,6 +65,6 @@ extension YYLiveListViewController {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.view.showView(text: "走开，被点我。")
+        self.view.showView("走开，被点我。")
     }
 }

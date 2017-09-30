@@ -11,21 +11,21 @@ import Foundation
 
 // MARK: 计算宽度
 extension String {
-    func ga_widthWith(fontSize: CGFloat, height: CGFloat) -> CGFloat {
+    func ga_widthWith(_ fontSize: CGFloat, height: CGFloat) -> CGFloat {
         let font = UIFont.systemFont(ofSize: fontSize)
-        let rect = NSString(string: self).boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: height), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
+        let rect = NSString(string: self).boundingRect(with: CGSize(width: CGFloat(MAXFLOAT), height: height), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
         return ceil(rect.width)
     }
     
-    func ga_heightWith(fontSize: CGFloat, width: CGFloat) -> CGFloat {
+    func ga_heightWith(_ fontSize: CGFloat, width: CGFloat) -> CGFloat {
         let font = UIFont.systemFont(ofSize: fontSize)
-        let rect = NSString(string: self).boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName: font], context: nil)
+        let rect = NSString(string: self).boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
         return ceil(rect.height)
     }
     
-    func ga_heightWith(fontSize: CGFloat, width: CGFloat, style: NSParagraphStyle) -> CGFloat {
+    func ga_heightWith(_ fontSize: CGFloat, width: CGFloat, style: NSParagraphStyle) -> CGFloat {
         let font = UIFont.systemFont(ofSize: fontSize)
-        let rect = NSString(string: self).boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSFontAttributeName: font, NSParagraphStyleAttributeName : style], context: nil)
+        let rect = NSString(string: self).boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font, NSAttributedStringKey.paragraphStyle : style], context: nil)
         return ceil(rect.height)
     }
 }
@@ -75,7 +75,7 @@ extension String {
 extension String {
     var color0X: UIColor! {
         //        var cString:String = self.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).uppercased()
-        var cString:String = self.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines).uppercased()
+        var cString:String = self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
         if (cString.hasPrefix("#")) {
             cString = (cString as NSString).substring(from: 1)
         }
@@ -96,9 +96,9 @@ extension String {
         return UIColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: CGFloat(1))
     }
     
-    func color0X(alpha: CGFloat) -> UIColor {
+    func color0X(_ alpha: CGFloat) -> UIColor {
         //        var cString:String = self.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).uppercased()
-        var cString:String = self.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines).uppercased()
+        var cString:String = self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
         if (cString.hasPrefix("#")) {
             cString = (cString as NSString).substring(from: 1)
         }
@@ -133,7 +133,7 @@ extension String {
 }
 
 extension String {
-    func positionOf(sub: String) -> Int {
+    func positionOf(_ sub: String) -> Int {
         var pos = -1
         if let range = range(of:sub) {
             if !range.isEmpty {
@@ -143,7 +143,7 @@ extension String {
         return pos
     }
     
-    func rangeOf(sub: String) -> Range<String.Index> {
+    func rangeOf(_ sub: String) -> Range<String.Index> {
         return self.range(of: sub)!
     }
 }

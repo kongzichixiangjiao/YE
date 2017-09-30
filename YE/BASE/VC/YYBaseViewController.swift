@@ -61,16 +61,16 @@ class YYBaseViewController: UIViewController {
     }
     
     
-    public func initNavigationView(_ title: String, _ isHiddenLeftButton: Bool = false) {
+    open func initNavigationView(_ title: String, _ isHiddenLeftButton: Bool = false) {
         navigationView.myTitle = "首页"
         navigationView.isHiddenLeftButton = isHiddenLeftButton
     }
     
-    public func setupRightButton(type: YYBaseNavigationViewRightButtonTyep) {
-        navigationView.setupRightButton(type: type)
+    open func setupRightButton(_ type: YYBaseNavigationViewRightButtonTyep) {
+        navigationView.setupRightButton(type)
     }
     
-    public func setupOtherRightButton() {
+    open func setupOtherRightButton() {
         navigationView.setupOtherRightButton()
     }
 
@@ -78,15 +78,15 @@ class YYBaseViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    public func push(vc: UIViewController) {
+    open func push(_ vc: UIViewController) {
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
-    public func pop(vc: UIViewController) {
+    open func pop(_ vc: UIViewController) {
         self.navigationController?.popToViewController(vc, animated: true)
     }
     
-    public func popRoot() {
+    open func popRoot() {
         self.navigationController?.popToRootViewController(animated: true);
     }
     
@@ -108,11 +108,11 @@ class YYBaseViewController: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-    func clickedRightButtonAction(sender: UIButton) {
+    func clickedRightButtonAction(_ sender: UIButton) {
         
     }
     
-    func clickedNavigationViewOtherRightButton(sender: UIButton) {
+    func clickedNavigationViewOtherRightButton(_ sender: UIButton) {
         
     }
     
@@ -128,7 +128,7 @@ extension YYBaseViewController: YYBaseNavigationViewProtocol {
         self.navigationController?.popViewController(animated: true)
     }
     
-    func clickedNavigationViewRightButton(sender: UIButton) {
-        clickedRightButtonAction(sender: sender)
+    func clickedNavigationViewRightButton(_ sender: UIButton) {
+        clickedRightButtonAction(sender)
     }
 }

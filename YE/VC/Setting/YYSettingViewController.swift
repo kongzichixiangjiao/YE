@@ -16,14 +16,14 @@ class YYSettingViewController: YYBaseTableViewController {
         
         self.myTitle = "设置"
         
-        let _ = tableView.yy_addBaneHeaderView(type: .header, bgImage: UIImage(named: "cgts.jpg")!, height: YYBaneHeaderKey.kHeight, handler: {
+        let _ = tableView.yy_addBaneHeaderView(.header, bgImage: UIImage(named: "cgts.jpg")!, height: YYBaneHeaderKey.kHeight, handler: {
             [weak self] in
             if let _ = self {
                 
             }
         })
         
-        tableView.setupHeaderViewData(headerImage: UIImage(named: "cgts.jpg")!, userName: "")
+        tableView.setupHeaderViewData(UIImage(named: "cgts.jpg")!, userName: "")
         
         let arr = NSArray(contentsOfFile: Bundle.ga_path("setting.plist"))
         self.dataSource = arr as! [Any]
@@ -43,7 +43,7 @@ class YYSettingViewController: YYBaseTableViewController {
         return b
     }
     
-    func changeButtonAction() {
+    @objc func changeButtonAction() {
         print("changed")
     }
 

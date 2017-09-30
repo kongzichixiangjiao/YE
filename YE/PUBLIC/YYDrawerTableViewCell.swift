@@ -13,7 +13,7 @@ class YYDrawerTableViewCellNew: YYDrawerTableViewCell {
     
     static let identifier1 = "YYDrawerTableViewCellNew"
     
-    public override class func custom(tableView: UITableView, handler: @escaping ScrollDidselectedHandler, clickedHandler:
+    open override class func custom(_ tableView: UITableView, handler: @escaping ScrollDidselectedHandler, clickedHandler:
         @escaping ClickedHandler) -> YYDrawerTableViewCellNew {
         var cell = tableView.dequeueReusableCell(withIdentifier: YYDrawerTableViewCellNew.identifier1)
         if cell == nil {
@@ -22,8 +22,8 @@ class YYDrawerTableViewCellNew: YYDrawerTableViewCell {
         return cell! as! YYDrawerTableViewCellNew
     }
     
-    override func initUI(titles: [String]) {
-        super.initUI(titles: titles)
+    override func initUI(_ titles: [String]) {
+        super.initUI(titles)
         let v = UIView()
         v.frame = CGRect(x: 10, y: 10, width: 10, height: 100);
         v.backgroundColor = UIColor.orange
@@ -44,9 +44,9 @@ class YYDrawerTableViewCell: UITableViewCell {
     
     fileprivate var myMaskView: UIView?
     
-    public var myRow: Int = 0
-    public var titles: [String] = []
-    public var buttons: [UIButton] = []
+    open var myRow: Int = 0
+    open var titles: [String] = []
+    open var buttons: [UIButton] = []
     
     fileprivate lazy var scrollView: UIScrollView = {
         let s = UIScrollView()
@@ -59,11 +59,11 @@ class YYDrawerTableViewCell: UITableViewCell {
         return s
     }()
     
-    public lazy var myContentView: UIView = {
+    open lazy var myContentView: UIView = {
         let  v = UIView()
         v.backgroundColor = UIColor.white
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(tapMyContentView(sender:)))
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapMyContentView(_:)))
         tap.delegate = self
         v.addGestureRecognizer(tap)
         
@@ -71,7 +71,7 @@ class YYDrawerTableViewCell: UITableViewCell {
         return v
     }()
     
-    @objc private func actionb() {
+    @objc fileprivate func actionb() {
         self.myMaskView?.removeFromSuperview()
         self.myMaskView = nil
         
@@ -80,7 +80,7 @@ class YYDrawerTableViewCell: UITableViewCell {
         }
     }
     
-    func tapMyContentView(sender: UITapGestureRecognizer) {
+    @objc func tapMyContentView(_ sender: UITapGestureRecognizer) {
         self.scrollDidselectedHandler!(self.myRow, nil)
     }
     
@@ -105,10 +105,10 @@ class YYDrawerTableViewCell: UITableViewCell {
         self.scrollDidselectedHandler = handler
         self.clickedHandler = clickedHandler
         
-        initUI(titles: titles)
+        initUI(titles)
     }
     
-    public func initUI(titles: [String]) {
+    open func initUI(_ titles: [String]) {
         for (index, value) in titles.enumerated() {
             let b = UIButton()
             b.backgroundColor = UIColor.randomColor()
@@ -122,7 +122,7 @@ class YYDrawerTableViewCell: UITableViewCell {
         }
     }
     
-    public class func custom(tableView: UITableView, handler: @escaping ScrollDidselectedHandler, clickedHandler:
+    open class func custom(_ tableView: UITableView, handler: @escaping ScrollDidselectedHandler, clickedHandler:
         @escaping ClickedHandler) -> YYDrawerTableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: YYDrawerTableViewCell.identifier)
         if cell == nil {
@@ -151,7 +151,7 @@ class YYDrawerTableViewCell: UITableViewCell {
             //            v.alpha = 0.3
             v.isUserInteractionEnabled = true
             
-            let tap = UITapGestureRecognizer(target: self, action: #selector(tap(sender:)))
+            let tap = UITapGestureRecognizer(target: self, action: #selector(tap(_:)))
             tap.delegate = self
             v.addGestureRecognizer(tap)
             
@@ -161,7 +161,7 @@ class YYDrawerTableViewCell: UITableViewCell {
         return maskView
     }
     
-    @objc private func tap(sender: UITapGestureRecognizer) {
+    @objc fileprivate func tap(_ sender: UITapGestureRecognizer) {
         
     }
 }

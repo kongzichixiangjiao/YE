@@ -43,9 +43,9 @@ extension UIScrollView: YYBaneHeaderProtocol {
         }
     }
     
-    func yy_addBaneHeaderView(type: YYBaneHeaderType, bgImage: UIImage, height: CGFloat, handler: YYBaneHeaderKey.Handler?) -> UIView {
+    func yy_addBaneHeaderView(_ type: YYBaneHeaderType, bgImage: UIImage, height: CGFloat, handler: YYBaneHeaderKey.Handler?) -> UIView {
         self.baneHeaderView.frame = CGRect(x: 0, y: -height, width: self.frame.size.width, height: height)
-        self.baneHeaderView.setupBGImage(image: bgImage)
+        self.baneHeaderView.setupBGImage(bgImage)
         self.baneHeaderView.scrollView = self
         self.baneHeaderView.contentInset = self.contentInset
         self.baneHeaderView.type = type
@@ -58,8 +58,8 @@ extension UIScrollView: YYBaneHeaderProtocol {
         return self.baneHeaderView
     }
     
-    func setupHeaderViewData(headerImage: UIImage?, userName: String) {
-        self.baneHeaderView.setupHeaderViewData(headerImage: headerImage, userName: userName)
+    func setupHeaderViewData(_ headerImage: UIImage?, userName: String) {
+        self.baneHeaderView.setupHeaderViewData(headerImage, userName: userName)
     }
 }
 
@@ -115,7 +115,7 @@ class YYBaneHeaderView: UIView {
         }
     }
     
-    func setupBGImage(image: UIImage) {
+    func setupBGImage(_ image: UIImage) {
         self.imageView.image = image
         self.imageView.addSubview(self.effectView)
     }
@@ -140,7 +140,7 @@ class YYBaneHeaderView: UIView {
         headPortraitButton.layer.cornerRadius = YYBaneHeaderKey.kHeadPortraitButtonWidth / 2
         headPortraitButton.layer.masksToBounds = true
         setupHeadPortraitButtonFrame()
-        headPortraitButton.addTarget(self, action: #selector(headPortraitButtonAction(sender:)), for: .touchUpInside)
+        headPortraitButton.addTarget(self, action: #selector(headPortraitButtonAction(_:)), for: .touchUpInside)
         self.addSubview(headPortraitButton)
         
         userNameLabel = UILabel()
@@ -152,7 +152,7 @@ class YYBaneHeaderView: UIView {
         self.addSubview(userNameLabel)
     }
     
-    func headPortraitButtonAction(sender: UIButton) {
+    @objc func headPortraitButtonAction(_ sender: UIButton) {
         self.handler()
     }
     
@@ -170,7 +170,7 @@ class YYBaneHeaderView: UIView {
         userNameLabel.frame = CGRect(x: x, y: y, width: w, height: 15)
     }
     
-    func setupHeaderViewData(headerImage: UIImage?, userName: String) {
+    func setupHeaderViewData(_ headerImage: UIImage?, userName: String) {
         self.userNameLabel.text = userName
         guard let image = headerImage else {
             return

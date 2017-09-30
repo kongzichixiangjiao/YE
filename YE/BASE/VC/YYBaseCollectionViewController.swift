@@ -10,11 +10,11 @@ import UIKit
 
 class YYBaseCollectionViewController: YYBaseViewController {
 
-    public var dataSource: [Any] = []
+    open var dataSource: [Any] = []
     
-    public var isShowTabbar: Bool = false
+    open var isShowTabbar: Bool = false
     
-    public var collectionViewFrameType: TableViewFrameType! {
+    open var collectionViewFrameType: TableViewFrameType! {
         didSet {
             let y: CGFloat = collectionViewFrameType.rawValue
             self.collectionView.frame = CGRect(x: 0, y: y, width: MainScreenWidth, height: MainScreenHeight - y - (self.isShowTabbar ? TabBarHeight : 0))
