@@ -8,7 +8,6 @@
 #import <CommonCrypto/CommonCrypto.h>
 
 #import "YYCDemo.h"
-#import "He.h"
 
 #ifdef __OBJC__
 #import <UIKit/UIKit.h>

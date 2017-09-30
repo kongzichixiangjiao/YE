@@ -77,81 +77,88 @@ class YYHomeViewController: YYBaseTableViewController {
         
         let _ = YYChildTestView(frame: CGRect.zero)
         
-//        c_main()
+        myC()
+    }
+    
+    func myC() {
+        c_main()
         c_sum(2, 2)
-//
-//        let a = 10
-//        print( a * 10 )
+    }
+    
+    func swift4() {
+        //
+        //        let a = 10
+        //        print( a * 10 )
         
         /*
-        let galaxy = "Milky Way "
-        galaxy.count       // 11
-        galaxy.isEmpty     // false
-        galaxy.dropFirst() // "ilky Way "
-        String(galaxy.reversed()) // " yaW ykliM"
-        
-        // Filter out any none ASCII characters
-        galaxy.filter { char in
-            let isASCII = char.unicodeScalars.reduce(true, { $0 && $1.isASCII })
-            return isASCII
-        } // "Milky Way "
-
-        var str = "Hello, playground"
-        // Swift3.0
-        var index = str.index(of: " ")!
-        let greeting = str[str.startIndex ..< index]
-        index = str.index(index, offsetBy: 1) // index 下标 +1
-        let name = str[index ..< str.endIndex]
-        // Swift4.0
-        var index1 = str.index(of: " ")!
-        let greeting1 = str.prefix(upTo: index1)
-        index1 = str.index(index1, offsetBy: 1)
-        let name1 = str.suffix(from: index1)
-        print(Array(str.enumerated()))
-        print(Array(zip(1..., str)))
-        
-        /// plist格式
-        let plistInfo = """
-        <?xml version="1.0" encoding="UTF-8"?>
-        <plist version="1.0">
-        <array>
-          <dict>
-              <key>title</key>
-                  <string>设置WiFi</string>
-              <key>imageName</key>
-                  <string>serversSet</string>
-          </dict>
-        </array>
-        </plist>
-        """
-        /// JSON格式
-        let jsonInfo = """
-        {
-          "data": {
-              "title": "String is a collection"
-              "author": "23"
-              "creat_at": "2017-06-13"
-          }
-        }
-        """
-        print(plistInfo)
-        print(jsonInfo)
-        
-        var str1 = "Hello, Swift 4.0"
-        print(str1.characters.count) // Swift3.0写法
-        print(str1.count)            // Swift4.0写法
-        /// 遍历
-        str1.forEach {
-            print($0)
-        }
-        
-        let nearestStarNames = ["Proxima Centauri", "Alpha Centauri A", "Alpha Centauri B", "Barnard's Star", "Wolf 359"]
-        let nearestStarDistances = [4.24, 4.37, 4.37, 5.96, 7.78]
-        
-        // Dictionary from sequence of keys-values
-        let starDistanceDict = Dictionary(uniqueKeysWithValues: zip(nearestStarNames, nearestStarDistances))
-        print(starDistanceDict)
-*/
+         let galaxy = "Milky Way "
+         galaxy.count       // 11
+         galaxy.isEmpty     // false
+         galaxy.dropFirst() // "ilky Way "
+         String(galaxy.reversed()) // " yaW ykliM"
+         
+         // Filter out any none ASCII characters
+         galaxy.filter { char in
+         let isASCII = char.unicodeScalars.reduce(true, { $0 && $1.isASCII })
+         return isASCII
+         } // "Milky Way "
+         
+         var str = "Hello, playground"
+         // Swift3.0
+         var index = str.index(of: " ")!
+         let greeting = str[str.startIndex ..< index]
+         index = str.index(index, offsetBy: 1) // index 下标 +1
+         let name = str[index ..< str.endIndex]
+         // Swift4.0
+         var index1 = str.index(of: " ")!
+         let greeting1 = str.prefix(upTo: index1)
+         index1 = str.index(index1, offsetBy: 1)
+         let name1 = str.suffix(from: index1)
+         print(Array(str.enumerated()))
+         print(Array(zip(1..., str)))
+         
+         /// plist格式
+         let plistInfo = """
+         <?xml version="1.0" encoding="UTF-8"?>
+         <plist version="1.0">
+         <array>
+         <dict>
+         <key>title</key>
+         <string>设置WiFi</string>
+         <key>imageName</key>
+         <string>serversSet</string>
+         </dict>
+         </array>
+         </plist>
+         """
+         /// JSON格式
+         let jsonInfo = """
+         {
+         "data": {
+         "title": "String is a collection"
+         "author": "23"
+         "creat_at": "2017-06-13"
+         }
+         }
+         """
+         print(plistInfo)
+         print(jsonInfo)
+         
+         var str1 = "Hello, Swift 4.0"
+         print(str1.characters.count) // Swift3.0写法
+         print(str1.count)            // Swift4.0写法
+         /// 遍历
+         str1.forEach {
+         print($0)
+         }
+         
+         let nearestStarNames = ["Proxima Centauri", "Alpha Centauri A", "Alpha Centauri B", "Barnard's Star", "Wolf 359"]
+         let nearestStarDistances = [4.24, 4.37, 4.37, 5.96, 7.78]
+         
+         // Dictionary from sequence of keys-values
+         let starDistanceDict = Dictionary(uniqueKeysWithValues: zip(nearestStarNames, nearestStarDistances))
+         print(starDistanceDict)
+         */
     }
     
     func sqliteMethod() {

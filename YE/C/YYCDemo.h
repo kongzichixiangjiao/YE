@@ -14,9 +14,9 @@
 
 #endif /* YYCDemo_h */
 
-void c_main();
+void c_main(void);
 
 int c_sum(int a, int b);
 
-void c_swap(char *a, char *b);
+void c_swap(void *vp1,void *vp2,int size);
 

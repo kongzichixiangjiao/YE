@@ -21,7 +21,7 @@ void c_swap(void *a, void *b) {
 }
  */
 
-void c_swap(void *vp1,void *vp2,int size){
+void c_swap(void *vp1,void *vp2,int size) {
     char buffer[size];/*注意此处gcc编译器是允许这样声明的，而我印象中VC编译器是不可以的。*/
     memcpy(buffer,vp1,size);
     memcpy(vp1,vp2,size);
@@ -78,13 +78,11 @@ void test() {
     bit_operation();
 }
 
-
-
 int sum(int a, int b) {
     return a + b;
 }
 
-void dc_main() {
+void c_main() {
     
     int (*pp)(int a, int b) = sum;
     int result = (*pp)(2, 5);
