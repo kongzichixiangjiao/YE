@@ -8,6 +8,8 @@ target 'YE’ do
 pod 'HandyJSON'
 #pod 'SQLite.swift'
 
+#http://www.hangge.com/blog/cache/detail_1797.html
+
 pod 'Alamofire'
 
 pod 'HyphenateLite'

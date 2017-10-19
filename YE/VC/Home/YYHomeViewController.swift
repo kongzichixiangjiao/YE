@@ -78,6 +78,7 @@ class YYHomeViewController: YYBaseTableViewController {
         let _ = YYChildTestView(frame: CGRect.zero)
         
         myC()
+        
     }
     
     func myC() {
