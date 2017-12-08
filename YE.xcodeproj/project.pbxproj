@@ -221,8 +221,6 @@
 		DC5F86001FD7A27B0092FDB4 /* AppDelegate+HuanXin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5F85FD1FD7A27B0092FDB4 /* AppDelegate+HuanXin.swift */; };
 		DC5F86011FD7A27B0092FDB4 /* AppDelegate+ListeningNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5F85FE1FD7A27B0092FDB4 /* AppDelegate+ListeningNetwork.swift */; };
 		DC5F86021FD7A27B0092FDB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5F85FF1FD7A27B0092FDB4 /* AppDelegate.swift */; };
-		DC65BD511FD8D7D100204B7E /* YYRxSwiftTestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC65BD4F1FD8D7D100204B7E /* YYRxSwiftTestTableViewController.swift */; };
-		DC65BD521FD8D7D100204B7E /* YYRxSwiftTestTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC65BD501FD8D7D100204B7E /* YYRxSwiftTestTableViewController.xib */; };
 		DC65BD5D1FD8E16F00204B7E /* YYRxMVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC65BD5B1FD8E16F00204B7E /* YYRxMVCViewController.swift */; };
 		DC65BD5E1FD8E16F00204B7E /* YYRxMVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC65BD5C1FD8E16F00204B7E /* YYRxMVCViewController.xib */; };
 		DC65BD601FD8E2A500204B7E /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC65BD5F1FD8E2A500204B7E /* Repository.swift */; };
@@ -243,6 +241,17 @@
 		DC6770C91FD697D400E79A07 /* Player_slider.png in Resources */ = {isa = PBXBuildFile; fileRef = DC6770BC1FD697D400E79A07 /* Player_slider.png */; };
 		DC6770CA1FD697D400E79A07 /* Player_top_shadel.png in Resources */ = {isa = PBXBuildFile; fileRef = DC6770BD1FD697D400E79A07 /* Player_top_shadel.png */; };
 		DC6770CB1FD697D400E79A07 /* Player_unlock-nor.png in Resources */ = {isa = PBXBuildFile; fileRef = DC6770BE1FD697D400E79A07 /* Player_unlock-nor.png */; };
+		DC74B87A1FDA2DD100640964 /* YYRxSwiftNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74B86C1FDA2DD100640964 /* YYRxSwiftNewsModel.swift */; };
+		DC74B87B1FDA2DD100640964 /* YYRxSwiftPlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74B86E1FDA2DD100640964 /* YYRxSwiftPlusViewController.swift */; };
+		DC74B87C1FDA2DD100640964 /* YYRxSwiftPlusViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC74B86F1FDA2DD100640964 /* YYRxSwiftPlusViewController.xib */; };
+		DC74B87D1FDA2DD100640964 /* YYRxSwiftTestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74B8701FDA2DD100640964 /* YYRxSwiftTestTableViewController.swift */; };
+		DC74B87E1FDA2DD100640964 /* YYRxSwiftTestTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC74B8711FDA2DD100640964 /* YYRxSwiftTestTableViewController.xib */; };
+		DC74B87F1FDA2DD100640964 /* YYRxSwiftTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74B8721FDA2DD100640964 /* YYRxSwiftTestViewController.swift */; };
+		DC74B8801FDA2DD100640964 /* YYRxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74B8731FDA2DD100640964 /* YYRxSwiftViewController.swift */; };
+		DC74B8811FDA2DD100640964 /* YYRxSwiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC74B8741FDA2DD100640964 /* YYRxSwiftViewController.xib */; };
+		DC74B8821FDA2DD100640964 /* YYRxSwiftViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74B8761FDA2DD100640964 /* YYRxSwiftViewCell.swift */; };
+		DC74B8831FDA2DD100640964 /* YYRxSwiftViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC74B8771FDA2DD100640964 /* YYRxSwiftViewCell.xib */; };
+		DC74B8841FDA2DD100640964 /* YYRxSwiftViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74B8791FDA2DD100640964 /* YYRxSwiftViewModel.swift */; };
 		DC75E3D01FD0F34100332BE5 /* TargetType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC75E3CF1FD0F34100332BE5 /* TargetType+Extension.swift */; };
 		DC75E3D21FD0F3DA00332BE5 /* YYBaseUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC75E3D11FD0F3DA00332BE5 /* YYBaseUrl.swift */; };
 		DC75E3D51FD0FE1A00332BE5 /* YYPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC75E3D41FD0FE1A00332BE5 /* YYPlayerView.swift */; };
@@ -270,29 +279,20 @@
 		DC75E4101FD12AA400332BE5 /* LYPlayer_top_shadel.png in Resources */ = {isa = PBXBuildFile; fileRef = DC75E4051FD12AA400332BE5 /* LYPlayer_top_shadel.png */; };
 		DC75E4111FD12AA400332BE5 /* LYPlayer_unlock-nor.png in Resources */ = {isa = PBXBuildFile; fileRef = DC75E4061FD12AA400332BE5 /* LYPlayer_unlock-nor.png */; };
 		DC75E4131FD13D9900332BE5 /* LYPlayer_back_full.png in Resources */ = {isa = PBXBuildFile; fileRef = DC75E4121FD13D9900332BE5 /* LYPlayer_back_full.png */; };
-		DC7A49C11FCF95440028F308 /* YYRxSwiftTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A49BB1FCF95440028F308 /* YYRxSwiftTestViewController.swift */; };
-		DC7A49C21FCF95440028F308 /* YYRxSwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A49BC1FCF95440028F308 /* YYRxSwiftViewController.swift */; };
-		DC7A49C31FCF95440028F308 /* YYRxSwiftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC7A49BD1FCF95440028F308 /* YYRxSwiftViewController.xib */; };
-		DC7A49C41FCF95440028F308 /* YYRxSwiftViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A49BF1FCF95440028F308 /* YYRxSwiftViewCell.swift */; };
-		DC7A49C51FCF95440028F308 /* YYRxSwiftViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC7A49C01FCF95440028F308 /* YYRxSwiftViewCell.xib */; };
 		DC7A49C91FCF95870028F308 /* YYSwiftDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A49C71FCF95870028F308 /* YYSwiftDateViewController.swift */; };
 		DC7A49CA1FCF95870028F308 /* YYSwiftDateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC7A49C81FCF95870028F308 /* YYSwiftDateViewController.xib */; };
 		DC7A49CF1FCFDEDD0028F308 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A49CE1FCFDEDC0028F308 /* Date+Extension.swift */; };
 		DC7A49D11FCFEE0D0028F308 /* HTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A49D01FCFEE0D0028F308 /* HTML.swift */; };
 		DC7A49D31FCFFAD80028F308 /* Model+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A49D21FCFFAD80028F308 /* Model+Extension.swift */; };
-		DC7A49DA1FD000A50028F308 /* YYRxSwiftNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7A49D91FD000A50028F308 /* YYRxSwiftNewsModel.swift */; };
 		DC7E7FCA1FD91D6B00859B00 /* YYRxMVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7E7FC81FD91D6B00859B00 /* YYRxMVVMViewController.swift */; };
 		DC7E7FCB1FD91D6B00859B00 /* YYRxMVVMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC7E7FC91FD91D6B00859B00 /* YYRxMVVMViewController.xib */; };
 		DC7E7FCD1FD91E9B00859B00 /* RepositoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7E7FCC1FD91E9B00859B00 /* RepositoryListViewModel.swift */; };
 		DC7E7FCF1FD9206400859B00 /* RepositoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7E7FCE1FD9206400859B00 /* RepositoryViewModel.swift */; };
-		DC7E7FD31FD944C300859B00 /* YYRxSwiftPlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7E7FD11FD944C300859B00 /* YYRxSwiftPlusViewController.swift */; };
-		DC7E7FD41FD944C300859B00 /* YYRxSwiftPlusViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC7E7FD21FD944C300859B00 /* YYRxSwiftPlusViewController.xib */; };
 		DC8712921FCBD21A00C73D27 /* YYAutoScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8712911FCBD21A00C73D27 /* YYAutoScrollView.swift */; };
 		DC89F1DB1FCCF2A90059B791 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC89F1DA1FCCF2A90059B791 /* UIDevice+Extension.swift */; };
 		DC8A70091FD4F8EE006D22D6 /* LYPlayer_center_play.png in Resources */ = {isa = PBXBuildFile; fileRef = DC8A70071FD4F8ED006D22D6 /* LYPlayer_center_play.png */; };
 		DC8A700A1FD4F8EE006D22D6 /* LYPlayer_center_pause.png in Resources */ = {isa = PBXBuildFile; fileRef = DC8A70081FD4F8EE006D22D6 /* LYPlayer_center_pause.png */; };
 		DCA8A4871FD7F5D80042537E /* YYLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA8A4861FD7F5D80042537E /* YYLog.swift */; };
-		DCA8A48B1FD803A80042537E /* YYRxSwiftViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA8A48A1FD803A80042537E /* YYRxSwiftViewModel.swift */; };
 		DCA8A4A81FD808E80042537E /* BaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA8A48E1FD808E80042537E /* BaseTabBarViewController.swift */; };
 		DCA8A4A91FD808E80042537E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA8A48F1FD808E80042537E /* BaseViewController.swift */; };
 		DCA8A4AA1FD808E80042537E /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA8A4901FD808E80042537E /* BaseViewModel.swift */; };
@@ -536,8 +536,6 @@
 		DC5F85FD1FD7A27B0092FDB4 /* AppDelegate+HuanXin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+HuanXin.swift"; sourceTree = "<group>"; };
 		DC5F85FE1FD7A27B0092FDB4 /* AppDelegate+ListeningNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+ListeningNetwork.swift"; sourceTree = "<group>"; };
 		DC5F85FF1FD7A27B0092FDB4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DC65BD4F1FD8D7D100204B7E /* YYRxSwiftTestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYRxSwiftTestTableViewController.swift; sourceTree = "<group>"; };
-		DC65BD501FD8D7D100204B7E /* YYRxSwiftTestTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYRxSwiftTestTableViewController.xib; sourceTree = "<group>"; };
 		DC65BD5B1FD8E16F00204B7E /* YYRxMVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYRxMVCViewController.swift; sourceTree = "<group>"; };
 		DC65BD5C1FD8E16F00204B7E /* YYRxMVCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYRxMVCViewController.xib; sourceTree = "<group>"; };
 		DC65BD5F1FD8E2A500204B7E /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
@@ -558,6 +556,17 @@
 		DC6770BC1FD697D400E79A07 /* Player_slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Player_slider.png; sourceTree = "<group>"; };
 		DC6770BD1FD697D400E79A07 /* Player_top_shadel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Player_top_shadel.png; sourceTree = "<group>"; };
 		DC6770BE1FD697D400E79A07 /* Player_unlock-nor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Player_unlock-nor.png"; sourceTree = "<group>"; };
+		DC74B86C1FDA2DD100640964 /* YYRxSwiftNewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYRxSwiftNewsModel.swift; sourceTree = "<group>"; };
+		DC74B86E1FDA2DD100640964 /* YYRxSwiftPlusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYRxSwiftPlusViewController.swift; sourceTree = "<group>"; };
+		DC74B86F1FDA2DD100640964 /* YYRxSwiftPlusViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYRxSwiftPlusViewController.xib; sourceTree = "<group>"; };
+		DC74B8701FDA2DD100640964 /* YYRxSwiftTestTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYRxSwiftTestTableViewController.swift; sourceTree = "<group>"; };
+		DC74B8711FDA2DD100640964 /* YYRxSwiftTestTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYRxSwiftTestTableViewController.xib; sourceTree = "<group>"; };
+		DC74B8721FDA2DD100640964 /* YYRxSwiftTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYRxSwiftTestViewController.swift; sourceTree = "<group>"; };
+		DC74B8731FDA2DD100640964 /* YYRxSwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYRxSwiftViewController.swift; sourceTree = "<group>"; };
+		DC74B8741FDA2DD100640964 /* YYRxSwiftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYRxSwiftViewController.xib; sourceTree = "<group>"; };
+		DC74B8761FDA2DD100640964 /* YYRxSwiftViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYRxSwiftViewCell.swift; sourceTree = "<group>"; };
+		DC74B8771FDA2DD100640964 /* YYRxSwiftViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYRxSwiftViewCell.xib; sourceTree = "<group>"; };
+		DC74B8791FDA2DD100640964 /* YYRxSwiftViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYRxSwiftViewModel.swift; sourceTree = "<group>"; };
 		DC75E3CF1FD0F34100332BE5 /* TargetType+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TargetType+Extension.swift"; sourceTree = "<group>"; };
 		DC75E3D11FD0F3DA00332BE5 /* YYBaseUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYBaseUrl.swift; sourceTree = "<group>"; };
 		DC75E3D41FD0FE1A00332BE5 /* YYPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYPlayerView.swift; sourceTree = "<group>"; };
@@ -585,29 +594,20 @@
 		DC75E4051FD12AA400332BE5 /* LYPlayer_top_shadel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LYPlayer_top_shadel.png; sourceTree = "<group>"; };
 		DC75E4061FD12AA400332BE5 /* LYPlayer_unlock-nor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LYPlayer_unlock-nor.png"; sourceTree = "<group>"; };
 		DC75E4121FD13D9900332BE5 /* LYPlayer_back_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LYPlayer_back_full.png; sourceTree = "<group>"; };
-		DC7A49BB1FCF95440028F308 /* YYRxSwiftTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYRxSwiftTestViewController.swift; sourceTree = "<group>"; };
-		DC7A49BC1FCF95440028F308 /* YYRxSwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYRxSwiftViewController.swift; sourceTree = "<group>"; };
-		DC7A49BD1FCF95440028F308 /* YYRxSwiftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYRxSwiftViewController.xib; sourceTree = "<group>"; };
-		DC7A49BF1FCF95440028F308 /* YYRxSwiftViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYRxSwiftViewCell.swift; sourceTree = "<group>"; };
-		DC7A49C01FCF95440028F308 /* YYRxSwiftViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYRxSwiftViewCell.xib; sourceTree = "<group>"; };
 		DC7A49C71FCF95870028F308 /* YYSwiftDateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYSwiftDateViewController.swift; sourceTree = "<group>"; };
 		DC7A49C81FCF95870028F308 /* YYSwiftDateViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYSwiftDateViewController.xib; sourceTree = "<group>"; };
 		DC7A49CE1FCFDEDC0028F308 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		DC7A49D01FCFEE0D0028F308 /* HTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTML.swift; sourceTree = "<group>"; };
 		DC7A49D21FCFFAD80028F308 /* Model+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Model+Extension.swift"; sourceTree = "<group>"; };
-		DC7A49D91FD000A50028F308 /* YYRxSwiftNewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYRxSwiftNewsModel.swift; sourceTree = "<group>"; };
 		DC7E7FC81FD91D6B00859B00 /* YYRxMVVMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYRxMVVMViewController.swift; sourceTree = "<group>"; };
 		DC7E7FC91FD91D6B00859B00 /* YYRxMVVMViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYRxMVVMViewController.xib; sourceTree = "<group>"; };
 		DC7E7FCC1FD91E9B00859B00 /* RepositoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListViewModel.swift; sourceTree = "<group>"; };
 		DC7E7FCE1FD9206400859B00 /* RepositoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryViewModel.swift; sourceTree = "<group>"; };
-		DC7E7FD11FD944C300859B00 /* YYRxSwiftPlusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYRxSwiftPlusViewController.swift; sourceTree = "<group>"; };
-		DC7E7FD21FD944C300859B00 /* YYRxSwiftPlusViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYRxSwiftPlusViewController.xib; sourceTree = "<group>"; };
 		DC8712911FCBD21A00C73D27 /* YYAutoScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYAutoScrollView.swift; sourceTree = "<group>"; };
 		DC89F1DA1FCCF2A90059B791 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		DC8A70071FD4F8ED006D22D6 /* LYPlayer_center_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LYPlayer_center_play.png; sourceTree = "<group>"; };
 		DC8A70081FD4F8EE006D22D6 /* LYPlayer_center_pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LYPlayer_center_pause.png; sourceTree = "<group>"; };
 		DCA8A4861FD7F5D80042537E /* YYLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYLog.swift; sourceTree = "<group>"; };
-		DCA8A48A1FD803A80042537E /* YYRxSwiftViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYRxSwiftViewModel.swift; sourceTree = "<group>"; };
 		DCA8A48E1FD808E80042537E /* BaseTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarViewController.swift; sourceTree = "<group>"; };
 		DCA8A48F1FD808E80042537E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		DCA8A4901FD808E80042537E /* BaseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
@@ -1101,6 +1101,7 @@
 		94D389421F39C23900F974A6 /* My */ = {
 			isa = PBXGroup;
 			children = (
+				DC74B86A1FDA2DD100640964 /* RxSwiftTest */,
 				DC7A49C61FCF955A0028F308 /* SwiftDate */,
 				DC7A49B91FCF95440028F308 /* RxSwfit */,
 				94D389431F39C23900F974A6 /* YYMyViewController.swift */,
@@ -1497,6 +1498,56 @@
 			path = PlayerSource;
 			sourceTree = "<group>";
 		};
+		DC74B86A1FDA2DD100640964 /* RxSwiftTest */ = {
+			isa = PBXGroup;
+			children = (
+				DC74B86B1FDA2DD100640964 /* Model */,
+				DC74B86D1FDA2DD100640964 /* VC */,
+				DC74B8751FDA2DD100640964 /* View */,
+				DC74B8781FDA2DD100640964 /* ViewModel */,
+			);
+			path = RxSwiftTest;
+			sourceTree = "<group>";
+		};
+		DC74B86B1FDA2DD100640964 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DC74B86C1FDA2DD100640964 /* YYRxSwiftNewsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DC74B86D1FDA2DD100640964 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				DC74B86E1FDA2DD100640964 /* YYRxSwiftPlusViewController.swift */,
+				DC74B86F1FDA2DD100640964 /* YYRxSwiftPlusViewController.xib */,
+				DC74B8701FDA2DD100640964 /* YYRxSwiftTestTableViewController.swift */,
+				DC74B8711FDA2DD100640964 /* YYRxSwiftTestTableViewController.xib */,
+				DC74B8721FDA2DD100640964 /* YYRxSwiftTestViewController.swift */,
+				DC74B8731FDA2DD100640964 /* YYRxSwiftViewController.swift */,
+				DC74B8741FDA2DD100640964 /* YYRxSwiftViewController.xib */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		DC74B8751FDA2DD100640964 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DC74B8761FDA2DD100640964 /* YYRxSwiftViewCell.swift */,
+				DC74B8771FDA2DD100640964 /* YYRxSwiftViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DC74B8781FDA2DD100640964 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DC74B8791FDA2DD100640964 /* YYRxSwiftViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		DC75E3CB1FD0F08100332BE5 /* YYRequest */ = {
 			isa = PBXGroup;
 			children = (
@@ -1591,34 +1642,10 @@
 		DC7A49B91FCF95440028F308 /* RxSwfit */ = {
 			isa = PBXGroup;
 			children = (
-				DC7E7FD01FD9411900859B00 /* RxSwift */,
 				DC7E7FC31FD9141900859B00 /* RxMVVM */,
 				DC65BD571FD8E13F00204B7E /* RxMVC */,
 			);
 			path = RxSwfit;
-			sourceTree = "<group>";
-		};
-		DC7A49BA1FCF95440028F308 /* VC */ = {
-			isa = PBXGroup;
-			children = (
-				DC7A49BB1FCF95440028F308 /* YYRxSwiftTestViewController.swift */,
-				DC7A49BC1FCF95440028F308 /* YYRxSwiftViewController.swift */,
-				DC7A49BD1FCF95440028F308 /* YYRxSwiftViewController.xib */,
-				DC65BD4F1FD8D7D100204B7E /* YYRxSwiftTestTableViewController.swift */,
-				DC65BD501FD8D7D100204B7E /* YYRxSwiftTestTableViewController.xib */,
-				DC7E7FD11FD944C300859B00 /* YYRxSwiftPlusViewController.swift */,
-				DC7E7FD21FD944C300859B00 /* YYRxSwiftPlusViewController.xib */,
-			);
-			path = VC;
-			sourceTree = "<group>";
-		};
-		DC7A49BE1FCF95440028F308 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				DC7A49BF1FCF95440028F308 /* YYRxSwiftViewCell.swift */,
-				DC7A49C01FCF95440028F308 /* YYRxSwiftViewCell.xib */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		DC7A49C61FCF955A0028F308 /* SwiftDate */ = {
@@ -1628,14 +1655,6 @@
 				DC7A49C81FCF95870028F308 /* YYSwiftDateViewController.xib */,
 			);
 			path = SwiftDate;
-			sourceTree = "<group>";
-		};
-		DC7A49D81FD0009D0028F308 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				DC7A49D91FD000A50028F308 /* YYRxSwiftNewsModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		DC7E7FC31FD9141900859B00 /* RxMVVM */ = {
@@ -1681,31 +1700,12 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		DC7E7FD01FD9411900859B00 /* RxSwift */ = {
-			isa = PBXGroup;
-			children = (
-				DCA8A4891FD8035E0042537E /* ViewModel */,
-				DC7A49D81FD0009D0028F308 /* Model */,
-				DC7A49BA1FCF95440028F308 /* VC */,
-				DC7A49BE1FCF95440028F308 /* View */,
-			);
-			path = RxSwift;
-			sourceTree = "<group>";
-		};
 		DC8712901FCBD1E000C73D27 /* AnimationView */ = {
 			isa = PBXGroup;
 			children = (
 				DC8712911FCBD21A00C73D27 /* YYAutoScrollView.swift */,
 			);
 			path = AnimationView;
-			sourceTree = "<group>";
-		};
-		DCA8A4891FD8035E0042537E /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				DCA8A48A1FD803A80042537E /* YYRxSwiftViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		DCA8A48C1FD808E80042537E /* MVVM */ = {
@@ -1887,6 +1887,7 @@
 				DC6770C31FD697D400E79A07 /* Player_center_play.png in Resources */,
 				DC6770C11FD697D400E79A07 /* Player_brightness.png in Resources */,
 				94D38A551F39C23A00F974A6 /* YYCompetitionListCell.xib in Resources */,
+				DC74B87E1FDA2DD100640964 /* YYRxSwiftTestTableViewController.xib in Resources */,
 				94D38A631F39C33300F974A6 /* Assets.xcassets in Resources */,
 				DC7E7FCB1FD91D6B00859B00 /* YYRxMVVMViewController.xib in Resources */,
 				94D38A4F1F39C23A00F974A6 /* YYCompetitionCommentSectionView.xib in Resources */,
@@ -1916,13 +1917,14 @@
 				94D389A71F39C23A00F974A6 /* YYBaseNavigationViewTextButton.xib in Resources */,
 				94D389AB1F39C23A00F974A6 /* YYBaseTableViewFooterView.xib in Resources */,
 				94D38A321F39C23A00F974A6 /* YYHomeSectionView.xib in Resources */,
-				DC7A49C31FCF95440028F308 /* YYRxSwiftViewController.xib in Resources */,
 				94CBD94D1FB1577000CA2A95 /* 7.jpg in Resources */,
 				DC6770C81FD697D400E79A07 /* Player_shrinkscreen.png in Resources */,
+				DC74B87C1FDA2DD100640964 /* YYRxSwiftPlusViewController.xib in Resources */,
 				94D38A431F39C23A00F974A6 /* YYIMGroupInfoSettingCell.xib in Resources */,
 				DC6770C01FD697D400E79A07 /* Player_bottom_shadel.png in Resources */,
 				94D38A2B1F39C23A00F974A6 /* YYEventVideoCell.xib in Resources */,
 				94D38A3B1F39C23A00F974A6 /* YYIMGroupCell.xib in Resources */,
+				DC74B8811FDA2DD100640964 /* YYRxSwiftViewController.xib in Resources */,
 				9496345D1F41880F0079886E /* YYCompetitionCell.xib in Resources */,
 				94D38A311F39C23A00F974A6 /* YYHomeBasicCell.xib in Resources */,
 				94D389BD1F39C23A00F974A6 /* IMG_2473.jpg in Resources */,
@@ -1938,11 +1940,11 @@
 				94D38A261F39C23A00F974A6 /* YYApplySelectedTableViewCell.xib in Resources */,
 				94D38A601F39C2F600F974A6 /* LaunchScreen.storyboard in Resources */,
 				94D389E21F39C23A00F974A6 /* YYAlertSelectedTableViewHeaderView.xib in Resources */,
+				DC74B8831FDA2DD100640964 /* YYRxSwiftViewCell.xib in Resources */,
 				DC8A700A1FD4F8EE006D22D6 /* LYPlayer_center_pause.png in Resources */,
 				DC6770C21FD697D400E79A07 /* Player_center_pause.png in Resources */,
 				DC6770BF1FD697D400E79A07 /* Player_back_full.png in Resources */,
 				94D389C31F39C23A00F974A6 /* IMG_3026.jpg in Resources */,
-				DC7E7FD41FD944C300859B00 /* YYRxSwiftPlusViewController.xib in Resources */,
 				DC75E3E21FD107BC00332BE5 /* YYPlayerViewController.xib in Resources */,
 				DC75E4131FD13D9900332BE5 /* LYPlayer_back_full.png in Resources */,
 				DC75E4091FD12AA400332BE5 /* LYPlayer_brightness.png in Resources */,
@@ -1956,7 +1958,6 @@
 				DC65BD671FD8E32A00204B7E /* RepositoryCell.xib in Resources */,
 				DC6770C71FD697D400E79A07 /* Player_play.png in Resources */,
 				94D38A0F1F39C23A00F974A6 /* YYIMCreatChatRoomViewController.xib in Resources */,
-				DC65BD521FD8D7D100204B7E /* YYRxSwiftTestTableViewController.xib in Resources */,
 				94CBD94F1FB1577000CA2A95 /* 5.jpg in Resources */,
 				DC6770C41FD697D400E79A07 /* Player_fullscreen.png in Resources */,
 				94D38A2E1F39C23A00F974A6 /* YYModuleSelectedCell.xib in Resources */,
@@ -1965,7 +1966,6 @@
 				94D389D81F39C23A00F974A6 /* IMGroupSetting.plist in Resources */,
 				DC3858FC1FC7E9D100244649 /* YYCircleScrollCollectionCell.xib in Resources */,
 				94D389DA1F39C23A00F974A6 /* setting.plist in Resources */,
-				DC7A49C51FCF95440028F308 /* YYRxSwiftViewCell.xib in Resources */,
 				94D389BC1F39C23A00F974A6 /* IMG_0490.jpg in Resources */,
 				94D38A481F39C23A00F974A6 /* YYSettingCell.xib in Resources */,
 				94D389A61F39C23A00F974A6 /* YYBaseNavigationViewServiceButton.xib in Resources */,
@@ -2107,7 +2107,6 @@
 				94D38A051F39C23A00F974A6 /* YYYeEventViewController.swift in Sources */,
 				94D389E51F39C23A00F974A6 /* YYAlertView.swift in Sources */,
 				94D38A3C1F39C23A00F974A6 /* YYIMGroupInfoCell.swift in Sources */,
-				DC7A49C41FCF95440028F308 /* YYRxSwiftViewCell.swift in Sources */,
 				94D38A091F39C23A00F974A6 /* YYEaseUsersListViewController.swift in Sources */,
 				94D389FA1F39C23A00F974A6 /* YYShotView.swift in Sources */,
 				94D389A11F39C23A00F974A6 /* YYBaseTableViewController.swift in Sources */,
@@ -2117,6 +2116,7 @@
 				94D389E91F39C23A00F974A6 /* YYPagingHeaderScrollView.swift in Sources */,
 				DC7A49D31FCFFAD80028F308 /* Model+Extension.swift in Sources */,
 				DC75E3D51FD0FE1A00332BE5 /* YYPlayerView.swift in Sources */,
+				DC74B8841FDA2DD100640964 /* YYRxSwiftViewModel.swift in Sources */,
 				DCA8A4AE1FD808E80042537E /* Observable+HandyJSON.swift in Sources */,
 				94D38A141F39C23A00F974A6 /* YYIMGroupViewController.swift in Sources */,
 				94D389E41F39C23A00F974A6 /* YYAlertTextView.swift in Sources */,
@@ -2124,7 +2124,6 @@
 				94D389AF1F39C23A00F974A6 /* NSMutableAttributedString+Extension.swift in Sources */,
 				DC3858EF1FC7E95200244649 /* YYReuseScrollViewCell.swift in Sources */,
 				DCA8A4A91FD808E80042537E /* BaseViewController.swift in Sources */,
-				DC7E7FD31FD944C300859B00 /* YYRxSwiftPlusViewController.swift in Sources */,
 				DCA8A4B51FD808E80042537E /* View.swift in Sources */,
 				94D389F01F39C23A00F974A6 /* GA_RefreshOther.swift in Sources */,
 				94D389F61F39C23A00F974A6 /* YYEmptyTableView.swift in Sources */,
@@ -2137,6 +2136,7 @@
 				DC75E3DC1FD1037A00332BE5 /* MediaManager.swift in Sources */,
 				DC65BD621FD8E2DD00204B7E /* RepositoryCell.swift in Sources */,
 				94D38A301F39C23A00F974A6 /* YYHomeBasicCell.swift in Sources */,
+				DC74B8801FDA2DD100640964 /* YYRxSwiftViewController.swift in Sources */,
 				DC65BD651FD8E30100204B7E /* GithubService.swift in Sources */,
 				94D389A81F39C23A00F974A6 /* YYBaseCollectionView.swift in Sources */,
 				94D38A191F39C23A00F974A6 /* YYActivityListViewController.swift in Sources */,
@@ -2165,8 +2165,9 @@
 				94D389F21F39C23A00F974A6 /* ScrollView+RefreshExtension.swift in Sources */,
 				DC75E3D21FD0F3DA00332BE5 /* YYBaseUrl.swift in Sources */,
 				9400411E1F67CCD7008BF928 /* Dictionary+Extension.swift in Sources */,
+				DC74B8821FDA2DD100640964 /* YYRxSwiftViewCell.swift in Sources */,
 				94D38A521F39C23A00F974A6 /* YYCompetitionDetailsHeaderView.swift in Sources */,
-				DC7A49DA1FD000A50028F308 /* YYRxSwiftNewsModel.swift in Sources */,
+				DC74B87B1FDA2DD100640964 /* YYRxSwiftPlusViewController.swift in Sources */,
 				94D389E61F39C23A00F974A6 /* YYAlertWindowView.swift in Sources */,
 				DC65BD691FD8ED3900204B7E /* Int+Extension.swift in Sources */,
 				DC75E3F41FD12A1E00332BE5 /* LYPlayButton.swift in Sources */,
@@ -2191,6 +2192,7 @@
 				94D389B01F39C23A00F974A6 /* NSObject+Extension.swift in Sources */,
 				94D38A0E1F39C23A00F974A6 /* YYIMCreatChatRoomViewController.swift in Sources */,
 				DC30DAC61FCC1D8400AF7248 /* String+Extension.swift in Sources */,
+				DC74B87D1FDA2DD100640964 /* YYRxSwiftTestTableViewController.swift in Sources */,
 				DC75E3F71FD12A1E00332BE5 /* LYPlayerConfigure.swift in Sources */,
 				DCA8A4AC1FD808E80042537E /* Log.swift in Sources */,
 				DC7E7FCF1FD9206400859B00 /* RepositoryViewModel.swift in Sources */,
@@ -2207,6 +2209,7 @@
 				94D38A231F39C23A00F974A6 /* YYApplyHeaderView.swift in Sources */,
 				DCA8A4AF1FD808E80042537E /* Model.swift in Sources */,
 				DC75E3E11FD107BC00332BE5 /* YYPlayerViewController.swift in Sources */,
+				DC74B87F1FDA2DD100640964 /* YYRxSwiftTestViewController.swift in Sources */,
 				94D38A041F39C23A00F974A6 /* YYEventDetailViewController.swift in Sources */,
 				94D38A2F1F39C23A00F974A6 /* YYModuleSelectedView.swift in Sources */,
 				94D389F11F39C23A00F974A6 /* GA_XIBRefreshHeaderView.swift in Sources */,
@@ -2227,7 +2230,6 @@
 				94D38A0C1F39C23A00F974A6 /* YYIMCreatChatGroupViewController.swift in Sources */,
 				94D389F51F39C23A00F974A6 /* YYDrawerTableViewCell.swift in Sources */,
 				94D38A1E1F39C23A00F974A6 /* YYLiveListViewController.swift in Sources */,
-				DCA8A48B1FD803A80042537E /* YYRxSwiftViewModel.swift in Sources */,
 				94D389FE1F39C23A00F974A6 /* YYWebView.swift in Sources */,
 				94D389DC1F39C23A00F974A6 /* YYAlertBirthdayView.swift in Sources */,
 				94D389A01F39C23A00F974A6 /* YYBaseImagePickerController.swift in Sources */,
@@ -2236,10 +2238,8 @@
 				94D389D51F39C23A00F974A6 /* YYKey.swift in Sources */,
 				94D38A4A1F39C23A00F974A6 /* YYActivityListCell.swift in Sources */,
 				94D38A541F39C23A00F974A6 /* YYCompetitionListCell.swift in Sources */,
-				DC7A49C11FCF95440028F308 /* YYRxSwiftTestViewController.swift in Sources */,
 				DC65BD5D1FD8E16F00204B7E /* YYRxMVCViewController.swift in Sources */,
 				94D389B61F39C23A00F974A6 /* UIView+Extension.swift in Sources */,
-				DC7A49C21FCF95440028F308 /* YYRxSwiftViewController.swift in Sources */,
 				DC5F86001FD7A27B0092FDB4 /* AppDelegate+HuanXin.swift in Sources */,
 				DC75E3D01FD0F34100332BE5 /* TargetType+Extension.swift in Sources */,
 				94D18E3B1F50111E00750F87 /* YYXIBBaseViewController.swift in Sources */,
@@ -2248,6 +2248,7 @@
 				94D38A471F39C23A00F974A6 /* YYSettingCell.swift in Sources */,
 				94D389B71F39C23A00F974A6 /* URL+Extension.swift in Sources */,
 				94D38A121F39C23A00F974A6 /* YYIMGroupInfoViewController.swift in Sources */,
+				DC74B87A1FDA2DD100640964 /* YYRxSwiftNewsModel.swift in Sources */,
 				946BB2A51F44277E0062D173 /* Beverage.swift in Sources */,
 				94D389B41F39C23A00F974A6 /* UIImage+Extension.swift in Sources */,
 				94D389B51F39C23A00F974A6 /* UITableViewCell+Extension.swift in Sources */,
@@ -2261,7 +2262,6 @@
 				94D38A181F39C23A00F974A6 /* YYSettingViewController.swift in Sources */,
 				94D389D41F39C23A00F974A6 /* Theme.swift in Sources */,
 				94D38A061F39C23A00F974A6 /* YYHomeViewController.swift in Sources */,
-				DC65BD511FD8D7D100204B7E /* YYRxSwiftTestTableViewController.swift in Sources */,
 				94D38A441F39C23A00F974A6 /* YYMyBasicCell.swift in Sources */,
 				94D38A201F39C23A00F974A6 /* YYSurroundingListViewController.swift in Sources */,
 				94D38A111F39C23A00F974A6 /* YYIMGroupInfoSettingViewController.swift in Sources */,

@@ -16,8 +16,8 @@ class YYRxSwiftPlusViewController: UIViewController {
     @IBOutlet weak var t1: UITextField!
     @IBOutlet weak var t2: UITextField!
     @IBOutlet weak var t3: UITextField!
-    @IBOutlet weak var b: UIButton!
     @IBOutlet weak var l: UILabel!
+    @IBOutlet weak var b: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +30,7 @@ class YYRxSwiftPlusViewController: UIViewController {
             }.map({$0.description})
             .bind(to: l.rx.text)
             .disposed(by: self.rx.disposeBag)
-    }
     
-    @IBAction func b(_ sender: UIButton) {
         
     }
     
