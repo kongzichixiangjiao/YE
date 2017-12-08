@@ -252,6 +252,7 @@
 		DC74B8821FDA2DD100640964 /* YYRxSwiftViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74B8761FDA2DD100640964 /* YYRxSwiftViewCell.swift */; };
 		DC74B8831FDA2DD100640964 /* YYRxSwiftViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC74B8771FDA2DD100640964 /* YYRxSwiftViewCell.xib */; };
 		DC74B8841FDA2DD100640964 /* YYRxSwiftViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74B8791FDA2DD100640964 /* YYRxSwiftViewModel.swift */; };
+		DC74B8C91FDA3ED400640964 /* ViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74B8C81FDA3ED400640964 /* ViewController+Extension.swift */; };
 		DC75E3D01FD0F34100332BE5 /* TargetType+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC75E3CF1FD0F34100332BE5 /* TargetType+Extension.swift */; };
 		DC75E3D21FD0F3DA00332BE5 /* YYBaseUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC75E3D11FD0F3DA00332BE5 /* YYBaseUrl.swift */; };
 		DC75E3D51FD0FE1A00332BE5 /* YYPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC75E3D41FD0FE1A00332BE5 /* YYPlayerView.swift */; };
@@ -567,6 +568,7 @@
 		DC74B8761FDA2DD100640964 /* YYRxSwiftViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYRxSwiftViewCell.swift; sourceTree = "<group>"; };
 		DC74B8771FDA2DD100640964 /* YYRxSwiftViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYRxSwiftViewCell.xib; sourceTree = "<group>"; };
 		DC74B8791FDA2DD100640964 /* YYRxSwiftViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYRxSwiftViewModel.swift; sourceTree = "<group>"; };
+		DC74B8C81FDA3ED400640964 /* ViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extension.swift"; sourceTree = "<group>"; };
 		DC75E3CF1FD0F34100332BE5 /* TargetType+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TargetType+Extension.swift"; sourceTree = "<group>"; };
 		DC75E3D11FD0F3DA00332BE5 /* YYBaseUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYBaseUrl.swift; sourceTree = "<group>"; };
 		DC75E3D41FD0FE1A00332BE5 /* YYPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYPlayerView.swift; sourceTree = "<group>"; };
@@ -827,6 +829,7 @@
 				9400411D1F67CCD7008BF928 /* Dictionary+Extension.swift */,
 				DC7A49CE1FCFDEDC0028F308 /* Date+Extension.swift */,
 				DC65BD681FD8ED3900204B7E /* Int+Extension.swift */,
+				DC74B8C81FDA3ED400640964 /* ViewController+Extension.swift */,
 			);
 			path = EXTENSION;
 			sourceTree = "<group>";
@@ -2234,6 +2237,7 @@
 				94D389DC1F39C23A00F974A6 /* YYAlertBirthdayView.swift in Sources */,
 				94D389A01F39C23A00F974A6 /* YYBaseImagePickerController.swift in Sources */,
 				DC7A49CF1FCFDEDD0028F308 /* Date+Extension.swift in Sources */,
+				DC74B8C91FDA3ED400640964 /* ViewController+Extension.swift in Sources */,
 				94D389A91F39C23A00F974A6 /* YYBaseTableViewCell.swift in Sources */,
 				94D389D51F39C23A00F974A6 /* YYKey.swift in Sources */,
 				94D38A4A1F39C23A00F974A6 /* YYActivityListCell.swift in Sources */,

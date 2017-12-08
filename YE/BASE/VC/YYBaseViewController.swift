@@ -9,7 +9,7 @@
 import UIKit
 
 class YYBaseViewController: UIViewController {
-    
+ 
     var isShowNavigationView: Bool = false
     
     var kNavigationViewBottomSpace: CGFloat = 0

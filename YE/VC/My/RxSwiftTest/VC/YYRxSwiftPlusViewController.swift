@@ -31,7 +31,6 @@ class YYRxSwiftPlusViewController: UIViewController {
             .bind(to: l.rx.text)
             .disposed(by: self.rx.disposeBag)
     
-        
     }
     
     override func didReceiveMemoryWarning() {
