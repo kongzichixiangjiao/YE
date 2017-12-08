@@ -23,6 +23,8 @@ class YYIMGroupInfoViewController: YYBaseTableViewController {
         
         self.myTitle = "群详情"
         
+        initTableView()
+        
         self.setupRightButton(.imSetting)
         
         requestGroupInfo()
@@ -49,7 +51,7 @@ class YYIMGroupInfoViewController: YYBaseTableViewController {
     override func initTableView() {
         super.initTableView()
         isShowTabbar = true
-        tableViewFrameType = .normal64
+        saveAreaBottomSpaceType = .normal44
         registerNibWithIdentifier(YYIMGroupInfoCell.identifier)
     }
     

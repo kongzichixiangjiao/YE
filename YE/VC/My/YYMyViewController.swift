@@ -15,7 +15,9 @@ class YYMyViewController: YYBaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initNavigationView()
-
+        
+        initTableView()
+        
         let _ = tableView.yy_addBaneHeaderView(.header, bgImage: UIImage(named: "cgts.jpg")!, height: YYBaneHeaderKey.kHeight, handler: {
             [weak self] in
             if let _ = self {
@@ -37,7 +39,7 @@ class YYMyViewController: YYBaseTableViewController {
     
     override func initTableView() {
         isShowTabbar = true
-        tableViewFrameType = .normal64
+        saveAreaBottomSpaceType = .normal44
         registerNibWithIdentifier(YYMyBasicCell.identifier)
         registerNibWithIdentifier(YYSpaceCell.identifier)
         tableView.tableHeaderView = initModuleSelectedView()
@@ -112,7 +114,9 @@ extension YYMyViewController {
         if dic[YYKey.myTitle] as! String == "RxSwift" {
             push(YYRxSwiftViewController(nibName: "YYRxSwiftViewController", bundle: nil))
         }
-        
+        if dic[YYKey.myTitle] as! String == "SwiftDate" {
+            push(YYSwiftDateViewController(nibName: "YYSwiftDateViewController", bundle: nil))
+        }
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

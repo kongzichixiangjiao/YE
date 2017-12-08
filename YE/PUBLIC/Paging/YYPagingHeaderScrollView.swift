@@ -73,7 +73,7 @@ class YYPagingHeaderScrollView: UIView {
                 selectedButton = b
             }
             
-            let vW: CGFloat = title.characters.count.cgFloat * kBigFontSize
+            let vW: CGFloat = title.count.cgFloat * kBigFontSize
             let v = UIView()
             v.frame = CGRect(x: w / 2 - vW / 2, y: h - 2, width: vW, height: 2)
             v.backgroundColor = UIColor.orange

@@ -8,11 +8,10 @@
 
 import UIKit
 
-enum TableViewFrameType: CGFloat {
+// 距离安全区域bottom距离
+enum SaveAreaBottomSpaceType: CGFloat {
     case normal0 = 0
-    case normal20 = 20
-    case normal64 = 64
-    case normal108 = 108
+    case normal44 = 44
 }
 
 public var MainScreenWidth = UIScreen.main.bounds.width
@@ -20,10 +19,12 @@ public var MainScreenHeight = UIScreen.main.bounds.height
 public let SearchBarViewHeight: CGFloat = 44
 
 class YYBaseTableViewController: YYBaseViewController {
-
+    
     open var dataSource: [Any] = []
     
     open var isShowTabbar: Bool = false
+    
+    open var isCancleX: Bool = false
     
     open var showSearchBar: Bool = false {
         didSet {
@@ -33,10 +34,17 @@ class YYBaseTableViewController: YYBaseViewController {
         }
     }
     
-    open var tableViewFrameType: TableViewFrameType! {
+    open var saveAreaBottomSpaceType: SaveAreaBottomSpaceType! {
         didSet {
-            let y: CGFloat = tableViewFrameType.rawValue
-            self.tableView.frame = CGRect(x: 0, y: y, width: MainScreenWidth, height: MainScreenHeight - y - (self.isShowTabbar ? TabBarHeight : 0))
+            let y: CGFloat = (isShowNavigationView ? self.navigationView.frame.size.height : 0) + kNavigationViewBottomSpace
+            var insets = UIEdgeInsets.zero
+            let height = MainScreenHeight - y - (self.isShowTabbar ? TabBarHeight : 0)
+            if UIDevice.current.isX {
+                if #available(iOS 11.0, *) {
+                    insets = UIApplication.shared.delegate?.window??.safeAreaInsets ?? UIEdgeInsets.zero
+                }
+            }
+            self.tableView.frame = CGRect(x: 0, y: y + (self.isCancleX ? 0 : insets.bottom), width: MainScreenWidth, height: height)
         }
     }
     
@@ -46,8 +54,9 @@ class YYBaseTableViewController: YYBaseViewController {
         t.dataSource = self
         t.showsHorizontalScrollIndicator = false
         t.showsVerticalScrollIndicator = false
-        t.separatorStyle = .none 
+        t.separatorStyle = .none
         t.tableFooterView = UIView()
+        t.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(t)
         return t
     }()
@@ -57,7 +66,7 @@ class YYBaseTableViewController: YYBaseViewController {
         let lSpace: CGFloat = 15
         let tSpace: CGFloat = 10
         let v = UIView()
-        v.frame = CGRect(x: 0, y: NavigationViewHeight, width: w, height: SearchBarViewHeight)
+        v.frame = CGRect(x: 0, y: kNavigationBarMaxY, width: w, height: SearchBarViewHeight)
         
         let t = UITextField(frame: CGRect(x: lSpace, y: tSpace, width: w - lSpace * 2, height: SearchBarViewHeight - tSpace * 2))
         t.font = UIFont.systemFont(ofSize: 13)
@@ -78,7 +87,7 @@ class YYBaseTableViewController: YYBaseViewController {
     }
     
     open func footerView() {
-//        self.tableView.tableFooterView = initFooterView()
+        //        self.tableView.tableFooterView = initFooterView()
     }
     
     open func registerClassWithIdentifier(_ identifier: String) {
@@ -92,22 +101,19 @@ class YYBaseTableViewController: YYBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        initTableView()
-
     }
     
     func initTableView() {
         
     }
     
-//    func textFieldShouldReturn(_ text: String) {
-//
-//    }
+    //    func textFieldShouldReturn(_ text: String) {
+    //
+    //    }
     
     func myTextFieldShouldReturn(_ text: String) {
         
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -141,3 +147,8 @@ extension YYBaseTableViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
 }
+
+extension YYBaseTableViewController {
+    
+}
+

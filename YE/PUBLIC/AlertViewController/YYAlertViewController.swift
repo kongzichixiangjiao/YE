@@ -368,9 +368,9 @@ extension YYAlertViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension YYAlertViewController {
     // 支持屏幕旋转
-    override var shouldAutorotate: Bool {
-        return true
-    }
+//    override var shouldAutorotate: Bool {
+//        return true
+//    }
     /*
      override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
      return .portrait

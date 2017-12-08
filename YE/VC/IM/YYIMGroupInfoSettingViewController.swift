@@ -17,7 +17,9 @@ class YYIMGroupInfoSettingViewController: YYBaseTableViewController {
         super.viewDidLoad()
         
         self.myTitle = "群详情设置"
-
+        
+        initTableView()
+        
         let arr = NSArray(contentsOfFile: Bundle.ga_path("IMGroupSetting.plist"))
         self.dataSource = arr as! [Any]
     }
@@ -25,7 +27,7 @@ class YYIMGroupInfoSettingViewController: YYBaseTableViewController {
     override func initTableView() {
         super.initTableView()
         isShowTabbar = true
-        tableViewFrameType = .normal64
+        saveAreaBottomSpaceType = .normal44
         registerNibWithIdentifier(YYIMGroupInfoSettingCell.identifier)
         registerNibWithIdentifier(YYIMGroupInfoSettingButtonCell.identifier)
         

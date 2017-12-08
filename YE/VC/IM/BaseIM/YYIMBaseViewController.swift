@@ -49,10 +49,17 @@ class YYIMBaseMessageViewController: EaseMessageViewController {
         
     }
     
+    func clickedNavigationViewOtherRightButton(_ sender: UIButton) {
+        
+    }
 }
 
 
 extension YYIMBaseMessageViewController: YYBaseNavigationViewProtocol {
+    func clickedNavigationViewRightOtherButton(_ sender: UIButton) {
+        clickedNavigationViewOtherRightButton(sender)
+    }
+    
     func back() {
         self.clickedLeftButtonAction()
     }

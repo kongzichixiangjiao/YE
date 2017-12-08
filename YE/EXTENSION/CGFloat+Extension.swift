@@ -32,6 +32,12 @@ extension CGFloat: CGFloatProtocol {
     static var GA_M_PI_4: CGFloat = 45 * CGFloat(Double.pi / 180)
 }
 
+extension CGFloat {
+    func toString() -> String {
+        return String(describing: self)
+    }
+}
+
 protocol ToCGFloatProtocol {
     var cgFloat: CGFloat { get }
 }

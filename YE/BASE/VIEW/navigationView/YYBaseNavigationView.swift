@@ -18,6 +18,7 @@ protocol YYBaseNavigationViewProtocol: NSObjectProtocol {
     func back(_ model: Any?)
     @objc optional
     func clickedNavigationViewRightButton(_ sender: UIButton)
+    func clickedNavigationViewRightOtherButton(_ sender: UIButton)
 }
 
 class YYBaseNavigationView: YYBaseView {
@@ -84,6 +85,7 @@ class YYBaseNavigationView: YYBaseView {
     open var isShowLine: Bool = true
     
     static let bW: CGFloat = 40
+    static let bOtherW: CGFloat = 60
     static let bH: CGFloat = 40
     static let bImage: UIImage = UIImage(named: "nav_back")!
     
@@ -101,6 +103,11 @@ class YYBaseNavigationView: YYBaseView {
     @objc func rightButtonAction(_ sender: UIButton) {
         
         myDelegate?.clickedNavigationViewRightButton!(sender)
+    }
+    
+    @objc func rightOtherButtonAction(_ sender: UIButton) {
+        
+        myDelegate?.clickedNavigationViewRightOtherButton(sender)
     }
     
     @objc func backAction(_ sender: UIButton) {
@@ -180,7 +187,13 @@ class YYBaseNavigationView: YYBaseView {
     }
     
     func setupOtherRightButton() {
-        
+        let b = UIButton()
+        b.frame = CGRect(x: self.frame.size.width - YYBaseNavigationView.bW*2 - space*2 , y: self.frame.size.height - YYBaseNavigationView.bH, width: YYBaseNavigationView.bOtherW, height: YYBaseNavigationView.bH)
+        b.setTitle("other", for: .normal)
+        b.setTitleColor(UIColor.black, for: .normal)
+        b.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+        b.addTarget(self, action: #selector(rightOtherButtonAction(_:)), for: .touchUpInside)
+        self.addSubview(b)
     }
     
     required init?(coder aDecoder: NSCoder) {

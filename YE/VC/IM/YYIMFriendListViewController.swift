@@ -26,6 +26,8 @@ class YYIMFriendListViewController: YYBaseTableViewController {
             self.setupRightButton(.finished)
         }
         
+        initTableView()
+        
         EMClient.shared().contactManager.add(self, delegateQueue: nil)
         
         self.tableView.ga_addRefreshHeaderXIB(GA_AnimationRefreshHeaderView.loadView()) {
@@ -89,8 +91,9 @@ class YYIMFriendListViewController: YYBaseTableViewController {
     
     override func initTableView() {
         super.initTableView()
+        isCancleX = true
         isShowTabbar = true
-        tableViewFrameType = isCanSelected ? .normal64 : .normal0
+        saveAreaBottomSpaceType = isCanSelected ? .normal44 : .normal0
         registerNibWithIdentifier(YYIMFriendCell.identifier)
     }
     

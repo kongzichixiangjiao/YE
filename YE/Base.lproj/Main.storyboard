@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ymc-Gu-Cz4">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ymc-Gu-Cz4">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -36,7 +36,7 @@
                 <navigationController id="vLb-0C-QhP" customClass="YYNavigationViewController" customModule="YE" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="首页" image="tabbar_home" id="Mo0-Bk-AzM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mBS-oB-SaE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -72,7 +72,7 @@
                 <navigationController id="57V-i5-q8n" customClass="YYNavigationViewController" customModule="YE" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="野事er" image="tabbar_event" id="glz-QK-bSW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="L1g-Kg-ZgI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -108,7 +108,7 @@
                 <navigationController id="nVH-Tj-59U" customClass="YYNavigationViewController" customModule="YE" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="消息" image="tabbar_news" id="icO-zE-bQN"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eFH-75-0Go">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -141,10 +141,9 @@
         <!--赛事-->
         <scene sceneID="V5q-5n-HfR">
             <objects>
-                <navigationController id="Owz-UA-XvT" sceneMemberID="viewController">
+                <navigationController navigationBarHidden="YES" id="Owz-UA-XvT" customClass="YYNavigationViewController" customModule="YE" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="赛事" image="tabbar_competition" id="4uw-fW-Xd4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hVz-wP-h3E">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -161,7 +160,7 @@
                 <navigationController id="txM-q4-hWv" customClass="YYNavigationViewController" customModule="YE" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="我的" image="tabbar_my" id="hYy-dU-zDO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FDh-Dq-Is5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>

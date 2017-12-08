@@ -20,13 +20,15 @@ class YYYeEventViewController: YYBaseTableViewController {
         
         initNavigationView()
         
+        initTableView()
+        
         let groupVC = YYIMGroupListViewController()
         groupVC.title = "群组"
         groupVC.delegate = self
         let friendVC = YYIMFriendListViewController()
         friendVC.title = "好友"
         friendVC.delegate = self
-        let pageView = YYPagingView(frame: CGRect(x: 0, y: NavigationViewHeight, width: MainScreenWidth, height: MainScreenHeight - NavigationViewHeight), vcs: [groupVC, friendVC]) { (tag) in
+        let pageView = YYPagingView(frame: CGRect(x: 0, y: navigationView.maxY, width: MainScreenWidth, height: MainScreenHeight - NavigationViewHeight), vcs: [groupVC, friendVC]) { (tag) in
             print("tag: \(tag)")
         }
         self.view.addSubview(pageView)
@@ -40,7 +42,7 @@ class YYYeEventViewController: YYBaseTableViewController {
     
     override func initTableView() {
 //        isShowTabbar = true
-//        tableViewFrameType = .normal64
+//        tableViewFrameType = .normal44
 //        registerNibWithIdentifier(YYIMGroupCell.identifier)
     }
 

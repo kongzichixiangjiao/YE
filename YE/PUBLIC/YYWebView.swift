@@ -11,9 +11,19 @@ import WebKit
 
 class YYWebView: UIView {
     
+    private let kEstimatedProgress = "estimatedProgress"
     weak var myDelegate: YYWebViewDelegate?
     
     var url: String!
+    var progressViewHeight: CGFloat = 2
+    var isShowProgress: Bool! {
+        didSet {
+            if isShowProgress {
+                self.addSubview(progressView)
+                addObserver(webView, forKeyPath: kEstimatedProgress, options: .new, context: nil)
+            }
+        }
+    }
     
     lazy var webView: WKWebView = {
         let webView = WKWebView()
@@ -22,6 +32,12 @@ class YYWebView: UIView {
         webView.navigationDelegate = self
         webView.load(self.url.ga_url!.ga_request!)
         return webView
+    }()
+    
+    lazy var progressView: UIView = {
+        let v = UIView(frame: CGRect(x: 0, y: progressViewHeight, width: self.webView.frame.size.width, height: progressViewHeight))
+        v.backgroundColor = UIColor.blue
+        return v
     }()
     
     override init(frame: CGRect) {
@@ -33,7 +49,12 @@ class YYWebView: UIView {
         
         self.url = url
         self.addSubview(webView)
-        
+    }
+    
+    override func addObserver(_ observer: NSObject, forKeyPath keyPath: String, options: NSKeyValueObservingOptions = [], context: UnsafeMutableRawPointer?) {
+        if (keyPath == kEstimatedProgress) {
+            progressView.frame = CGRect(x: 0, y: progressViewHeight, width: self.webView.frame.size.width * CGFloat(webView.estimatedProgress), height: progressViewHeight)
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -41,7 +62,9 @@ class YYWebView: UIView {
     }
     
     deinit {
-        
+        if isShowProgress {
+            removeObserver(webView, forKeyPath: kEstimatedProgress)
+        }
     }
     
 }
@@ -57,7 +80,6 @@ extension YYWebView: WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler 
     }
     // 页面加载完成时
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        print("didFinish")
         self.webView.frame = CGRect(origin: CGPoint.zero, size: self.webView.scrollView.contentSize)
         self.height = self.webView.frame.height
         self.myDelegate?.webViewDidFinish(self.height)

@@ -15,6 +15,8 @@ class YYActivityListViewController: YYBaseTableViewController {
         self.myTitle = "活动"
         self.setupRightButton(.service)
         
+        initTableView()
+        
         let _ = tableView.yy_addBaneHeaderView(.header, bgImage: UIImage(named: "cgts.jpg")!, height: YYBaneHeaderKey.kHeight, handler: nil)
         
 //        tableView.contentInset = UIEdgeInsets(top: YYBaneHeaderKey.kHeight, left: 0, bottom: 0, right: 0)
@@ -79,7 +81,7 @@ class YYActivityListViewController: YYBaseTableViewController {
     
     override func initTableView() {
         isShowTabbar = true
-        tableViewFrameType = .normal64
+        saveAreaBottomSpaceType = .normal44
         registerNibWithIdentifier(YYActivityListCell.identifier)
         self.footerView()
     }

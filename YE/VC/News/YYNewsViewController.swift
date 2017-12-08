@@ -16,6 +16,9 @@ class YYNewsViewController: YYBaseTableViewController {
 
         self.myTitle = "消息"
         self.isHiddenLeftButton = true
+        
+        initTableView()
+        
         self.tableView.yy_empty(.noData, alertTitle: "暂无消息")
         
         HXManager.share.addDelegate(self)
@@ -24,7 +27,7 @@ class YYNewsViewController: YYBaseTableViewController {
     override func initTableView() {
         super.initTableView()
         isShowTabbar = true
-        tableViewFrameType = .normal64
+        saveAreaBottomSpaceType = .normal44
         registerNibWithIdentifier(YYIMAddFriendCell.identifier)
     }
     

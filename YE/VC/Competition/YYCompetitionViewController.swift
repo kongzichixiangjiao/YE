@@ -14,6 +14,7 @@ class YYCompetitionViewController: YYBaseTableViewController {
         super.viewDidLoad()
         
         initNavigationView()
+        initTableView()
     }
     
     func initNavigationView() {
@@ -23,7 +24,7 @@ class YYCompetitionViewController: YYBaseTableViewController {
     
     override func initTableView() {
         isShowTabbar = true
-        tableViewFrameType = .normal64
+        saveAreaBottomSpaceType = .normal44
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
         registerNibWithIdentifier(YYCompetitionCell.identifier)

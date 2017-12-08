@@ -20,6 +20,8 @@ class YYIMRoomViewController: YYBaseTableViewController {
         
         initNavigationView()
         
+        initTableView()
+        
         hx_roomList()
     }
     
@@ -30,7 +32,7 @@ class YYIMRoomViewController: YYBaseTableViewController {
     override func initTableView() {
         super.initTableView()
         isShowTabbar = true
-        tableViewFrameType = .normal64
+        saveAreaBottomSpaceType = .normal44
         registerNibWithIdentifier(YYIMGroupCell.identifier)
     }
     

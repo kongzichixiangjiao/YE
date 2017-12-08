@@ -273,7 +273,7 @@ extension UILabel {
             let range = totalString?.range(of: str)
             if (range?.lowerBound != nil) {
                 
-                totalString = totalString?.replacingCharacters(in: range!, with: self.yy_getString(str.characters.count))
+                totalString = totalString?.replacingCharacters(in: range!, with: self.yy_getString(str.count))
                 
                 let model = YYAttributeModel()
                 

@@ -13,12 +13,15 @@ class YYEventDetailViewController: YYBaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationView.myTitle = "详情"
+        self.myTitle = "详情"
 
-        let playerView = YYPlayerView(frame: CGRect(x: 0, y: 20, width: self.view.frame.size.width, height: 240))
-        playerView.backgroundColor = UIColor.white
+        self.view.backgroundColor = "999999".color0X
+//        let playerView = YYPlayerView(frame: CGRect(x: 0, y: 20, width: self.view.frame.size.width, height: 240))
+//        playerView.backgroundColor = UIColor.lightGray
+//        playerView.url = ""
+//        self.view.addSubview(playerView)
         
-        self.tableView.tableHeaderView = playerView
+        
     }
 
     override func didReceiveMemoryWarning() {

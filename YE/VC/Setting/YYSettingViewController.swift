@@ -16,6 +16,8 @@ class YYSettingViewController: YYBaseTableViewController {
         
         self.myTitle = "设置"
         
+        initTableView()
+        
         let _ = tableView.yy_addBaneHeaderView(.header, bgImage: UIImage(named: "cgts.jpg")!, height: YYBaneHeaderKey.kHeight, handler: {
             [weak self] in
             if let _ = self {
@@ -31,7 +33,7 @@ class YYSettingViewController: YYBaseTableViewController {
     
     override func initTableView() {
         isShowTabbar = true
-        tableViewFrameType = .normal64
+        saveAreaBottomSpaceType = .normal44
         registerNibWithIdentifier(YYSettingCell.identifier)
         tableView.tableFooterView = initTableFooterView()
     }

@@ -13,11 +13,14 @@ class YYCompetitionListViewController: YYBaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.myTitle = "赛事"
+        
+        initTableView()
+        
     }
     
     override func initTableView() {
         isShowTabbar = true
-        tableViewFrameType = .normal64
+        saveAreaBottomSpaceType = .normal44
         registerNibWithIdentifier(YYCompetitionListCell.identifier)
         self.footerView()
     }

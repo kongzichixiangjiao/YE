@@ -9,15 +9,21 @@
 import UIKit
 
 class YYBaseCollectionViewController: YYBaseViewController {
-
+    
     open var dataSource: [Any] = []
     
     open var isShowTabbar: Bool = false
     
-    open var collectionViewFrameType: TableViewFrameType! {
+    open var collectionViewFrameType: SaveAreaBottomSpaceType! {
         didSet {
-            let y: CGFloat = collectionViewFrameType.rawValue
-            self.collectionView.frame = CGRect(x: 0, y: y, width: MainScreenWidth, height: MainScreenHeight - y - (self.isShowTabbar ? TabBarHeight : 0))
+            var y: CGFloat = collectionViewFrameType.rawValue
+            let height = MainScreenHeight - y - (self.isShowTabbar ? TabBarHeight : 0)
+            if UIDevice.current.isX {
+                if #available(iOS 11.0, *) {
+                    y += kNavigationViewBottomSpace
+                }
+            }
+            self.collectionView.frame = CGRect(x: 0, y: y, width: MainScreenWidth, height: height)
         }
     }
     
@@ -43,13 +49,13 @@ class YYBaseCollectionViewController: YYBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initCollectionView()
-        self.collectionViewFrameType = .normal64
+        self.collectionViewFrameType = .normal44
     }
     
     func initCollectionView() {
         
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -92,3 +98,4 @@ class YYBaseCollectionViewControllerLayout: UICollectionViewFlowLayout {
         scrollDirection = isHorizontal ? .horizontal : .vertical
     }
 }
+

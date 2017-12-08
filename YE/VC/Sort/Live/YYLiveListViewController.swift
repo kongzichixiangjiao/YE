@@ -44,7 +44,7 @@ class YYLiveListViewController: YYBaseCollectionViewController {
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         
         isShowTabbar = true
-        collectionViewFrameType = .normal64
+        collectionViewFrameType = .normal44
         registerNib(YYLiveCollectionViewCell.identifier)
     }
 }

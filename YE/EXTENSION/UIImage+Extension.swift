@@ -28,6 +28,22 @@ extension UIImage: UIImageSizeProtocol {
 }
 
 extension UIImage {
+    static func yy_init(_ color: UIColor, andFrame frame: CGRect) -> UIImage {
+        UIGraphicsBeginImageContext(frame.size)
+
+        let context = UIGraphicsGetCurrentContext()
+        context?.setFillColor(color.cgColor)
+        context?.fill(frame)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        
+        UIGraphicsEndImageContext()
+        
+        return image!
+    }
+}
+
+extension UIImage {
     ///对指定图片进行拉伸
     func resizableImage(_ name: String) -> UIImage {
         var normal = UIImage(named: name)!

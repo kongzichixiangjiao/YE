@@ -8,6 +8,7 @@
 
 import UIKit
 //import SQLite
+import Then
 
 class YYTestView: UIView {
     override init(frame: CGRect) {
@@ -73,12 +74,13 @@ class YYHomeViewController: YYBaseTableViewController {
         super.viewDidLoad()
         initNavigationView()
         
+        initTableView()
+        
         sqliteMethod()
         
         let _ = YYChildTestView(frame: CGRect.zero)
         
         myC()
-        
     }
     
     func myC() {
@@ -187,11 +189,14 @@ class YYHomeViewController: YYBaseTableViewController {
     func initNavigationView() {
         self.myTitle = "首页"
         self.leftButtonTitle = "home_nav_scan"
+        self.setupRightButton(.details)
+        self.setupOtherRightButton()
+
     }
-    
+        
     override func initTableView() {
         isShowTabbar = true
-        tableViewFrameType = .normal64
+        saveAreaBottomSpaceType = .normal44
 //        registerNibWithIdentifier(kYYHomeBasicCell)
         
         registerClassWithIdentifier(YYDrawerTableViewCellNew.identifier)
@@ -246,6 +251,15 @@ class YYHomeViewController: YYBaseTableViewController {
         print("扫码")
     }
     
+    override func clickedRightButtonAction(_ sender: UIButton) {
+        push(YYTestViewController())
+    }
+    
+    override func clickedNavigationViewOtherRightButton(_ sender: UIButton) {
+//        push(YYEventDetailViewController())
+        push(YYPlayerViewController(nibName: "YYPlayerViewController", bundle: nil))
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -259,6 +273,7 @@ extension YYHomeViewController {
             [weak self] row, obj in
             if let _ = self {
                 print("row: \(row)")
+                
                 let vc = YYAlertViewController()
                 if row == 0 {
                     vc.yy_showText("佳能 佳能佳能")
@@ -304,6 +319,7 @@ extension YYHomeViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         if (indexPath.row == 0) {
             self.view.ga_showSelectedLoading(data: ["12", "22", "32", "42", "52"], handler: { (row, obj) in
                 print(row, obj ?? "")

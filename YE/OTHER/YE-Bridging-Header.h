@@ -12,6 +12,9 @@
 #ifdef __OBJC__
 #import <UIKit/UIKit.h>
 #import "EaseUILite/EaseUI.h"
+
+#import "MBProgressHUD/MBProgressHUD.h"
+
 #endif
 
 #endif /* YYHeader_h */

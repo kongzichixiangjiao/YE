@@ -16,6 +16,8 @@ class YYIMGroupListViewController: YYBaseTableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        initTableView()
+        
         self.tableView.ga_addRefreshHeaderXIB(GA_AnimationRefreshHeaderView.loadView()) {
             [weak self] in
             if let weakSelf = self {
@@ -25,14 +27,11 @@ class YYIMGroupListViewController: YYBaseTableViewController {
         self.tableView.ga_XIBbeginRefreshing()
     }
     
-    func initNavigationView() {
-        self.myTitle = "群组"
-    }
-    
     override func initTableView() {
         super.initTableView()
+        isCancleX = true
         isShowTabbar = true
-        tableViewFrameType = .normal0
+        saveAreaBottomSpaceType = .normal0
         registerNibWithIdentifier(YYIMGroupCell.identifier)
     }
     

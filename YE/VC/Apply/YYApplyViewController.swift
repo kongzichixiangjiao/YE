@@ -45,6 +45,8 @@ class YYApplyViewController: YYBaseTableViewController {
         self.setupRightButton(.finished)
         self.rightButtonState = .normal
         
+        initTableView()
+        
         initData()
         
         initBackView()
@@ -58,7 +60,7 @@ class YYApplyViewController: YYBaseTableViewController {
             self.tableView.frame = CGRect(x: 0, y: 64, width: self.tableView.width, height: MainScreenHeight - rect.size.height - 64)
         }
         NotificationCenter.default.addObserver(forName: NSNotification.Name.UIKeyboardWillHide, object: nil, queue: OperationQueue.main) { (notifi) in
-            self.tableViewFrameType = .normal64
+            self.saveAreaBottomSpaceType = .normal44
         }
     }
     
@@ -73,7 +75,7 @@ class YYApplyViewController: YYBaseTableViewController {
     
     override func initTableView() {
         isShowTabbar = true
-        tableViewFrameType = .normal64
+        saveAreaBottomSpaceType = .normal44
         registerNibWithIdentifier(YYApplyTextTableViewCell.identifier)
         registerNibWithIdentifier(YYApplySelectedTableViewCell.identifier)
         registerNibWithIdentifier(YYApplyAddImageTableViewCell.identifier)

@@ -22,10 +22,10 @@ class YYCompetitionReplyCell: UITableViewCell {
             
             let attStr = NSMutableAttributedString.init(string: str)
             
-            attStr.addAttribute(NSAttributedStringKey.font, value: UIFont.systemFont(ofSize: 12), range: NSMakeRange(0, str.characters.count))
+            attStr.addAttribute(NSAttributedStringKey.font, value: UIFont.systemFont(ofSize: 12), range: NSMakeRange(0, str.count))
             
-            attStr.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.blue, range: NSMakeRange(0, reply.from.characters.count))
-            attStr.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.blue, range: NSMakeRange(reply.from.characters.count + 2, reply.to.characters.count))
+            attStr.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.blue, range: NSMakeRange(0, reply.from.count))
+            attStr.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.blue, range: NSMakeRange(reply.from.count + 2, reply.to.count))
             
             self.contentLabel.attributedText = attStr
             

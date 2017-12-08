@@ -4,19 +4,70 @@ use_frameworks!
 
 target 'YE’ do
 
-#pod 'ReactiveCocoa'
+#转模型
 pod 'HandyJSON'
+#数据持久化
 #pod 'SQLite.swift'
 
 #http://www.hangge.com/blog/cache/detail_1797.html
 
+#数据请求
 pod 'Alamofire'
+#Alamofire封装
+pod 'Moya'
+pod 'Moya/RxSwift'
+pod 'ObjectMapper'
+#转模型
+pod 'SwiftyJSON'
 
+#环信
 pod 'HyphenateLite'
-pod 'EaseUILite', :git =>'https://github.com/easemob/easeui-ios-hyphenate-cocoapods.git', :tag => '3.3.2'
+pod 'EaseUILite', :git =>'https://github.com/easemob/easeui-ios-hyphenate-cocoapods.git'
 
+#类似懒加载小工具
+pod 'Then'
+#日期工具
+pod 'SwiftDate'
+
+# 优雅书写swift
 pod 'RxSwift'
 pod 'RxCocoa'
 pod 'RxDataSources'
+pod 'NSObject+Rx' #DisposeBag() -> .disposed(by: rx.disposeBag)
+pod 'Action'
+pod 'RxSwiftExt'
+### RxSwiftExt ###
+###
+#unwrap
+#ignore
+#ignoreWhen
+#Observable.once
+#distinct
+#map
+#not
+#and
+#Observable.cascade
+#retry
+#repeatWithBehavior
+#catchErrorJustComplete
+#pausable
+#pausableBuffered
+#apply
+#filterMap
+#Observable.fromAsync
+###
+### RxSwiftExt ###
 
-end 
+#加密
+pod 'SwiftyRSA'
+
+#布局
+pod 'SnapKit'
+
+#加载图片
+pod 'Kingfisher'
+
+#播放器控件
+#pod 'EZPlayer' // 项目必须适配横竖屏 项目内已经封装一层
+#pod 'LYPlayer' // 手势退出没有暂停播放器
+end

@@ -18,12 +18,14 @@ class YYIMContactSelectionViewController: YYBaseTableViewController {
 
         self.myTitle = "添加好友"
         self.showSearchBar = true
+        
+        initTableView()
     }
 
     override func initTableView() {
         super.initTableView()
         isShowTabbar = true
-        tableViewFrameType = .normal108
+        saveAreaBottomSpaceType = .normal44
         registerNibWithIdentifier(YYIMAddFriendCell.identifier)
     }
     

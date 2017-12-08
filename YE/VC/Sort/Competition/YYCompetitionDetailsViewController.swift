@@ -25,6 +25,8 @@ class YYCompetitionDetailsViewController: YYBaseTableViewController {
         super.viewDidLoad()
         self.myTitle = "活动详情"
         
+        initTableView()
+        
         self.webView.show()
         
         initData()
@@ -49,7 +51,7 @@ class YYCompetitionDetailsViewController: YYBaseTableViewController {
     
     override func initTableView() {
         isShowTabbar = true
-        tableViewFrameType = .normal64
+        saveAreaBottomSpaceType = .normal44
         registerNibWithIdentifier(YYCompetitionCommentCell.identifier)
         tableView.tableHeaderView = initTableViewHeaderView()
     }

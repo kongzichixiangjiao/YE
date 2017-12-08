@@ -74,13 +74,12 @@ extension String {
 // WARK: COLOR
 extension String {
     var color0X: UIColor! {
-        //        var cString:String = self.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).uppercased()
         var cString:String = self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
         if (cString.hasPrefix("#")) {
             cString = (cString as NSString).substring(from: 1)
         }
         
-        if (cString.characters.count != 6) {
+        if (cString.count != 6) {
             return UIColor.gray
         }
         
@@ -97,13 +96,12 @@ extension String {
     }
     
     func color0X(_ alpha: CGFloat) -> UIColor {
-        //        var cString:String = self.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()).uppercased()
         var cString:String = self.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).uppercased()
         if (cString.hasPrefix("#")) {
             cString = (cString as NSString).substring(from: 1)
         }
         
-        if (cString.characters.count != 6) {
+        if (cString.count != 6) {
             return UIColor.gray
         }
         
@@ -119,7 +117,7 @@ extension String {
         return UIColor(red: CGFloat(r) / 255.0, green: CGFloat(g) / 255.0, blue: CGFloat(b) / 255.0, alpha: CGFloat(alpha))
     }
 }
-// MARK: url
+// MARK: ga_url
 extension String {
     var ga_url: URL? {
         if let u = URL(string: self) {
@@ -132,12 +130,13 @@ extension String {
     }
 }
 
+// MARK: positionOf(_ sub: String)
 extension String {
     func positionOf(_ sub: String) -> Int {
         var pos = -1
         if let range = range(of:sub) {
             if !range.isEmpty {
-                pos = characters.distance(from:startIndex, to:range.lowerBound)
+                pos = self.distance(from:startIndex, to:range.lowerBound)
             }
         }
         return pos
@@ -148,8 +147,22 @@ extension String {
     }
 }
 
+// MARK: xibLoadView()
 extension String {
     func xibLoadView() -> UIView {
         return Bundle.main.loadNibNamed(self, owner: nil, options: nil)?.last as! UIView
+    }
+}
+
+// MARK: toFloat() toDouble()
+extension String {
+    func toFloat() -> Float? {
+        let numberFormatter = NumberFormatter()
+        return numberFormatter.number(from: self)?.floatValue
+    }
+    
+    func toDouble() -> Double? {
+        let numberFormatter = NumberFormatter()
+        return numberFormatter.number(from: self)?.doubleValue
     }
 }
