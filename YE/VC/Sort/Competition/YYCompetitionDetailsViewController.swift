@@ -50,7 +50,6 @@ class YYCompetitionDetailsViewController: YYBaseTableViewController {
     }
     
     override func initTableView() {
-        isShowTabbar = true
         saveAreaBottomSpaceType = .normal44
         registerNibWithIdentifier(YYCompetitionCommentCell.identifier)
         tableView.tableHeaderView = initTableViewHeaderView()

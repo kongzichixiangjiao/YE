@@ -23,7 +23,6 @@ class YYCompetitionViewController: YYBaseTableViewController {
     }
     
     override func initTableView() {
-        isShowTabbar = true
         saveAreaBottomSpaceType = .normal44
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension

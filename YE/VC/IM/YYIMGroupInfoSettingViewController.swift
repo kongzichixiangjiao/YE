@@ -26,7 +26,6 @@ class YYIMGroupInfoSettingViewController: YYBaseTableViewController {
     
     override func initTableView() {
         super.initTableView()
-        isShowTabbar = true
         saveAreaBottomSpaceType = .normal44
         registerNibWithIdentifier(YYIMGroupInfoSettingCell.identifier)
         registerNibWithIdentifier(YYIMGroupInfoSettingButtonCell.identifier)

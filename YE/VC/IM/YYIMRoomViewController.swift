@@ -31,7 +31,6 @@ class YYIMRoomViewController: YYBaseTableViewController {
     
     override func initTableView() {
         super.initTableView()
-        isShowTabbar = true
         saveAreaBottomSpaceType = .normal44
         registerNibWithIdentifier(YYIMGroupCell.identifier)
     }

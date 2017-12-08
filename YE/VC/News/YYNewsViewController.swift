@@ -26,7 +26,6 @@ class YYNewsViewController: YYBaseTableViewController {
     
     override func initTableView() {
         super.initTableView()
-        isShowTabbar = true
         saveAreaBottomSpaceType = .normal44
         registerNibWithIdentifier(YYIMAddFriendCell.identifier)
     }

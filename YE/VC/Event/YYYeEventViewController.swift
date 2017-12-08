@@ -41,7 +41,6 @@ class YYYeEventViewController: YYBaseTableViewController {
     }
     
     override func initTableView() {
-//        isShowTabbar = true
 //        tableViewFrameType = .normal44
 //        registerNibWithIdentifier(YYIMGroupCell.identifier)
     }

@@ -38,7 +38,6 @@ class YYMyViewController: YYBaseTableViewController {
     }
     
     override func initTableView() {
-        isShowTabbar = true
         saveAreaBottomSpaceType = .normal44
         registerNibWithIdentifier(YYMyBasicCell.identifier)
         registerNibWithIdentifier(YYSpaceCell.identifier)
@@ -112,7 +111,8 @@ extension YYMyViewController {
         let dic = self.dataSource[indexPath.row - 1] as! [String : Any]
         
         if dic[YYKey.myTitle] as! String == "RxSwift" {
-            push(YYRxSwiftViewController(nibName: "YYRxSwiftViewController", bundle: nil))
+            let vc = YYRxSwiftViewController(nibName: "YYRxSwiftViewController", bundle: nil)
+            push(vc)
         }
         if dic[YYKey.myTitle] as! String == "SwiftDate" {
             push(YYSwiftDateViewController(nibName: "YYSwiftDateViewController", bundle: nil))

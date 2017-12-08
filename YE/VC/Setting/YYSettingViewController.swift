@@ -32,7 +32,6 @@ class YYSettingViewController: YYBaseTableViewController {
     }
     
     override func initTableView() {
-        isShowTabbar = true
         saveAreaBottomSpaceType = .normal44
         registerNibWithIdentifier(YYSettingCell.identifier)
         tableView.tableFooterView = initTableFooterView()

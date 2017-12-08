@@ -92,7 +92,6 @@ class YYIMFriendListViewController: YYBaseTableViewController {
     override func initTableView() {
         super.initTableView()
         isCancleX = true
-        isShowTabbar = true
         saveAreaBottomSpaceType = isCanSelected ? .normal44 : .normal0
         registerNibWithIdentifier(YYIMFriendCell.identifier)
     }

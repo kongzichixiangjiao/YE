@@ -12,8 +12,7 @@ class YYNavigationViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,4 +26,15 @@ class YYNavigationViewController: UINavigationController {
         self.navigationBar.isHidden = true;
     }
 
+}
+
+extension YYNavigationViewController: UINavigationControllerDelegate {
+    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        viewController.hidesBottomBarWhenPushed = true
+        super.pushViewController(viewController, animated: true)
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        
+    }
 }

@@ -195,7 +195,6 @@ class YYHomeViewController: YYBaseTableViewController {
     }
         
     override func initTableView() {
-        isShowTabbar = true
         saveAreaBottomSpaceType = .normal44
 //        registerNibWithIdentifier(kYYHomeBasicCell)
         

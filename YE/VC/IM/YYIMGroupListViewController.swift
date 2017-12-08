@@ -30,7 +30,6 @@ class YYIMGroupListViewController: YYBaseTableViewController {
     override func initTableView() {
         super.initTableView()
         isCancleX = true
-        isShowTabbar = true
         saveAreaBottomSpaceType = .normal0
         registerNibWithIdentifier(YYIMGroupCell.identifier)
     }

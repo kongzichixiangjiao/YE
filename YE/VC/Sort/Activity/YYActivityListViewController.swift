@@ -80,7 +80,6 @@ class YYActivityListViewController: YYBaseTableViewController {
     }
     
     override func initTableView() {
-        isShowTabbar = true
         saveAreaBottomSpaceType = .normal44
         registerNibWithIdentifier(YYActivityListCell.identifier)
         self.footerView()

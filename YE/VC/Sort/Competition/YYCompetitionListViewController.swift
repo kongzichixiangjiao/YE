@@ -19,7 +19,6 @@ class YYCompetitionListViewController: YYBaseTableViewController {
     }
     
     override func initTableView() {
-        isShowTabbar = true
         saveAreaBottomSpaceType = .normal44
         registerNibWithIdentifier(YYCompetitionListCell.identifier)
         self.footerView()

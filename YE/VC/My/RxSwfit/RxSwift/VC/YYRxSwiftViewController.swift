@@ -28,7 +28,7 @@ class YYRxSwiftViewController: YYXIBBaseViewController {
     }
     
     override func clickedRightButtonAction(_ sender: UIButton) {
-        
+        push(YYRxSwiftPlusViewController(nibName: "YYRxSwiftPlusViewController", bundle: nil))
     }
     
     @IBAction func pushRxSwiftTestVC(_ sender: UIButton) {
