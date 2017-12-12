@@ -312,6 +312,12 @@
 		DCA8A4B71FD808E80042537E /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA8A4A51FD808E80042537E /* Service.swift */; };
 		DCA8A4B81FD808E80042537E /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA8A4A61FD808E80042537E /* ViewModelProtocol.swift */; };
 		DCA8A4B91FD808E80042537E /* ViewModelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA8A4A71FD808E80042537E /* ViewModelService.swift */; };
+		DCBDF1161FDFC4CF00DC18FB /* YYFontLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBDF1151FDFC4CF00DC18FB /* YYFontLabel.swift */; };
+		DCDAF7DC1FDE2F5F00E7CE3A /* YYRxSwfitLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDAF7DA1FDE2F5F00E7CE3A /* YYRxSwfitLoginViewController.swift */; };
+		DCDAF7DD1FDE2F5F00E7CE3A /* YYRxSwfitLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCDAF7DB1FDE2F5F00E7CE3A /* YYRxSwfitLoginViewController.xib */; };
+		DCDAF7F41FDE742000E7CE3A /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDAF7F31FDE742000E7CE3A /* UIImageView+Extension.swift */; };
+		DCDAF7F81FDE7E2100E7CE3A /* YYResizeImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDAF7F61FDE7E2100E7CE3A /* YYResizeImageViewController.swift */; };
+		DCDAF7FB1FDE7E8600E7CE3A /* YYResizeImageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCDAF7FA1FDE7E8600E7CE3A /* YYResizeImageViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -628,6 +634,12 @@
 		DCA8A4A51FD808E80042537E /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		DCA8A4A61FD808E80042537E /* ViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		DCA8A4A71FD808E80042537E /* ViewModelService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelService.swift; sourceTree = "<group>"; };
+		DCBDF1151FDFC4CF00DC18FB /* YYFontLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYFontLabel.swift; sourceTree = "<group>"; };
+		DCDAF7DA1FDE2F5F00E7CE3A /* YYRxSwfitLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYRxSwfitLoginViewController.swift; sourceTree = "<group>"; };
+		DCDAF7DB1FDE2F5F00E7CE3A /* YYRxSwfitLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYRxSwfitLoginViewController.xib; sourceTree = "<group>"; };
+		DCDAF7F31FDE742000E7CE3A /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
+		DCDAF7F61FDE7E2100E7CE3A /* YYResizeImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYResizeImageViewController.swift; sourceTree = "<group>"; };
+		DCDAF7FA1FDE7E8600E7CE3A /* YYResizeImageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = YYResizeImageViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -830,6 +842,7 @@
 				DC7A49CE1FCFDEDC0028F308 /* Date+Extension.swift */,
 				DC65BD681FD8ED3900204B7E /* Int+Extension.swift */,
 				DC74B8C81FDA3ED400640964 /* ViewController+Extension.swift */,
+				DCDAF7F31FDE742000E7CE3A /* UIImageView+Extension.swift */,
 			);
 			path = EXTENSION;
 			sourceTree = "<group>";
@@ -933,6 +946,7 @@
 				94D3891F1F39C23900F974A6 /* YYSpaceCell.swift */,
 				94D389201F39C23900F974A6 /* YYSpaceCell.xib */,
 				94D389211F39C23900F974A6 /* YYWebView.swift */,
+				DCBDF1151FDFC4CF00DC18FB /* YYFontLabel.swift */,
 			);
 			path = PUBLIC;
 			sourceTree = "<group>";
@@ -1026,6 +1040,8 @@
 				94D389441F39C23900F974A6 /* News */,
 				94D389461F39C23900F974A6 /* Setting */,
 				94D389481F39C23900F974A6 /* Sort */,
+				DCDAF7F61FDE7E2100E7CE3A /* YYResizeImageViewController.swift */,
+				DCDAF7FA1FDE7E8600E7CE3A /* YYResizeImageViewController.storyboard */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -1530,6 +1546,8 @@
 				DC74B8721FDA2DD100640964 /* YYRxSwiftTestViewController.swift */,
 				DC74B8731FDA2DD100640964 /* YYRxSwiftViewController.swift */,
 				DC74B8741FDA2DD100640964 /* YYRxSwiftViewController.xib */,
+				DCDAF7DA1FDE2F5F00E7CE3A /* YYRxSwfitLoginViewController.swift */,
+				DCDAF7DB1FDE2F5F00E7CE3A /* YYRxSwfitLoginViewController.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -1890,6 +1908,7 @@
 				DC6770C31FD697D400E79A07 /* Player_center_play.png in Resources */,
 				DC6770C11FD697D400E79A07 /* Player_brightness.png in Resources */,
 				94D38A551F39C23A00F974A6 /* YYCompetitionListCell.xib in Resources */,
+				DCDAF7FB1FDE7E8600E7CE3A /* YYResizeImageViewController.storyboard in Resources */,
 				DC74B87E1FDA2DD100640964 /* YYRxSwiftTestTableViewController.xib in Resources */,
 				94D38A631F39C33300F974A6 /* Assets.xcassets in Resources */,
 				DC7E7FCB1FD91D6B00859B00 /* YYRxMVVMViewController.xib in Resources */,
@@ -1975,6 +1994,7 @@
 				DC75E40E1FD12AA400332BE5 /* LYPlayer_shrinkscreen.png in Resources */,
 				DC7A49CA1FCF95870028F308 /* YYSwiftDateViewController.xib in Resources */,
 				94D389B81F39C23A00F974A6 /* cgts.jpg in Resources */,
+				DCDAF7DD1FDE2F5F00E7CE3A /* YYRxSwfitLoginViewController.xib in Resources */,
 				94D389C41F39C23A00F974A6 /* IMG_3027.jpg in Resources */,
 				DC6770C51FD697D400E79A07 /* Player_lock-nor.png in Resources */,
 				DC65BD5E1FD8E16F00204B7E /* YYRxMVCViewController.xib in Resources */,
@@ -2133,7 +2153,9 @@
 				94D38A351F39C23A00F974A6 /* YYIMAddFriendCell.swift in Sources */,
 				DC3858F51FC7E9A100244649 /* YYReuseCollectionView.swift in Sources */,
 				94D38A0A1F39C23A00F974A6 /* YYIMContactSelectionViewController.swift in Sources */,
+				DCDAF7F81FDE7E2100E7CE3A /* YYResizeImageViewController.swift in Sources */,
 				94D389D31F39C23A00F974A6 /* HuanXin.swift in Sources */,
+				DCDAF7DC1FDE2F5F00E7CE3A /* YYRxSwfitLoginViewController.swift in Sources */,
 				94D389E81F39C23A00F974A6 /* YYSelfViewManager.swift in Sources */,
 				94D389DE1F39C23A00F974A6 /* YYAlertLoadingView.swift in Sources */,
 				DC75E3DC1FD1037A00332BE5 /* MediaManager.swift in Sources */,
@@ -2184,6 +2206,7 @@
 				94D389B31F39C23A00F974A6 /* UIColor+Extension.swift in Sources */,
 				DC8712921FCBD21A00C73D27 /* YYAutoScrollView.swift in Sources */,
 				DC75E3F21FD12A1E00332BE5 /* LYBrightnessView.swift in Sources */,
+				DCDAF7F41FDE742000E7CE3A /* UIImageView+Extension.swift in Sources */,
 				94D38A501F39C23A00F974A6 /* YYCompetitionDetailsBottomView.swift in Sources */,
 				94D389EF1F39C23A00F974A6 /* GA_RefreshHeaderView.swift in Sources */,
 				94D38A4E1F39C23A00F974A6 /* YYCompetitionCommentSectionView.swift in Sources */,
@@ -2263,6 +2286,7 @@
 				DCA8A4B91FD808E80042537E /* ViewModelService.swift in Sources */,
 				DC75E3F81FD12A1E00332BE5 /* LYPlayerGesture.swift in Sources */,
 				94D3899F1F39C23A00F974A6 /* YYBaseCollectionViewController.swift in Sources */,
+				DCBDF1161FDFC4CF00DC18FB /* YYFontLabel.swift in Sources */,
 				94D38A181F39C23A00F974A6 /* YYSettingViewController.swift in Sources */,
 				94D389D41F39C23A00F974A6 /* Theme.swift in Sources */,
 				94D38A061F39C23A00F974A6 /* YYHomeViewController.swift in Sources */,

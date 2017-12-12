@@ -65,7 +65,7 @@ extension UIImage {
     func compressImage(_ maxLength: Int) -> Data? {
         
         let newSize = self.scaleImage(self, imageLength: 300)
-        let newImage = self.resizeImage(self, newSize: newSize)
+        let newImage = self.resizeImage(newSize: newSize)
         
         var compress:CGFloat = 0.9
         var data = UIImageJPEGRepresentation(newImage, compress)
@@ -123,9 +123,9 @@ extension UIImage {
      *
      *  return 调整后的图片
      */
-    func resizeImage(_ image: UIImage, newSize: CGSize) -> UIImage {
+    func resizeImage(newSize: CGSize) -> UIImage {
         UIGraphicsBeginImageContext(newSize)
-        image.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
+        self.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
         
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()

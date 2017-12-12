@@ -26,8 +26,11 @@ pod 'EaseUILite', :git =>'https://github.com/easemob/easeui-ios-hyphenate-cocoap
 
 #类似懒加载小工具
 pod 'Then'
+
 #日期工具
 pod 'SwiftDate'
+#更直观的日期工具 大撒子都能看懂
+pod 'Timepiece'
 
 # 优雅书写swift
 pod 'RxSwift'
@@ -60,6 +63,8 @@ pod 'RxSwiftExt'
 
 #加密
 pod 'SwiftyRSA'
+#加密更齐全
+#pod 'CryptoSwift'
 
 #布局
 pod 'SnapKit'
@@ -70,4 +75,31 @@ pod 'Kingfisher'
 #播放器控件
 #pod 'EZPlayer' // 项目必须适配横竖屏 项目内已经封装一层
 #pod 'LYPlayer' // 手势退出没有暂停播放器
+
+#动画类
+#https://github.com/lkzhao/Hero
+pod 'Hero'
+
+#获取设备信息
+pod 'DeviceKit'
+
+#图标库
+#pod 'Charts'
+
+#用户指导页
+#pod 'Onboard'
+
+#FPS，CPU 使用情
+pod 'GDPerformanceView-Swift'
+
+#日历
+#pod 'FSCalendar'
+
+#Twitter 图片浏览
+#pod 'ImageViewer'
+
+# core data
+#pod 'ensembles'
+
+
 end

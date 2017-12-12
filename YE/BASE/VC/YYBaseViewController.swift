@@ -64,7 +64,7 @@ class YYBaseViewController: UIViewController {
                 height -= kNavigationViewBottomSpace
             }
         }
-        let v = YYBaseNavigationView(frame: CGRect(x: 0, y: insets.bottom, width: self.view.frame.size.width, height: height))
+        let v = YYBaseNavigationView(frame: CGRect(x: 0, y: insets.bottom, width: UIScreen.main.bounds.width, height: height))
         v.myDelegate = self
         self.view.addSubview(v)
         
@@ -100,6 +100,10 @@ class YYBaseViewController: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    open func storyboard(name: String) -> UIStoryboard {
+        return UIStoryboard(name: name, bundle: nil)
     }
     
     open func push(_ vc: UIViewController) {

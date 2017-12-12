@@ -30,7 +30,19 @@ class YYRxSwiftPlusViewController: UIViewController {
             }.map({$0.description})
             .bind(to: l.rx.text)
             .disposed(by: self.rx.disposeBag)
+        
+        b.rx.tap
+            .subscribe(onNext: {
+                [weak self] in
+                self?.clear()
+            }).disposed(by: self.rx.disposeBag)
+    }
     
+    func clear() {
+        t1.text = ""
+        t2.text = ""
+        t3.text = ""
+        l.text = "0"
     }
     
     override func didReceiveMemoryWarning() {
