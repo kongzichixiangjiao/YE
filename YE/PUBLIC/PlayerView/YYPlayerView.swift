@@ -55,6 +55,7 @@
  *  10、系统声音调节
  *  11、快进/快退
  *  12、点击屏幕隐藏/展示上下渐变层
+ *  13、获取图片第一帧
  */
 
 import UIKit
@@ -358,7 +359,9 @@ class YYPlayerView: UIView {
     // 初始化配置
     private func config(url: URL) {
         maskImageView.isHidden = !isShowMaskImageView
-        vidoeImage(url: url)
+        
+        vidoeFirstImage(url: url)
+        
         playAndPauseButton.playState = .pause
         
         YYPlayer.share.url = url
@@ -369,7 +372,8 @@ class YYPlayerView: UIView {
         YYPlayer.share.playFinished = self.playFinished
     }
     
-    func vidoeImage(url:URL) {
+    // 第一帧图片获取
+    private func vidoeFirstImage(url:URL) {
         if !maskImageView.isHidden {
             DispatchQueue.global().async {
                 let opts = [AVURLAssetPreferPreciseDurationAndTimingKey : false]
@@ -379,12 +383,12 @@ class YYPlayerView: UIView {
                 var actualTime = CMTimeMake(0,600) //  CMTimeMake(a,b) a/b = 当前秒   a当前第几帧, b每秒钟多少帧
                 let time = CMTimeMakeWithSeconds(10, 60) //  CMTimeMakeWithSeconds(a,b) a当前时间,b每秒钟多少帧
                 var cgImage: CGImage!
-                do{
+                do {
                     cgImage = try generator.copyCGImage(at: time, actualTime: &actualTime)
                     DispatchQueue.main.async {
                         self.maskImageView.image = UIImage(cgImage: cgImage)
                     }
-                }catch let error as NSError{
+                } catch let error as NSError{
                     print(error)
                 }
             }
