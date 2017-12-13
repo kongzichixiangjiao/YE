@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DeviceKit
 
 class YYFontLabel: UILabel {
     
@@ -14,7 +15,16 @@ class YYFontLabel: UILabel {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-//        if 
+        
+        let device = Device()
+        switch device {
+        case .simulator(.iPhone5s), .simulator(.iPhone5), .simulator(.iPhone5c), .iPhone5, .iPhone5c, .iPhone5s:
+            self.font = UIFont.systemFont(ofSize: font_5s)
+            break
+        default:
+            break
+        }
+        
     }
     
 }

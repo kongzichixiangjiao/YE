@@ -18,26 +18,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="YYResizeImageViewCell" id="jo8-6X-xty" customClass="YYResizeImageViewCell">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="YYResizeImageViewCell" id="qdB-Sd-DKg" customClass="YYResizeImageViewCell" customModule="YE" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jo8-6X-xty" id="v7K-e6-KKm">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qdB-Sd-DKg" id="B6v-z6-jbE">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tZv-J6-7i6">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LFq-Go-UEo">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="33.5"/>
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="tZv-J6-7i6" firstAttribute="top" secondItem="v7K-e6-KKm" secondAttribute="top" id="4Tr-It-f51"/>
-                                        <constraint firstAttribute="trailing" secondItem="tZv-J6-7i6" secondAttribute="trailing" id="TaS-0V-cLS"/>
-                                        <constraint firstItem="tZv-J6-7i6" firstAttribute="leading" secondItem="v7K-e6-KKm" secondAttribute="leading" id="Zbi-vy-xtX"/>
-                                        <constraint firstAttribute="bottom" secondItem="tZv-J6-7i6" secondAttribute="bottom" id="mQt-mU-gTD"/>
+                                        <constraint firstItem="LFq-Go-UEo" firstAttribute="leading" secondItem="B6v-z6-jbE" secondAttribute="leading" id="LDH-NG-pJT"/>
+                                        <constraint firstAttribute="trailing" secondItem="LFq-Go-UEo" secondAttribute="trailing" id="ME6-pL-iQI"/>
+                                        <constraint firstItem="LFq-Go-UEo" firstAttribute="top" secondItem="B6v-z6-jbE" secondAttribute="top" id="QCk-C8-2ZN"/>
+                                        <constraint firstAttribute="bottom" secondItem="LFq-Go-UEo" secondAttribute="bottom" constant="10" id="rxw-ca-4hp"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="bigImageView" destination="tZv-J6-7i6" id="k8D-og-yQH"/>
+                                    <outlet property="bigImageView" destination="LFq-Go-UEo" id="1s2-bt-a7R"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

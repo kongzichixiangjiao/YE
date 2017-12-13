@@ -13,3 +13,9 @@ extension Int {
         return String(self)
     }
 }
+
+extension uint {
+    func toString() -> String {
+        return String(self)
+    }
+}

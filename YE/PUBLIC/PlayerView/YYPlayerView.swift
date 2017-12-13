@@ -358,7 +358,7 @@ class YYPlayerView: UIView {
     // 初始化配置
     private func config(url: URL) {
         maskImageView.isHidden = !isShowMaskImageView
-        
+        vidoeImage(url: url)
         playAndPauseButton.playState = .pause
         
         YYPlayer.share.url = url
@@ -367,6 +367,28 @@ class YYPlayerView: UIView {
         YYPlayer.share.displayLinkHandler = self.displayLinkHandler
         YYPlayer.share.playerInfo = self.playerInfo
         YYPlayer.share.playFinished = self.playFinished
+    }
+    
+    func vidoeImage(url:URL) {
+        if !maskImageView.isHidden {
+            DispatchQueue.global().async {
+                let opts = [AVURLAssetPreferPreciseDurationAndTimingKey : false]
+                let asset = AVURLAsset(url: url, options: opts)
+                let generator = AVAssetImageGenerator(asset: asset)
+                generator.appliesPreferredTrackTransform = true
+                var actualTime = CMTimeMake(0,600) //  CMTimeMake(a,b) a/b = 当前秒   a当前第几帧, b每秒钟多少帧
+                let time = CMTimeMakeWithSeconds(10, 60) //  CMTimeMakeWithSeconds(a,b) a当前时间,b每秒钟多少帧
+                var cgImage: CGImage!
+                do{
+                    cgImage = try generator.copyCGImage(at: time, actualTime: &actualTime)
+                    DispatchQueue.main.async {
+                        self.maskImageView.image = UIImage(cgImage: cgImage)
+                    }
+                }catch let error as NSError{
+                    print(error)
+                }
+            }
+        }
     }
     
     // 实时更新进度条和时间的闭包

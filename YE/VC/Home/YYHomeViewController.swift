@@ -9,6 +9,7 @@
 import UIKit
 //import SQLite
 import Then
+import DeviceKit
 
 class YYTestView: UIView {
     override init(frame: CGRect) {
@@ -251,9 +252,9 @@ class YYHomeViewController: YYBaseTableViewController {
     }
     
     override func clickedRightButtonAction(_ sender: UIButton) {
-        push(YYTestViewController())
+//        push(YYTestViewController())
         let vc = UIStoryboard(name: "YYResizeImageViewController", bundle: nil).instantiateInitialViewController()
-//        push(vc!)
+        push(vc!)
     }
     
     override func clickedNavigationViewOtherRightButton(_ sender: UIButton) {

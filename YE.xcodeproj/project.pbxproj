@@ -293,6 +293,7 @@
 		DC89F1DB1FCCF2A90059B791 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC89F1DA1FCCF2A90059B791 /* UIDevice+Extension.swift */; };
 		DC8A70091FD4F8EE006D22D6 /* LYPlayer_center_play.png in Resources */ = {isa = PBXBuildFile; fileRef = DC8A70071FD4F8ED006D22D6 /* LYPlayer_center_play.png */; };
 		DC8A700A1FD4F8EE006D22D6 /* LYPlayer_center_pause.png in Resources */ = {isa = PBXBuildFile; fileRef = DC8A70081FD4F8EE006D22D6 /* LYPlayer_center_pause.png */; };
+		DC987D071FE0CA94009B9CFA /* GARegular.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC987D061FE0CA94009B9CFA /* GARegular.swift */; };
 		DCA8A4871FD7F5D80042537E /* YYLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA8A4861FD7F5D80042537E /* YYLog.swift */; };
 		DCA8A4A81FD808E80042537E /* BaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA8A48E1FD808E80042537E /* BaseTabBarViewController.swift */; };
 		DCA8A4A91FD808E80042537E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA8A48F1FD808E80042537E /* BaseViewController.swift */; };
@@ -615,6 +616,7 @@
 		DC89F1DA1FCCF2A90059B791 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		DC8A70071FD4F8ED006D22D6 /* LYPlayer_center_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LYPlayer_center_play.png; sourceTree = "<group>"; };
 		DC8A70081FD4F8EE006D22D6 /* LYPlayer_center_pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LYPlayer_center_pause.png; sourceTree = "<group>"; };
+		DC987D061FE0CA94009B9CFA /* GARegular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GARegular.swift; sourceTree = "<group>"; };
 		DCA8A4861FD7F5D80042537E /* YYLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYLog.swift; sourceTree = "<group>"; };
 		DCA8A48E1FD808E80042537E /* BaseTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarViewController.swift; sourceTree = "<group>"; };
 		DCA8A48F1FD808E80042537E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -1022,6 +1024,7 @@
 				94A61ABA1F3DA37A0014A335 /* YYSQLite.swift */,
 				DC7A49D01FCFEE0D0028F308 /* HTML.swift */,
 				DCA8A4861FD7F5D80042537E /* YYLog.swift */,
+				DC987D061FE0CA94009B9CFA /* GARegular.swift */,
 			);
 			path = TOOL;
 			sourceTree = "<group>";
@@ -1029,6 +1032,7 @@
 		94D389271F39C23900F974A6 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				DC987D081FE0D3EC009B9CFA /* Other */,
 				DC75E3DE1FD107A800332BE5 /* Player */,
 				949634561F41872F0079886E /* Competition */,
 				94D389281F39C23900F974A6 /* Alert */,
@@ -1040,8 +1044,6 @@
 				94D389441F39C23900F974A6 /* News */,
 				94D389461F39C23900F974A6 /* Setting */,
 				94D389481F39C23900F974A6 /* Sort */,
-				DCDAF7F61FDE7E2100E7CE3A /* YYResizeImageViewController.swift */,
-				DCDAF7FA1FDE7E8600E7CE3A /* YYResizeImageViewController.storyboard */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -1729,6 +1731,15 @@
 			path = AnimationView;
 			sourceTree = "<group>";
 		};
+		DC987D081FE0D3EC009B9CFA /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				DCDAF7F61FDE7E2100E7CE3A /* YYResizeImageViewController.swift */,
+				DCDAF7FA1FDE7E8600E7CE3A /* YYResizeImageViewController.storyboard */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		DCA8A48C1FD808E80042537E /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
@@ -2058,9 +2069,12 @@
 				"${BUILT_PRODUCTS_DIR}/Action/Action.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/DACircularProgress/DACircularProgress.framework",
+				"${BUILT_PRODUCTS_DIR}/DeviceKit/DeviceKit.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/EaseUILite/EaseUILite.framework",
+				"${BUILT_PRODUCTS_DIR}/GDPerformanceView-Swift/GDPerformanceView_Swift.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
 				"${PODS_ROOT}/HyphenateLite/ios_IM_HyphenateLite_sdk_3.3.6/HyphenateSDK/HyphenateLite.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
@@ -2080,15 +2094,19 @@
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyRSA/SwiftyRSA.framework",
 				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
+				"${BUILT_PRODUCTS_DIR}/Timepiece/Timepiece.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Action.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DACircularProgress.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DeviceKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EaseUILite.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GDPerformanceView_Swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HyphenateLite.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
@@ -2108,6 +2126,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyRSA.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Timepiece.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2168,6 +2187,7 @@
 				9496345C1F41880F0079886E /* YYCompetitionCell.swift in Sources */,
 				94D389A21F39C23A00F974A6 /* YYBaseViewController.swift in Sources */,
 				DCA8A4AB1FD808E80042537E /* DataModel.swift in Sources */,
+				DC987D071FE0CA94009B9CFA /* GARegular.swift in Sources */,
 				DC75E3F91FD12A1E00332BE5 /* LYPlayerSlider.swift in Sources */,
 				94D389CC1F39C23A00F974A6 /* YYNavigationViewController.swift in Sources */,
 				94D38A2C1F39C23A00F974A6 /* YYHomeTopView.swift in Sources */,
@@ -2476,6 +2496,7 @@
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
 					"\"${PODS_ROOT}/Headers/Public/HyphenateLite\"",
+					"\"${PODS_ROOT}/Headers/Public/DeviceKit\"",
 				);
 				INFOPLIST_FILE = YE/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -2501,6 +2522,7 @@
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
 					"\"${PODS_ROOT}/Headers/Public/HyphenateLite\"",
+					"\"${PODS_ROOT}/Headers/Public/DeviceKit\"",
 				);
 				INFOPLIST_FILE = YE/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

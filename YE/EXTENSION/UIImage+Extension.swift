@@ -120,16 +120,23 @@ extension UIImage {
      *
      *  image   原始图片
      *  newSize 指定的size
+     *  scale 缩放比例 <2 虚
      *
      *  return 调整后的图片
      */
-    func resizeImage(newSize: CGSize) -> UIImage {
+    func resizeImage(newSize: CGSize, scale: CGFloat = 2) -> UIImage {
         UIGraphicsBeginImageContext(newSize)
+        
+        UIGraphicsBeginImageContextWithOptions(newSize, false, scale)
+        
         self.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
         
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        
         UIGraphicsEndImageContext()
         
         return newImage!
     }
+    
+    
 }
