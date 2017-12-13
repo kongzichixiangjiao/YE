@@ -20,7 +20,7 @@ class YYXIBBaseViewController: YYBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let _ = self.backView {
-            self.backView.backgroundColor = UIColor.white
+            self.backView.backgroundColor = UIColor.blue
         }
     }
     
@@ -28,6 +28,14 @@ class YYXIBBaseViewController: YYBaseViewController {
         super.viewWillLayoutSubviews()
         
         setupBackViewConstant()
+        
+        if #available(iOS 11.0, *) {
+            self.tableView.contentInsetAdjustmentBehavior = .never
+        }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
     }
     
     func setupBackViewConstant() {
@@ -38,12 +46,12 @@ class YYXIBBaseViewController: YYBaseViewController {
                 if constraint.firstAttribute == .top {
                     if ((constraint.secondItem as? UIView)!.isEqual(backView)) {
                         constraint.constant = topConstant
+                        self.backView.layoutIfNeeded()
                     }
                 }
             }
         }
     }
-    
     
     open func registerClassWithIdentifier(_ identifier: String) {
         tableView.register(NSClassFromString(identifier), forCellReuseIdentifier: identifier)

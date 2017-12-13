@@ -43,23 +43,20 @@ class YYRxSwiftTestTableViewController: YYXIBBaseViewController {
         
         tableView.register(UINib(nibName: YYRxSwiftViewCell.identifier, bundle: nil), forCellReuseIdentifier: YYRxSwiftViewCell.identifier)
         
-        //        rx_tableView_0()
-        //        rx_tableView_1()
-                rx_tableView_2()
-    }
-    
-    
-    func rx_tableView_2() {
-        YYRequest.share.provider.request(.getNewsList) { (result) in
-            switch result {
-            case .success:
-                self.dataArr.value = (result.value?.mapModel(YYRxSwiftNewsModel.self).stories)!
-                break
-            case .failure:
-                print(result.error ?? "--")
-                break
+        self.tableView.ga_addRefreshHeaderXIB(GA_AnimationRefreshHeaderView.loadView()) {
+            [weak self] in
+            if let weakSelf = self {
+                weakSelf.requestData()
             }
         }
+        
+        //        rx_tableView_0()
+        //        rx_tableView_1()
+        rx_tableView_2()
+    }
+    
+    func rx_tableView_2() {
+        requestData()
         
         self.dataArr
             .asObservable()
@@ -71,8 +68,22 @@ class YYRxSwiftTestTableViewController: YYXIBBaseViewController {
             .disposed(by: disposeBag)
     }
     
+    func requestData() {
+        YYRequest.share.provider.request(.getNewsList) { (result) in
+            switch result {
+            case .success:
+                self.dataArr.value += (result.value?.mapModel(YYRxSwiftNewsModel.self).stories)!
+                break
+            case .failure:
+                print(result.error ?? "--")
+                break
+            }
+            
+            self.tableView.ga_XIBendRefreshing()
+        }
+    }
+    
     func rx_tableView_1() {
-        
         let dataSource = RxTableViewSectionedReloadDataSource<SectionModel<String, Double>>(configureCell: {
             dataSource, tableView, indexPath, item in
             let cell = tableView.dequeueReusableCell(withIdentifier: YYRxSwiftViewCell.identifier) as! YYRxSwiftViewCell
@@ -96,7 +107,6 @@ class YYRxSwiftTestTableViewController: YYXIBBaseViewController {
     }
     
     func rx_tableView_0() {
-        
         let items = Observable.just(
             (0...20).map{ "\($0)" }
         )
@@ -115,7 +125,6 @@ class YYRxSwiftTestTableViewController: YYXIBBaseViewController {
                     if let selectedRowIndexPath = self.tableView.indexPathForSelectedRow {
                         self.tableView.deselectRow(at: selectedRowIndexPath, animated: true)
                     }
-                    
                     print("click \(value)")
             })
             .disposed(by: disposeBag)
