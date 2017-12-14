@@ -290,6 +290,9 @@
 		DC7E7FCD1FD91E9B00859B00 /* RepositoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7E7FCC1FD91E9B00859B00 /* RepositoryListViewModel.swift */; };
 		DC7E7FCF1FD9206400859B00 /* RepositoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7E7FCE1FD9206400859B00 /* RepositoryViewModel.swift */; };
 		DC810E811FE2291C000D1C19 /* YYXIBBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC810E801FE2291C000D1C19 /* YYXIBBaseTableViewController.swift */; };
+		DC810E841FE26F23000D1C19 /* YYADViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC810E821FE26F23000D1C19 /* YYADViewController.swift */; };
+		DC810E851FE26F23000D1C19 /* YYADViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC810E831FE26F23000D1C19 /* YYADViewController.xib */; };
+		DC810E871FE26F75000D1C19 /* YYWaterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC810E861FE26F75000D1C19 /* YYWaterView.swift */; };
 		DC8712921FCBD21A00C73D27 /* YYAutoScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8712911FCBD21A00C73D27 /* YYAutoScrollView.swift */; };
 		DC89F1DB1FCCF2A90059B791 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC89F1DA1FCCF2A90059B791 /* UIDevice+Extension.swift */; };
 		DC8A70091FD4F8EE006D22D6 /* LYPlayer_center_play.png in Resources */ = {isa = PBXBuildFile; fileRef = DC8A70071FD4F8ED006D22D6 /* LYPlayer_center_play.png */; };
@@ -614,6 +617,9 @@
 		DC7E7FCC1FD91E9B00859B00 /* RepositoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListViewModel.swift; sourceTree = "<group>"; };
 		DC7E7FCE1FD9206400859B00 /* RepositoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryViewModel.swift; sourceTree = "<group>"; };
 		DC810E801FE2291C000D1C19 /* YYXIBBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYXIBBaseTableViewController.swift; sourceTree = "<group>"; };
+		DC810E821FE26F23000D1C19 /* YYADViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYADViewController.swift; sourceTree = "<group>"; };
+		DC810E831FE26F23000D1C19 /* YYADViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYADViewController.xib; sourceTree = "<group>"; };
+		DC810E861FE26F75000D1C19 /* YYWaterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYWaterView.swift; sourceTree = "<group>"; };
 		DC8712911FCBD21A00C73D27 /* YYAutoScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYAutoScrollView.swift; sourceTree = "<group>"; };
 		DC89F1DA1FCCF2A90059B791 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		DC8A70071FD4F8ED006D22D6 /* LYPlayer_center_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LYPlayer_center_play.png; sourceTree = "<group>"; };
@@ -952,6 +958,7 @@
 				94D389201F39C23900F974A6 /* YYSpaceCell.xib */,
 				94D389211F39C23900F974A6 /* YYWebView.swift */,
 				DCBDF1151FDFC4CF00DC18FB /* YYFontLabel.swift */,
+				DC810E861FE26F75000D1C19 /* YYWaterView.swift */,
 			);
 			path = PUBLIC;
 			sourceTree = "<group>";
@@ -1852,6 +1859,8 @@
 		DCB946A81FE10BE900958542 /* AD */ = {
 			isa = PBXGroup;
 			children = (
+				DC810E821FE26F23000D1C19 /* YYADViewController.swift */,
+				DC810E831FE26F23000D1C19 /* YYADViewController.xib */,
 			);
 			path = AD;
 			sourceTree = "<group>";
@@ -1931,6 +1940,7 @@
 			files = (
 				94D38A4D1F39C23A00F974A6 /* YYCompetitionCommentCell.xib in Resources */,
 				DC6770CA1FD697D400E79A07 /* Player_top_shadel.png in Resources */,
+				DC810E851FE26F23000D1C19 /* YYADViewController.xib in Resources */,
 				DC75E40B1FD12AA400332BE5 /* LYPlayer_lock-nor.png in Resources */,
 				94D389EC1F39C23A00F974A6 /* GA_AnimationRefreshHeaderView.xib in Resources */,
 				DC6770C91FD697D400E79A07 /* Player_slider.png in Resources */,
@@ -2223,6 +2233,7 @@
 				94D389A31F39C23A00F974A6 /* YYBaseNavigationView.swift in Sources */,
 				94D38A031F39C23A00F974A6 /* YYApplyViewController.swift in Sources */,
 				94D389AA1F39C23A00F974A6 /* YYBaseTableViewFooterView.swift in Sources */,
+				DC810E871FE26F75000D1C19 /* YYWaterView.swift in Sources */,
 				DC75E3F31FD12A1E00332BE5 /* LYExtension.swift in Sources */,
 				94D38A381F39C23A00F974A6 /* YYIMFriendCell.swift in Sources */,
 				946BB2AE1F4430480062D173 /* DecoratorBase.swift in Sources */,
@@ -2353,6 +2364,7 @@
 				94D38A011F39C23A00F974A6 /* Protocol.swift in Sources */,
 				DC7E7FCD1FD91E9B00859B00 /* RepositoryListViewModel.swift in Sources */,
 				94D389CF1F39C23A00F974A6 /* YYApplyModel.swift in Sources */,
+				DC810E841FE26F23000D1C19 /* YYADViewController.swift in Sources */,
 				94D389F81F39C23A00F974A6 /* YYOnePixView.swift in Sources */,
 				94D38A021F39C23A00F974A6 /* YBAttributeTextTapForSwfit.swift in Sources */,
 				94A61ABB1F3DA37B0014A335 /* YYSQLite.swift in Sources */,

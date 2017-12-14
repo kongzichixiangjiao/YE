@@ -24,6 +24,7 @@ class YYNavigationViewController: UINavigationController {
         self.interactivePopGestureRecognizer?.addTarget(self, action: #selector(pop(gestrure:)))
         // 全屏可滑动
         object_setClass(self.interactivePopGestureRecognizer, UIPanGestureRecognizer.self)
+        // 没有push的时候使用侧滑手势出错
         // self.interactivePopGestureRecognizer?.delegate = self
     }
 

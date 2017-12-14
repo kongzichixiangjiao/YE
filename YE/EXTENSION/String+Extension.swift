@@ -167,10 +167,15 @@ extension String {
     }
 }
 
-// UIStoryboard
+// UIStoryboard XIB
 extension String {
     func yy_storyboard() -> UIStoryboard {
         return UIStoryboard(name: self, bundle: nil)
     }
+    
+    func yy_xib() -> UIViewController {
+        return UIViewController(nibName: self, bundle: nil)
+    }
+    
 }
 

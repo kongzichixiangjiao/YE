@@ -254,7 +254,10 @@ class YYHomeViewController: YYBaseTableViewController {
     override func clickedRightButtonAction(_ sender: UIButton) {
 //        push(YYTestViewController())
         
-        yy_push(storyboardName: "YYResizeImageViewController")
+//        yy_push(storyboardName: "YYResizeImageViewController")
+        let vc = YYADViewController(nibName: "YYADViewController", bundle: nil)
+
+        yy_push(vc: vc)
     }
     
     override func clickedNavigationViewOtherRightButton(_ sender: UIButton) {
