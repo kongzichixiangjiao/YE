@@ -10,9 +10,24 @@ import UIKit
 
 class YYXIBBaseTableViewController: UITableViewController {
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.yellow
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+////        self.navigationController?.navigationBar.isHidden = false
+//    }
+//    
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        self.navigationController?.navigationBar.isHidden = false
+//    }
+//
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        self.navigationController?.navigationBar.isHidden = true
+//    }
     
 }

@@ -16,9 +16,9 @@ class YYWebView: UIView {
     
     var url: String!
     var progressViewHeight: CGFloat = 2
-    var isShowProgress: Bool! {
+    var isShowProgress: Bool? {
         didSet {
-            if isShowProgress {
+            if isShowProgress! {
                 self.addSubview(progressView)
                 addObserver(webView, forKeyPath: kEstimatedProgress, options: .new, context: nil)
             }
@@ -62,7 +62,10 @@ class YYWebView: UIView {
     }
     
     deinit {
-        if isShowProgress {
+        guard let progress = isShowProgress else {
+            return
+        }
+        if progress {
             removeObserver(webView, forKeyPath: kEstimatedProgress)
         }
     }

@@ -21,6 +21,10 @@ class YYBaseViewController: UIViewController {
         }
     }
     
+    var myNavigation: YYNavigationViewController {
+        return (self.navigationController as! YYNavigationViewController)
+    }
+    
     var isShowRightButton: Bool? {
         didSet {
             navigationView.isShowRightButton = isShowRightButton
@@ -130,8 +134,8 @@ class YYBaseViewController: UIViewController {
     
     deinit {
         print("deinit -- ", self.ga_nameOfClass)
-        NotificationCenter.default.removeObserver(self)
-        UIDevice.current.endGeneratingDeviceOrientationNotifications()
+//        NotificationCenter.default.removeObserver(self)
+//        UIDevice.current.endGeneratingDeviceOrientationNotifications()
     }
     
     func clickedLeftButtonAction() {

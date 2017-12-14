@@ -10,22 +10,56 @@ import UIKit
 
 class YYNavigationViewController: UINavigationController {
 
+    var isShowNavigationView: Bool = false
+    
+    var kNavigationViewBottomSpace: CGFloat = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.delegate = self
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        self.interactivePopGestureRecognizer?.delegate = self
     }
     
+    private func setupInteractivePopGestureRecognizer() {
+        self.interactivePopGestureRecognizer?.addTarget(self, action: #selector(pop(gestrure:)))
+        // 全屏可滑动
+        self.interactivePopGestureRecognizer?.delegate = self
+        object_setClass(self.interactivePopGestureRecognizer, UIPanGestureRecognizer.self)
+    }
+
+
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationBar.isHidden = true;
+
+        setupInteractivePopGestureRecognizer()
+
+        self.navigationBar.isHidden = true
     }
 
+    @objc func pop(gestrure: UIPanGestureRecognizer) {
+        if (gestrure.state == .ended) {
+            let endPoint = gestrure.location(in: gestrure.view)
+            if (endPoint.x > UIScreen.main.bounds.width / 2) {
+                print("返回")
+            } else {
+                let velocity = gestrure.velocity(in: gestrure.view)
+                print(velocity)
+                print("没有返回")
+            }
+        }
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+}
+
+extension YYNavigationViewController: UIGestureRecognizerDelegate {
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
 }
 
 extension YYNavigationViewController: UINavigationControllerDelegate {
@@ -38,3 +72,4 @@ extension YYNavigationViewController: UINavigationControllerDelegate {
         
     }
 }
+

@@ -12,9 +12,7 @@ class YYResizeImageViewController: YYXIBBaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.myTitle = "storyboard"
         tableView.estimatedRowHeight = 100
-    
     }
 
     override func didReceiveMemoryWarning() {
