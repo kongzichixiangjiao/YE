@@ -9,7 +9,6 @@
 import UIKit
 
 class YYSelfViewManager {
-
     var backColor: UIColor?
     var alpha: CGFloat?
     var frame: CGRect?

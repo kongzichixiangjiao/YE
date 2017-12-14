@@ -8,16 +8,17 @@
 
 import UIKit
 
-class YYResizeImageViewController: UITableViewController {
+class YYResizeImageViewController: YYXIBBaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.myTitle = "storyboard"
         tableView.estimatedRowHeight = 100
+    
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -32,6 +33,10 @@ class YYResizeImageViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        view.endEditing(true)
     }
 
 }

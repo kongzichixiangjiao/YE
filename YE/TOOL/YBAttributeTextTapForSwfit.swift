@@ -39,6 +39,12 @@ private var tapBlock : ((_ row: Int, _ str : String ,_ range : NSRange ,_ index 
 private var isTapEffect : Bool = true
 private var effectDic : Dictionary<String , NSAttributedString>?
 
+/*
+ <#label#>.yy_addAttributeTapAction(self.myRow, [reply.from, reply.to]) { (row, string, range, int) in
+    print("点击了\(string)标签 - {\(range.location) , \(range.length)} - \(int)")
+ }
+*/
+
 extension UILabel {
     
     var attributeStrings : [YYAttributeModel]? {
@@ -69,12 +75,12 @@ extension UILabel {
      - parameter strings:   需要点击的字符串数组
      - parameter tapAction: 点击事件回调
      */
-    func yy_addAttributeTapAction(_ row: Int, _ strings : [String] , tapAction : @escaping ((Int, String , NSRange , Int) -> Void)) -> Void {
+    public func yy_addAttributeTapAction(_ row: Int, _ strings : [String] , tapAction : @escaping ((Int, String , NSRange , Int) -> Void)) -> Void {
         
         yy_getRange(row, strings)
         
         tapBlock = tapAction
-        
+
     }
     
     // MARK: - touchActions

@@ -289,6 +289,7 @@
 		DC7E7FCB1FD91D6B00859B00 /* YYRxMVVMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC7E7FC91FD91D6B00859B00 /* YYRxMVVMViewController.xib */; };
 		DC7E7FCD1FD91E9B00859B00 /* RepositoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7E7FCC1FD91E9B00859B00 /* RepositoryListViewModel.swift */; };
 		DC7E7FCF1FD9206400859B00 /* RepositoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7E7FCE1FD9206400859B00 /* RepositoryViewModel.swift */; };
+		DC810E811FE2291C000D1C19 /* YYXIBBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC810E801FE2291C000D1C19 /* YYXIBBaseTableViewController.swift */; };
 		DC8712921FCBD21A00C73D27 /* YYAutoScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8712911FCBD21A00C73D27 /* YYAutoScrollView.swift */; };
 		DC89F1DB1FCCF2A90059B791 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC89F1DA1FCCF2A90059B791 /* UIDevice+Extension.swift */; };
 		DC8A70091FD4F8EE006D22D6 /* LYPlayer_center_play.png in Resources */ = {isa = PBXBuildFile; fileRef = DC8A70071FD4F8ED006D22D6 /* LYPlayer_center_play.png */; };
@@ -612,6 +613,7 @@
 		DC7E7FC91FD91D6B00859B00 /* YYRxMVVMViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYRxMVVMViewController.xib; sourceTree = "<group>"; };
 		DC7E7FCC1FD91E9B00859B00 /* RepositoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryListViewModel.swift; sourceTree = "<group>"; };
 		DC7E7FCE1FD9206400859B00 /* RepositoryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryViewModel.swift; sourceTree = "<group>"; };
+		DC810E801FE2291C000D1C19 /* YYXIBBaseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYXIBBaseTableViewController.swift; sourceTree = "<group>"; };
 		DC8712911FCBD21A00C73D27 /* YYAutoScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYAutoScrollView.swift; sourceTree = "<group>"; };
 		DC89F1DA1FCCF2A90059B791 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		DC8A70071FD4F8ED006D22D6 /* LYPlayer_center_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LYPlayer_center_play.png; sourceTree = "<group>"; };
@@ -787,6 +789,7 @@
 				94D388B31F39C23900F974A6 /* YYBaseTableViewController.swift */,
 				94D388B41F39C23900F974A6 /* YYBaseViewController.swift */,
 				94D18E3A1F50111E00750F87 /* YYXIBBaseViewController.swift */,
+				DC810E801FE2291C000D1C19 /* YYXIBBaseTableViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -1032,6 +1035,7 @@
 		94D389271F39C23900F974A6 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				DCB946A81FE10BE900958542 /* AD */,
 				94D389281F39C23900F974A6 /* Alert */,
 				94D389291F39C23900F974A6 /* Apply */,
 				949634561F41872F0079886E /* Competition */,
@@ -1731,8 +1735,8 @@
 		DC987D081FE0D3EC009B9CFA /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				DCDAF7FA1FDE7E8600E7CE3A /* YYResizeImageViewController.storyboard */,
 				DCDAF7F61FDE7E2100E7CE3A /* YYResizeImageViewController.swift */,
+				DCDAF7FA1FDE7E8600E7CE3A /* YYResizeImageViewController.storyboard */,
 				94CBD9451FB1555300CA2A95 /* YYTestViewController.swift */,
 			);
 			path = Other;
@@ -1843,6 +1847,13 @@
 				DCA8A4A71FD808E80042537E /* ViewModelService.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DCB946A81FE10BE900958542 /* AD */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AD;
 			sourceTree = "<group>";
 		};
 		F6634C116253C070E929F191 /* Pods */ = {
@@ -2338,6 +2349,7 @@
 				94D389AC1F39C23A00F974A6 /* YYBaseView.swift in Sources */,
 				94D389ED1F39C23A00F974A6 /* GA_CircleRefreshHeaderView.swift in Sources */,
 				94D389FB1F39C23A00F974A6 /* YYShotViewButton.swift in Sources */,
+				DC810E811FE2291C000D1C19 /* YYXIBBaseTableViewController.swift in Sources */,
 				94D38A011F39C23A00F974A6 /* Protocol.swift in Sources */,
 				DC7E7FCD1FD91E9B00859B00 /* RepositoryListViewModel.swift in Sources */,
 				94D389CF1F39C23A00F974A6 /* YYApplyModel.swift in Sources */,

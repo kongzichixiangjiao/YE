@@ -167,3 +167,10 @@ extension String {
     }
 }
 
+// UIStoryboard
+extension String {
+    func yy_storyboard() -> UIStoryboard {
+        return UIStoryboard(name: self, bundle: nil)
+    }
+}
+

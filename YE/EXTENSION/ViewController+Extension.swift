@@ -9,6 +9,7 @@
 import Foundation
 
 // MARK: let _ = UIViewController.share
+// 统计界面使用 方法交换
 extension UIViewController {
     static let share: UIViewController = UIViewController(swizzle: true)
     
@@ -55,4 +56,74 @@ extension UIViewController {
         self.yy_viewDidDisappear(animated: animated)
         print("yy_viewDidDisappear" + self.description)
     }
+}
+
+
+// MARK: - Push Pop 方法
+extension UIViewController {
+    /// PUSH
+    func yy_push(vc: UIViewController, animated: Bool = true) {
+        guard let nv = self.navigationController else {
+            print("没有navigationController")
+            return
+        }
+        nv.pushViewController(vc, animated: animated)
+    }
+    /// POP
+    func yy_pop(animated: Bool = true) {
+        guard let nv = self.navigationController else {
+            print("没有navigationController")
+            return
+        }
+        nv.popViewController(animated: animated)
+    }
+    /// POPTO
+    func yy_popTo(vc: UIViewController, animted: Bool = true) {
+        guard let nv = self.navigationController else {
+            print("没有navigationController")
+            return
+        }
+        for item in nv.viewControllers {
+            if item == vc {
+                nv.popToViewController(vc, animated: true)
+                return
+            }
+        }
+        print("没有目标UIViewController")
+    }
+    /// POPROOT
+    func yy_popRoot(animated: Bool = true) {
+        guard let nv = self.navigationController else {
+            print("没有navigationController")
+            return
+        }
+        nv.popToRootViewController(animated: true);
+        
+    }
+    /// PRESENT
+    func yy_present(animated: Bool = true) {
+        present(self, animated: animated, completion: nil)
+    }
+    // storyboar PUSH
+    func yy_push(storyboardName name: String, animated: Bool = true) {
+        if name.isEmpty {
+            print("name字符串为空")
+            return
+        }
+        guard let vc = UIStoryboard(name: name, bundle: nil).instantiateInitialViewController() else {
+            print("没有viewcontroller")
+            return
+        }
+        yy_push(vc: vc, animated: animated)
+    }
+    // storyboar PUSH
+    func yy_push(storyboardName name: String, vcIdentifier identifier: String, animated: Bool = true) {
+        if name.isEmpty || identifier.isEmpty {
+            print("字符串有空")
+            return
+        }
+        let vc = UIStoryboard(name: name, bundle: nil).instantiateViewController(withIdentifier: identifier)
+        yy_push(vc: vc, animated: animated)
+    }
+    
 }

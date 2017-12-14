@@ -404,7 +404,7 @@ class YYPlayerView: UIView {
         [weak self] currentTime, catchTime, state in
         if let weakSelf = self {
             if state == .play {
-                weakSelf.isCanPlay = true 
+                weakSelf.isCanPlay = true
                 if !weakSelf.isSliderDragging {
                     weakSelf.currentTimeLabel.text = String(format: "%02d:%02d", Int(currentTime.seconds) / 60, Int(currentTime.seconds) % 60)
                     weakSelf.progressSlider.value = Float(currentTime.seconds / weakSelf.totalTime)

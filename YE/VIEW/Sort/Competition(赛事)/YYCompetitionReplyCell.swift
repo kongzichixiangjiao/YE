@@ -32,6 +32,7 @@ class YYCompetitionReplyCell: UITableViewCell {
             self.contentLabel.yy_addAttributeTapAction(self.myRow, [reply.from, reply.to]) { (row, string, range, int) in
                 print("点击了\(string)标签 - {\(range.location) , \(range.length)} - \(int)")
             }
+            
             self.dateLabel.text = reply.date
         }
     }

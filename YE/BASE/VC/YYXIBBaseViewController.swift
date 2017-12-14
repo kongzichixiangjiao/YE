@@ -28,10 +28,6 @@ class YYXIBBaseViewController: YYBaseViewController {
         super.viewWillLayoutSubviews()
         
         setupBackViewConstant()
-        
-        if #available(iOS 11.0, *) {
-            self.tableView.contentInsetAdjustmentBehavior = .never
-        }
     }
     
     override func viewDidLayoutSubviews() {
