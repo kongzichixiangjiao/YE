@@ -18,17 +18,14 @@ class YYNavigationViewController: UINavigationController {
         super.viewDidLoad()
         
         self.delegate = self
-        self.interactivePopGestureRecognizer?.delegate = self
     }
     
     private func setupInteractivePopGestureRecognizer() {
         self.interactivePopGestureRecognizer?.addTarget(self, action: #selector(pop(gestrure:)))
         // 全屏可滑动
-        self.interactivePopGestureRecognizer?.delegate = self
         object_setClass(self.interactivePopGestureRecognizer, UIPanGestureRecognizer.self)
+        // self.interactivePopGestureRecognizer?.delegate = self
     }
-
-
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -57,9 +54,9 @@ class YYNavigationViewController: UINavigationController {
 }
 
 extension YYNavigationViewController: UIGestureRecognizerDelegate {
-    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        return true
-    }
+//    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+//        return true
+//    }
 }
 
 extension YYNavigationViewController: UINavigationControllerDelegate {
