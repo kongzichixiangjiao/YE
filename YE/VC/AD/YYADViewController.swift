@@ -12,16 +12,32 @@ class YYADViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    deinit {
-        print("2222")
+    @IBOutlet weak var waterBottomLayout: NSLayoutConstraint!
+    @IBOutlet weak var waterView: YYWaterView!
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let rootVC = storyboard.instantiateViewController(withIdentifier: YYTabBarController.identifier)
+    
+        UIView.animate(withDuration: 1, animations: {
+            self.waterBottomLayout.constant = -400
+            self.waterView.layoutIfNeeded()
+            self.view.layoutIfNeeded()
+            self.titleLabel.alpha = 1
+        }) { (bo) in
+            UIApplication.shared.keyWindow?.rootViewController = rootVC
+        }
+    }
+    deinit {
+        print("YYADViewController deinit")
+    }
+
 }

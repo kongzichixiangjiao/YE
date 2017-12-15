@@ -1,28 +1,23 @@
 //
-//  YYTabBarController.swift
-//  YueYe
+//  YYRootViewController.swift
+//  YE
 //
-//  Created by 侯佳男 on 2017/5/19.
+//  Created by 侯佳男 on 2017/12/15.
 //  Copyright © 2017年 侯佳男. All rights reserved.
 //
 
 import UIKit
 
-class YYTabBarController: UITabBarController {
+class YYRootViewController: UIViewController {
 
-    static let identifier: String = "YYTabBarController"
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
 
 }
