@@ -13,7 +13,6 @@ class YYADViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,4 +21,7 @@ class YYADViewController: UIViewController {
     }
     
 
+    deinit {
+        print("2222")
+    }
 }

@@ -21,18 +21,114 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dbu-aU-wDC" customClass="YYWaterView" customModule="YE" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="20" width="375" height="300"/>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <rect key="frame" x="0.0" y="120" width="375" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="300" id="gwi-nP-yy8"/>
+                        <constraint firstAttribute="height" constant="100" id="gwi-nP-yy8"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="speedX">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="swingHeight">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="waterWaveColor">
+                            <color key="value" red="0.1333333333" green="0.51372549020000002" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="speed">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u4J-6E-peX" customClass="YYWaterView" customModule="YE" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="240" width="375" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="dLO-wD-RDK"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="speedX">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="swingHeight">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="waterWaveColor">
+                            <color key="value" red="0.275390625" green="0.28643973210000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="speed">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="directionType">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xMV-K3-ZfL" customClass="YYWaterView" customModule="YE" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="387" width="375" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="WNw-Hc-EIm"/>
+                        <constraint firstAttribute="height" constant="50" id="nmy-iy-sh7"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="speedX">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="swingHeight">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="waterWaveColor">
+                            <color key="value" red="0.0" green="0.0" blue="0.38164062500000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="speed">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="directionType">
+                            <integer key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3b4-jU-Y1T" customClass="YYWaterView" customModule="YE" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="519" width="375" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="R7w-Hc-4ZD"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="speedX">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="swingHeight">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="waterWaveColor">
+                            <color key="value" red="0.0" green="0.0" blue="0.38164062500000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="speed">
+                            <real key="value" value="2"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="directionType">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.18881138389999999" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="Dbu-aU-wDC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="BZQ-GH-SMT"/>
+                <constraint firstItem="xMV-K3-ZfL" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="6UV-aa-Mlh"/>
+                <constraint firstItem="3b4-jU-Y1T" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="6vo-uA-wS0"/>
+                <constraint firstItem="Dbu-aU-wDC" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="BZQ-GH-SMT"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Dbu-aU-wDC" secondAttribute="trailing" id="IqG-x2-BdB"/>
+                <constraint firstItem="3b4-jU-Y1T" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Mw2-V5-VEq"/>
+                <constraint firstItem="u4J-6E-peX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SDf-VG-Lff"/>
+                <constraint firstItem="u4J-6E-peX" firstAttribute="top" secondItem="Dbu-aU-wDC" secondAttribute="bottom" constant="20" id="TB2-Ge-YRT"/>
+                <constraint firstItem="xMV-K3-ZfL" firstAttribute="top" secondItem="u4J-6E-peX" secondAttribute="bottom" constant="47" id="TP5-My-Y6Q"/>
                 <constraint firstItem="Dbu-aU-wDC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZPQ-rZ-2TO"/>
+                <constraint firstItem="xMV-K3-ZfL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pr7-ko-f7O"/>
+                <constraint firstItem="3b4-jU-Y1T" firstAttribute="top" secondItem="xMV-K3-ZfL" secondAttribute="bottom" constant="82" id="xTu-bO-xj1"/>
+                <constraint firstItem="u4J-6E-peX" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="zE1-8q-3BZ"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
