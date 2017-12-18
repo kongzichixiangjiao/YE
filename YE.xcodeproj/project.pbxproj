@@ -221,6 +221,9 @@
 		DC5F86001FD7A27B0092FDB4 /* AppDelegate+HuanXin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5F85FD1FD7A27B0092FDB4 /* AppDelegate+HuanXin.swift */; };
 		DC5F86011FD7A27B0092FDB4 /* AppDelegate+ListeningNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5F85FE1FD7A27B0092FDB4 /* AppDelegate+ListeningNetwork.swift */; };
 		DC5F86021FD7A27B0092FDB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5F85FF1FD7A27B0092FDB4 /* AppDelegate.swift */; };
+		DC619CE11FE7502900C05E9D /* YYPresentationAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC619CE01FE7502900C05E9D /* YYPresentationAnimationViewController.swift */; };
+		DC619CE31FE750BA00C05E9D /* YYPresentationOther.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC619CE21FE750BA00C05E9D /* YYPresentationOther.swift */; };
+		DC619CE61FE76B5E00C05E9D /* YYPresentationBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC619CE51FE76B5E00C05E9D /* YYPresentationBaseViewController.swift */; };
 		DC65BD5D1FD8E16F00204B7E /* YYRxMVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC65BD5B1FD8E16F00204B7E /* YYRxMVCViewController.swift */; };
 		DC65BD5E1FD8E16F00204B7E /* YYRxMVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC65BD5C1FD8E16F00204B7E /* YYRxMVCViewController.xib */; };
 		DC65BD601FD8E2A500204B7E /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC65BD5F1FD8E2A500204B7E /* Repository.swift */; };
@@ -300,6 +303,11 @@
 		DC8A70091FD4F8EE006D22D6 /* LYPlayer_center_play.png in Resources */ = {isa = PBXBuildFile; fileRef = DC8A70071FD4F8ED006D22D6 /* LYPlayer_center_play.png */; };
 		DC8A700A1FD4F8EE006D22D6 /* LYPlayer_center_pause.png in Resources */ = {isa = PBXBuildFile; fileRef = DC8A70081FD4F8EE006D22D6 /* LYPlayer_center_pause.png */; };
 		DC987D071FE0CA94009B9CFA /* GARegular.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC987D061FE0CA94009B9CFA /* GARegular.swift */; };
+		DCA388421FE51308008BA1C4 /* YYPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA388411FE51308008BA1C4 /* YYPresentationController.swift */; };
+		DCA388451FE51368008BA1C4 /* YYPresentationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA388441FE51367008BA1C4 /* YYPresentationDelegate.swift */; };
+		DCA388491FE514FE008BA1C4 /* GAAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA388481FE514FE008BA1C4 /* GAAnimationViewController.swift */; };
+		DCA3884D1FE51DAF008BA1C4 /* AnimationBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA3884B1FE51DAF008BA1C4 /* AnimationBaseViewController.swift */; };
+		DCA3884E1FE51DAF008BA1C4 /* AnimationBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA3884C1FE51DAF008BA1C4 /* AnimationBaseViewController.xib */; };
 		DCA8A4871FD7F5D80042537E /* YYLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA8A4861FD7F5D80042537E /* YYLog.swift */; };
 		DCA8A4A81FD808E80042537E /* BaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA8A48E1FD808E80042537E /* BaseTabBarViewController.swift */; };
 		DCA8A4A91FD808E80042537E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA8A48F1FD808E80042537E /* BaseViewController.swift */; };
@@ -550,6 +558,9 @@
 		DC5F85FD1FD7A27B0092FDB4 /* AppDelegate+HuanXin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+HuanXin.swift"; sourceTree = "<group>"; };
 		DC5F85FE1FD7A27B0092FDB4 /* AppDelegate+ListeningNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+ListeningNetwork.swift"; sourceTree = "<group>"; };
 		DC5F85FF1FD7A27B0092FDB4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DC619CE01FE7502900C05E9D /* YYPresentationAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYPresentationAnimationViewController.swift; sourceTree = "<group>"; };
+		DC619CE21FE750BA00C05E9D /* YYPresentationOther.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYPresentationOther.swift; sourceTree = "<group>"; };
+		DC619CE51FE76B5E00C05E9D /* YYPresentationBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYPresentationBaseViewController.swift; sourceTree = "<group>"; };
 		DC65BD5B1FD8E16F00204B7E /* YYRxMVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYRxMVCViewController.swift; sourceTree = "<group>"; };
 		DC65BD5C1FD8E16F00204B7E /* YYRxMVCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYRxMVCViewController.xib; sourceTree = "<group>"; };
 		DC65BD5F1FD8E2A500204B7E /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
@@ -629,6 +640,11 @@
 		DC8A70071FD4F8ED006D22D6 /* LYPlayer_center_play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LYPlayer_center_play.png; sourceTree = "<group>"; };
 		DC8A70081FD4F8EE006D22D6 /* LYPlayer_center_pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LYPlayer_center_pause.png; sourceTree = "<group>"; };
 		DC987D061FE0CA94009B9CFA /* GARegular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GARegular.swift; sourceTree = "<group>"; };
+		DCA388411FE51308008BA1C4 /* YYPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYPresentationController.swift; sourceTree = "<group>"; };
+		DCA388441FE51367008BA1C4 /* YYPresentationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYPresentationDelegate.swift; sourceTree = "<group>"; };
+		DCA388481FE514FE008BA1C4 /* GAAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GAAnimationViewController.swift; sourceTree = "<group>"; };
+		DCA3884B1FE51DAF008BA1C4 /* AnimationBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationBaseViewController.swift; sourceTree = "<group>"; };
+		DCA3884C1FE51DAF008BA1C4 /* AnimationBaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimationBaseViewController.xib; sourceTree = "<group>"; };
 		DCA8A4861FD7F5D80042537E /* YYLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYLog.swift; sourceTree = "<group>"; };
 		DCA8A48E1FD808E80042537E /* BaseTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarViewController.swift; sourceTree = "<group>"; };
 		DCA8A48F1FD808E80042537E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -769,7 +785,6 @@
 				94D388C11F39C23900F974A6 /* Base.lproj */,
 				94D388C21F39C23900F974A6 /* EXTENSION */,
 				94D388CE1F39C23900F974A6 /* IMAGE */,
-				94D388E31F39C23900F974A6 /* MAIN */,
 				94D388E61F39C23900F974A6 /* Manager */,
 				94D388E81F39C23900F974A6 /* MODEL */,
 				94D388EB1F39C23900F974A6 /* OTHER */,
@@ -785,6 +800,7 @@
 		94D388AF1F39C23900F974A6 /* BASE */ = {
 			isa = PBXGroup;
 			children = (
+				94D388E31F39C23900F974A6 /* MAIN */,
 				94D388B01F39C23900F974A6 /* VC */,
 				94D388B51F39C23900F974A6 /* VIEW */,
 			);
@@ -890,6 +906,8 @@
 		94D388E31F39C23900F974A6 /* MAIN */ = {
 			isa = PBXGroup;
 			children = (
+				DC619CE81FE79D4700C05E9D /* Navigation */,
+				DCA388431FE51353008BA1C4 /* Presentation */,
 				94D388E41F39C23900F974A6 /* YYNavigationViewController.swift */,
 				94D388E51F39C23900F974A6 /* YYTabBarController.swift */,
 			);
@@ -1468,6 +1486,14 @@
 			path = AppDelegate;
 			sourceTree = "<group>";
 		};
+		DC619CE81FE79D4700C05E9D /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				DCA388481FE514FE008BA1C4 /* GAAnimationViewController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		DC65BD571FD8E13F00204B7E /* RxMVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -1773,6 +1799,18 @@
 			path = RxSwift;
 			sourceTree = "<group>";
 		};
+		DCA388431FE51353008BA1C4 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DC619CE01FE7502900C05E9D /* YYPresentationAnimationViewController.swift */,
+				DCA388411FE51308008BA1C4 /* YYPresentationController.swift */,
+				DCA388441FE51367008BA1C4 /* YYPresentationDelegate.swift */,
+				DC619CE21FE750BA00C05E9D /* YYPresentationOther.swift */,
+				DC619CE51FE76B5E00C05E9D /* YYPresentationBaseViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
 		DCA8A48C1FD808E80042537E /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
@@ -1875,6 +1913,8 @@
 			children = (
 				DC810E821FE26F23000D1C19 /* YYADViewController.swift */,
 				DC810E831FE26F23000D1C19 /* YYADViewController.xib */,
+				DCA3884B1FE51DAF008BA1C4 /* AnimationBaseViewController.swift */,
+				DCA3884C1FE51DAF008BA1C4 /* AnimationBaseViewController.xib */,
 			);
 			path = AD;
 			sourceTree = "<group>";
@@ -1962,6 +2002,7 @@
 				DC6770C31FD697D400E79A07 /* Player_center_play.png in Resources */,
 				DC6770C11FD697D400E79A07 /* Player_brightness.png in Resources */,
 				94D38A551F39C23A00F974A6 /* YYCompetitionListCell.xib in Resources */,
+				DCA3884E1FE51DAF008BA1C4 /* AnimationBaseViewController.xib in Resources */,
 				DCDAF7FB1FDE7E8600E7CE3A /* YYResizeImageViewController.storyboard in Resources */,
 				DC74B87E1FDA2DD100640964 /* YYRxSwiftTestTableViewController.xib in Resources */,
 				94D38A631F39C33300F974A6 /* Assets.xcassets in Resources */,
@@ -2188,6 +2229,7 @@
 				DC8699F51FE3BA5200115C5E /* AppDelegate+Root.swift in Sources */,
 				DC75E3F51FD12A1E00332BE5 /* LYPlayer.swift in Sources */,
 				DCA8A4871FD7F5D80042537E /* YYLog.swift in Sources */,
+				DC619CE61FE76B5E00C05E9D /* YYPresentationBaseViewController.swift in Sources */,
 				94D389E11F39C23A00F974A6 /* YYAlertSelectedTableViewHeaderView.swift in Sources */,
 				DCA8A4AA1FD808E80042537E /* BaseViewModel.swift in Sources */,
 				94D38A051F39C23A00F974A6 /* YYYeEventViewController.swift in Sources */,
@@ -2231,6 +2273,7 @@
 				9496345C1F41880F0079886E /* YYCompetitionCell.swift in Sources */,
 				94D389A21F39C23A00F974A6 /* YYBaseViewController.swift in Sources */,
 				DCA8A4AB1FD808E80042537E /* DataModel.swift in Sources */,
+				DCA388491FE514FE008BA1C4 /* GAAnimationViewController.swift in Sources */,
 				DC987D071FE0CA94009B9CFA /* GARegular.swift in Sources */,
 				DC75E3F91FD12A1E00332BE5 /* LYPlayerSlider.swift in Sources */,
 				94D389CC1F39C23A00F974A6 /* YYNavigationViewController.swift in Sources */,
@@ -2262,6 +2305,7 @@
 				94D389E61F39C23A00F974A6 /* YYAlertWindowView.swift in Sources */,
 				DC65BD691FD8ED3900204B7E /* Int+Extension.swift in Sources */,
 				DC75E3F41FD12A1E00332BE5 /* LYPlayButton.swift in Sources */,
+				DC619CE31FE750BA00C05E9D /* YYPresentationOther.swift in Sources */,
 				DC3858EE1FC7E95200244649 /* YYReuseScrollView.swift in Sources */,
 				940041201F67CD4B008BF928 /* YYRequestManager.swift in Sources */,
 				94D38A161F39C23A00F974A6 /* YYMyViewController.swift in Sources */,
@@ -2271,6 +2315,7 @@
 				949634581F41875D0079886E /* YYCompetitionViewController.swift in Sources */,
 				94D389B31F39C23A00F974A6 /* UIColor+Extension.swift in Sources */,
 				DC8712921FCBD21A00C73D27 /* YYAutoScrollView.swift in Sources */,
+				DCA388421FE51308008BA1C4 /* YYPresentationController.swift in Sources */,
 				DC75E3F21FD12A1E00332BE5 /* LYBrightnessView.swift in Sources */,
 				DCDAF7F41FDE742000E7CE3A /* UIImageView+Extension.swift in Sources */,
 				94D38A501F39C23A00F974A6 /* YYCompetitionDetailsBottomView.swift in Sources */,
@@ -2282,6 +2327,7 @@
 				DC7A49C91FCF95870028F308 /* YYSwiftDateViewController.swift in Sources */,
 				94D389E31F39C23A00F974A6 /* YYAlertSelectedView.swift in Sources */,
 				94D389B01F39C23A00F974A6 /* NSObject+Extension.swift in Sources */,
+				DC619CE11FE7502900C05E9D /* YYPresentationAnimationViewController.swift in Sources */,
 				94D38A0E1F39C23A00F974A6 /* YYIMCreatChatRoomViewController.swift in Sources */,
 				DC30DAC61FCC1D8400AF7248 /* String+Extension.swift in Sources */,
 				DC74B87D1FDA2DD100640964 /* YYRxSwiftTestTableViewController.swift in Sources */,
@@ -2299,6 +2345,7 @@
 				94D38A581F39C23A00F974A6 /* YYLiveCollectionViewCell.swift in Sources */,
 				94D389AE1F39C23A00F974A6 /* CGFloat+Extension.swift in Sources */,
 				94D38A231F39C23A00F974A6 /* YYApplyHeaderView.swift in Sources */,
+				DCA3884D1FE51DAF008BA1C4 /* AnimationBaseViewController.swift in Sources */,
 				DCA8A4AF1FD808E80042537E /* Model.swift in Sources */,
 				DC75E3E11FD107BC00332BE5 /* YYPlayerViewController.swift in Sources */,
 				DC74B87F1FDA2DD100640964 /* YYRxSwiftTestViewController.swift in Sources */,
@@ -2389,6 +2436,7 @@
 				94D389F31F39C23A00F974A6 /* YYBorderLabel.swift in Sources */,
 				94D389CD1F39C23A00F974A6 /* YYTabBarController.swift in Sources */,
 				94D38A071F39C23A00F974A6 /* YYIMBaseViewController.swift in Sources */,
+				DCA388451FE51368008BA1C4 /* YYPresentationDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
