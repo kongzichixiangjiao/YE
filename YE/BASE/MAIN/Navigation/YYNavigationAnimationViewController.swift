@@ -15,7 +15,7 @@ enum GATransitionType{
 }
 
 enum TabOperationDirection{
-    case left, right
+    case left, right    
 }
 
 
@@ -79,5 +79,6 @@ class YYNavigationAnimationViewController: NSObject, UIViewControllerAnimatedTra
     func animationEnded(_ transitionCompleted: Bool) {
         
     }
+    
 }
 
