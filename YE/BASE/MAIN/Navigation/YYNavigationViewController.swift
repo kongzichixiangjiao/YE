@@ -69,8 +69,15 @@ extension YYNavigationViewController: UINavigationControllerDelegate {
     }
     
     override func popViewController(animated: Bool) -> UIViewController? {
-        (self.tabBarController as! YYTabBarController).showTabbarView()
+        if self.viewControllers.count == 2 {
+            (self.tabBarController as! YYTabBarController).showTabbarView()
+        }
         return super.popViewController(animated: animated)
+    }
+    
+    override func popToRootViewController(animated: Bool) -> [UIViewController]? {
+        (self.tabBarController as! YYTabBarController).showTabbarView()
+        return super.popToRootViewController(animated: animated)
     }
     
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {

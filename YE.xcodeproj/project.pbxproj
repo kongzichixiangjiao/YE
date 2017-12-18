@@ -64,7 +64,7 @@
 		94D389C71F39C23A00F974A6 /* IMG_3260.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 94D388DE1F39C23900F974A6 /* IMG_3260.JPG */; };
 		94D389CA1F39C23A00F974A6 /* IMG_8227.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 94D388E11F39C23900F974A6 /* IMG_8227.JPG */; };
 		94D389CC1F39C23A00F974A6 /* YYNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388E41F39C23900F974A6 /* YYNavigationViewController.swift */; };
-		94D389CD1F39C23A00F974A6 /* YYTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388E51F39C23900F974A6 /* YYTabBarController.swift */; };
+		94D389CD1F39C23A00F974A6 /* YYTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388E51F39C23900F974A6 /* YYTabBarViewController.swift */; };
 		94D389CE1F39C23A00F974A6 /* HuanXinManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388E71F39C23900F974A6 /* HuanXinManager.swift */; };
 		94D389CF1F39C23A00F974A6 /* YYApplyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388E91F39C23900F974A6 /* YYApplyModel.swift */; };
 		94D389D01F39C23A00F974A6 /* YYCompetitionCommentSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388EA1F39C23900F974A6 /* YYCompetitionCommentSectionModel.swift */; };
@@ -405,7 +405,7 @@
 		94D388DE1F39C23900F974A6 /* IMG_3260.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_3260.JPG; sourceTree = "<group>"; };
 		94D388E11F39C23900F974A6 /* IMG_8227.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_8227.JPG; sourceTree = "<group>"; };
 		94D388E41F39C23900F974A6 /* YYNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYNavigationViewController.swift; sourceTree = "<group>"; };
-		94D388E51F39C23900F974A6 /* YYTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYTabBarController.swift; sourceTree = "<group>"; };
+		94D388E51F39C23900F974A6 /* YYTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYTabBarViewController.swift; sourceTree = "<group>"; };
 		94D388E71F39C23900F974A6 /* HuanXinManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HuanXinManager.swift; sourceTree = "<group>"; };
 		94D388E91F39C23900F974A6 /* YYApplyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYApplyModel.swift; sourceTree = "<group>"; };
 		94D388EA1F39C23900F974A6 /* YYCompetitionCommentSectionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYCompetitionCommentSectionModel.swift; sourceTree = "<group>"; };
@@ -1516,7 +1516,7 @@
 		DC619CEC1FE7AE3000C05E9D /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				94D388E51F39C23900F974A6 /* YYTabBarController.swift */,
+				94D388E51F39C23900F974A6 /* YYTabBarViewController.swift */,
 			);
 			path = TabBar;
 			sourceTree = "<group>";
@@ -2498,7 +2498,7 @@
 				94D38A401F39C23A00F974A6 /* YYIMGroupInfoSettingButtonCell.swift in Sources */,
 				DC3858E81FC7E8B700244649 /* rsa.swift in Sources */,
 				94D389F31F39C23A00F974A6 /* YYBorderLabel.swift in Sources */,
-				94D389CD1F39C23A00F974A6 /* YYTabBarController.swift in Sources */,
+				94D389CD1F39C23A00F974A6 /* YYTabBarViewController.swift in Sources */,
 				DC619CFD1FE7B43C00C05E9D /* YYToast.swift in Sources */,
 				94D38A071F39C23A00F974A6 /* YYIMBaseViewController.swift in Sources */,
 				DCA388451FE51368008BA1C4 /* YYPresentationDelegate.swift in Sources */,

@@ -14,13 +14,13 @@ class YYTabBarController: UITabBarController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        self.tabBar.isHidden = true
-        self.view.addSubview(tabbarView)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBar.isHidden = true
         
+        self.view.addSubview(self.tabbarView)
     }
     
     lazy var tabbarView: YYBaseTabBarView = {
@@ -35,20 +35,26 @@ class YYTabBarController: UITabBarController {
         // Dispose of any resources that can be recreated.
     }
     
-
     public func showTabbarView(animation: Bool = true) {
+//        UIView.animate(withDuration: 0.35) {
+//            self.tabbarView.frame = self.tabBar.frame
+//        }
+//        return
         tabbarView.isHidden = true
         tabbarView.alpha = 0
-        UIView.animate(withDuration: 0.35, animations: {
+        UIView.animate(withDuration: 0.1, animations: {
             self.tabbarView.alpha = 1
         }) { (bo) in
             self.tabbarView.isHidden = false
         }
-        
-        self.tabbarView.frame = self.tabBar.frame
     }
     
     public func hideTabbarView(animation: Bool = true) {
+//        UIView.animate(withDuration: 0.35) {
+//            self.tabbarView.frame = CGRect(origin: CGPoint(x: 0, y: self.tabBar.frame.origin.y + self.tabBar.frame.height), size: CGSize(width: self.tabBar.frame.width, height: self.tabbarView.frame.height))
+//        }
+//        return
+        
         tabbarView.isHidden = false
         tabbarView.alpha = 1
         UIView.animate(withDuration: 0.35, animations: {
@@ -67,11 +73,9 @@ extension YYTabBarController: YYBaseTabBarViewDelegate {
 
 extension YYTabBarController: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        tabbarView.isHidden = true
     }
     
     func tabBarController(_ tabBarController: UITabBarController, didEndCustomizing viewControllers: [UIViewController], changed: Bool) {
-        print("2")
     }
 
 }
