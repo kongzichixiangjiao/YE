@@ -7,14 +7,14 @@
 //
 
 /*
- Toast.ga.show()
- Toast.ga.hide()
+ YYToast.ga.show()
+ YYToast.ga.hide()
 */
 import UIKit
 
 class YYToast: CALayer {
     
-    static let t: YYToast = Toast()
+    static let t: YYToast = YYToast()
     
     class var ga: YYToast {
         return t
@@ -57,20 +57,21 @@ class YYToast: CALayer {
         let h: CGFloat = self.bounds.height
         let leftSpace: CGFloat = 20
         let space: CGFloat = (w - 20 * 2) / 10
-        let electrocardiogramPath = UIBezierPath()
+        let x: CGFloat = -w / 2 + leftSpace
+        let path = UIBezierPath()
         
-        electrocardiogramPath.move(to: CGPoint(x: -w / 2, y: 0))
-        electrocardiogramPath.addLine(to: CGPoint(x: -w / 2 + leftSpace, y: 0))
-        electrocardiogramPath.addLine(to: CGPoint(x: -w / 2 + leftSpace + space, y: h / 5))
-        electrocardiogramPath.addLine(to: CGPoint(x: -w / 2 + leftSpace + space + space, y: -h / 5))
-        electrocardiogramPath.addLine(to: CGPoint(x: -w / 2 + leftSpace + space + space + space, y: h / 5))
-        electrocardiogramPath.addLine(to: CGPoint(x: -w / 2 + leftSpace + space + space + space + space, y: -h / 3))
-        electrocardiogramPath.addLine(to: CGPoint(x: -w / 2 + leftSpace + space + space + space + space + space, y: h / 3))
-        electrocardiogramPath.addLine(to: CGPoint(x: -w / 2 + leftSpace + space + space + space + space + space + space, y: h / 5))
-        electrocardiogramPath.addLine(to: CGPoint(x: -w / 2 + leftSpace + space + space + space + space + space + space + space, y: 0))
-        electrocardiogramPath.addLine(to: CGPoint(x: w / 2, y: 0))
+        path.move(to: CGPoint(x: -w / 2, y: 0))
+        path.addLine(to: CGPoint(x: x, y: 0))
+        path.addLine(to: CGPoint(x: x + space * 1, y: h / 5))
+        path.addLine(to: CGPoint(x: x + space * 2, y: -h / 5))
+        path.addLine(to: CGPoint(x: x + space * 3, y: h / 5))
+        path.addLine(to: CGPoint(x: x + space * 4, y: -h / 3))
+        path.addLine(to: CGPoint(x: x + space * 5, y: h / 3))
+        path.addLine(to: CGPoint(x: x + space * 6, y: h / 5))
+        path.addLine(to: CGPoint(x: x + space * 7, y: 0))
+        path.addLine(to: CGPoint(x: w / 2, y: 0))
         
-        return electrocardiogramPath.cgPath
+        return path.cgPath
     }
     
     // MARK: show()

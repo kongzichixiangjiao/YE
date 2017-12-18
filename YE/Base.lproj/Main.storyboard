@@ -9,24 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
-        <scene sceneID="c6X-OL-NhF">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JLe-hH-k4X" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="CNi-PQ-XfY" customClass="YYRootViewController" customModule="YE" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="lz4-Ye-hgP"/>
-                        <viewControllerLayoutGuide type="bottom" id="fD0-o1-iRb"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3eX-1h-9Fn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="-945" y="82"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="uze-Kk-Jgm">
             <objects>
@@ -58,12 +40,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <outlet property="delegate" destination="E5H-w3-QU1" id="stm-5n-e90"/>
                         <segue destination="AqQ-ZL-qu0" kind="relationship" relationship="rootViewController" id="DxS-IQ-1PA"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kdR-1P-We9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="E5H-w3-QU1" customClass="YYNavigationViewControllerDelegate" customModule="YE" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="753" y="-600"/>
         </scene>
@@ -184,12 +164,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <outlet property="delegate" destination="qsW-71-3QP" id="4JR-BB-DAy"/>
                         <segue destination="aZi-3P-WcA" kind="relationship" relationship="rootViewController" id="PFN-RL-tC8"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgI-i1-nas" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="qsW-71-3QP" customClass="YYNavigationViewControllerDelegate" customModule="YE" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="-162" y="846"/>
         </scene>

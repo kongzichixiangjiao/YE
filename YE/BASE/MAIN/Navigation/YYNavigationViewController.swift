@@ -63,7 +63,6 @@ class YYNavigationViewController: UINavigationController {
 
 extension YYNavigationViewController: UINavigationControllerDelegate {
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
-        viewController.hidesBottomBarWhenPushed = true
         super.pushViewController(viewController, animated: true)
         
         (self.tabBarController as! YYTabBarController).hideTabbarView()
@@ -79,10 +78,12 @@ extension YYNavigationViewController: UINavigationControllerDelegate {
     }
     
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return nil
         return YYNavigationAnimationViewController(type: GATransitionType.navigationTransition(operation))
     }
     
     func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        return nil 
         return interactive ? self.interactiveTransition : nil
     }
 }

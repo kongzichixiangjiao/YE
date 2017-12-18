@@ -17,31 +17,53 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="47"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fF7-8Z-u1R">
+                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fF7-8Z-u1R">
                     <rect key="frame" x="0.0" y="0.0" width="75" height="47"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                     <state key="normal" title="首页"/>
+                    <connections>
+                        <action selector="clickedAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="pzs-iR-fXc"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bV4-qj-1y0">
+                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bV4-qj-1y0">
                     <rect key="frame" x="75" y="0.0" width="75" height="47"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="野事儿"/>
+                    <connections>
+                        <action selector="clickedAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="6R9-cR-cxJ"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMU-cR-x8x">
+                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMU-cR-x8x">
                     <rect key="frame" x="150" y="0.0" width="75" height="47"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="赛事"/>
+                    <connections>
+                        <action selector="clickedAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="duM-js-ufX"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDO-05-8Nn">
+                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDO-05-8Nn">
                     <rect key="frame" x="225" y="0.0" width="75" height="47"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="消息"/>
+                    <connections>
+                        <action selector="clickedAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="LwU-v6-zDk"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUG-sf-hNR">
+                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUG-sf-hNR">
                     <rect key="frame" x="300" y="0.0" width="75" height="47"/>
                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="我的"/>
+                    <connections>
+                        <action selector="clickedAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="r4w-Pk-c7V"/>
+                    </connections>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pqA-w4-qPg" customClass="YYOnePixView" customModule="YE" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="ZUb-ae-uEt"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -63,11 +85,18 @@
                 <constraint firstItem="LDO-05-8Nn" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="YIl-sg-K4g"/>
                 <constraint firstItem="LDO-05-8Nn" firstAttribute="leading" secondItem="VMU-cR-x8x" secondAttribute="trailing" id="dNC-ab-k1W"/>
                 <constraint firstItem="LDO-05-8Nn" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ilt-cZ-qAY"/>
+                <constraint firstAttribute="trailing" secondItem="pqA-w4-qPg" secondAttribute="trailing" id="n7e-4e-5Q6"/>
+                <constraint firstItem="pqA-w4-qPg" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="suC-me-Gi6"/>
+                <constraint firstItem="pqA-w4-qPg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="uch-c7-rWX"/>
                 <constraint firstItem="bV4-qj-1y0" firstAttribute="leading" secondItem="fF7-8Z-u1R" secondAttribute="trailing" id="xdM-qI-Cnh"/>
                 <constraint firstItem="bV4-qj-1y0" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="zJd-bH-Pga"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="topLineView" destination="pqA-w4-qPg" id="Lok-4t-Ykz"/>
+                <outlet property="topLineViewTopLayout" destination="ZUb-ae-uEt" id="6XE-iS-4pR"/>
+            </connections>
             <point key="canvasLocation" x="33.5" y="-256.5"/>
         </view>
     </objects>

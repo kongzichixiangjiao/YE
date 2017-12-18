@@ -14,19 +14,19 @@ class YYTabBarController: UITabBarController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-//        self.tabBar.isHidden = true
+        self.tabBar.isHidden = true
+        self.view.addSubview(tabbarView)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        self.view.addSubview(tabbarView)
     }
     
     lazy var tabbarView: YYBaseTabBarView = {
-        let v = Bundle.main.loadNibNamed("YYBaseTabBarView", owner: self, options: nil)?.last as! YYBaseTabBarView
+        let v = YYBaseTabBarView.loadView()
         v.frame = self.tabBar.frame
-        v.backgroundColor = UIColor.orange
+        v.delegate = self
         return v
     }()
 
@@ -36,12 +36,32 @@ class YYTabBarController: UITabBarController {
     }
     
 
-    public func showTabbarView() {
-        tabbarView.isHidden = false
+    public func showTabbarView(animation: Bool = true) {
+        tabbarView.isHidden = true
+        tabbarView.alpha = 0
+        UIView.animate(withDuration: 0.35, animations: {
+            self.tabbarView.alpha = 1
+        }) { (bo) in
+            self.tabbarView.isHidden = false
+        }
+        
+        self.tabbarView.frame = self.tabBar.frame
     }
     
-    public func hideTabbarView() {
-        tabbarView.isHidden = true
+    public func hideTabbarView(animation: Bool = true) {
+        tabbarView.isHidden = false
+        tabbarView.alpha = 1
+        UIView.animate(withDuration: 0.35, animations: {
+            self.tabbarView.alpha = 0
+        }) { (bo) in
+            self.tabbarView.isHidden = true
+        }
+    }
+}
+
+extension YYTabBarController: YYBaseTabBarViewDelegate {
+    func clickedTabbar(selectedIndex: Int) {
+        self.selectedIndex = selectedIndex
     }
 }
 
