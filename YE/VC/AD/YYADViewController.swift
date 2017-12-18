@@ -24,18 +24,7 @@ class YYADViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-
-        let d = YYPresentationDelegate(animationType: .sheet)
-        let vc = AnimationBaseViewController(nibName: "AnimationBaseViewController", bundle: nil)
-        vc.transitioningDelegate = d
-        vc.modalPresentationStyle = .custom
-        vc.clickedHandler = {
-            tag in
-            print(tag)
-        }
-        present(vc, animated: true, completion: nil)
-
-        return
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let rootVC = storyboard.instantiateViewController(withIdentifier: YYTabBarController.identifier)
     
@@ -49,8 +38,6 @@ class YYADViewController: UIViewController {
         }
     }
 
-    
-    
     deinit {
         print("YYADViewController deinit")
     }

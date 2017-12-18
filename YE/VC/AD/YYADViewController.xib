@@ -39,9 +39,6 @@
                                 <constraint firstAttribute="height" constant="547" id="l3W-fe-Jis"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="speedX">
-                                    <real key="value" value="2"/>
-                                </userDefinedRuntimeAttribute>
                                 <userDefinedRuntimeAttribute type="number" keyPath="swingHeight">
                                     <real key="value" value="30"/>
                                 </userDefinedRuntimeAttribute>
@@ -66,9 +63,6 @@
                         <constraint firstItem="aIh-R4-w0Q" firstAttribute="leading" secondItem="Dbu-aU-wDC" secondAttribute="leading" id="qYV-yc-zdY"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="number" keyPath="speedX">
-                            <real key="value" value="2"/>
-                        </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="number" keyPath="swingHeight">
                             <real key="value" value="30"/>
                         </userDefinedRuntimeAttribute>

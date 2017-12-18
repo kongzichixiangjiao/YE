@@ -10,12 +10,18 @@ import UIKit
 
 class YYNavigationViewController: UINavigationController {
 
-    var isShowNavigationView: Bool = false
+    var interactive: Bool = false
+    // 控制转场 添加手势时会用到
+    //    weak var interactiveTransition = UIPercentDrivenInteractiveTransition()
+    let interactiveTransition: UIPercentDrivenInteractiveTransition? = nil
     
+    var isShowNavigationView: Bool = false
     var kNavigationViewBottomSpace: CGFloat = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.backgroundColor = UIColor.white
         
         self.delegate = self
     }
@@ -54,20 +60,29 @@ class YYNavigationViewController: UINavigationController {
     }
 }
 
-extension YYNavigationViewController: UIGestureRecognizerDelegate {
-//    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-//        return true
-//    }
-}
 
 extension YYNavigationViewController: UINavigationControllerDelegate {
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         viewController.hidesBottomBarWhenPushed = true
         super.pushViewController(viewController, animated: true)
+        
+        (self.tabBarController as! YYTabBarController).hideTabbarView()
+    }
+    
+    override func popViewController(animated: Bool) -> UIViewController? {
+        (self.tabBarController as! YYTabBarController).showTabbarView()
+        return super.popViewController(animated: animated)
     }
     
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         
     }
+    
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return YYNavigationAnimationViewController(type: GATransitionType.navigationTransition(operation))
+    }
+    
+    func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+        return interactive ? self.interactiveTransition : nil
+    }
 }
-

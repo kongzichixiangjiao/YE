@@ -224,6 +224,14 @@
 		DC619CE11FE7502900C05E9D /* YYPresentationAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC619CE01FE7502900C05E9D /* YYPresentationAnimationViewController.swift */; };
 		DC619CE31FE750BA00C05E9D /* YYPresentationOther.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC619CE21FE750BA00C05E9D /* YYPresentationOther.swift */; };
 		DC619CE61FE76B5E00C05E9D /* YYPresentationBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC619CE51FE76B5E00C05E9D /* YYPresentationBaseViewController.swift */; };
+		DC619CEA1FE79F7C00C05E9D /* YYNavigationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC619CE91FE79F7C00C05E9D /* YYNavigationControllerDelegate.swift */; };
+		DC619CF01FE7B0CB00C05E9D /* YYBaseTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC619CEF1FE7B0CB00C05E9D /* YYBaseTabBarView.swift */; };
+		DC619CF21FE7B0E500C05E9D /* YYBaseTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC619CF11FE7B0E500C05E9D /* YYBaseTabBarView.xib */; };
+		DC619CF81FE7B42600C05E9D /* LikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC619CF41FE7B42600C05E9D /* LikeButton.swift */; };
+		DC619CF91FE7B42600C05E9D /* LikeButtonAnimationLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC619CF51FE7B42600C05E9D /* LikeButtonAnimationLayer.swift */; };
+		DC619CFA1FE7B42600C05E9D /* LikeButtonImageLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC619CF61FE7B42600C05E9D /* LikeButtonImageLayer.swift */; };
+		DC619CFB1FE7B42600C05E9D /* LikeButtonMaskLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC619CF71FE7B42600C05E9D /* LikeButtonMaskLayer.swift */; };
+		DC619CFD1FE7B43C00C05E9D /* YYToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC619CFC1FE7B43B00C05E9D /* YYToast.swift */; };
 		DC65BD5D1FD8E16F00204B7E /* YYRxMVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC65BD5B1FD8E16F00204B7E /* YYRxMVCViewController.swift */; };
 		DC65BD5E1FD8E16F00204B7E /* YYRxMVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC65BD5C1FD8E16F00204B7E /* YYRxMVCViewController.xib */; };
 		DC65BD601FD8E2A500204B7E /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC65BD5F1FD8E2A500204B7E /* Repository.swift */; };
@@ -305,7 +313,7 @@
 		DC987D071FE0CA94009B9CFA /* GARegular.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC987D061FE0CA94009B9CFA /* GARegular.swift */; };
 		DCA388421FE51308008BA1C4 /* YYPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA388411FE51308008BA1C4 /* YYPresentationController.swift */; };
 		DCA388451FE51368008BA1C4 /* YYPresentationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA388441FE51367008BA1C4 /* YYPresentationDelegate.swift */; };
-		DCA388491FE514FE008BA1C4 /* GAAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA388481FE514FE008BA1C4 /* GAAnimationViewController.swift */; };
+		DCA388491FE514FE008BA1C4 /* YYNavigationAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA388481FE514FE008BA1C4 /* YYNavigationAnimationViewController.swift */; };
 		DCA3884D1FE51DAF008BA1C4 /* AnimationBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA3884B1FE51DAF008BA1C4 /* AnimationBaseViewController.swift */; };
 		DCA3884E1FE51DAF008BA1C4 /* AnimationBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA3884C1FE51DAF008BA1C4 /* AnimationBaseViewController.xib */; };
 		DCA8A4871FD7F5D80042537E /* YYLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA8A4861FD7F5D80042537E /* YYLog.swift */; };
@@ -561,6 +569,14 @@
 		DC619CE01FE7502900C05E9D /* YYPresentationAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYPresentationAnimationViewController.swift; sourceTree = "<group>"; };
 		DC619CE21FE750BA00C05E9D /* YYPresentationOther.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYPresentationOther.swift; sourceTree = "<group>"; };
 		DC619CE51FE76B5E00C05E9D /* YYPresentationBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYPresentationBaseViewController.swift; sourceTree = "<group>"; };
+		DC619CE91FE79F7C00C05E9D /* YYNavigationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYNavigationControllerDelegate.swift; sourceTree = "<group>"; };
+		DC619CEF1FE7B0CB00C05E9D /* YYBaseTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYBaseTabBarView.swift; sourceTree = "<group>"; };
+		DC619CF11FE7B0E500C05E9D /* YYBaseTabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYBaseTabBarView.xib; sourceTree = "<group>"; };
+		DC619CF41FE7B42600C05E9D /* LikeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeButton.swift; sourceTree = "<group>"; };
+		DC619CF51FE7B42600C05E9D /* LikeButtonAnimationLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeButtonAnimationLayer.swift; sourceTree = "<group>"; };
+		DC619CF61FE7B42600C05E9D /* LikeButtonImageLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeButtonImageLayer.swift; sourceTree = "<group>"; };
+		DC619CF71FE7B42600C05E9D /* LikeButtonMaskLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeButtonMaskLayer.swift; sourceTree = "<group>"; };
+		DC619CFC1FE7B43B00C05E9D /* YYToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYToast.swift; sourceTree = "<group>"; };
 		DC65BD5B1FD8E16F00204B7E /* YYRxMVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYRxMVCViewController.swift; sourceTree = "<group>"; };
 		DC65BD5C1FD8E16F00204B7E /* YYRxMVCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYRxMVCViewController.xib; sourceTree = "<group>"; };
 		DC65BD5F1FD8E2A500204B7E /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
@@ -642,7 +658,7 @@
 		DC987D061FE0CA94009B9CFA /* GARegular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GARegular.swift; sourceTree = "<group>"; };
 		DCA388411FE51308008BA1C4 /* YYPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYPresentationController.swift; sourceTree = "<group>"; };
 		DCA388441FE51367008BA1C4 /* YYPresentationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYPresentationDelegate.swift; sourceTree = "<group>"; };
-		DCA388481FE514FE008BA1C4 /* GAAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GAAnimationViewController.swift; sourceTree = "<group>"; };
+		DCA388481FE514FE008BA1C4 /* YYNavigationAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYNavigationAnimationViewController.swift; sourceTree = "<group>"; };
 		DCA3884B1FE51DAF008BA1C4 /* AnimationBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationBaseViewController.swift; sourceTree = "<group>"; };
 		DCA3884C1FE51DAF008BA1C4 /* AnimationBaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimationBaseViewController.xib; sourceTree = "<group>"; };
 		DCA8A4861FD7F5D80042537E /* YYLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYLog.swift; sourceTree = "<group>"; };
@@ -801,8 +817,6 @@
 			isa = PBXGroup;
 			children = (
 				94D388E31F39C23900F974A6 /* MAIN */,
-				94D388B01F39C23900F974A6 /* VC */,
-				94D388B51F39C23900F974A6 /* VIEW */,
 			);
 			path = BASE;
 			sourceTree = "<group>";
@@ -823,6 +837,7 @@
 		94D388B51F39C23900F974A6 /* VIEW */ = {
 			isa = PBXGroup;
 			children = (
+				DC619CEE1FE7B07A00C05E9D /* tabBarView */,
 				94D388B61F39C23900F974A6 /* navigationView */,
 				94D388BC1F39C23900F974A6 /* YYBaseCollectionView.swift */,
 				94D388BD1F39C23900F974A6 /* YYBaseTableViewCell.swift */,
@@ -906,10 +921,10 @@
 		94D388E31F39C23900F974A6 /* MAIN */ = {
 			isa = PBXGroup;
 			children = (
+				DC619CED1FE7B05100C05E9D /* BaseVC */,
+				DC619CEC1FE7AE3000C05E9D /* TabBar */,
 				DC619CE81FE79D4700C05E9D /* Navigation */,
 				DCA388431FE51353008BA1C4 /* Presentation */,
-				94D388E41F39C23900F974A6 /* YYNavigationViewController.swift */,
-				94D388E51F39C23900F974A6 /* YYTabBarController.swift */,
 			);
 			path = MAIN;
 			sourceTree = "<group>";
@@ -973,8 +988,10 @@
 				94D389151F39C23900F974A6 /* YYBorderLabel.swift */,
 				94D389171F39C23900F974A6 /* YYDrawerTableViewCell.swift */,
 				94D389181F39C23900F974A6 /* YYEmptyTableView.swift */,
+				DC619CFC1FE7B43B00C05E9D /* YYToast.swift */,
 				94D389191F39C23900F974A6 /* YYIconLableView.swift */,
 				94D3891A1F39C23900F974A6 /* YYOnePixView.swift */,
+				DC619CF31FE7B42600C05E9D /* LikeButton */,
 				94D3891C1F39C23900F974A6 /* YYShotView */,
 				94D3891F1F39C23900F974A6 /* YYSpaceCell.swift */,
 				94D389201F39C23900F974A6 /* YYSpaceCell.xib */,
@@ -1489,9 +1506,49 @@
 		DC619CE81FE79D4700C05E9D /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				DCA388481FE514FE008BA1C4 /* GAAnimationViewController.swift */,
+				DCA388481FE514FE008BA1C4 /* YYNavigationAnimationViewController.swift */,
+				DC619CE91FE79F7C00C05E9D /* YYNavigationControllerDelegate.swift */,
+				94D388E41F39C23900F974A6 /* YYNavigationViewController.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		DC619CEC1FE7AE3000C05E9D /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				94D388E51F39C23900F974A6 /* YYTabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		DC619CED1FE7B05100C05E9D /* BaseVC */ = {
+			isa = PBXGroup;
+			children = (
+				94D388B01F39C23900F974A6 /* VC */,
+				94D388B51F39C23900F974A6 /* VIEW */,
+			);
+			path = BaseVC;
+			sourceTree = "<group>";
+		};
+		DC619CEE1FE7B07A00C05E9D /* tabBarView */ = {
+			isa = PBXGroup;
+			children = (
+				DC619CEF1FE7B0CB00C05E9D /* YYBaseTabBarView.swift */,
+				DC619CF11FE7B0E500C05E9D /* YYBaseTabBarView.xib */,
+			);
+			path = tabBarView;
+			sourceTree = "<group>";
+		};
+		DC619CF31FE7B42600C05E9D /* LikeButton */ = {
+			isa = PBXGroup;
+			children = (
+				DC619CF41FE7B42600C05E9D /* LikeButton.swift */,
+				DC619CF51FE7B42600C05E9D /* LikeButtonAnimationLayer.swift */,
+				DC619CF61FE7B42600C05E9D /* LikeButtonImageLayer.swift */,
+				DC619CF71FE7B42600C05E9D /* LikeButtonMaskLayer.swift */,
+			);
+			name = LikeButton;
+			path = "../../../../../../../Volumes/男哥，别删我/Work/中泰宜家/GATransitionAnimation/GATransitionAnimation/Animaitons/LikeButton";
 			sourceTree = "<group>";
 		};
 		DC65BD571FD8E13F00204B7E /* RxMVC */ = {
@@ -2007,6 +2064,7 @@
 				DC74B87E1FDA2DD100640964 /* YYRxSwiftTestTableViewController.xib in Resources */,
 				94D38A631F39C33300F974A6 /* Assets.xcassets in Resources */,
 				DC7E7FCB1FD91D6B00859B00 /* YYRxMVVMViewController.xib in Resources */,
+				DC619CF21FE7B0E500C05E9D /* YYBaseTabBarView.xib in Resources */,
 				94D38A4F1F39C23A00F974A6 /* YYCompetitionCommentSectionView.xib in Resources */,
 				94D389C61F39C23A00F974A6 /* IMG_3091.jpg in Resources */,
 				DC75E40A1FD12AA400332BE5 /* LYPlayer_fullscreen.png in Resources */,
@@ -2273,7 +2331,7 @@
 				9496345C1F41880F0079886E /* YYCompetitionCell.swift in Sources */,
 				94D389A21F39C23A00F974A6 /* YYBaseViewController.swift in Sources */,
 				DCA8A4AB1FD808E80042537E /* DataModel.swift in Sources */,
-				DCA388491FE514FE008BA1C4 /* GAAnimationViewController.swift in Sources */,
+				DCA388491FE514FE008BA1C4 /* YYNavigationAnimationViewController.swift in Sources */,
 				DC987D071FE0CA94009B9CFA /* GARegular.swift in Sources */,
 				DC75E3F91FD12A1E00332BE5 /* LYPlayerSlider.swift in Sources */,
 				94D389CC1F39C23A00F974A6 /* YYNavigationViewController.swift in Sources */,
@@ -2294,6 +2352,7 @@
 				94D389AA1F39C23A00F974A6 /* YYBaseTableViewFooterView.swift in Sources */,
 				DC810E871FE26F75000D1C19 /* YYWaterView.swift in Sources */,
 				DC75E3F31FD12A1E00332BE5 /* LYExtension.swift in Sources */,
+				DC619CFA1FE7B42600C05E9D /* LikeButtonImageLayer.swift in Sources */,
 				94D38A381F39C23A00F974A6 /* YYIMFriendCell.swift in Sources */,
 				946BB2AE1F4430480062D173 /* DecoratorBase.swift in Sources */,
 				94D389F21F39C23A00F974A6 /* ScrollView+RefreshExtension.swift in Sources */,
@@ -2311,6 +2370,7 @@
 				94D38A161F39C23A00F974A6 /* YYMyViewController.swift in Sources */,
 				94D38A1B1F39C23A00F974A6 /* YYApplyQueryViewController.swift in Sources */,
 				DCA8A4AD1FD808E80042537E /* API.swift in Sources */,
+				DC619CF91FE7B42600C05E9D /* LikeButtonAnimationLayer.swift in Sources */,
 				94D38A0B1F39C23A00F974A6 /* YYIMConversationViewController.swift in Sources */,
 				949634581F41875D0079886E /* YYCompetitionViewController.swift in Sources */,
 				94D389B31F39C23A00F974A6 /* UIColor+Extension.swift in Sources */,
@@ -2335,6 +2395,7 @@
 				DCA8A4AC1FD808E80042537E /* Log.swift in Sources */,
 				DC7E7FCF1FD9206400859B00 /* RepositoryViewModel.swift in Sources */,
 				946BB2AA1F44291C0062D173 /* CondimentDecorator.swift in Sources */,
+				DC619CF01FE7B0CB00C05E9D /* YYBaseTabBarView.swift in Sources */,
 				94D38A561F39C23A00F974A6 /* YYCompetitionReplyCell.swift in Sources */,
 				94D38A131F39C23A00F974A6 /* YYIMGroupListViewController.swift in Sources */,
 				94D38A081F39C23A00F974A6 /* YYEaseConversationListViewController.swift in Sources */,
@@ -2355,6 +2416,7 @@
 				94D389DF1F39C23A00F974A6 /* YYAlertSelectedCell.swift in Sources */,
 				94D38A2A1F39C23A00F974A6 /* YYEventVideoCell.swift in Sources */,
 				94D38A271F39C23A00F974A6 /* YYApplyTextTableViewCell.swift in Sources */,
+				DC619CFB1FE7B42600C05E9D /* LikeButtonMaskLayer.swift in Sources */,
 				94D389FF1F39C23A00F974A6 /* Compare.swift in Sources */,
 				94D389D01F39C23A00F974A6 /* YYCompetitionCommentSectionModel.swift in Sources */,
 				DC65BD601FD8E2A500204B7E /* Repository.swift in Sources */,
@@ -2366,6 +2428,7 @@
 				946BB2A81F44285A0062D173 /* HouseBlend.swift in Sources */,
 				94D389EE1F39C23A00F974A6 /* GA_LoadFooterView.swift in Sources */,
 				94D38A291F39C23A00F974A6 /* YYLinkmanHeaderView.swift in Sources */,
+				DC619CEA1FE79F7C00C05E9D /* YYNavigationControllerDelegate.swift in Sources */,
 				94D38A0C1F39C23A00F974A6 /* YYIMCreatChatGroupViewController.swift in Sources */,
 				94D389F51F39C23A00F974A6 /* YYDrawerTableViewCell.swift in Sources */,
 				94D38A1E1F39C23A00F974A6 /* YYLiveListViewController.swift in Sources */,
@@ -2394,6 +2457,7 @@
 				94D389B51F39C23A00F974A6 /* UITableViewCell+Extension.swift in Sources */,
 				DCA8A4B81FD808E80042537E /* ViewModelProtocol.swift in Sources */,
 				94D38A251F39C23A00F974A6 /* YYApplySelectedTableViewCell.swift in Sources */,
+				DC619CF81FE7B42600C05E9D /* LikeButton.swift in Sources */,
 				94D389E71F39C23A00F974A6 /* YYAlertViewController.swift in Sources */,
 				94D389FC1F39C23A00F974A6 /* YYSpaceCell.swift in Sources */,
 				DCA8A4B91FD808E80042537E /* ViewModelService.swift in Sources */,
@@ -2435,6 +2499,7 @@
 				DC3858E81FC7E8B700244649 /* rsa.swift in Sources */,
 				94D389F31F39C23A00F974A6 /* YYBorderLabel.swift in Sources */,
 				94D389CD1F39C23A00F974A6 /* YYTabBarController.swift in Sources */,
+				DC619CFD1FE7B43C00C05E9D /* YYToast.swift in Sources */,
 				94D38A071F39C23A00F974A6 /* YYIMBaseViewController.swift in Sources */,
 				DCA388451FE51368008BA1C4 /* YYPresentationDelegate.swift in Sources */,
 			);

@@ -100,7 +100,7 @@ class YYBaseTableViewController: YYBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
     }
     
     func initTableView() {

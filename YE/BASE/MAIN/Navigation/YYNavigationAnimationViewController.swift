@@ -19,7 +19,7 @@ enum TabOperationDirection{
 }
 
 
-class GAAnimationViewController: NSObject, UIViewControllerAnimatedTransitioning {
+class YYNavigationAnimationViewController: NSObject, UIViewControllerAnimatedTransitioning {
     private var transitionType: GATransitionType
     private var presentationAnimationType: PresentationAnimationType
     
@@ -48,7 +48,7 @@ class GAAnimationViewController: NSObject, UIViewControllerAnimatedTransitioning
         
         switch transitionType {
         case .navigationTransition(let operation):
-            translation = operation == .push ? translation : -translation
+            translation = operation == .push ? translation : 0
             fromViewTransform = CGAffineTransform(scaleX: -translation, y: 0)
             toViewTransform = CGAffineTransform(scaleX: translation, y: 0)
         case .tabTransition(let direction):
@@ -62,15 +62,8 @@ class GAAnimationViewController: NSObject, UIViewControllerAnimatedTransitioning
             fromViewTransform = CGAffineTransform(translationX: 0, y: (operation == .present ? 0 : translation))
         }
         
-        switch transitionType{
-        case .modalTransition(let operation):
-            switch operation{
-            case .present: containerView.addSubview(toView!)
-            case .dismiss: break
-            }
-        default: containerView.addSubview(toView!)
-        }
-        
+        containerView.addSubview(toView!)
+
         toView?.transform = toViewTransform
         
         UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
@@ -81,7 +74,6 @@ class GAAnimationViewController: NSObject, UIViewControllerAnimatedTransitioning
             toView?.transform = CGAffineTransform.identity
             transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
         })
-        
     }
     
     func animationEnded(_ transitionCompleted: Bool) {
