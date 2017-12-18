@@ -181,7 +181,7 @@ class YYToast: CALayer {
     
 }
 
-extension Toast: CAAnimationDelegate {
+extension YYToast: CAAnimationDelegate {
     func animationDidStart(_ anim: CAAnimation) {
         //        print("start")
     }

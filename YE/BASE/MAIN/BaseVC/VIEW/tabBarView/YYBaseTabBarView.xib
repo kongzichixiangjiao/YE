@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,7 +16,56 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="YYBaseTabBarView" customModule="YE" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="375" height="47"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fF7-8Z-u1R">
+                    <rect key="frame" x="0.0" y="0.0" width="75" height="47"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="首页"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bV4-qj-1y0">
+                    <rect key="frame" x="75" y="0.0" width="75" height="47"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VMU-cR-x8x">
+                    <rect key="frame" x="150" y="0.0" width="75" height="47"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDO-05-8Nn">
+                    <rect key="frame" x="225" y="0.0" width="75" height="47"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUG-sf-hNR">
+                    <rect key="frame" x="300" y="0.0" width="75" height="47"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="Button"/>
+                </button>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="kUG-sf-hNR" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="1x4-Kg-Fci"/>
+                <constraint firstItem="VMU-cR-x8x" firstAttribute="leading" secondItem="bV4-qj-1y0" secondAttribute="trailing" id="8BT-rx-vPY"/>
+                <constraint firstItem="bV4-qj-1y0" firstAttribute="width" secondItem="fF7-8Z-u1R" secondAttribute="width" id="EXl-Kr-WQB"/>
+                <constraint firstItem="kUG-sf-hNR" firstAttribute="width" secondItem="LDO-05-8Nn" secondAttribute="width" id="GdR-MT-awh"/>
+                <constraint firstItem="LDO-05-8Nn" firstAttribute="width" secondItem="VMU-cR-x8x" secondAttribute="width" id="J55-Rj-vt8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="fF7-8Z-u1R" secondAttribute="bottom" id="JXP-Nz-3Ec"/>
+                <constraint firstItem="kUG-sf-hNR" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="JYj-3U-9ok"/>
+                <constraint firstItem="VMU-cR-x8x" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Kg2-92-leS"/>
+                <constraint firstItem="fF7-8Z-u1R" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.2" id="Lrp-4X-IYI"/>
+                <constraint firstItem="kUG-sf-hNR" firstAttribute="leading" secondItem="LDO-05-8Nn" secondAttribute="trailing" id="MkJ-As-f1R"/>
+                <constraint firstItem="VMU-cR-x8x" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="OS0-qr-lbE"/>
+                <constraint firstItem="bV4-qj-1y0" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="OrM-Fs-tKQ"/>
+                <constraint firstItem="fF7-8Z-u1R" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="PEH-qg-7IU"/>
+                <constraint firstItem="VMU-cR-x8x" firstAttribute="width" secondItem="bV4-qj-1y0" secondAttribute="width" id="T4r-EK-gWa"/>
+                <constraint firstItem="fF7-8Z-u1R" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="UAe-Cb-jhv"/>
+                <constraint firstItem="LDO-05-8Nn" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="YIl-sg-K4g"/>
+                <constraint firstItem="LDO-05-8Nn" firstAttribute="leading" secondItem="VMU-cR-x8x" secondAttribute="trailing" id="dNC-ab-k1W"/>
+                <constraint firstItem="LDO-05-8Nn" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ilt-cZ-qAY"/>
+                <constraint firstItem="bV4-qj-1y0" firstAttribute="leading" secondItem="fF7-8Z-u1R" secondAttribute="trailing" id="xdM-qI-Cnh"/>
+                <constraint firstItem="bV4-qj-1y0" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="zJd-bH-Pga"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="33.5" y="-256.5"/>

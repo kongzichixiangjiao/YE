@@ -14,13 +14,13 @@ class YYTabBarController: UITabBarController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        self.tabBar.isHidden = true 
+//        self.tabBar.isHidden = true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.addSubview(tabbarView)
+//        self.view.addSubview(tabbarView)
     }
     
     lazy var tabbarView: YYBaseTabBarView = {
