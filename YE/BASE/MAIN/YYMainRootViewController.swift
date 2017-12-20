@@ -11,7 +11,8 @@ import UIKit
 class YYMainRootViewController: UIViewController {
     
     var vcs: [UIViewController] = []
-    var old: Int = 0
+    var old: Int = 99
+    
     var isFinished: Bool = true
     
     override func viewDidLoad() {
