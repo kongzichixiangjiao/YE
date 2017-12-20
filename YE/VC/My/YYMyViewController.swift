@@ -38,6 +38,7 @@ class YYMyViewController: YYBaseTableViewController {
     }
     
     override func initTableView() {
+        isShowTabbar = true
         saveAreaBottomSpaceType = .normal44
         registerNibWithIdentifier(YYMyBasicCell.identifier)
         registerNibWithIdentifier(YYSpaceCell.identifier)
