@@ -25,10 +25,11 @@ class YYADViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let rootVC = storyboard.instantiateViewController(withIdentifier: YYTabBarController.identifier)
-    
-        UIView.animate(withDuration: 1, animations: {
+        let storyboard = UIStoryboard(name: "MainRoot", bundle: nil)
+//        let rootVC = storyboard.instantiateViewController(withIdentifier: YYTabBarController.identifier)
+        let rootVC = storyboard.instantiateInitialViewController()
+        
+        UIView.animate(withDuration: 0.45, animations: {
             self.waterBottomLayout.constant = -400
             self.waterView.layoutIfNeeded()
             self.view.layoutIfNeeded()

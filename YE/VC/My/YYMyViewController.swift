@@ -11,7 +11,7 @@ import RxCocoa
 import RxSwift
 
 class YYMyViewController: YYBaseTableViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initNavigationView()

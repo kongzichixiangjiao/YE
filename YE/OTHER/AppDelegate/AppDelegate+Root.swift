@@ -11,8 +11,10 @@ import Foundation
 extension AppDelegate {
 
     func rooter(isAD: Bool = true) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let rootVC = storyboard.instantiateViewController(withIdentifier: YYTabBarController.identifier)
+        let storyboard = UIStoryboard(name: "MainRoot", bundle: nil)
+//        let rootVC = storyboard.instantiateViewController(withIdentifier: YYTabBarController.identifier)
+        let rootVC = storyboard.instantiateViewController(withIdentifier: "YYMainRootViewController")
+        
         let vc = YYADViewController(nibName: "YYADViewController", bundle: nil)
         self.window?.rootViewController = isAD ? vc : rootVC
         self.window?.makeKeyAndVisible()

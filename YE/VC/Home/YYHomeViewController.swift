@@ -71,6 +71,10 @@ class YYChildTestView: YYTestView {
 
 class YYHomeViewController: YYBaseTableViewController {
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initNavigationView()

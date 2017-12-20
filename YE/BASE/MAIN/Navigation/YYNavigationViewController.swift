@@ -18,6 +18,8 @@ class YYNavigationViewController: UINavigationController {
     var isShowNavigationView: Bool = false
     var kNavigationViewBottomSpace: CGFloat = 0
     
+    weak var yy_tabBarController: YYMainRootViewController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -65,24 +67,28 @@ extension YYNavigationViewController: UINavigationControllerDelegate {
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         viewController.hidesBottomBarWhenPushed = true
         super.pushViewController(viewController, animated: true)
-        (self.tabBarController as! YYTabBarController).hideTabbarView()
+        yy_tabBarController?.hideTabbarView()
     }
     
     override func popViewController(animated: Bool) -> UIViewController? {
-        if self.viewControllers.count == 2 {
-            (self.tabBarController as! YYTabBarController).showTabbarView()
-        }
         return super.popViewController(animated: animated)
     }
     
     override func popToRootViewController(animated: Bool) -> [UIViewController]? {
-        (self.tabBarController as! YYTabBarController).showTabbarView()
+        yy_tabBarController?.showTabbarView()
         return super.popToRootViewController(animated: animated)
     }
     
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         
     }
+    
+    func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
+        if self.viewControllers.count == 1 {
+            yy_tabBarController?.showTabbarView()
+        }
+    }
+    
     /*
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return YYNavigationAnimationViewController(type: GATransitionType.navigationTransition(operation))

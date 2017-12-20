@@ -206,6 +206,9 @@
 		94D38A631F39C33300F974A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94D38A621F39C33300F974A6 /* Assets.xcassets */; };
 		94DED68A1F7F38030036AE1F /* YYCDemo.c in Sources */ = {isa = PBXBuildFile; fileRef = 94DFE4131F581B6B004D71F3 /* YYCDemo.c */; };
 		A1E51B0C8B82F381C3F93DEE /* Pods_YE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521CBA8AFB6F01FB382C7CD8 /* Pods_YE.framework */; };
+		DC10DDFD1FEA12E500770158 /* YYTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC10DDFC1FEA12E500770158 /* YYTabBar.swift */; };
+		DC10DE001FEA46AB00770158 /* MainRoot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC10DDFE1FEA46AB00770158 /* MainRoot.storyboard */; };
+		DC10DE021FEA486A00770158 /* YYMainRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC10DE011FEA486A00770158 /* YYMainRootViewController.swift */; };
 		DC30DAC61FCC1D8400AF7248 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC30DAC51FCC1D8400AF7248 /* String+Extension.swift */; };
 		DC3858E81FC7E8B700244649 /* rsa.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3858E51FC7E8B700244649 /* rsa.swift */; };
 		DC3858E91FC7E8B700244649 /* yy_private_key.pem in Resources */ = {isa = PBXBuildFile; fileRef = DC3858E61FC7E8B700244649 /* yy_private_key.pem */; };
@@ -551,6 +554,9 @@
 		94DFE4111F5819F8004D71F3 /* YE-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YE-Bridging-Header.h"; sourceTree = "<group>"; };
 		94DFE4131F581B6B004D71F3 /* YYCDemo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = YYCDemo.c; sourceTree = "<group>"; };
 		9B059CB7E9DD2575F5847CD7 /* Pods-YE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YE.release.xcconfig"; path = "Pods/Target Support Files/Pods-YE/Pods-YE.release.xcconfig"; sourceTree = "<group>"; };
+		DC10DDFC1FEA12E500770158 /* YYTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYTabBar.swift; sourceTree = "<group>"; };
+		DC10DDFF1FEA46AB00770158 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MainRoot.storyboard; sourceTree = "<group>"; };
+		DC10DE011FEA486A00770158 /* YYMainRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYMainRootViewController.swift; sourceTree = "<group>"; };
 		DC30DAC51FCC1D8400AF7248 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		DC3858E51FC7E8B700244649 /* rsa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rsa.swift; sourceTree = "<group>"; };
 		DC3858E61FC7E8B700244649 /* yy_private_key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = yy_private_key.pem; sourceTree = "<group>"; };
@@ -865,6 +871,7 @@
 			children = (
 				94D38A5C1F39C2F600F974A6 /* LaunchScreen.storyboard */,
 				94D38A5E1F39C2F600F974A6 /* Main.storyboard */,
+				DC10DDFE1FEA46AB00770158 /* MainRoot.storyboard */,
 			);
 			path = Base.lproj;
 			sourceTree = "<group>";
@@ -925,6 +932,7 @@
 				DC619CEC1FE7AE3000C05E9D /* TabBar */,
 				DC619CE81FE79D4700C05E9D /* Navigation */,
 				DCA388431FE51353008BA1C4 /* Presentation */,
+				DC10DE011FEA486A00770158 /* YYMainRootViewController.swift */,
 			);
 			path = MAIN;
 			sourceTree = "<group>";
@@ -1535,6 +1543,7 @@
 			children = (
 				DC619CEF1FE7B0CB00C05E9D /* YYBaseTabBarView.swift */,
 				DC619CF11FE7B0E500C05E9D /* YYBaseTabBarView.xib */,
+				DC10DDFC1FEA12E500770158 /* YYTabBar.swift */,
 			);
 			path = tabBarView;
 			sourceTree = "<group>";
@@ -2154,6 +2163,7 @@
 				94D38A341F39C23A00F974A6 /* YYConversationCell.xib in Resources */,
 				94D389E01F39C23A00F974A6 /* YYAlertSelectedCell.xib in Resources */,
 				DC6770C61FD697D400E79A07 /* Player_pause.png in Resources */,
+				DC10DE001FEA46AB00770158 /* MainRoot.storyboard in Resources */,
 				DC75E40D1FD12AA400332BE5 /* LYPlayer_play.png in Resources */,
 				94D38A591F39C23A00F974A6 /* YYLiveCollectionViewCell.xib in Resources */,
 				94D38A0D1F39C23A00F974A6 /* YYIMCreatChatGroupViewController.xib in Resources */,
@@ -2353,6 +2363,7 @@
 				DC810E871FE26F75000D1C19 /* YYWaterView.swift in Sources */,
 				DC75E3F31FD12A1E00332BE5 /* LYExtension.swift in Sources */,
 				DC619CFA1FE7B42600C05E9D /* LikeButtonImageLayer.swift in Sources */,
+				DC10DDFD1FEA12E500770158 /* YYTabBar.swift in Sources */,
 				94D38A381F39C23A00F974A6 /* YYIMFriendCell.swift in Sources */,
 				946BB2AE1F4430480062D173 /* DecoratorBase.swift in Sources */,
 				94D389F21F39C23A00F974A6 /* ScrollView+RefreshExtension.swift in Sources */,
@@ -2376,6 +2387,7 @@
 				94D389B31F39C23A00F974A6 /* UIColor+Extension.swift in Sources */,
 				DC8712921FCBD21A00C73D27 /* YYAutoScrollView.swift in Sources */,
 				DCA388421FE51308008BA1C4 /* YYPresentationController.swift in Sources */,
+				DC10DE021FEA486A00770158 /* YYMainRootViewController.swift in Sources */,
 				DC75E3F21FD12A1E00332BE5 /* LYBrightnessView.swift in Sources */,
 				DCDAF7F41FDE742000E7CE3A /* UIImageView+Extension.swift in Sources */,
 				94D38A501F39C23A00F974A6 /* YYCompetitionDetailsBottomView.swift in Sources */,
@@ -2522,6 +2534,14 @@
 				94D38A5F1F39C2F600F974A6 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DC10DDFE1FEA46AB00770158 /* MainRoot.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DC10DDFF1FEA46AB00770158 /* Base */,
+			);
+			name = MainRoot.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

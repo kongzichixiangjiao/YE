@@ -4,7 +4,7 @@
 //
 //  Created by 侯佳男 on 2017/5/19.
 //  Copyright © 2017年 侯佳男. All rights reserved.
-//
+//  自定义tabbar在iOS11上太坑了，感觉每次push再回来都将tabbar上的控件重置到最初 此坑填不上
 
 import UIKit
 
@@ -22,52 +22,37 @@ class YYTabBarController: UITabBarController {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
+        for v in self.tabBar.subviews {
+            v.isHidden = true
+        }
+//        self.tabBar.removeFromSuperview()
+//        self.view.insertSubview(self.tabbarView, at: 100)
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.tabBar.addSubview(self.tabbarView)
-    }
-    
-    lazy var tabbarView: UIView = {
+
+    lazy var tabbarView: YYBaseTabBarView = {
         let v = YYBaseTabBarView.loadView()
-        v.frame = self.tabBar.bounds
+        v.frame = CGRect(x: 0, y: self.view.height - 49, width: self.view.width, height: 49)
         v.delegate = self
         return v
     }()
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     public func showTabbarView(animation: Bool = true) {
-//        UIView.animate(withDuration: 0.35) {
-//            self.tabbarView.frame = self.tabBar.frame
-//        }
-//        return
-        
-//        tabbarView.alpha = 0
-//        UIView.animate(withDuration: 0.1, animations: {
-//            self.tabbarView.alpha = 1
-//        }) { (bo) in
-//            self.tabbarView.isHidden = false
-//        }
+        tabbarView.frame = CGRect(x: 0, y: self.view.height - 49, width: self.view.width, height: 49)
+        tabbarView.setupCircleView(tag: selectedIndex)
     }
     
     public func hideTabbarView(animation: Bool = true) {
-//        UIView.animate(withDuration: 0.35) {
-//            self.tabbarView.frame = CGRect(origin: CGPoint(x: 0, y: self.tabBar.frame.origin.y + self.tabBar.frame.height), size: CGSize(width: self.tabBar.frame.width, height: self.tabbarView.frame.height))
-//        }
-//        return
-        
-//        tabbarView.alpha = 1
-//        UIView.animate(withDuration: 0.35, animations: {
-//            self.tabbarView.alpha = 0
-//        }) { (bo) in
-//            self.tabbarView.isHidden = true
-//        }
+        tabbarView.frame = CGRect(x: 0, y: self.view.height, width: self.view.width, height: 49)
     }
 }
 
@@ -78,10 +63,5 @@ extension YYTabBarController: YYBaseTabBarViewDelegate {
 }
 
 extension YYTabBarController: UITabBarControllerDelegate {
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-    }
-    
-    func tabBarController(_ tabBarController: UITabBarController, didEndCustomizing viewControllers: [UIViewController], changed: Bool) {
-    }
 
 }
