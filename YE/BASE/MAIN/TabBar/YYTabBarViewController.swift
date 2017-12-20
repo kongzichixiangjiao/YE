@@ -18,14 +18,21 @@ class YYTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBar.isHidden = true
-        
-        self.view.addSubview(self.tabbarView)
     }
     
-    lazy var tabbarView: YYBaseTabBarView = {
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBar.addSubview(self.tabbarView)
+    }
+    
+    lazy var tabbarView: UIView = {
         let v = YYBaseTabBarView.loadView()
-        v.frame = self.tabBar.frame
+        v.frame = self.tabBar.bounds
         v.delegate = self
         return v
     }()
@@ -40,13 +47,13 @@ class YYTabBarController: UITabBarController {
 //            self.tabbarView.frame = self.tabBar.frame
 //        }
 //        return
-        tabbarView.isHidden = true
-        tabbarView.alpha = 0
-        UIView.animate(withDuration: 0.1, animations: {
-            self.tabbarView.alpha = 1
-        }) { (bo) in
-            self.tabbarView.isHidden = false
-        }
+        
+//        tabbarView.alpha = 0
+//        UIView.animate(withDuration: 0.1, animations: {
+//            self.tabbarView.alpha = 1
+//        }) { (bo) in
+//            self.tabbarView.isHidden = false
+//        }
     }
     
     public func hideTabbarView(animation: Bool = true) {
@@ -55,13 +62,12 @@ class YYTabBarController: UITabBarController {
 //        }
 //        return
         
-        tabbarView.isHidden = false
-        tabbarView.alpha = 1
-        UIView.animate(withDuration: 0.35, animations: {
-            self.tabbarView.alpha = 0
-        }) { (bo) in
-            self.tabbarView.isHidden = true
-        }
+//        tabbarView.alpha = 1
+//        UIView.animate(withDuration: 0.35, animations: {
+//            self.tabbarView.alpha = 0
+//        }) { (bo) in
+//            self.tabbarView.isHidden = true
+//        }
     }
 }
 

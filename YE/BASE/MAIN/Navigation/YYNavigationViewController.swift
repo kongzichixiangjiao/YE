@@ -20,10 +20,18 @@ class YYNavigationViewController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         self.view.backgroundColor = UIColor.white
         
+        self.navigationBar.isHidden = true
+        
         self.delegate = self
+
+        setupInteractivePopGestureRecognizer()
     }
     
     private func setupInteractivePopGestureRecognizer() {
@@ -33,15 +41,7 @@ class YYNavigationViewController: UINavigationController {
         // 没有push的时候使用侧滑手势出错
         // self.interactivePopGestureRecognizer?.delegate = self
     }
-
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        setupInteractivePopGestureRecognizer()
-
-        self.navigationBar.isHidden = true
-    }
-
+    
     @objc func pop(gestrure: UIPanGestureRecognizer) {
         if (gestrure.state == .ended) {
             let endPoint = gestrure.location(in: gestrure.view)
@@ -63,8 +63,8 @@ class YYNavigationViewController: UINavigationController {
 
 extension YYNavigationViewController: UINavigationControllerDelegate {
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        viewController.hidesBottomBarWhenPushed = true
         super.pushViewController(viewController, animated: true)
-        
         (self.tabBarController as! YYTabBarController).hideTabbarView()
     }
     
@@ -83,14 +83,13 @@ extension YYNavigationViewController: UINavigationControllerDelegate {
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         
     }
-    
+    /*
     func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return nil
         return YYNavigationAnimationViewController(type: GATransitionType.navigationTransition(operation))
     }
-    
+
     func navigationController(_ navigationController: UINavigationController, interactionControllerFor animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        return nil 
         return interactive ? self.interactiveTransition : nil
     }
+ */
 }
