@@ -12,6 +12,7 @@ class YYMainRootViewController: UIViewController {
     
     var vcs: [UIViewController] = []
     var old: Int = 0
+    var isFinished: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,17 +29,25 @@ class YYMainRootViewController: UIViewController {
     }
     
     private func transition(to: Int) {
+        if old == to {
+            return 
+        }
+        vcs = self.childViewControllers
+        
+        print(self.childViewControllers)
+        print(old, to, vcs[old], vcs[to])
         let newController = vcs[to]
-        let oldController = self.childViewControllers.last!
+        let oldController = vcs[old]
+
+        self.view.insertSubview(newController.view, belowSubview: tabbarView)
         
-        oldController.willMove(toParentViewController: nil)
-        addChildViewController(newController)
-        newController.view.frame = oldController.view.frame
+        UIView.animate(withDuration: 0.3, animations: {
+//            newController.view.alpha = 1
+//            oldController.view.alpha = 0
+        }) { (bo) in
+        }
         
-        transition(from: oldController, to: newController, duration: 0.2, options: UIViewAnimationOptions.transitionCrossDissolve, animations: nil, completion: { (finished) -> Void in
-            oldController.removeFromParentViewController()
-            newController.didMove(toParentViewController: self)
-        })
+        old = to
     }
     
     lazy var tabbarView: YYBaseTabBarView = {
@@ -53,18 +62,26 @@ class YYMainRootViewController: UIViewController {
     }
     
     public func showTabbarView(animation: Bool = true) {
+        if !animation {return}
+        
         UIView.animate(withDuration: 0.3, delay: 0, options: .allowAnimatedContent, animations: {
-            self.tabbarView.frame = CGRect(x: 0, y: self.view.height - 49, width: self.view.width, height: 49)
-        }) { (bo) in
             self.tabbarView.centerButton.isHidden = true
+            self.tabbarView.frame = CGRect(x: 0, y: self.view.height - 49, width: self.view.width, height: 49)
+            self.tabbarView.centerButton.alpha = 1
+        }) { (bo) in
+            self.tabbarView.centerButton.isHidden = false
         }
         
         
     }
     
     public func hideTabbarView(animation: Bool = true) {
+        if !animation {return}
+        
         UIView.animate(withDuration: 0.3, delay: 0, options: .allowAnimatedContent, animations: {
+            self.tabbarView.centerButton.isHidden = false
             self.tabbarView.frame = CGRect(x: 0, y: self.view.height, width: self.view.width, height: 49)
+            self.tabbarView.centerButton.alpha = 0
         }) { (bo) in
             self.tabbarView.centerButton.isHidden = true
         }
@@ -75,7 +92,10 @@ class YYMainRootViewController: UIViewController {
 
 extension YYMainRootViewController: YYBaseTabBarViewDelegate {
     func clickedTabbar(selectedIndex: Int) {
-        transition(to: selectedIndex)
+//        if isFinished {
+            isFinished = false
+            transition(to: selectedIndex)
+//        }
     }
 }
 
