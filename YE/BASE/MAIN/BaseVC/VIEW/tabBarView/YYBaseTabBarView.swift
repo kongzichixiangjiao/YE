@@ -45,6 +45,14 @@ class YYBaseTabBarView: UIView {
         super.awakeFromNib()
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        topLineViewTopLayout.constant = 1 / UIScreen.main.scale
+        self.circleView.frame = CGRect(origin: CGPoint(x: self.textLabels[0].center.x - kCircleViewWidth / 2, y: self.textLabels[0].center.y + kCircleViewSpace), size: CGSize(width: kCircleViewWidth, height: kCircleViewWidth))
+        
+        centerButton.frame = CGRect(x: self.center.x - kCenterButtonWidth / 2, y: -kCenterButtonSpace, width: kCenterButtonWidth, height: kCenterButtonWidth)
+    }
+    
     lazy var circleView: UIView = {
         let v = UIView(frame: CGRect.zero)
         v.backgroundColor = UIColor.orange
@@ -54,17 +62,8 @@ class YYBaseTabBarView: UIView {
         return v
     }()
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        topLineViewTopLayout.constant = 1 / UIScreen.main.scale
-        self.circleView.frame = CGRect(origin: CGPoint(x: self.textLabels[0].center.x - kCircleViewWidth / 2, y: self.textLabels[0].center.y + kCircleViewSpace), size: CGSize(width: kCircleViewWidth, height: kCircleViewWidth))
-        
-        centerButton.frame = CGRect(x: self.center.x - kCenterButtonWidth / 2, y: -kCenterButtonSpace, width: kCenterButtonWidth, height: kCenterButtonWidth)
-    }
-    
     lazy var centerButton: UIButton = {
         let b = UIButton()
-        b.frame = CGRect(x: 0, y: 0, width: kCenterButtonWidth, height: kCenterButtonWidth)
         b.layer.cornerRadius = kCenterButtonSpace / 2
         b.layer.masksToBounds = true
         b.backgroundColor = UIColor.orange

@@ -106,6 +106,7 @@ class YYPlayerView: UIView {
     private var isPlayed: Bool = false // 是否播放过
     private var isCanPlay: Bool = false // 是否可以播放
     
+    @IBOutlet weak var loadingView: UIActivityIndicatorView!
     @IBOutlet weak var topBackView: UIView! // 顶部view层
     @IBOutlet weak var screenView: UIView! // 屏幕层 承载播放界面
     @IBOutlet weak var bottomBackView: UIView! // 底部view层
@@ -403,13 +404,14 @@ class YYPlayerView: UIView {
     lazy var displayLinkHandler: YYPlayer.DisplayLinkHandler = {
         [weak self] currentTime, catchTime, state in
         if let weakSelf = self {
+            weakSelf.isCanPlay = (state == .play)
+            weakSelf.loadingView.isHidden = (state == .play)
             if state == .play {
-                weakSelf.isCanPlay = true
                 if !weakSelf.isSliderDragging {
                     weakSelf.currentTimeLabel.text = String(format: "%02d:%02d", Int(currentTime.seconds) / 60, Int(currentTime.seconds) % 60)
                     weakSelf.progressSlider.value = Float(currentTime.seconds / weakSelf.totalTime)
                     weakSelf.currentTime = currentTime.seconds
-                }
+                }   
             }
         }
     }
@@ -420,10 +422,12 @@ class YYPlayerView: UIView {
         if let weakSelf = self {
             switch state {
             case .readyToPlay:
+                weakSelf.loadingView.isHidden = true
+                weakSelf.isCanPlay = true
                 weakSelf.totalTimeLabel.text = String(format: "%02d:%02d", Int(totalTime.seconds) / 60, Int(totalTime.seconds) % 60)
                 weakSelf.totalTime = totalTime.seconds
             case .failed:
-                
+                weakSelf.loadingView.isHidden = false
                 break
             case .unknown:
                 break

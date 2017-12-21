@@ -11,9 +11,7 @@ import UIKit
 class YYMainRootViewController: UIViewController {
     
     var vcs: [UIViewController] = []
-    var old: Int = 99
-    
-    var isFinished: Bool = true
+    var currentPage: Int = 99
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,38 +20,43 @@ class YYMainRootViewController: UIViewController {
             (vc as! YYNavigationViewController).yy_tabBarController = self
         }
         
-        vcs = self.childViewControllers
-        
-        self.view.addSubview(self.tabbarView)
-        
-        transition(to: 0)
+        transition(toPage: 0)
     }
     
-    private func transition(to: Int) {
-        if old == to {
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        for vc in childViewControllers {
+            vc.view.frame = self.view.bounds
+        }
+        
+        self.view.addSubview(self.tabbarView)
+        tabbarView.frame = CGRect(x: 0, y: self.view.height - TabBarHeight, width: self.view.width, height: TabBarHeight)
+    }
+    
+    private func transition(toPage: Int) {
+        if currentPage == toPage {
             return 
         }
         vcs = self.childViewControllers
         
-        print(self.childViewControllers)
-        print(old, to, vcs[old], vcs[to])
-        let newController = vcs[to]
-        let oldController = vcs[old]
-
+        for vc in vcs {
+            vc.view.alpha = 0
+            vc.view.isHidden = true
+        }
+        
+        let newController = vcs[toPage]
+        newController.view.isHidden = false
         self.view.insertSubview(newController.view, belowSubview: tabbarView)
         
         UIView.animate(withDuration: 0.3, animations: {
-//            newController.view.alpha = 1
-//            oldController.view.alpha = 0
+            newController.view.alpha = 1
         }) { (bo) in
+            self.currentPage = toPage
         }
-        
-        old = to
     }
     
     lazy var tabbarView: YYBaseTabBarView = {
         let v = YYBaseTabBarView.loadView()
-        v.frame = CGRect(x: 0, y: self.view.height - 49, width: self.view.width, height: 49)
         v.delegate = self
         return v
     }()
@@ -72,8 +75,6 @@ class YYMainRootViewController: UIViewController {
         }) { (bo) in
             self.tabbarView.centerButton.isHidden = false
         }
-        
-        
     }
     
     public func hideTabbarView(animation: Bool = true) {
@@ -86,17 +87,13 @@ class YYMainRootViewController: UIViewController {
         }) { (bo) in
             self.tabbarView.centerButton.isHidden = true
         }
-        
     }
     
 }
 
 extension YYMainRootViewController: YYBaseTabBarViewDelegate {
     func clickedTabbar(selectedIndex: Int) {
-//        if isFinished {
-            isFinished = false
-            transition(to: selectedIndex)
-//        }
+        transition(toPage: selectedIndex)
     }
 }
 

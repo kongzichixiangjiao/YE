@@ -14,8 +14,6 @@ enum SaveAreaBottomSpaceType: CGFloat {
     case normal44 = 44
 }
 
-public var MainScreenWidth = UIScreen.main.bounds.width
-public var MainScreenHeight = UIScreen.main.bounds.height
 public let SearchBarViewHeight: CGFloat = 44
 
 class YYBaseTableViewController: YYBaseViewController {

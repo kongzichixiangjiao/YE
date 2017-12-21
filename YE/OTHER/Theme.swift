@@ -9,11 +9,15 @@
 import Foundation
 import UIKit
 
-public var TabBarHeight: CGFloat = 49
-public var NavigationViewHeight: CGFloat = 64
+public let TabBarHeight: CGFloat = 49
+public let NavigationViewHeight: CGFloat = 64
 
-public var ScreenWidth = UIScreen.main.bounds.size.width
-public var ScreenHeight = UIScreen.main.bounds.size.height
+public let MainScreenScale = UIScreen.main.scale
+public let MainScreenWidth = UIScreen.main.bounds.width
+public let MainScreenHeight = UIScreen.main.bounds.height
+
+public let ScreenWidth = UIScreen.main.bounds.size.width
+public let ScreenHeight = UIScreen.main.bounds.size.height
 
 /** 屏幕尺寸 */
 // 屏幕宽度
