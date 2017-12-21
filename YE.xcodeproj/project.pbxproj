@@ -344,6 +344,8 @@
 		DCDAF7F81FDE7E2100E7CE3A /* YYResizeImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDAF7F61FDE7E2100E7CE3A /* YYResizeImageViewController.swift */; };
 		DCDAF7FB1FDE7E8600E7CE3A /* YYResizeImageViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCDAF7FA1FDE7E8600E7CE3A /* YYResizeImageViewController.storyboard */; };
 		DCFABD5D1FEB664100E5E997 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFABD5C1FEB664100E5E997 /* DispatchQueue+Extension.swift */; };
+		DCFABD5F1FEB80BC00E5E997 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFABD5E1FEB80BC00E5E997 /* Notification+Extension.swift */; };
+		DCFABD611FEBA51E00E5E997 /* YYSystemPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFABD601FEBA51E00E5E997 /* YYSystemPassword.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -692,6 +694,8 @@
 		DCDAF7F61FDE7E2100E7CE3A /* YYResizeImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYResizeImageViewController.swift; sourceTree = "<group>"; };
 		DCDAF7FA1FDE7E8600E7CE3A /* YYResizeImageViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = YYResizeImageViewController.storyboard; sourceTree = "<group>"; };
 		DCFABD5C1FEB664100E5E997 /* DispatchQueue+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Extension.swift"; sourceTree = "<group>"; };
+		DCFABD5E1FEB80BC00E5E997 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
+		DCFABD601FEBA51E00E5E997 /* YYSystemPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYSystemPassword.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -896,6 +900,7 @@
 				DC74B8C81FDA3ED400640964 /* ViewController+Extension.swift */,
 				DCDAF7F31FDE742000E7CE3A /* UIImageView+Extension.swift */,
 				DCFABD5C1FEB664100E5E997 /* DispatchQueue+Extension.swift */,
+				DCFABD5E1FEB80BC00E5E997 /* Notification+Extension.swift */,
 			);
 			path = EXTENSION;
 			sourceTree = "<group>";
@@ -1083,6 +1088,7 @@
 				94D389261F39C23900F974A6 /* YBAttributeTextTapForSwfit.swift */,
 				DCA8A4861FD7F5D80042537E /* YYLog.swift */,
 				94A61ABA1F3DA37A0014A335 /* YYSQLite.swift */,
+				DCFABD601FEBA51E00E5E997 /* YYSystemPassword.swift */,
 			);
 			path = TOOL;
 			sourceTree = "<group>";
@@ -2342,6 +2348,7 @@
 				9496345C1F41880F0079886E /* YYCompetitionCell.swift in Sources */,
 				94D389A21F39C23A00F974A6 /* YYBaseViewController.swift in Sources */,
 				DCA8A4AB1FD808E80042537E /* DataModel.swift in Sources */,
+				DCFABD5F1FEB80BC00E5E997 /* Notification+Extension.swift in Sources */,
 				DCA388491FE514FE008BA1C4 /* YYNavigationAnimationViewController.swift in Sources */,
 				DC987D071FE0CA94009B9CFA /* GARegular.swift in Sources */,
 				DC75E3F91FD12A1E00332BE5 /* LYPlayerSlider.swift in Sources */,
@@ -2414,6 +2421,7 @@
 				DCA8A4B01FD808E80042537E /* ModelProtocol.swift in Sources */,
 				94D38A001F39C23A00F974A6 /* KeyPath.swift in Sources */,
 				94D38A2D1F39C23A00F974A6 /* YYModuleSelectedCell.swift in Sources */,
+				DCFABD611FEBA51E00E5E997 /* YYSystemPassword.swift in Sources */,
 				DC75E3FA1FD12A1E00332BE5 /* LYPlayerView.swift in Sources */,
 				94D38A581F39C23A00F974A6 /* YYLiveCollectionViewCell.swift in Sources */,
 				94D389AE1F39C23A00F974A6 /* CGFloat+Extension.swift in Sources */,

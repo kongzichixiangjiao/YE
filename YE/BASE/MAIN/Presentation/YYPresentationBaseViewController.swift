@@ -16,15 +16,13 @@ import UIKit
  */
 
 /*
-     let d = YYPresentationDelegate(animationType: .alert)
-     let vc = YYPresentationBaseViewController()
-     vc.transitioningDelegate = d
-     vc.modalPresentationStyle = .custom
+     let d = YYPresentationDelegate(animationType: <#PresentationAnimationType#>)
+     let vc = <#YYPresentationBaseViewController#>(nibName: "<#YYPresentationBaseViewController#>", bundle: nil, delegate: d)
      vc.clickedHandler = {
-         tag in
-         print(tag)
-    }
-    self.present(vc, animated: true, completion: nil)
+        tag in
+        print(tag)
+     }
+     self.present(vc, animated: true, completion: nil)
  */
 
 class YYPresentationBaseViewController: UIViewController {
@@ -37,11 +35,15 @@ class YYPresentationBaseViewController: UIViewController {
         super.viewDidLoad()
     }
     
-    convenience init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?, a: Int) {
+    convenience init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?, delegate: YYPresentationDelegate?) {
         self.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        let d = YYPresentationDelegate(animationType: .alert)
-        transitioningDelegate = d
-        modalPresentationStyle = .custom
+        self.modalPresentationStyle = .custom
+        guard let d = delegate else {
+            let de = YYPresentationDelegate(animationType: .alert)
+            self.transitioningDelegate = de
+            return
+        }
+        self.transitioningDelegate = d
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {

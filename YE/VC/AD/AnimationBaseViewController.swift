@@ -16,10 +16,8 @@ import UIKit
  */
 
 /*
- let d = YYPresentationDelegate(animationType: .alert)
- let vc = AnimationBaseViewController()
- vc.transitioningDelegate = d
- vc.modalPresentationStyle = .custom
+ let d = YYPresentationDelegate(animationType: .sheet)
+ let vc = AnimationBaseViewController(nibName: "AnimationBaseViewController", bundle: nil, delegate: d)
  vc.clickedHandler = {
     tag in
     print(tag)
@@ -38,7 +36,7 @@ class AnimationBaseViewController: YYPresentationBaseViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-            self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
         clickedHandler?(2)
     }
     

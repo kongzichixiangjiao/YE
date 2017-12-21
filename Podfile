@@ -101,5 +101,7 @@ pod 'GDPerformanceView-Swift'
 # core data
 #pod 'ensembles'
 
+# 特别高端帅气的slider [!] Unable to find a specification for `fluid-slider`
+# pod 'fluid-slider'
 
 end
