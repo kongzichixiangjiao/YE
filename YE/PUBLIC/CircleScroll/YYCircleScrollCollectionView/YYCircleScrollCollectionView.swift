@@ -4,7 +4,7 @@
 //
 //  Created by 侯佳男 on 2017/11/7.
 //  Copyright © 2017年 侯佳男. All rights reserved.
-//
+//  轮播collectionview  有样式  不能循环
 
 import UIKit
 

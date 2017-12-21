@@ -4,7 +4,7 @@
 //
 //  Created by 侯佳男 on 2017/6/28.
 //  Copyright © 2017年 侯佳男. All rights reserved.
-//
+//  刷新 刷新 刷新
 
 import UIKit
 
@@ -59,6 +59,8 @@ extension UIScrollView: UIScrollViewRefreshProtocol {
     
 }
 
+
+// MARK: - 添加下拉刷新
 extension UIScrollView: UIScrollViewRefreshXIBProtocol {
     
     func ga_addRefreshHeaderXIB(_ headerView: GA_XIBRefreshHeaderView, _ handler: @escaping RefreshKey.RefreshFinishedHandler) {
@@ -70,19 +72,20 @@ extension UIScrollView: UIScrollViewRefreshXIBProtocol {
         headerView.frame = CGRect(x: 0, y: -GA_XIBRefreshHeaderView.height - self.contentInset.top, width: self.frame.size.width, height: GA_XIBRefreshHeaderView.height)
     }
     
-    func ga_XIBbeginRefreshing() {
+    public func ga_XIBbeginRefreshing() {
         let headerView = self.viewWithTag(RefreshKey.kRefreshHeaderViewTag) as! GA_XIBRefreshHeaderView
         headerView.beginRefreshing()
     }
     
-    func ga_XIBendRefreshing() {
+    public func ga_XIBendRefreshing() {
         let headerView = self.viewWithTag(RefreshKey.kRefreshHeaderViewTag) as! GA_XIBRefreshHeaderView
         headerView.endRefreshing()
     }
 }
-
+// MARK: - 添加上拉加载
 extension UIScrollView: UIScrollViewRemoveAllViewsProtocol {
     
+    // 此方法有毒 剧毒
     func ga_removeAllViews() {
         for v in self.subviews {
             if (NSStringFromClass(type(of: v)).components(separatedBy: ".").last! == "_UIFieldEditorContentView") {
@@ -108,15 +111,12 @@ extension UIScrollView: UIScrollViewLoadProtocol {
         footerView.refreshHandler = handler
     }
     
-    func ga_beginLoadFooter() {
+    public func ga_beginLoadFooter() {
         
     }
     
-    func ga_endLoadFooter() {
+    public func ga_endLoadFooter() {
         let loadView = self.viewWithTag(RefreshKey.kLoadFooterViewTag) as! GA_LoadFooterView
         loadView.endLoadFooter()
     }
 }
-
-
-

@@ -14,9 +14,9 @@ class YYWebView: UIView {
     private let kEstimatedProgress = "estimatedProgress"
     weak var myDelegate: YYWebViewDelegate?
     
-    var url: String!
-    var progressViewHeight: CGFloat = 2
-    var isShowProgress: Bool? {
+    public var url: String!
+    public var progressViewHeight: CGFloat = 2
+    public var isShowProgress: Bool? {
         didSet {
             if isShowProgress! {
                 self.addSubview(progressView)

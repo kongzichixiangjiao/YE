@@ -4,7 +4,7 @@
 //
 //  Created by houjianan on 2017/3/10.
 //  Copyright © 2017年 houjianan. All rights reserved.
-//
+//  正则判定 用户名 e_mail 手机号 链接 ip html
 
 import Foundation
 

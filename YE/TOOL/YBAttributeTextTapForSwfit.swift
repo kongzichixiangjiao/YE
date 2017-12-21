@@ -4,7 +4,7 @@
 //
 //  Created by 侯佳男 on 2017/6/15.
 //  Copyright © 2017年 侯佳男. All rights reserved.
-//
+//  给文本内容中的字添加点击事件
 
 import UIKit
 // FIXME: comparison operators with optionals were removed from the Swift Standard Libary.

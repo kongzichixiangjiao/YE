@@ -21,7 +21,6 @@ class YYEventDetailViewController: YYBaseTableViewController {
 //        playerView.url = ""
 //        self.view.addSubview(playerView)
         
-        
     }
 
     override func didReceiveMemoryWarning() {

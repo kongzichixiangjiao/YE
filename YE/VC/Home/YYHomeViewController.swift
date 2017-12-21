@@ -196,7 +196,6 @@ class YYHomeViewController: YYBaseTableViewController {
         self.leftButtonTitle = "home_nav_scan"
         self.setupRightButton(.details)
         self.setupOtherRightButton()
-
     }
         
     override func initTableView() {
@@ -258,11 +257,9 @@ class YYHomeViewController: YYBaseTableViewController {
     
     override func clickedRightButtonAction(_ sender: UIButton) {
 //        push(YYTestViewController())
-        
 //        yy_push(storyboardName: "YYResizeImageViewController")
-        let vc = YYADViewController(nibName: "YYADViewController", bundle: nil)
-
-        yy_push(vc: vc)
+        
+        yy_push(vc: YYADViewController(nibName: "YYADViewController", bundle: nil))
     }
     
     override func clickedNavigationViewOtherRightButton(_ sender: UIButton) {

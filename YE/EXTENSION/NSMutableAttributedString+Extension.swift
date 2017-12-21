@@ -10,7 +10,7 @@ import UIKit
 
 extension NSAttributedString {
     
-    class func yy_paragraphStyle() -> NSMutableParagraphStyle {
+    static func yy_paragraphStyle() -> NSMutableParagraphStyle {
         let style                 = NSMutableParagraphStyle()
         style.lineSpacing         = 5.0 //每行文字之间的距离
         style.paragraphSpacing    = 5.0 //段落之间的距离
@@ -19,7 +19,7 @@ extension NSAttributedString {
         return style
     }
     
-    class func yy_contentStyle(_ text: String) -> NSAttributedString {
+    static func yy_contentStyle(_ text: String) -> NSAttributedString {
         let attributed = NSMutableAttributedString(string: text)
         let style = yy_paragraphStyle()
         attributed.addAttributes([NSAttributedStringKey.paragraphStyle : style], range: NSMakeRange(0, attributed.length))

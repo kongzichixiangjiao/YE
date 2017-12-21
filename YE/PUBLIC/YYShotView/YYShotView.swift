@@ -4,7 +4,7 @@
 //
 //  Created by 侯佳男 on 2017/7/13.
 //  Copyright © 2017年 侯佳男. All rights reserved.
-//  
+//  按钮点击弹出框
 
 import UIKit
 
@@ -65,7 +65,7 @@ class YYShotView: UIView {
 
     var pointX: CGFloat = 0
     
-    class func show(_ point: UIView, items: [String] = [], handler: @escaping YYShotViewHandler) {
+    static func show(_ point: UIView, items: [String] = [], handler: @escaping YYShotViewHandler) {
         let _ = YYShotView(size: CGSize(width: YYShotView.shotViewW, height: 100), pointView: point, items: items,  handler: handler)
     }
 

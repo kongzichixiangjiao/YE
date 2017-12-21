@@ -4,7 +4,7 @@
 //
 //  Created by 侯佳男 on 2017/7/1.
 //  Copyright © 2017年 侯佳男. All rights reserved.
-//
+//  cell滑动出各种标签按钮
 
 import UIKit
 

@@ -735,6 +735,7 @@ class YYPlayer: NSObject {
     }
     
     deinit {
+        print("YYPlayer deinit")
         NotificationCenter.default.removeObserver(self)
     }
 }

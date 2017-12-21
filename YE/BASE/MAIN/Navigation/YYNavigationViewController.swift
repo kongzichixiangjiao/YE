@@ -41,7 +41,7 @@ class YYNavigationViewController: UINavigationController {
         // 全屏可滑动
         object_setClass(self.interactivePopGestureRecognizer, UIPanGestureRecognizer.self)
         // 没有push的时候使用侧滑手势出错
-        // self.interactivePopGestureRecognizer?.delegate = self
+         self.interactivePopGestureRecognizer?.delegate = self
     }
     
     @objc func pop(gestrure: UIPanGestureRecognizer) {
@@ -62,6 +62,16 @@ class YYNavigationViewController: UINavigationController {
     }
 }
 
+extension YYNavigationViewController: UIGestureRecognizerDelegate {
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        guard let pop = gestureRecognizer as? UIPanGestureRecognizer else {
+            return true
+        }
+        let _ = pop.location(in: pop.view)
+        let _ = pop.velocity(in: pop.view)
+        return true
+    }
+}
 
 extension YYNavigationViewController: UINavigationControllerDelegate {
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {

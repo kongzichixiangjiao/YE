@@ -4,7 +4,7 @@
 //
 //  Created by 侯佳男 on 2017/6/6.
 //  Copyright © 2017年 侯佳男. All rights reserved.
-//
+//  此类待删除
 
 import Foundation
 import UIKit
