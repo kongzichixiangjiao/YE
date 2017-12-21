@@ -1118,6 +1118,8 @@
 		94D389281F39C23900F974A6 /* Alert */ = {
 			isa = PBXGroup;
 			children = (
+				DCA3884B1FE51DAF008BA1C4 /* AnimationBaseViewController.swift */,
+				DCA3884C1FE51DAF008BA1C4 /* AnimationBaseViewController.xib */,
 			);
 			path = Alert;
 			sourceTree = "<group>";
@@ -1985,8 +1987,6 @@
 			children = (
 				DC810E821FE26F23000D1C19 /* YYADViewController.swift */,
 				DC810E831FE26F23000D1C19 /* YYADViewController.xib */,
-				DCA3884B1FE51DAF008BA1C4 /* AnimationBaseViewController.swift */,
-				DCA3884C1FE51DAF008BA1C4 /* AnimationBaseViewController.xib */,
 			);
 			path = AD;
 			sourceTree = "<group>";

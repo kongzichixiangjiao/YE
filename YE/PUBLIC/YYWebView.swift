@@ -8,11 +8,14 @@
 
 import UIKit
 import WebKit
+import JavaScriptCore
 
 class YYWebView: UIView {
     
     private let kEstimatedProgress = "estimatedProgress"
     weak var myDelegate: YYWebViewDelegate?
+    
+    var jsContext: JSContext!
     
     public var url: String!
     public var progressViewHeight: CGFloat = 2
@@ -86,7 +89,22 @@ extension YYWebView: WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler 
         self.webView.frame = CGRect(origin: CGPoint.zero, size: self.webView.scrollView.contentSize)
         self.height = self.webView.frame.height
         self.myDelegate?.webViewDidFinish(self.height)
+        
+        js(webView, didFinish: navigation)
     }
+    
+    private func js(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        self.jsContext = webView.value(forKey: "documentView.webView.mainFrame.javaScriptContext") as! JSContext
+        let model = jsModel()
+        model.jsContext = self.jsContext
+        let curUrl = webView.url?.absoluteString    //WebView当前访问页面的链接 可动态注册
+        self.jsContext.evaluateScript(curUrl)
+        
+        self.jsContext.exceptionHandler = { (context, exception) in
+            print("exception：", exception ?? "--")
+        }
+    }
+    
     // 页面加载失败
     func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
         
@@ -98,3 +116,44 @@ extension YYWebView: WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler 
     
 }
 
+class jsModel: jsDelegate {
+    var jsContext: JSContext!
+    
+    func playLog(videoId: String) {
+        print(videoId)
+    }
+    
+    func existsCollectVideo(collectId:String, _ handleName:String, _ typeStr:String) {
+        // 回调JS里定义的函数
+        let handleFunc = self.jsContext.objectForKeyedSubscript(handleName)
+        let dict = ["type": typeStr, "status": false] as [String : Any]
+        let _ = handleFunc?.call(withArguments: [dict])
+    }
+}
+
+@objc protocol jsDelegate: JSExport {
+    func playLog(videoId:String)
+     func existsCollectVideo(collectId:String, _ handleName:String, _ typeStr:String)
+}
+
+/*
+ var existsCollectVideo = function() {
+     if(window.YE) {
+        window.YE.existsCollectVideo(albumId, "VideoCollectionHandle", "existsCollectVideo");
+     }
+ };
+ 
+ var playLog = function(str) {
+     if(window.YE) {
+        window.YE.playLog(str);
+     }
+ };
+ 
+ var VideoCollectionHandle = function(d) {
+    alert(d.status);
+ };
+ 
+ existsCollectVideo();
+ 
+ playLog("hello world");
+ */
