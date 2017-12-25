@@ -176,6 +176,4 @@ extension String {
     func yy_xib() -> UIViewController {
         return UIViewController(nibName: self, bundle: nil)
     }
-    
 }
-

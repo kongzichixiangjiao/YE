@@ -9,14 +9,16 @@
 import UIKit
 
 class YYADViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
     
     @IBOutlet weak var waterBottomLayout: NSLayoutConstraint!
     @IBOutlet weak var waterView: YYWaterView!
     @IBOutlet weak var titleLabel: UILabel!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

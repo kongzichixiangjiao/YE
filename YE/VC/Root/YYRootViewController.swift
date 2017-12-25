@@ -15,7 +15,7 @@ class YYRootViewController: UIViewController {
         
         self.view.backgroundColor = UIColor.white
         
-        
+
     }
     
     override func didReceiveMemoryWarning() {

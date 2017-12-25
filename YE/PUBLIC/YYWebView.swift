@@ -52,6 +52,7 @@ class YYWebView: UIView {
         
         self.url = url
         self.addSubview(webView)
+        
     }
     
     override func addObserver(_ observer: NSObject, forKeyPath keyPath: String, options: NSKeyValueObservingOptions = [], context: UnsafeMutableRawPointer?) {
@@ -96,6 +97,7 @@ extension YYWebView: WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler 
     private func js(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         self.jsContext = webView.value(forKey: "documentView.webView.mainFrame.javaScriptContext") as! JSContext
         let model = jsModel()
+        self.jsContext.setValue(model, forKey: "jsModel")
         model.jsContext = self.jsContext
         let curUrl = webView.url?.absoluteString    //WebView当前访问页面的链接 可动态注册
         self.jsContext.evaluateScript(curUrl)

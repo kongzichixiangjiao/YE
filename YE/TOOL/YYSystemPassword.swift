@@ -14,29 +14,22 @@
  3、如果输入了锁屏密码,指纹解密锁定会默认解除
  */
 /*
- YYSystemPassword.share.systemPasswordEvaluate { (result) in
-     if (result) {
-        self.navigationController?.popViewController(animated: true)
-     } else {
-        print("失败")
-     }
- }
+    YYSystemPassword.systemPasswordEvaluate { (bo) in
+        print(bo)
+    }
  */
 
 import Foundation
 import LocalAuthentication
 
 class YYSystemPassword {
-    
-    static let share: YYSystemPassword = YYSystemPassword()
-    
     typealias SystemPasswordHandler = (_ success: Bool) -> ()
     private var systemPasswordHandler: SystemPasswordHandler!
     
-    public func systemPasswordEvaluate(handler: @escaping SystemPasswordHandler) {
-        self.systemPasswordHandler = handler
-        
-        evaluateDeviceOwnerAuthenticationWithBiometrics()
+    static func systemPasswordEvaluate(handler: @escaping SystemPasswordHandler) {
+        let s = YYSystemPassword()
+        s.systemPasswordHandler = handler
+        s.evaluateDeviceOwnerAuthenticationWithBiometrics()
     }
     
     private func evaluateDeviceOwnerAuthenticationWithBiometrics() {
@@ -87,4 +80,8 @@ class YYSystemPassword {
         }
     }
     
+    
+    deinit {
+        print("oc")
+    }
 }
