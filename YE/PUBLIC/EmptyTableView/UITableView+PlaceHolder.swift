@@ -6,6 +6,14 @@
 //  Copyright © 2017年 侯佳男. All rights reserved.
 //  感谢 微博@iOS程序犭袁
 
+
+/*
+    self.tableView.emptyDelegate = self
+ 
+    // 刷新使用yy_reloadData()
+    self.tableView.yy_reloadData()
+ */
+
 import UIKit
 
 protocol UITableViewPlaceHolderDelegate {
@@ -90,21 +98,3 @@ extension UITableView {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

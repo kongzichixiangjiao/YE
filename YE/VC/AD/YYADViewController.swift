@@ -18,7 +18,7 @@ class YYADViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.emptyDelegate = self
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -38,10 +38,10 @@ class YYADViewController: UIViewController {
             self.view.layoutIfNeeded()
             self.titleLabel.alpha = 1
         }) { (bo) in
-//            UIApplication.shared.keyWindow?.rootViewController = rootVC
+            UIApplication.shared.keyWindow?.rootViewController = rootVC
         }
         
-        self.tableView.yy_reloadData()
+        
     }
 
     deinit {

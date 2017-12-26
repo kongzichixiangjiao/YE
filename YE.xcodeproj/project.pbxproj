@@ -1007,7 +1007,7 @@
 				94D388C71F39C23900F974A6 /* ScrollView+BaneHeader.swift */,
 				94D389151F39C23900F974A6 /* YYBorderLabel.swift */,
 				94D389171F39C23900F974A6 /* YYDrawerTableViewCell.swift */,
-				94D389181F39C23900F974A6 /* YYEmptyTableView.swift */,
+				DC749F571FF21DCA00D5E2B8 /* EmptyTableView */,
 				DCBDF1151FDFC4CF00DC18FB /* YYFontLabel.swift */,
 				94D389191F39C23900F974A6 /* YYIconLableView.swift */,
 				94D3891A1F39C23900F974A6 /* YYOnePixView.swift */,
@@ -1017,7 +1017,6 @@
 				DC619CFC1FE7B43B00C05E9D /* YYToast.swift */,
 				DC810E861FE26F75000D1C19 /* YYWaterView.swift */,
 				94D389211F39C23900F974A6 /* YYWebView.swift */,
-				DC749EE81FF1D90500D5E2B8 /* UITableView+PlaceHolder.swift */,
 			);
 			path = PUBLIC;
 			sourceTree = "<group>";
@@ -1626,6 +1625,15 @@
 				DC6770BE1FD697D400E79A07 /* Player_unlock-nor.png */,
 			);
 			path = PlayerSource;
+			sourceTree = "<group>";
+		};
+		DC749F571FF21DCA00D5E2B8 /* EmptyTableView */ = {
+			isa = PBXGroup;
+			children = (
+				DC749EE81FF1D90500D5E2B8 /* UITableView+PlaceHolder.swift */,
+				94D389181F39C23900F974A6 /* YYEmptyTableView.swift */,
+			);
+			path = EmptyTableView;
 			sourceTree = "<group>";
 		};
 		DC74B86A1FDA2DD100640964 /* RxSwiftTest */ = {
