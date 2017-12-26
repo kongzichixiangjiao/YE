@@ -251,8 +251,10 @@ enum LineViewPosition {
 
 extension UIView {
     
+    static var kLineViewKey: UInt = 151001
+    
     func showLineView(_ space: CGFloat, position: LineViewPosition = .bottom, color: UIColor = UIColor.lightGray) {
-        if let _ = objc_getAssociatedObject(self, "lineView") {
+        if let _ = objc_getAssociatedObject(self, &UIView.kLineViewKey) {
             return
         }
         let h = 1.0 / UIScreen.main.scale
@@ -261,7 +263,7 @@ extension UIView {
         lineView.backgroundColor = color 
         self.addSubview(lineView)
         
-        objc_setAssociatedObject(self, "lineView", lineView, .OBJC_ASSOCIATION_RETAIN)
+        objc_setAssociatedObject(self, &UIView.kLineViewKey, lineView, .OBJC_ASSOCIATION_RETAIN)
     }
     
     func clickCircle() {
