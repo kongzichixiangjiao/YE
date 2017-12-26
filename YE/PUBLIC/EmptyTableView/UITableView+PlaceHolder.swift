@@ -12,6 +12,18 @@
  
     // 刷新使用yy_reloadData()
     self.tableView.yy_reloadData()
+ 
+ // 实现代理UITableViewPlaceHolderDelegate方法
+ extension <#UIViewController#>: UITableViewPlaceHolderDelegate {
+    func tableViewPlaceHolderView() -> UIView {
+        let v = <#UIView#>
+        return v
+    }
+ 
+    func tableViewEnableScrollWhenPlaceHolderViewShowing() -> Bool {
+        return <#true#>
+    }
+ }
  */
 
 import UIKit

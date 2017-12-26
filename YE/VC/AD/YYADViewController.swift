@@ -18,7 +18,7 @@ class YYADViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.tableView.emptyDelegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,37 +41,10 @@ class YYADViewController: UIViewController {
             UIApplication.shared.keyWindow?.rootViewController = rootVC
         }
         
-        
+        self.tableView.yy_reloadData()
     }
 
     deinit {
         print("YYADViewController deinit")
     }
 }
-
-extension YYADViewController: UITableViewDelegate, UITableViewDataSource, UITableViewPlaceHolderDelegate {
-    func tableViewPlaceHolderView() -> UIView {
-        let v = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-        v.backgroundColor = UIColor.orange
-        return v
-    }
-    
-    func tableViewEnableScrollWhenPlaceHolderViewShowing() -> Bool {
-        return false
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 30
-    }
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
-    }
-    
-}
-
