@@ -22,6 +22,7 @@ class YYBorderLabel: UILabel {
             self.layer.borderColor = yy_borderColor.cgColor
         }
     }
+    
     @IBInspectable var yy_fontSize: CGFloat = 10 {
         didSet {
             self.font = UIFont.systemFont(ofSize: yy_fontSize)

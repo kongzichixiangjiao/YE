@@ -41,7 +41,7 @@ class YYNavigationAnimationViewController: NSObject, UIViewControllerAnimatedTra
         
         let fromView = fromVC.view
         let toView = toVC.view
-        
+    
         var translation = containerView.frame.width
         var fromViewTransform = CGAffineTransform.identity
         var toViewTransform = CGAffineTransform.identity

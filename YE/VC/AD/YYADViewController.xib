@@ -12,7 +12,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YYADViewController" customModule="YE" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="izw-ee-fV7" id="X8w-90-Ghx"/>
                 <outlet property="titleLabel" destination="QYF-Vr-qhC" id="vih-u8-WKP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="waterBottomLayout" destination="URf-Jc-pts" id="0M5-8j-wVw"/>
@@ -78,26 +77,14 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="izw-ee-fV7">
-                    <rect key="frame" x="0.0" y="60" width="375" height="547"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="3J5-FJ-zDt"/>
-                        <outlet property="delegate" destination="-1" id="J5K-Bn-hGl"/>
-                    </connections>
-                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="QYF-Vr-qhC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3Dm-CU-G5s"/>
-                <constraint firstItem="izw-ee-fV7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="BCB-rD-GIu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Dbu-aU-wDC" secondAttribute="trailing" id="IqG-x2-BdB"/>
                 <constraint firstItem="QYF-Vr-qhC" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-50" id="LBq-vA-LgE"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Dbu-aU-wDC" secondAttribute="bottom" id="URf-Jc-pts"/>
                 <constraint firstItem="Dbu-aU-wDC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZPQ-rZ-2TO"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="izw-ee-fV7" secondAttribute="bottom" constant="60" id="c0s-8r-fYZ"/>
-                <constraint firstItem="izw-ee-fV7" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="rY9-Qo-wmk"/>
-                <constraint firstItem="izw-ee-fV7" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="wJc-Vk-aID"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="33.5" y="54.5"/>

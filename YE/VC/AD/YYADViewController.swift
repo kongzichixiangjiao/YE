@@ -10,15 +10,12 @@ import UIKit
 
 class YYADViewController: UIViewController {
     
-    @IBOutlet weak var tableView: UITableView!
-    
     @IBOutlet weak var waterBottomLayout: NSLayoutConstraint!
     @IBOutlet weak var waterView: YYWaterView!
     @IBOutlet weak var titleLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.emptyDelegate = self
     }
     
     override func didReceiveMemoryWarning() {
@@ -40,11 +37,10 @@ class YYADViewController: UIViewController {
         }) { (bo) in
             UIApplication.shared.keyWindow?.rootViewController = rootVC
         }
-        
-        self.tableView.yy_reloadData()
     }
 
     deinit {
         print("YYADViewController deinit")
     }
 }
+
