@@ -20,6 +20,5 @@ extension UIViewController {
             return r
         }
     }
-    
 }
 

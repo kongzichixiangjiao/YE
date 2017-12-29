@@ -53,7 +53,6 @@ extension YYTransition {
         guard let toVC = context.viewController(forKey: .to) else { return }
         guard let fromVC = context.viewController(forKey: .from) else { return }
         let containerView = context.containerView
-        print(yy_toViewPath)
         guard let toView = toVC.value(forKeyPath: yy_toViewPath!) as? UIView else {
             return
         }

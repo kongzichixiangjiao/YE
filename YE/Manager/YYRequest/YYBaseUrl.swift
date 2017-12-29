@@ -16,5 +16,4 @@ enum ServiceBaseType: String {
 
 static let url: String = ServiceBaseType.base.rawValue
     
-    
 }

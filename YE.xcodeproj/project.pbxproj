@@ -833,7 +833,6 @@
 		94D388801F39BE4100F974A6 /* YE */ = {
 			isa = PBXGroup;
 			children = (
-				DC670DF61FF4E8C200FE6F45 /* Framework */,
 				DCA8A48C1FD808E80042537E /* MVVM */,
 				94DFE4121F581B47004D71F3 /* C */,
 				94D38A621F39C33300F974A6 /* Assets.xcassets */,
@@ -1633,13 +1632,6 @@
 				DC65BD641FD8E30100204B7E /* GithubService.swift */,
 			);
 			path = Networking;
-			sourceTree = "<group>";
-		};
-		DC670DF61FF4E8C200FE6F45 /* Framework */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Framework;
 			sourceTree = "<group>";
 		};
 		DC6770B11FD697D400E79A07 /* PlayerSource */ = {
