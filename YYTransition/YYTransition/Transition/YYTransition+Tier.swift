@@ -8,10 +8,10 @@
 
 import UIKit
 
-extension YYTransition where Base: UIViewController {
+extension YYTransition {
     
     func tierAnimationTransition(isBack: Bool, using transitionContext: UIViewControllerContextTransitioning) {
-        base.yy_transitionContext = transitionContext
+        self.yy_transitionContext = transitionContext
         if isBack {
             tierExecuteAnimationBack(using: transitionContext)
         } else {
@@ -37,7 +37,7 @@ extension YYTransition where Base: UIViewController {
         toView.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
         
         // 执行弹簧动画
-        UIView.animate(withDuration: base.transitionDuration(using: context), delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: self.transitionDuration(using: context), delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
             // 源view移出
             fromView.transform = CGAffineTransform(translationX: -fromView.frame.size.width, y: 0)
             // 目标view恢复
@@ -64,7 +64,7 @@ extension YYTransition where Base: UIViewController {
         
         toView.transform = CGAffineTransform(translationX: -fromView.frame.size.width, y: 0)
         
-        UIView.animate(withDuration: base.transitionDuration(using: context), delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: self.transitionDuration(using: context), delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
             fromView.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
             toView.transform = CGAffineTransform.identity
         }) { (finished) in

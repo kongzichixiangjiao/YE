@@ -11,33 +11,28 @@ import YYTransition
 
 class YYTargetTransitionViewController: UIViewController {
 
-    var type: YYTransitionAnimationType!
-    
     @IBOutlet weak var toView: UIImageView!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        yyPush.setDelegate()
-        // 123
-        
-        switch type! {
-        case .circle(_):
-            yyPush.transition(type: YYTransitionAnimationType.circle(isBack: true))
-            break
-        case .move(_):
-            yyPush.transition(type: YYTransitionAnimationType.move(isBack: true))
-            break
-        case .middle(_):
-            yyPush.transition(type: YYTransitionAnimationType.middle(isBack: true))
-        case .tier(_):
-            yyPush.transition(type: YYTransitionAnimationType.tier(isBack: true))
-        }
+
+
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.lightGray
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+//        yy_routerAnimation = YYTransition(type: .tier)
+        yy_routerAnimation = YYTransition(type: .move, isBack: true, fromeViewPath: "toView", toViewPath: "toView")
+        yy_routerAnimation.yy_isBack = true
+        self.navigationController?.delegate = yy_routerAnimation
+        self.navigationController?.popViewController(animated: true)
     }
 
 }

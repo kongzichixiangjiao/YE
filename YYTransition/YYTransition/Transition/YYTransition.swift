@@ -8,56 +8,123 @@
 
 import UIKit
 
+struct YYTransitionKey {
+    static var kTransitonAnimationTypeKey: UInt = 12271740
+    static var kFromViewKey: UInt = 12271741
+    static var kToPathStringKey: UInt = 12271742
+    static var kTransitionContextKey: UInt = 12271743
+    static var kRouterAnimationKey: UInt = 12271744
+    static var kIsBackKey: UInt = 12271745
+}
+
+// MARK: 动画执行时间
+private let kTransitionDuration: Double = 0.35
+
 public enum YYTransitionAnimationType {
-    case circle(isBack: Bool)
-    case move(isBack: Bool)
-    case middle(isBack: Bool)
-    case tier(isBack: Bool)
+    case circle
+    case move
+    case middle
+    case tier
 }
 
-public final class YYTransition<Base> {
-    public let base: Base
-    public init(_ base: Base) {
-        self.base = base
+public class YYTransition: NSObject {
+
+    convenience public init(type: YYTransitionAnimationType, isBack: Bool = false, fromeViewPath: String? = nil, toViewPath: String? = nil) {
+        self.init()
+        self.yy_ransitionAnimationType = type
+        self.yy_isBack = isBack
+        guard let fPath = fromeViewPath else {
+            return
+        }
+        self.yy_fromViewPath = fPath
+        guard let tPath = toViewPath else {
+            return
+        }
+        self.yy_toViewPath = tPath
     }
 }
 
-public protocol YYCompatible {
-    associatedtype Y
-    var yyPush: Y {
-        get
+extension YYTransition: UIViewControllerAnimatedTransitioning, UIViewControllerTransitioningDelegate, UINavigationControllerDelegate {
+    
+    public func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationControllerOperation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return self
+    }
+    
+    public func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+        return 0.35
+    }
+    
+    public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+        switch self.yy_ransitionAnimationType {
+        case .circle:
+            //            yyPush.circleAnimateTransition(isBack: isBack, using: transitionContext)
+            break
+        case .move:
+            moveAnimationTransition(isBack: yy_isBack, using: transitionContext)
+            break
+        case .middle:
+            //            yyPush.middleAnimationTransition(isBack: isBack, using: transitionContext)
+            break
+        case .tier:
+            tierAnimationTransition(isBack: yy_isBack, using: transitionContext)
+            break
+        }
     }
 }
-
-extension YYCompatible {
-    public var yyPush: YYTransition<Self> {
+extension YYTransition {
+    public var yy_isBack: Bool {
+        set {
+            objc_setAssociatedObject(self, &YYTransitionKey.kIsBackKey, newValue, .OBJC_ASSOCIATION_ASSIGN)
+        }
         get {
-            return YYTransition(self)
+            return objc_getAssociatedObject(self, &YYTransitionKey.kIsBackKey) as! Bool
         }
     }
-}
-extension YYTransition where Base: UIViewController {
-    
-    public func setDelegate() {
-        guard let nav = base.navigationController else {
-            return
+    // 动画类型
+    var yy_ransitionAnimationType: YYTransitionAnimationType {
+        set {
+            objc_setAssociatedObject(self, &YYTransitionKey.kTransitonAnimationTypeKey, newValue, .OBJC_ASSOCIATION_COPY_NONATOMIC)
         }
-        nav.delegate = base
+        get {
+            return objc_getAssociatedObject(self, &YYTransitionKey.kTransitonAnimationTypeKey) as! YYTransitionAnimationType
+        }
     }
-    
-    public func transition(type: YYTransitionAnimationType, fromView: UIView? = nil, toViewPath: String? = nil) {
-        base.yy_ransitionAnimationType = type
-        guard let v = fromView else {
-            return
+    // 源view
+    var yy_fromViewPath: String? {
+        set {
+            objc_setAssociatedObject(self, &YYTransitionKey.kFromViewKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
-        base.yy_fromView = v
-        guard let path = toViewPath else {
-            return
+        get {
+            return objc_getAssociatedObject(self, &YYTransitionKey.kFromViewKey) as? String
         }
-        base.yy_toPathString = path
+    }
+    // 目标view名字
+    var yy_toViewPath: String? {
+        set {
+            objc_setAssociatedObject(self, &YYTransitionKey.kToPathStringKey, newValue, .OBJC_ASSOCIATION_COPY_NONATOMIC)
+        }
+        get {
+            return objc_getAssociatedObject(self, &YYTransitionKey.kToPathStringKey) as? String
+        }
+    }
+    // UIViewControllerContextTransitioning
+    var yy_transitionContext: UIViewControllerContextTransitioning {
+        set {
+            objc_setAssociatedObject(self, &YYTransitionKey.kTransitionContextKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+        get {
+            return objc_getAssociatedObject(self, &YYTransitionKey.kTransitionContextKey) as! UIViewControllerContextTransitioning
+        }
     }
 }
 
+extension YYTransition: CAAnimationDelegate {
+    public func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
+        yy_transitionContext.completeTransition(!yy_transitionContext.transitionWasCancelled)
+        yy_transitionContext.viewController(forKey: .from)?.view.layer.mask = nil
+        yy_transitionContext.viewController(forKey: .to)?.view.layer.mask = nil
+    }
+}
 
 
 

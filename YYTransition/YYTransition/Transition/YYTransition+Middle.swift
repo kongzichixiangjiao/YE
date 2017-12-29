@@ -8,10 +8,10 @@
 
 import UIKit
 
-extension YYTransition where Base: UIViewController {
+extension YYTransition {
     
     func middleAnimationTransition(isBack: Bool, using transitionContext: UIViewControllerContextTransitioning) {
-        base.yy_transitionContext = transitionContext
+        self.yy_transitionContext = transitionContext
         if isBack {
             middleAnimationTransitionBack(using: transitionContext)
         } else {

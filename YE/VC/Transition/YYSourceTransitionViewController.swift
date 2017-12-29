@@ -13,54 +13,45 @@ class YYSourceTransitionViewController: UIViewController {
 
     @IBOutlet weak var circleView: UIImageView!
     
+    @IBOutlet weak var moveView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        yyPush.setDelegate()
     }
     
     @IBAction func move(_ sender: UITapGestureRecognizer) {
-        let type = YYTransitionAnimationType.move(isBack: false)
-        yyPush.transition(type: type, fromView: sender.view, toViewPath: "toView")
-        
-        let vc = YYTargetTransitionViewController(nibName: "YYTargetTransitionViewController", bundle: nil)
-        vc.type = type
-        self.navigationController?.pushViewController(vc, animated: true)
+        yy_routerAnimation = YYTransition(type: .move, isBack: false, fromeViewPath: "moveView", toViewPath: "toView")
+        push(transition: yy_routerAnimation)
     }
     
     @IBAction func circle(_ sender: UITapGestureRecognizer) {
-        
-        let type = YYTransitionAnimationType.circle(isBack: false)
-        yyPush.transition(type: type, fromView: circleView)
-        
-        let vc = YYTargetTransitionViewController(nibName: "YYTargetTransitionViewController", bundle: nil)
-        vc.type = type
-        self.navigationController?.pushViewController(vc, animated: true)
+        yy_routerAnimation = YYTransition(type: .tier)
+        push(transition: yy_routerAnimation)
     }
+    
     @IBAction func middle(_ sender: UIButton) {
-        let type = YYTransitionAnimationType.middle(isBack: false)
-        yyPush.transition(type: type)
-        
-        let vc = YYTargetTransitionViewController(nibName: "YYTargetTransitionViewController", bundle: nil)
-        vc.type = type
-        self.navigationController?.pushViewController(vc, animated: true)
+        yy_routerAnimation = YYTransition(type: .tier)
+        push(transition: yy_routerAnimation)
     }
+    
     @IBAction func tier(_ sender: UIButton) {
-        let type = YYTransitionAnimationType.tier(isBack: false)
-        yyPush.transition(type: type)
-        
+        yy_routerAnimation = YYTransition(type: .tier)
+        push(transition: yy_routerAnimation)
+    }
+    
+    private func push(transition: YYTransition) {
         let vc = YYTargetTransitionViewController(nibName: "YYTargetTransitionViewController", bundle: nil)
-        vc.type = type
+        self.navigationController?.delegate = transition
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

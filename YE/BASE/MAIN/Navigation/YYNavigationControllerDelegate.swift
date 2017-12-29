@@ -10,7 +10,7 @@ import Foundation
 
 
 // storyboard里拖拽Object设置class为YYNavigationViewControllerDelegate 并且连线navigationcontroller
-class YYNavigationViewControllerDelegate: NSObject, UINavigationControllerDelegate {
+class YYNavigationViewControllerDelegate: NSObject {
     
     var interactive: Bool = false
     // 控制转场

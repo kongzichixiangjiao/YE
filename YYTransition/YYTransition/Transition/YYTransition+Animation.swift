@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension YYTransition where Base: UIViewController {
+extension YYTransition {
 
     func maskAnimation(targetVC: UIViewController, startPath: UIBezierPath, endPath: UIBezierPath, context: UIViewControllerContextTransitioning) {
         let maskLayer = CAShapeLayer()
@@ -18,9 +18,9 @@ extension YYTransition where Base: UIViewController {
         let animation = CABasicAnimation(keyPath: "path")
         animation.fromValue = startPath.cgPath
         animation.toValue = endPath.cgPath
-        animation.duration = base.transitionDuration(using: context)
+        animation.duration = self.transitionDuration(using: context)
         animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
-        animation.delegate = base
+        animation.delegate = self
         maskLayer.add(animation, forKey: "circle")
     }
     

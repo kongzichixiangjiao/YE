@@ -10,7 +10,6 @@
 		DC9EA0F11FF5E01F006FC7F6 /* YYTransition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC9EA0E71FF5E01F006FC7F6 /* YYTransition.framework */; };
 		DC9EA0F61FF5E01F006FC7F6 /* YYTransitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9EA0F51FF5E01F006FC7F6 /* YYTransitionTests.swift */; };
 		DC9EA0F81FF5E01F006FC7F6 /* YYTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = DC9EA0EA1FF5E01F006FC7F6 /* YYTransition.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DC9EA10B1FF5E04C006FC7F6 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DC9EA1021FF5E04C006FC7F6 /* 2.jpg */; };
 		DC9EA10C1FF5E04C006FC7F6 /* UIViewController+Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9EA1041FF5E04C006FC7F6 /* UIViewController+Transition.swift */; };
 		DC9EA10D1FF5E04C006FC7F6 /* YYTransition+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9EA1051FF5E04C006FC7F6 /* YYTransition+Animation.swift */; };
 		DC9EA10E1FF5E04C006FC7F6 /* YYTransition+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9EA1061FF5E04C006FC7F6 /* YYTransition+Circle.swift */; };
@@ -38,7 +37,6 @@
 		DC9EA0F01FF5E01F006FC7F6 /* YYTransitionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YYTransitionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC9EA0F51FF5E01F006FC7F6 /* YYTransitionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYTransitionTests.swift; sourceTree = "<group>"; };
 		DC9EA0F71FF5E01F006FC7F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DC9EA1021FF5E04C006FC7F6 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
 		DC9EA1041FF5E04C006FC7F6 /* UIViewController+Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Transition.swift"; sourceTree = "<group>"; };
 		DC9EA1051FF5E04C006FC7F6 /* YYTransition+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YYTransition+Animation.swift"; sourceTree = "<group>"; };
 		DC9EA1061FF5E04C006FC7F6 /* YYTransition+Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YYTransition+Circle.swift"; sourceTree = "<group>"; };
@@ -89,7 +87,6 @@
 			isa = PBXGroup;
 			children = (
 				DC9EA0EA1FF5E01F006FC7F6 /* YYTransition.h */,
-				DC9EA1011FF5E04C006FC7F6 /* Source */,
 				DC9EA1031FF5E04C006FC7F6 /* Transition */,
 				DC9EA0EB1FF5E01F006FC7F6 /* Info.plist */,
 			);
@@ -103,14 +100,6 @@
 				DC9EA0F71FF5E01F006FC7F6 /* Info.plist */,
 			);
 			path = YYTransitionTests;
-			sourceTree = "<group>";
-		};
-		DC9EA1011FF5E04C006FC7F6 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				DC9EA1021FF5E04C006FC7F6 /* 2.jpg */,
-			);
-			path = Source;
 			sourceTree = "<group>";
 		};
 		DC9EA1031FF5E04C006FC7F6 /* Transition */ = {
@@ -221,7 +210,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC9EA10B1FF5E04C006FC7F6 /* 2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

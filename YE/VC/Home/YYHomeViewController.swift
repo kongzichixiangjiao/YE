@@ -253,7 +253,9 @@ class YYHomeViewController: YYBaseTableViewController {
     // MARK: 扫码事件
     override func clickedLeftButtonAction() {
         print("扫码")
-        yy_push(vc: YYRootViewController())
+        let vc = YYSourceTransitionViewController(nibName: "YYSourceTransitionViewController", bundle: nil)
+        yy_push(vc: vc)
+//        yy_push(vc: YYRootViewController())
     }
     
     override func clickedRightButtonAction(_ sender: UIButton) {

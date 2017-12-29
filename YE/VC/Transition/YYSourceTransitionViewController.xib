@@ -13,6 +13,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YYSourceTransitionViewController" customModule="YE" customModuleProvider="target">
             <connections>
                 <outlet property="circleView" destination="G0T-Jy-yrc" id="TMZ-vq-4kx"/>
+                <outlet property="moveView" destination="D6B-sJ-pZY" id="NDu-2P-e6f"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,7 +22,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="D6B-sJ-pZY">
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="D6B-sJ-pZY">
                     <rect key="frame" x="0.0" y="20" width="100" height="135"/>
                     <gestureRecognizers/>
                     <constraints>
@@ -29,10 +30,10 @@
                         <constraint firstAttribute="width" constant="100" id="Wzs-LS-KPV"/>
                     </constraints>
                     <connections>
-                        <outletCollection property="gestureRecognizers" destination="Lie-o4-weL" appends="YES" id="Z0s-DZ-Pa6"/>
+                        <outletCollection property="gestureRecognizers" destination="Lie-o4-weL" appends="YES" id="tej-Ji-aPJ"/>
                     </connections>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="G0T-Jy-yrc">
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="G0T-Jy-yrc">
                     <rect key="frame" x="80" y="319" width="100" height="135"/>
                     <gestureRecognizers/>
                     <constraints>
@@ -40,7 +41,7 @@
                         <constraint firstAttribute="width" constant="100" id="qez-kZ-ch1"/>
                     </constraints>
                     <connections>
-                        <outletCollection property="gestureRecognizers" destination="XBd-GL-prr" appends="YES" id="Qqg-mD-goE"/>
+                        <outletCollection property="gestureRecognizers" destination="XBd-GL-prr" appends="YES" id="cih-wU-uws"/>
                     </connections>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G9J-80-hwA">

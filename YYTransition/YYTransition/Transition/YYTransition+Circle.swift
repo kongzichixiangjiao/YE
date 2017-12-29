@@ -8,10 +8,10 @@
 
 import UIKit
 
-extension YYTransition where Base: UIViewController {
+extension YYTransition {
     
     func circleAnimateTransition(isBack: Bool, using transitionContext: UIViewControllerContextTransitioning) {
-        base.yy_transitionContext = transitionContext
+        self.yy_transitionContext = transitionContext
         if isBack {
             circleExecuteAnimationBack(using: transitionContext)
         } else {
@@ -26,14 +26,19 @@ extension YYTransition where Base: UIViewController {
         guard let toVC = context.viewController(forKey: .to) else {
             return
         }
-        
-        let fromView = base.yy_fromView
+        guard let fromVC = context.viewController(forKey: .from) else {
+            return
+        }
+        guard let fPath = self.yy_fromViewPath else {
+            return
+        }
+        let fromView = fromVC.value(forKeyPath: fPath) as! UIView
         guard let snapView = fromView.snapshotView(afterScreenUpdates: false) else {
             return
         }
         snapView.frame = relativeFrame(for: fromView)
         
-        toVC.yy_fromView = snapView
+//        toVC.yy_fromView = snapView
         
         containerView.addSubview(snapView)
         containerView.addSubview(toVC.view)
@@ -50,16 +55,16 @@ extension YYTransition where Base: UIViewController {
         guard let toVC = context.viewController(forKey: .to) else { return }
         guard let fromVC = context.viewController(forKey: .from) else { return }
         let containerView = context.containerView
-        let toView = fromVC.yy_fromView
+//        let toView = fromVC.yy_fromView
         
         containerView.addSubview(toVC.view)
         containerView.addSubview(fromVC.view)
-        let finalPoint = calculateFinalPoint(toVC: toVC, fromView: toView)
-        let x = finalPoint.x, y = finalPoint.y, r = sqrt(x*x+y*y)
-        let startPath = UIBezierPath(ovalIn: toView.frame.insetBy(dx: -r, dy: -r))
-        let endPath = UIBezierPath(ovalIn: toView.frame)
+//        let finalPoint = calculateFinalPoint(toVC: toVC, fromView: toView)
+//        let x = finalPoint.x, y = finalPoint.y, r = sqrt(x*x+y*y)
+//        let startPath = UIBezierPath(ovalIn: toView.frame.insetBy(dx: -r, dy: -r))
+//        let endPath = UIBezierPath(ovalIn: toView.frame)
         
-        maskAnimation(targetVC: fromVC, startPath: startPath, endPath: endPath, context: context)
+//        maskAnimation(targetVC: fromVC, startPath: startPath, endPath: endPath, context: context)
     }
     
     func relativeFrame(for target: UIView) -> CGRect {

@@ -8,10 +8,10 @@
 
 import UIKit
 
-extension YYTransition where Base: UIViewController {
+extension YYTransition {
     
     func moveAnimationTransition(isBack: Bool, using transitionContext: UIViewControllerContextTransitioning) {
-        base.yy_transitionContext = transitionContext
+        self.yy_transitionContext = transitionContext
         if isBack {
             moveExecuteAnimationBack(using: transitionContext)
         } else {
@@ -24,33 +24,43 @@ extension YYTransition where Base: UIViewController {
         guard let toVC = context.viewController(forKey: .to) else {
             return
         }
-        // 获取目标view
-        let toView = toVC.value(forKeyPath: base.yy_toPathString!) as! UIView
-        // 获取源动画
-        guard let snapView = base.yy_fromView.snapshotView(afterScreenUpdates: false) else {
+        guard let fromVC = context.viewController(forKey: .from) else {
             return
         }
-        snapView.frame = containerView.convert(base.yy_fromView.frame, from: base.yy_fromView.superview)
-        base.yy_fromView.isHidden = true
+        guard let fPath = self.yy_fromViewPath else {
+            return
+        }
+        guard let tPath = self.yy_toViewPath else {
+            return
+        }
+        let fromView = fromVC.value(forKeyPath: fPath) as! UIView
+        // 获取目标view
+        let toView = toVC.value(forKeyPath: tPath) as! UIView
+        
+        
+        // 获取源动画
+        guard let snapView = fromView.snapshotView(afterScreenUpdates: false) else {
+            return
+        }
+        snapView.frame = containerView.convert(fromView.frame, from: fromView.superview)
+        fromView.isHidden = true
         
         // 设置目标view的最终frame
         toVC.view.frame = context.finalFrame(for: toVC)
         toVC.view.alpha = 0
-        toVC.yy_fromView = base.yy_fromView
-        toVC.yy_toPathString = base.yy_toPathString
         
         toView.alpha = 0
         containerView.addSubview(snapView)
         containerView.addSubview(toVC.view)
         
-        UIView.animate(withDuration: base.transitionDuration(using: context), delay: 0.0, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: self.transitionDuration(using: context), delay: 0.0, options: .curveEaseInOut, animations: {
             containerView.layoutIfNeeded()
             toVC.view.alpha = 1
             snapView.frame = containerView.convert(toView.frame, to: toView.superview)
             toView.alpha = 1
         }) { (finished) in
             toView.isHidden = false
-            self.base.yy_fromView.isHidden = false
+            fromView.isHidden = false
             snapView.removeFromSuperview()
             context.completeTransition(!context.transitionWasCancelled)
         }
@@ -59,18 +69,27 @@ extension YYTransition where Base: UIViewController {
     func moveExecuteAnimationBack(using context: UIViewControllerContextTransitioning) {
         guard let toVC = context.viewController(forKey: .to) else { return }
         guard let fromVC = context.viewController(forKey: .from) else { return }
+        guard let tPath = self.yy_toViewPath else {
+            return
+        }
+        guard let fPath = self.yy_fromViewPath else {
+            return
+        }
+        let fromView = fromVC.value(forKeyPath: tPath) as! UIView
+        let toView = toVC.value(forKeyPath: fPath) as! UIView
+        
         let containerView = context.containerView
-        let fromView = fromVC.value(forKeyPath: base.yy_toPathString!) as! UIView
+        
         guard let snapView = fromView.snapshotView(afterScreenUpdates: false) else { return }
         snapView.frame = containerView.convert(fromView.frame, from: fromView.superview)
         fromView.isHidden = true
         toVC.view.frame = context.finalFrame(for: toVC)
-        let originView = fromVC.yy_fromView
+        let originView = fromView
         originView.isHidden = true
         containerView.insertSubview(toVC.view, belowSubview: fromVC.view)
         containerView.addSubview(snapView)
         
-        UIView.animate(withDuration: base.transitionDuration(using: context), delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
+        UIView.animate(withDuration: self.transitionDuration(using: context), delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
             fromVC.view.alpha = 0.0
             snapView.frame = containerView.convert(originView.frame, from: originView.superview)
         }) { (finished) in

@@ -315,11 +315,12 @@
 		DC964C0E1FECD95F006AA5F0 /* LikeButtonMaskLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC964C0A1FECD95F006AA5F0 /* LikeButtonMaskLayer.swift */; };
 		DC964C0F1FECD95F006AA5F0 /* YYLikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC964C0B1FECD95F006AA5F0 /* YYLikeButton.swift */; };
 		DC987D071FE0CA94009B9CFA /* GARegular.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC987D061FE0CA94009B9CFA /* GARegular.swift */; };
-		DC9EA1171FF5E10E006FC7F6 /* YYTransition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC9EA1181FF5E10E006FC7F6 /* YYTransition.framework */; };
 		DC9EA1211FF5E240006FC7F6 /* YYSourceTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9EA11F1FF5E240006FC7F6 /* YYSourceTransitionViewController.swift */; };
 		DC9EA1221FF5E240006FC7F6 /* YYSourceTransitionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC9EA1201FF5E240006FC7F6 /* YYSourceTransitionViewController.xib */; };
 		DC9EA1251FF5E24F006FC7F6 /* YYTargetTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9EA1231FF5E24F006FC7F6 /* YYTargetTransitionViewController.swift */; };
 		DC9EA1261FF5E24F006FC7F6 /* YYTargetTransitionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC9EA1241FF5E24F006FC7F6 /* YYTargetTransitionViewController.xib */; };
+		DC9EA1351FF60CB1006FC7F6 /* YYTransition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC9EA1181FF5E10E006FC7F6 /* YYTransition.framework */; };
+		DC9EA1361FF60CB1006FC7F6 /* YYTransition.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DC9EA1181FF5E10E006FC7F6 /* YYTransition.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DCA388421FE51308008BA1C4 /* YYPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA388411FE51308008BA1C4 /* YYPresentationController.swift */; };
 		DCA388451FE51368008BA1C4 /* YYPresentationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA388441FE51367008BA1C4 /* YYPresentationDelegate.swift */; };
 		DCA388491FE514FE008BA1C4 /* YYNavigationAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA388481FE514FE008BA1C4 /* YYNavigationAnimationViewController.swift */; };
@@ -354,6 +355,20 @@
 		DCFABD5F1FEB80BC00E5E997 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFABD5E1FEB80BC00E5E997 /* Notification+Extension.swift */; };
 		DCFABD611FEBA51E00E5E997 /* YYSystemPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFABD601FEBA51E00E5E997 /* YYSystemPassword.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DC9EA1371FF60CB1006FC7F6 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DC9EA1361FF60CB1006FC7F6 /* YYTransition.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		521CBA8AFB6F01FB382C7CD8 /* Pods_YE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -717,8 +732,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DC9EA1171FF5E10E006FC7F6 /* YYTransition.framework in Frameworks */,
 				A1E51B0C8B82F381C3F93DEE /* Pods_YE.framework in Frameworks */,
+				DC9EA1351FF60CB1006FC7F6 /* YYTransition.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2050,6 +2065,7 @@
 				94D3887C1F39BE4100F974A6 /* Resources */,
 				E31950EE4AC96E7D491BFE25 /* [CP] Embed Pods Frameworks */,
 				8E9EE1FE72E5BD189C4E729E /* [CP] Copy Pods Resources */,
+				DC9EA1371FF60CB1006FC7F6 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -2729,7 +2745,6 @@
 					"\"${PODS_ROOT}/Headers/Public\"",
 					"\"${PODS_ROOT}/Headers/Public/HyphenateLite\"",
 					"\"${PODS_ROOT}/Headers/Public/DeviceKit\"",
-					"$(SRCROOT)/Framework/YYTransition/**",
 				);
 				INFOPLIST_FILE = YE/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -2756,7 +2771,6 @@
 					"\"${PODS_ROOT}/Headers/Public\"",
 					"\"${PODS_ROOT}/Headers/Public/HyphenateLite\"",
 					"\"${PODS_ROOT}/Headers/Public/DeviceKit\"",
-					"$(SRCROOT)/Framework/YYTransition/**",
 				);
 				INFOPLIST_FILE = YE/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;

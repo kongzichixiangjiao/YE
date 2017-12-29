@@ -186,7 +186,7 @@ extension YYApplyViewController: YYApplyContentDelegate {
     }
 }
 
-extension YYApplyViewController: YYApplyAddImageTableViewCellDelegate {
+extension YYApplyViewController: YYApplyAddImageTableViewCellDelegate, UIPickerViewDelegate, UINavigationControllerDelegate {
     func didSelectedImage(_ tag: Int, row: Int) {
         let picker = YYBaseImagePickerController()
         picker.delegate = self
