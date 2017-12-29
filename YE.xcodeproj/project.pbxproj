@@ -315,30 +315,16 @@
 		DC964C0E1FECD95F006AA5F0 /* LikeButtonMaskLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC964C0A1FECD95F006AA5F0 /* LikeButtonMaskLayer.swift */; };
 		DC964C0F1FECD95F006AA5F0 /* YYLikeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC964C0B1FECD95F006AA5F0 /* YYLikeButton.swift */; };
 		DC987D071FE0CA94009B9CFA /* GARegular.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC987D061FE0CA94009B9CFA /* GARegular.swift */; };
+		DC9EA1171FF5E10E006FC7F6 /* YYTransition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC9EA1181FF5E10E006FC7F6 /* YYTransition.framework */; };
+		DC9EA1211FF5E240006FC7F6 /* YYSourceTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9EA11F1FF5E240006FC7F6 /* YYSourceTransitionViewController.swift */; };
+		DC9EA1221FF5E240006FC7F6 /* YYSourceTransitionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC9EA1201FF5E240006FC7F6 /* YYSourceTransitionViewController.xib */; };
+		DC9EA1251FF5E24F006FC7F6 /* YYTargetTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9EA1231FF5E24F006FC7F6 /* YYTargetTransitionViewController.swift */; };
+		DC9EA1261FF5E24F006FC7F6 /* YYTargetTransitionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC9EA1241FF5E24F006FC7F6 /* YYTargetTransitionViewController.xib */; };
 		DCA388421FE51308008BA1C4 /* YYPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA388411FE51308008BA1C4 /* YYPresentationController.swift */; };
 		DCA388451FE51368008BA1C4 /* YYPresentationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA388441FE51367008BA1C4 /* YYPresentationDelegate.swift */; };
 		DCA388491FE514FE008BA1C4 /* YYNavigationAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA388481FE514FE008BA1C4 /* YYNavigationAnimationViewController.swift */; };
 		DCA3884D1FE51DAF008BA1C4 /* AnimationBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA3884B1FE51DAF008BA1C4 /* AnimationBaseViewController.swift */; };
 		DCA3884E1FE51DAF008BA1C4 /* AnimationBaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCA3884C1FE51DAF008BA1C4 /* AnimationBaseViewController.xib */; };
-		DCA742041FF4F94200663EBC /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = DCA741E01FF4F94100663EBC /* 2.jpg */; };
-		DCA742051FF4F94200663EBC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA741E11FF4F94100663EBC /* AppDelegate.swift */; };
-		DCA742061FF4F94200663EBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DCA741E21FF4F94100663EBC /* Assets.xcassets */; };
-		DCA742071FF4F94200663EBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA741E31FF4F94100663EBC /* LaunchScreen.storyboard */; };
-		DCA742081FF4F94200663EBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCA741E51FF4F94100663EBC /* Main.storyboard */; };
-		DCA742091FF4F94200663EBC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCA741E71FF4F94100663EBC /* Info.plist */; };
-		DCA7420A1FF4F94200663EBC /* TargetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA741E81FF4F94100663EBC /* TargetViewController.swift */; };
-		DCA7420B1FF4F94200663EBC /* UIViewController+Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA741EA1FF4F94100663EBC /* UIViewController+Transition.swift */; };
-		DCA7420C1FF4F94200663EBC /* YYTransition+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA741EB1FF4F94100663EBC /* YYTransition+Animation.swift */; };
-		DCA7420D1FF4F94200663EBC /* YYTransition+Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA741EC1FF4F94100663EBC /* YYTransition+Circle.swift */; };
-		DCA7420E1FF4F94200663EBC /* YYTransition+Middle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA741ED1FF4F94100663EBC /* YYTransition+Middle.swift */; };
-		DCA7420F1FF4F94200663EBC /* YYTransition+Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA741EE1FF4F94100663EBC /* YYTransition+Move.swift */; };
-		DCA742101FF4F94200663EBC /* YYTransition+Tier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA741EF1FF4F94100663EBC /* YYTransition+Tier.swift */; };
-		DCA742111FF4F94200663EBC /* YYTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA741F01FF4F94100663EBC /* YYTransition.swift */; };
-		DCA742121FF4F94200663EBC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA741F11FF4F94100663EBC /* ViewController.swift */; };
-		DCA742131FF4F94200663EBC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCA741F61FF4F94200663EBC /* Info.plist */; };
-		DCA742141FF4F94200663EBC /* YYTransitionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA741F71FF4F94200663EBC /* YYTransitionTests.swift */; };
-		DCA742151FF4F94200663EBC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCA741F91FF4F94200663EBC /* Info.plist */; };
-		DCA742161FF4F94200663EBC /* YYTransitionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA741FA1FF4F94200663EBC /* YYTransitionUITests.swift */; };
 		DCA8A4871FD7F5D80042537E /* YYLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA8A4861FD7F5D80042537E /* YYLog.swift */; };
 		DCA8A4A81FD808E80042537E /* BaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA8A48E1FD808E80042537E /* BaseTabBarViewController.swift */; };
 		DCA8A4A91FD808E80042537E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA8A48F1FD808E80042537E /* BaseViewController.swift */; };
@@ -368,30 +354,6 @@
 		DCFABD5F1FEB80BC00E5E997 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFABD5E1FEB80BC00E5E997 /* Notification+Extension.swift */; };
 		DCFABD611FEBA51E00E5E997 /* YYSystemPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFABD601FEBA51E00E5E997 /* YYSystemPassword.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		DCA741FE1FF4F94200663EBC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DCA741F21FF4F94100663EBC /* YYTransition.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DCECD1151FF3993000AFDB63;
-			remoteInfo = YYTransition;
-		};
-		DCA742001FF4F94200663EBC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DCA741F21FF4F94100663EBC /* YYTransition.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DCECD1291FF3993000AFDB63;
-			remoteInfo = YYTransitionTests;
-		};
-		DCA742021FF4F94200663EBC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DCA741F21FF4F94100663EBC /* YYTransition.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DCECD1341FF3993000AFDB63;
-			remoteInfo = YYTransitionUITests;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		521CBA8AFB6F01FB382C7CD8 /* Pods_YE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -710,31 +672,16 @@
 		DC964C0A1FECD95F006AA5F0 /* LikeButtonMaskLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LikeButtonMaskLayer.swift; sourceTree = "<group>"; };
 		DC964C0B1FECD95F006AA5F0 /* YYLikeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYLikeButton.swift; sourceTree = "<group>"; };
 		DC987D061FE0CA94009B9CFA /* GARegular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GARegular.swift; sourceTree = "<group>"; };
+		DC9EA1181FF5E10E006FC7F6 /* YYTransition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YYTransition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC9EA11F1FF5E240006FC7F6 /* YYSourceTransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYSourceTransitionViewController.swift; sourceTree = "<group>"; };
+		DC9EA1201FF5E240006FC7F6 /* YYSourceTransitionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYSourceTransitionViewController.xib; sourceTree = "<group>"; };
+		DC9EA1231FF5E24F006FC7F6 /* YYTargetTransitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYTargetTransitionViewController.swift; sourceTree = "<group>"; };
+		DC9EA1241FF5E24F006FC7F6 /* YYTargetTransitionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYTargetTransitionViewController.xib; sourceTree = "<group>"; };
 		DCA388411FE51308008BA1C4 /* YYPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYPresentationController.swift; sourceTree = "<group>"; };
 		DCA388441FE51367008BA1C4 /* YYPresentationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYPresentationDelegate.swift; sourceTree = "<group>"; };
 		DCA388481FE514FE008BA1C4 /* YYNavigationAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYNavigationAnimationViewController.swift; sourceTree = "<group>"; };
 		DCA3884B1FE51DAF008BA1C4 /* AnimationBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationBaseViewController.swift; sourceTree = "<group>"; };
 		DCA3884C1FE51DAF008BA1C4 /* AnimationBaseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimationBaseViewController.xib; sourceTree = "<group>"; };
-		DCA741E01FF4F94100663EBC /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
-		DCA741E11FF4F94100663EBC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DCA741E21FF4F94100663EBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DCA741E41FF4F94100663EBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		DCA741E61FF4F94100663EBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DCA741E71FF4F94100663EBC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DCA741E81FF4F94100663EBC /* TargetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TargetViewController.swift; sourceTree = "<group>"; };
-		DCA741EA1FF4F94100663EBC /* UIViewController+Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Transition.swift"; sourceTree = "<group>"; };
-		DCA741EB1FF4F94100663EBC /* YYTransition+Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YYTransition+Animation.swift"; sourceTree = "<group>"; };
-		DCA741EC1FF4F94100663EBC /* YYTransition+Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YYTransition+Circle.swift"; sourceTree = "<group>"; };
-		DCA741ED1FF4F94100663EBC /* YYTransition+Middle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YYTransition+Middle.swift"; sourceTree = "<group>"; };
-		DCA741EE1FF4F94100663EBC /* YYTransition+Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YYTransition+Move.swift"; sourceTree = "<group>"; };
-		DCA741EF1FF4F94100663EBC /* YYTransition+Tier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YYTransition+Tier.swift"; sourceTree = "<group>"; };
-		DCA741F01FF4F94100663EBC /* YYTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYTransition.swift; sourceTree = "<group>"; };
-		DCA741F11FF4F94100663EBC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DCA741F21FF4F94100663EBC /* YYTransition.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = YYTransition.xcodeproj; sourceTree = "<group>"; };
-		DCA741F61FF4F94200663EBC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DCA741F71FF4F94200663EBC /* YYTransitionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYTransitionTests.swift; sourceTree = "<group>"; };
-		DCA741F91FF4F94200663EBC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DCA741FA1FF4F94200663EBC /* YYTransitionUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYTransitionUITests.swift; sourceTree = "<group>"; };
 		DCA8A4861FD7F5D80042537E /* YYLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYLog.swift; sourceTree = "<group>"; };
 		DCA8A48E1FD808E80042537E /* BaseTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarViewController.swift; sourceTree = "<group>"; };
 		DCA8A48F1FD808E80042537E /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -770,6 +717,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC9EA1171FF5E10E006FC7F6 /* YYTransition.framework in Frameworks */,
 				A1E51B0C8B82F381C3F93DEE /* Pods_YE.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1062,7 +1010,6 @@
 				DC964C071FECD95F006AA5F0 /* LikeButton */,
 				94D388F91F39C23900F974A6 /* Alert */,
 				94D389061F39C23900F974A6 /* AlertViewController */,
-				DC8712901FCBD1E000C73D27 /* AnimationView */,
 				94CBD9401FB1521900CA2A95 /* CircleScroll */,
 				DC75E3E31FD12A0700332BE5 /* Lib */,
 				94D389091F39C23900F974A6 /* Paging */,
@@ -1165,6 +1112,7 @@
 		94D389271F39C23900F974A6 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				DC9EA11C1FF5E209006FC7F6 /* Transition */,
 				DC8699F61FE3BAF000115C5E /* Root */,
 				DCB946A81FE10BE900958542 /* AD */,
 				94D389281F39C23900F974A6 /* Alert */,
@@ -1532,6 +1480,7 @@
 		D2FFF76E3F1D14BC37818B38 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC9EA1181FF5E10E006FC7F6 /* YYTransition.framework */,
 				94DED68B1F7F3AC40036AE1F /* libc.tbd */,
 				94681B481F7E3F1F007C2A26 /* libstdc++.6.0.9.tbd */,
 				521CBA8AFB6F01FB382C7CD8 /* Pods_YE.framework */,
@@ -1674,7 +1623,6 @@
 		DC670DF61FF4E8C200FE6F45 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				DCA741DE1FF4F94100663EBC /* YYTransition */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -1920,13 +1868,6 @@
 			path = Root;
 			sourceTree = "<group>";
 		};
-		DC8712901FCBD1E000C73D27 /* AnimationView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AnimationView;
-			sourceTree = "<group>";
-		};
 		DC964C071FECD95F006AA5F0 /* LikeButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -1958,6 +1899,17 @@
 			path = RxSwift;
 			sourceTree = "<group>";
 		};
+		DC9EA11C1FF5E209006FC7F6 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				DC9EA11F1FF5E240006FC7F6 /* YYSourceTransitionViewController.swift */,
+				DC9EA1201FF5E240006FC7F6 /* YYSourceTransitionViewController.xib */,
+				DC9EA1231FF5E24F006FC7F6 /* YYTargetTransitionViewController.swift */,
+				DC9EA1241FF5E24F006FC7F6 /* YYTargetTransitionViewController.xib */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
 		DCA388431FE51353008BA1C4 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
@@ -1968,75 +1920,6 @@
 				DC619CE51FE76B5E00C05E9D /* YYPresentationBaseViewController.swift */,
 			);
 			path = Presentation;
-			sourceTree = "<group>";
-		};
-		DCA741DE1FF4F94100663EBC /* YYTransition */ = {
-			isa = PBXGroup;
-			children = (
-				DCA741DF1FF4F94100663EBC /* YYTransition */,
-				DCA741F21FF4F94100663EBC /* YYTransition.xcodeproj */,
-				DCA741F51FF4F94200663EBC /* YYTransitionTests */,
-				DCA741F81FF4F94200663EBC /* YYTransitionUITests */,
-			);
-			path = YYTransition;
-			sourceTree = "<group>";
-		};
-		DCA741DF1FF4F94100663EBC /* YYTransition */ = {
-			isa = PBXGroup;
-			children = (
-				DCA741E01FF4F94100663EBC /* 2.jpg */,
-				DCA741E11FF4F94100663EBC /* AppDelegate.swift */,
-				DCA741E21FF4F94100663EBC /* Assets.xcassets */,
-				DCA741E31FF4F94100663EBC /* LaunchScreen.storyboard */,
-				DCA741E51FF4F94100663EBC /* Main.storyboard */,
-				DCA741E71FF4F94100663EBC /* Info.plist */,
-				DCA741E81FF4F94100663EBC /* TargetViewController.swift */,
-				DCA741E91FF4F94100663EBC /* Transition */,
-				DCA741F11FF4F94100663EBC /* ViewController.swift */,
-			);
-			path = YYTransition;
-			sourceTree = "<group>";
-		};
-		DCA741E91FF4F94100663EBC /* Transition */ = {
-			isa = PBXGroup;
-			children = (
-				DCA741EA1FF4F94100663EBC /* UIViewController+Transition.swift */,
-				DCA741EB1FF4F94100663EBC /* YYTransition+Animation.swift */,
-				DCA741EC1FF4F94100663EBC /* YYTransition+Circle.swift */,
-				DCA741ED1FF4F94100663EBC /* YYTransition+Middle.swift */,
-				DCA741EE1FF4F94100663EBC /* YYTransition+Move.swift */,
-				DCA741EF1FF4F94100663EBC /* YYTransition+Tier.swift */,
-				DCA741F01FF4F94100663EBC /* YYTransition.swift */,
-			);
-			path = Transition;
-			sourceTree = "<group>";
-		};
-		DCA741F31FF4F94100663EBC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DCA741FF1FF4F94200663EBC /* YYTransition.app */,
-				DCA742011FF4F94200663EBC /* YYTransitionTests.xctest */,
-				DCA742031FF4F94200663EBC /* YYTransitionUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		DCA741F51FF4F94200663EBC /* YYTransitionTests */ = {
-			isa = PBXGroup;
-			children = (
-				DCA741F61FF4F94200663EBC /* Info.plist */,
-				DCA741F71FF4F94200663EBC /* YYTransitionTests.swift */,
-			);
-			path = YYTransitionTests;
-			sourceTree = "<group>";
-		};
-		DCA741F81FF4F94200663EBC /* YYTransitionUITests */ = {
-			isa = PBXGroup;
-			children = (
-				DCA741F91FF4F94200663EBC /* Info.plist */,
-				DCA741FA1FF4F94200663EBC /* YYTransitionUITests.swift */,
-			);
-			path = YYTransitionUITests;
 			sourceTree = "<group>";
 		};
 		DCA8A48C1FD808E80042537E /* MVVM */ = {
@@ -2206,42 +2089,12 @@
 			mainGroup = 94D388751F39BE4100F974A6;
 			productRefGroup = 94D3887F1F39BE4100F974A6 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = DCA741F31FF4F94100663EBC /* Products */;
-					ProjectRef = DCA741F21FF4F94100663EBC /* YYTransition.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				94D3887D1F39BE4100F974A6 /* YE */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		DCA741FF1FF4F94200663EBC /* YYTransition.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = YYTransition.app;
-			remoteRef = DCA741FE1FF4F94200663EBC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DCA742011FF4F94200663EBC /* YYTransitionTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = YYTransitionTests.xctest;
-			remoteRef = DCA742001FF4F94200663EBC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DCA742031FF4F94200663EBC /* YYTransitionUITests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = YYTransitionUITests.xctest;
-			remoteRef = DCA742021FF4F94200663EBC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		94D3887C1F39BE4100F974A6 /* Resources */ = {
@@ -2256,7 +2109,6 @@
 				DC6770C91FD697D400E79A07 /* Player_slider.png in Resources */,
 				94D38A391F39C23A00F974A6 /* YYIMFriendCell.xib in Resources */,
 				DC6770C31FD697D400E79A07 /* Player_center_play.png in Resources */,
-				DCA742131FF4F94200663EBC /* Info.plist in Resources */,
 				DC6770C11FD697D400E79A07 /* Player_brightness.png in Resources */,
 				94D38A551F39C23A00F974A6 /* YYCompetitionListCell.xib in Resources */,
 				DCA3884E1FE51DAF008BA1C4 /* AnimationBaseViewController.xib in Resources */,
@@ -2275,8 +2127,6 @@
 				94D38A491F39C23A00F974A6 /* YYSettingFooterChangeButton.xib in Resources */,
 				94D389C11F39C23A00F974A6 /* IMG_2787.jpg in Resources */,
 				94D38A241F39C23A00F974A6 /* YYApplyHeaderView.xib in Resources */,
-				DCA742061FF4F94200663EBC /* Assets.xcassets in Resources */,
-				DCA742091FF4F94200663EBC /* Info.plist in Resources */,
 				94D389C71F39C23A00F974A6 /* IMG_3260.JPG in Resources */,
 				94D389D71F39C23A00F974A6 /* comment.plist in Resources */,
 				94D38A3F1F39C23A00F974A6 /* YYIMGroupInfoSectionView.xib in Resources */,
@@ -2303,7 +2153,6 @@
 				94D38A3B1F39C23A00F974A6 /* YYIMGroupCell.xib in Resources */,
 				DC74B8811FDA2DD100640964 /* YYRxSwiftViewController.xib in Resources */,
 				9496345D1F41880F0079886E /* YYCompetitionCell.xib in Resources */,
-				DCA742081FF4F94200663EBC /* Main.storyboard in Resources */,
 				94D38A311F39C23A00F974A6 /* YYHomeBasicCell.xib in Resources */,
 				94D389BD1F39C23A00F974A6 /* IMG_2473.jpg in Resources */,
 				DC8A70091FD4F8EE006D22D6 /* LYPlayer_center_play.png in Resources */,
@@ -2319,11 +2168,9 @@
 				94D38A601F39C2F600F974A6 /* LaunchScreen.storyboard in Resources */,
 				94D389E21F39C23A00F974A6 /* YYAlertSelectedTableViewHeaderView.xib in Resources */,
 				DC74B8831FDA2DD100640964 /* YYRxSwiftViewCell.xib in Resources */,
-				DCA742041FF4F94200663EBC /* 2.jpg in Resources */,
 				DC8A700A1FD4F8EE006D22D6 /* LYPlayer_center_pause.png in Resources */,
 				DC6770C21FD697D400E79A07 /* Player_center_pause.png in Resources */,
 				DC6770BF1FD697D400E79A07 /* Player_back_full.png in Resources */,
-				DCA742071FF4F94200663EBC /* LaunchScreen.storyboard in Resources */,
 				94D389C31F39C23A00F974A6 /* IMG_3026.jpg in Resources */,
 				DC75E3E21FD107BC00332BE5 /* YYPlayerViewController.xib in Resources */,
 				DC75E4131FD13D9900332BE5 /* LYPlayer_back_full.png in Resources */,
@@ -2334,6 +2181,7 @@
 				94D389FD1F39C23A00F974A6 /* YYSpaceCell.xib in Resources */,
 				DC75E4081FD12AA400332BE5 /* LYPlayer_bottom_shadel.png in Resources */,
 				94D38A281F39C23A00F974A6 /* YYApplyTextTableViewCell.xib in Resources */,
+				DC9EA1261FF5E24F006FC7F6 /* YYTargetTransitionViewController.xib in Resources */,
 				94D389BB1F39C23A00F974A6 /* IMG_0487.jpg in Resources */,
 				DC65BD671FD8E32A00204B7E /* RepositoryCell.xib in Resources */,
 				DC6770C71FD697D400E79A07 /* Player_play.png in Resources */,
@@ -2344,7 +2192,6 @@
 				DC75E3D71FD0FE6A00332BE5 /* YYPlayerView.xib in Resources */,
 				94D389D91F39C23A00F974A6 /* my.plist in Resources */,
 				94D389D81F39C23A00F974A6 /* IMGroupSetting.plist in Resources */,
-				DCA742151FF4F94200663EBC /* Info.plist in Resources */,
 				DC3858FC1FC7E9D100244649 /* YYCircleScrollCollectionCell.xib in Resources */,
 				94D389DA1F39C23A00F974A6 /* setting.plist in Resources */,
 				94D389BC1F39C23A00F974A6 /* IMG_0490.jpg in Resources */,
@@ -2366,6 +2213,7 @@
 				94D38A0D1F39C23A00F974A6 /* YYIMCreatChatGroupViewController.xib in Resources */,
 				94D38A221F39C23A00F974A6 /* YYApplyAddImageTableViewCell.xib in Resources */,
 				94D389A41F39C23A00F974A6 /* YYBaseNavigationViewImageButton.xib in Resources */,
+				DC9EA1221FF5E240006FC7F6 /* YYSourceTransitionViewController.xib in Resources */,
 				94D389BF1F39C23A00F974A6 /* IMG_2719.jpg in Resources */,
 				94D38A411F39C23A00F974A6 /* YYIMGroupInfoSettingButtonCell.xib in Resources */,
 				94D38A451F39C23A00F974A6 /* YYMyBasicCell.xib in Resources */,
@@ -2501,7 +2349,6 @@
 				94D38A051F39C23A00F974A6 /* YYYeEventViewController.swift in Sources */,
 				94D389E51F39C23A00F974A6 /* YYAlertView.swift in Sources */,
 				94D38A3C1F39C23A00F974A6 /* YYIMGroupInfoCell.swift in Sources */,
-				DCA742101FF4F94200663EBC /* YYTransition+Tier.swift in Sources */,
 				94D38A091F39C23A00F974A6 /* YYEaseUsersListViewController.swift in Sources */,
 				94D389FA1F39C23A00F974A6 /* YYShotView.swift in Sources */,
 				94D389A11F39C23A00F974A6 /* YYBaseTableViewController.swift in Sources */,
@@ -2509,7 +2356,6 @@
 				94D38A1C1F39C23A00F974A6 /* YYCompetitionDetailsViewController.swift in Sources */,
 				94D389EB1F39C23A00F974A6 /* GA_AnimationRefreshHeaderView.swift in Sources */,
 				94D389E91F39C23A00F974A6 /* YYPagingHeaderScrollView.swift in Sources */,
-				DCA742111FF4F94200663EBC /* YYTransition.swift in Sources */,
 				DC7A49D31FCFFAD80028F308 /* Model+Extension.swift in Sources */,
 				DC75E3D51FD0FE1A00332BE5 /* YYPlayerView.swift in Sources */,
 				DC74B8841FDA2DD100640964 /* YYRxSwiftViewModel.swift in Sources */,
@@ -2559,7 +2405,6 @@
 				DC964C0F1FECD95F006AA5F0 /* YYLikeButton.swift in Sources */,
 				94D38A461F39C23A00F974A6 /* YYMyTopView.swift in Sources */,
 				94D389EA1F39C23A00F974A6 /* YYPagingView.swift in Sources */,
-				DCA742121FF4F94200663EBC /* ViewController.swift in Sources */,
 				94D389CE1F39C23A00F974A6 /* HuanXinManager.swift in Sources */,
 				DC7E7FCA1FD91D6B00859B00 /* YYRxMVVMViewController.swift in Sources */,
 				94D389A31F39C23A00F974A6 /* YYBaseNavigationView.swift in Sources */,
@@ -2615,7 +2460,6 @@
 				94D38A561F39C23A00F974A6 /* YYCompetitionReplyCell.swift in Sources */,
 				94D38A131F39C23A00F974A6 /* YYIMGroupListViewController.swift in Sources */,
 				94D38A081F39C23A00F974A6 /* YYEaseConversationListViewController.swift in Sources */,
-				DCA7420E1FF4F94200663EBC /* YYTransition+Middle.swift in Sources */,
 				DCA8A4B01FD808E80042537E /* ModelProtocol.swift in Sources */,
 				94D38A001F39C23A00F974A6 /* KeyPath.swift in Sources */,
 				94D38A2D1F39C23A00F974A6 /* YYModuleSelectedCell.swift in Sources */,
@@ -2625,6 +2469,7 @@
 				94D389AE1F39C23A00F974A6 /* CGFloat+Extension.swift in Sources */,
 				94D38A231F39C23A00F974A6 /* YYApplyHeaderView.swift in Sources */,
 				DCA3884D1FE51DAF008BA1C4 /* AnimationBaseViewController.swift in Sources */,
+				DC9EA1251FF5E24F006FC7F6 /* YYTargetTransitionViewController.swift in Sources */,
 				DCA8A4AF1FD808E80042537E /* Model.swift in Sources */,
 				DC75E3E11FD107BC00332BE5 /* YYPlayerViewController.swift in Sources */,
 				DC74B87F1FDA2DD100640964 /* YYRxSwiftTestViewController.swift in Sources */,
@@ -2635,7 +2480,6 @@
 				94D38A2A1F39C23A00F974A6 /* YYEventVideoCell.swift in Sources */,
 				94D38A271F39C23A00F974A6 /* YYApplyTextTableViewCell.swift in Sources */,
 				94D389FF1F39C23A00F974A6 /* Compare.swift in Sources */,
-				DCA7420D1FF4F94200663EBC /* YYTransition+Circle.swift in Sources */,
 				94D389D01F39C23A00F974A6 /* YYCompetitionCommentSectionModel.swift in Sources */,
 				DC65BD601FD8E2A500204B7E /* Repository.swift in Sources */,
 				DC964C0E1FECD95F006AA5F0 /* LikeButtonMaskLayer.swift in Sources */,
@@ -2651,7 +2495,6 @@
 				94D38A0C1F39C23A00F974A6 /* YYIMCreatChatGroupViewController.swift in Sources */,
 				94D389F51F39C23A00F974A6 /* YYDrawerTableViewCell.swift in Sources */,
 				94D38A1E1F39C23A00F974A6 /* YYLiveListViewController.swift in Sources */,
-				DCA7420B1FF4F94200663EBC /* UIViewController+Transition.swift in Sources */,
 				94D389FE1F39C23A00F974A6 /* YYWebView.swift in Sources */,
 				94D389DC1F39C23A00F974A6 /* YYAlertBirthdayView.swift in Sources */,
 				94D389A01F39C23A00F974A6 /* YYBaseImagePickerController.swift in Sources */,
@@ -2675,8 +2518,6 @@
 				946BB2A51F44277E0062D173 /* Beverage.swift in Sources */,
 				94D389B41F39C23A00F974A6 /* UIImage+Extension.swift in Sources */,
 				94D389B51F39C23A00F974A6 /* UITableViewCell+Extension.swift in Sources */,
-				DCA7420F1FF4F94200663EBC /* YYTransition+Move.swift in Sources */,
-				DCA742141FF4F94200663EBC /* YYTransitionTests.swift in Sources */,
 				DCA8A4B81FD808E80042537E /* ViewModelProtocol.swift in Sources */,
 				94D38A251F39C23A00F974A6 /* YYApplySelectedTableViewCell.swift in Sources */,
 				94D389E71F39C23A00F974A6 /* YYAlertViewController.swift in Sources */,
@@ -2685,23 +2526,21 @@
 				DC75E3F81FD12A1E00332BE5 /* LYPlayerGesture.swift in Sources */,
 				94D3899F1F39C23A00F974A6 /* YYBaseCollectionViewController.swift in Sources */,
 				DCBDF1161FDFC4CF00DC18FB /* YYFontLabel.swift in Sources */,
-				DCA7420C1FF4F94200663EBC /* YYTransition+Animation.swift in Sources */,
 				94D38A181F39C23A00F974A6 /* YYSettingViewController.swift in Sources */,
 				94D389D41F39C23A00F974A6 /* Theme.swift in Sources */,
 				94D38A061F39C23A00F974A6 /* YYHomeViewController.swift in Sources */,
+				DC9EA1211FF5E240006FC7F6 /* YYSourceTransitionViewController.swift in Sources */,
 				94D38A441F39C23A00F974A6 /* YYMyBasicCell.swift in Sources */,
 				94D38A201F39C23A00F974A6 /* YYSurroundingListViewController.swift in Sources */,
 				94D38A111F39C23A00F974A6 /* YYIMGroupInfoSettingViewController.swift in Sources */,
 				DC3858FB1FC7E9D100244649 /* YYCircleScrollCollectionCell.swift in Sources */,
 				94D38A421F39C23A00F974A6 /* YYIMGroupInfoSettingCell.swift in Sources */,
-				DCA742051FF4F94200663EBC /* AppDelegate.swift in Sources */,
 				DCA8A4B61FD808E80042537E /* ViewModelMapper.swift in Sources */,
 				94CBD9461FB1555300CA2A95 /* YYTestViewController.swift in Sources */,
 				94D389B11F39C23A00F974A6 /* ScrollView+BaneHeader.swift in Sources */,
 				94CBD9421FB1521A00CA2A95 /* YYCircleScrollView.swift in Sources */,
 				94D38A4C1F39C23A00F974A6 /* YYCompetitionCommentCell.swift in Sources */,
 				946BB2AC1F4429EB0062D173 /* Milk.swift in Sources */,
-				DCA742161FF4F94200663EBC /* YYTransitionUITests.swift in Sources */,
 				94D38A211F39C23A00F974A6 /* YYApplyAddImageTableViewCell.swift in Sources */,
 				94D38A331F39C23A00F974A6 /* YYConversationCell.swift in Sources */,
 				94D38A171F39C23A00F974A6 /* YYNewsViewController.swift in Sources */,
@@ -2710,7 +2549,6 @@
 				DC3858FD1FC7E9D100244649 /* YYCircleScrollCollectionView.swift in Sources */,
 				94D389AC1F39C23A00F974A6 /* YYBaseView.swift in Sources */,
 				94D389ED1F39C23A00F974A6 /* GA_CircleRefreshHeaderView.swift in Sources */,
-				DCA7420A1FF4F94200663EBC /* TargetViewController.swift in Sources */,
 				94D389FB1F39C23A00F974A6 /* YYShotViewButton.swift in Sources */,
 				DC810E811FE2291C000D1C19 /* YYXIBBaseTableViewController.swift in Sources */,
 				94D38A011F39C23A00F974A6 /* Protocol.swift in Sources */,
@@ -2755,22 +2593,6 @@
 				DC10DDFF1FEA46AB00770158 /* Base */,
 			);
 			name = MainRoot.storyboard;
-			sourceTree = "<group>";
-		};
-		DCA741E31FF4F94100663EBC /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DCA741E41FF4F94100663EBC /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		DCA741E51FF4F94100663EBC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DCA741E61FF4F94100663EBC /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

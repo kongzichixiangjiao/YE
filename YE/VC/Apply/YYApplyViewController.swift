@@ -195,7 +195,8 @@ extension YYApplyViewController: YYApplyAddImageTableViewCellDelegate {
     }
 }
 
-extension YYApplyViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+// UINavigationControllerDelegate
+extension YYApplyViewController: UIImagePickerControllerDelegate {
     
     public func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         picker.dismiss(animated: true, completion: nil)
