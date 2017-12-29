@@ -34,7 +34,7 @@
                     </connections>
                 </imageView>
                 <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="G0T-Jy-yrc">
-                    <rect key="frame" x="80" y="319" width="100" height="135"/>
+                    <rect key="frame" x="0.0" y="319" width="100" height="135"/>
                     <gestureRecognizers/>
                     <constraints>
                         <constraint firstAttribute="height" constant="135" id="VgB-sQ-A67"/>
@@ -73,7 +73,7 @@
             <constraints>
                 <constraint firstItem="G9J-80-hwA" firstAttribute="top" secondItem="tog-nO-acC" secondAttribute="bottom" constant="20" id="HWw-aU-ubw"/>
                 <constraint firstItem="G9J-80-hwA" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="TQe-pk-xoQ"/>
-                <constraint firstItem="G0T-Jy-yrc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="80" id="fGJ-Fd-kdO"/>
+                <constraint firstItem="G0T-Jy-yrc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fGJ-Fd-kdO"/>
                 <constraint firstItem="D6B-sJ-pZY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="fV9-Oz-gVD"/>
                 <constraint firstItem="D6B-sJ-pZY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hl4-fd-J14"/>
                 <constraint firstItem="tog-nO-acC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="o76-7D-zwH"/>

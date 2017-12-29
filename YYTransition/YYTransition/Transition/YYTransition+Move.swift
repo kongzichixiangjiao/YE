@@ -75,8 +75,9 @@ extension YYTransition {
         guard let fPath = self.yy_fromViewPath else {
             return
         }
-        let fromView = fromVC.value(forKeyPath: tPath) as! UIView
-        let toView = toVC.value(forKeyPath: fPath) as! UIView
+
+        let fromView = fromVC.value(forKeyPath: fPath) as! UIView
+        let toView = toVC.value(forKeyPath: tPath) as! UIView
         
         let containerView = context.containerView
         
@@ -84,17 +85,14 @@ extension YYTransition {
         snapView.frame = containerView.convert(fromView.frame, from: fromView.superview)
         fromView.isHidden = true
         toVC.view.frame = context.finalFrame(for: toVC)
-        let originView = fromView
-        originView.isHidden = true
         containerView.insertSubview(toVC.view, belowSubview: fromVC.view)
         containerView.addSubview(snapView)
         
         UIView.animate(withDuration: self.transitionDuration(using: context), delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
             fromVC.view.alpha = 0.0
-            snapView.frame = containerView.convert(originView.frame, from: originView.superview)
+            snapView.frame = containerView.convert(toView.frame, from: toView.superview)
         }) { (finished) in
             snapView.removeFromSuperview()
-            originView.isHidden = false
             context.completeTransition(!context.transitionWasCancelled)
         }
     }

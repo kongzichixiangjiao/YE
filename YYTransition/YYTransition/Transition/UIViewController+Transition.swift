@@ -14,7 +14,10 @@ extension UIViewController {
             objc_setAssociatedObject(self, &YYTransitionKey.kRouterAnimationKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
         get {
-            return objc_getAssociatedObject(self, &YYTransitionKey.kRouterAnimationKey) as! YYTransition
+            guard let r = objc_getAssociatedObject(self, &YYTransitionKey.kRouterAnimationKey) as? YYTransition  else {
+                return YYTransition()
+            }
+            return r
         }
     }
     

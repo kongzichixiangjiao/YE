@@ -29,8 +29,10 @@ class YYTargetTransitionViewController: UIViewController {
         super.touchesBegan(touches, with: event)
         
 //        yy_routerAnimation = YYTransition(type: .tier)
-        yy_routerAnimation = YYTransition(type: .move, isBack: true, fromeViewPath: "toView", toViewPath: "toView")
-        yy_routerAnimation.yy_isBack = true
+//        yy_routerAnimation = YYTransition(type: .move, isBack: true, fromeViewPath: "toView", toViewPath: "moveView")
+//        yy_routerAnimation = YYTransition(type: .middle, isBack: true)
+        yy_routerAnimation = YYTransition(type: .circle, isBack: true, toViewPath: "circleView")
+        
         self.navigationController?.delegate = yy_routerAnimation
         self.navigationController?.popViewController(animated: true)
     }

@@ -31,16 +31,17 @@ class YYSourceTransitionViewController: UIViewController {
     
     @IBAction func move(_ sender: UITapGestureRecognizer) {
         yy_routerAnimation = YYTransition(type: .move, isBack: false, fromeViewPath: "moveView", toViewPath: "toView")
+        print(yy_routerAnimation)
         push(transition: yy_routerAnimation)
     }
     
     @IBAction func circle(_ sender: UITapGestureRecognizer) {
-        yy_routerAnimation = YYTransition(type: .tier)
+        yy_routerAnimation = YYTransition(type: .circle, fromeViewPath: "circleView")
         push(transition: yy_routerAnimation)
     }
     
     @IBAction func middle(_ sender: UIButton) {
-        yy_routerAnimation = YYTransition(type: .tier)
+        yy_routerAnimation = YYTransition(type: .middle, fromeViewPath: "circleView")
         push(transition: yy_routerAnimation)
     }
     

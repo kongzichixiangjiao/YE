@@ -52,8 +52,9 @@ extension YYTransition {
         containerView.addSubview(fromView!)
         containerView.addSubview(toView!)
         
-        let startPath = UIBezierPath(ovalIn: CGRect(x: toView!.center.x, y: toView!.center.y, width: 0, height: 0))
-        let endPath = UIBezierPath(ovalIn: fromView!.frame)
+        let startPath = UIBezierPath(ovalIn: CGRect(x: fromView!.center.x, y: fromView!.center.y, width: 0, height: 0))
+        let space: CGFloat = 200
+        let endPath = UIBezierPath(ovalIn: CGRect(x: toView!.frame.origin.x - space / 2, y: toView!.frame.origin.y - space / 2, width: toView!.frame.size.width + space, height: toView!.frame.size.height + space))
         
         maskAnimation(targetVC: toVC, startPath: startPath, endPath: endPath, context: context)
     }

@@ -38,8 +38,6 @@ extension YYTransition {
         }
         snapView.frame = relativeFrame(for: fromView)
         
-//        toVC.yy_fromView = snapView
-        
         containerView.addSubview(snapView)
         containerView.addSubview(toVC.view)
         
@@ -55,16 +53,19 @@ extension YYTransition {
         guard let toVC = context.viewController(forKey: .to) else { return }
         guard let fromVC = context.viewController(forKey: .from) else { return }
         let containerView = context.containerView
-//        let toView = fromVC.yy_fromView
+        print(yy_toViewPath)
+        guard let toView = toVC.value(forKeyPath: yy_toViewPath!) as? UIView else {
+            return
+        }
         
         containerView.addSubview(toVC.view)
         containerView.addSubview(fromVC.view)
-//        let finalPoint = calculateFinalPoint(toVC: toVC, fromView: toView)
-//        let x = finalPoint.x, y = finalPoint.y, r = sqrt(x*x+y*y)
-//        let startPath = UIBezierPath(ovalIn: toView.frame.insetBy(dx: -r, dy: -r))
-//        let endPath = UIBezierPath(ovalIn: toView.frame)
+        let finalPoint = calculateFinalPoint(toVC: toVC, fromView: toView)
+        let x = finalPoint.x, y = finalPoint.y, r = sqrt(x*x+y*y)
+        let startPath = UIBezierPath(ovalIn: toView.frame.insetBy(dx: -r, dy: -r))
+        let endPath = UIBezierPath(ovalIn: toView.frame)
         
-//        maskAnimation(targetVC: fromVC, startPath: startPath, endPath: endPath, context: context)
+        maskAnimation(targetVC: fromVC, startPath: startPath, endPath: endPath, context: context)
     }
     
     func relativeFrame(for target: UIView) -> CGRect {

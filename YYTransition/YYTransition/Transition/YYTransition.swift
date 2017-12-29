@@ -33,14 +33,8 @@ public class YYTransition: NSObject {
         self.init()
         self.yy_ransitionAnimationType = type
         self.yy_isBack = isBack
-        guard let fPath = fromeViewPath else {
-            return
-        }
-        self.yy_fromViewPath = fPath
-        guard let tPath = toViewPath else {
-            return
-        }
-        self.yy_toViewPath = tPath
+        self.yy_fromViewPath = fromeViewPath
+        self.yy_toViewPath = toViewPath
     }
 }
 
@@ -57,13 +51,13 @@ extension YYTransition: UIViewControllerAnimatedTransitioning, UIViewControllerT
     public func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         switch self.yy_ransitionAnimationType {
         case .circle:
-            //            yyPush.circleAnimateTransition(isBack: isBack, using: transitionContext)
+            circleAnimateTransition(isBack: yy_isBack, using: transitionContext)
             break
         case .move:
             moveAnimationTransition(isBack: yy_isBack, using: transitionContext)
             break
         case .middle:
-            //            yyPush.middleAnimationTransition(isBack: isBack, using: transitionContext)
+            middleAnimationTransition(isBack: yy_isBack, using: transitionContext)
             break
         case .tier:
             tierAnimationTransition(isBack: yy_isBack, using: transitionContext)
