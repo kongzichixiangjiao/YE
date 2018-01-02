@@ -37,55 +37,96 @@ class YYPresentationAnimationViewController: NSObject, UIViewControllerAnimatedT
         
         switch transitionType{
         case .modalTransition(let operation):
-            switch operation{
+            switch operation {
             case .present:
+                
                 switch presentationAnimationType {
                 case .downShow:
                     translation = containerView.frame.width
+                    toViewTransform = CGAffineTransform(translationX: 0, y: (operation == .present ? translation : 0))
+                    fromViewTransform = CGAffineTransform(translationX: 0, y: (operation == .present ? 0 : translation))
                     break
                 case .upShow:
                     translation = -containerView.frame.height
+                    toViewTransform = CGAffineTransform(translationX: 0, y: (operation == .present ? translation : 0))
+                    fromViewTransform = CGAffineTransform(translationX: 0, y: (operation == .present ? 0 : translation))
                     break
                 case .middle:
+                    translation = 0
+                    toViewTransform = CGAffineTransform(scaleX: 0.2, y: 0.2)
                     break
                 case .none:
                     translation = 0
+                    toViewTransform = CGAffineTransform(translationX: 0, y: (operation == .present ? translation : 0))
+                    fromViewTransform = CGAffineTransform(translationX: 0, y: (operation == .present ? 0 : translation))
                     break
                 case .sheet:
                     translation = containerView.frame.width
+                    toViewTransform = CGAffineTransform(translationX: 0, y: (operation == .present ? translation : 0))
+                    fromViewTransform = CGAffineTransform(translationX: 0, y: (operation == .present ? 0 : translation))
                     break
                 case .alert:
                     translation = 0
+                    toViewTransform = CGAffineTransform(translationX: 0, y: (operation == .present ? translation : 0))
+                    fromViewTransform = CGAffineTransform(translationX: 0, y: (operation == .present ? 0 : translation))
                     break
                 }
-                toViewTransform = CGAffineTransform(translationX: 0, y: (operation == .present ? translation : 0))
-                fromViewTransform = CGAffineTransform(translationX: 0, y: (operation == .present ? 0 : translation))
                 containerView.addSubview(toView!)
-            case .dismiss: break
+                
+                toView?.transform = toViewTransform
+                
+                if presentationAnimationType == .alert {
+                    toView?.alpha = 0
+                    UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
+                        toView?.alpha = 1
+                    })
+                }
+                UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
+                    fromView?.transform = fromViewTransform
+                    toView?.transform = CGAffineTransform.identity
+                }, completion: { finished in
+                    fromView?.transform = CGAffineTransform.identity
+                    toView?.transform = CGAffineTransform.identity
+                    transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+                })
+                
+            case .dismiss:
+                switch presentationAnimationType {
+                case .downShow:
+                    break
+                case .upShow:
+                    break
+                case .middle:
+                    toViewTransform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+                    break
+                case .none:
+                    break
+                case .sheet:
+                    break
+                case .alert:
+                    break
+                }
+                UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
+                    fromView?.transform = toViewTransform
+//                    toView?.transform = toViewTransform
+                }, completion: { finished in
+//                    fromView?.transform = fromViewTransform
+//                    toView?.transform = toViewTransform
+                    transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+                })
+                break
             }
         default: containerView.addSubview(toView!)
         }
         
-        toView?.transform = toViewTransform
+    }
+    
+    private func present() {
         
-        if presentationAnimationType == .alert {
-            toView?.alpha = 0
-            UIView.animate(withDuration: 0.35, animations: {
-                toView?.alpha = 1
-            })
-        }
-        
-        UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
-            fromView?.transform = fromViewTransform
-            toView?.transform = CGAffineTransform.identity
-        }, completion: { finished in
-            fromView?.transform = CGAffineTransform.identity
-            toView?.transform = CGAffineTransform.identity
-            transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
-        })
     }
     
     func animationEnded(_ transitionCompleted: Bool) {
         print("animationEnded")
     }
 }
+

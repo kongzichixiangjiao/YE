@@ -64,11 +64,14 @@ class YYPresentationController: UIPresentationController {
         let cW: CGFloat = container.bounds.width
         let cH: CGFloat = container.bounds.height
         let _: CGFloat = present.bounds.width
-        let pH: CGFloat = present.bounds.height
+        let pH: CGFloat = UIScreen.main.bounds.height
         
         if presentationAnimationType == .sheet {
             present.frame = CGRect(x: 0, y: cH - pH, width: cW, height: pH)
         } else if presentationAnimationType == .alert {
+            present.bounds = CGRect(x: 0, y: 0, width: cW, height: pH)
+            present.center = containerView!.center
+        }  else if presentationAnimationType == .alert {
             present.bounds = CGRect(x: 0, y: 0, width: cW, height: pH)
             present.center = containerView!.center
         } else {

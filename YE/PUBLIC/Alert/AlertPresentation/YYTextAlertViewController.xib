@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YYTextAlertViewController" customModule="YE" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ekd-Ec-3a0">
+                    <rect key="frame" x="50" y="295" width="275" height="77"/>
+                    <subviews>
+                        <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FSc-aj-onj">
+                            <rect key="frame" x="0.0" y="-0.5" width="275" height="77"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="ga_cornerRadius">
+                                    <real key="value" value="10"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="ga_masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="网络异常" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQk-wW-tep">
+                            <rect key="frame" x="50" y="30" width="175" height="17"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="FSc-aj-onj" firstAttribute="leading" secondItem="ekd-Ec-3a0" secondAttribute="leading" id="29y-A6-Fkz"/>
+                        <constraint firstItem="FSc-aj-onj" firstAttribute="top" secondItem="ekd-Ec-3a0" secondAttribute="top" id="40B-07-Gih"/>
+                        <constraint firstItem="yQk-wW-tep" firstAttribute="top" secondItem="ekd-Ec-3a0" secondAttribute="top" constant="30" id="Byw-B2-sSo"/>
+                        <constraint firstAttribute="trailing" secondItem="yQk-wW-tep" secondAttribute="trailing" constant="50" id="cyt-om-bPB"/>
+                        <constraint firstItem="yQk-wW-tep" firstAttribute="leading" secondItem="ekd-Ec-3a0" secondAttribute="leading" constant="50" id="e36-29-ed6"/>
+                        <constraint firstAttribute="bottom" secondItem="FSc-aj-onj" secondAttribute="bottom" id="eT7-NU-6vI"/>
+                        <constraint firstAttribute="trailing" secondItem="FSc-aj-onj" secondAttribute="trailing" id="hRT-X9-mfC"/>
+                        <constraint firstAttribute="bottom" secondItem="yQk-wW-tep" secondAttribute="bottom" constant="30" id="l0G-aC-zY0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="ekd-Ec-3a0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="573-vd-WJR"/>
+                <constraint firstAttribute="trailing" secondItem="ekd-Ec-3a0" secondAttribute="trailing" constant="50" id="b9c-Zh-zHj"/>
+                <constraint firstItem="ekd-Ec-3a0" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="oHm-Fc-OoV"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="34.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

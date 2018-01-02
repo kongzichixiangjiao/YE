@@ -25,6 +25,8 @@ public enum YYTransitionAnimationType {
     case move
     case middle
     case tier
+    
+    case none
 }
 
 public class YYTransition: NSObject {
@@ -61,6 +63,9 @@ extension YYTransition: UIViewControllerAnimatedTransitioning, UIViewControllerT
             break
         case .tier:
             tierAnimationTransition(isBack: yy_isBack, using: transitionContext)
+            break
+        case .none:
+            noneExecuteAnimationBack(using: transitionContext)
             break
         }
     }

@@ -14,9 +14,11 @@ class YYSourceTransitionViewController: UIViewController {
     @IBOutlet weak var circleView: UIImageView!
     
     @IBOutlet weak var moveView: UIImageView!
+    
+    var dddd:UINavigationControllerDelegate? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        dddd = (self.navigationController?.delegate)!
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,5 +56,10 @@ class YYSourceTransitionViewController: UIViewController {
         let vc = YYTargetTransitionViewController(nibName: "YYTargetTransitionViewController", bundle: nil)
         self.navigationController?.delegate = transition
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func back(_ sender: UIButton) {
+        self.navigationController?.delegate = nil
+        self.navigationController?.popViewController(animated: true)
     }
 }

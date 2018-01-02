@@ -28,6 +28,7 @@ class AnimationBaseViewController: YYPresentationBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        isTapBack = false 
     }
 
     override func didReceiveMemoryWarning() {

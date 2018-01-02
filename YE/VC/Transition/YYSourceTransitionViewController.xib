@@ -68,14 +68,23 @@
                         <action selector="tier:" destination="-1" eventType="touchUpInside" id="SsQ-dP-OM5"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSm-O8-Kvw">
+                    <rect key="frame" x="301" y="597" width="34" height="30"/>
+                    <state key="normal" title="back"/>
+                    <connections>
+                        <action selector="back:" destination="-1" eventType="touchUpInside" id="Qw2-mo-6AJ"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="G9J-80-hwA" firstAttribute="top" secondItem="tog-nO-acC" secondAttribute="bottom" constant="20" id="HWw-aU-ubw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="CSm-O8-Kvw" secondAttribute="trailing" constant="40" id="Jc4-ts-ebK"/>
                 <constraint firstItem="G9J-80-hwA" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="TQe-pk-xoQ"/>
                 <constraint firstItem="G0T-Jy-yrc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="fGJ-Fd-kdO"/>
                 <constraint firstItem="D6B-sJ-pZY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="fV9-Oz-gVD"/>
                 <constraint firstItem="D6B-sJ-pZY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hl4-fd-J14"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="CSm-O8-Kvw" secondAttribute="bottom" constant="40" id="kee-b3-ZXt"/>
                 <constraint firstItem="tog-nO-acC" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="o76-7D-zwH"/>
                 <constraint firstItem="G9J-80-hwA" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="tOr-mP-Kkt"/>
                 <constraint firstItem="G0T-Jy-yrc" firstAttribute="top" secondItem="D6B-sJ-pZY" secondAttribute="bottom" constant="164" id="v00-cC-EfZ"/>

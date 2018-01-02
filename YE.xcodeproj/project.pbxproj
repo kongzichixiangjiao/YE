@@ -76,20 +76,6 @@
 		94D389D81F39C23A00F974A6 /* IMGroupSetting.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94D388F51F39C23900F974A6 /* IMGroupSetting.plist */; };
 		94D389D91F39C23A00F974A6 /* my.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94D388F61F39C23900F974A6 /* my.plist */; };
 		94D389DA1F39C23A00F974A6 /* setting.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94D388F71F39C23900F974A6 /* setting.plist */; };
-		94D389DB1F39C23A00F974A6 /* YYAlertAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388FA1F39C23900F974A6 /* YYAlertAnimation.swift */; };
-		94D389DC1F39C23A00F974A6 /* YYAlertBirthdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388FB1F39C23900F974A6 /* YYAlertBirthdayView.swift */; };
-		94D389DD1F39C23A00F974A6 /* YYAlertBirthdayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D388FC1F39C23900F974A6 /* YYAlertBirthdayView.xib */; };
-		94D389DE1F39C23A00F974A6 /* YYAlertLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388FD1F39C23900F974A6 /* YYAlertLoadingView.swift */; };
-		94D389DF1F39C23A00F974A6 /* YYAlertSelectedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D388FE1F39C23900F974A6 /* YYAlertSelectedCell.swift */; };
-		94D389E01F39C23A00F974A6 /* YYAlertSelectedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D388FF1F39C23900F974A6 /* YYAlertSelectedCell.xib */; };
-		94D389E11F39C23A00F974A6 /* YYAlertSelectedTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389001F39C23900F974A6 /* YYAlertSelectedTableViewHeaderView.swift */; };
-		94D389E21F39C23A00F974A6 /* YYAlertSelectedTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D389011F39C23900F974A6 /* YYAlertSelectedTableViewHeaderView.xib */; };
-		94D389E31F39C23A00F974A6 /* YYAlertSelectedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389021F39C23900F974A6 /* YYAlertSelectedView.swift */; };
-		94D389E41F39C23A00F974A6 /* YYAlertTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389031F39C23900F974A6 /* YYAlertTextView.swift */; };
-		94D389E51F39C23A00F974A6 /* YYAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389041F39C23900F974A6 /* YYAlertView.swift */; };
-		94D389E61F39C23A00F974A6 /* YYAlertWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389051F39C23900F974A6 /* YYAlertWindowView.swift */; };
-		94D389E71F39C23A00F974A6 /* YYAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389071F39C23900F974A6 /* YYAlertViewController.swift */; };
-		94D389E81F39C23A00F974A6 /* YYSelfViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389081F39C23900F974A6 /* YYSelfViewManager.swift */; };
 		94D389E91F39C23A00F974A6 /* YYPagingHeaderScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3890A1F39C23900F974A6 /* YYPagingHeaderScrollView.swift */; };
 		94D389EA1F39C23A00F974A6 /* YYPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3890B1F39C23900F974A6 /* YYPagingView.swift */; };
 		94D389EB1F39C23A00F974A6 /* GA_AnimationRefreshHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3890D1F39C23900F974A6 /* GA_AnimationRefreshHeaderView.swift */; };
@@ -354,6 +340,26 @@
 		DCFABD5D1FEB664100E5E997 /* DispatchQueue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFABD5C1FEB664100E5E997 /* DispatchQueue+Extension.swift */; };
 		DCFABD5F1FEB80BC00E5E997 /* Notification+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFABD5E1FEB80BC00E5E997 /* Notification+Extension.swift */; };
 		DCFABD611FEBA51E00E5E997 /* YYSystemPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFABD601FEBA51E00E5E997 /* YYSystemPassword.swift */; };
+		DCFC306E1FFB5D8900B2801E /* YYAlertAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFC305F1FFB5D8900B2801E /* YYAlertAnimation.swift */; };
+		DCFC306F1FFB5D8900B2801E /* YYAlertBirthdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFC30601FFB5D8900B2801E /* YYAlertBirthdayView.swift */; };
+		DCFC30701FFB5D8900B2801E /* YYAlertBirthdayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCFC30611FFB5D8900B2801E /* YYAlertBirthdayView.xib */; };
+		DCFC30711FFB5D8900B2801E /* YYAlertLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFC30621FFB5D8900B2801E /* YYAlertLoadingView.swift */; };
+		DCFC30721FFB5D8900B2801E /* YYAlertSelectedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFC30631FFB5D8900B2801E /* YYAlertSelectedCell.swift */; };
+		DCFC30731FFB5D8900B2801E /* YYAlertSelectedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCFC30641FFB5D8900B2801E /* YYAlertSelectedCell.xib */; };
+		DCFC30741FFB5D8900B2801E /* YYAlertSelectedTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFC30651FFB5D8900B2801E /* YYAlertSelectedTableViewHeaderView.swift */; };
+		DCFC30751FFB5D8900B2801E /* YYAlertSelectedTableViewHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCFC30661FFB5D8900B2801E /* YYAlertSelectedTableViewHeaderView.xib */; };
+		DCFC30761FFB5D8900B2801E /* YYAlertSelectedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFC30671FFB5D8900B2801E /* YYAlertSelectedView.swift */; };
+		DCFC30771FFB5D8900B2801E /* YYAlertTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFC30681FFB5D8900B2801E /* YYAlertTextView.swift */; };
+		DCFC30781FFB5D8900B2801E /* YYAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFC30691FFB5D8900B2801E /* YYAlertView.swift */; };
+		DCFC30791FFB5D8900B2801E /* YYAlertWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFC306A1FFB5D8900B2801E /* YYAlertWindowView.swift */; };
+		DCFC307A1FFB5D8900B2801E /* YYAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFC306C1FFB5D8900B2801E /* YYAlertViewController.swift */; };
+		DCFC307B1FFB5D8900B2801E /* YYSelfViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFC306D1FFB5D8900B2801E /* YYSelfViewManager.swift */; };
+		DCFC307F1FFB5DC500B2801E /* YYTextAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFC307D1FFB5DC500B2801E /* YYTextAlertViewController.swift */; };
+		DCFC30801FFB5DC500B2801E /* YYTextAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCFC307E1FFB5DC500B2801E /* YYTextAlertViewController.xib */; };
+		DCFC30901FFB7D4200B2801E /* YYAlertRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFC308E1FFB7D4200B2801E /* YYAlertRootViewController.swift */; };
+		DCFC30911FFB7D4200B2801E /* YYAlertRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCFC308F1FFB7D4200B2801E /* YYAlertRootViewController.xib */; };
+		DCFC30941FFB7E5C00B2801E /* YYAlertRootCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFC30921FFB7E5C00B2801E /* YYAlertRootCell.swift */; };
+		DCFC30951FFB7E5C00B2801E /* YYAlertRootCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCFC30931FFB7E5C00B2801E /* YYAlertRootCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -444,20 +450,6 @@
 		94D388F51F39C23900F974A6 /* IMGroupSetting.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = IMGroupSetting.plist; sourceTree = "<group>"; };
 		94D388F61F39C23900F974A6 /* my.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = my.plist; sourceTree = "<group>"; };
 		94D388F71F39C23900F974A6 /* setting.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = setting.plist; sourceTree = "<group>"; };
-		94D388FA1F39C23900F974A6 /* YYAlertAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertAnimation.swift; sourceTree = "<group>"; };
-		94D388FB1F39C23900F974A6 /* YYAlertBirthdayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertBirthdayView.swift; sourceTree = "<group>"; };
-		94D388FC1F39C23900F974A6 /* YYAlertBirthdayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYAlertBirthdayView.xib; sourceTree = "<group>"; };
-		94D388FD1F39C23900F974A6 /* YYAlertLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertLoadingView.swift; sourceTree = "<group>"; };
-		94D388FE1F39C23900F974A6 /* YYAlertSelectedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertSelectedCell.swift; sourceTree = "<group>"; };
-		94D388FF1F39C23900F974A6 /* YYAlertSelectedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYAlertSelectedCell.xib; sourceTree = "<group>"; };
-		94D389001F39C23900F974A6 /* YYAlertSelectedTableViewHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertSelectedTableViewHeaderView.swift; sourceTree = "<group>"; };
-		94D389011F39C23900F974A6 /* YYAlertSelectedTableViewHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYAlertSelectedTableViewHeaderView.xib; sourceTree = "<group>"; };
-		94D389021F39C23900F974A6 /* YYAlertSelectedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertSelectedView.swift; sourceTree = "<group>"; };
-		94D389031F39C23900F974A6 /* YYAlertTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertTextView.swift; sourceTree = "<group>"; };
-		94D389041F39C23900F974A6 /* YYAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertView.swift; sourceTree = "<group>"; };
-		94D389051F39C23900F974A6 /* YYAlertWindowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertWindowView.swift; sourceTree = "<group>"; };
-		94D389071F39C23900F974A6 /* YYAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertViewController.swift; sourceTree = "<group>"; };
-		94D389081F39C23900F974A6 /* YYSelfViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYSelfViewManager.swift; sourceTree = "<group>"; };
 		94D3890A1F39C23900F974A6 /* YYPagingHeaderScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYPagingHeaderScrollView.swift; sourceTree = "<group>"; };
 		94D3890B1F39C23900F974A6 /* YYPagingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYPagingView.swift; sourceTree = "<group>"; };
 		94D3890D1F39C23900F974A6 /* GA_AnimationRefreshHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GA_AnimationRefreshHeaderView.swift; sourceTree = "<group>"; };
@@ -725,6 +717,26 @@
 		DCFABD5C1FEB664100E5E997 /* DispatchQueue+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Extension.swift"; sourceTree = "<group>"; };
 		DCFABD5E1FEB80BC00E5E997 /* Notification+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification+Extension.swift"; sourceTree = "<group>"; };
 		DCFABD601FEBA51E00E5E997 /* YYSystemPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYSystemPassword.swift; sourceTree = "<group>"; };
+		DCFC305F1FFB5D8900B2801E /* YYAlertAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertAnimation.swift; sourceTree = "<group>"; };
+		DCFC30601FFB5D8900B2801E /* YYAlertBirthdayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertBirthdayView.swift; sourceTree = "<group>"; };
+		DCFC30611FFB5D8900B2801E /* YYAlertBirthdayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYAlertBirthdayView.xib; sourceTree = "<group>"; };
+		DCFC30621FFB5D8900B2801E /* YYAlertLoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertLoadingView.swift; sourceTree = "<group>"; };
+		DCFC30631FFB5D8900B2801E /* YYAlertSelectedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertSelectedCell.swift; sourceTree = "<group>"; };
+		DCFC30641FFB5D8900B2801E /* YYAlertSelectedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYAlertSelectedCell.xib; sourceTree = "<group>"; };
+		DCFC30651FFB5D8900B2801E /* YYAlertSelectedTableViewHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertSelectedTableViewHeaderView.swift; sourceTree = "<group>"; };
+		DCFC30661FFB5D8900B2801E /* YYAlertSelectedTableViewHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYAlertSelectedTableViewHeaderView.xib; sourceTree = "<group>"; };
+		DCFC30671FFB5D8900B2801E /* YYAlertSelectedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertSelectedView.swift; sourceTree = "<group>"; };
+		DCFC30681FFB5D8900B2801E /* YYAlertTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertTextView.swift; sourceTree = "<group>"; };
+		DCFC30691FFB5D8900B2801E /* YYAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertView.swift; sourceTree = "<group>"; };
+		DCFC306A1FFB5D8900B2801E /* YYAlertWindowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertWindowView.swift; sourceTree = "<group>"; };
+		DCFC306C1FFB5D8900B2801E /* YYAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertViewController.swift; sourceTree = "<group>"; };
+		DCFC306D1FFB5D8900B2801E /* YYSelfViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYSelfViewManager.swift; sourceTree = "<group>"; };
+		DCFC307D1FFB5DC500B2801E /* YYTextAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYTextAlertViewController.swift; sourceTree = "<group>"; };
+		DCFC307E1FFB5DC500B2801E /* YYTextAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYTextAlertViewController.xib; sourceTree = "<group>"; };
+		DCFC308E1FFB7D4200B2801E /* YYAlertRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYAlertRootViewController.swift; sourceTree = "<group>"; };
+		DCFC308F1FFB7D4200B2801E /* YYAlertRootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYAlertRootViewController.xib; sourceTree = "<group>"; };
+		DCFC30921FFB7E5C00B2801E /* YYAlertRootCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYAlertRootCell.swift; sourceTree = "<group>"; };
+		DCFC30931FFB7E5C00B2801E /* YYAlertRootCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYAlertRootCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1021,9 +1033,8 @@
 		94D388F81F39C23900F974A6 /* PUBLIC */ = {
 			isa = PBXGroup;
 			children = (
+				DCFC305D1FFB5D8900B2801E /* Alert */,
 				DC964C071FECD95F006AA5F0 /* LikeButton */,
-				94D388F91F39C23900F974A6 /* Alert */,
-				94D389061F39C23900F974A6 /* AlertViewController */,
 				94CBD9401FB1521900CA2A95 /* CircleScroll */,
 				DC75E3E31FD12A0700332BE5 /* Lib */,
 				94D389091F39C23900F974A6 /* Paging */,
@@ -1044,34 +1055,6 @@
 				94D389211F39C23900F974A6 /* YYWebView.swift */,
 			);
 			path = PUBLIC;
-			sourceTree = "<group>";
-		};
-		94D388F91F39C23900F974A6 /* Alert */ = {
-			isa = PBXGroup;
-			children = (
-				94D388FA1F39C23900F974A6 /* YYAlertAnimation.swift */,
-				94D388FB1F39C23900F974A6 /* YYAlertBirthdayView.swift */,
-				94D388FC1F39C23900F974A6 /* YYAlertBirthdayView.xib */,
-				94D388FD1F39C23900F974A6 /* YYAlertLoadingView.swift */,
-				94D388FE1F39C23900F974A6 /* YYAlertSelectedCell.swift */,
-				94D388FF1F39C23900F974A6 /* YYAlertSelectedCell.xib */,
-				94D389001F39C23900F974A6 /* YYAlertSelectedTableViewHeaderView.swift */,
-				94D389011F39C23900F974A6 /* YYAlertSelectedTableViewHeaderView.xib */,
-				94D389021F39C23900F974A6 /* YYAlertSelectedView.swift */,
-				94D389031F39C23900F974A6 /* YYAlertTextView.swift */,
-				94D389041F39C23900F974A6 /* YYAlertView.swift */,
-				94D389051F39C23900F974A6 /* YYAlertWindowView.swift */,
-			);
-			path = Alert;
-			sourceTree = "<group>";
-		};
-		94D389061F39C23900F974A6 /* AlertViewController */ = {
-			isa = PBXGroup;
-			children = (
-				94D389071F39C23900F974A6 /* YYAlertViewController.swift */,
-				94D389081F39C23900F974A6 /* YYSelfViewManager.swift */,
-			);
-			path = AlertViewController;
 			sourceTree = "<group>";
 		};
 		94D389091F39C23900F974A6 /* Paging */ = {
@@ -1129,7 +1112,6 @@
 				DC9EA11C1FF5E209006FC7F6 /* Transition */,
 				DC8699F61FE3BAF000115C5E /* Root */,
 				DCB946A81FE10BE900958542 /* AD */,
-				94D389281F39C23900F974A6 /* Alert */,
 				94D389291F39C23900F974A6 /* Apply */,
 				949634561F41872F0079886E /* Competition */,
 				94D3892B1F39C23900F974A6 /* Event */,
@@ -1144,15 +1126,6 @@
 				94D389481F39C23900F974A6 /* Sort */,
 			);
 			path = VC;
-			sourceTree = "<group>";
-		};
-		94D389281F39C23900F974A6 /* Alert */ = {
-			isa = PBXGroup;
-			children = (
-				DCA3884B1FE51DAF008BA1C4 /* AnimationBaseViewController.swift */,
-				DCA3884C1FE51DAF008BA1C4 /* AnimationBaseViewController.xib */,
-			);
-			path = Alert;
 			sourceTree = "<group>";
 		};
 		94D389291F39C23900F974A6 /* Apply */ = {
@@ -2035,6 +2008,59 @@
 			path = AD;
 			sourceTree = "<group>";
 		};
+		DCFC305D1FFB5D8900B2801E /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				DCFC307C1FFB5DAB00B2801E /* AlertPresentation */,
+				DCFC305E1FFB5D8900B2801E /* AlertView */,
+				DCFC306B1FFB5D8900B2801E /* AlertViewController */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		DCFC305E1FFB5D8900B2801E /* AlertView */ = {
+			isa = PBXGroup;
+			children = (
+				DCFC305F1FFB5D8900B2801E /* YYAlertAnimation.swift */,
+				DCFC30601FFB5D8900B2801E /* YYAlertBirthdayView.swift */,
+				DCFC30611FFB5D8900B2801E /* YYAlertBirthdayView.xib */,
+				DCFC30621FFB5D8900B2801E /* YYAlertLoadingView.swift */,
+				DCFC30631FFB5D8900B2801E /* YYAlertSelectedCell.swift */,
+				DCFC30641FFB5D8900B2801E /* YYAlertSelectedCell.xib */,
+				DCFC30651FFB5D8900B2801E /* YYAlertSelectedTableViewHeaderView.swift */,
+				DCFC30661FFB5D8900B2801E /* YYAlertSelectedTableViewHeaderView.xib */,
+				DCFC30671FFB5D8900B2801E /* YYAlertSelectedView.swift */,
+				DCFC30681FFB5D8900B2801E /* YYAlertTextView.swift */,
+				DCFC30691FFB5D8900B2801E /* YYAlertView.swift */,
+				DCFC306A1FFB5D8900B2801E /* YYAlertWindowView.swift */,
+			);
+			path = AlertView;
+			sourceTree = "<group>";
+		};
+		DCFC306B1FFB5D8900B2801E /* AlertViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DCFC306C1FFB5D8900B2801E /* YYAlertViewController.swift */,
+				DCFC306D1FFB5D8900B2801E /* YYSelfViewManager.swift */,
+			);
+			path = AlertViewController;
+			sourceTree = "<group>";
+		};
+		DCFC307C1FFB5DAB00B2801E /* AlertPresentation */ = {
+			isa = PBXGroup;
+			children = (
+				DCA3884B1FE51DAF008BA1C4 /* AnimationBaseViewController.swift */,
+				DCA3884C1FE51DAF008BA1C4 /* AnimationBaseViewController.xib */,
+				DCFC307D1FFB5DC500B2801E /* YYTextAlertViewController.swift */,
+				DCFC307E1FFB5DC500B2801E /* YYTextAlertViewController.xib */,
+				DCFC308E1FFB7D4200B2801E /* YYAlertRootViewController.swift */,
+				DCFC308F1FFB7D4200B2801E /* YYAlertRootViewController.xib */,
+				DCFC30921FFB7E5C00B2801E /* YYAlertRootCell.swift */,
+				DCFC30931FFB7E5C00B2801E /* YYAlertRootCell.xib */,
+			);
+			path = AlertPresentation;
+			sourceTree = "<group>";
+		};
 		F6634C116253C070E929F191 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -2113,11 +2139,13 @@
 				DC6770CA1FD697D400E79A07 /* Player_top_shadel.png in Resources */,
 				DC810E851FE26F23000D1C19 /* YYADViewController.xib in Resources */,
 				DC75E40B1FD12AA400332BE5 /* LYPlayer_lock-nor.png in Resources */,
+				DCFC30701FFB5D8900B2801E /* YYAlertBirthdayView.xib in Resources */,
 				94D389EC1F39C23A00F974A6 /* GA_AnimationRefreshHeaderView.xib in Resources */,
 				DC6770C91FD697D400E79A07 /* Player_slider.png in Resources */,
 				94D38A391F39C23A00F974A6 /* YYIMFriendCell.xib in Resources */,
 				DC6770C31FD697D400E79A07 /* Player_center_play.png in Resources */,
 				DC6770C11FD697D400E79A07 /* Player_brightness.png in Resources */,
+				DCFC30801FFB5DC500B2801E /* YYTextAlertViewController.xib in Resources */,
 				94D38A551F39C23A00F974A6 /* YYCompetitionListCell.xib in Resources */,
 				DCA3884E1FE51DAF008BA1C4 /* AnimationBaseViewController.xib in Resources */,
 				DCDAF7FB1FDE7E8600E7CE3A /* YYResizeImageViewController.storyboard in Resources */,
@@ -2134,6 +2162,7 @@
 				94D38A361F39C23A00F974A6 /* YYIMAddFriendCell.xib in Resources */,
 				94D38A491F39C23A00F974A6 /* YYSettingFooterChangeButton.xib in Resources */,
 				94D389C11F39C23A00F974A6 /* IMG_2787.jpg in Resources */,
+				DCFC30951FFB7E5C00B2801E /* YYAlertRootCell.xib in Resources */,
 				94D38A241F39C23A00F974A6 /* YYApplyHeaderView.xib in Resources */,
 				94D389C71F39C23A00F974A6 /* IMG_3260.JPG in Resources */,
 				94D389D71F39C23A00F974A6 /* comment.plist in Resources */,
@@ -2149,6 +2178,7 @@
 				94D38A611F39C2F600F974A6 /* Main.storyboard in Resources */,
 				DC75E4101FD12AA400332BE5 /* LYPlayer_top_shadel.png in Resources */,
 				94CBD9521FB1577000CA2A95 /* 2.jpg in Resources */,
+				DCFC30751FFB5D8900B2801E /* YYAlertSelectedTableViewHeaderView.xib in Resources */,
 				94D389A71F39C23A00F974A6 /* YYBaseNavigationViewTextButton.xib in Resources */,
 				94D389AB1F39C23A00F974A6 /* YYBaseTableViewFooterView.xib in Resources */,
 				94D38A321F39C23A00F974A6 /* YYHomeSectionView.xib in Resources */,
@@ -2163,18 +2193,17 @@
 				9496345D1F41880F0079886E /* YYCompetitionCell.xib in Resources */,
 				94D38A311F39C23A00F974A6 /* YYHomeBasicCell.xib in Resources */,
 				94D389BD1F39C23A00F974A6 /* IMG_2473.jpg in Resources */,
+				DCFC30911FFB7D4200B2801E /* YYAlertRootViewController.xib in Resources */,
 				DC8A70091FD4F8EE006D22D6 /* LYPlayer_center_play.png in Resources */,
 				DC3858F41FC7E9A100244649 /* YYReuseCollectionCell.xib in Resources */,
 				94D38A511F39C23A00F974A6 /* YYCompetitionDetailsBottomView.xib in Resources */,
 				94CBD9501FB1577000CA2A95 /* 1.jpg in Resources */,
 				94D389CA1F39C23A00F974A6 /* IMG_8227.JPG in Resources */,
-				94D389DD1F39C23A00F974A6 /* YYAlertBirthdayView.xib in Resources */,
 				94D389D61F39C23A00F974A6 /* apply.plist in Resources */,
 				DC75E4111FD12AA400332BE5 /* LYPlayer_unlock-nor.png in Resources */,
 				DC75E40C1FD12AA400332BE5 /* LYPlayer_pause.png in Resources */,
 				94D38A261F39C23A00F974A6 /* YYApplySelectedTableViewCell.xib in Resources */,
 				94D38A601F39C2F600F974A6 /* LaunchScreen.storyboard in Resources */,
-				94D389E21F39C23A00F974A6 /* YYAlertSelectedTableViewHeaderView.xib in Resources */,
 				DC74B8831FDA2DD100640964 /* YYRxSwiftViewCell.xib in Resources */,
 				DC8A700A1FD4F8EE006D22D6 /* LYPlayer_center_pause.png in Resources */,
 				DC6770C21FD697D400E79A07 /* Player_center_pause.png in Resources */,
@@ -2213,7 +2242,6 @@
 				DC6770C51FD697D400E79A07 /* Player_lock-nor.png in Resources */,
 				DC65BD5E1FD8E16F00204B7E /* YYRxMVCViewController.xib in Resources */,
 				94D38A341F39C23A00F974A6 /* YYConversationCell.xib in Resources */,
-				94D389E01F39C23A00F974A6 /* YYAlertSelectedCell.xib in Resources */,
 				DC6770C61FD697D400E79A07 /* Player_pause.png in Resources */,
 				DC10DE001FEA46AB00770158 /* MainRoot.storyboard in Resources */,
 				DC75E40D1FD12AA400332BE5 /* LYPlayer_play.png in Resources */,
@@ -2224,6 +2252,7 @@
 				DC9EA1221FF5E240006FC7F6 /* YYSourceTransitionViewController.xib in Resources */,
 				94D389BF1F39C23A00F974A6 /* IMG_2719.jpg in Resources */,
 				94D38A411F39C23A00F974A6 /* YYIMGroupInfoSettingButtonCell.xib in Resources */,
+				DCFC30731FFB5D8900B2801E /* YYAlertSelectedCell.xib in Resources */,
 				94D38A451F39C23A00F974A6 /* YYMyBasicCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2351,11 +2380,9 @@
 				DC75E3F51FD12A1E00332BE5 /* LYPlayer.swift in Sources */,
 				DCA8A4871FD7F5D80042537E /* YYLog.swift in Sources */,
 				DC619CE61FE76B5E00C05E9D /* YYPresentationBaseViewController.swift in Sources */,
-				94D389E11F39C23A00F974A6 /* YYAlertSelectedTableViewHeaderView.swift in Sources */,
 				DCA8A4AA1FD808E80042537E /* BaseViewModel.swift in Sources */,
 				DC964C0C1FECD95F006AA5F0 /* LikeButtonAnimationLayer.swift in Sources */,
 				94D38A051F39C23A00F974A6 /* YYYeEventViewController.swift in Sources */,
-				94D389E51F39C23A00F974A6 /* YYAlertView.swift in Sources */,
 				94D38A3C1F39C23A00F974A6 /* YYIMGroupInfoCell.swift in Sources */,
 				94D38A091F39C23A00F974A6 /* YYEaseUsersListViewController.swift in Sources */,
 				94D389FA1F39C23A00F974A6 /* YYShotView.swift in Sources */,
@@ -2369,7 +2396,6 @@
 				DC74B8841FDA2DD100640964 /* YYRxSwiftViewModel.swift in Sources */,
 				DCA8A4AE1FD808E80042537E /* Observable+HandyJSON.swift in Sources */,
 				94D38A141F39C23A00F974A6 /* YYIMGroupViewController.swift in Sources */,
-				94D389E41F39C23A00F974A6 /* YYAlertTextView.swift in Sources */,
 				DC5F86011FD7A27B0092FDB4 /* AppDelegate+ListeningNetwork.swift in Sources */,
 				94D389AF1F39C23A00F974A6 /* NSMutableAttributedString+Extension.swift in Sources */,
 				DC3858EF1FC7E95200244649 /* YYReuseScrollViewCell.swift in Sources */,
@@ -2384,17 +2410,17 @@
 				94D389D31F39C23A00F974A6 /* HuanXin.swift in Sources */,
 				DCDAF7DC1FDE2F5F00E7CE3A /* YYRxSwfitLoginViewController.swift in Sources */,
 				DCFABD5D1FEB664100E5E997 /* DispatchQueue+Extension.swift in Sources */,
-				94D389E81F39C23A00F974A6 /* YYSelfViewManager.swift in Sources */,
-				94D389DE1F39C23A00F974A6 /* YYAlertLoadingView.swift in Sources */,
 				DC75E3DC1FD1037A00332BE5 /* MediaManager.swift in Sources */,
 				DC65BD621FD8E2DD00204B7E /* RepositoryCell.swift in Sources */,
 				DC749EE91FF1D90500D5E2B8 /* UITableView+PlaceHolder.swift in Sources */,
 				94D38A301F39C23A00F974A6 /* YYHomeBasicCell.swift in Sources */,
+				DCFC30761FFB5D8900B2801E /* YYAlertSelectedView.swift in Sources */,
 				DC74B8801FDA2DD100640964 /* YYRxSwiftViewController.swift in Sources */,
 				DC65BD651FD8E30100204B7E /* GithubService.swift in Sources */,
 				94D389A81F39C23A00F974A6 /* YYBaseCollectionView.swift in Sources */,
 				94D38A191F39C23A00F974A6 /* YYActivityListViewController.swift in Sources */,
 				9496345C1F41880F0079886E /* YYCompetitionCell.swift in Sources */,
+				DCFC30781FFB5D8900B2801E /* YYAlertView.swift in Sources */,
 				94D389A21F39C23A00F974A6 /* YYBaseViewController.swift in Sources */,
 				DCA8A4AB1FD808E80042537E /* DataModel.swift in Sources */,
 				DCFABD5F1FEB80BC00E5E997 /* Notification+Extension.swift in Sources */,
@@ -2430,7 +2456,6 @@
 				DC74B8821FDA2DD100640964 /* YYRxSwiftViewCell.swift in Sources */,
 				94D38A521F39C23A00F974A6 /* YYCompetitionDetailsHeaderView.swift in Sources */,
 				DC74B87B1FDA2DD100640964 /* YYRxSwiftPlusViewController.swift in Sources */,
-				94D389E61F39C23A00F974A6 /* YYAlertWindowView.swift in Sources */,
 				DC65BD691FD8ED3900204B7E /* Int+Extension.swift in Sources */,
 				DC75E3F41FD12A1E00332BE5 /* LYPlayButton.swift in Sources */,
 				DC619CE31FE750BA00C05E9D /* YYPresentationOther.swift in Sources */,
@@ -2440,6 +2465,7 @@
 				94D38A1B1F39C23A00F974A6 /* YYApplyQueryViewController.swift in Sources */,
 				DC749EE71FF1D8C300D5E2B8 /* UITableView+Extension.swift in Sources */,
 				DCA8A4AD1FD808E80042537E /* API.swift in Sources */,
+				DCFC30771FFB5D8900B2801E /* YYAlertTextView.swift in Sources */,
 				94D38A0B1F39C23A00F974A6 /* YYIMConversationViewController.swift in Sources */,
 				949634581F41875D0079886E /* YYCompetitionViewController.swift in Sources */,
 				94D389B31F39C23A00F974A6 /* UIColor+Extension.swift in Sources */,
@@ -2452,9 +2478,9 @@
 				94D38A4E1F39C23A00F974A6 /* YYCompetitionCommentSectionView.swift in Sources */,
 				DC3858F61FC7E9A100244649 /* YYReuseCollectionCell.swift in Sources */,
 				DC7A49D11FCFEE0D0028F308 /* HTML.swift in Sources */,
+				DCFC306F1FFB5D8900B2801E /* YYAlertBirthdayView.swift in Sources */,
 				94D38A1D1F39C23A00F974A6 /* YYCompetitionListViewController.swift in Sources */,
 				DC7A49C91FCF95870028F308 /* YYSwiftDateViewController.swift in Sources */,
-				94D389E31F39C23A00F974A6 /* YYAlertSelectedView.swift in Sources */,
 				94D389B01F39C23A00F974A6 /* NSObject+Extension.swift in Sources */,
 				DC619CE11FE7502900C05E9D /* YYPresentationAnimationViewController.swift in Sources */,
 				94D38A0E1F39C23A00F974A6 /* YYIMCreatChatRoomViewController.swift in Sources */,
@@ -2466,6 +2492,8 @@
 				946BB2AA1F44291C0062D173 /* CondimentDecorator.swift in Sources */,
 				DC619CF01FE7B0CB00C05E9D /* YYBaseTabBarView.swift in Sources */,
 				94D38A561F39C23A00F974A6 /* YYCompetitionReplyCell.swift in Sources */,
+				DCFC30741FFB5D8900B2801E /* YYAlertSelectedTableViewHeaderView.swift in Sources */,
+				DCFC30901FFB7D4200B2801E /* YYAlertRootViewController.swift in Sources */,
 				94D38A131F39C23A00F974A6 /* YYIMGroupListViewController.swift in Sources */,
 				94D38A081F39C23A00F974A6 /* YYEaseConversationListViewController.swift in Sources */,
 				DCA8A4B01FD808E80042537E /* ModelProtocol.swift in Sources */,
@@ -2479,12 +2507,14 @@
 				DCA3884D1FE51DAF008BA1C4 /* AnimationBaseViewController.swift in Sources */,
 				DC9EA1251FF5E24F006FC7F6 /* YYTargetTransitionViewController.swift in Sources */,
 				DCA8A4AF1FD808E80042537E /* Model.swift in Sources */,
+				DCFC306E1FFB5D8900B2801E /* YYAlertAnimation.swift in Sources */,
+				DCFC30791FFB5D8900B2801E /* YYAlertWindowView.swift in Sources */,
 				DC75E3E11FD107BC00332BE5 /* YYPlayerViewController.swift in Sources */,
 				DC74B87F1FDA2DD100640964 /* YYRxSwiftTestViewController.swift in Sources */,
 				94D38A041F39C23A00F974A6 /* YYEventDetailViewController.swift in Sources */,
+				DCFC307F1FFB5DC500B2801E /* YYTextAlertViewController.swift in Sources */,
 				94D38A2F1F39C23A00F974A6 /* YYModuleSelectedView.swift in Sources */,
 				94D389F11F39C23A00F974A6 /* GA_XIBRefreshHeaderView.swift in Sources */,
-				94D389DF1F39C23A00F974A6 /* YYAlertSelectedCell.swift in Sources */,
 				94D38A2A1F39C23A00F974A6 /* YYEventVideoCell.swift in Sources */,
 				94D38A271F39C23A00F974A6 /* YYApplyTextTableViewCell.swift in Sources */,
 				94D389FF1F39C23A00F974A6 /* Compare.swift in Sources */,
@@ -2494,7 +2524,6 @@
 				DC75E3DD1FD1037A00332BE5 /* MediaItem.swift in Sources */,
 				DCA8A4B11FD808E80042537E /* MoyaProvider+Rx.swift in Sources */,
 				DCA8A4B21FD808E80042537E /* Router.swift in Sources */,
-				94D389DB1F39C23A00F974A6 /* YYAlertAnimation.swift in Sources */,
 				DCA8A4B31FD808E80042537E /* Stack.swift in Sources */,
 				946BB2A81F44285A0062D173 /* HouseBlend.swift in Sources */,
 				94D389EE1F39C23A00F974A6 /* GA_LoadFooterView.swift in Sources */,
@@ -2504,7 +2533,6 @@
 				94D389F51F39C23A00F974A6 /* YYDrawerTableViewCell.swift in Sources */,
 				94D38A1E1F39C23A00F974A6 /* YYLiveListViewController.swift in Sources */,
 				94D389FE1F39C23A00F974A6 /* YYWebView.swift in Sources */,
-				94D389DC1F39C23A00F974A6 /* YYAlertBirthdayView.swift in Sources */,
 				94D389A01F39C23A00F974A6 /* YYBaseImagePickerController.swift in Sources */,
 				DC7A49CF1FCFDEDD0028F308 /* Date+Extension.swift in Sources */,
 				DC74B8C91FDA3ED400640964 /* ViewController+Extension.swift in Sources */,
@@ -2519,6 +2547,7 @@
 				94D18E3B1F50111E00750F87 /* YYXIBBaseViewController.swift in Sources */,
 				94D38A3E1F39C23A00F974A6 /* YYIMGroupInfoSectionView.swift in Sources */,
 				94D38A101F39C23A00F974A6 /* YYIMFriendListViewController.swift in Sources */,
+				DCFC307A1FFB5D8900B2801E /* YYAlertViewController.swift in Sources */,
 				94D38A471F39C23A00F974A6 /* YYSettingCell.swift in Sources */,
 				94D389B71F39C23A00F974A6 /* URL+Extension.swift in Sources */,
 				94D38A121F39C23A00F974A6 /* YYIMGroupInfoViewController.swift in Sources */,
@@ -2528,7 +2557,6 @@
 				94D389B51F39C23A00F974A6 /* UITableViewCell+Extension.swift in Sources */,
 				DCA8A4B81FD808E80042537E /* ViewModelProtocol.swift in Sources */,
 				94D38A251F39C23A00F974A6 /* YYApplySelectedTableViewCell.swift in Sources */,
-				94D389E71F39C23A00F974A6 /* YYAlertViewController.swift in Sources */,
 				94D389FC1F39C23A00F974A6 /* YYSpaceCell.swift in Sources */,
 				DCA8A4B91FD808E80042537E /* ViewModelService.swift in Sources */,
 				DC75E3F81FD12A1E00332BE5 /* LYPlayerGesture.swift in Sources */,
@@ -2540,6 +2568,7 @@
 				DC9EA1211FF5E240006FC7F6 /* YYSourceTransitionViewController.swift in Sources */,
 				94D38A441F39C23A00F974A6 /* YYMyBasicCell.swift in Sources */,
 				94D38A201F39C23A00F974A6 /* YYSurroundingListViewController.swift in Sources */,
+				DCFC30941FFB7E5C00B2801E /* YYAlertRootCell.swift in Sources */,
 				94D38A111F39C23A00F974A6 /* YYIMGroupInfoSettingViewController.swift in Sources */,
 				DC3858FB1FC7E9D100244649 /* YYCircleScrollCollectionCell.swift in Sources */,
 				94D38A421F39C23A00F974A6 /* YYIMGroupInfoSettingCell.swift in Sources */,
@@ -2556,6 +2585,7 @@
 				94D38A1F1F39C23A00F974A6 /* YYPhotoListViewController.swift in Sources */,
 				DC3858FD1FC7E9D100244649 /* YYCircleScrollCollectionView.swift in Sources */,
 				94D389AC1F39C23A00F974A6 /* YYBaseView.swift in Sources */,
+				DCFC30711FFB5D8900B2801E /* YYAlertLoadingView.swift in Sources */,
 				94D389ED1F39C23A00F974A6 /* GA_CircleRefreshHeaderView.swift in Sources */,
 				94D389FB1F39C23A00F974A6 /* YYShotViewButton.swift in Sources */,
 				DC810E811FE2291C000D1C19 /* YYXIBBaseTableViewController.swift in Sources */,
@@ -2571,7 +2601,9 @@
 				94D389F31F39C23A00F974A6 /* YYBorderLabel.swift in Sources */,
 				94D389CD1F39C23A00F974A6 /* YYTabBarViewController.swift in Sources */,
 				DC619CFD1FE7B43C00C05E9D /* YYToast.swift in Sources */,
+				DCFC307B1FFB5D8900B2801E /* YYSelfViewManager.swift in Sources */,
 				94D38A071F39C23A00F974A6 /* YYIMBaseViewController.swift in Sources */,
+				DCFC30721FFB5D8900B2801E /* YYAlertSelectedCell.swift in Sources */,
 				DCA388451FE51368008BA1C4 /* YYPresentationDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,6 +18,7 @@
 		DC9EA1111FF5E04C006FC7F6 /* YYTransition+Tier.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9EA1091FF5E04C006FC7F6 /* YYTransition+Tier.swift */; };
 		DC9EA1121FF5E04C006FC7F6 /* YYTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9EA10A1FF5E04C006FC7F6 /* YYTransition.swift */; };
 		DC9EA1161FF5E0D3006FC7F6 /* YYTransition.swift in Headers */ = {isa = PBXBuildFile; fileRef = DC9EA10A1FF5E04C006FC7F6 /* YYTransition.swift */; settings = {ATTRIBUTES = (Public, ); }; };
+		DCFC30861FFB62AD00B2801E /* YYTransition+None.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFC30851FFB62AD00B2801E /* YYTransition+None.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		DC9EA1081FF5E04C006FC7F6 /* YYTransition+Move.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YYTransition+Move.swift"; sourceTree = "<group>"; };
 		DC9EA1091FF5E04C006FC7F6 /* YYTransition+Tier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "YYTransition+Tier.swift"; sourceTree = "<group>"; };
 		DC9EA10A1FF5E04C006FC7F6 /* YYTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYTransition.swift; sourceTree = "<group>"; };
+		DCFC30851FFB62AD00B2801E /* YYTransition+None.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "YYTransition+None.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				DC9EA1071FF5E04C006FC7F6 /* YYTransition+Middle.swift */,
 				DC9EA1081FF5E04C006FC7F6 /* YYTransition+Move.swift */,
 				DC9EA1091FF5E04C006FC7F6 /* YYTransition+Tier.swift */,
+				DCFC30851FFB62AD00B2801E /* YYTransition+None.swift */,
 				DC9EA10A1FF5E04C006FC7F6 /* YYTransition.swift */,
 			);
 			path = Transition;
@@ -229,6 +232,7 @@
 			files = (
 				DC9EA1111FF5E04C006FC7F6 /* YYTransition+Tier.swift in Sources */,
 				DC9EA10C1FF5E04C006FC7F6 /* UIViewController+Transition.swift in Sources */,
+				DCFC30861FFB62AD00B2801E /* YYTransition+None.swift in Sources */,
 				DC9EA1101FF5E04C006FC7F6 /* YYTransition+Move.swift in Sources */,
 				DC9EA10E1FF5E04C006FC7F6 /* YYTransition+Circle.swift in Sources */,
 				DC9EA10D1FF5E04C006FC7F6 /* YYTransition+Animation.swift in Sources */,

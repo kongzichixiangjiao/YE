@@ -1,25 +1,23 @@
 //
-//  YYRootViewController.swift
+//  YYTextAlertViewController.swift
 //  YE
 //
-//  Created by 侯佳男 on 2017/12/15.
-//  Copyright © 2017年 侯佳男. All rights reserved.
+//  Created by 侯佳男 on 2018/1/2.
+//  Copyright © 2018年 侯佳男. All rights reserved.
 //
 
 import UIKit
 
-class YYRootViewController: UIViewController {
-    
+class YYTextAlertViewController: YYPresentationBaseViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.view.backgroundColor = UIColor.white
-        
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
 }
 

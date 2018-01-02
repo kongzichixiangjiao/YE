@@ -51,7 +51,6 @@ class YYNavigationViewController: UINavigationController {
                 print("返回")
             } else {
                 let velocity = gestrure.velocity(in: gestrure.view)
-                print(velocity)
                 print("没有返回")
             }
         }
@@ -81,6 +80,9 @@ extension YYNavigationViewController: UINavigationControllerDelegate {
     }
     
     override func popViewController(animated: Bool) -> UIViewController? {
+        if self.viewControllers.count == 2 {
+            yy_tabBarController?.showTabbarView()
+        }
         return super.popViewController(animated: animated)
     }
     

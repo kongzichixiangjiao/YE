@@ -31,8 +31,26 @@ class YYPresentationBaseViewController: UIViewController {
     typealias ClickedHandler = (_ tag: Int) -> ()
     var clickedHandler: ClickedHandler?
     
+    var isTapBack: Bool = true
+    
+    var duration: Double = 0
+    var mTimer: Timer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if duration != 0 {
+            mTimer = Timer.scheduledTimer(timeInterval: duration + 0.5, target: self, selector: #selector(selfDismiss(_:)), userInfo: nil, repeats: true)
+        }
+        
+    }
+    
+    @objc func selfDismiss(_ timer: Timer) {
+        let de = YYPresentationDelegate(animationType: .middle)
+        self.transitioningDelegate = de
+        self.dismiss(animated: true) {
+            self.mTimer?.invalidate()
+        }
     }
     
     convenience init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?, delegate: YYPresentationDelegate?) {
@@ -58,5 +76,15 @@ class YYPresentationBaseViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        if isTapBack {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    deinit {
+        self.mTimer?.invalidate()
+    }
 }
 

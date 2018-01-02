@@ -118,6 +118,10 @@ extension YYMyViewController {
         if dic[YYKey.myTitle] as! String == "SwiftDate" {
             push(YYSwiftDateViewController(nibName: "YYSwiftDateViewController", bundle: nil))
         }
+        if dic[YYKey.myTitle] as! String == "Alert" {
+            push(YYAlertRootViewController(nibName: "YYAlertRootViewController", bundle: nil))
+        }
+        
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
