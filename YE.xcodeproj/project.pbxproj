@@ -207,6 +207,14 @@
 		DC3858FB1FC7E9D100244649 /* YYCircleScrollCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3858F81FC7E9D100244649 /* YYCircleScrollCollectionCell.swift */; };
 		DC3858FC1FC7E9D100244649 /* YYCircleScrollCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC3858F91FC7E9D100244649 /* YYCircleScrollCollectionCell.xib */; };
 		DC3858FD1FC7E9D100244649 /* YYCircleScrollCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3858FA1FC7E9D100244649 /* YYCircleScrollCollectionView.swift */; };
+		DC5DBDD61FFC650D0089573C /* YYAlertLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DBDD41FFC650D0089573C /* YYAlertLoadingViewController.swift */; };
+		DC5DBDD71FFC650D0089573C /* YYAlertLoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC5DBDD51FFC650D0089573C /* YYAlertLoadingViewController.xib */; };
+		DC5DBDDA1FFC69FC0089573C /* YYAlertBottomTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DBDD81FFC69FC0089573C /* YYAlertBottomTextViewController.swift */; };
+		DC5DBDDB1FFC69FC0089573C /* YYAlertBottomTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC5DBDD91FFC69FC0089573C /* YYAlertBottomTextViewController.xib */; };
+		DC5DBDDF1FFCA7440089573C /* YYAlertSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DBDDD1FFCA7440089573C /* YYAlertSheetViewController.swift */; };
+		DC5DBDE01FFCA7440089573C /* YYAlertSheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC5DBDDE1FFCA7440089573C /* YYAlertSheetViewController.xib */; };
+		DC5DBDE31FFCBB550089573C /* YYAlertAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DBDE11FFCBB550089573C /* YYAlertAlertViewController.swift */; };
+		DC5DBDE41FFCBB550089573C /* YYAlertAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC5DBDE21FFCBB550089573C /* YYAlertAlertViewController.xib */; };
 		DC5F86001FD7A27B0092FDB4 /* AppDelegate+HuanXin.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5F85FD1FD7A27B0092FDB4 /* AppDelegate+HuanXin.swift */; };
 		DC5F86011FD7A27B0092FDB4 /* AppDelegate+ListeningNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5F85FE1FD7A27B0092FDB4 /* AppDelegate+ListeningNetwork.swift */; };
 		DC5F86021FD7A27B0092FDB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5F85FF1FD7A27B0092FDB4 /* AppDelegate.swift */; };
@@ -354,8 +362,8 @@
 		DCFC30791FFB5D8900B2801E /* YYAlertWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFC306A1FFB5D8900B2801E /* YYAlertWindowView.swift */; };
 		DCFC307A1FFB5D8900B2801E /* YYAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFC306C1FFB5D8900B2801E /* YYAlertViewController.swift */; };
 		DCFC307B1FFB5D8900B2801E /* YYSelfViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFC306D1FFB5D8900B2801E /* YYSelfViewManager.swift */; };
-		DCFC307F1FFB5DC500B2801E /* YYTextAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFC307D1FFB5DC500B2801E /* YYTextAlertViewController.swift */; };
-		DCFC30801FFB5DC500B2801E /* YYTextAlertViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCFC307E1FFB5DC500B2801E /* YYTextAlertViewController.xib */; };
+		DCFC307F1FFB5DC500B2801E /* YYAlertTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFC307D1FFB5DC500B2801E /* YYAlertTextViewController.swift */; };
+		DCFC30801FFB5DC500B2801E /* YYAlertTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCFC307E1FFB5DC500B2801E /* YYAlertTextViewController.xib */; };
 		DCFC30901FFB7D4200B2801E /* YYAlertRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFC308E1FFB7D4200B2801E /* YYAlertRootViewController.swift */; };
 		DCFC30911FFB7D4200B2801E /* YYAlertRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCFC308F1FFB7D4200B2801E /* YYAlertRootViewController.xib */; };
 		DCFC30941FFB7E5C00B2801E /* YYAlertRootCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCFC30921FFB7E5C00B2801E /* YYAlertRootCell.swift */; };
@@ -585,6 +593,14 @@
 		DC3858F81FC7E9D100244649 /* YYCircleScrollCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYCircleScrollCollectionCell.swift; sourceTree = "<group>"; };
 		DC3858F91FC7E9D100244649 /* YYCircleScrollCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYCircleScrollCollectionCell.xib; sourceTree = "<group>"; };
 		DC3858FA1FC7E9D100244649 /* YYCircleScrollCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYCircleScrollCollectionView.swift; sourceTree = "<group>"; };
+		DC5DBDD41FFC650D0089573C /* YYAlertLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYAlertLoadingViewController.swift; sourceTree = "<group>"; };
+		DC5DBDD51FFC650D0089573C /* YYAlertLoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYAlertLoadingViewController.xib; sourceTree = "<group>"; };
+		DC5DBDD81FFC69FC0089573C /* YYAlertBottomTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYAlertBottomTextViewController.swift; sourceTree = "<group>"; };
+		DC5DBDD91FFC69FC0089573C /* YYAlertBottomTextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYAlertBottomTextViewController.xib; sourceTree = "<group>"; };
+		DC5DBDDD1FFCA7440089573C /* YYAlertSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYAlertSheetViewController.swift; sourceTree = "<group>"; };
+		DC5DBDDE1FFCA7440089573C /* YYAlertSheetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYAlertSheetViewController.xib; sourceTree = "<group>"; };
+		DC5DBDE11FFCBB550089573C /* YYAlertAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYAlertAlertViewController.swift; sourceTree = "<group>"; };
+		DC5DBDE21FFCBB550089573C /* YYAlertAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYAlertAlertViewController.xib; sourceTree = "<group>"; };
 		DC5F85FD1FD7A27B0092FDB4 /* AppDelegate+HuanXin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+HuanXin.swift"; sourceTree = "<group>"; };
 		DC5F85FE1FD7A27B0092FDB4 /* AppDelegate+ListeningNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AppDelegate+ListeningNetwork.swift"; sourceTree = "<group>"; };
 		DC5F85FF1FD7A27B0092FDB4 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -731,8 +747,8 @@
 		DCFC306A1FFB5D8900B2801E /* YYAlertWindowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertWindowView.swift; sourceTree = "<group>"; };
 		DCFC306C1FFB5D8900B2801E /* YYAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYAlertViewController.swift; sourceTree = "<group>"; };
 		DCFC306D1FFB5D8900B2801E /* YYSelfViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYSelfViewManager.swift; sourceTree = "<group>"; };
-		DCFC307D1FFB5DC500B2801E /* YYTextAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYTextAlertViewController.swift; sourceTree = "<group>"; };
-		DCFC307E1FFB5DC500B2801E /* YYTextAlertViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYTextAlertViewController.xib; sourceTree = "<group>"; };
+		DCFC307D1FFB5DC500B2801E /* YYAlertTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYAlertTextViewController.swift; sourceTree = "<group>"; };
+		DCFC307E1FFB5DC500B2801E /* YYAlertTextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYAlertTextViewController.xib; sourceTree = "<group>"; };
 		DCFC308E1FFB7D4200B2801E /* YYAlertRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYAlertRootViewController.swift; sourceTree = "<group>"; };
 		DCFC308F1FFB7D4200B2801E /* YYAlertRootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYAlertRootViewController.xib; sourceTree = "<group>"; };
 		DCFC30921FFB7E5C00B2801E /* YYAlertRootCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYAlertRootCell.swift; sourceTree = "<group>"; };
@@ -1514,6 +1530,25 @@
 			path = YYCircleScrollCollectionView;
 			sourceTree = "<group>";
 		};
+		DC5DBDDC1FFC6A1D0089573C /* alerts */ = {
+			isa = PBXGroup;
+			children = (
+				DCA3884B1FE51DAF008BA1C4 /* AnimationBaseViewController.swift */,
+				DCA3884C1FE51DAF008BA1C4 /* AnimationBaseViewController.xib */,
+				DC5DBDD81FFC69FC0089573C /* YYAlertBottomTextViewController.swift */,
+				DC5DBDD91FFC69FC0089573C /* YYAlertBottomTextViewController.xib */,
+				DC5DBDD41FFC650D0089573C /* YYAlertLoadingViewController.swift */,
+				DC5DBDD51FFC650D0089573C /* YYAlertLoadingViewController.xib */,
+				DCFC307D1FFB5DC500B2801E /* YYAlertTextViewController.swift */,
+				DCFC307E1FFB5DC500B2801E /* YYAlertTextViewController.xib */,
+				DC5DBDDD1FFCA7440089573C /* YYAlertSheetViewController.swift */,
+				DC5DBDDE1FFCA7440089573C /* YYAlertSheetViewController.xib */,
+				DC5DBDE11FFCBB550089573C /* YYAlertAlertViewController.swift */,
+				DC5DBDE21FFCBB550089573C /* YYAlertAlertViewController.xib */,
+			);
+			path = alerts;
+			sourceTree = "<group>";
+		};
 		DC5F85FC1FD7A27B0092FDB4 /* AppDelegate */ = {
 			isa = PBXGroup;
 			children = (
@@ -2049,14 +2084,11 @@
 		DCFC307C1FFB5DAB00B2801E /* AlertPresentation */ = {
 			isa = PBXGroup;
 			children = (
-				DCA3884B1FE51DAF008BA1C4 /* AnimationBaseViewController.swift */,
-				DCA3884C1FE51DAF008BA1C4 /* AnimationBaseViewController.xib */,
-				DCFC307D1FFB5DC500B2801E /* YYTextAlertViewController.swift */,
-				DCFC307E1FFB5DC500B2801E /* YYTextAlertViewController.xib */,
-				DCFC308E1FFB7D4200B2801E /* YYAlertRootViewController.swift */,
-				DCFC308F1FFB7D4200B2801E /* YYAlertRootViewController.xib */,
+				DC5DBDDC1FFC6A1D0089573C /* alerts */,
 				DCFC30921FFB7E5C00B2801E /* YYAlertRootCell.swift */,
 				DCFC30931FFB7E5C00B2801E /* YYAlertRootCell.xib */,
+				DCFC308E1FFB7D4200B2801E /* YYAlertRootViewController.swift */,
+				DCFC308F1FFB7D4200B2801E /* YYAlertRootViewController.xib */,
 			);
 			path = AlertPresentation;
 			sourceTree = "<group>";
@@ -2140,17 +2172,19 @@
 				DC810E851FE26F23000D1C19 /* YYADViewController.xib in Resources */,
 				DC75E40B1FD12AA400332BE5 /* LYPlayer_lock-nor.png in Resources */,
 				DCFC30701FFB5D8900B2801E /* YYAlertBirthdayView.xib in Resources */,
+				DC5DBDDB1FFC69FC0089573C /* YYAlertBottomTextViewController.xib in Resources */,
 				94D389EC1F39C23A00F974A6 /* GA_AnimationRefreshHeaderView.xib in Resources */,
 				DC6770C91FD697D400E79A07 /* Player_slider.png in Resources */,
 				94D38A391F39C23A00F974A6 /* YYIMFriendCell.xib in Resources */,
 				DC6770C31FD697D400E79A07 /* Player_center_play.png in Resources */,
 				DC6770C11FD697D400E79A07 /* Player_brightness.png in Resources */,
-				DCFC30801FFB5DC500B2801E /* YYTextAlertViewController.xib in Resources */,
+				DCFC30801FFB5DC500B2801E /* YYAlertTextViewController.xib in Resources */,
 				94D38A551F39C23A00F974A6 /* YYCompetitionListCell.xib in Resources */,
 				DCA3884E1FE51DAF008BA1C4 /* AnimationBaseViewController.xib in Resources */,
 				DCDAF7FB1FDE7E8600E7CE3A /* YYResizeImageViewController.storyboard in Resources */,
 				DC74B87E1FDA2DD100640964 /* YYRxSwiftTestTableViewController.xib in Resources */,
 				94D38A631F39C33300F974A6 /* Assets.xcassets in Resources */,
+				DC5DBDD71FFC650D0089573C /* YYAlertLoadingViewController.xib in Resources */,
 				DC7E7FCB1FD91D6B00859B00 /* YYRxMVVMViewController.xib in Resources */,
 				DC619CF21FE7B0E500C05E9D /* YYBaseTabBarView.xib in Resources */,
 				94D38A4F1F39C23A00F974A6 /* YYCompetitionCommentSectionView.xib in Resources */,
@@ -2185,6 +2219,7 @@
 				94CBD94D1FB1577000CA2A95 /* 7.jpg in Resources */,
 				DC6770C81FD697D400E79A07 /* Player_shrinkscreen.png in Resources */,
 				DC74B87C1FDA2DD100640964 /* YYRxSwiftPlusViewController.xib in Resources */,
+				DC5DBDE41FFCBB550089573C /* YYAlertAlertViewController.xib in Resources */,
 				94D38A431F39C23A00F974A6 /* YYIMGroupInfoSettingCell.xib in Resources */,
 				DC6770C01FD697D400E79A07 /* Player_bottom_shadel.png in Resources */,
 				94D38A2B1F39C23A00F974A6 /* YYEventVideoCell.xib in Resources */,
@@ -2226,6 +2261,7 @@
 				94CBD94F1FB1577000CA2A95 /* 5.jpg in Resources */,
 				DC6770C41FD697D400E79A07 /* Player_fullscreen.png in Resources */,
 				94D38A2E1F39C23A00F974A6 /* YYModuleSelectedCell.xib in Resources */,
+				DC5DBDE01FFCA7440089573C /* YYAlertSheetViewController.xib in Resources */,
 				DC75E3D71FD0FE6A00332BE5 /* YYPlayerView.xib in Resources */,
 				94D389D91F39C23A00F974A6 /* my.plist in Resources */,
 				94D389D81F39C23A00F974A6 /* IMGroupSetting.plist in Resources */,
@@ -2397,6 +2433,7 @@
 				DCA8A4AE1FD808E80042537E /* Observable+HandyJSON.swift in Sources */,
 				94D38A141F39C23A00F974A6 /* YYIMGroupViewController.swift in Sources */,
 				DC5F86011FD7A27B0092FDB4 /* AppDelegate+ListeningNetwork.swift in Sources */,
+				DC5DBDDA1FFC69FC0089573C /* YYAlertBottomTextViewController.swift in Sources */,
 				94D389AF1F39C23A00F974A6 /* NSMutableAttributedString+Extension.swift in Sources */,
 				DC3858EF1FC7E95200244649 /* YYReuseScrollViewCell.swift in Sources */,
 				DCA8A4A91FD808E80042537E /* BaseViewController.swift in Sources */,
@@ -2423,9 +2460,11 @@
 				DCFC30781FFB5D8900B2801E /* YYAlertView.swift in Sources */,
 				94D389A21F39C23A00F974A6 /* YYBaseViewController.swift in Sources */,
 				DCA8A4AB1FD808E80042537E /* DataModel.swift in Sources */,
+				DC5DBDE31FFCBB550089573C /* YYAlertAlertViewController.swift in Sources */,
 				DCFABD5F1FEB80BC00E5E997 /* Notification+Extension.swift in Sources */,
 				DCA388491FE514FE008BA1C4 /* YYNavigationAnimationViewController.swift in Sources */,
 				DC987D071FE0CA94009B9CFA /* GARegular.swift in Sources */,
+				DC5DBDD61FFC650D0089573C /* YYAlertLoadingViewController.swift in Sources */,
 				DC75E3F91FD12A1E00332BE5 /* LYPlayerSlider.swift in Sources */,
 				94D389CC1F39C23A00F974A6 /* YYNavigationViewController.swift in Sources */,
 				94D38A2C1F39C23A00F974A6 /* YYHomeTopView.swift in Sources */,
@@ -2438,6 +2477,7 @@
 				DC5F86021FD7A27B0092FDB4 /* AppDelegate.swift in Sources */,
 				DC964C0F1FECD95F006AA5F0 /* YYLikeButton.swift in Sources */,
 				94D38A461F39C23A00F974A6 /* YYMyTopView.swift in Sources */,
+				DC5DBDDF1FFCA7440089573C /* YYAlertSheetViewController.swift in Sources */,
 				94D389EA1F39C23A00F974A6 /* YYPagingView.swift in Sources */,
 				94D389CE1F39C23A00F974A6 /* HuanXinManager.swift in Sources */,
 				DC7E7FCA1FD91D6B00859B00 /* YYRxMVVMViewController.swift in Sources */,
@@ -2512,7 +2552,7 @@
 				DC75E3E11FD107BC00332BE5 /* YYPlayerViewController.swift in Sources */,
 				DC74B87F1FDA2DD100640964 /* YYRxSwiftTestViewController.swift in Sources */,
 				94D38A041F39C23A00F974A6 /* YYEventDetailViewController.swift in Sources */,
-				DCFC307F1FFB5DC500B2801E /* YYTextAlertViewController.swift in Sources */,
+				DCFC307F1FFB5DC500B2801E /* YYAlertTextViewController.swift in Sources */,
 				94D38A2F1F39C23A00F974A6 /* YYModuleSelectedView.swift in Sources */,
 				94D389F11F39C23A00F974A6 /* GA_XIBRefreshHeaderView.swift in Sources */,
 				94D38A2A1F39C23A00F974A6 /* YYEventVideoCell.swift in Sources */,

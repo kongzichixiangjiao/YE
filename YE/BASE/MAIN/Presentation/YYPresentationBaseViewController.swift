@@ -28,7 +28,7 @@ import UIKit
 class YYPresentationBaseViewController: UIViewController {
     
     // 点击弹框按钮的闭包
-    typealias ClickedHandler = (_ tag: Int) -> ()
+    typealias ClickedHandler = (_ tag: Int, _ model: Any?) -> ()
     var clickedHandler: ClickedHandler?
     
     var isTapBack: Bool = true
@@ -36,32 +36,32 @@ class YYPresentationBaseViewController: UIViewController {
     var duration: Double = 0
     var mTimer: Timer?
     
+    var mDelegate: YYPresentationDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if duration != 0 {
-            mTimer = Timer.scheduledTimer(timeInterval: duration + 0.5, target: self, selector: #selector(selfDismiss(_:)), userInfo: nil, repeats: true)
+            mTimer = Timer.scheduledTimer(timeInterval: duration + 0.5, target: self, selector: #selector(selfDismiss(_:)), userInfo: nil, repeats: false)
         }
         
     }
     
     @objc func selfDismiss(_ timer: Timer) {
-        let de = YYPresentationDelegate(animationType: .middle)
-        self.transitioningDelegate = de
-        self.dismiss(animated: true) {
-            self.mTimer?.invalidate()
-        }
+        dismiss()
     }
     
     convenience init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?, delegate: YYPresentationDelegate?) {
         self.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.modalPresentationStyle = .custom
         guard let d = delegate else {
-            let de = YYPresentationDelegate(animationType: .alert)
+            let de = YYPresentationDelegate(animationType: .middle)
             self.transitioningDelegate = de
+            self.mDelegate = de
             return
         }
         self.transitioningDelegate = d
+        self.mDelegate = d
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -79,11 +79,30 @@ class YYPresentationBaseViewController: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         if isTapBack {
-            self.dismiss(animated: true, completion: nil)
+            dismiss()
         }
     }
     
+    public func dismiss() {
+        guard let d = mDelegate else {
+            let de = YYPresentationDelegate(animationType: .middle)
+            self.transitioningDelegate = de
+            self.dismiss(animated: true, completion: nil)
+            return
+        }
+        
+        let de = YYPresentationDelegate(animationType: d.presentationAnimationType)
+        self.transitioningDelegate = de
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     deinit {
+        /*
+         计时器暂停
+         self.playerTimer.fireDate = Date.distantFuture
+         计时器继续
+         self.playerTimer.fireDate = Date.distantPast
+         */
         self.mTimer?.invalidate()
     }
 }

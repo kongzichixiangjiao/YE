@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="YYAlertLoadingViewController" customModule="YE" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TLq-QG-cYD" userLabel="backView">
+                    <rect key="frame" x="147.5" y="293" width="80" height="80"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="Lzf-df-M5l"/>
+                        <constraint firstAttribute="height" constant="80" id="lx6-QG-bG7"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="ga_cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aq9-76-DDZ">
+                    <rect key="frame" x="137.5" y="283" width="100" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="OBC-9a-a7J"/>
+                        <constraint firstAttribute="height" constant="100" id="Rkk-Ei-3j0"/>
+                    </constraints>
+                </view>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="sI9-TY-xlg">
+                    <rect key="frame" x="177" y="323" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="aq9-76-DDZ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="0wJ-kM-SnM"/>
+                <constraint firstItem="sI9-TY-xlg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9N8-Es-gke"/>
+                <constraint firstItem="TLq-QG-cYD" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9ch-Vb-Pkb"/>
+                <constraint firstItem="sI9-TY-xlg" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="eO4-k6-Cl8"/>
+                <constraint firstItem="aq9-76-DDZ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mHj-iN-bQJ"/>
+                <constraint firstItem="TLq-QG-cYD" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="zRj-eE-xeU"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

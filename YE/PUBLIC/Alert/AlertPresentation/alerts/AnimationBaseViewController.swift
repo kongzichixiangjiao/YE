@@ -38,7 +38,7 @@ class AnimationBaseViewController: YYPresentationBaseViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         self.dismiss(animated: true, completion: nil)
-        clickedHandler?(2)
+        clickedHandler?(2, "")
     }
     
 }

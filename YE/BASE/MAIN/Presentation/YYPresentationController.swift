@@ -11,7 +11,7 @@ import UIKit
 class YYPresentationController: UIPresentationController {
 
     var presentationAnimationType: PresentationAnimationType = .none
-    
+    var isShowMaskView: Bool = true
     // 遮罩层
     lazy var dimmingView: UIView = {
         let v = UIView()
@@ -30,15 +30,17 @@ class YYPresentationController: UIPresentationController {
         presentedViewController.dismiss(animated: true, completion: nil)
     }
     
-    convenience init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?, type: PresentationAnimationType) {
+    convenience init(presentedViewController: UIViewController, presenting presentingViewController: UIViewController?, type: PresentationAnimationType, isShowMaskView: Bool = true) {
         self.init(presentedViewController: presentedViewController, presenting: presentingViewController)
-        self.presentationAnimationType = type 
+        self.presentationAnimationType = type
+        self.isShowMaskView = isShowMaskView
     }
     
     override func presentationTransitionWillBegin() {
-        containerView?.addSubview(dimmingView)
-        
-        self.dimmingView.bounds = self.containerView!.bounds
+        if isShowMaskView {
+            containerView?.addSubview(dimmingView)
+            self.dimmingView.bounds = self.containerView!.bounds
+        }
         
         _ = presentedViewController.transitionCoordinator?.animate(alongsideTransition: {
             _ in

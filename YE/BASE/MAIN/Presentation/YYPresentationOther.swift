@@ -14,5 +14,5 @@ enum ModalOperation{
 
 // 弹出类型
 enum PresentationAnimationType {
-    case none, downShow, upShow, middle, sheet, alert
+    case none, downShow, upShow, middle, sheet, alert, bottom, top
 }

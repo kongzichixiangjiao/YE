@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class YYPresentationAnimationViewController: NSObject, UIViewControllerAnimatedTransitioning {
     private var transitionType: GATransitionType
     private var presentationAnimationType: PresentationAnimationType
@@ -19,110 +20,208 @@ class YYPresentationAnimationViewController: NSObject, UIViewControllerAnimatedT
     }
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 0.35
+        return 0.26
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let containerView = transitionContext.containerView
+        
         guard let fromVC = transitionContext.viewController(forKey: .from), let toVC = transitionContext.viewController(forKey: .to) else {
             return
         }
         
-        let fromView = fromVC.view
-        let toView = toVC.view
-        
-        var translation: CGFloat = 0
-        var fromViewTransform = CGAffineTransform.identity
-        var toViewTransform = CGAffineTransform.identity
-        
+        animationTransitionAllView(transitionContext: transitionContext, containerView: containerView, fromVC: fromVC, toVC: toVC)
+    }
+    
+    func animationTransitionAllView(transitionContext: UIViewControllerContextTransitioning, containerView: UIView, fromVC: UIViewController, toVC: UIViewController) {
         switch transitionType{
         case .modalTransition(let operation):
             switch operation {
             case .present:
-                
-                switch presentationAnimationType {
-                case .downShow:
-                    translation = containerView.frame.width
-                    toViewTransform = CGAffineTransform(translationX: 0, y: (operation == .present ? translation : 0))
-                    fromViewTransform = CGAffineTransform(translationX: 0, y: (operation == .present ? 0 : translation))
-                    break
-                case .upShow:
-                    translation = -containerView.frame.height
-                    toViewTransform = CGAffineTransform(translationX: 0, y: (operation == .present ? translation : 0))
-                    fromViewTransform = CGAffineTransform(translationX: 0, y: (operation == .present ? 0 : translation))
-                    break
-                case .middle:
-                    translation = 0
-                    toViewTransform = CGAffineTransform(scaleX: 0.2, y: 0.2)
-                    break
-                case .none:
-                    translation = 0
-                    toViewTransform = CGAffineTransform(translationX: 0, y: (operation == .present ? translation : 0))
-                    fromViewTransform = CGAffineTransform(translationX: 0, y: (operation == .present ? 0 : translation))
-                    break
-                case .sheet:
-                    translation = containerView.frame.width
-                    toViewTransform = CGAffineTransform(translationX: 0, y: (operation == .present ? translation : 0))
-                    fromViewTransform = CGAffineTransform(translationX: 0, y: (operation == .present ? 0 : translation))
-                    break
-                case .alert:
-                    translation = 0
-                    toViewTransform = CGAffineTransform(translationX: 0, y: (operation == .present ? translation : 0))
-                    fromViewTransform = CGAffineTransform(translationX: 0, y: (operation == .present ? 0 : translation))
-                    break
-                }
-                containerView.addSubview(toView!)
-                
-                toView?.transform = toViewTransform
-                
-                if presentationAnimationType == .alert {
-                    toView?.alpha = 0
-                    UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
-                        toView?.alpha = 1
-                    })
-                }
-                UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
-                    fromView?.transform = fromViewTransform
-                    toView?.transform = CGAffineTransform.identity
-                }, completion: { finished in
-                    fromView?.transform = CGAffineTransform.identity
-                    toView?.transform = CGAffineTransform.identity
-                    transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
-                })
-                
+                animationTransitionAllViewPresent(operation: operation, transitionContext: transitionContext, containerView: containerView, fromVC: fromVC, toVC: toVC)
+                break 
             case .dismiss:
-                switch presentationAnimationType {
-                case .downShow:
-                    break
-                case .upShow:
-                    break
-                case .middle:
-                    toViewTransform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-                    break
-                case .none:
-                    break
-                case .sheet:
-                    break
-                case .alert:
-                    break
-                }
-                UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
-                    fromView?.transform = toViewTransform
-//                    toView?.transform = toViewTransform
-                }, completion: { finished in
-//                    fromView?.transform = fromViewTransform
-//                    toView?.transform = toViewTransform
-                    transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
-                })
+                animationTransitionAllViewDismiss(transitionContext: transitionContext, containerView: containerView, fromVC: fromVC, toVC: toVC)
                 break
             }
-        default: containerView.addSubview(toView!)
+        default:
+            let toView = toVC.view
+            containerView.addSubview(toView!)
         }
-        
     }
     
-    private func present() {
+    func animationTransitionAllViewDismiss(transitionContext: UIViewControllerContextTransitioning, containerView: UIView, fromVC: UIViewController, toVC: UIViewController) {
+        let fromView = fromVC.view
+        let toView = toVC.view
         
+        switch presentationAnimationType {
+        case .downShow:
+            break
+        case .upShow:
+            break
+        case .middle:
+            animationTransitionWithMiddle(operation: .dismiss, transitionContext: transitionContext, containerView: containerView, fromView: fromView, toView: toView)
+            return
+        case .none:
+            break
+        case .sheet:
+            animationTransitionWithSheet(operation: .dismiss, transitionContext: transitionContext, containerView: containerView, fromView: fromView, toView: toView)
+            return
+        case .alert:
+            animationTransitionWithAlert(operation: .dismiss, transitionContext: transitionContext, containerView: containerView, fromView: fromView, toView: toView)
+            return
+        case .bottom:
+            animationTransitionWithBottom(operation: .dismiss, transitionContext: transitionContext, containerView: containerView, fromView: fromView, toView: toView)
+            return
+        case .top:
+            break
+        }
+    }
+    
+    func animationTransitionAllViewPresent(operation: ModalOperation, transitionContext: UIViewControllerContextTransitioning, containerView: UIView, fromVC: UIViewController, toVC: UIViewController) {
+        let fromView = fromVC.view
+        let toView = toVC.view
+        
+        switch presentationAnimationType {
+        case .downShow:
+            break
+        case .upShow:
+            break
+        case .middle:
+            animationTransitionWithMiddle(operation: .present, transitionContext: transitionContext, containerView: containerView, fromView: fromView, toView: toView)
+            return
+        case .none:
+            break
+        case .sheet:
+            animationTransitionWithSheet(operation: .present, transitionContext: transitionContext, containerView: containerView, fromView: fromView, toView: toView)
+            return
+        case .alert:
+            animationTransitionWithAlert(operation: .present, transitionContext: transitionContext, containerView: containerView, fromView: fromView, toView: toView)
+            return
+        case .bottom:
+            animationTransitionWithBottom(operation: .present, transitionContext: transitionContext, containerView: containerView, fromView: fromView, toView: toView)
+            return
+        case .top:
+            break
+        }
+    }
+    
+    func animationTransitionWithAlert(operation: ModalOperation, transitionContext: UIViewControllerContextTransitioning, containerView: UIView, fromView: UIView?, toView: UIView?) {
+        guard let toView = toView, let fromView = fromView else {
+            return
+        }
+        
+        let duration = transitionDuration(using: transitionContext)
+        switch operation {
+        case .present:
+            containerView.addSubview(toView)
+            
+            toView.subviews.first?.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
+            
+            UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: {
+                toView.subviews.first?.transform = CGAffineTransform(scaleX: 1, y: 1)
+            }, completion: { (finished) in
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+            })
+            
+            break
+        case .dismiss:
+            containerView.addSubview(fromView)
+            fromView.transform = CGAffineTransform.identity
+            
+            UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: {
+                fromView.transform = CGAffineTransform(scaleX: 0.2, y: 0.2)
+            }, completion: { finished in
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+            })
+            break
+        }
+    }
+    
+    func animationTransitionWithMiddle(operation: ModalOperation, transitionContext: UIViewControllerContextTransitioning, containerView: UIView, fromView: UIView?, toView: UIView?) {
+        guard let toView = toView, let fromView = fromView else {
+            return
+        }
+        
+        switch operation {
+        case .present:
+            containerView.addSubview(toView)
+            toView.transform = CGAffineTransform(scaleX: 0.2, y: 0.2)
+            
+            UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
+                toView.transform = CGAffineTransform.identity
+            }, completion: { finished in
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+            })
+            break
+        case .dismiss:
+            containerView.addSubview(fromView)
+            fromView.transform = CGAffineTransform.identity
+            
+            UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
+                fromView.transform = CGAffineTransform(scaleX: 0.2, y: 0.2)
+            }, completion: { finished in
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+            })
+            break
+        }
+    }
+    func animationTransitionWithSheet(operation: ModalOperation, transitionContext: UIViewControllerContextTransitioning, containerView: UIView, fromView: UIView?, toView: UIView?) {
+        guard let toView = toView, let fromView = fromView else {
+            return
+        }
+
+        switch operation {
+        case .present:
+            containerView.addSubview(toView)
+            toView.transform = CGAffineTransform(translationX: 0, y: containerView.frame.height)
+            
+            UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
+                toView.transform = CGAffineTransform.identity
+            }, completion: { finished in
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+            })
+            break
+        case .dismiss:
+            containerView.addSubview(fromView)
+            fromView.transform = CGAffineTransform.identity
+            
+            UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
+                fromView.transform = CGAffineTransform(translationX: 0, y: containerView.frame.height)
+            }, completion: { finished in
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+            })
+            break
+        }
+    }
+    
+    func animationTransitionWithBottom(operation: ModalOperation, transitionContext: UIViewControllerContextTransitioning, containerView: UIView, fromView: UIView?, toView: UIView?) {
+        guard let toView = toView, let fromView = fromView else {
+            return
+        }
+        
+        switch operation {
+        case .present:
+            containerView.addSubview(toView)
+            toView.subviews.first?.transform = CGAffineTransform(scaleX: 0.2, y: 0.2)
+            
+            UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
+                toView.subviews.first?.transform = CGAffineTransform.identity
+            }, completion: { finished in
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+            })
+            break
+        case .dismiss:
+            containerView.addSubview(fromView)
+            fromView.subviews.first?.transform = CGAffineTransform.identity
+            
+            UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
+                fromView.subviews.first?.transform = CGAffineTransform(scaleX: 0.2, y: 0.2)
+            }, completion: { finished in
+                transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
+            })
+            break
+        }
     }
     
     func animationEnded(_ transitionCompleted: Bool) {
