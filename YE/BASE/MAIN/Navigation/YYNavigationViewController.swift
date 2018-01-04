@@ -50,7 +50,7 @@ class YYNavigationViewController: UINavigationController {
             if (endPoint.x > UIScreen.main.bounds.width / 2) {
                 print("返回")
             } else {
-                let velocity = gestrure.velocity(in: gestrure.view)
+                let _ = gestrure.velocity(in: gestrure.view)
                 print("没有返回")
             }
         }
@@ -80,9 +80,13 @@ extension YYNavigationViewController: UINavigationControllerDelegate {
     }
     
     override func popViewController(animated: Bool) -> UIViewController? {
-        if self.viewControllers.count == 2 {
-            yy_tabBarController?.showTabbarView()
-        }
+//        guard let _ = self.delegate else {
+//            if self.viewControllers.count == 2 {
+//                yy_tabBarController?.showTabbarView()
+//            }
+//            return super.popViewController(animated: animated)
+//        }
+        navigationController(self, didShow: self.viewControllers.first!, animated: true)
         return super.popViewController(animated: animated)
     }
     

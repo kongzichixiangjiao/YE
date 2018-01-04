@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import YYPresentation
 
 enum YYAlertCellType: String {
     case normal = "Nomal"
@@ -76,7 +77,7 @@ class YYAlertRootViewController: UITableViewController {
             self.present(vc, animated: true, completion: nil)
             break
         case .sheet:
-            let d = YYPresentationDelegate(animationType: .sheet)
+            let d = YYPresentationDelegate(animationType: .sheet, isShowMaskView: true)
             let vc = YYAlertSheetViewController(nibName: "YYAlertSheetViewController", bundle: nil, delegate: d)
             vc.clickedHandler = {
                 tag, model in

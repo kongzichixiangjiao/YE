@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import YYPresentation
 
 class YYAlertAlertViewController: YYPresentationBaseViewController {
 
@@ -31,4 +32,5 @@ class YYAlertAlertViewController: YYPresentationBaseViewController {
         clickedHandler!(110, "取消")
         dismiss()
     }
+    
 }

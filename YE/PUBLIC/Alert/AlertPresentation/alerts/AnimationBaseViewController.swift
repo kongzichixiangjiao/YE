@@ -7,7 +7,7 @@
 //  各种alert弹框 自定义
 
 import UIKit
-
+import YYPresentation
 /*
  var alertClickedHandler: AnimationBaseViewController.ClickedHandler = {
     tag in

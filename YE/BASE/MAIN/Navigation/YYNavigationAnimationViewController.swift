@@ -11,7 +11,6 @@ import UIKit
 enum GATransitionType{
     case navigationTransition(UINavigationControllerOperation)
     case tabTransition(TabOperationDirection)
-    case modalTransition(ModalOperation)
 }
 
 enum TabOperationDirection{
@@ -21,11 +20,9 @@ enum TabOperationDirection{
 
 class YYNavigationAnimationViewController: NSObject, UIViewControllerAnimatedTransitioning {
     private var transitionType: GATransitionType
-    private var presentationAnimationType: PresentationAnimationType
     
-    init(type: GATransitionType, presentationAnimationType: PresentationAnimationType = .downShow) {
+    init(type: GATransitionType) {
         self.transitionType = type
-        self.presentationAnimationType = presentationAnimationType
         super.init()
     }
     
@@ -55,11 +52,6 @@ class YYNavigationAnimationViewController: NSObject, UIViewControllerAnimatedTra
             translation = direction == .left ? translation : -translation
             fromViewTransform = CGAffineTransform(translationX: translation, y: 0)
             toViewTransform = CGAffineTransform(translationX: -translation, y: 0)
-            
-        case .modalTransition(let operation):
-            translation =  containerView.frame.height
-            toViewTransform = CGAffineTransform(translationX: 0, y: (operation == .present ? translation : 0))
-            fromViewTransform = CGAffineTransform(translationX: 0, y: (operation == .present ? 0 : translation))
         }
         
         containerView.addSubview(toView!)

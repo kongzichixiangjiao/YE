@@ -15,10 +15,12 @@ class YYSourceTransitionViewController: UIViewController {
     
     @IBOutlet weak var moveView: UIImageView!
     
-    var dddd:UINavigationControllerDelegate? = nil
+    var mDelegate:UINavigationControllerDelegate? = nil
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        dddd = (self.navigationController?.delegate)!
+        mDelegate = (self.navigationController?.delegate)!
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,7 +61,8 @@ class YYSourceTransitionViewController: UIViewController {
     }
     
     @IBAction func back(_ sender: UIButton) {
-        self.navigationController?.delegate = nil
+        // 此处如何优化？
+        self.navigationController?.delegate = mDelegate
         self.navigationController?.popViewController(animated: true)
     }
 }

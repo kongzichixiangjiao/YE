@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 // storyboard里拖拽Object设置class为YYNavigationViewControllerDelegate 并且连线navigationcontroller
 class YYNavigationViewControllerDelegate: NSObject {
     
@@ -32,6 +31,13 @@ class YYNavigationViewControllerDelegate: NSObject {
         return UIInterfaceOrientationMask()
     }
     
+    override init() {
+        super.init()
+    }
+}
+
+extension YYNavigationViewControllerDelegate: UINavigationControllerDelegate {
+    
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         
     }
@@ -39,4 +45,3 @@ class YYNavigationViewControllerDelegate: NSObject {
     func navigationController(_ navigationController: UINavigationController, didShow viewController: UIViewController, animated: Bool) {
     }
 }
-

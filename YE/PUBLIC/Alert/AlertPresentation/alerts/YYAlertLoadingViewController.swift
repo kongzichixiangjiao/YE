@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import YYPresentation
 
 class YYAlertLoadingViewController: YYPresentationBaseViewController {
 

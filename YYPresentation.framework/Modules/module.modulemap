@@ -1,0 +1,11 @@
+framework module YYPresentation {
+  umbrella header "YYPresentation.h"
+
+  export *
+  module * { export * }
+}
+
+module YYPresentation.Swift {
+    header "YYPresentation-Swift.h"
+    requires objc
+}

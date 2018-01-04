@@ -25,20 +25,18 @@ import UIKit
      self.present(vc, animated: true, completion: nil)
  */
 
-class YYPresentationBaseViewController: UIViewController {
+open class YYPresentationBaseViewController: UIViewController {
     
     // 点击弹框按钮的闭包
-    typealias ClickedHandler = (_ tag: Int, _ model: Any?) -> ()
-    var clickedHandler: ClickedHandler?
+    public typealias ClickedHandler = (_ tag: Int, _ model: Any?) -> ()
+    public var clickedHandler: ClickedHandler?
+    public var isTapBack: Bool = true
+    public var duration: Double = 0 // 多长时间只有执行mTimer方法
+    private var mTimer: Timer?
     
-    var isTapBack: Bool = true
+    private var mDelegate: YYPresentationDelegate?
     
-    var duration: Double = 0
-    var mTimer: Timer?
-    
-    var mDelegate: YYPresentationDelegate?
-    
-    override func viewDidLoad() {
+    override open func viewDidLoad() {
         super.viewDidLoad()
         
         if duration != 0 {
@@ -51,7 +49,7 @@ class YYPresentationBaseViewController: UIViewController {
         dismiss()
     }
     
-    convenience init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?, delegate: YYPresentationDelegate?) {
+    convenience public init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?, delegate: YYPresentationDelegate?) {
         self.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.modalPresentationStyle = .custom
         guard let d = delegate else {
@@ -64,19 +62,19 @@ class YYPresentationBaseViewController: UIViewController {
         self.mDelegate = d
     }
     
-    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+    override public init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
    
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func didReceiveMemoryWarning() {
+    override open func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         if isTapBack {
             dismiss()

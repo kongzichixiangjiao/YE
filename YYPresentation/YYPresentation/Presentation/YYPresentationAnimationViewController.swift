@@ -10,10 +10,10 @@ import UIKit
 
 
 class YYPresentationAnimationViewController: NSObject, UIViewControllerAnimatedTransitioning {
-    private var transitionType: GATransitionType
+    private var transitionType: YYTransitionType
     private var presentationAnimationType: PresentationAnimationType
     
-    init(type: GATransitionType, presentationAnimationType: PresentationAnimationType = .downShow) {
+    init(type: YYTransitionType, presentationAnimationType: PresentationAnimationType = .downShow) {
         self.transitionType = type
         self.presentationAnimationType = presentationAnimationType
         super.init()
@@ -44,9 +44,6 @@ class YYPresentationAnimationViewController: NSObject, UIViewControllerAnimatedT
                 animationTransitionAllViewDismiss(transitionContext: transitionContext, containerView: containerView, fromVC: fromVC, toVC: toVC)
                 break
             }
-        default:
-            let toView = toVC.view
-            containerView.addSubview(toView!)
         }
     }
     
@@ -117,20 +114,18 @@ class YYPresentationAnimationViewController: NSObject, UIViewControllerAnimatedT
             containerView.addSubview(toView)
             
             toView.subviews.first?.transform = CGAffineTransform(scaleX: 0.1, y: 0.1)
-            
-            UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: {
+            UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
                 toView.subviews.first?.transform = CGAffineTransform(scaleX: 1, y: 1)
-            }, completion: { (finished) in
+            }) { (finished) in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
-            })
-            
+            }
             break
         case .dismiss:
             containerView.addSubview(fromView)
             fromView.transform = CGAffineTransform.identity
             
-            UIView.animate(withDuration: duration, delay: 0, options: .curveEaseOut, animations: {
-                fromView.transform = CGAffineTransform(scaleX: 0.2, y: 0.2)
+            UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
+                fromView.transform = CGAffineTransform(scaleX: 0, y: 0)
             }, completion: { finished in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
             })
@@ -170,13 +165,13 @@ class YYPresentationAnimationViewController: NSObject, UIViewControllerAnimatedT
         guard let toView = toView, let fromView = fromView else {
             return
         }
-
+        let duration = transitionDuration(using: transitionContext)
         switch operation {
         case .present:
             containerView.addSubview(toView)
             toView.transform = CGAffineTransform(translationX: 0, y: containerView.frame.height)
             
-            UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
+            UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
                 toView.transform = CGAffineTransform.identity
             }, completion: { finished in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled)
@@ -186,7 +181,7 @@ class YYPresentationAnimationViewController: NSObject, UIViewControllerAnimatedT
             containerView.addSubview(fromView)
             fromView.transform = CGAffineTransform.identity
             
-            UIView.animate(withDuration: transitionDuration(using: transitionContext), animations: {
+            UIView.animate(withDuration: duration, delay: 0.0, usingSpringWithDamping: 0.6, initialSpringVelocity: 1.0, options: .curveEaseInOut, animations: {
                 fromView.transform = CGAffineTransform(translationX: 0, y: containerView.frame.height)
             }, completion: { finished in
                 transitionContext.completeTransition(!transitionContext.transitionWasCancelled)

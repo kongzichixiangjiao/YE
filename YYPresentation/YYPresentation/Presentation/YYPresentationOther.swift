@@ -8,11 +8,17 @@
 
 import UIKit
 
+enum YYTransitionType{
+    case modalTransition(ModalOperation)
+}
+
 enum ModalOperation{
     case present, dismiss
 }
 
 // 弹出类型
-enum PresentationAnimationType {
+public enum PresentationAnimationType {
     case none, downShow, upShow, middle, sheet, alert, bottom, top
 }
+
+
