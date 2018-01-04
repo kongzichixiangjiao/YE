@@ -4,15 +4,10 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>YEKeyboard.xcscheme</key>
+		<key>YYDrawerTableViewCell.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>33</integer>
-		</dict>
-		<key>YYPresentation.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>32</integer>
+			<integer>31</integer>
 		</dict>
 	</dict>
 </dict>

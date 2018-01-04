@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:YYDrawerTableViewCell/YYDrawerTableViewCell.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:YYPresentation/YYPresentation.xcodeproj">
    </FileRef>
    <FileRef

@@ -9,6 +9,7 @@
 import UIKit
 
 // 示例
+/*
 class YYDrawerTableViewCellNew: YYDrawerTableViewCell {
     
     static let identifier1 = "YYDrawerTableViewCellNew"
@@ -30,17 +31,17 @@ class YYDrawerTableViewCellNew: YYDrawerTableViewCell {
         self.myContentView.addSubview(v)
     }
 }
-
-class YYDrawerTableViewCell: UITableViewCell {
+*/
+open class YYDrawerTableViewCell: UITableViewCell {
     
     static let identifier = "YYDrawerTableViewCell"
     static let bWidth: CGFloat = 60
     
-    typealias ScrollDidselectedHandler = (_ : Int, _ : Any?) -> ()
-    fileprivate var scrollDidselectedHandler: ScrollDidselectedHandler?
+    public typealias ScrollDidselectedHandler = (_ : Int, _ : Any?) -> ()
+    public var scrollDidselectedHandler: ScrollDidselectedHandler?
     
-    typealias ClickedHandler = (_ : Int) -> ()
-    fileprivate var clickedHandler: ClickedHandler?
+    public typealias ClickedHandler = (_ : Int, _ : Any?) -> ()
+    public var clickedHandler: ClickedHandler?
     
     fileprivate var myMaskView: UIView?
     
@@ -71,9 +72,16 @@ class YYDrawerTableViewCell: UITableViewCell {
         return v
     }()
     
-    @objc fileprivate func actionb() {
+    @objc fileprivate func actionb(sender: UIButton) {
+        removeMaskView()
+        
+        self.clickedHandler!(sender.tag, buttons[sender.tag].titleLabel?.text)
+    }
+    
+    private func removeMaskView() {
         self.myMaskView?.removeFromSuperview()
         self.myMaskView = nil
+        self.alertWhiteWindow.ga_dissmissWhiteWindow()
         
         UIView.animate(withDuration: 0.3) {
             self.scrollView.contentOffset = CGPoint.zero
@@ -84,11 +92,11 @@ class YYDrawerTableViewCell: UITableViewCell {
         self.scrollDidselectedHandler!(self.myRow, nil)
     }
     
-    override func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    override func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         self.scrollView.frame = CGRect(x: 0, y: 0, width: self.contentView.frame.size.width, height: self.contentView.frame.size.height)
         self.scrollView.contentSize = CGSize(width: self.scrollView.frame.size.width + YYDrawerTableViewCell.bWidth * CGFloat(self.buttons.count), height: self.scrollView.frame.size.height)
@@ -99,7 +107,7 @@ class YYDrawerTableViewCell: UITableViewCell {
         }
     }
     
-    convenience init(identifier: String, titles: [String], handler: @escaping ScrollDidselectedHandler, clickedHandler:
+    public convenience init(identifier: String, titles: [String], handler: @escaping ScrollDidselectedHandler, clickedHandler:
         @escaping ClickedHandler) {
         self.init(style: .default, reuseIdentifier: identifier)
         self.scrollDidselectedHandler = handler
@@ -108,15 +116,19 @@ class YYDrawerTableViewCell: UITableViewCell {
         initUI(titles)
     }
     
+    convenience public init(identifier: String) {
+        self.init(style: .default, reuseIdentifier: identifier)
+    }
+    
     open func initUI(_ titles: [String]) {
         for (index, value) in titles.enumerated() {
             let b = UIButton()
-            b.backgroundColor = UIColor.randomColor()
+            b.backgroundColor = UIColor.cell_randomColor()
             b.setTitle(value, for: .normal)
             b.tag = index
             b.titleLabel?.font = UIFont.systemFont(ofSize: 14)
             b.setTitleColor(UIColor.red, for: .normal)
-            b.addTarget(self, action: #selector(actionb), for: .touchUpInside)
+            b.addTarget(self, action: #selector(actionb(sender:)), for: .touchUpInside)
             self.scrollView.addSubview(b)
             self.buttons.append(b)
         }
@@ -131,15 +143,15 @@ class YYDrawerTableViewCell: UITableViewCell {
         return cell! as! YYDrawerTableViewCell
     }
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override public init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
+    override open func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
     
@@ -148,7 +160,7 @@ class YYDrawerTableViewCell: UITableViewCell {
             let v = UIView()
             v.frame = self.alertWhiteWindow.bounds
             v.backgroundColor = UIColor.clear
-            //            v.alpha = 0.3
+//            v.alpha = 0.3
             v.isUserInteractionEnabled = true
             
             let tap = UITapGestureRecognizer(target: self, action: #selector(tap(_:)))
@@ -168,7 +180,7 @@ class YYDrawerTableViewCell: UITableViewCell {
 
 extension YYDrawerTableViewCell {
     
-    override func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+    override open func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         let point = gestureRecognizer.location(in: nil)
         var frames: [CGRect] = []
         for b in self.buttons {
@@ -177,18 +189,11 @@ extension YYDrawerTableViewCell {
         }
         
         if (scrollView.contentOffset.x != 0) {
-            self.myMaskView?.removeFromSuperview()
-            self.myMaskView = nil
-            
-            self.alertWhiteWindow.ga_dissmissWhiteWindow()
-            
-            UIView.animate(withDuration: 0.3) {
-                self.scrollView.contentOffset = CGPoint.zero
-            }
+            removeMaskView()
             
             for (index, frame) in frames.enumerated() {
                 if frame.contains(point) {
-                    self.clickedHandler!(index)
+                    self.clickedHandler!(index, buttons[index].titleLabel?.text)
                     return false
                 }
             }
@@ -198,18 +203,19 @@ extension YYDrawerTableViewCell {
     }
 }
 
-extension YYDrawerTableViewCell {
+extension YYDrawerTableViewCell: UIScrollViewDelegate {
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    public func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
     }
     
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+    public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if (scrollView.contentOffset.x != 0) {
             self.myMaskView = initMaskView()
         }
     }
     
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+    public func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        
     }
 }

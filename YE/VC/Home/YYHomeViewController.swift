@@ -203,7 +203,7 @@ class YYHomeViewController: YYBaseTableViewController {
         saveAreaBottomSpaceType = .normal44
 //        registerNibWithIdentifier(kYYHomeBasicCell)
         
-        registerClassWithIdentifier(YYDrawerTableViewCellNew.identifier)
+        registerClassWithIdentifier(YYDrawerTableViewCellNew.identifier1)
         
         tableView.tableHeaderView = initTableViewHeaderView()
         self.footerView()
@@ -303,9 +303,9 @@ extension YYHomeViewController {
                 }
             }
         }) {
-            [weak self] tag in
+            [weak self] tag, model in
             if let _ = self {
-                print("tag: \(tag)")
+                print("tag: \(tag)", model ?? "")
             }
         }
         cell.myRow = indexPath.row

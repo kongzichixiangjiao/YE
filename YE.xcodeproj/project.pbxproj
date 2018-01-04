@@ -87,7 +87,6 @@
 		94D389F11F39C23A00F974A6 /* GA_XIBRefreshHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389131F39C23900F974A6 /* GA_XIBRefreshHeaderView.swift */; };
 		94D389F21F39C23A00F974A6 /* ScrollView+RefreshExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389141F39C23900F974A6 /* ScrollView+RefreshExtension.swift */; };
 		94D389F31F39C23A00F974A6 /* YYBorderLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389151F39C23900F974A6 /* YYBorderLabel.swift */; };
-		94D389F51F39C23A00F974A6 /* YYDrawerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389171F39C23900F974A6 /* YYDrawerTableViewCell.swift */; };
 		94D389F61F39C23A00F974A6 /* YYEmptyTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389181F39C23900F974A6 /* YYEmptyTableView.swift */; };
 		94D389F71F39C23A00F974A6 /* YYIconLableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D389191F39C23900F974A6 /* YYIconLableView.swift */; };
 		94D389F81F39C23A00F974A6 /* YYOnePixView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D3891A1F39C23900F974A6 /* YYOnePixView.swift */; };
@@ -231,6 +230,10 @@
 		DC65BD651FD8E30100204B7E /* GithubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC65BD641FD8E30100204B7E /* GithubService.swift */; };
 		DC65BD671FD8E32A00204B7E /* RepositoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC65BD661FD8E32A00204B7E /* RepositoryCell.xib */; };
 		DC65BD691FD8ED3900204B7E /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC65BD681FD8ED3900204B7E /* Int+Extension.swift */; };
+		DC6691A71FFDBA37004669EE /* YYDrawerTableViewCell_EG.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6691A61FFDBA37004669EE /* YYDrawerTableViewCell_EG.swift */; };
+		DC6692C41FFDC854004669EE /* YYDrawerTableViewCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6692C51FFDC854004669EE /* YYDrawerTableViewCell.framework */; };
+		DC6692C61FFDC868004669EE /* YYDrawerTableViewCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC6692C51FFDC854004669EE /* YYDrawerTableViewCell.framework */; };
+		DC6692C71FFDC868004669EE /* YYDrawerTableViewCell.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DC6692C51FFDC854004669EE /* YYDrawerTableViewCell.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DC6770BF1FD697D400E79A07 /* Player_back_full.png in Resources */ = {isa = PBXBuildFile; fileRef = DC6770B21FD697D400E79A07 /* Player_back_full.png */; };
 		DC6770C01FD697D400E79A07 /* Player_bottom_shadel.png in Resources */ = {isa = PBXBuildFile; fileRef = DC6770B31FD697D400E79A07 /* Player_bottom_shadel.png */; };
 		DC6770C11FD697D400E79A07 /* Player_brightness.png in Resources */ = {isa = PBXBuildFile; fileRef = DC6770B41FD697D400E79A07 /* Player_brightness.png */; };
@@ -368,6 +371,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		DC6692A81FFDC73E004669EE /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DC9EA1371FF60CB1006FC7F6 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -375,6 +388,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				DC5DBE4D1FFCDD6D0089573C /* YYPresentation.framework in Embed Frameworks */,
+				DC6692C71FFDC868004669EE /* YYDrawerTableViewCell.framework in Embed Frameworks */,
 				DC9EA1361FF60CB1006FC7F6 /* YYTransition.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -467,7 +481,6 @@
 		94D389131F39C23900F974A6 /* GA_XIBRefreshHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GA_XIBRefreshHeaderView.swift; sourceTree = "<group>"; };
 		94D389141F39C23900F974A6 /* ScrollView+RefreshExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ScrollView+RefreshExtension.swift"; sourceTree = "<group>"; };
 		94D389151F39C23900F974A6 /* YYBorderLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYBorderLabel.swift; sourceTree = "<group>"; };
-		94D389171F39C23900F974A6 /* YYDrawerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYDrawerTableViewCell.swift; sourceTree = "<group>"; };
 		94D389181F39C23900F974A6 /* YYEmptyTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYEmptyTableView.swift; sourceTree = "<group>"; };
 		94D389191F39C23900F974A6 /* YYIconLableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYIconLableView.swift; sourceTree = "<group>"; };
 		94D3891A1F39C23900F974A6 /* YYOnePixView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYOnePixView.swift; sourceTree = "<group>"; };
@@ -614,6 +627,9 @@
 		DC65BD641FD8E30100204B7E /* GithubService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithubService.swift; sourceTree = "<group>"; };
 		DC65BD661FD8E32A00204B7E /* RepositoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepositoryCell.xib; sourceTree = "<group>"; };
 		DC65BD681FD8ED3900204B7E /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
+		DC6691A61FFDBA37004669EE /* YYDrawerTableViewCell_EG.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYDrawerTableViewCell_EG.swift; sourceTree = "<group>"; };
+		DC6692C51FFDC854004669EE /* YYDrawerTableViewCell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YYDrawerTableViewCell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC6692CD1FFDD12E004669EE /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		DC6770B21FD697D400E79A07 /* Player_back_full.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Player_back_full.png; sourceTree = "<group>"; };
 		DC6770B31FD697D400E79A07 /* Player_bottom_shadel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Player_bottom_shadel.png; sourceTree = "<group>"; };
 		DC6770B41FD697D400E79A07 /* Player_brightness.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Player_brightness.png; sourceTree = "<group>"; };
@@ -754,8 +770,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC6692C41FFDC854004669EE /* YYDrawerTableViewCell.framework in Frameworks */,
 				A1E51B0C8B82F381C3F93DEE /* Pods_YE.framework in Frameworks */,
 				DC5DBE4C1FFCDD6D0089573C /* YYPresentation.framework in Frameworks */,
+				DC6692C61FFDC868004669EE /* YYDrawerTableViewCell.framework in Frameworks */,
 				DC9EA1351FF60CB1006FC7F6 /* YYTransition.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1052,7 +1070,6 @@
 				94D3890C1F39C23900F974A6 /* Refresh */,
 				94D388C71F39C23900F974A6 /* ScrollView+BaneHeader.swift */,
 				94D389151F39C23900F974A6 /* YYBorderLabel.swift */,
-				94D389171F39C23900F974A6 /* YYDrawerTableViewCell.swift */,
 				DC749F571FF21DCA00D5E2B8 /* EmptyTableView */,
 				DCBDF1151FDFC4CF00DC18FB /* YYFontLabel.swift */,
 				94D389191F39C23900F974A6 /* YYIconLableView.swift */,
@@ -1335,6 +1352,7 @@
 				94D3896B1F39C23A00F974A6 /* YYHomeBasicCell.swift */,
 				94D3896C1F39C23A00F974A6 /* YYHomeBasicCell.xib */,
 				94D3896D1F39C23A00F974A6 /* YYHomeSectionView.xib */,
+				DC6691A61FFDBA37004669EE /* YYDrawerTableViewCell_EG.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -1477,11 +1495,13 @@
 		D2FFF76E3F1D14BC37818B38 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC6692C51FFDC854004669EE /* YYDrawerTableViewCell.framework */,
 				DC5DBE4B1FFCDD450089573C /* YYPresentation.framework */,
 				DC9EA1181FF5E10E006FC7F6 /* YYTransition.framework */,
 				94DED68B1F7F3AC40036AE1F /* libc.tbd */,
 				94681B481F7E3F1F007C2A26 /* libstdc++.6.0.9.tbd */,
 				521CBA8AFB6F01FB382C7CD8 /* Pods_YE.framework */,
+				DC6692CD1FFDD12E004669EE /* IntentsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2099,6 +2119,7 @@
 				E31950EE4AC96E7D491BFE25 /* [CP] Embed Pods Frameworks */,
 				8E9EE1FE72E5BD189C4E729E /* [CP] Copy Pods Resources */,
 				DC9EA1371FF60CB1006FC7F6 /* Embed Frameworks */,
+				DC6692A81FFDC73E004669EE /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
@@ -2115,7 +2136,7 @@
 		94D388761F39BE4100F974A6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "侯佳男";
 				TargetAttributes = {
@@ -2539,6 +2560,7 @@
 				94D389FF1F39C23A00F974A6 /* Compare.swift in Sources */,
 				94D389D01F39C23A00F974A6 /* YYCompetitionCommentSectionModel.swift in Sources */,
 				DC65BD601FD8E2A500204B7E /* Repository.swift in Sources */,
+				DC6691A71FFDBA37004669EE /* YYDrawerTableViewCell_EG.swift in Sources */,
 				DC964C0E1FECD95F006AA5F0 /* LikeButtonMaskLayer.swift in Sources */,
 				DC75E3DD1FD1037A00332BE5 /* MediaItem.swift in Sources */,
 				DCA8A4B11FD808E80042537E /* MoyaProvider+Rx.swift in Sources */,
@@ -2549,7 +2571,6 @@
 				94D38A291F39C23A00F974A6 /* YYLinkmanHeaderView.swift in Sources */,
 				DC619CEA1FE79F7C00C05E9D /* YYNavigationControllerDelegate.swift in Sources */,
 				94D38A0C1F39C23A00F974A6 /* YYIMCreatChatGroupViewController.swift in Sources */,
-				94D389F51F39C23A00F974A6 /* YYDrawerTableViewCell.swift in Sources */,
 				94D38A1E1F39C23A00F974A6 /* YYLiveListViewController.swift in Sources */,
 				94D389FE1F39C23A00F974A6 /* YYWebView.swift in Sources */,
 				94D389A01F39C23A00F974A6 /* YYBaseImagePickerController.swift in Sources */,
@@ -2781,7 +2802,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = HGA4995V4J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
@@ -2807,7 +2833,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = HGA4995V4J;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
