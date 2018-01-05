@@ -8,13 +8,12 @@
 
 import Foundation
 import Moya
-import RxSwift
-import Result
 
 enum YYApiManager {
     case login(phoneNum: Double, passWord: Double, isShow: Bool, isTouch: Bool)
     case logout
     case getNewsList
+    case jf_cjzh
 }
 
 extension YYApiManager: TargetType {
@@ -34,6 +33,8 @@ extension YYApiManager: TargetType {
             return "accountService/logout"
         case .getNewsList:
             return "4/news/latest"
+        case .jf_cjzh:
+            return "/information/financeindex"
         }
     }
     
@@ -45,6 +46,8 @@ extension YYApiManager: TargetType {
             return .get
         case .getNewsList:
             return .get
+        case .jf_cjzh:
+            return .post
         }
     }
     
@@ -55,6 +58,8 @@ extension YYApiManager: TargetType {
         case .logout:
             return nil
         case .getNewsList:
+            return nil
+        case .jf_cjzh:
             return nil
         }
     }

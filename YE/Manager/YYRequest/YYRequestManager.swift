@@ -7,11 +7,9 @@
 //
 
 import Foundation
-import UIKit
 import Moya
 import RxSwift
 import Result
-import RxCocoa
 
 
 final class CustomPlugin: PluginType {
@@ -48,6 +46,8 @@ public final class YYNetworkActivityPlugin: PluginType {
 class YYRequest {
     
     static let share: YYRequest = YYRequest()
+    
+    var cancellables: [Cancellable] = []
     
     var provider: MoyaProvider<YYApiManager>! {
         let publicParamEndpointClosure = { (target: YYApiManager) -> Endpoint<YYApiManager> in
@@ -89,34 +89,51 @@ class YYRequest {
     }
     
     
-    func moya() {
-        provider.request(.login(phoneNum: 12345678901, passWord: 123456, isShow: true, isTouch: true)) {
-            result in
+    typealias CompletedErrorHandler = (_ errorCode: Int, _ errorDescription: String)->()
+    typealias CompletedSuccessHandler = (_ result: YYRequestModel)->()
+    typealias ProgressHandler = (_ progress: Double, _ completed: Bool)->()
+    
+    func request(target: YYApiManager, callbackQueue: DispatchQueue? = nil, progress: ProgressHandler? = nil, success: @escaping CompletedSuccessHandler, failed: @escaping CompletedErrorHandler) {
+       let cancellable = provider.request(target, callbackQueue: callbackQueue, progress: { (response) in
+        print("progress: ", response.progress)
+        print("completed: ", response.completed)
+        print("Progress类型: ", response.progressObject ?? "--")
+        progress?(response.progress, response.completed)
+        }) { (result) in
+            let resultModel = YYRequestModel(api: target, result: result)
+            print(Thread.current)
             switch result {
-            case let .success(response):
-                print(response)
+            case .success:
+                guard let _ = resultModel.json else {
+                    self.completionBackError(resultModel: resultModel, completion: failed)
+                    return
+                }
+                self.completionBackSuccess(resultModel: resultModel, completion: success)
                 break
-            case let .failure(error):
-                print(error)
-                break
+            case .failure:
+                self.completionBackError(resultModel: resultModel, completion: failed)
+                break 
             }
         }
+        cancellables.append(cancellable)
     }
-    // MARK: -取消所有请求
+    
+    private func completionBackSuccess(resultModel: YYRequestModel, completion: CompletedSuccessHandler) {
+        print(Thread.current)
+        completion(resultModel)
+    }
+    
+    private func completionBackError(resultModel: YYRequestModel, completion: CompletedErrorHandler) {
+        print(Thread.current)
+        completion(resultModel.errorCode, resultModel.errorString)
+    }
+    
+    // MARK: 取消所有请求
     func cancelAllRequest() {
-        //    MyAPIProvider.manager.session.invalidateAndCancel()  //取消所有请求
-        //        provider.manager.session.getTasksWithCompletionHandler { dataTasks, uploadTasks, downloadTasks in
-        //            dataTasks.forEach { $0.cancel() }
-        //            uploadTasks.forEach { $0.cancel() }
-        //            downloadTasks.forEach { $0.cancel() }
-        //        }
-        
-        //        let sessionManager = Alamofire.SessionManager.default
-        //        sessionManager.session.getTasksWithCompletionHandler { dataTasks, uploadTasks, downloadTasks in
-        //            dataTasks.forEach { $0.cancel() }
-        //            uploadTasks.forEach { $0.cancel() }
-        //            downloadTasks.forEach { $0.cancel() }
-        //        }
+        for cancellable in cancellables {
+            cancellable.cancel()
+        }
     }
 }
+
 

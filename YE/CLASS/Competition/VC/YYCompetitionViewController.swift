@@ -15,6 +15,7 @@ class YYCompetitionViewController: YYBaseTableViewController {
         
         initNavigationView()
         initTableView()
+        requestData()
     }
     
     func initNavigationView() {
@@ -27,6 +28,17 @@ class YYCompetitionViewController: YYBaseTableViewController {
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
         registerNibWithIdentifier(YYCompetitionCell.identifier)
+    }
+    
+    func requestData() {
+        //                self.dataArr.value += (result.value?.mapModel(YYRxSwiftNewsModel.self).stories)!
+        YYRequest.share.request(target: .jf_cjzh, success: { (request) in
+            print(Thread.current)
+            print(request.jsonString ?? "--")
+        }) { (code, error) in
+            print(code, error)
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

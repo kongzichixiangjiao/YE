@@ -9,11 +9,13 @@
 import Foundation
 
 class YYBaseUrl {
-enum ServiceBaseType: String {
-    case base = "http://news-at.zhihu.com/api/",
-    development = ""
-}
-
-static let url: String = ServiceBaseType.base.rawValue
+    
+    enum ServiceBaseType: String {
+        case base = "http://news-at.zhihu.com/api/"
+        case jf = "https://jfapp.puxinasset.com/jfapp"
+    }
+    
+    static let url: String = ServiceBaseType.jf.rawValue
     
 }
+

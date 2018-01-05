@@ -10,28 +10,28 @@ import UIKit
 
 // 示例
 /*
-class YYDrawerTableViewCellNew: YYDrawerTableViewCell {
-    
-    static let identifier1 = "YYDrawerTableViewCellNew"
-    
-    open override class func custom(_ tableView: UITableView, handler: @escaping ScrollDidselectedHandler, clickedHandler:
-        @escaping ClickedHandler) -> YYDrawerTableViewCellNew {
-        var cell = tableView.dequeueReusableCell(withIdentifier: YYDrawerTableViewCellNew.identifier1)
-        if cell == nil {
-            cell = YYDrawerTableViewCellNew(identifier: YYDrawerTableViewCellNew.identifier1, titles: ["删除", "赞", "扯淡", "吃饭"], handler: handler, clickedHandler: clickedHandler)
-        }
-        return cell! as! YYDrawerTableViewCellNew
-    }
-    
-    override func initUI(_ titles: [String]) {
-        super.initUI(titles)
-        let v = UIView()
-        v.frame = CGRect(x: 10, y: 10, width: 10, height: 100);
-        v.backgroundColor = UIColor.orange
-        self.myContentView.addSubview(v)
-    }
-}
-*/
+ class YYDrawerTableViewCellNew: YYDrawerTableViewCell {
+ 
+ static let identifier1 = "YYDrawerTableViewCellNew"
+ 
+ open override class func custom(_ tableView: UITableView, handler: @escaping ScrollDidselectedHandler, clickedHandler:
+ @escaping ClickedHandler) -> YYDrawerTableViewCellNew {
+ var cell = tableView.dequeueReusableCell(withIdentifier: YYDrawerTableViewCellNew.identifier1)
+ if cell == nil {
+ cell = YYDrawerTableViewCellNew(identifier: YYDrawerTableViewCellNew.identifier1, titles: ["删除", "赞", "扯淡", "吃饭"], handler: handler, clickedHandler: clickedHandler)
+ }
+ return cell! as! YYDrawerTableViewCellNew
+ }
+ 
+ override func initUI(_ titles: [String]) {
+ super.initUI(titles)
+ let v = UIView()
+ v.frame = CGRect(x: 10, y: 10, width: 10, height: 100);
+ v.backgroundColor = UIColor.orange
+ self.myContentView.addSubview(v)
+ }
+ }
+ */
 open class YYDrawerTableViewCell: UITableViewCell {
     
     static let identifier = "YYDrawerTableViewCell"
@@ -42,8 +42,6 @@ open class YYDrawerTableViewCell: UITableViewCell {
     
     public typealias ClickedHandler = (_ : Int, _ : Any?) -> ()
     public var clickedHandler: ClickedHandler?
-    
-    fileprivate var myMaskView: UIView?
     
     open var myRow: Int = 0
     open var titles: [String] = []
@@ -79,9 +77,7 @@ open class YYDrawerTableViewCell: UITableViewCell {
     }
     
     private func removeMaskView() {
-        self.myMaskView?.removeFromSuperview()
-        self.myMaskView = nil
-        self.alertWhiteWindow.ga_dissmissWhiteWindow()
+        dissmissWhiteWindow()
         
         UIView.animate(withDuration: 0.3) {
             self.scrollView.contentOffset = CGPoint.zero
@@ -155,26 +151,45 @@ open class YYDrawerTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    fileprivate func initMaskView() -> UIView {
-        guard let maskView = self.myMaskView else {
-            let v = UIView()
-            v.frame = self.alertWhiteWindow.bounds
-            v.backgroundColor = UIColor.clear
-//            v.alpha = 0.3
-            v.isUserInteractionEnabled = true
-            
-            let tap = UITapGestureRecognizer(target: self, action: #selector(tap(_:)))
-            tap.delegate = self
-            v.addGestureRecognizer(tap)
-            
-            self.alertWhiteWindow.addSubview(v)
-            return v
+    lazy var alertWhiteWindow: UIWindow? = {
+        let alertWindow = UIWindow(frame: UIScreen.main.bounds)
+        alertWindow.windowLevel = UIWindowLevelAlert
+        alertWindow.backgroundColor = UIColor.blue
+        alertWindow.alpha = 0.3
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapWhiteWindow(_:)))
+        alertWindow.addGestureRecognizer(tap)
+        
+        return alertWindow
+    }()
+    
+    lazy var mMaskView: UIView? = {
+        guard let win = UIApplication.shared.windows.first else {
+            return nil
         }
-        return maskView
+        let v = UIView(frame: win.bounds)
+        v.backgroundColor = UIColor.clear
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapWhiteWindow(_:)))
+        tap.delegate = self
+        v.addGestureRecognizer(tap)
+        
+        win.addSubview(v)
+        return v
+    }()
+    
+    @objc func tapWhiteWindow(_ sender: UITapGestureRecognizer) {
+        removeMaskView()
     }
     
-    @objc fileprivate func tap(_ sender: UITapGestureRecognizer) {
-        
+    func dissmissWhiteWindow() {
+        mMaskView?.isHidden = true
+        return
+    }
+    
+    func showWhiteWindow() {
+        mMaskView?.isHidden = false
+        return
     }
 }
 
@@ -211,7 +226,7 @@ extension YYDrawerTableViewCell: UIScrollViewDelegate {
     
     public func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if (scrollView.contentOffset.x != 0) {
-            self.myMaskView = initMaskView()
+            showWhiteWindow()
         }
     }
     
@@ -219,3 +234,4 @@ extension YYDrawerTableViewCell: UIScrollViewDelegate {
         
     }
 }
+
