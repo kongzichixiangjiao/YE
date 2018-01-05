@@ -40,13 +40,19 @@ class YYMainRootViewController: UIViewController {
         vcs = self.childViewControllers
         
         for vc in vcs {
-            vc.view.alpha = 0
-            vc.view.isHidden = true
+            if vc.view.alpha == 1 {
+                vc.viewWillDisappear(true)
+                vc.view.alpha = 0
+                vc.view.isHidden = true
+                vc.viewDidDisappear(true)
+            }
         }
         
         let newController = vcs[toPage]
+        newController.viewWillAppear(true)
         newController.view.isHidden = false
         self.view.insertSubview(newController.view, belowSubview: tabbarView)
+        newController.viewDidAppear(true)
         
         UIView.animate(withDuration: 0.3, animations: {
             newController.view.alpha = 1

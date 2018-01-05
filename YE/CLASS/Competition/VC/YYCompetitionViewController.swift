@@ -7,15 +7,18 @@
 //
 
 import UIKit
+import Moya
+import RxSwift
 
 class YYCompetitionViewController: YYBaseTableViewController {
 
+    var dataArr = Variable([YYPXHotSpot]())
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initNavigationView()
         initTableView()
-        requestData()
     }
     
     func initNavigationView() {
@@ -31,14 +34,22 @@ class YYCompetitionViewController: YYBaseTableViewController {
     }
     
     func requestData() {
-        //                self.dataArr.value += (result.value?.mapModel(YYRxSwiftNewsModel.self).stories)!
         YYRequest.share.request(target: .jf_cjzh, success: { (request) in
-            print(Thread.current)
-            print(request.jsonString ?? "--")
+            if let model = YYPXBaseModel.deserialize(from: request.resultDic) {
+                self.view.ga_showView(model.myMessage!, deplay: 1.2)
+                print(model.result?.hotspot ?? [])
+            }
         }) { (code, error) in
             print(code, error)
+            self.view.showView(error)
         }
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        requestData()
     }
 
     override func didReceiveMemoryWarning() {

@@ -59,17 +59,16 @@ class YYRequest {
         let networkPlugin = YYNetworkActivityPlugin { (state,target) in
             if state == .began {
                 print("开始加载")
+                UIApplication.shared.isNetworkActivityIndicatorVisible = true
                 let api = target as! YYApiManager
                 if api.show {
                     print("可以在这里写加载提示")
-//                    UIApplication.shared.keyWindow?.rootViewController?.view.ga_showLoading()
                 }
                 
                 if !api.touch {
                     print("可以在这里写禁止用户操作，等待请求结束")
                 }
                 print("我开始请求\(api.touch)")
-                UIApplication.shared.isNetworkActivityIndicatorVisible = true
             } else {
                 print("我结束请求")
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
@@ -79,7 +78,7 @@ class YYRequest {
         let requestTimeoutClosure = { (endpoint: Endpoint<YYApiManager>, done: @escaping MoyaProvider<YYApiManager>.RequestResultClosure) in
             do {
                 var request = try endpoint.urlRequest()
-                request.timeoutInterval = 30    //设置请求超时时间
+                request.timeoutInterval = 12    //设置请求超时时间
                 done(.success(request))
             } catch {
                 
@@ -101,7 +100,6 @@ class YYRequest {
         progress?(response.progress, response.completed)
         }) { (result) in
             let resultModel = YYRequestModel(api: target, result: result)
-            print(Thread.current)
             switch result {
             case .success:
                 guard let _ = resultModel.json else {
@@ -119,12 +117,10 @@ class YYRequest {
     }
     
     private func completionBackSuccess(resultModel: YYRequestModel, completion: CompletedSuccessHandler) {
-        print(Thread.current)
         completion(resultModel)
     }
     
     private func completionBackError(resultModel: YYRequestModel, completion: CompletedErrorHandler) {
-        print(Thread.current)
         completion(resultModel.errorCode, resultModel.errorString)
     }
     

@@ -9,11 +9,23 @@
 import Foundation
 import HandyJSON
 
-struct YYPXModel: HandyJSON {
-    var hotspot: [YYPXHotSpot]?
+class YYPXBaseModel: YYBaseClassModel {
+    var result: YYPXModel?
+    required init() {
+        
+    }
 }
 
-struct YYPXHotSpot: HandyJSON {
+class YYPXModel: HandyJSON {
+    
+    var hotspot: [YYPXHotSpot]?
+    
+    required init() {
+        
+    }
+}
+
+class YYPXHotSpot: HandyJSON {
     var conferenceTime: String!
     var content: String!
     var id: String!
@@ -26,4 +38,9 @@ struct YYPXHotSpot: HandyJSON {
     var title: String!
     var titleDetail: String!
     var titleImg: String!
+    
+    required init() {
+        
+    }
 }
+
