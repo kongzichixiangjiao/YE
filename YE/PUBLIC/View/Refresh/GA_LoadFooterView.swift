@@ -87,7 +87,9 @@ class GA_LoadFooterView: GA_RefreshBaseView {
     }
     
     func initViews() {
-        
+        DispatchQueue.main.async {
+            self.frame = CGRect(x: 0, y: self.scrollView.contentSize.height, width: self.scrollView.frame.size.width, height: 64)
+        }
     }
     
     override func layoutSubviews() {
@@ -104,6 +106,12 @@ class GA_LoadFooterView: GA_RefreshBaseView {
             
             print(self.scrollView.isDragging)
             print(y)
+            if y < 0 {
+                DispatchQueue.main.async {
+                    self.frame = CGRect(x: 0, y: self.scrollView.contentSize.height, width: self.scrollView.frame.size.width, height: 64)
+                }
+                return
+            }
             if contentSizeHeight + RefreshKey.kContentOffsetMax - tHeight < y {
                 if self.state != .ing && self.scrollView.isDragging {
                     self.state = .start
@@ -130,22 +138,17 @@ extension GA_LoadFooterView: GA_RefreshAnimationProtocol {
     }
     
     func startAnimation() {
-        DispatchQueue.main.async {
-            self.scrollView.contentOffset = CGPoint(x: 0, y: self.scrollView.contentSize.height + RefreshKey.kContentOffsetMax - self.scrollView.frame.size.height)
-        }
     }
     
     func stopAnimation() {
         print("self.scrollView.contentSize.height", self.scrollView.contentSize.height)
         DispatchQueue.main.async {
             self.frame = CGRect(x: 0, y: self.scrollView.contentSize.height, width: self.scrollView.frame.size.width, height: 64)
-            self.scrollView.contentOffset = CGPoint(x: 0, y: self.scrollView.contentSize.height)
+            self.scrollView.contentOffset = CGPoint(x: 0, y: self.scrollView.contentSize.height - self.scrollView.frame.size.height)
         }
-        
     }
     
     func animationing() {
-        
     }
     
     func willAnimation() {
