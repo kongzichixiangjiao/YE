@@ -18,8 +18,8 @@ class GA_XIBRefreshHeaderView: GA_RefreshBaseView {
                 self.startAnimation()
                 break
             case .ing:
-                print(self.sourceContentInset)
                 UIView.animate(withDuration: 0.35, delay: 0, options: .allowUserInteraction, animations: {
+                    print(self.sourceContentInset.top)
                     self.scrollView.contentInset = UIEdgeInsetsMake(RefreshKey.kContentInsetTop + self.sourceContentInset.top, self.sourceContentInset.left, self.sourceContentInset.bottom, self.sourceContentInset.right)
                 }, completion: { (finished) in
                 })
@@ -48,6 +48,7 @@ class GA_XIBRefreshHeaderView: GA_RefreshBaseView {
     func beginRefreshing() {
         self.state = .start
         self.state = .ing
+        self.scrollView.contentOffset = CGPoint(x: 0, y: -RefreshKey.kContentInsetTop - self.sourceContentInset.top)
     }
     
     func endRefreshing() {
@@ -81,11 +82,11 @@ class GA_XIBRefreshHeaderView: GA_RefreshBaseView {
                     }
                 }
                 
-                if -y >= RefreshKey.kContentOffsetMax && self.state != .normal {
+                if -y - t.contentInset.top >= RefreshKey.kContentOffsetMax && self.state != .normal {
                     self.state = .will
                     print("will -- \(self.state)")
                 } else {
-                    if -y <= RefreshKey.kContentInsetTop && self.state != .ed {
+                    if -y - t.contentInset.top <= RefreshKey.kContentInsetTop && self.state != .ed {
                         print("pull1 -- \(self.state)")
                         self.state = .pull
                     }

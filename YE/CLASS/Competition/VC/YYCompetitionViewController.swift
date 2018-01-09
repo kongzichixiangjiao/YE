@@ -27,13 +27,20 @@ class YYCompetitionViewController: YYBaseTableViewController {
                 weakSelf.requestData()
             }
         }
-        self.tableView.ga_XIBbeginRefreshing()
         
         self.tableView.ga_addLoadFooter(GA_LoadMoreView()) {
             [weak self] in
             if let weakSelf = self {
                 weakSelf.requestMoreData()
             }
+        }
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if dataArr.count == 0 {
+            self.tableView.ga_XIBbeginRefreshing()
         }
     }
     
@@ -60,40 +67,32 @@ class YYCompetitionViewController: YYBaseTableViewController {
     }
     
     func request(isMore: Bool) {
-        self.view.ga_showLoading()
+//        self.view.ga_showLoading()
         YYRequest.share.request(target: .jf_cjzh, success: { (request) in
-            self.view.ga_hideLoading()
+//            self.view.ga_hideLoading()
             if let model = YYPXBaseModel.deserialize(from: request.resultDic) {
                 self.view.ga_showView(model.myMessage!, deplay: 1.2)
                 if isMore {
-//                    self.dataArr += model.result?.hotspot ?? []
-                    
-                    DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + 3, execute: {
-                        DispatchQueue.main.async {
-                            
-                            self.dataArr.append((model.result?.hotspot!.first!)!)
-                            self.tableView.reloadData()
-                            self.tableView.ga_endLoadFooter()
-                            self.view.ga_showView("结束", deplay: 1.2)
-                        }
-                    })
+                    self.dataArr += model.result?.hotspot ?? []
+                    self.tableView.reloadData()
+                    self.tableView.ga_endLoadFooter()
                 } else {
                     self.dataArr = model.result?.hotspot ?? []
                     self.dataArr.append((model.result?.hotspot!.first!)!)
                     self.tableView.reloadData()
-                    self.tableView.ga_XIBendRefreshing()
+                    DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + 3, execute: {
+                        DispatchQueue.main.async {
+                            self.tableView.ga_XIBendRefreshing()
+                        }
+                    })
                 }
             }
         }) { (code, error) in
-            self.view.ga_hideLoading()
+//            self.view.ga_hideLoading()
             self.view.showView(error + String(code))
             self.tableView.ga_XIBendRefreshing()
             self.tableView.ga_endLoadFooter()
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
     }
 
     override func didReceiveMemoryWarning() {

@@ -12,19 +12,23 @@
 */
 import UIKit
 
+enum YYToastType: Int {
+    case stroke = 0, electrocardiogram = 1
+}
+
 class YYToast: CALayer {
     
-    static let t: YYToast = YYToast()
+    static var t: YYToast? = YYToast()
     
     class var ga: YYToast {
-        return t
+        return t!
     }
     
     lazy var strockLayer: CAShapeLayer? = {
         let l = CAShapeLayer()
         l.fillColor = UIColor.clear.cgColor
         l.strokeEnd = 1
-        l.strokeColor = UIColor.randomCGColor()
+        l.strokeColor = UIColor.orange.cgColor
         l.lineWidth = 6
         l.path = self.strockLayerPath()
         l.shouldRasterize = true
@@ -34,11 +38,10 @@ class YYToast: CALayer {
     }()
     
     lazy var electrocardiogramLayer: CAShapeLayer? = {
-        
         let l = CAShapeLayer()
         l.fillColor = UIColor.clear.cgColor
         l.strokeEnd = 1
-        l.strokeColor = UIColor.randomCGColor()
+        l.strokeColor = UIColor.orange.cgColor
         l.lineWidth = 2
         l.path = self.electrocardiogramPath()
         l.shouldRasterize = true
@@ -49,7 +52,7 @@ class YYToast: CALayer {
     
     // MARK: Creat Path 
     private func strockLayerPath() -> CGPath {
-        return UIBezierPath(arcCenter: CGPoint(x: 0, y: 0), radius: 20, startAngle: CGFloat.GA_M_PI, endAngle: -CGFloat.GA_M_PI, clockwise: false).cgPath
+        return UIBezierPath(arcCenter: CGPoint(x: 0, y: 0), radius: 20, startAngle: CGFloat(Double.pi), endAngle: CGFloat(-Double.pi), clockwise: false).cgPath
     }
     
     private func electrocardiogramPath() -> CGPath {
@@ -75,23 +78,37 @@ class YYToast: CALayer {
     }
     
     // MARK: show()
-    public func show() {
+    public func show(type: YYToastType = .stroke) {
         self.isHidden = false
-        startAnimation()
+        mMaskView?.isHidden = false
+        startAnimation(type: type)
     }
+    
     // MARK: hide()
     public func hide() {
         stopAnimation()
-        self.isHidden = true
     }
+    
     // MARK: startAnimation()
-    private func startAnimation() {
-        startAnimationStrock()
-//        electrocardiogramAnimation()
+    private func startAnimation(type: YYToastType = .stroke) {
+        switch type {
+        case .stroke:
+            startAnimationStrock()
+            break
+        case .electrocardiogram:
+            electrocardiogramAnimation()
+            break
+        }
     }
+    
     // MARK: stopAnimation()
     private func stopAnimation() {
         stopAnimationStrock()
+        self.isHidden = true
+        self.removeAllAnimations()
+        mMaskView?.isHidden = true
+        electrocardiogramLayer?.removeAllAnimations()
+        strockLayer?.removeFromSuperlayer()
     }
     
     override init() {
@@ -102,9 +119,9 @@ class YYToast: CALayer {
 
     
     private func initLayer() {
-        self.backgroundColor = UIColor.randomCGColor()
+        self.backgroundColor = UIColor.black.cgColor
         
-        self.shadowColor = UIColor.randomCGColor()
+        self.shadowColor = UIColor.black.cgColor
         self.shadowOffset = CGSize(width: 0, height: 0)
         self.shadowRadius = 2
         self.shadowOpacity = 0.5
@@ -114,16 +131,34 @@ class YYToast: CALayer {
         self.position = CGPoint(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 2)
         self.bounds = CGRect(x: 0, y: 0, width: 100, height: 100)
         
-        UIApplication.shared.windows.first?.layer.addSublayer(self)
+        mMaskView?.layer.addSublayer(self)
     }
     
+    lazy var mMaskView: UIView? = {
+        guard let win = UIApplication.shared.windows.first else {
+            return nil
+        }
+        let v = UIView(frame: win.bounds)
+        v.backgroundColor = UIColor.clear
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(tapWhiteWindow(sender:)))
+        tap.delegate = self as? UIGestureRecognizerDelegate
+        v.addGestureRecognizer(tap)
+        
+        win.addSubview(v)
+        return v
+    }()
+    
+    @objc func tapWhiteWindow(sender: UITapGestureRecognizer) {
+        mMaskView?.isHidden = true
+    }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     deinit {
-        print("over")
+        print("YYToast - over")
     }
     
     // 心电图动画
@@ -154,7 +189,7 @@ class YYToast: CALayer {
         })
 
         // duration控制旋转时间间隔（小开口的位置）
-        let rotaionZAnimation = addAnimation(duration: 0.5, fromValue: 0, toValue: CGFloat.GA_M_2PI, keyPath: "transform.rotation.z", handler: nil)
+        let rotaionZAnimation = addAnimation(duration: 0.5, fromValue: 0, toValue: CGFloat(2*Double.pi), keyPath: "transform.rotation.z", handler: nil)
 
         let group = CAAnimationGroup()
         // 控制每次圈圈出来之间的时间间隔

@@ -49,7 +49,7 @@ class YYRequest {
     
     var cancellables: [Cancellable] = []
     
-    var provider: MoyaProvider<YYApiManager>! {
+    lazy var provider: MoyaProvider<YYApiManager>! = {
         let publicParamEndpointClosure = { (target: YYApiManager) -> Endpoint<YYApiManager> in
             let url = target.baseURL.appendingPathComponent(target.path).absoluteString
             let endpoint = Endpoint<YYApiManager>(url: url, sampleResponseClosure: {.networkResponse(200, target.sampleData) }, method: target.method, task: target.task, httpHeaderFields: target.headers)
@@ -63,15 +63,21 @@ class YYRequest {
                 let api = target as! YYApiManager
                 if api.show {
                     print("可以在这里写加载提示")
+                    YYToast.ga.show()
                 }
                 
                 if !api.touch {
                     print("可以在这里写禁止用户操作，等待请求结束")
                 }
-                print("我开始请求\(api.touch)")
+                print("开始请求\(api.touch)")
             } else {
-                print("我结束请求")
+                print("结束请求")
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + 1.2, execute: {
+                    DispatchQueue.main.async {
+                        YYToast.ga.hide()
+                    }
+                })
             }
         }
         
@@ -85,12 +91,11 @@ class YYRequest {
             }
         }
         return MoyaProvider<YYApiManager>(endpointClosure: publicParamEndpointClosure, requestClosure: requestTimeoutClosure, plugins: [networkPlugin])
-    }
+    }()
     
-    
-    typealias CompletedErrorHandler = (_ errorCode: Int, _ errorDescription: String)->()
-    typealias CompletedSuccessHandler = (_ result: YYRequestModel)->()
-    typealias ProgressHandler = (_ progress: Double, _ completed: Bool)->()
+    typealias CompletedErrorHandler = (_ errorCode: Int, _ errorDescription: String) -> ()
+    typealias CompletedSuccessHandler = (_ result: YYRequestModel) -> ()
+    typealias ProgressHandler = (_ progress: Double, _ completed: Bool) -> ()
     
     func request(target: YYApiManager, callbackQueue: DispatchQueue? = nil, progress: ProgressHandler? = nil, success: @escaping CompletedSuccessHandler, failed: @escaping CompletedErrorHandler) {
        let cancellable = provider.request(target, callbackQueue: callbackQueue, progress: { (response) in

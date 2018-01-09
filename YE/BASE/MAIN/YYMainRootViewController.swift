@@ -20,7 +20,7 @@ class YYMainRootViewController: UIViewController {
             (vc as! YYNavigationViewController).yy_tabBarController = self
         }
         
-        transition(toPage: 0)
+        transition(toPage: 0, isFirst: true)
     }
     
     override func viewWillLayoutSubviews() {
@@ -33,7 +33,7 @@ class YYMainRootViewController: UIViewController {
         tabbarView.frame = CGRect(x: 0, y: self.view.height - TabBarHeight, width: self.view.width, height: TabBarHeight)
     }
     
-    private func transition(toPage: Int) {
+    private func transition(toPage: Int, isFirst: Bool = false) {
         if currentPage == toPage {
             return 
         }
@@ -41,18 +41,26 @@ class YYMainRootViewController: UIViewController {
         
         for vc in vcs {
             if vc.view.alpha == 1 {
-                vc.viewWillDisappear(true)
+                if !isFirst {
+                    vc.viewWillDisappear(true)
+                }
                 vc.view.alpha = 0
                 vc.view.isHidden = true
-                vc.viewDidDisappear(true)
+                if !isFirst {
+                    vc.viewDidDisappear(true)
+                }
             }
         }
         
         let newController = vcs[toPage]
-        newController.viewWillAppear(true)
+        if !isFirst {
+            newController.viewWillAppear(true)
+        }
         newController.view.isHidden = false
         self.view.insertSubview(newController.view, belowSubview: tabbarView)
-        newController.viewDidAppear(true)
+        if !isFirst {
+            newController.viewDidAppear(true)
+        }
         
         UIView.animate(withDuration: 0.3, animations: {
             newController.view.alpha = 1

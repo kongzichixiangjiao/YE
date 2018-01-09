@@ -99,21 +99,21 @@ class YYBaneHeaderView: UIView {
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath == YYBaneHeaderKey.kObserverContentOffset {
-            let t = object as! UIScrollView
-            let y: CGFloat = t.contentOffset.y
-            if (y < -YYBaneHeaderKey.kHeight) {
-                let yOffset: CGFloat = y * -1
-                
-                let w = (self.frame.size.width / self.frame.size.height) * yOffset
-                let x = -(w - self.scrollView.frame.size.width) / 2
-                self.frame = CGRect(x: x, y: y, width: w, height: yOffset)
-                self.imageView.frame = self.bounds
-                self.effectView.frame = self.bounds
-                setupHeadPortraitButtonFrame()
-                setupUserNameLabelFrame()
-            }
-        }
+//        if keyPath == YYBaneHeaderKey.kObserverContentOffset {
+//            let t = object as! UIScrollView
+//            let y: CGFloat = t.contentOffset.y
+//            if (y < -YYBaneHeaderKey.kHeight) {
+//                let yOffset: CGFloat = y * -1
+//                
+//                let w = (self.frame.size.width / self.frame.size.height) * yOffset
+//                let x = -(w - self.scrollView.frame.size.width) / 2
+//                self.frame = CGRect(x: x, y: y, width: w, height: yOffset)
+//                self.imageView.frame = self.bounds
+//                self.effectView.frame = self.bounds
+//                setupHeadPortraitButtonFrame()
+//                setupUserNameLabelFrame()
+//            }
+//        }
     }
     
     func setupBGImage(_ image: UIImage) {

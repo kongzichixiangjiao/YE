@@ -104,8 +104,6 @@ class GA_LoadFooterView: GA_RefreshBaseView {
             let contentSizeHeight = t.contentSize.height
             let y: CGFloat = t.contentOffset.y
             
-            print(self.scrollView.isDragging)
-            print(y)
             if y < 0 {
                 DispatchQueue.main.async {
                     self.frame = CGRect(x: 0, y: self.scrollView.contentSize.height, width: self.scrollView.frame.size.width, height: 64)

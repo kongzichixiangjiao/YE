@@ -65,8 +65,7 @@ extension UIScrollView: UIScrollViewRefreshXIBProtocol {
     
     func ga_addRefreshHeaderXIB(_ headerView: GA_XIBRefreshHeaderView, _ handler: @escaping RefreshKey.RefreshFinishedHandler) {
         headerView.tag = RefreshKey.kRefreshHeaderViewTag
-//        self.addSubview(headerView)
-        self.insertSubview(headerView, at: 1)
+        self.addSubview(headerView)
         headerView.scrollView = self
         headerView.sourceContentInset = self.contentInset
         headerView.refreshHandler = handler
@@ -110,7 +109,6 @@ extension UIScrollView: UIScrollViewLoadProtocol {
     func ga_addLoadFooter(_ footerView: GA_LoadFooterView, _ handler: @escaping RefreshKey.RefreshFinishedHandler) {
         footerView.tag = RefreshKey.kLoadFooterViewTag
         footerView.frame = CGRect(x: 0, y: self.frame.size.height, width: self.frame.size.width, height: 64)
-        footerView.backgroundColor = UIColor.orange
         self.addSubview(footerView)
         footerView.scrollView = self
         footerView.sourceContentInset = self.contentInset

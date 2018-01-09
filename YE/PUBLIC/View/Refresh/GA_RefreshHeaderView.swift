@@ -18,19 +18,9 @@ class GA_RefreshHeaderView: GA_RefreshBaseView {
                 self.startAnimation()
                 break
             case .ing:
-                UIView.animate(withDuration: 0.35, delay: 0, options: .allowUserInteraction, animations: {
-                    self.scrollView.contentInset = UIEdgeInsetsMake(RefreshKey.kContentInsetTop + self.sourceContentInset.top, self.sourceContentInset.left, self.sourceContentInset.bottom, self.sourceContentInset.right)
-                }, completion: { (finished) in
-                    
-                })
                 animationing()
                 break
             case .ed:
-                UIView.animate(withDuration: 0.35, delay: 0, options: .allowUserInteraction, animations: {
-                    self.scrollView.contentInset = self.sourceContentInset
-                }, completion: { (finished) in
-                    
-                })
                 stopAnimation()
                 break
             case .will:
@@ -145,11 +135,20 @@ extension GA_RefreshHeaderView: GA_RefreshAnimationProtocol {
     }
     
     func stopAnimation() {
-
+        UIView.animate(withDuration: 0.35, delay: 0, options: .allowUserInteraction, animations: {
+            self.scrollView.contentInset = self.sourceContentInset
+        }, completion: { (finished) in
+            
+        })
     }
     
     func animationing() {
 
+        UIView.animate(withDuration: 0.35, delay: 0, options: .allowUserInteraction, animations: {
+            self.scrollView.contentInset = UIEdgeInsetsMake(RefreshKey.kContentInsetTop + self.sourceContentInset.top, self.sourceContentInset.left, self.sourceContentInset.bottom, self.sourceContentInset.right)
+        }, completion: { (finished) in
+            
+        })
     }
     
     func willAnimation() {
