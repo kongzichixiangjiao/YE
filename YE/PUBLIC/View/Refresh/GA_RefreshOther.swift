@@ -57,6 +57,6 @@ class GA_RefreshBaseView: UIView {
     
     var refreshHandler: RefreshKey.RefreshFinishedHandler!
     
-    var contentInset: UIEdgeInsets!
+    var sourceContentInset: UIEdgeInsets!
     
 }

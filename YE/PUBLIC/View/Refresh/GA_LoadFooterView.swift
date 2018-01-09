@@ -30,27 +30,21 @@ class GA_LoadMoreView : GA_LoadFooterView {
 }
 
 class GA_LoadFooterView: GA_RefreshBaseView {
+    
     var state: RefreshState = .ed {
         didSet {
+            if currentState == state {
+                return
+            }
             switch self.state {
             case .start:
                 self.refreshHandler()
                 self.startAnimation()
                 break
             case .ing:
-                UIView.animate(withDuration: 0.35, delay: 0, options: .allowUserInteraction, animations: {
-                    self.scrollView.contentInset = UIEdgeInsetsMake(-RefreshKey.kContentInsetTop, 0, 0, 0)
-                }, completion: { (finished) in
-                    
-                })
                 animationing()
                 break
             case .ed:
-                UIView.animate(withDuration: 0.35, delay: 0, options: .allowUserInteraction, animations: {
-                    self.scrollView.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
-                }, completion: { (finished) in
-                    
-                })
                 stopAnimation()
                 break
             case .will:
@@ -62,8 +56,11 @@ class GA_LoadFooterView: GA_RefreshBaseView {
             case .normal:
                 break
             }
+            currentState = state
         }
     }
+    
+    var currentState: RefreshState = .pull
     
     func beginLoadFooter() {
         self.state = .start
@@ -101,57 +98,16 @@ class GA_LoadFooterView: GA_RefreshBaseView {
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == RefreshKey.kObserverContentOffset {
             let t = object as! UIScrollView
+            let tHeight: CGFloat = t.frame.size.height
+            let contentSizeHeight = t.contentSize.height
             let y: CGFloat = t.contentOffset.y
-            print(y)
-            if (y < 0) {
-                return
-            }
-            if (self.state != .start && self.state != .ing) {
-                if (-y >= 0) {
-                    print("ed -- \(self.state)")
-                    self.state = .ed
-                } else {
-                    if (self.state == .ed || self.state == .normal) {
-                        print("pull -- \(self.state)")
-                        self.state = .pull
-                    }
-                }
-                
-                if y >= RefreshKey.kContentOffsetMax && self.state != .normal {
-                    self.state = .will
-                    print("will -- \(self.state)")
-                } else {
-                    if y <= RefreshKey.kContentInsetTop && self.state != .ed {
-                        print("pull1 -- \(self.state)")
-                        self.state = .pull
-                    }
-                }
-            } else {
-                if self.scrollView.contentInset.top == RefreshKey.kContentInsetTop && self.state != .ing {
-                    print("end -- \(self.state)")
-                    self.state = .ed
-                } else {
-                    if self.state == .ing && self.scrollView.contentInset.top == 0 {
-                        self.state = .ed
-                        print("return ed -- \(self.state)")
-                    }
-                }
-            }
             
-            if !self.scrollView.isDragging {
-                if self.state == .will {
+            print(self.scrollView.isDragging)
+            print(y)
+            if contentSizeHeight + RefreshKey.kContentOffsetMax - tHeight < y {
+                if self.state != .ing && self.scrollView.isDragging {
                     self.state = .start
-                    print("start -- \(self.state)")
-                } else {
-                    if self.state == .start {
-                        self.state = .ing
-                        print("ing -- \(self.state)")
-                    } else {
-                        if self.scrollView.contentInset.top == 0 {
-                            self.state = .ed
-                        }
-                        print("else ing -- \(self.state)")
-                    }
+                    self.state = .ing
                 }
             }
         }
@@ -174,10 +130,17 @@ extension GA_LoadFooterView: GA_RefreshAnimationProtocol {
     }
     
     func startAnimation() {
-        
+        DispatchQueue.main.async {
+            self.scrollView.contentOffset = CGPoint(x: 0, y: self.scrollView.contentSize.height + RefreshKey.kContentOffsetMax - self.scrollView.frame.size.height)
+        }
     }
     
     func stopAnimation() {
+        print("self.scrollView.contentSize.height", self.scrollView.contentSize.height)
+        DispatchQueue.main.async {
+            self.frame = CGRect(x: 0, y: self.scrollView.contentSize.height, width: self.scrollView.frame.size.width, height: 64)
+            self.scrollView.contentOffset = CGPoint(x: 0, y: self.scrollView.contentSize.height)
+        }
         
     }
     

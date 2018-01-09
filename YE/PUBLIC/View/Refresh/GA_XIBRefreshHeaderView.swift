@@ -18,16 +18,16 @@ class GA_XIBRefreshHeaderView: GA_RefreshBaseView {
                 self.startAnimation()
                 break
             case .ing:
+                print(self.sourceContentInset)
                 UIView.animate(withDuration: 0.35, delay: 0, options: .allowUserInteraction, animations: {
-                    self.scrollView.contentInset = UIEdgeInsetsMake(RefreshKey.kContentInsetTop + self.contentInset.top, self.contentInset.left, self.contentInset.bottom, self.contentInset.right)
+                    self.scrollView.contentInset = UIEdgeInsetsMake(RefreshKey.kContentInsetTop + self.sourceContentInset.top, self.sourceContentInset.left, self.sourceContentInset.bottom, self.sourceContentInset.right)
                 }, completion: { (finished) in
-                    
                 })
                 animationing()
                 break
             case .ed:
                 UIView.animate(withDuration: 0.35, delay: 0, options: .allowUserInteraction, animations: {
-                    self.scrollView.contentInset = self.contentInset
+                    self.scrollView.contentInset = self.sourceContentInset
                 }, completion: { (finished) in
                     
                 })
@@ -122,7 +122,7 @@ class GA_XIBRefreshHeaderView: GA_RefreshBaseView {
     }
     
     deinit {
-        self.scrollView.contentInset = self.contentInset
+        self.scrollView.contentInset = self.sourceContentInset
         self.scrollView.removeObserver(self, forKeyPath: RefreshKey.kObserverContentOffset)
         self.state = .ed
         

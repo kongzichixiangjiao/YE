@@ -345,6 +345,10 @@
 		DCA8A4B71FD808E80042537E /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA8A4A51FD808E80042537E /* Service.swift */; };
 		DCA8A4B81FD808E80042537E /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA8A4A61FD808E80042537E /* ViewModelProtocol.swift */; };
 		DCA8A4B91FD808E80042537E /* ViewModelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCA8A4A71FD808E80042537E /* ViewModelService.swift */; };
+		DCAB5CD220033B3E00A8CD87 /* YYActivityHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAB5CD120033B3E00A8CD87 /* YYActivityHeaderView.swift */; };
+		DCAB5CD420033B4600A8CD87 /* YYActivityHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCAB5CD320033B4600A8CD87 /* YYActivityHeaderView.xib */; };
+		DCAB5CD720033DD100A8CD87 /* YYActivityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAB5CD520033DD100A8CD87 /* YYActivityDetailsViewController.swift */; };
+		DCAB5CD820033DD100A8CD87 /* YYActivityDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCAB5CD620033DD100A8CD87 /* YYActivityDetailsViewController.xib */; };
 		DCBDF1161FDFC4CF00DC18FB /* YYFontLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCBDF1151FDFC4CF00DC18FB /* YYFontLabel.swift */; };
 		DCDAF7DC1FDE2F5F00E7CE3A /* YYRxSwfitLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDAF7DA1FDE2F5F00E7CE3A /* YYRxSwfitLoginViewController.swift */; };
 		DCDAF7DD1FDE2F5F00E7CE3A /* YYRxSwfitLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCDAF7DB1FDE2F5F00E7CE3A /* YYRxSwfitLoginViewController.xib */; };
@@ -747,6 +751,10 @@
 		DCA8A4A51FD808E80042537E /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		DCA8A4A61FD808E80042537E /* ViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
 		DCA8A4A71FD808E80042537E /* ViewModelService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelService.swift; sourceTree = "<group>"; };
+		DCAB5CD120033B3E00A8CD87 /* YYActivityHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYActivityHeaderView.swift; sourceTree = "<group>"; };
+		DCAB5CD320033B4600A8CD87 /* YYActivityHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYActivityHeaderView.xib; sourceTree = "<group>"; };
+		DCAB5CD520033DD100A8CD87 /* YYActivityDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYActivityDetailsViewController.swift; sourceTree = "<group>"; };
+		DCAB5CD620033DD100A8CD87 /* YYActivityDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYActivityDetailsViewController.xib; sourceTree = "<group>"; };
 		DCBDF1151FDFC4CF00DC18FB /* YYFontLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYFontLabel.swift; sourceTree = "<group>"; };
 		DCDAF7DA1FDE2F5F00E7CE3A /* YYRxSwfitLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYRxSwfitLoginViewController.swift; sourceTree = "<group>"; };
 		DCDAF7DB1FDE2F5F00E7CE3A /* YYRxSwfitLoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYRxSwfitLoginViewController.xib; sourceTree = "<group>"; };
@@ -1615,6 +1623,8 @@
 			isa = PBXGroup;
 			children = (
 				94D3894A1F39C23900F974A6 /* YYActivityListViewController.swift */,
+				DCAB5CD520033DD100A8CD87 /* YYActivityDetailsViewController.swift */,
+				DCAB5CD620033DD100A8CD87 /* YYActivityDetailsViewController.xib */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -1624,6 +1634,8 @@
 			children = (
 				94D3898A1F39C23A00F974A6 /* YYActivityListCell.swift */,
 				94D3898B1F39C23A00F974A6 /* YYActivityListCell.xib */,
+				DCAB5CD120033B3E00A8CD87 /* YYActivityHeaderView.swift */,
+				DCAB5CD320033B4600A8CD87 /* YYActivityHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2466,6 +2478,7 @@
 				94D38A261F39C23A00F974A6 /* YYApplySelectedTableViewCell.xib in Resources */,
 				94D38A601F39C2F600F974A6 /* LaunchScreen.storyboard in Resources */,
 				DC60141C1FFF4BD20051D76D /* IMG_3260.JPG in Resources */,
+				DCAB5CD820033DD100A8CD87 /* YYActivityDetailsViewController.xib in Resources */,
 				DC74B8831FDA2DD100640964 /* YYRxSwiftViewCell.xib in Resources */,
 				DC8A700A1FD4F8EE006D22D6 /* LYPlayer_center_pause.png in Resources */,
 				DC6770C21FD697D400E79A07 /* Player_center_pause.png in Resources */,
@@ -2501,6 +2514,7 @@
 				DC7A49CA1FCF95870028F308 /* YYSwiftDateViewController.xib in Resources */,
 				DCDAF7DD1FDE2F5F00E7CE3A /* YYRxSwfitLoginViewController.xib in Resources */,
 				DC6770C51FD697D400E79A07 /* Player_lock-nor.png in Resources */,
+				DCAB5CD420033B4600A8CD87 /* YYActivityHeaderView.xib in Resources */,
 				DC65BD5E1FD8E16F00204B7E /* YYRxMVCViewController.xib in Resources */,
 				94D38A341F39C23A00F974A6 /* YYConversationCell.xib in Resources */,
 				DC6770C61FD697D400E79A07 /* Player_pause.png in Resources */,
@@ -2637,6 +2651,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94DED68A1F7F38030036AE1F /* YYCDemo.c in Sources */,
+				DCAB5CD220033B3E00A8CD87 /* YYActivityHeaderView.swift in Sources */,
 				DCA8A4B71FD808E80042537E /* Service.swift in Sources */,
 				DC8699F51FE3BA5200115C5E /* AppDelegate+Root.swift in Sources */,
 				DC75E3F51FD12A1E00332BE5 /* LYPlayer.swift in Sources */,
@@ -2803,6 +2818,7 @@
 				94D389A91F39C23A00F974A6 /* YYBaseTableViewCell.swift in Sources */,
 				94D389D51F39C23A00F974A6 /* YYKey.swift in Sources */,
 				94D38A4A1F39C23A00F974A6 /* YYActivityListCell.swift in Sources */,
+				DCAB5CD720033DD100A8CD87 /* YYActivityDetailsViewController.swift in Sources */,
 				94D38A541F39C23A00F974A6 /* YYCompetitionListCell.swift in Sources */,
 				DC65BD5D1FD8E16F00204B7E /* YYRxMVCViewController.swift in Sources */,
 				94D389B61F39C23A00F974A6 /* UIView+Extension.swift in Sources */,

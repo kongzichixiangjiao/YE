@@ -14,16 +14,19 @@ class YYBaseCollectionViewController: YYBaseViewController {
     
     open var isShowTabbar: Bool = false
     
+    open var isCancleX: Bool = false
+    
     open var collectionViewFrameType: SaveAreaBottomSpaceType! {
         didSet {
-            var y: CGFloat = collectionViewFrameType.rawValue
+            let y: CGFloat = (isShowNavigationView ? self.navigationView.frame.size.height : 0) + kNavigationViewBottomSpace
+            var insets = UIEdgeInsets.zero
             let height = MainScreenHeight - y - (self.isShowTabbar ? TabBarHeight : 0)
             if UIDevice.current.isX {
                 if #available(iOS 11.0, *) {
-                    y += kNavigationViewBottomSpace
+                    insets = UIApplication.shared.delegate?.window??.safeAreaInsets ?? UIEdgeInsets.zero
                 }
             }
-            self.collectionView.frame = CGRect(x: 0, y: y, width: MainScreenWidth, height: height)
+            self.collectionView.frame = CGRect(x: 0, y: y + (self.isCancleX ? 0 : insets.bottom), width: MainScreenWidth, height: height)
         }
     }
     

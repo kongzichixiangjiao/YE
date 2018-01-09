@@ -33,7 +33,7 @@ class YYNavigationViewController: UINavigationController {
         
         self.delegate = self
 
-        setupInteractivePopGestureRecognizer()
+//        setupInteractivePopGestureRecognizer()
     }
     
     private func setupInteractivePopGestureRecognizer() {

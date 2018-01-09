@@ -11,14 +11,30 @@ import Moya
 import RxSwift
 
 class YYCompetitionViewController: YYBaseTableViewController {
-
-    var dataArr = Variable([YYPXHotSpot]())
+    
+    var dataArr: [YYPXHotSpot] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initNavigationView()
         initTableView()
+        
+        self.tableView.ga_addRefreshHeaderXIB(GA_AnimationRefreshHeaderView.loadView()) {
+            [weak self] in
+            if let weakSelf = self {
+                print("开始刷新")
+                weakSelf.requestData()
+            }
+        }
+        self.tableView.ga_XIBbeginRefreshing()
+        
+        self.tableView.ga_addLoadFooter(GA_LoadMoreView()) {
+            [weak self] in
+            if let weakSelf = self {
+                weakSelf.requestMoreData()
+            }
+        }
     }
     
     func initNavigationView() {
@@ -27,29 +43,57 @@ class YYCompetitionViewController: YYBaseTableViewController {
     }
     
     override func initTableView() {
+        isShowTabbar = true
         saveAreaBottomSpaceType = .normal44
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.showsVerticalScrollIndicator = true 
         registerNibWithIdentifier(YYCompetitionCell.identifier)
     }
     
+    func requestMoreData() {
+        request(isMore: true)
+    }
+    
     func requestData() {
+        request(isMore: false)
+    }
+    
+    func request(isMore: Bool) {
+        self.view.ga_showLoading()
         YYRequest.share.request(target: .jf_cjzh, success: { (request) in
+            self.view.ga_hideLoading()
             if let model = YYPXBaseModel.deserialize(from: request.resultDic) {
                 self.view.ga_showView(model.myMessage!, deplay: 1.2)
-                print(model.result?.hotspot ?? [])
+                if isMore {
+//                    self.dataArr += model.result?.hotspot ?? []
+                    
+                    DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + 3, execute: {
+                        DispatchQueue.main.async {
+                            
+                            self.dataArr.append((model.result?.hotspot!.first!)!)
+                            self.tableView.reloadData()
+                            self.tableView.ga_endLoadFooter()
+                            self.view.ga_showView("结束", deplay: 1.2)
+                        }
+                    })
+                } else {
+                    self.dataArr = model.result?.hotspot ?? []
+                    self.dataArr.append((model.result?.hotspot!.first!)!)
+                    self.tableView.reloadData()
+                    self.tableView.ga_XIBendRefreshing()
+                }
             }
         }) { (code, error) in
-            print(code, error)
-            self.view.showView(error)
+            self.view.ga_hideLoading()
+            self.view.showView(error + String(code))
+            self.tableView.ga_XIBendRefreshing()
+            self.tableView.ga_endLoadFooter()
         }
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        requestData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,27 +105,21 @@ class YYCompetitionViewController: YYBaseTableViewController {
 extension YYCompetitionViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: YYCompetitionCell.identifier) as! YYCompetitionCell
-        if (indexPath.row == 0) {
-            cell.titleLabel.text = "树影下的人想睡"
-            cell.describeLabel.text = "清澈倒映在河水的中央"
-        } else if (indexPath.row == 1) {
-            cell.titleLabel.text = "繁闹市停留 留下雨和愁 人路过只有我静候"
-            cell.describeLabel.text = "繁闹市停留 留下雨和愁 人路过只有我静候 繁闹市停留 留下雨和愁 人路过只有我静候 繁闹市停留 留下雨和愁 人路过只有我静候"
-        } else if (indexPath.row == 2) {
-            cell.titleLabel.text = "乌溜溜的黑眼珠和你的笑脸 怎么也难忘竟容颜的转变 轻飘飘的旧时光就这么溜走 转头回去看看时已匆匆数年"
-            cell.describeLabel.text = "乌溜溜的黑眼珠和你的笑脸 怎么也难忘竟容颜的转变 轻飘飘的旧时光就这么溜走 转头回去看看时已匆匆数年 乌溜溜的黑眼珠和你的笑脸 怎么也难忘竟容颜的转变 轻飘飘的旧时光就这么溜走 转头回去看看时已匆匆数年"
-        } else {
-            cell.titleLabel.text = "乌溜溜的黑眼珠和你的笑脸 怎么也难忘竟容颜的转变 轻飘飘的旧时光就这么溜走 转头回去看看时已匆匆数年"
-            cell.describeLabel.text = "乌溜溜的黑眼珠和你的笑脸 怎么也难忘竟容颜的转变 轻飘飘的旧时光就这么溜走 转头回去看看时已匆匆数年 乌溜溜的黑眼珠和你的笑脸 怎么也难忘竟容颜的转变 轻飘飘的旧时光就这么溜走 转头回去看看时已匆匆数年"
-        }
+        cell.row = indexPath.row 
+        cell.model = self.dataArr[indexPath.row] 
+        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return self.dataArr.count
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print(scrollView.contentSize)
     }
 }

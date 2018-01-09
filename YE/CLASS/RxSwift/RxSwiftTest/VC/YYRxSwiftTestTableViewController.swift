@@ -72,7 +72,7 @@ class YYRxSwiftTestTableViewController: YYXIBBaseViewController {
         YYRequest.share.provider.request(.getNewsList) { (result) in
             switch result {
             case .success:
-                self.dataArr.value += (result.value?.mapModel(YYRxSwiftNewsModel.self).stories)!
+//                self.dataArr.value += result.value?.mapModel(YYRxSwiftNewsModel.self).stories ?? []
                 break
             case .failure:
                 print(result.error ?? "--")

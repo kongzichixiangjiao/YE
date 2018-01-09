@@ -17,12 +17,13 @@ class YYActivityListViewController: YYBaseTableViewController {
         
         initTableView()
         
+        
         let _ = tableView.yy_addBaneHeaderView(.header, bgImage: UIImage(named: "cgts.jpg")!, height: YYBaneHeaderKey.kHeight, handler: nil)
         
-//        tableView.contentInset = UIEdgeInsets(top: YYBaneHeaderKey.kHeight, left: 0, bottom: 0, right: 0)
+        tableView.contentInset = UIEdgeInsets(top: YYBaneHeaderKey.kHeight, left: 0, bottom: 0, right: 0)
         
         
-//        self.tableView.ga_addRefreshHeader(headerView: GA_CircleRefreshHeaderView()) {
+//        self.tableView.ga_addRefreshHeader(GA_CircleRefreshHeaderView()) {
 //            [weak self] in
 //            if let weakSelf = self {
 //                print("开始加载")
@@ -30,7 +31,7 @@ class YYActivityListViewController: YYBaseTableViewController {
 //                    DispatchQueue.main.async {
 //                        weakSelf.tableView.ga_endRefreshing()
 //                        print("加载结束")
-//                        weakSelf.tableView.yy_emptyWithReset(handler: { 
+//                        weakSelf.tableView.yy_emptyWithReset(handler: {
 //                            [weak weakSelf] in
 //                            if let weakWeakSelf = weakSelf {
 //                                weakWeakSelf.tableView.yy_empty(.noData, alertTitle: "没啥数据...")
@@ -38,13 +39,12 @@ class YYActivityListViewController: YYBaseTableViewController {
 //                        })
 //                    }
 //                })
-//                
 //            }
 //        }
 //        self.tableView.ga_beginRefreshing()
         
+//        self.tableView.yy_empty(.noData)
         
-        self.tableView.yy_empty(.noData)
         
         self.tableView.ga_addRefreshHeaderXIB(GA_AnimationRefreshHeaderView.loadView()) {
             [weak self] in
@@ -54,29 +54,35 @@ class YYActivityListViewController: YYBaseTableViewController {
                     DispatchQueue.main.async {
                         weakSelf.tableView.ga_XIBendRefreshing()
                         weakSelf.tableView.yy_empty(.noData, alertTitle: "没啥数据...")
+                        weakSelf.tableView.reloadData()
                         print("刷新结束")
+                        weakSelf.tableView.ga_XIBendRefreshing()
                     }
                 })
             }
         }
         self.tableView.ga_XIBbeginRefreshing()
+
         
-//        self.tableView.ga_addLoadFooter(footerView: GA_LoadMoreView()) {
-//            [weak self] in
-//            if let weakSelf = self {
-//                DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + Double(Int64(2 * 1000 * 1000000)) / Double(NSEC_PER_SEC), execute: {
-//                    DispatchQueue.main.async {
-//                        weakSelf.tableView.ga_endLoadFooter()
-//                        print("加载结束")
-//                    }
-//                })
-//            }
-//        }
+        self.tableView.ga_addLoadFooter(GA_LoadMoreView()) {
+            [weak self] in
+            if let weakSelf = self {
+                DispatchQueue.global().asyncAfter(deadline: DispatchTime.now() + 3, execute: {
+                    DispatchQueue.main.async {
+                        weakSelf.tableView.ga_endLoadFooter()
+                        print("加载结束")
+                    }
+                })
+            }
+        }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print(self.tableView.contentInset)
     }
     
     override func initTableView() {
@@ -87,7 +93,6 @@ class YYActivityListViewController: YYBaseTableViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     deinit {

@@ -54,7 +54,7 @@ class YYBaseTableViewController: YYBaseViewController {
         t.showsVerticalScrollIndicator = false
         t.separatorStyle = .none
         t.tableFooterView = UIView()
-        t.translatesAutoresizingMaskIntoConstraints = false
+        t.translatesAutoresizingMaskIntoConstraints = true
         self.view.addSubview(t)
         return t
     }()
@@ -92,8 +92,20 @@ class YYBaseTableViewController: YYBaseViewController {
         tableView.register(NSClassFromString(identifier), forCellReuseIdentifier: identifier)
     }
     
+    open func registerClassCell(_ identifiers: [String]) {
+        for identifier in identifiers {
+            tableView.register(NSClassFromString(identifier), forCellReuseIdentifier: identifier)
+        }
+    }
+    
     open func registerNibWithIdentifier(_ identifier: String) {
         tableView.register(UINib(nibName: identifier, bundle: nil), forCellReuseIdentifier: identifier)
+    }
+    
+    open func registerNibCell(_ identifiers: [String]) {
+        for identifier in identifiers {
+            tableView.register(UINib(nibName: identifier, bundle: nil), forCellReuseIdentifier: identifier)
+        }
     }
     
     override func viewDidLoad() {

@@ -152,28 +152,22 @@ class YYBaseViewController: UIViewController {
     
     // 屏幕旋转监听
     func orientationChanged(){
+        print(UIDevice.current.orientation)
         switch UIDevice.current.orientation {
         case .faceDown:
-            print(UIDevice.current.orientation)
             break
         case .faceUp:
-            print(UIDevice.current.orientation)
             break
         case .landscapeLeft:
-            print(UIDevice.current.orientation)
             break
         case .landscapeRight:
-            print(UIDevice.current.orientation)
             break
         case .portrait:
             // shu'ping
-            print(UIDevice.current.orientation)
             break
         case .portraitUpsideDown:
-            print(UIDevice.current.orientation)
             break
         case .unknown:
-            print(UIDevice.current.orientation)
             break
         }
     }
