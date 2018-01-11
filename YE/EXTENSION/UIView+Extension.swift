@@ -154,7 +154,6 @@ extension UIView {
 
 // MARK: Xib 属性设置
 protocol UIViewExtensionProtocol {
-    
     var ga_cornerRadius: CGFloat {get set}
     
     var ga_masksToBounds: Bool {get set}
@@ -166,7 +165,6 @@ protocol UIViewExtensionProtocol {
     var ga_shadowOpacity: CGFloat {get set}
     var ga_shadowOffset: CGSize {get set}
     var ga_shadowRadius: CGFloat {get set}
-    
 }
 
 extension UIView: UIViewExtensionProtocol {

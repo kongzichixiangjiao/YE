@@ -121,6 +121,10 @@ extension YYMyViewController {
         if dic[YYKey.myTitle] as! String == "Alert" {
             push(YYAlertRootViewController(nibName: "YYAlertRootViewController", bundle: nil))
         }
+        if dic[YYKey.myTitle] as! String == "WCDB" {
+            push(YYWCDBViewController())
+        }
+        
         
         tableView.deselectRow(at: indexPath, animated: true)
     }

@@ -104,4 +104,6 @@ pod 'GDPerformanceView-Swift'
 # 特别高端帅气的slider [!] Unable to find a specification for `fluid-slider`
 # pod 'fluid-slider'
 
+# 腾讯出品数据库
+pod 'WCDB.swift'
 end

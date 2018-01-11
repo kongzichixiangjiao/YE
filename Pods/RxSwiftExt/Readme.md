@@ -55,7 +55,9 @@ RxSwiftExt is all about adding operators to [RxSwift](https://github.com/Reactiv
 * [distinct](#distinct)
 * [map](#map)
 * [not](#not)
+* [and](#and)
 * [Observable.cascade](#cascade)
+* [pairwise, nwise](#pairwise-nwise)
 * [retry](#retry)
 * [repeatWithBehavior](#repeatwithbehavior)
 * [catchErrorJustComplete](#catcherrorjustcomplete)
@@ -86,9 +88,9 @@ Unwrap optionals and filter out nil values.
 ```
 
 ```
-Next(1)
-Next(2)
-Next(4)
+next(1)
+next(2)
+next(4)
 ```
 
 #### ignore
@@ -102,9 +104,9 @@ Ignore specific elements.
 ```
 
 ```
-Next(One)
-Next(Three)
-Completed  
+next(One)
+next(Three)
+completed  
 ```
 
 #### ignoreWhen
@@ -118,10 +120,10 @@ Ignore elements according to closure.
     .subscribe { print($0) }
 ```
 ```
-Next(1)
-Next(2)
-Next(6)
-Completed
+next(1)
+next(2)
+next(6)
+completed
 ```
 
 #### once
@@ -137,10 +139,10 @@ Send a next element exactly once to the first subscriber that takes it. Further 
 ```
 ```
 First
-Next(Hello world)
-Completed
+next(Hello world)
+completed
 Second
-Completed
+completed
 ```
 
 #### distinct
@@ -153,11 +155,11 @@ Pass elements through only if they were never seen before in the sequence.
     .subscribe { print($0) }
 ```
 ```
-Next(a)
-Next(b)
-Next(c)
-Next(d)
-Completed
+next(a)
+next(b)
+next(c)
+next(d)
+completed
 ```
 
 #### map
@@ -170,10 +172,10 @@ Observable.of(1,2,3)
     .subscribe { print($0) }
 ```
 ```
-Next(Nope.)
-Next(Nope.)
-Next(Nope.)
-Completed
+next(Nope.)
+next(Nope.)
+next(Nope.)
+completed
 ```
 
 #### not
@@ -185,14 +187,41 @@ Observable.just(false)
     .not()
     .subscribe { print($0) }
 ```
+
 ```
-Next(true)
-Completed
+next(true)
+completed
+```
+
+#### and
+
+Verifies that every value emitted is `true`
+
+```swift
+Observable.of(true, true)
+	.and()
+	.subscribe { print($0) }
+	
+Observable.of(true, false)
+	.and()
+	.subscribe { print($0) }
+	
+Observable<Bool>.empty()
+	.and()
+	.subscribe { print($0) }
+```
+
+Returns a `Maybe<Bool>`:
+
+```
+success(true)
+success(false)
+completed
 ```
 
 #### cascade
 
-Sequentially cascade through a list of observable, dropping previous subscriptions as soon as an observable further down the list starts emitting elements.
+Sequentially cascade through a list of observables, dropping previous subscriptions as soon as an observable further down the list starts emitting elements.
 
 ```swift
 let a = PublishSubject<String>()
@@ -211,11 +240,30 @@ c.onNext("c:2")
 ```
 
 ```
-Next(a:1)
-Next(a:2)
-Next(b:1)
-Next(c:1)
-Next(c:2)
+next(a:1)
+next(a:2)
+next(b:1)
+next(c:1)
+next(c:2)
+```
+
+#### pairwise, nwise
+
+Groups elements emitted by an Observable into arrays, where each array consists of the last N consecutive items; similar to a sliding window.
+
+```swift
+Observable.from([1, 2, 3, 4, 5, 6])
+    .pairwise()
+    .subscribe { print($0) }
+```
+
+```
+next((1, 2))
+next((2, 3))
+next((3, 4))
+next((4, 5))
+next((5, 6))
+completed
 ```
 
 #### retry
@@ -284,10 +332,10 @@ let _ = sampleObservable
 ```
 
 ```
-Next(First)
-Next(Second)
+next(First)
+next(Second)
 Source observable emitted error fatalError, ignoring it
-Completed
+completed
 ```
 
 #### pausable
@@ -308,8 +356,8 @@ let _ = pausedObservable
 ```
 
 ```
-Next(2)
-Next(3)
+next(2)
+next(3)
 ```
 
 More examples are available in the project's Playground.
