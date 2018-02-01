@@ -173,6 +173,8 @@
 		94D38A631F39C33300F974A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94D38A621F39C33300F974A6 /* Assets.xcassets */; };
 		94DED68A1F7F38030036AE1F /* YYCDemo.c in Sources */ = {isa = PBXBuildFile; fileRef = 94DFE4131F581B6B004D71F3 /* YYCDemo.c */; };
 		A1E51B0C8B82F381C3F93DEE /* Pods_YE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 521CBA8AFB6F01FB382C7CD8 /* Pods_YE.framework */; };
+		DC04E2B82021664E00046CDC /* YYLockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC04E2B72021664E00046CDC /* YYLockViewController.swift */; };
+		DC04E2BF20219C4100046CDC /* home.html in Resources */ = {isa = PBXBuildFile; fileRef = DC04E2BD20219C4000046CDC /* home.html */; };
 		DC10DDFD1FEA12E500770158 /* YYTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC10DDFC1FEA12E500770158 /* YYTabBar.swift */; };
 		DC10DE001FEA46AB00770158 /* MainRoot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC10DDFE1FEA46AB00770158 /* MainRoot.storyboard */; };
 		DC10DE021FEA486A00770158 /* YYMainRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC10DE011FEA486A00770158 /* YYMainRootViewController.swift */; };
@@ -188,6 +190,7 @@
 		DC3858FB1FC7E9D100244649 /* YYCircleScrollCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3858F81FC7E9D100244649 /* YYCircleScrollCollectionCell.swift */; };
 		DC3858FC1FC7E9D100244649 /* YYCircleScrollCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC3858F91FC7E9D100244649 /* YYCircleScrollCollectionCell.xib */; };
 		DC3858FD1FC7E9D100244649 /* YYCircleScrollCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3858FA1FC7E9D100244649 /* YYCircleScrollCollectionView.swift */; };
+		DC563479200712E900A07E8E /* AppDelegate+WCDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC563478200712E900A07E8E /* AppDelegate+WCDB.swift */; };
 		DC5DBDD61FFC650D0089573C /* YYAlertLoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DBDD41FFC650D0089573C /* YYAlertLoadingViewController.swift */; };
 		DC5DBDD71FFC650D0089573C /* YYAlertLoadingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC5DBDD51FFC650D0089573C /* YYAlertLoadingViewController.xib */; };
 		DC5DBDDA1FFC69FC0089573C /* YYAlertBottomTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC5DBDD81FFC69FC0089573C /* YYAlertBottomTextViewController.swift */; };
@@ -585,6 +588,8 @@
 		94DFE4111F5819F8004D71F3 /* YE-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YE-Bridging-Header.h"; sourceTree = "<group>"; };
 		94DFE4131F581B6B004D71F3 /* YYCDemo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = YYCDemo.c; sourceTree = "<group>"; };
 		9B059CB7E9DD2575F5847CD7 /* Pods-YE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YE.release.xcconfig"; path = "Pods/Target Support Files/Pods-YE/Pods-YE.release.xcconfig"; sourceTree = "<group>"; };
+		DC04E2B72021664E00046CDC /* YYLockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYLockViewController.swift; sourceTree = "<group>"; };
+		DC04E2BD20219C4000046CDC /* home.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = home.html; sourceTree = "<group>"; };
 		DC10DDFC1FEA12E500770158 /* YYTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYTabBar.swift; sourceTree = "<group>"; };
 		DC10DDFF1FEA46AB00770158 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MainRoot.storyboard; sourceTree = "<group>"; };
 		DC10DE011FEA486A00770158 /* YYMainRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYMainRootViewController.swift; sourceTree = "<group>"; };
@@ -600,6 +605,7 @@
 		DC3858F81FC7E9D100244649 /* YYCircleScrollCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYCircleScrollCollectionCell.swift; sourceTree = "<group>"; };
 		DC3858F91FC7E9D100244649 /* YYCircleScrollCollectionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYCircleScrollCollectionCell.xib; sourceTree = "<group>"; };
 		DC3858FA1FC7E9D100244649 /* YYCircleScrollCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYCircleScrollCollectionView.swift; sourceTree = "<group>"; };
+		DC563478200712E900A07E8E /* AppDelegate+WCDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+WCDB.swift"; sourceTree = "<group>"; };
 		DC5DBDD41FFC650D0089573C /* YYAlertLoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYAlertLoadingViewController.swift; sourceTree = "<group>"; };
 		DC5DBDD51FFC650D0089573C /* YYAlertLoadingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYAlertLoadingViewController.xib; sourceTree = "<group>"; };
 		DC5DBDD81FFC69FC0089573C /* YYAlertBottomTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYAlertBottomTextViewController.swift; sourceTree = "<group>"; };
@@ -1001,6 +1007,7 @@
 		94D388CE1F39C23900F974A6 /* SOURCE */ = {
 			isa = PBXGroup;
 			children = (
+				DC04E2BD20219C4000046CDC /* home.html */,
 				94D388F21F39C23900F974A6 /* PLIST */,
 				DC6013F51FFF4BD20051D76D /* IMAGE */,
 			);
@@ -1124,6 +1131,7 @@
 		94D389271F39C23900F974A6 /* CLASS */ = {
 			isa = PBXGroup;
 			children = (
+				DC04E2B62021663C00046CDC /* Lock */,
 				DCB946A81FE10BE900958542 /* AD */,
 				94D389291F39C23900F974A6 /* Apply */,
 				949634561F41872F0079886E /* Competition */,
@@ -1359,6 +1367,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DC04E2B62021663C00046CDC /* Lock */ = {
+			isa = PBXGroup;
+			children = (
+				DC04E2B72021664E00046CDC /* YYLockViewController.swift */,
+			);
+			path = Lock;
+			sourceTree = "<group>";
+		};
 		DC3858E41FC7E8B700244649 /* rsa */ = {
 			isa = PBXGroup;
 			children = (
@@ -1424,6 +1440,7 @@
 				DC5F85FE1FD7A27B0092FDB4 /* AppDelegate+ListeningNetwork.swift */,
 				DC5F85FF1FD7A27B0092FDB4 /* AppDelegate.swift */,
 				DC8699F41FE3BA4200115C5E /* AppDelegate+Root.swift */,
+				DC563478200712E900A07E8E /* AppDelegate+WCDB.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -2563,6 +2580,7 @@
 				94D389A51F39C23A00F974A6 /* YYBaseNavigationViewIMGroupDetailsButton.xib in Resources */,
 				94D389FD1F39C23A00F974A6 /* YYSpaceCell.xib in Resources */,
 				DC75E4081FD12AA400332BE5 /* LYPlayer_bottom_shadel.png in Resources */,
+				DC04E2BF20219C4100046CDC /* home.html in Resources */,
 				94D38A281F39C23A00F974A6 /* YYApplyTextTableViewCell.xib in Resources */,
 				DC65BD671FD8E32A00204B7E /* RepositoryCell.xib in Resources */,
 				DC6770C71FD697D400E79A07 /* Player_play.png in Resources */,
@@ -2737,6 +2755,7 @@
 				94D389AD1F39C23A00F974A6 /* Bundle+Extension.swift in Sources */,
 				94D38A1C1F39C23A00F974A6 /* YYCompetitionDetailsViewController.swift in Sources */,
 				94D389EB1F39C23A00F974A6 /* GA_AnimationRefreshHeaderView.swift in Sources */,
+				DC563479200712E900A07E8E /* AppDelegate+WCDB.swift in Sources */,
 				94D389E91F39C23A00F974A6 /* YYPagingHeaderScrollView.swift in Sources */,
 				DC7A49D31FCFFAD80028F308 /* YYModel+Extension.swift in Sources */,
 				DC75E3D51FD0FE1A00332BE5 /* YYPlayerView.swift in Sources */,
@@ -2814,6 +2833,7 @@
 				DC3858EE1FC7E95200244649 /* YYReuseScrollView.swift in Sources */,
 				940041201F67CD4B008BF928 /* YYRequestManager.swift in Sources */,
 				DC6013D31FFF48F10051D76D /* YYCompetitionModel.swift in Sources */,
+				DC04E2B82021664E00046CDC /* YYLockViewController.swift in Sources */,
 				94D38A161F39C23A00F974A6 /* YYMyViewController.swift in Sources */,
 				94D38A1B1F39C23A00F974A6 /* YYApplyQueryViewController.swift in Sources */,
 				DC749EE71FF1D8C300D5E2B8 /* UITableView+Extension.swift in Sources */,

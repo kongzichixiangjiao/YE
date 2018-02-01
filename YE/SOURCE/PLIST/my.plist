@@ -158,5 +158,23 @@
 		<key>type</key>
 		<integer>0</integer>
 	</dict>
+	<dict>
+		<key>New item</key>
+		<string></string>
+		<key>isShowLineView</key>
+		<true/>
+		<key>icon</key>
+		<string>im_friendList_select_selected</string>
+		<key>title</key>
+		<string>LockLock</string>
+		<key>isShowRightIcon</key>
+		<true/>
+		<key>subtitle</key>
+		<string></string>
+		<key>to</key>
+		<string></string>
+		<key>type</key>
+		<integer>0</integer>
+	</dict>
 </array>
 </plist>

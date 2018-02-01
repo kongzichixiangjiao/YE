@@ -94,12 +94,12 @@ class GA_LoadFooterView: GA_RefreshBaseView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
     }
     
     override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
         if keyPath == RefreshKey.kObserverContentOffset {
             let t = object as! UIScrollView
+            print(t.decelerationRate)
             let tHeight: CGFloat = t.frame.size.height
             let contentSizeHeight = t.contentSize.height
             let y: CGFloat = t.contentOffset.y
@@ -110,9 +110,21 @@ class GA_LoadFooterView: GA_RefreshBaseView {
                 }
                 return
             }
-            if contentSizeHeight + RefreshKey.kContentOffsetMax - tHeight < y {
-                if self.state != .ing && self.scrollView.isDragging {
+            
+            if (self.state != .start && self.state != .ing) {
+                if contentSizeHeight + RefreshKey.kContentOffsetMax - tHeight < y && self.state != .normal  && self.state != .will {
+                    self.state = .will
+                } else {
+                    self.state = .pull
+                    self.frame = CGRect(x: 0, y: t.contentSize.height, width: self.scrollView.frame.size.width, height: 64)
+                }
+            }
+            
+            if !self.scrollView.isDragging {
+                if self.state == .will {
                     self.state = .start
+                }
+                if self.state == .start {
                     self.state = .ing
                 }
             }
@@ -122,11 +134,10 @@ class GA_LoadFooterView: GA_RefreshBaseView {
     deinit {
         self.state = .ed
         guard let s = self.scrollView else {
-                return
+            return
         }
         s.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
         s.removeObserver(self, forKeyPath: RefreshKey.kObserverContentOffset)
-        
     }
 }
 
@@ -136,17 +147,25 @@ extension GA_LoadFooterView: GA_RefreshAnimationProtocol {
     }
     
     func startAnimation() {
+        
     }
     
     func stopAnimation() {
-        print("self.scrollView.contentSize.height", self.scrollView.contentSize.height)
         DispatchQueue.main.async {
-            self.frame = CGRect(x: 0, y: self.scrollView.contentSize.height, width: self.scrollView.frame.size.width, height: 64)
-            self.scrollView.contentOffset = CGPoint(x: 0, y: self.scrollView.contentSize.height - self.scrollView.frame.size.height)
+            UIView.animate(withDuration: 0.35, delay: 0, options: .allowUserInteraction, animations: {
+                self.scrollView.contentInset = UIEdgeInsetsMake(self.sourceContentInset.top, self.sourceContentInset.left, self.sourceContentInset.bottom, self.sourceContentInset.right)
+            }, completion: { (finished) in
+                self.frame = CGRect(x: 0, y: self.scrollView.contentSize.height, width: self.scrollView.frame.size.width, height: 64)
+            })
         }
     }
     
     func animationing() {
+        UIView.animate(withDuration: 0.35, delay: 0, options: .allowUserInteraction, animations: {
+            self.scrollView.contentInset = UIEdgeInsetsMake(self.sourceContentInset.top, self.sourceContentInset.left, self.sourceContentInset.bottom + RefreshKey.kContentOffsetMax, self.sourceContentInset.right)
+        }, completion: { (finished) in
+            
+        })
     }
     
     func willAnimation() {

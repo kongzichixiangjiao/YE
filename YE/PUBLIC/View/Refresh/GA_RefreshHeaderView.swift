@@ -68,32 +68,27 @@ class GA_RefreshHeaderView: GA_RefreshBaseView {
             }
             if (self.state != .start && self.state != .ing) {
                 if (y >= 0) {
-                    print("ed -- \(self.state)")
                     self.state = .ed
                 } else {
                     if (self.state == .ed || self.state == .normal) {
-                        print("pull -- \(self.state)")
                         self.state = .pull
                     }
                 }
                 
                 if -y >= RefreshKey.kContentOffsetMax && self.state != .normal {
                     self.state = .will
-                    print("will -- \(self.state)")
                 } else {
                     if -y <= RefreshKey.kContentInsetTop && self.state != .ed {
-                        print("pull1 -- \(self.state)")
                         self.state = .pull
                     }
                 }
             } else {
                 if self.scrollView.contentInset.top == RefreshKey.kContentInsetTop && self.state != .ing {
-                    print("end -- \(self.state)")
+                    
                     self.state = .ed
                 } else {
                     if self.state == .ing && self.scrollView.contentInset.top == 0 {
                         self.state = .ed
-                        print("return ed -- \(self.state)")
                     }
                 }
             }
@@ -102,16 +97,13 @@ class GA_RefreshHeaderView: GA_RefreshBaseView {
             if !self.scrollView.isDragging {
                 if self.state == .will {
                     self.state = .start
-                    print("start -- \(self.state)")
                 } else {
                     if self.state == .start {
                         self.state = .ing
-                        print("ing -- \(self.state)")
                     } else {
                         if self.scrollView.contentInset.top == 0 {
                             self.state = .ed
                         }
-                        print("else ing -- \(self.state)")
                     }
                 }
             }

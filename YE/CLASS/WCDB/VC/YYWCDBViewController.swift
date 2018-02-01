@@ -53,7 +53,7 @@ class YYWCDBViewController: YYBaseViewController {
         print(objects11.first?.description ?? "--")
         
         try! database.delete(fromTable: kSampleTable)
-        
+   
     }
 
     override func didReceiveMemoryWarning() {

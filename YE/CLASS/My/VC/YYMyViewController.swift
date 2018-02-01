@@ -124,7 +124,9 @@ extension YYMyViewController {
         if dic[YYKey.myTitle] as! String == "WCDB" {
             push(YYWCDBViewController())
         }
-        
+        if dic[YYKey.myTitle] as! String == "LockLock" {
+            push(YYLockViewController())
+        }
         
         tableView.deselectRow(at: indexPath, animated: true)
     }
