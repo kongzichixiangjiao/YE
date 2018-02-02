@@ -90,7 +90,6 @@ class YYWebView: UIView {
             }
         }
     }
-    
 
     override func addObserver(_ observer: NSObject, forKeyPath keyPath: String, options: NSKeyValueObservingOptions = [], context: UnsafeMutableRawPointer?) {
         if (keyPath == kEstimatedProgress) {

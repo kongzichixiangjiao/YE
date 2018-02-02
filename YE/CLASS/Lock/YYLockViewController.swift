@@ -21,8 +21,7 @@ class YYLockViewController: YYBaseViewController {
 //        let request = URLRequest(url: url!)
 //        webView.load(request)
         
-        let webView = YYWebView(frame: self.view.bounds, url: "", fileName: "home")
-        webView.backgroundColor = UIColor.lightGray
+        let webView = YYWebView(frame: self.view.bounds, url: "", fileName: "signUp")
         self.view.addSubview(webView)
         
 //        lock()
