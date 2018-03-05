@@ -38,7 +38,6 @@ class YYHomeTopView: YYBaseView {
     func initViews() {
         initCircleScrollView()
         initModuleSelectedView()
-        initScrollTextView()
     }
     
     func initCircleScrollView() {
@@ -57,11 +56,17 @@ class YYHomeTopView: YYBaseView {
         }
         self.addSubview(v)
         v.data = self.data
+        
+        initScrollTextView()
     }
     
     func initScrollTextView() {
-        let s = UIView(frame: CGRect(x: 0, y: kYYCircleScrollViewHeight + kYYModuleSelectedCellHeight, width: self.frame.size.width, height: 40))
-        s.backgroundColor = UIColor.orange
+        let model = YYScrollADViewModel()
+        model.text = "举起酒杯 干了欢乐泪水 不同的你我 真心面对 啊 真心面对"
+        let model1 = YYScrollADViewModel()
+        model1.text = "征途漫漫 和你一起追 生命这一刻 一起高飞 啊 一起高飞"
+        let s = YYScrollADView(frame: CGRect(x: 0, y: kYYCircleScrollViewHeight + kYYModuleSelectedCellHeight, width: self.frame.size.width, height: kYYScrollADViewHeight), models: [model, model1])
+        
         self.addSubview(s)
     }
     

@@ -249,6 +249,7 @@
 		DC61E4BE204926B500CBA4F6 /* zz_alumb_rightCell.png in Resources */ = {isa = PBXBuildFile; fileRef = DC61E4AF204926B500CBA4F6 /* zz_alumb_rightCell.png */; };
 		DC61E4C120494CC000CBA4F6 /* YYCameraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC61E4BF20494CC000CBA4F6 /* YYCameraCell.swift */; };
 		DC61E4C220494CC000CBA4F6 /* YYCameraCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC61E4C020494CC000CBA4F6 /* YYCameraCell.xib */; };
+		DC61E4C4204CDB4800CBA4F6 /* YYScrollADView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC61E4C3204CDB4800CBA4F6 /* YYScrollADView.swift */; };
 		DC65BD5D1FD8E16F00204B7E /* YYRxMVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC65BD5B1FD8E16F00204B7E /* YYRxMVCViewController.swift */; };
 		DC65BD5E1FD8E16F00204B7E /* YYRxMVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC65BD5C1FD8E16F00204B7E /* YYRxMVCViewController.xib */; };
 		DC65BD601FD8E2A500204B7E /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC65BD5F1FD8E2A500204B7E /* Repository.swift */; };
@@ -685,6 +686,7 @@
 		DC61E4AF204926B500CBA4F6 /* zz_alumb_rightCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zz_alumb_rightCell.png; sourceTree = "<group>"; };
 		DC61E4BF20494CC000CBA4F6 /* YYCameraCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYCameraCell.swift; sourceTree = "<group>"; };
 		DC61E4C020494CC000CBA4F6 /* YYCameraCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYCameraCell.xib; sourceTree = "<group>"; };
+		DC61E4C3204CDB4800CBA4F6 /* YYScrollADView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYScrollADView.swift; sourceTree = "<group>"; };
 		DC65BD5B1FD8E16F00204B7E /* YYRxMVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYRxMVCViewController.swift; sourceTree = "<group>"; };
 		DC65BD5C1FD8E16F00204B7E /* YYRxMVCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYRxMVCViewController.xib; sourceTree = "<group>"; };
 		DC65BD5F1FD8E2A500204B7E /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
@@ -1875,6 +1877,7 @@
 				DC619CFC1FE7B43B00C05E9D /* YYToast.swift */,
 				DC810E861FE26F75000D1C19 /* YYWaterView.swift */,
 				94D389211F39C23900F974A6 /* YYWebView.swift */,
+				DC61E4C3204CDB4800CBA4F6 /* YYScrollADView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2955,6 +2958,7 @@
 				DCA8A4AD1FD808E80042537E /* API.swift in Sources */,
 				DCFC30771FFB5D8900B2801E /* YYAlertTextView.swift in Sources */,
 				94D38A0B1F39C23A00F974A6 /* YYIMConversationViewController.swift in Sources */,
+				DC61E4C4204CDB4800CBA4F6 /* YYScrollADView.swift in Sources */,
 				949634581F41875D0079886E /* YYCompetitionViewController.swift in Sources */,
 				94D389B31F39C23A00F974A6 /* UIColor+Extension.swift in Sources */,
 				DC10DE021FEA486A00770158 /* YYMainRootViewController.swift in Sources */,
