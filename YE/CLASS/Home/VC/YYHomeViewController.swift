@@ -61,7 +61,6 @@ class YYChildTestView: YYTestView {
             object_setIvar(father, ivar, 333)
             print(father.description)
         }
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -195,7 +194,7 @@ class YYHomeViewController: YYBaseTableViewController {
         self.myTitle = "首页"
         self.leftButtonTitle = "home_nav_scan"
         self.setupRightButton(.details)
-        self.setupOtherRightButton()
+        self.setupOtherRightButton(title: "播放器")
     }
         
     override func initTableView() {
@@ -212,7 +211,7 @@ class YYHomeViewController: YYBaseTableViewController {
     func initTableViewHeaderView() -> UIView {
         let w: CGFloat = tableView.frame.size.width
         
-        let tableHeaderView = YYHomeTopView(frame: CGRect(x: 0, y: 0, width: w, height: kYYCircleScrollViewHeight + kYYModuleSelectedCellHeight + 10)) {
+        let tableHeaderView = YYHomeTopView(frame: CGRect(x: 0, y: 0, width: w, height: YYHomeTopView.height + 10)) {
             [weak self] row in
             if let weakSelf = self {
                 weakSelf.topViewModuleSelected(row)

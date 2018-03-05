@@ -98,8 +98,8 @@ class YYBaseViewController: UIViewController {
         navigationView.setupRightButton(type)
     }
     
-    open func setupOtherRightButton() {
-        navigationView.setupOtherRightButton()
+    open func setupOtherRightButton(title: String) {
+        navigationView.setupOtherRightButton(title: title)
     }
     
     override func didReceiveMemoryWarning() {

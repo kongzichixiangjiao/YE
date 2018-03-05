@@ -47,6 +47,7 @@ class YYCompetitionViewController: YYBaseTableViewController {
     func initNavigationView() {
         self.myTitle = "赛事"
         self.isHiddenLeftButton = true
+        self.setupOtherRightButton(title: "连拍")
     }
     
     override func initTableView() {
@@ -56,6 +57,10 @@ class YYCompetitionViewController: YYBaseTableViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.showsVerticalScrollIndicator = true 
         registerNibWithIdentifier(YYCompetitionCell.identifier)
+    }
+    
+    override func clickedNavigationViewOtherRightButton(_ sender: UIButton) {
+        push(YYCameraViewController())
     }
     
     func requestMoreData() {

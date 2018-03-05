@@ -231,6 +231,24 @@
 		DC619CF01FE7B0CB00C05E9D /* YYBaseTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC619CEF1FE7B0CB00C05E9D /* YYBaseTabBarView.swift */; };
 		DC619CF21FE7B0E500C05E9D /* YYBaseTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC619CF11FE7B0E500C05E9D /* YYBaseTabBarView.xib */; };
 		DC619CFD1FE7B43C00C05E9D /* YYToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC619CFC1FE7B43B00C05E9D /* YYToast.swift */; };
+		DC61E49F2048F87300CBA4F6 /* YYCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC61E49E2048F87300CBA4F6 /* YYCameraViewController.swift */; };
+		DC61E4B0204926B500CBA4F6 /* back_button_normal.png in Resources */ = {isa = PBXBuildFile; fileRef = DC61E4A1204926B500CBA4F6 /* back_button_normal.png */; };
+		DC61E4B1204926B500CBA4F6 /* back_button_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC61E4A2204926B500CBA4F6 /* back_button_normal@2x.png */; };
+		DC61E4B2204926B500CBA4F6 /* camera_focus_pic.png in Resources */ = {isa = PBXBuildFile; fileRef = DC61E4A3204926B500CBA4F6 /* camera_focus_pic.png */; };
+		DC61E4B3204926B500CBA4F6 /* change_camera_pic.png in Resources */ = {isa = PBXBuildFile; fileRef = DC61E4A4204926B500CBA4F6 /* change_camera_pic.png */; };
+		DC61E4B4204926B500CBA4F6 /* flash_close_pic.png in Resources */ = {isa = PBXBuildFile; fileRef = DC61E4A5204926B500CBA4F6 /* flash_close_pic.png */; };
+		DC61E4B5204926B500CBA4F6 /* flash_open_pic.png in Resources */ = {isa = PBXBuildFile; fileRef = DC61E4A6204926B500CBA4F6 /* flash_open_pic.png */; };
+		DC61E4B6204926B500CBA4F6 /* no_data.png in Resources */ = {isa = PBXBuildFile; fileRef = DC61E4A7204926B500CBA4F6 /* no_data.png */; };
+		DC61E4B7204926B500CBA4F6 /* photo_add.png in Resources */ = {isa = PBXBuildFile; fileRef = DC61E4A8204926B500CBA4F6 /* photo_add.png */; };
+		DC61E4B8204926B500CBA4F6 /* remove_btn_pic.png in Resources */ = {isa = PBXBuildFile; fileRef = DC61E4A9204926B500CBA4F6 /* remove_btn_pic.png */; };
+		DC61E4B9204926B500CBA4F6 /* select_no.png in Resources */ = {isa = PBXBuildFile; fileRef = DC61E4AA204926B500CBA4F6 /* select_no.png */; };
+		DC61E4BA204926B500CBA4F6 /* select_yes.png in Resources */ = {isa = PBXBuildFile; fileRef = DC61E4AB204926B500CBA4F6 /* select_yes.png */; };
+		DC61E4BB204926B500CBA4F6 /* take_photo_pic.png in Resources */ = {isa = PBXBuildFile; fileRef = DC61E4AC204926B500CBA4F6 /* take_photo_pic.png */; };
+		DC61E4BC204926B500CBA4F6 /* take_photo_pic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DC61E4AD204926B500CBA4F6 /* take_photo_pic@2x.png */; };
+		DC61E4BD204926B500CBA4F6 /* trash_btn_pic.png in Resources */ = {isa = PBXBuildFile; fileRef = DC61E4AE204926B500CBA4F6 /* trash_btn_pic.png */; };
+		DC61E4BE204926B500CBA4F6 /* zz_alumb_rightCell.png in Resources */ = {isa = PBXBuildFile; fileRef = DC61E4AF204926B500CBA4F6 /* zz_alumb_rightCell.png */; };
+		DC61E4C120494CC000CBA4F6 /* YYCameraCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC61E4BF20494CC000CBA4F6 /* YYCameraCell.swift */; };
+		DC61E4C220494CC000CBA4F6 /* YYCameraCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC61E4C020494CC000CBA4F6 /* YYCameraCell.xib */; };
 		DC65BD5D1FD8E16F00204B7E /* YYRxMVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC65BD5B1FD8E16F00204B7E /* YYRxMVCViewController.swift */; };
 		DC65BD5E1FD8E16F00204B7E /* YYRxMVCViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC65BD5C1FD8E16F00204B7E /* YYRxMVCViewController.xib */; };
 		DC65BD601FD8E2A500204B7E /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC65BD5F1FD8E2A500204B7E /* Repository.swift */; };
@@ -649,6 +667,24 @@
 		DC619CEF1FE7B0CB00C05E9D /* YYBaseTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYBaseTabBarView.swift; sourceTree = "<group>"; };
 		DC619CF11FE7B0E500C05E9D /* YYBaseTabBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYBaseTabBarView.xib; sourceTree = "<group>"; };
 		DC619CFC1FE7B43B00C05E9D /* YYToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYToast.swift; sourceTree = "<group>"; };
+		DC61E49E2048F87300CBA4F6 /* YYCameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYCameraViewController.swift; sourceTree = "<group>"; };
+		DC61E4A1204926B500CBA4F6 /* back_button_normal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_button_normal.png; sourceTree = "<group>"; };
+		DC61E4A2204926B500CBA4F6 /* back_button_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_button_normal@2x.png"; sourceTree = "<group>"; };
+		DC61E4A3204926B500CBA4F6 /* camera_focus_pic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera_focus_pic.png; sourceTree = "<group>"; };
+		DC61E4A4204926B500CBA4F6 /* change_camera_pic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = change_camera_pic.png; sourceTree = "<group>"; };
+		DC61E4A5204926B500CBA4F6 /* flash_close_pic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flash_close_pic.png; sourceTree = "<group>"; };
+		DC61E4A6204926B500CBA4F6 /* flash_open_pic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = flash_open_pic.png; sourceTree = "<group>"; };
+		DC61E4A7204926B500CBA4F6 /* no_data.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no_data.png; sourceTree = "<group>"; };
+		DC61E4A8204926B500CBA4F6 /* photo_add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo_add.png; sourceTree = "<group>"; };
+		DC61E4A9204926B500CBA4F6 /* remove_btn_pic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = remove_btn_pic.png; sourceTree = "<group>"; };
+		DC61E4AA204926B500CBA4F6 /* select_no.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select_no.png; sourceTree = "<group>"; };
+		DC61E4AB204926B500CBA4F6 /* select_yes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = select_yes.png; sourceTree = "<group>"; };
+		DC61E4AC204926B500CBA4F6 /* take_photo_pic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = take_photo_pic.png; sourceTree = "<group>"; };
+		DC61E4AD204926B500CBA4F6 /* take_photo_pic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "take_photo_pic@2x.png"; sourceTree = "<group>"; };
+		DC61E4AE204926B500CBA4F6 /* trash_btn_pic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trash_btn_pic.png; sourceTree = "<group>"; };
+		DC61E4AF204926B500CBA4F6 /* zz_alumb_rightCell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zz_alumb_rightCell.png; sourceTree = "<group>"; };
+		DC61E4BF20494CC000CBA4F6 /* YYCameraCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYCameraCell.swift; sourceTree = "<group>"; };
+		DC61E4C020494CC000CBA4F6 /* YYCameraCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYCameraCell.xib; sourceTree = "<group>"; };
 		DC65BD5B1FD8E16F00204B7E /* YYRxMVCViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYRxMVCViewController.swift; sourceTree = "<group>"; };
 		DC65BD5C1FD8E16F00204B7E /* YYRxMVCViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYRxMVCViewController.xib; sourceTree = "<group>"; };
 		DC65BD5F1FD8E2A500204B7E /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
@@ -1013,6 +1049,7 @@
 		94D388CE1F39C23900F974A6 /* SOURCE */ = {
 			isa = PBXGroup;
 			children = (
+				DC61E4A0204926B500CBA4F6 /* CAMERA */,
 				DC78ED632022AD4F00962369 /* HTML */,
 				94D388F21F39C23900F974A6 /* PLIST */,
 				DC6013F51FFF4BD20051D76D /* IMAGE */,
@@ -1456,6 +1493,8 @@
 			children = (
 				9496345A1F41880F0079886E /* YYCompetitionCell.swift */,
 				9496345B1F41880F0079886E /* YYCompetitionCell.xib */,
+				DC61E4BF20494CC000CBA4F6 /* YYCameraCell.swift */,
+				DC61E4C020494CC000CBA4F6 /* YYCameraCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1472,6 +1511,7 @@
 			isa = PBXGroup;
 			children = (
 				949634571F41875D0079886E /* YYCompetitionViewController.swift */,
+				DC61E49E2048F87300CBA4F6 /* YYCameraViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -1874,6 +1914,28 @@
 				DC10DDFC1FEA12E500770158 /* YYTabBar.swift */,
 			);
 			path = tabBarView;
+			sourceTree = "<group>";
+		};
+		DC61E4A0204926B500CBA4F6 /* CAMERA */ = {
+			isa = PBXGroup;
+			children = (
+				DC61E4A1204926B500CBA4F6 /* back_button_normal.png */,
+				DC61E4A2204926B500CBA4F6 /* back_button_normal@2x.png */,
+				DC61E4A3204926B500CBA4F6 /* camera_focus_pic.png */,
+				DC61E4A4204926B500CBA4F6 /* change_camera_pic.png */,
+				DC61E4A5204926B500CBA4F6 /* flash_close_pic.png */,
+				DC61E4A6204926B500CBA4F6 /* flash_open_pic.png */,
+				DC61E4A7204926B500CBA4F6 /* no_data.png */,
+				DC61E4A8204926B500CBA4F6 /* photo_add.png */,
+				DC61E4A9204926B500CBA4F6 /* remove_btn_pic.png */,
+				DC61E4AA204926B500CBA4F6 /* select_no.png */,
+				DC61E4AB204926B500CBA4F6 /* select_yes.png */,
+				DC61E4AC204926B500CBA4F6 /* take_photo_pic.png */,
+				DC61E4AD204926B500CBA4F6 /* take_photo_pic@2x.png */,
+				DC61E4AE204926B500CBA4F6 /* trash_btn_pic.png */,
+				DC61E4AF204926B500CBA4F6 /* zz_alumb_rightCell.png */,
+			);
+			path = CAMERA;
 			sourceTree = "<group>";
 		};
 		DC65BD571FD8E13F00204B7E /* RxMVC */ = {
@@ -2538,6 +2600,7 @@
 				DC6770C31FD697D400E79A07 /* Player_center_play.png in Resources */,
 				DC6770C11FD697D400E79A07 /* Player_brightness.png in Resources */,
 				DCFC30801FFB5DC500B2801E /* YYAlertTextViewController.xib in Resources */,
+				DC61E4C220494CC000CBA4F6 /* YYCameraCell.xib in Resources */,
 				94D38A551F39C23A00F974A6 /* YYCompetitionListCell.xib in Resources */,
 				DCD4BDB72004BE2400094947 /* YYTargetTransitionViewController.xib in Resources */,
 				DCA3884E1FE51DAF008BA1C4 /* AnimationBaseViewController.xib in Resources */,
@@ -2549,6 +2612,7 @@
 				DC7E7FCB1FD91D6B00859B00 /* YYRxMVVMViewController.xib in Resources */,
 				DC619CF21FE7B0E500C05E9D /* YYBaseTabBarView.xib in Resources */,
 				94D38A4F1F39C23A00F974A6 /* YYCompetitionCommentSectionView.xib in Resources */,
+				DC61E4B4204926B500CBA4F6 /* flash_close_pic.png in Resources */,
 				DC75E40A1FD12AA400332BE5 /* LYPlayer_fullscreen.png in Resources */,
 				DC3858EA1FC7E8B700244649 /* yy_rsa_public_key.pem in Resources */,
 				94D38A531F39C23A00F974A6 /* YYCompetitionDetailsHeaderView.xib in Resources */,
@@ -2557,7 +2621,9 @@
 				DCFC30951FFB7E5C00B2801E /* YYAlertRootCell.xib in Resources */,
 				94D38A241F39C23A00F974A6 /* YYApplyHeaderView.xib in Resources */,
 				DC60140C1FFF4BD20051D76D /* 22.JPG in Resources */,
+				DC61E4B8204926B500CBA4F6 /* remove_btn_pic.png in Resources */,
 				94D389D71F39C23A00F974A6 /* comment.plist in Resources */,
+				DC61E4B5204926B500CBA4F6 /* flash_open_pic.png in Resources */,
 				94D38A3F1F39C23A00F974A6 /* YYIMGroupInfoSectionView.xib in Resources */,
 				94D38A4B1F39C23A00F974A6 /* YYActivityListCell.xib in Resources */,
 				94D38A3D1F39C23A00F974A6 /* YYIMGroupInfoCell.xib in Resources */,
@@ -2566,12 +2632,15 @@
 				DC3858E91FC7E8B700244649 /* yy_private_key.pem in Resources */,
 				94D38A371F39C23A00F974A6 /* YYIMDetailsAddFriendButton.xib in Resources */,
 				94D38A571F39C23A00F974A6 /* YYCompetitionReplyCell.xib in Resources */,
+				DC61E4B0204926B500CBA4F6 /* back_button_normal.png in Resources */,
 				DCD4BDB52004BE2400094947 /* YYSourceTransitionViewController.xib in Resources */,
 				DCA8A4B41FD808E80042537E /* j.xcworkspace in Resources */,
+				DC61E4BA204926B500CBA4F6 /* select_yes.png in Resources */,
 				94D38A611F39C2F600F974A6 /* Main.storyboard in Resources */,
 				DC6014171FFF4BD20051D76D /* IMG_2787.jpg in Resources */,
 				DC75E4101FD12AA400332BE5 /* LYPlayer_top_shadel.png in Resources */,
 				DCFC30751FFB5D8900B2801E /* YYAlertSelectedTableViewHeaderView.xib in Resources */,
+				DC61E4B1204926B500CBA4F6 /* back_button_normal@2x.png in Resources */,
 				94D389A71F39C23A00F974A6 /* YYBaseNavigationViewTextButton.xib in Resources */,
 				94D389AB1F39C23A00F974A6 /* YYBaseTableViewFooterView.xib in Resources */,
 				94D38A321F39C23A00F974A6 /* YYHomeSectionView.xib in Resources */,
@@ -2597,6 +2666,7 @@
 				94D389D61F39C23A00F974A6 /* apply.plist in Resources */,
 				DC6014121FFF4BD20051D76D /* cgts.jpg in Resources */,
 				DC75E4111FD12AA400332BE5 /* LYPlayer_unlock-nor.png in Resources */,
+				DC61E4B7204926B500CBA4F6 /* photo_add.png in Resources */,
 				DC75E40C1FD12AA400332BE5 /* LYPlayer_pause.png in Resources */,
 				94D38A261F39C23A00F974A6 /* YYApplySelectedTableViewCell.xib in Resources */,
 				94D38A601F39C2F600F974A6 /* LaunchScreen.storyboard in Resources */,
@@ -2605,6 +2675,7 @@
 				DC74B8831FDA2DD100640964 /* YYRxSwiftViewCell.xib in Resources */,
 				DC8A700A1FD4F8EE006D22D6 /* LYPlayer_center_pause.png in Resources */,
 				DC6770C21FD697D400E79A07 /* Player_center_pause.png in Resources */,
+				DC61E4B9204926B500CBA4F6 /* select_no.png in Resources */,
 				DC6770BF1FD697D400E79A07 /* Player_back_full.png in Resources */,
 				DC60140D1FFF4BD20051D76D /* 3.jpg in Resources */,
 				DC75E3E21FD107BC00332BE5 /* YYPlayerViewController.xib in Resources */,
@@ -2621,6 +2692,7 @@
 				DC6770C71FD697D400E79A07 /* Player_play.png in Resources */,
 				DC6014181FFF4BD20051D76D /* IMG_2898.jpg in Resources */,
 				94D38A0F1F39C23A00F974A6 /* YYIMCreatChatRoomViewController.xib in Resources */,
+				DC61E4BE204926B500CBA4F6 /* zz_alumb_rightCell.png in Resources */,
 				DC6770C41FD697D400E79A07 /* Player_fullscreen.png in Resources */,
 				94D38A2E1F39C23A00F974A6 /* YYModuleSelectedCell.xib in Resources */,
 				DC5DBDE01FFCA7440089573C /* YYAlertSheetViewController.xib in Resources */,
@@ -2628,16 +2700,20 @@
 				94D389D91F39C23A00F974A6 /* my.plist in Resources */,
 				94D389D81F39C23A00F974A6 /* IMGroupSetting.plist in Resources */,
 				DC60140E1FFF4BD20051D76D /* 4.jpg in Resources */,
+				DC61E4BB204926B500CBA4F6 /* take_photo_pic.png in Resources */,
 				DC3858FC1FC7E9D100244649 /* YYCircleScrollCollectionCell.xib in Resources */,
 				94D389DA1F39C23A00F974A6 /* setting.plist in Resources */,
 				94D38A481F39C23A00F974A6 /* YYSettingCell.xib in Resources */,
+				DC61E4B6204926B500CBA4F6 /* no_data.png in Resources */,
 				94D389A61F39C23A00F974A6 /* YYBaseNavigationViewServiceButton.xib in Resources */,
 				DC75E40E1FD12AA400332BE5 /* LYPlayer_shrinkscreen.png in Resources */,
 				DC7A49CA1FCF95870028F308 /* YYSwiftDateViewController.xib in Resources */,
 				DCDAF7DD1FDE2F5F00E7CE3A /* YYRxSwfitLoginViewController.xib in Resources */,
 				DC6770C51FD697D400E79A07 /* Player_lock-nor.png in Resources */,
 				DCAB5CD420033B4600A8CD87 /* YYActivityHeaderView.xib in Resources */,
+				DC61E4B2204926B500CBA4F6 /* camera_focus_pic.png in Resources */,
 				DC65BD5E1FD8E16F00204B7E /* YYRxMVCViewController.xib in Resources */,
+				DC61E4BD204926B500CBA4F6 /* trash_btn_pic.png in Resources */,
 				94D38A341F39C23A00F974A6 /* YYConversationCell.xib in Resources */,
 				DC6770C61FD697D400E79A07 /* Player_pause.png in Resources */,
 				DC10DE001FEA46AB00770158 /* MainRoot.storyboard in Resources */,
@@ -2649,7 +2725,9 @@
 				94D38A221F39C23A00F974A6 /* YYApplyAddImageTableViewCell.xib in Resources */,
 				94D389A41F39C23A00F974A6 /* YYBaseNavigationViewImageButton.xib in Resources */,
 				DC60141D1FFF4BD20051D76D /* IMG_8227.JPG in Resources */,
+				DC61E4BC204926B500CBA4F6 /* take_photo_pic@2x.png in Resources */,
 				94D38A411F39C23A00F974A6 /* YYIMGroupInfoSettingButtonCell.xib in Resources */,
+				DC61E4B3204926B500CBA4F6 /* change_camera_pic.png in Resources */,
 				DCFC30731FFB5D8900B2801E /* YYAlertSelectedCell.xib in Resources */,
 				94D38A451F39C23A00F974A6 /* YYMyBasicCell.xib in Resources */,
 			);
@@ -2793,6 +2871,7 @@
 				94D389EB1F39C23A00F974A6 /* GA_AnimationRefreshHeaderView.swift in Sources */,
 				DC563479200712E900A07E8E /* AppDelegate+WCDB.swift in Sources */,
 				94D389E91F39C23A00F974A6 /* YYPagingHeaderScrollView.swift in Sources */,
+				DC61E49F2048F87300CBA4F6 /* YYCameraViewController.swift in Sources */,
 				DC7A49D31FCFFAD80028F308 /* YYModel+Extension.swift in Sources */,
 				DC75E3D51FD0FE1A00332BE5 /* YYPlayerView.swift in Sources */,
 				DC74B8841FDA2DD100640964 /* YYRxSwiftViewModel.swift in Sources */,
@@ -2969,6 +3048,7 @@
 				DCA8A4B81FD808E80042537E /* ViewModelProtocol.swift in Sources */,
 				DCD4BDBC2004C0D300094947 /* YYWCDBViewController.swift in Sources */,
 				94D38A251F39C23A00F974A6 /* YYApplySelectedTableViewCell.swift in Sources */,
+				DC61E4C120494CC000CBA4F6 /* YYCameraCell.swift in Sources */,
 				94D389FC1F39C23A00F974A6 /* YYSpaceCell.swift in Sources */,
 				DCA8A4B91FD808E80042537E /* ViewModelService.swift in Sources */,
 				DC75E3F81FD12A1E00332BE5 /* LYPlayerGesture.swift in Sources */,

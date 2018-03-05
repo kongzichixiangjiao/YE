@@ -10,6 +10,7 @@ import UIKit
 
 class YYHomeTopView: YYBaseView {
 
+    static let height = kYYCircleScrollViewHeight + kYYModuleSelectedCellHeight + 40
     var didSelectItemAtHandler: YYModuleSelectedView.DidSelectItemAtHandler?
     
     var imageNames: [String]? {
@@ -37,6 +38,7 @@ class YYHomeTopView: YYBaseView {
     func initViews() {
         initCircleScrollView()
         initModuleSelectedView()
+        initScrollTextView()
     }
     
     func initCircleScrollView() {
@@ -55,6 +57,12 @@ class YYHomeTopView: YYBaseView {
         }
         self.addSubview(v)
         v.data = self.data
+    }
+    
+    func initScrollTextView() {
+        let s = UIView(frame: CGRect(x: 0, y: kYYCircleScrollViewHeight + kYYModuleSelectedCellHeight, width: self.frame.size.width, height: 40))
+        s.backgroundColor = UIColor.orange
+        self.addSubview(s)
     }
     
     required init?(coder aDecoder: NSCoder) {

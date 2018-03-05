@@ -186,10 +186,10 @@ class YYBaseNavigationView: YYBaseView {
         self.rightButton = b
     }
     
-    func setupOtherRightButton() {
+    func setupOtherRightButton(title: String) {
         let b = UIButton()
         b.frame = CGRect(x: self.frame.size.width - YYBaseNavigationView.bW*2 - space*2 , y: self.frame.size.height - YYBaseNavigationView.bH, width: YYBaseNavigationView.bOtherW, height: YYBaseNavigationView.bH)
-        b.setTitle("other", for: .normal)
+        b.setTitle(title, for: .normal)
         b.setTitleColor(UIColor.black, for: .normal)
         b.titleLabel?.font = UIFont.systemFont(ofSize: 12)
         b.addTarget(self, action: #selector(rightOtherButtonAction(_:)), for: .touchUpInside)
