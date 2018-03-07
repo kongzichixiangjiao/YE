@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum YYCollectionViewKind: String {
+    case header = "header", footer = "footer"
+}
+
 class YYBaseCollectionViewController: YYBaseViewController {
     
     open var dataSource: [Any] = []
@@ -45,13 +49,18 @@ class YYBaseCollectionViewController: YYBaseViewController {
         collectionView.register(NSClassFromString(classString), forCellWithReuseIdentifier: classString)
     }
     
-    func registerNib(_ nibString: String){
+    func registerNib(_ nibString: String) {
         collectionView.register(UINib(nibName: nibString, bundle: nil), forCellWithReuseIdentifier: nibString)
     }
     
+    func registerNibSection(_ nibString: String, kind: String) {
+        collectionView.register(UINib(nibName: nibString, bundle: nil), forSupplementaryViewOfKind: kind, withReuseIdentifier: nibString)
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        initCollectionView()
+        
         self.collectionViewFrameType = .normal44
     }
     

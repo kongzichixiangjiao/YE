@@ -219,9 +219,8 @@ class YYHomeViewController: YYBaseTableViewController {
         }
         tableHeaderView.showLineView(10)
         
-        let imageNames = ["IMG_2787.jpg", "IMG_3260.JPG", "IMG_2719.jpg", "IMG_3027.jpg"]
-        tableHeaderView.imageNames = imageNames
-        tableHeaderView.data = [["title" : "活动", "icon" : "home_middle_activity"], ["title" : "直播", "icon" : "home_middle_live"], ["title" : "周边", "icon" : "home_middle_surrounding"], ["title" : "文章", "icon" : "home_middle_article"]]
+        tableHeaderView.imageNames = ["IMG_2787.jpg", "IMG_3260.JPG", "IMG_2719.jpg", "IMG_3027.jpg", "IMG_3027.jpg"]
+        tableHeaderView.data = [["title" : "活动", "icon" : "home_middle_activity"], ["title" : "直播", "icon" : "home_middle_live"], ["title" : "周边", "icon" : "home_middle_surrounding"], ["title" : "文章", "icon" : "home_middle_article"], ["title" : "首页", "icon" : "home_middle_article"]]
         
         return tableHeaderView
     }
@@ -242,7 +241,7 @@ class YYHomeViewController: YYBaseTableViewController {
             self.push(YYSurroundingListViewController())
             break
         case 4:
-            self.push(YYArticleListViewController())
+            self.push(YYJFHomeViewController())
             break
         default:
             break

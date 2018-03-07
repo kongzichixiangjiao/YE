@@ -11,7 +11,7 @@ import UIKit
 public let kYYScrollADViewHeight: CGFloat = 40
 
 enum YYScrollADViewType: Int {
-    case normal = 0, continuous = 1
+    case normal = 0, continuous = 1, normalNeed = 2
 }
 
 enum YYScrollADViewDirection: Int {
@@ -20,8 +20,8 @@ enum YYScrollADViewDirection: Int {
 
 class YYScrollADViewModel {
     var font: UIFont = UIFont.systemFont(ofSize: 12)
-    var direction: YYScrollADViewDirection = .right
-    var type: YYScrollADViewType = .continuous
+    var direction: YYScrollADViewDirection = .left
+    var type: YYScrollADViewType = .normalNeed
     var textWidth: CGFloat = 0
     var text: String = "" {
         didSet {
@@ -34,7 +34,18 @@ class YYScrollADViewModel {
 class YYScrollADView: UIView {
     
     var model: YYScrollADViewModel!
-    var timer: Timer!
+    var timer: Timer?
+    var isShowIcon: Bool = false
+    
+    typealias TouchBeganHandler = () -> ()
+    var touchBeganHandler: TouchBeganHandler?
+    
+    lazy var iconImageView: UIImageView = {
+        let img = UIImage(named: "event_collect")
+        let i = UIImageView(image: img)
+        i.frame = CGRect(x: 0, y: (self.frame.size.height / 2) - (img?.size.height ?? 0) / 2, width: img?.size.width ?? 0, height: img?.size.height ?? 0)
+        return i
+    }()
     
     lazy var textView: UILabel = {
         let l = UILabel(frame: CGRect.zero)
@@ -52,15 +63,27 @@ class YYScrollADView: UIView {
         super.init(frame: frame)
     }
     
-    convenience init(frame: CGRect, models: [YYScrollADViewModel]) {
+    convenience init(frame: CGRect, models: [YYScrollADViewModel], isShowIcon: Bool = false, touchBeganHandler: TouchBeganHandler?) {
         self.init(frame: frame)
         
         self.model = models[0]
         
+        self.isShowIcon = isShowIcon
+        
+        self.touchBeganHandler = touchBeganHandler
+        
         startScroll()
+        
+        showIconImage(isShowIcon: isShowIcon)
     }
     
-    func startScroll() {
+    private func showIconImage(isShowIcon: Bool) {
+        if isShowIcon {
+            self.insertSubview(iconImageView, at: 10)
+        }
+    }
+    
+    private func startScroll() {
         var x: CGFloat = 0
         var xSuffix: CGFloat = 0
         switch model.direction {
@@ -73,6 +96,8 @@ class YYScrollADView: UIView {
                 x = self.frame.size.width
                 xSuffix = self.frame.size.width + model.textWidth
                 break
+            case .normalNeed:
+                x = self.frame.size.width
             }
             break
         case .right:
@@ -83,6 +108,8 @@ class YYScrollADView: UIView {
             case .continuous:
                 x = -model.textWidth
                 xSuffix = -model.textWidth*2
+                break
+            case .normalNeed:
                 break
             }
             break
@@ -95,17 +122,22 @@ class YYScrollADView: UIView {
         
         switch model.type {
         case .normal:
+            timer = Timer(timeInterval: model.speed, target: self, selector: #selector(scroll), userInfo: nil, repeats: true)
+            RunLoop.main.add(timer!, forMode: .commonModes)
             break
         case .continuous:
             textViewSuffix.frame = CGRect(x: xSuffix, y: 0, width: model.textWidth, height: kYYScrollADViewHeight)
-            textViewSuffix.text = "-" + model.text
+            textViewSuffix.text = model.text
             textViewSuffix.font = model.font
             self.addSubview(textViewSuffix)
+            
+            timer = Timer(timeInterval: model.speed, target: self, selector: #selector(scroll), userInfo: nil, repeats: true)
+            RunLoop.main.add(timer!, forMode: .commonModes)
+            break
+        case .normalNeed:
+            leftNormalNeed()
             break
         }
-        
-        timer = Timer(timeInterval: model.speed, target: self, selector: #selector(scroll), userInfo: nil, repeats: true)
-        RunLoop.main.add(timer, forMode: .commonModes)
     }
     
     @objc func scroll() {
@@ -118,6 +150,9 @@ class YYScrollADView: UIView {
             case .continuous:
                 leftContinuous()
                 break
+            case .normalNeed:
+                leftNormalNeed()
+                break
             }
             break
         case .right:
@@ -128,12 +163,14 @@ class YYScrollADView: UIView {
             case .continuous:
                 rightContinuous()
                 break
+            case .normalNeed:
+                break
             }
             break
         }
     }
     
-    func rightNormal() {
+    private func rightNormal() {
         textView.frame = CGRect(x: textView.frame.origin.x + 1, y: 0, width: model.textWidth, height: kYYScrollADViewHeight)
         
         if (textView.frame.origin.x > self.frame.size.width) {
@@ -141,7 +178,7 @@ class YYScrollADView: UIView {
         }
     }
     
-    func rightContinuous() {
+    private func rightContinuous() {
         textView.frame = CGRect(x: textView.frame.origin.x + 1, y: 0, width: model.textWidth, height: kYYScrollADViewHeight)
         textViewSuffix.frame = CGRect(x: textViewSuffix.frame.origin.x + 1, y: 0, width: model.textWidth, height: kYYScrollADViewHeight)
         
@@ -153,7 +190,7 @@ class YYScrollADView: UIView {
         }
     }
     
-    func leftNormal() {
+    private func leftNormal() {
         textView.frame = CGRect(x: textView.frame.origin.x - 1, y: 0, width: model.textWidth, height: kYYScrollADViewHeight)
         
         if (-textView.frame.origin.x > model.textWidth) {
@@ -161,7 +198,7 @@ class YYScrollADView: UIView {
         }
     }
     
-    func leftContinuous() {
+    private func leftContinuous() {
         textView.frame = CGRect(x: textView.frame.origin.x - 1, y: 0, width: model.textWidth, height: kYYScrollADViewHeight)
         textViewSuffix.frame = CGRect(x: textViewSuffix.frame.origin.x - 1, y: 0, width: model.textWidth, height: kYYScrollADViewHeight)
         
@@ -173,20 +210,24 @@ class YYScrollADView: UIView {
         }
     }
     
-    /*
-     // 001
-    @objc func scroll() {
+    private func leftNormalNeed() {
         let b = CABasicAnimation(keyPath: "position")
-        b.fromValue = NSValue(cgPoint: CGPoint(x: self.frame.size.width + model.textWidth, y: kYYScrollADViewHeight / 2))
-        b.toValue = NSValue(cgPoint: CGPoint(x: -self.model.textWidth, y: kYYScrollADViewHeight / 2))
+        b.fromValue = NSValue(cgPoint: CGPoint(x: self.frame.size.width + model.textWidth / 2, y: kYYScrollADViewHeight / 2))
+        b.toValue = NSValue(cgPoint: CGPoint(x: self.frame.size.width - model.textWidth / 2, y: kYYScrollADViewHeight / 2))
+        b.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
         b.repeatCount = MAXFLOAT
         b.duration = 5
         textView.layer.add(b, forKey: "p")
     }
-    */
     
-    func stopScroll() {
-        self.timer.invalidate()
+    public func refresh(text: String) {
+        model.text = text 
+        textView.layer.removeAnimation(forKey: "p")
+        startScroll()
+    }
+    
+    private func stopScroll() {
+        self.timer?.invalidate()
     }
     
     deinit {
@@ -197,64 +238,9 @@ class YYScrollADView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        touchBeganHandler?()
+    }
+    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
