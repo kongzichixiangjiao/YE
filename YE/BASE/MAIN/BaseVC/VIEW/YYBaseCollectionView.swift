@@ -52,7 +52,6 @@ class YYCollectionLayout: UICollectionViewFlowLayout {
     var itemSpace: CGFloat = 0
     var isHorizontal: Bool = true
     var myMinimumLineSpacing: CGFloat = 0
-    var mymMinimumLineSpacing: CGFloat = 0
     
     override func prepare() {
         super.prepare()

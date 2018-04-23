@@ -122,7 +122,8 @@ extension YYMyViewController {
             push(YYAlertRootViewController(nibName: "YYAlertRootViewController", bundle: nil))
         }
         if dic[YYKey.myTitle] as! String == "WCDB" {
-            push(YYWCDBViewController())
+//            push(YYWCDBViewController())
+            self.view.showView("WCDB")
         }
         if dic[YYKey.myTitle] as! String == "LockLock" {
             push(YYLockViewController())

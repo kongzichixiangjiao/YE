@@ -10,4 +10,4 @@
 #endif
 #endif
 
-#import "UIImage+Resource.h"
+#import <UIKit/UIKit.h>

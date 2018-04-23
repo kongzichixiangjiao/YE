@@ -21,8 +21,9 @@ enum YYScrollADViewDirection: Int {
 class YYScrollADViewModel {
     var font: UIFont = UIFont.systemFont(ofSize: 12)
     var direction: YYScrollADViewDirection = .left
-    var type: YYScrollADViewType = .normalNeed
+    var type: YYScrollADViewType = .continuous
     var textWidth: CGFloat = 0
+
     var text: String = "" {
         didSet {
             self.textWidth = (text as NSString).size(withAttributes: [NSAttributedStringKey.font : font]).width
@@ -37,8 +38,17 @@ class YYScrollADView: UIView {
     var timer: Timer?
     var isShowIcon: Bool = false
     
+    private let kTextSpace: CGFloat = 100
+    
     typealias TouchBeganHandler = () -> ()
     var touchBeganHandler: TouchBeganHandler?
+    
+    lazy var bgImageView: UIImageView = {
+        let img = UIImage(named: "home_shadow")
+        let i = UIImageView(image: img)
+        i.frame = CGRect(x: 0, y: 0, width: img?.size.width ?? 0, height: img?.size.height ?? 0)
+        return i
+    }()
     
     lazy var iconImageView: UIImageView = {
         let img = UIImage(named: "event_collect")
@@ -49,7 +59,7 @@ class YYScrollADView: UIView {
     
     lazy var textView: UILabel = {
         let l = UILabel(frame: CGRect.zero)
-        l.backgroundColor = UIColor.yellow
+        l.backgroundColor = UIColor.orange
         return l
     }()
     
@@ -61,6 +71,8 @@ class YYScrollADView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        self.addSubview(bgImageView)
     }
     
     convenience init(frame: CGRect, models: [YYScrollADViewModel], isShowIcon: Bool = false, touchBeganHandler: TouchBeganHandler?) {
@@ -79,7 +91,8 @@ class YYScrollADView: UIView {
     
     private func showIconImage(isShowIcon: Bool) {
         if isShowIcon {
-            self.insertSubview(iconImageView, at: 10)
+//            self.insertSubview(iconImageView, at: 10)
+            self.addSubview(iconImageView)
         }
     }
     
@@ -94,7 +107,7 @@ class YYScrollADView: UIView {
                 break
             case .continuous:
                 x = self.frame.size.width
-                xSuffix = self.frame.size.width + model.textWidth
+                xSuffix = self.frame.size.width + model.textWidth + kTextSpace
                 break
             case .normalNeed:
                 x = self.frame.size.width
@@ -138,6 +151,8 @@ class YYScrollADView: UIView {
             leftNormalNeed()
             break
         }
+        
+        self.insertSubview(iconImageView, at: 10)
     }
     
     @objc func scroll() {
@@ -199,14 +214,22 @@ class YYScrollADView: UIView {
     }
     
     private func leftContinuous() {
-        textView.frame = CGRect(x: textView.frame.origin.x - 1, y: 0, width: model.textWidth, height: kYYScrollADViewHeight)
-        textViewSuffix.frame = CGRect(x: textViewSuffix.frame.origin.x - 1, y: 0, width: model.textWidth, height: kYYScrollADViewHeight)
-        
-        if (-textView.frame.origin.x > model.textWidth) {
-            textView.frame = CGRect(x: self.frame.size.width, y: 0, width: model.textWidth, height: kYYScrollADViewHeight)
+        if (textViewSuffix.frame.origin.x + textViewSuffix.frame.width != 0) {
+            textView.frame = CGRect(x: textView.frame.origin.x - 1, y: 0, width: model.textWidth, height: kYYScrollADViewHeight)
         }
-        if (-textViewSuffix.frame.origin.x > model.textWidth) {
-            textViewSuffix.frame = CGRect(x:  textView.frame.origin.x + model.textWidth, y: 0, width: model.textWidth, height: kYYScrollADViewHeight)
+        if (textView.frame.origin.x + textView.frame.width != 0) {
+            textViewSuffix.frame = CGRect(x: textViewSuffix.frame.origin.x - 1, y: 0, width: model.textWidth, height: kYYScrollADViewHeight)
+        }
+        
+        if (textView.frame.origin.x + textView.width <= 0) {
+            if (textViewSuffix.frame.origin.x + textViewSuffix.width <= self.frame.size.width - kTextSpace) {
+                textView.frame = CGRect(x: self.frame.size.width, y: 0, width: model.textWidth, height: kYYScrollADViewHeight)
+            }
+        }
+        if (textViewSuffix.frame.origin.x + textViewSuffix.frame.width <= 0) {
+            if (textView.frame.origin.x + textView.width <= self.frame.size.width - kTextSpace) {
+                textViewSuffix.frame = CGRect(x: self.frame.size.width, y: 0, width: model.textWidth, height: kYYScrollADViewHeight)
+            }
         }
     }
     

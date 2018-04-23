@@ -105,5 +105,5 @@ pod 'GDPerformanceView-Swift'
 # pod 'fluid-slider'
 
 # 腾讯出品数据库
-pod 'WCDB.swift'
+#pod 'WCDB.swift'
 end

@@ -63,7 +63,7 @@ class YYBaseViewController: UIViewController {
         var insets = UIEdgeInsets.zero
         var height: CGFloat = 64
         if UIDevice.current.isX {
-            if #available(iOS 11.0, *) { // 多余
+            if #available(iOS 11.0, *) { 
                 insets = UIApplication.shared.delegate?.window??.safeAreaInsets ?? UIEdgeInsets.zero
                 height -= kNavigationViewBottomSpace
             }

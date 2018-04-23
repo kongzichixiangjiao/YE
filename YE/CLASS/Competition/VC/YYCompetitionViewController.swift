@@ -34,7 +34,6 @@ class YYCompetitionViewController: YYBaseTableViewController {
                 weakSelf.requestMoreData()
             }
         }
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="YYJFTreasureItemCell" id="gTV-IL-0wX" customClass="YYJFTreasureItemCell" customModule="YE" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="173" height="90"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="173" height="90"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="treasure_item_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Lkt-n5-Wqn">
+                        <rect key="frame" x="0.0" y="0.0" width="173" height="90"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="treasure_lgsy" translatesAutoresizingMaskIntoConstraints="NO" id="ZHi-PH-j1t">
+                        <rect key="frame" x="14" y="30" width="30" height="30"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="类固收类" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7B-ei-4RC">
+                        <rect key="frame" x="57" y="25" width="66" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="Pjb-40-HnN"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="200000元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ba-ld-aQu">
+                        <rect key="frame" x="57" y="51" width="62" height="13"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="13" id="tKo-mE-nVP"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.53333333333333333" green="0.5607843137254902" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="B7B-ei-4RC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="25" id="BeX-wI-xmi"/>
+                <constraint firstItem="0Ba-ld-aQu" firstAttribute="leading" secondItem="B7B-ei-4RC" secondAttribute="leading" id="CjM-Lm-eE5"/>
+                <constraint firstAttribute="trailing" secondItem="Lkt-n5-Wqn" secondAttribute="trailing" id="GUI-0t-udH"/>
+                <constraint firstAttribute="bottom" secondItem="Lkt-n5-Wqn" secondAttribute="bottom" id="IHE-LN-Qbi"/>
+                <constraint firstItem="0Ba-ld-aQu" firstAttribute="top" secondItem="B7B-ei-4RC" secondAttribute="bottom" constant="10" id="Tbb-5z-myd"/>
+                <constraint firstItem="Lkt-n5-Wqn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="bJQ-zk-8Ia"/>
+                <constraint firstItem="ZHi-PH-j1t" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="lip-oU-FGG"/>
+                <constraint firstItem="Lkt-n5-Wqn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="tum-jU-NHh"/>
+                <constraint firstItem="ZHi-PH-j1t" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="14" id="wYg-FL-jYM"/>
+                <constraint firstItem="B7B-ei-4RC" firstAttribute="leading" secondItem="ZHi-PH-j1t" secondAttribute="trailing" constant="13" id="ySL-7c-Zt3"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="173" height="87"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="ga_shadowColor">
+                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="size" keyPath="ga_shadowOffset">
+                    <size key="value" width="0.0" height="0.0"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <connections>
+                <outlet property="iconImageView" destination="ZHi-PH-j1t" id="VAg-JR-O5v"/>
+                <outlet property="moneyLabel" destination="0Ba-ld-aQu" id="nL5-w3-YK5"/>
+                <outlet property="titleLabel" destination="B7B-ei-4RC" id="2sV-60-X3g"/>
+            </connections>
+            <point key="canvasLocation" x="2.5" y="72.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="treasure_item_bg" width="181" height="99"/>
+        <image name="treasure_lgsy" width="30" height="30"/>
+    </resources>
+</document>

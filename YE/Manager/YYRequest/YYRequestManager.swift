@@ -50,9 +50,9 @@ class YYRequest {
     var cancellables: [Cancellable] = []
     
     lazy var provider: MoyaProvider<YYApiManager>! = {
-        let publicParamEndpointClosure = { (target: YYApiManager) -> Endpoint<YYApiManager> in
+        let publicParamEndpointClosure = { (target: YYApiManager) -> Endpoint in
             let url = target.baseURL.appendingPathComponent(target.path).absoluteString
-            let endpoint = Endpoint<YYApiManager>(url: url, sampleResponseClosure: {.networkResponse(200, target.sampleData) }, method: target.method, task: target.task, httpHeaderFields: target.headers)
+            let endpoint = Endpoint(url: url, sampleResponseClosure: {.networkResponse(200, target.sampleData) }, method: target.method, task: target.task, httpHeaderFields: target.headers)
             return endpoint.adding(newHTTPHeaderFields: ["x-platform" : "iOS", "x-interface-version" : "1.0"])
         }
         // MARK: - 自定义的网络提示请求插件
@@ -81,7 +81,7 @@ class YYRequest {
             }
         }
         
-        let requestTimeoutClosure = { (endpoint: Endpoint<YYApiManager>, done: @escaping MoyaProvider<YYApiManager>.RequestResultClosure) in
+        let requestTimeoutClosure = { (endpoint: Endpoint, done: @escaping MoyaProvider<YYApiManager>.RequestResultClosure) in
             do {
                 var request = try endpoint.urlRequest()
                 request.timeoutInterval = 12    //设置请求超时时间

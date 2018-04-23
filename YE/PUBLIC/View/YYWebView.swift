@@ -31,6 +31,12 @@ class YYWebView: UIView {
         }
     }
     
+    func jsAAA() {
+        webView.evaluateJavaScript("") { (obj, error) in
+            
+        }
+    }
+    
     lazy var webView: WKWebView = {
         
          let config = WKWebViewConfiguration()
@@ -188,8 +194,7 @@ extension YYWebView: WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler 
     /* JS传值给iOS */
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         if (message.name == kJS_Name) {
-            // 打印所传过来的参数，只支持NSNumber, NSString, NSDate, NSArray,
-            // NSDictionary, and NSNull类型
+            // 打印所传过来的参数，只支持NSNumber, NSString, NSDate, NSArray, NSDictionary, and NSNull类型
             print(message.body)
         }
     }

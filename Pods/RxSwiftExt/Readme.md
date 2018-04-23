@@ -1,4 +1,6 @@
-[![Build Status](https://travis-ci.org/RxSwiftCommunity/RxSwiftExt.svg?branch=master)](https://travis-ci.org/RxSwiftCommunity/RxSwiftExt) ![pod](https://img.shields.io/cocoapods/v/RxSwiftExt.svg) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![CircleCI](https://img.shields.io/circleci/project/github/RxSwiftCommunity/RxSwiftExt/master.svg)](https://circleci.com/gh/RxSwiftCommunity/RxSwiftExt/tree/master)
+![pod](https://img.shields.io/cocoapods/v/RxSwiftExt.svg)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 RxSwiftExt
 ===========
@@ -66,6 +68,7 @@ RxSwiftExt is all about adding operators to [RxSwift](https://github.com/Reactiv
 * [apply](#apply)
 * [filterMap](#filtermap)
 * [Observable.fromAsync](#fromasync)
+* [Observable.zip(with:)](#zipwith)
 
 Two additional operators are available for `materialize()`'d sequences:
 
@@ -178,6 +181,30 @@ next(Nope.)
 completed
 ```
 
+#### mapAt
+
+Transform every element to the value at the provided key path.
+
+```swift
+struct Person {
+    let name: String
+}
+
+Observable
+    .of(
+        Person(name: "Bart"),
+        Person(name: "Lisa"),
+        Person(name: "Maggie")
+    )
+    .mapAt(\.name)
+    .subscribe { print($0) }
+```
+```
+next(Bart)
+next(Lisa)
+next(Maggie)
+completed
+```
 #### not
 
 Negate booleans.
@@ -440,6 +467,49 @@ observableService("Foo", 0)
     })
     .disposed(by: disposeBag)
 ```
+
+#### zipWith
+
+Convenience version of `Observable.zip(_:)`. Merges the specified observable sequences into one observable sequence by using the selector function whenever all
+ of the observable sequences have produced an element at a corresponding index.
+
+```
+let first = Observable.from(numbers)
+let second = Observable.from(strings)
+
+first.zip(with: second) { i, s in
+        s + String(i)
+    }.subscribe(onNext: { (result) in
+        print(result)
+    })
+```
+
+```
+next("a1")
+next("b2")
+next("c3")
+```
+
+#### ofType
+
+The ofType operator filters the elements of an observable sequence, if that is an instance of the supplied type.
+
+```swift
+Observable.of(NSNumber(value: 1),
+                  NSDecimalNumber(string: "2"),
+                  NSNumber(value: 3),
+                  NSNumber(value: 4),
+                  NSDecimalNumber(string: "5"),
+                  NSNumber(value: 6))
+        .ofType(NSDecimalNumber.self)
+        .subscribe { print($0) }
+```
+```
+next(2)
+next(5)
+completed
+```
+This example emits 2, 5 (`NSDecimalNumber` Type).
 
 ## License
 

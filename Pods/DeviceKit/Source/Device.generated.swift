@@ -2,7 +2,7 @@
 //
 // This source file is part of the DeviceKit open source project
 //
-// Copyright © 2014 - 2017 Dennis Weissmann and the DeviceKit project authors
+// Copyright © 2014 - 2018 Dennis Weissmann and the DeviceKit project authors
 //
 // License: https://github.com/dennisweissmann/DeviceKit/blob/master/LICENSE
 // Contributors: https://github.com/dennisweissmann/DeviceKit#contributors
@@ -136,6 +136,10 @@ public enum Device {
     ///
     /// ![Image](https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP751/ipad_5th_generation.png)
     case iPad5
+    /// Device is an [iPad 6](https://support.apple.com/kb/NotYetAvailable)
+    ///
+    /// ![Image](https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP751/ipad_5th_generation.png)
+    case iPad6
     /// Device is an [iPad Mini](https://support.apple.com/kb/SP661)
     ///
     /// ![Image](https://support.apple.com/library/APPLE/APPLECARE_ALLGEOS/SP661/sp661_ipad_mini_color.jpg)
@@ -242,6 +246,7 @@ public enum Device {
       case "iPad4,1", "iPad4,2", "iPad4,3": return iPadAir
       case "iPad5,3", "iPad5,4": return iPadAir2
       case "iPad6,11", "iPad6,12": return iPad5
+      case "iPad7,5", "iPad7,6": return iPad6
       case "iPad2,5", "iPad2,6", "iPad2,7": return iPadMini
       case "iPad4,4", "iPad4,5", "iPad4,6": return iPadMini2
       case "iPad4,7", "iPad4,8", "iPad4,9": return iPadMini3
@@ -277,7 +282,7 @@ public enum Device {
 
     /// All iPads
     public static var allPads: [Device] {
-       return [.iPad2, .iPad3, .iPad4, .iPadAir, .iPadAir2, .iPad5, .iPadMini, .iPadMini2, .iPadMini3, .iPadMini4, .iPadPro9Inch, .iPadPro12Inch, .iPadPro12Inch2, .iPadPro10Inch]
+       return [.iPad2, .iPad3, .iPad4, .iPadAir, .iPadAir2, .iPad5, .iPad6, .iPadMini, .iPadMini2, .iPadMini3, .iPadMini4, .iPadPro9Inch, .iPadPro12Inch, .iPadPro12Inch2, .iPadPro10Inch]
     }
 
     /// All Plus-Sized Devices
@@ -285,7 +290,7 @@ public enum Device {
       return [.iPhone6Plus, .iPhone6sPlus, .iPhone7Plus, .iPhone8Plus]
     }
 
-    /// All Plus-Sized Devices
+    /// All Pro Devices
     public static var allProDevices: [Device] {
       return [.iPadPro9Inch, .iPadPro12Inch, .iPadPro12Inch2, .iPadPro10Inch]
     }
@@ -305,14 +310,24 @@ public enum Device {
       return allPads.map(Device.simulator)
     }
 
-    /// Returns whether the device is an iPod (real or simulator)
+   /// All simulator Plus-Sized Devices
+   public static var allSimulatorPlusSizedDevices: [Device] {
+     return allPlusSizedDevices.map(Device.simulator)
+   }
+
+   /// All simulator Pro Devices
+   public static var allSimulatorProDevices: [Device] {
+     return allProDevices.map(Device.simulator)
+   }
+
+   /// Returns whether the device is an iPod (real or simulator)
     public var isPod: Bool {
       return isOneOf(Device.allPods) || isOneOf(Device.allSimulatorPods)
     }
 
     /// Returns whether the device is an iPhone (real or simulator)
     public var isPhone: Bool {
-      return isOneOf(Device.allPhones) || isOneOf(Device.allSimulatorPhones) || UIDevice.current.userInterfaceIdiom == .phone
+      return (isOneOf(Device.allPhones) || isOneOf(Device.allSimulatorPhones) || UIDevice.current.userInterfaceIdiom == .phone) && !isPod
     }
 
     /// Returns whether the device is an iPad (real or simulator)
@@ -327,6 +342,8 @@ public enum Device {
     }
 
     public var isZoomed: Bool {
+      // TODO: Longterm we need a better solution for this!
+      guard self != .iPhoneX else { return false }
       if Int(UIScreen.main.scale.rounded()) == 3 {
         // Plus-sized
         return UIScreen.main.nativeScale > 2.7
@@ -361,6 +378,7 @@ public enum Device {
       case .iPadAir: return 9.7
       case .iPadAir2: return 9.7
       case .iPad5: return 9.7
+      case .iPad6: return 9.7
       case .iPadMini: return 7.9
       case .iPadMini2: return 7.9
       case .iPadMini3: return 7.9
@@ -401,6 +419,7 @@ public enum Device {
       case .iPadAir: return (width: 3, height: 4)
       case .iPadAir2: return (width: 3, height: 4)
       case .iPad5: return (width: 3, height: 4)
+      case .iPad6: return (width: 3, height: 4)
       case .iPadMini: return (width: 3, height: 4)
       case .iPadMini2: return (width: 3, height: 4)
       case .iPadMini3: return (width: 3, height: 4)
@@ -525,6 +544,7 @@ public enum Device {
       case .iPadAir: return 264
       case .iPadAir2: return 264
       case .iPad5: return 264
+      case .iPad6: return 264
       case .iPadMini: return 163
       case .iPadMini2: return 326
       case .iPadMini3: return 326
@@ -539,6 +559,24 @@ public enum Device {
     }
     #elseif os(tvOS)
     return nil
+    #endif
+  }
+
+  /// True when a Guided Access session is currently active; otherwise, false.
+  public var isGuidedAccessSessionActive: Bool {
+    #if os(iOS)
+    return UIAccessibilityIsGuidedAccessEnabled()
+    #else
+    return false
+    #endif
+  }
+
+  /// The brightness level of the screen.
+  public var screenBrightness: Int {
+    #if os(iOS)
+    return Int(UIScreen.main.brightness * 100)
+    #else
+    return 100
     #endif
   }
 }
@@ -573,6 +611,7 @@ extension Device: CustomStringConvertible {
       case .iPadAir: return "iPad Air"
       case .iPadAir2: return "iPad Air 2"
       case .iPad5: return "iPad 5"
+      case .iPad6: return "iPad 6"
       case .iPadMini: return "iPad Mini"
       case .iPadMini2: return "iPad Mini 2"
       case .iPadMini3: return "iPad Mini 3"
@@ -632,6 +671,7 @@ extension Device: Equatable {
       case unplugged(Int)
 
       fileprivate init() {
+        let wasBatteryMonitoringEnabled = UIDevice.current.isBatteryMonitoringEnabled
         UIDevice.current.isBatteryMonitoringEnabled = true
         let batteryLevel = Int(round(UIDevice.current.batteryLevel * 100)) // round() is actually not needed anymore since -[batteryLevel] seems to always return a two-digit precision number
         // but maybe that changes in the future.
@@ -641,7 +681,16 @@ extension Device: Equatable {
         case .unplugged:self = .unplugged(batteryLevel)
         case .unknown: self = .full // Should never happen since `batteryMonitoring` is enabled.
         }
-        UIDevice.current.isBatteryMonitoringEnabled = false
+        UIDevice.current.isBatteryMonitoringEnabled = wasBatteryMonitoringEnabled
+      }
+
+      /// The user enabled Low Power mode
+      public var lowPowerMode: Bool {
+        if #available(iOS 9.0, *) {
+          return ProcessInfo.processInfo.isLowPowerModeEnabled
+        } else {
+          return false
+        }
       }
 
       /// Provides a textual representation of the battery state.
@@ -708,4 +757,106 @@ extension Device: Equatable {
     }
   }
 
+#endif
+
+#if os(iOS)
+extension Device {
+  // MARK: - Orientation
+    /**
+      This enum describes the state of the orientation.
+      - Landscape: The device is in Landscape Orientation
+      - Portrait:  The device is in Portrait Orientation
+    */
+    public enum Orientation {
+      case landscape
+      case portrait
+    }
+
+    public var orientation: Orientation {
+      if UIDevice.current.orientation.isLandscape {
+        return .landscape
+      } else {
+        return .portrait
+      }
+    }
+}
+
+#endif
+
+#if os(iOS)
+// MARK: - DiskSpace
+@available(iOS 11.0, *)
+extension Device {
+
+  /// Return the root url
+  ///
+  /// - returns: the "/" url
+  private static var rootURL = {
+    return URL(fileURLWithPath: "/")
+  }()
+
+  /// The volume’s total capacity in bytes.
+  public static var volumeTotalCapacity: Int? {
+    do {
+      let values = try Device.rootURL.resourceValues(forKeys: [.volumeTotalCapacityKey])
+      return values.volumeTotalCapacity
+    } catch {
+      return nil
+    }
+  }
+
+  /// The volume’s available capacity in bytes.
+  public static var volumeAvailableCapacity: Int? {
+    do {
+      let values = try rootURL.resourceValues(forKeys: [.volumeAvailableCapacityKey])
+      return values.volumeAvailableCapacity
+    } catch {
+      return nil
+    }
+  }
+
+  /// The volume’s available capacity in bytes for storing important resources.
+  public static var volumeAvailableCapacityForImportantUsage: Int64? {
+    do {
+      let values = try rootURL.resourceValues(forKeys: [.volumeAvailableCapacityForImportantUsageKey])
+      return values.volumeAvailableCapacityForImportantUsage
+    } catch {
+      return nil
+    }
+  }
+
+  /// The volume’s available capacity in bytes for storing nonessential resources.
+  public static var volumeAvailableCapacityForOpportunisticUsage: Int64? { //swiftlint:disable:this identifier_name
+    do {
+      let values = try rootURL.resourceValues(forKeys: [.volumeAvailableCapacityForOpportunisticUsageKey])
+      return values.volumeAvailableCapacityForOpportunisticUsage
+    } catch {
+      return nil
+    }
+  }
+
+  /// All volumes capacity information in bytes.
+  public static var volumes: [URLResourceKey: Int64]? {
+    do {
+      let values = try rootURL.resourceValues(forKeys: [
+        .volumeAvailableCapacityForImportantUsageKey,
+        .volumeAvailableCapacityKey,
+        .volumeAvailableCapacityForOpportunisticUsageKey,
+        .volumeTotalCapacityKey
+        ])
+      return values.allValues.mapValues {
+        if let int = $0 as? Int64 {
+          return int
+        }
+        if let int = $0 as? Int {
+          return Int64(int)
+        }
+        return 0
+      }
+    } catch {
+      return nil
+    }
+  }
+
+}
 #endif

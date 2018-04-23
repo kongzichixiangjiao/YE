@@ -11,7 +11,7 @@
 				<key>push</key>
 				<integer>0</integer>
 				<key>icon</key>
-				<string>event_collect</string>
+				<string>home_hdgl</string>
 				<key>name</key>
 				<string>活动管理</string>
 			</dict>
@@ -26,7 +26,7 @@
 				<key>push</key>
 				<integer>1</integer>
 				<key>icon</key>
-				<string>event_collect</string>
+				<string>home_yygl</string>
 				<key>name</key>
 				<string>预约管理</string>
 			</dict>
@@ -34,7 +34,7 @@
 				<key>push</key>
 				<integer>2</integer>
 				<key>icon</key>
-				<string>event_collect</string>
+				<string>home_gtjl</string>
 				<key>name</key>
 				<string>沟通记录</string>
 			</dict>
@@ -42,7 +42,7 @@
 				<key>push</key>
 				<integer>3</integer>
 				<key>icon</key>
-				<string>event_collect</string>
+				<string>home_wdkh</string>
 				<key>name</key>
 				<string>我的客户</string>
 			</dict>
@@ -57,7 +57,7 @@
 				<key>push</key>
 				<integer>4</integer>
 				<key>icon</key>
-				<string>event_collect</string>
+				<string>home_cpzx</string>
 				<key>name</key>
 				<string>产品中心</string>
 			</dict>
@@ -65,7 +65,7 @@
 				<key>push</key>
 				<integer>5</integer>
 				<key>icon</key>
-				<string>event_collect</string>
+				<string>home_xxpl</string>
 				<key>name</key>
 				<string>信息披露</string>
 			</dict>
@@ -80,7 +80,7 @@
 				<key>push</key>
 				<integer>6</integer>
 				<key>icon</key>
-				<string>event_collect</string>
+				<string>home_mrfx</string>
 				<key>name</key>
 				<string>每日分享</string>
 			</dict>
@@ -88,7 +88,7 @@
 				<key>push</key>
 				<integer>7</integer>
 				<key>icon</key>
-				<string>event_collect</string>
+				<string>home_cpxx</string>
 				<key>name</key>
 				<string>产品学习</string>
 			</dict>
@@ -96,7 +96,7 @@
 				<key>push</key>
 				<integer>8</integer>
 				<key>icon</key>
-				<string>event_collect</string>
+				<string>home_hydj</string>
 				<key>name</key>
 				<string>行研洞见</string>
 			</dict>
@@ -104,7 +104,7 @@
 				<key>push</key>
 				<integer>9</integer>
 				<key>icon</key>
-				<string>event_collect</string>
+				<string>home_jcsj</string>
 				<key>name</key>
 				<string>精彩瞬间</string>
 			</dict>

@@ -23,6 +23,9 @@ class YYJFHomeViewController: YYBaseCollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.myTitle = "JF首页"
+        self.setupRightButton(.normal)
+        self.setupOtherRightButton(title: "show")
+        
         initCollectionView()
         
         let path = Bundle.main.path(forResource: "jf_home", ofType: "plist")
@@ -30,12 +33,19 @@ class YYJFHomeViewController: YYBaseCollectionViewController {
         collectionView.reloadData()
     }
     
+    override func clickedRightButtonAction(_ sender: UIButton) {
+        self.yy_showTopSheet(message: "我是测试", isNav: true)
+    }
+    
+    override func clickedNavigationViewOtherRightButton(_ sender: UIButton) {
+        self.yy_hideTopSheet(isNav: true)
+    }
+    
     override func initCollectionView() {
         let layout = YYBaseCollectionViewControllerLayout()
-        layout.myItemSize = CGSize(width: MainScreenWidth, height: MainScreenWidth / 4 + 44)
         layout.itemSpace = 0
         layout.isHorizontal = false
-        layout.headerReferenceSize = CGSize(width: MainScreenWidth, height: 44)
+//        layout.headerReferenceSize = CGSize(width: MainScreenWidth, height: YYJFHomeViewHeaderReusableView.height)
         // 判断系统版本9.0以后才有这个功能
         if (UIDevice.current.systemVersion.toDouble() ?? 0 >= 9.0) {
             
@@ -54,6 +64,36 @@ class YYJFHomeViewController: YYBaseCollectionViewController {
         registerNib(YYJFHomeCircleViewCell.identifier)
         registerNib(YYJFHomeNewsScrollViewCell.identifier)
         registerNibSection(YYJFHomeViewHeaderReusableView.identifier, kind: UICollectionElementKindSectionHeader)
+    }
+    
+    var maxY: CGFloat = 0
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let currentPostion = scrollView.contentOffset.y
+
+        if (currentPostion <= 0) {
+            return
+        }
+        if (currentPostion - self.maxY > 20) {
+            self.maxY = currentPostion
+            print("up")
+            if currentPostion > YYJFHomeNewsScrollViewCell.height + YYJFHomeCircleViewCell.height {
+                return
+            }
+            UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: .curveEaseOut, animations: {
+                self.collectionView.contentOffset = CGPoint(x: 0, y: YYJFHomeNewsScrollViewCell.height + YYJFHomeCircleViewCell.height)
+            }, completion: nil)
+            
+        } else if (self.maxY - currentPostion > 20) {
+            self.maxY = currentPostion
+            if currentPostion > YYJFHomeNewsScrollViewCell.height + YYJFHomeCircleViewCell.height {
+                return
+            }
+            UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: .curveEaseOut, animations: {
+                self.collectionView.contentOffset = CGPoint(x: 0, y: 0)
+            }, completion: nil)
+            print("down")
+        }
     }
 }
 
@@ -86,11 +126,11 @@ extension YYJFHomeViewController: YYJFHomeCellDelegate, UICollectionViewDelegate
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch indexPath.row {
         case JFHomeCellType.circleView.rawValue:
-            return CGSize(width: MainScreenWidth, height: MainScreenWidth * 9 / 16)
+            return CGSize(width: MainScreenWidth, height: YYJFHomeCircleViewCell.height)
         case JFHomeCellType.newsView.rawValue:
-            return CGSize(width: MainScreenWidth, height: 44)
+            return CGSize(width: MainScreenWidth, height: YYJFHomeNewsScrollViewCell.height)
         default:
-            return CGSize(width: MainScreenWidth, height: MainScreenWidth / 4 + 44)
+            return CGSize(width: MainScreenWidth, height: YYJFHomeCell.height)
         }
     }
     
@@ -109,4 +149,5 @@ extension YYJFHomeViewController: YYJFHomeCellDelegate, UICollectionViewDelegate
     func jfHomeClickedItem(type: JFHomePushType) {
         print(type)
     }
+    
 }

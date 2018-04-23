@@ -35,7 +35,6 @@
 #import "NSDate+Category.h"
 #import "NSDateFormatter+Category.h"
 #import "NSString+Valid.h"
-#import "UIImage+Resource.h"
 #import "UIViewController+DismissKeyboard.h"
 #import "UIViewController+HUD.h"
 #import "EaseChineseToPinyin.h"

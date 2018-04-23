@@ -76,14 +76,15 @@ class YYHomeViewController: YYBaseTableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         initNavigationView()
-        
+
         initTableView()
-        
+
         sqliteMethod()
-        
+
         let _ = YYChildTestView(frame: CGRect.zero)
-        
+
         myC()
     }
     
@@ -220,7 +221,7 @@ class YYHomeViewController: YYBaseTableViewController {
         tableHeaderView.showLineView(10)
         
         tableHeaderView.imageNames = ["IMG_2787.jpg", "IMG_3260.JPG", "IMG_2719.jpg", "IMG_3027.jpg", "IMG_3027.jpg"]
-        tableHeaderView.data = [["title" : "活动", "icon" : "home_middle_activity"], ["title" : "直播", "icon" : "home_middle_live"], ["title" : "周边", "icon" : "home_middle_surrounding"], ["title" : "文章", "icon" : "home_middle_article"], ["title" : "首页", "icon" : "home_middle_article"]]
+        tableHeaderView.data = [["title" : "活动", "icon" : "home_middle_activity"], ["title" : "直播", "icon" : "home_middle_live"], ["title" : "周边", "icon" : "home_middle_surrounding"], ["title" : "文章", "icon" : "home_middle_article"], ["title" : "首页", "icon" : "home_middle_article"], ["title" : "金服", "icon" : "home_middle_surrounding"]]
         
         return tableHeaderView
     }
@@ -242,6 +243,9 @@ class YYHomeViewController: YYBaseTableViewController {
             break
         case 4:
             self.push(YYJFHomeViewController())
+            break
+        case 5:
+            self.push(YYJFTreasureViewController())
             break
         default:
             break

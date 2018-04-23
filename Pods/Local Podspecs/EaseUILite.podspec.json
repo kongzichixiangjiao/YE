@@ -1,6 +1,6 @@
 {
   "name": "EaseUILite",
-  "version": "3.3.7",
+  "version": "3.4.0",
   "license": {
     "type": "Copyright",
     "text": "EaseMob Inc. 2017"
@@ -12,7 +12,7 @@
   },
   "source": {
     "git": "https://github.com/easemob/easeui-ios-hyphenate-cocoapods.git",
-    "tag": "3.3.7"
+    "tag": "3.4.0"
   },
   "source_files": "EaseUI/**/*.{h,m,mm}",
   "public_header_files": "**/*.{h}",
@@ -22,9 +22,9 @@
     "EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrnb/*.h",
     "EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrwb/*.h"
   ],
-  "prefix_header_contents": "#import \"UIImage+Resource.h\"",
+  "prefix_header_contents": "#import <UIKit/UIKit.h>",
   "platforms": {
-    "ios": "7.0"
+    "ios": "8.0"
   },
   "vendored_libraries": [
     "EaseUI/EMUIKit/3rdparty/DeviceHelper/VoiceConvert/opencore-amrnb/libopencore-amrnb.a",
@@ -49,7 +49,7 @@
       "~> 3.1.0"
     ],
     "HyphenateLite": [
-      "~> 3.3.6"
+      "~> 3.4.0"
     ]
   }
 }

@@ -36,7 +36,7 @@ struct MappingPath {
         splitPoints.forEach({ (point) in
             let start = rawPath.index(rawPath.startIndex, offsetBy: curPos)
             let end = rawPath.index(rawPath.startIndex, offsetBy: point)
-            let subPath = rawPath.substring(with: start ..< end).replacingOccurrences(of: "\\.", with: ".")
+            let subPath = String(rawPath[start ..< end]).replacingOccurrences(of: "\\.", with: ".")
             if !subPath.isEmpty {
                 pathArr.append(subPath)
             }
@@ -46,14 +46,14 @@ struct MappingPath {
     }
 }
 
-extension Dictionary where Value: Any {
+extension Dictionary where Key == String, Value: Any {
 
     func findValueBy(path: MappingPath) -> Any? {
-        var currentDict: [Key: Any]? = self
+        var currentDict: [String: Any]? = self
         var lastValue: Any?
         path.segments.forEach { (segment) in
-            lastValue = currentDict?[segment as! Key]
-            currentDict = currentDict?[segment as! Key] as? [Key: Any]
+            lastValue = currentDict?[segment]
+            currentDict = currentDict?[segment] as? [String: Any]
         }
         return lastValue
     }

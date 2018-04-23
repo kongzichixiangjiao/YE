@@ -821,7 +821,6 @@ class YYPlayerGradualChangeView: UIView {
 }
 
 // MARK: extension UIResponder
-
 var extension_key: UInt = 1205
 extension UIResponder {
     

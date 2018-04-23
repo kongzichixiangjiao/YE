@@ -4,7 +4,7 @@ HandyJSON is a framework written in Swift which to make converting model objects
 
 Compared with others, the most significant feature of HandyJSON is that it does not require the objects inherit from NSObject(**not using KVC but reflection**), neither implements a 'mapping' function(**writing value to memory directly to achieve property assignment**).
 
-HandyJSON is totally depend on the memory layout rules infered from Swift runtime code. We are watching it and will follow every bit if it change.
+HandyJSON is totally depend on the memory layout rules infered from Swift runtime code. We are watching it and will follow every bit if it changes.
 
 [![Build Status](https://travis-ci.org/alibaba/HandyJSON.svg?branch=master)](https://travis-ci.org/alibaba/HandyJSON)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
@@ -104,22 +104,22 @@ An overview of types supported can be found at file: [BasicTypes.swift](./HandyJ
 
 * iOS 8.0+/OSX 10.9+/watchOS 2.0+/tvOS 9.0+
 
-* Swift 2.3+ / Swift 3.0+
+* Swift 3.0+ / Swift 4.0+
 
 # Installation
 
-**To use with Swift 2.x using == 0.4.0**
-
 **To use with Swift 3.x using >= 1.8.0**
 
-For Legacy Swift support, take a look at the [swift2 branch](https://github.com/alibaba/HandyJSON/tree/master_for_swift_2x).
+**To use with Swift 4.0 using == 4.1.1**
+
+For Legacy Swift2.x support, take a look at the [swift2 branch](https://github.com/alibaba/HandyJSON/tree/master_for_swift_2x).
 
 ## Cocoapods
 
 Add the following line to your `Podfile`:
 
 ```
-pod 'HandyJSON', '~> 1.8.0'
+pod 'HandyJSON', '~> 4.1.1'
 ```
 
 Then, run the following command:
@@ -133,7 +133,7 @@ $ pod install
 You can add a dependency on `HandyJSON` by adding the following line to your `Cartfile`:
 
 ```
-github "alibaba/HandyJSON" ~> 1.8.0
+github "alibaba/HandyJSON" ~> 4.1.1
 ```
 
 ## Manually
@@ -577,7 +577,7 @@ It's the same with `didFinishMapping` function.
 
 A: Since `HandyJSON` assign properties by writing value to memory directly, it doesn't trigger any observing function. You need to call the `didSet/willSet` logic explicitly after/before the deserialization.
 
-But after version `1.8.0`, `HandyJSON` handle dynamic properties by the `KVC` mechanism which will trigger the `KVO`. That means, if you do really need the `didSet/willSet`, you can define your model like follow:
+But since version `1.8.0`, `HandyJSON` handle dynamic properties by the `KVC` mechanism which will trigger the `KVO`. That means, if you do really need the `didSet/willSet`, you can define your model like follow:
 
 ```swift
 class BasicTypes: NSObject, HandyJSON {
@@ -596,7 +596,7 @@ class BasicTypes: NSObject, HandyJSON {
 
 In this situation, `NSObject` and `dynamic` are both needed.
 
-And in versions after `1.8.0`, `HandyJSON` offer a `didFinishMapping` function to allow you to fill some observing logic.
+And in versions since `1.8.0`, `HandyJSON` offer a `didFinishMapping` function to allow you to fill some observing logic.
 
 ```swift
 class BasicTypes: HandyJSON {
@@ -686,5 +686,3 @@ class BasicTypes: HandyJSON {
 # License
 
 HandyJSON is released under the Apache License, Version 2.0. See LICENSE for details.
-
-

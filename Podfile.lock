@@ -2,62 +2,59 @@ PODS:
   - Action (3.5.0):
     - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
-  - Alamofire (4.6.0)
+  - Alamofire (4.7.2)
   - DACircularProgress (2.3.1)
-  - DeviceKit (1.4.0)
+  - DeviceKit (1.7.0)
   - Differentiator (3.0.2)
-  - EaseUILite (3.3.7):
-    - HyphenateLite (~> 3.3.6)
+  - EaseUILite (3.4.0):
+    - HyphenateLite (~> 3.4.0)
     - MJRefresh (~> 3.1.0)
     - MWPhotoBrowser (~> 2.1.1)
   - GDPerformanceView-Swift (1.3.2)
-  - HandyJSON (1.8.0)
-  - Hero (1.0.1)
-  - HyphenateLite (3.3.7)
-  - Kingfisher (4.6.1)
+  - HandyJSON (4.1.1)
+  - Hero (1.2.0)
+  - HyphenateLite (3.4.0)
+  - Kingfisher (4.7.0)
   - MBProgressHUD (0.9.2)
-  - MJRefresh (3.1.15.1)
-  - Moya (10.0.1):
-    - Moya/Core (= 10.0.1)
-  - Moya/Core (10.0.1):
+  - MJRefresh (3.1.15.3)
+  - Moya (11.0.2):
+    - Moya/Core (= 11.0.2)
+  - Moya/Core (11.0.2):
     - Alamofire (~> 4.1)
     - Result (~> 3.0)
-  - Moya/RxSwift (10.0.1):
+  - Moya/RxSwift (11.0.2):
     - Moya/Core
     - RxSwift (~> 4.0)
   - MWPhotoBrowser (2.1.2):
     - DACircularProgress (~> 2.3)
     - MBProgressHUD (~> 0.9)
-    - SDWebImage (!= 3.7.2, ~> 3.7)
-  - NSObject+Rx (4.2.0):
+    - "SDWebImage (!= 3.7.2, ~> 3.7)"
+  - "NSObject+Rx (4.3.0)":
     - RxSwift (~> 4.0)
   - ObjectMapper (3.1.0)
   - Result (3.2.4)
-  - RxCocoa (4.1.0):
+  - RxCocoa (4.1.2):
     - RxSwift (~> 4.0)
   - RxDataSources (3.0.2):
     - Differentiator (~> 3.0)
     - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
-  - RxSwift (4.1.0)
-  - RxSwiftExt (3.1.0):
-    - RxSwiftExt/Core (= 3.1.0)
-  - RxSwiftExt/Core (3.1.0):
+  - RxSwift (4.1.2)
+  - RxSwiftExt (3.2.0):
+    - RxSwiftExt/Core (= 3.2.0)
+  - RxSwiftExt/Core (3.2.0):
     - RxSwift (~> 4.0)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
   - SnapKit (4.0.0)
   - SwiftDate (4.5.1)
-  - SwiftyJSON (4.0.0)
-  - SwiftyRSA (1.3.0):
-    - SwiftyRSA/ObjC (= 1.3.0)
-  - SwiftyRSA/ObjC (1.3.0)
+  - SwiftyJSON (4.1.0)
+  - SwiftyRSA (1.3.1):
+    - SwiftyRSA/ObjC (= 1.3.1)
+  - SwiftyRSA/ObjC (1.3.1)
   - Then (2.3.0)
   - Timepiece (1.3.1)
-  - WCDB.swift (1.0.6):
-    - WCDB.swift/sqlcipher (= 1.0.6)
-  - WCDB.swift/sqlcipher (1.0.6)
 
 DEPENDENCIES:
   - Action
@@ -71,7 +68,7 @@ DEPENDENCIES:
   - Kingfisher
   - Moya
   - Moya/RxSwift
-  - NSObject+Rx
+  - "NSObject+Rx"
   - ObjectMapper
   - RxCocoa
   - RxDataSources
@@ -83,7 +80,37 @@ DEPENDENCIES:
   - SwiftyRSA
   - Then
   - Timepiece
-  - WCDB.swift
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Action
+    - Alamofire
+    - DACircularProgress
+    - DeviceKit
+    - Differentiator
+    - GDPerformanceView-Swift
+    - HandyJSON
+    - Hero
+    - HyphenateLite
+    - Kingfisher
+    - MBProgressHUD
+    - MJRefresh
+    - Moya
+    - MWPhotoBrowser
+    - "NSObject+Rx"
+    - ObjectMapper
+    - Result
+    - RxCocoa
+    - RxDataSources
+    - RxSwift
+    - RxSwiftExt
+    - SDWebImage
+    - SnapKit
+    - SwiftDate
+    - SwiftyJSON
+    - SwiftyRSA
+    - Then
+    - Timepiece
 
 EXTERNAL SOURCES:
   EaseUILite:
@@ -91,41 +118,40 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   EaseUILite:
-    :commit: 525a827bd9559ba8a18305066d1d385204f76842
+    :commit: 357c5ea90fea23aef8a773b42f8e5bbd139b71cc
     :git: https://github.com/easemob/easeui-ios-hyphenate-cocoapods.git
 
 SPEC CHECKSUMS:
   Action: d60087ebce41b969d1afdad01e2fa1372a82f26e
-  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  Alamofire: e4fa87002c137ba2d8d634d2c51fabcda0d5c223
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
-  DeviceKit: fa74d97499660e88081718b16688e19217595dba
+  DeviceKit: 6a5bdeb103c03757bb94aef1ccb01e08bc8ef4ee
   Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
-  EaseUILite: a90e5aab0b6ed9768cb8bbe44d4bd040bb6d0cbd
+  EaseUILite: ba987d627d84ced72510b38ccc2730f8e10b5bea
   GDPerformanceView-Swift: a74cd679587b199e4526492b6e68ce61593c6123
-  HandyJSON: edaaa3278bf4c4c96d6f7382b80d6b91c88d3bf5
-  Hero: cee286821578e170d8c0c9c9cda7897357401112
-  HyphenateLite: c11b72fd7cd28a0bdc76e46094909f899369e5be
-  Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
+  HandyJSON: 3a3de917c4118767ffe41c29b5acba23409649f4
+  Hero: 33dadf2cd1c98af71e213dcbc2902e6e03622a4e
+  HyphenateLite: ada71aa3aba581cd486bce10f2c0fa66c11ad30f
+  Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
-  MJRefresh: 5f8552bc25ca8751c010f621c1098dbdaacbccd6
-  Moya: 9e621707ff754eeb51ff3ec51a3d54e517c0733a
+  MJRefresh: b48380ae2b927b46c4ef000de9adb8dc748e1df7
+  Moya: a725035953bc1c0eb1be505ab903984501d82440
   MWPhotoBrowser: 5836d7aa041dc05a13de380c246826578adc5ea5
-  NSObject+Rx: cbbc05e3cb3ad446cdbced3e00e39c9efaf02925
+  "NSObject+Rx": 9a5eeff5e08156f849fa973514456f28eef08742
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
   Result: d2d07204ce72856f1fd9130bbe42c35a7b0fea10
-  RxCocoa: cc1fec49cdc8fabe645964de7c51c099a36c2aa8
+  RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
   RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
-  RxSwift: 4219941c1244c88002901bd87a69d3aea9ae71f0
-  RxSwiftExt: a9b9c8e94be009146707f9fcb16eaf3cc1f3910c
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
+  RxSwiftExt: 64b7140124629a6a084159735f3714f0fb1c61d6
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
-  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
-  SwiftyRSA: 28e1c9ab1f396fd3001d197ba03e1153b524d155
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
+  SwiftyRSA: 2da6509638c4a9e4f4407177f0a3cffc4e6e112b
   Then: ee21c97b85ff6062b9b0080c9abb1eea46743345
   Timepiece: c0760ec0e545697d86b80424dcd2b4d5ef66cf51
-  WCDB.swift: 5bb038bc5bb46067cccc7c48392e8f4c4a15def0
 
-PODFILE CHECKSUM: 9f7ed83c4e51a38e6748de1116cbd53cea6cabda
+PODFILE CHECKSUM: 357fbf9b759c28971df5a5024eb58d6132c0ef46
 
-COCOAPODS: 1.4.0.rc.1
+COCOAPODS: 1.5.0

@@ -10,6 +10,9 @@
  * from Hyphenate Inc.
  */
 
+#import <Foundation/Foundation.h>
+
+
 #import "EaseConversationListViewController.h"
 #import "EaseMessageViewController.h"
 #import "EaseUsersListViewController.h"
@@ -32,7 +35,10 @@
 
 #import "NSDate+Category.h"
 #import "NSString+Valid.h"
-#import <SDWebImage/UIImageView+WebCache.h>
 #import "UIViewController+HUD.h"
 #import "UIViewController+DismissKeyboard.h"
 #import "EaseLocalDefine.h"
+
+@interface EaseUI : NSObject
+
+@end

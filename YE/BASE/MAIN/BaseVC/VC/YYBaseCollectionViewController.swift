@@ -20,17 +20,19 @@ class YYBaseCollectionViewController: YYBaseViewController {
     
     open var isCancleX: Bool = false
     
-    open var collectionViewFrameType: SaveAreaBottomSpaceType! {
+    open var isZeroStart: Bool = false
+
+    open var collectionViewFrameType: SaveAreaBottomSpaceType = .normal44 {
         didSet {
-            let y: CGFloat = (isShowNavigationView ? self.navigationView.frame.size.height : 0) + kNavigationViewBottomSpace
+            let y: CGFloat = (isShowNavigationView ? navigationView.frame.size.height : 0) + kNavigationViewBottomSpace + (isZeroStart ? -20 : 0)
             var insets = UIEdgeInsets.zero
-            let height = MainScreenHeight - y - (self.isShowTabbar ? TabBarHeight : 0)
+            let height = MainScreenHeight - y - (isShowTabbar ? TabBarHeight : 0)
             if UIDevice.current.isX {
                 if #available(iOS 11.0, *) {
                     insets = UIApplication.shared.delegate?.window??.safeAreaInsets ?? UIEdgeInsets.zero
                 }
             }
-            self.collectionView.frame = CGRect(x: 0, y: y + (self.isCancleX ? 0 : insets.bottom), width: MainScreenWidth, height: height)
+            collectionView.frame = CGRect(x: 0, y: y + (isCancleX ? 0 : insets.bottom), width: MainScreenWidth, height: height)
         }
     }
     
@@ -60,8 +62,7 @@ class YYBaseCollectionViewController: YYBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.collectionViewFrameType = .normal44
+        collectionViewFrameType = .normal0
     }
     
     func initCollectionView() {
@@ -76,7 +77,6 @@ class YYBaseCollectionViewController: YYBaseViewController {
 
 extension YYBaseCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         return UICollectionViewCell()
     }
     
@@ -94,7 +94,6 @@ class YYBaseCollectionViewControllerLayout: UICollectionViewFlowLayout {
     var itemSpace: CGFloat = 0
     var isHorizontal: Bool = true
     var myMinimumLineSpacing: CGFloat = 0
-    var mymMinimumLineSpacing: CGFloat = 0
     
     override func prepare() {
         super.prepare()
