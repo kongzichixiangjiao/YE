@@ -57,14 +57,22 @@ extension String {
         for i in 0 ..< digestLen {
             hash.appendFormat("%02x", result[i])
         }
-        
-        result.deallocate(capacity: digestLen)
+        result.deallocate()
+//        result.deallocate(capacity: digestLen)
         
         return String(format: hash as String)
     }
     
     var urlEncode: String! {
-        return CFURLCreateStringByAddingPercentEscapes(nil, self as CFString!, nil, "!*'();:@&=+$,/?%#[]" as CFString!, CFStringBuiltInEncodings.UTF8.rawValue)! as String
+        let cs = NSCharacterSet(charactersIn:"!*'();:@&=+$,/?%#[]").inverted
+        return self.addingPercentEncoding(withAllowedCharacters: cs)
+//        return CFURLCreateStringByAddingPercentEscapes(nil, self as CFString?, nil, "!*'();:@&=+$,/?%#[]" as CFString!, CFStringBuiltInEncodings.UTF8.rawValue)! as String
+    }
+    
+    var urlDecode: String! {
+        let cs = NSCharacterSet.alphanumerics
+        let encodePath = self.addingPercentEncoding(withAllowedCharacters: cs)
+        return encodePath?.removingPercentEncoding
     }
     
     var localized: String! {

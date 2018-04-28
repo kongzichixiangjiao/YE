@@ -86,6 +86,7 @@ class YYHomeViewController: YYBaseTableViewController {
         let _ = YYChildTestView(frame: CGRect.zero)
 
         myC()
+        
     }
     
     func myC() {
@@ -193,7 +194,7 @@ class YYHomeViewController: YYBaseTableViewController {
     
     func initNavigationView() {
         self.myTitle = "首页"
-        self.leftButtonTitle = "home_nav_scan"
+        self.leftButtonType = .newroot
         self.setupRightButton(.details)
         self.setupOtherRightButton(title: "播放器")
     }
@@ -212,7 +213,7 @@ class YYHomeViewController: YYBaseTableViewController {
     func initTableViewHeaderView() -> UIView {
         let w: CGFloat = tableView.frame.size.width
         
-        let tableHeaderView = YYHomeTopView(frame: CGRect(x: 0, y: 0, width: w, height: YYHomeTopView.height + 10)) {
+        let tableHeaderView = YYHomeTopView(frame: CGRect(x: 0, y: 0, width: w, height: YYHomeTopView.height)) {
             [weak self] row in
             if let weakSelf = self {
                 weakSelf.topViewModuleSelected(row)
@@ -255,9 +256,12 @@ class YYHomeViewController: YYBaseTableViewController {
     // MARK: 扫码事件
     override func clickedLeftButtonAction() {
         print("扫码")
-        let vc = YYSourceTransitionViewController(nibName: "YYSourceTransitionViewController", bundle: nil)
-        yy_push(vc: vc)
+        _ = YYSourceTransitionViewController(nibName: "YYSourceTransitionViewController", bundle: nil)
+//        yy_push(vc: vc)
 //        yy_push(vc: YYRootViewController())
+        
+        let newRoot = "NewRoot".yy_storyboard().instantiateInitialViewController()
+        yy_push(vc: newRoot!)
     }
     
     override func clickedRightButtonAction(_ sender: UIButton) {

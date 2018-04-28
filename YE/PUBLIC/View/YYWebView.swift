@@ -33,37 +33,73 @@ class YYWebView: UIView {
     
     func jsAAA() {
         webView.evaluateJavaScript("") { (obj, error) in
-            
+
         }
     }
     
+    lazy var configuration: WKWebViewConfiguration = {
+        let config = WKWebViewConfiguration()
+        // 设置偏好设置
+        config.preferences = WKPreferences()
+        // 默认为0
+        config.preferences.minimumFontSize = 10
+        // 默认认为YES
+        config.preferences.javaScriptEnabled = true
+        // 在iOS上默认为NO，表示不能自动通过窗口打开
+        config.preferences.javaScriptCanOpenWindowsAutomatically = false
+        // web内容处理池
+        //         config.processPool = WKProcessPool()
+        config.userContentController = self.userContentController
+        // 注入JS对象名称AppModel，当JS通过AppModel来调用时，
+        // 我们可以在WKScriptMessageHandler代理中接收到
+        config.userContentController.add(self, name: kJS_Name)
+        return config
+    }()
+    
+    // 通过JS与webview内容交互
+    lazy var userContentController: WKUserContentController = {
+        let c = WKUserContentController()
+        return c
+    }()
+    
     lazy var webView: WKWebView = {
         
-         let config = WKWebViewConfiguration()
-         // 设置偏好设置
-         config.preferences = WKPreferences()
-         // 默认为0
-         config.preferences.minimumFontSize = 10
-         // 默认认为YES
-         config.preferences.javaScriptEnabled = true
-         // 在iOS上默认为NO，表示不能自动通过窗口打开
-         config.preferences.javaScriptCanOpenWindowsAutomatically = false
-         // web内容处理池
-//         config.processPool = WKProcessPool()
-         // 通过JS与webview内容交互
-         config.userContentController = WKUserContentController()
-         // 注入JS对象名称AppModel，当JS通过AppModel来调用时，
-         // 我们可以在WKScriptMessageHandler代理中接收到
-         config.userContentController.add(self, name: kJS_Name)
- 
-        let webView = WKWebView(frame: self.frame, configuration: config)
+        self.addCooie()
+        self.addJS()
+        
+        let webView = WKWebView(frame: self.frame, configuration: self.configuration)
         // 开启侧边手势
         webView.allowsBackForwardNavigationGestures = true
+        // 3DTouch
+        webView.allowsLinkPreview = true
         webView.uiDelegate = self
         webView.navigationDelegate = self
         self.addSubview(webView)
         return webView
     }()
+    
+    private func addCooie() {
+        let s = WKUserScript(source: "document.cookie = 'DarkAngelCookie=DarkAngel;'", injectionTime: WKUserScriptInjectionTime.atDocumentStart, forMainFrameOnly: false)
+        self.userContentController.addUserScript(s)
+    }
+    
+    private func addJS() {
+        /*
+         注入的js source可以是任何js字符串，也可以js文件。比如你有很多提供给h5使用的js方法，那么你本地可能就会有一个native_functions.js，你可以通过以下的方式添加
+         //防止频繁IO操作，造成性能影响
+         static NSString *jsSource;
+         static dispatch_once_t onceToken;
+         dispatch_once(&onceToken, ^{
+         jsSource = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"native_functions" ofType:@"js"] encoding:NSUTF8StringEncoding error:nil];
+         });
+         //添加自定义的脚本
+         WKUserScript *js = [[WKUserScript alloc] initWithSource:jsSource injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:NO];
+         [self.configuration.userContentController addUserScript:js];
+         */
+//        let s = WKUserScript(source: "alert(document.cookie);", injectionTime: WKUserScriptInjectionTime.atDocumentEnd, forMainFrameOnly: false)
+        let s = WKUserScript(source: "alert(document.cookie);", injectionTime: WKUserScriptInjectionTime.atDocumentEnd, forMainFrameOnly: false)
+        self.userContentController.addUserScript(s)
+    }
     
     lazy var progressView: UIView = {
         let v = UIView(frame: CGRect(x: 0, y: progressViewHeight, width: self.webView.frame.size.width, height: progressViewHeight))
@@ -168,6 +204,8 @@ extension YYWebView: WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler 
 
     }
     
+    
+    
     // <a href="tel:13222223333”>打电话</a>
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         let url = navigationAction.request.url
@@ -192,6 +230,9 @@ extension YYWebView: WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler 
     }
 
     /* JS传值给iOS */
+    /*
+        js代码：window.webkit.messageHandlers.currentCookies.postMessage(document.cookie);
+     */
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
         if (message.name == kJS_Name) {
             // 打印所传过来的参数，只支持NSNumber, NSString, NSDate, NSArray, NSDictionary, and NSNull类型

@@ -59,13 +59,13 @@ class YYScrollADView: UIView {
     
     lazy var textView: UILabel = {
         let l = UILabel(frame: CGRect.zero)
-        l.backgroundColor = UIColor.orange
+        l.backgroundColor = UIColor.white
         return l
     }()
     
     lazy var textViewSuffix: UILabel = {
         let l = UILabel(frame: CGRect.zero)
-        l.backgroundColor = UIColor.yellow
+        l.backgroundColor = UIColor.white
         return l
     }()
     

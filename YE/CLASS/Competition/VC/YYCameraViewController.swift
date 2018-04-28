@@ -266,6 +266,7 @@ class YYCameraViewController: YYBaseViewController {
             break
             
         }
+        print(transform)
         switch img.imageOrientation {
         case .downMirrored:
             transform = CGAffineTransform(translationX: w, y: 0)

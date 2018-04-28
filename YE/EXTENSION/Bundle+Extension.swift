@@ -13,4 +13,8 @@ extension Bundle {
         let arr = path.components(separatedBy: ".")
         return Bundle.main.path(forResource: arr.first, ofType: arr.last, inDirectory: nil) ?? ""
     }
+    
+    static func yy_plistPath(_ name: YYPlistType) -> String {
+        return Bundle.main.path(forResource: name.rawValue, ofType: "plist", inDirectory: nil) ?? ""
+    }
 }

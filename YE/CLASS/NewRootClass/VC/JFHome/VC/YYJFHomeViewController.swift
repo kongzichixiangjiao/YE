@@ -23,8 +23,6 @@ class YYJFHomeViewController: YYBaseCollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.myTitle = "JF首页"
-        self.setupRightButton(.normal)
-        self.setupOtherRightButton(title: "show")
         
         initCollectionView()
         
@@ -33,13 +31,6 @@ class YYJFHomeViewController: YYBaseCollectionViewController {
         collectionView.reloadData()
     }
     
-    override func clickedRightButtonAction(_ sender: UIButton) {
-        self.yy_showTopSheet(message: "我是测试", isNav: true)
-    }
-    
-    override func clickedNavigationViewOtherRightButton(_ sender: UIButton) {
-        self.yy_hideTopSheet(isNav: true)
-    }
     
     override func initCollectionView() {
         let layout = YYBaseCollectionViewControllerLayout()

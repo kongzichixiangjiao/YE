@@ -137,37 +137,3 @@ extension UIViewController {
     
 }
 
-// 提醒
-
-extension UIViewController {
-    
-    func yy_showTopSheet(message: String, isNav: Bool) {
-        let height: CGFloat = 44
-        let v = UIView(frame: CGRect(x: 0, y: -height + (isNav ? 64 : 0) , width: self.view.frame.width, height: height))
-        v.tag = 20180313
-        v.backgroundColor = UIColor.orange
-        self.view.addSubview(v)
-        
-        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 3, options: .curveEaseOut, animations: {
-            v.frame = CGRect(x: 0, y: isNav ? 64 : 0, width: self.view.frame.width, height: height)
-        }) { (finish) in
-            if (finish) {
-                
-            }
-        }
-    }
-    
-    func yy_hideTopSheet(isNav: Bool) {
-        let height: CGFloat = 44
-        var v = self.view.viewWithTag(20180313)
-        UIView.animate(withDuration: 0.3, delay: 0, usingSpringWithDamping: 0.4, initialSpringVelocity: 3, options: .curveEaseOut, animations: {
-            v?.frame = CGRect(x: 0, y: -height + (isNav ? 64 : 0) , width: self.view.frame.width, height: height)
-        }) { (finish) in
-            if (finish) {
-                v?.removeFromSuperview()
-                v = nil
-            }
-        }
-    }
-    
-}

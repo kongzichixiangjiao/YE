@@ -49,9 +49,9 @@ class YYBaseViewController: UIViewController {
         }
     }
     
-    var leftButtonTitle: String? {
+    var leftButtonType: YYBaseNavigationViewButtonType? {
         didSet {
-            self.navigationView.backButton.setImage(UIImage(named: leftButtonTitle!), for: .normal)
+            self.navigationView.backButton.setImage(UIImage(named: (leftButtonType?.rawValue)!), for: .normal)
         }
     }
     
@@ -94,7 +94,7 @@ class YYBaseViewController: UIViewController {
         navigationView.isHiddenLeftButton = isHiddenLeftButton
     }
     
-    open func setupRightButton(_ type: YYBaseNavigationViewRightButtonTyep) {
+    open func setupRightButton(_ type: YYBaseNavigationViewButtonType) {
         navigationView.setupRightButton(type)
     }
     

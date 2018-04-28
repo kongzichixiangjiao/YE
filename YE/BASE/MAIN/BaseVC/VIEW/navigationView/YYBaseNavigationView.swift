@@ -8,8 +8,8 @@
 
 import UIKit
 
-enum YYBaseNavigationViewRightButtonTyep: String {
-    case service = "nav_service", finished = "finished", imSetting = "im_setting", normal = "normal", add = "nav_add", details = "im_details", mySetting = "my_setting"
+enum YYBaseNavigationViewButtonType: String {
+    case service = "nav_service", finished = "finished", imSetting = "im_setting", normal = "normal", add = "nav_add", details = "im_details", mySetting = "my_setting", newroot = "nav_push"
 }
 
 @objc
@@ -71,13 +71,15 @@ class YYBaseNavigationView: YYBaseView {
                 break
             case .mySetting:
                 break
+            case .newroot:
+                break
             }
         }
     }
     
-    open var leftButtonTitle: String? {
+    open var leftButtonType: YYBaseNavigationViewButtonType? {
         didSet {
-            self.backButton.setImage(UIImage(named: leftButtonTitle!), for: .normal)
+            self.backButton.setImage(UIImage(named: (leftButtonType?.rawValue)!), for: .normal)
         }
     }
     
@@ -98,7 +100,7 @@ class YYBaseNavigationView: YYBaseView {
     }()
     
     var rightButton: UIButton?
-    var rightButtonType: YYBaseNavigationViewRightButtonTyep?
+    var rightButtonType: YYBaseNavigationViewButtonType?
     
     @objc func rightButtonAction(_ sender: UIButton) {
         
@@ -147,7 +149,7 @@ class YYBaseNavigationView: YYBaseView {
         }
     }
     
-    func setupRightButton(_ type: YYBaseNavigationViewRightButtonTyep) {
+    func setupRightButton(_ type: YYBaseNavigationViewButtonType) {
         self.rightButtonType = type
         
         var b: UIButton
@@ -178,6 +180,10 @@ class YYBaseNavigationView: YYBaseView {
             b = "YYBaseNavigationViewImageButton".xibLoadView() as! UIButton
             b.setImage(UIImage(named: type.rawValue), for: .normal)
             break
+        case .newroot:
+            b = UIButton()
+            print("left button used")
+            break;
         }
         b.frame = CGRect(x: self.frame.size.width - YYBaseNavigationView.bW - space, y: self.frame.size.height - YYBaseNavigationView.bH, width: YYBaseNavigationView.bW, height: YYBaseNavigationView.bH)
         b.addTarget(self, action: #selector(rightButtonAction(_:)), for: .touchUpInside)

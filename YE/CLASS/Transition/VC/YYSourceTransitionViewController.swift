@@ -20,6 +20,7 @@ class YYSourceTransitionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         mDelegate = (self.navigationController?.delegate)!
     }
 
@@ -30,7 +31,6 @@ class YYSourceTransitionViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
     }
     
     @IBAction func move(_ sender: UITapGestureRecognizer) {

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>isNib</key>
+		<true/>
+		<key>name</key>
+		<string>push转场动画</string>
+		<key>tag</key>
+		<string>0</string>
+		<key>vcName</key>
+		<string>YYSourceTransitionViewController</string>
+	</dict>
+	<dict>
+		<key>isNib</key>
+		<false/>
+		<key>name</key>
+		<string>JFHome</string>
+		<key>tag</key>
+		<string>0</string>
+		<key>vcName</key>
+		<string>YYJFHomeViewController</string>
+	</dict>
+	<dict>
+		<key>isNib</key>
+		<true/>
+		<key>name</key>
+		<string>TopSheet</string>
+		<key>tag</key>
+		<string>0</string>
+		<key>vcName</key>
+		<string>YYTopSheetViewController</string>
+	</dict>
+</array>
+</plist>
