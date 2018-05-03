@@ -74,7 +74,7 @@ pod 'Kingfisher'
 
 #播放器控件
 #pod 'EZPlayer' // 项目必须适配横竖屏 项目内已经封装一层
-#pod 'LYPlayer' // 手势退出没有暂停播放器
+#pod 'LYPlayer'  # 手势退出没有暂停播放器
 
 #动画类
 #https://github.com/lkzhao/Hero

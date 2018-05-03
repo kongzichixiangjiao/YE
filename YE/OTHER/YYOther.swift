@@ -14,5 +14,4 @@ class YYOther {
 
 enum YYPlistType: String {
     case apply = "apply", comment = "comment", groupSetting = "IMGroupSetting", my = "my", setting = "setting", jfHome = "jf_home", testList = "testList"
-    
 }

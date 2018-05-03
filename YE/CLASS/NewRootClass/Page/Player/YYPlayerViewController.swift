@@ -45,6 +45,7 @@ class YYPlayerViewController: UIViewController {
         $0.urlString = "http://qiniu.puxinasset.com/099f507aed7c5799d5ff40386a1a9615.mp4"
     }
     
+    
     // 视频播放器
 //    lazy var playerView: LYPlayerView = {
 //        let playerView = LYPlayerView(url: "http://qiniu.puxinasset.com/099f507aed7c5799d5ff40386a1a9615.mp4".ga_url!)

@@ -32,5 +32,15 @@
 		<key>vcName</key>
 		<string>YYTopSheetViewController</string>
 	</dict>
+	<dict>
+		<key>isNib</key>
+		<true/>
+		<key>name</key>
+		<string>player</string>
+		<key>tag</key>
+		<string>0</string>
+		<key>vcName</key>
+		<string>YYPlayerViewController</string>
+	</dict>
 </array>
 </plist>

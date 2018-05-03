@@ -6,8 +6,23 @@
 	<dict>
 		<key>YYDrawerTableViewCell.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
-			<integer>31</integer>
+			<integer>1</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>DC6691781FFDB736004669EE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DC6691811FFDB736004669EE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

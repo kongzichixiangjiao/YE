@@ -11,6 +11,7 @@
 import UIKit
 import AVFoundation
 import SnapKit
+import YYPlayer
 
 public protocol LYPlayerViewDelegate {
     

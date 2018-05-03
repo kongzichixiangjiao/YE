@@ -8,14 +8,6 @@
 
 import UIKit
 
-//enum TestListPushType: String {
-//    case: jfHome = "YYJFHomeViewController"
-//}
-
-enum YYTestListPushType: String {
-    case jfHome = "YYJFHomeViewController"
-}
-
 class YYTestListViewController: YYBaseTableViewController {
     
     override func viewDidLoad() {
@@ -75,19 +67,9 @@ extension YYTestListViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let model = self.dataSource[indexPath.row] as! YYTestListModel
         
-        if (model.isNib) {
-            self.yy_pushXIB(nibName: model.vcName)
-//            let vc = YYSourceTransitionViewController(nibName: model.vcName, bundle: nil)
-//            self.navigationController?.pushViewController(vc, animated: true)
-        } else {
-            switch model.vcName {
-                case YYTestListPushType.jfHome.rawValue:
-                    self.yy_push(vc: YYJFHomeViewController())
-                break
-            default:
-                break
-            }
-        }
+        self.yy_push(vc: yy_getTargetVC(vcName: model.vcName)!)
+        
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
+

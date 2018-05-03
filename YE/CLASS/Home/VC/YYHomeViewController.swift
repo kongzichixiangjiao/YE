@@ -196,7 +196,6 @@ class YYHomeViewController: YYBaseTableViewController {
         self.myTitle = "首页"
         self.leftButtonType = .newroot
         self.setupRightButton(.details)
-        self.setupOtherRightButton(title: "播放器")
     }
         
     override func initTableView() {
@@ -269,11 +268,6 @@ class YYHomeViewController: YYBaseTableViewController {
 //        yy_push(storyboardName: "YYResizeImageViewController")
         
         yy_push(vc: YYADViewController(nibName: "YYADViewController", bundle: nil))
-    }
-    
-    override func clickedNavigationViewOtherRightButton(_ sender: UIButton) {
-//        push(YYEventDetailViewController())
-        push(YYPlayerViewController(nibName: "YYPlayerViewController", bundle: nil))
     }
     
     override func didReceiveMemoryWarning() {

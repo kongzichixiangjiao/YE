@@ -69,7 +69,7 @@ extension UIViewController {
         }
         nv.pushViewController(vc, animated: animated)
     }
-    /// PUSH XIB
+    /// PUSH XIB 只能展示VC view
     func yy_pushXIB(nibName: String, animated: Bool = true) {
         guard let nv = self.navigationController else {
             print("没有navigationController")
