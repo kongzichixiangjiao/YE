@@ -19,6 +19,8 @@ extension UIViewController {
             return YYSourceTransitionViewController(nibName: vcName, bundle: nil)
         case YYTestListPushType.player.rawValue:
             return YYPlayerViewController(nibName: vcName, bundle: nil)
+            case YYTestListPushType.customsForm.rawValue:
+            return PXCustomsFormViewController()
         default:
             break
         }

@@ -9,5 +9,5 @@
 import Foundation
 
 enum YYTestListPushType: String {
-    case jfHome = "YYJFHomeViewController", topSheet = "YYTopSheetViewController", sourceTransition = "YYSourceTransitionViewController", player = "YYPlayerViewController"
+    case jfHome = "YYJFHomeViewController", topSheet = "YYTopSheetViewController", sourceTransition = "YYSourceTransitionViewController", player = "YYPlayerViewController", customsForm = "PXCustomsFormViewController"
 }

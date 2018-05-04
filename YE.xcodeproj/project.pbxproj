@@ -382,6 +382,13 @@
 		DCAB5CD420033B4600A8CD87 /* YYActivityHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCAB5CD320033B4600A8CD87 /* YYActivityHeaderView.xib */; };
 		DCAB5CD720033DD100A8CD87 /* YYActivityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAB5CD520033DD100A8CD87 /* YYActivityDetailsViewController.swift */; };
 		DCAB5CD820033DD100A8CD87 /* YYActivityDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCAB5CD620033DD100A8CD87 /* YYActivityDetailsViewController.xib */; };
+		DCAF0C32209AFA13007BF505 /* PXCustomsFormHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAF0C2B209AFA12007BF505 /* PXCustomsFormHeaderCell.swift */; };
+		DCAF0C33209AFA13007BF505 /* PXCustomsFormHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCAF0C2C209AFA12007BF505 /* PXCustomsFormHeaderCell.xib */; };
+		DCAF0C34209AFA13007BF505 /* PXCustomsFormTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAF0C2D209AFA12007BF505 /* PXCustomsFormTextCell.swift */; };
+		DCAF0C35209AFA13007BF505 /* PXCustomsFormTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCAF0C2E209AFA12007BF505 /* PXCustomsFormTextCell.xib */; };
+		DCAF0C36209AFA13007BF505 /* PXCustomsFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAF0C30209AFA13007BF505 /* PXCustomsFormViewController.swift */; };
+		DCAF0C38209AFA53007BF505 /* PXCustomsForm.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCAF0C37209AFA53007BF505 /* PXCustomsForm.plist */; };
+		DCAF0C3B209AFF8F007BF505 /* PXCustomsFormModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCAF0C3A209AFF8F007BF505 /* PXCustomsFormModel.swift */; };
 		DCB75D662092FF45006D43C9 /* UIViewController+TopSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB75D652092FF45006D43C9 /* UIViewController+TopSheet.swift */; };
 		DCB75D682093036B006D43C9 /* YYTopSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCB75D672093036B006D43C9 /* YYTopSheetView.swift */; };
 		DCB75D6A20930375006D43C9 /* YYTopSheetView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCB75D6920930375006D43C9 /* YYTopSheetView.xib */; };
@@ -856,6 +863,13 @@
 		DCAB5CD320033B4600A8CD87 /* YYActivityHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYActivityHeaderView.xib; sourceTree = "<group>"; };
 		DCAB5CD520033DD100A8CD87 /* YYActivityDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYActivityDetailsViewController.swift; sourceTree = "<group>"; };
 		DCAB5CD620033DD100A8CD87 /* YYActivityDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYActivityDetailsViewController.xib; sourceTree = "<group>"; };
+		DCAF0C2B209AFA12007BF505 /* PXCustomsFormHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXCustomsFormHeaderCell.swift; sourceTree = "<group>"; };
+		DCAF0C2C209AFA12007BF505 /* PXCustomsFormHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PXCustomsFormHeaderCell.xib; sourceTree = "<group>"; };
+		DCAF0C2D209AFA12007BF505 /* PXCustomsFormTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXCustomsFormTextCell.swift; sourceTree = "<group>"; };
+		DCAF0C2E209AFA12007BF505 /* PXCustomsFormTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PXCustomsFormTextCell.xib; sourceTree = "<group>"; };
+		DCAF0C30209AFA13007BF505 /* PXCustomsFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PXCustomsFormViewController.swift; sourceTree = "<group>"; };
+		DCAF0C37209AFA53007BF505 /* PXCustomsForm.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PXCustomsForm.plist; sourceTree = "<group>"; };
+		DCAF0C3A209AFF8F007BF505 /* PXCustomsFormModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PXCustomsFormModel.swift; sourceTree = "<group>"; };
 		DCB75D652092FF45006D43C9 /* UIViewController+TopSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+TopSheet.swift"; sourceTree = "<group>"; };
 		DCB75D672093036B006D43C9 /* YYTopSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYTopSheetView.swift; sourceTree = "<group>"; };
 		DCB75D6920930375006D43C9 /* YYTopSheetView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YYTopSheetView.xib; sourceTree = "<group>"; };
@@ -1511,6 +1525,7 @@
 		DC0BB65E2099528300F0E8C7 /* Page */ = {
 			isa = PBXGroup;
 			children = (
+				DCED9009209AE88E00174FF2 /* JFGuWen */,
 				DC75E3DE1FD107A800332BE5 /* Player */,
 				DC9EA11C1FF5E209006FC7F6 /* Transition */,
 				DCB75D9B20932993006D43C9 /* TopSheet */,
@@ -2512,6 +2527,41 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		DCAF0C29209AFA12007BF505 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DCAF0C3A209AFF8F007BF505 /* PXCustomsFormModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DCAF0C2A209AFA12007BF505 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DCAF0C2B209AFA12007BF505 /* PXCustomsFormHeaderCell.swift */,
+				DCAF0C2C209AFA12007BF505 /* PXCustomsFormHeaderCell.xib */,
+				DCAF0C2D209AFA12007BF505 /* PXCustomsFormTextCell.swift */,
+				DCAF0C2E209AFA12007BF505 /* PXCustomsFormTextCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DCAF0C2F209AFA13007BF505 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				DCAF0C30209AFA13007BF505 /* PXCustomsFormViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		DCAF0C31209AFA13007BF505 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DCAF0C37209AFA53007BF505 /* PXCustomsForm.plist */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		DCB75D612092FF0D006D43C9 /* TopSheetView */ = {
 			isa = PBXGroup;
 			children = (
@@ -2690,6 +2740,17 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		DCED9009209AE88E00174FF2 /* JFGuWen */ = {
+			isa = PBXGroup;
+			children = (
+				DCAF0C29209AFA12007BF505 /* Model */,
+				DCAF0C31209AFA13007BF505 /* Source */,
+				DCAF0C2F209AFA13007BF505 /* VC */,
+				DCAF0C2A209AFA12007BF505 /* View */,
+			);
+			path = JFGuWen;
+			sourceTree = "<group>";
+		};
 		DCFC305D1FFB5D8900B2801E /* Alert */ = {
 			isa = PBXGroup;
 			children = (
@@ -2818,6 +2879,7 @@
 				DC60141B1FFF4BD20051D76D /* IMG_3091.jpg in Resources */,
 				94D38A4D1F39C23A00F974A6 /* YYCompetitionCommentCell.xib in Resources */,
 				DCB75D9A20932985006D43C9 /* YYJFTreasureItemCell.xib in Resources */,
+				DCAF0C35209AFA13007BF505 /* PXCustomsFormTextCell.xib in Resources */,
 				DC810E851FE26F23000D1C19 /* YYADViewController.xib in Resources */,
 				DC60140F1FFF4BD20051D76D /* 5.jpg in Resources */,
 				DC75E40B1FD12AA400332BE5 /* LYPlayer_lock-nor.png in Resources */,
@@ -2849,6 +2911,7 @@
 				94D38A361F39C23A00F974A6 /* YYIMAddFriendCell.xib in Resources */,
 				94D38A491F39C23A00F974A6 /* YYSettingFooterChangeButton.xib in Resources */,
 				DCFC30951FFB7E5C00B2801E /* YYAlertRootCell.xib in Resources */,
+				DCAF0C33209AFA13007BF505 /* PXCustomsFormHeaderCell.xib in Resources */,
 				94D38A241F39C23A00F974A6 /* YYApplyHeaderView.xib in Resources */,
 				DC511BD52099BAB800FE4935 /* Player_bottom_shadel.png in Resources */,
 				DCB75D9820932985006D43C9 /* YYJFTreasureHeaderView.xib in Resources */,
@@ -2870,6 +2933,7 @@
 				DCD6519920901A5B001AD58D /* YYTestListCell.xib in Resources */,
 				94D38A571F39C23A00F974A6 /* YYCompetitionReplyCell.xib in Resources */,
 				DC61E4B0204926B500CBA4F6 /* back_button_normal.png in Resources */,
+				DCAF0C38209AFA53007BF505 /* PXCustomsForm.plist in Resources */,
 				DCD4BDB52004BE2400094947 /* YYSourceTransitionViewController.xib in Resources */,
 				DCA8A4B41FD808E80042537E /* j.xcworkspace in Resources */,
 				DC61E4BA204926B500CBA4F6 /* select_yes.png in Resources */,
@@ -3207,6 +3271,7 @@
 				DC7006B32099B67C00C37320 /* YYPlayerView.swift in Sources */,
 				94D38A1D1F39C23A00F974A6 /* YYCompetitionListViewController.swift in Sources */,
 				DC7A49C91FCF95870028F308 /* YYSwiftDateViewController.swift in Sources */,
+				DCAF0C36209AFA13007BF505 /* PXCustomsFormViewController.swift in Sources */,
 				94D389B01F39C23A00F974A6 /* NSObject+Extension.swift in Sources */,
 				94D38A0E1F39C23A00F974A6 /* YYIMCreatChatRoomViewController.swift in Sources */,
 				DC30DAC61FCC1D8400AF7248 /* String+Extension.swift in Sources */,
@@ -3241,6 +3306,7 @@
 				94D38A2F1F39C23A00F974A6 /* YYModuleSelectedView.swift in Sources */,
 				94D389F11F39C23A00F974A6 /* GA_XIBRefreshHeaderView.swift in Sources */,
 				DCB75D682093036B006D43C9 /* YYTopSheetView.swift in Sources */,
+				DCAF0C3B209AFF8F007BF505 /* PXCustomsFormModel.swift in Sources */,
 				94D38A2A1F39C23A00F974A6 /* YYEventVideoCell.swift in Sources */,
 				DCD4BDBE2004C0F100094947 /* Sample.swift in Sources */,
 				94D38A271F39C23A00F974A6 /* YYApplyTextTableViewCell.swift in Sources */,
@@ -3249,6 +3315,7 @@
 				DC65BD601FD8E2A500204B7E /* Repository.swift in Sources */,
 				DC6691A71FFDBA37004669EE /* YYDrawerTableViewCell_EG.swift in Sources */,
 				DC964C0E1FECD95F006AA5F0 /* LikeButtonMaskLayer.swift in Sources */,
+				DCAF0C32209AFA13007BF505 /* PXCustomsFormHeaderCell.swift in Sources */,
 				DC75E3DD1FD1037A00332BE5 /* MediaItem.swift in Sources */,
 				DCA8A4B11FD808E80042537E /* MoyaProvider+Rx.swift in Sources */,
 				DCA8A4B21FD808E80042537E /* Router.swift in Sources */,
@@ -3335,6 +3402,7 @@
 				DC810E811FE2291C000D1C19 /* YYXIBBaseTableViewController.swift in Sources */,
 				94D38A011F39C23A00F974A6 /* Protocol.swift in Sources */,
 				DC7E7FCD1FD91E9B00859B00 /* RepositoryListViewModel.swift in Sources */,
+				DCAF0C34209AFA13007BF505 /* PXCustomsFormTextCell.swift in Sources */,
 				94D389CF1F39C23A00F974A6 /* YYApplyModel.swift in Sources */,
 				DC810E841FE26F23000D1C19 /* YYADViewController.swift in Sources */,
 				94D389F81F39C23A00F974A6 /* YYOnePixView.swift in Sources */,
