@@ -3,6 +3,8 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>isShowLine</key>
+		<true/>
 		<key>isSelected</key>
 		<false/>
 		<key>subtitle</key>
@@ -19,13 +21,15 @@
 				<key>isMust</key>
 				<true/>
 				<key>text</key>
-				<string>张某某</string>
+				<string></string>
+				<key>placeText</key>
+				<string>请输入客户姓名</string>
 				<key>isClicked</key>
 				<false/>
 				<key>isEdit</key>
-				<string>NO</string>
+				<false/>
 				<key>isLast</key>
-				<string>NO</string>
+				<false/>
 			</dict>
 			<dict>
 				<key>type</key>
@@ -35,13 +39,15 @@
 				<key>isMust</key>
 				<true/>
 				<key>text</key>
-				<string>张某某</string>
+				<string></string>
+				<key>placeText</key>
+				<string>请输入证件类型</string>
 				<key>isClicked</key>
 				<false/>
 				<key>isEdit</key>
-				<string>NO</string>
+				<false/>
 				<key>isLast</key>
-				<string>NO</string>
+				<false/>
 			</dict>
 			<dict>
 				<key>type</key>
@@ -51,13 +57,15 @@
 				<key>isMust</key>
 				<true/>
 				<key>text</key>
-				<string>张某某</string>
+				<string></string>
+				<key>placeText</key>
+				<string>请输入证件号码</string>
 				<key>isClicked</key>
 				<false/>
 				<key>isEdit</key>
-				<string>NO</string>
+				<false/>
 				<key>isLast</key>
-				<string>NO</string>
+				<false/>
 			</dict>
 			<dict>
 				<key>type</key>
@@ -67,17 +75,21 @@
 				<key>isMust</key>
 				<true/>
 				<key>text</key>
-				<string>张某某</string>
+				<string></string>
+				<key>placeText</key>
+				<string>请输入客户邮箱</string>
 				<key>isClicked</key>
 				<false/>
 				<key>isEdit</key>
-				<string>YES</string>
+				<true/>
 				<key>isLast</key>
-				<string>YES</string>
+				<true/>
 			</dict>
 		</array>
 	</dict>
 	<dict>
+		<key>isShowLine</key>
+		<true/>
 		<key>isSelected</key>
 		<false/>
 		<key>title</key>
@@ -94,13 +106,15 @@
 				<key>isMust</key>
 				<true/>
 				<key>text</key>
-				<string>张某某</string>
+				<string></string>
+				<key>placeText</key>
+				<string>请选择打款日期</string>
 				<key>isClicked</key>
 				<true/>
 				<key>isEdit</key>
-				<string>NO</string>
+				<false/>
 				<key>isLast</key>
-				<string>NO</string>
+				<false/>
 			</dict>
 			<dict>
 				<key>type</key>
@@ -110,17 +124,21 @@
 				<key>isMust</key>
 				<true/>
 				<key>text</key>
-				<string>100万元</string>
+				<string></string>
+				<key>placeText</key>
+				<string>请输入认购金额</string>
 				<key>isClicked</key>
 				<false/>
 				<key>isEdit</key>
-				<string>NO</string>
+				<false/>
 				<key>isLast</key>
-				<string>YES</string>
+				<true/>
 			</dict>
 		</array>
 	</dict>
 	<dict>
+		<key>isShowLine</key>
+		<true/>
 		<key>isSelected</key>
 		<true/>
 		<key>title</key>
@@ -137,13 +155,15 @@
 				<key>isMust</key>
 				<true/>
 				<key>text</key>
-				<string>张某某</string>
+				<string></string>
+				<key>placeText</key>
+				<string></string>
 				<key>isClicked</key>
 				<false/>
 				<key>isEdit</key>
-				<string>NO</string>
+				<false/>
 				<key>isLast</key>
-				<string>NO</string>
+				<false/>
 			</dict>
 			<dict>
 				<key>type</key>
@@ -153,13 +173,15 @@
 				<key>isMust</key>
 				<true/>
 				<key>text</key>
-				<string>张某某</string>
+				<string></string>
+				<key>placeText</key>
+				<string></string>
 				<key>isClicked</key>
 				<false/>
 				<key>isEdit</key>
-				<string>NO</string>
+				<false/>
 				<key>isLast</key>
-				<string>NO</string>
+				<false/>
 			</dict>
 			<dict>
 				<key>type</key>
@@ -169,13 +191,15 @@
 				<key>isMust</key>
 				<true/>
 				<key>text</key>
-				<string>张某某</string>
+				<string></string>
+				<key>placeText</key>
+				<string></string>
 				<key>isClicked</key>
 				<false/>
 				<key>isEdit</key>
-				<string>NO</string>
+				<false/>
 				<key>isLast</key>
-				<string>NO</string>
+				<false/>
 			</dict>
 			<dict>
 				<key>type</key>
@@ -185,18 +209,22 @@
 				<key>isMust</key>
 				<true/>
 				<key>text</key>
-				<string>张某某</string>
+				<string></string>
+				<key>placeText</key>
+				<string></string>
 				<key>isClicked</key>
 				<false/>
 				<key>isEdit</key>
-				<string>YES</string>
+				<true/>
 				<key>isLast</key>
-				<string>YES</string>
+				<true/>
 			</dict>
 		</array>
 	</dict>
 	<dict>
 		<key>isSelected</key>
+		<false/>
+		<key>isShowLine</key>
 		<false/>
 		<key>title</key>
 		<string>上传附件</string>
@@ -212,11 +240,13 @@
 				<key>isMust</key>
 				<true/>
 				<key>text</key>
-				<string>张某某</string>
+				<string></string>
+				<key>placeText</key>
+				<string></string>
 				<key>isClicked</key>
 				<false/>
 				<key>isEdit</key>
-				<string>NO</string>
+				<false/>
 				<key>img</key>
 				<data></data>
 			</dict>
@@ -228,11 +258,11 @@
 				<key>isMust</key>
 				<true/>
 				<key>text</key>
-				<string>张某某</string>
+				<string></string>
 				<key>isClicked</key>
 				<false/>
 				<key>isEdit</key>
-				<string>NO</string>
+				<false/>
 				<key>img</key>
 				<data></data>
 			</dict>
@@ -244,11 +274,13 @@
 				<key>isMust</key>
 				<true/>
 				<key>text</key>
-				<string>张某某</string>
+				<string></string>
+				<key>placeText</key>
+				<string></string>
 				<key>isClicked</key>
 				<false/>
 				<key>isEdit</key>
-				<string>NO</string>
+				<false/>
 				<key>img</key>
 				<data></data>
 			</dict>
@@ -260,11 +292,13 @@
 				<key>isMust</key>
 				<true/>
 				<key>text</key>
-				<string>张某某</string>
+				<string></string>
+				<key>placeText</key>
+				<string></string>
 				<key>isClicked</key>
 				<false/>
 				<key>isEdit</key>
-				<string>YES</string>
+				<true/>
 				<key>img</key>
 				<data></data>
 			</dict>
@@ -276,11 +310,13 @@
 				<key>isMust</key>
 				<true/>
 				<key>text</key>
-				<string>张某某</string>
+				<string></string>
+				<key>placeText</key>
+				<string></string>
 				<key>isClicked</key>
 				<false/>
 				<key>isEdit</key>
-				<string>YES</string>
+				<true/>
 				<key>img</key>
 				<data></data>
 			</dict>

@@ -40,20 +40,35 @@
                             <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择银行卡" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1g-nk-Kfv">
-                            <rect key="frame" x="210" y="17" width="80" height="16"/>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_arrows" translatesAutoresizingMaskIntoConstraints="NO" id="8QD-py-hzf">
+                            <rect key="frame" x="273" y="9" width="32" height="32"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wgb-WM-oYO">
+                            <rect key="frame" x="269" y="17.5" width="4" height="16"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Om4-IQ-o2X">
+                            <rect key="frame" x="269" y="0.0" width="36" height="50"/>
+                            <connections>
+                                <action selector="clickAction:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="MTg-qm-boh"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="RlQ-cp-3Qg" firstAttribute="leading" secondItem="7ps-vR-gx9" secondAttribute="trailing" constant="16" id="2H2-tf-7YE"/>
+                        <constraint firstItem="8QD-py-hzf" firstAttribute="leading" secondItem="Wgb-WM-oYO" secondAttribute="trailing" id="3Cf-oi-vlD"/>
+                        <constraint firstAttribute="trailing" secondItem="8QD-py-hzf" secondAttribute="trailing" constant="15" id="4bS-7D-maO"/>
                         <constraint firstItem="RlQ-cp-3Qg" firstAttribute="centerY" secondItem="HoN-dc-sbF" secondAttribute="centerY" id="Anr-Kh-r87"/>
-                        <constraint firstAttribute="trailing" secondItem="e1g-nk-Kfv" secondAttribute="trailing" constant="30" id="Ea1-qb-CDo"/>
+                        <constraint firstItem="Wgb-WM-oYO" firstAttribute="leading" secondItem="Om4-IQ-o2X" secondAttribute="leading" id="MGN-wR-pcI"/>
+                        <constraint firstItem="8QD-py-hzf" firstAttribute="centerY" secondItem="HoN-dc-sbF" secondAttribute="centerY" id="QQ8-RM-FK5"/>
+                        <constraint firstItem="Om4-IQ-o2X" firstAttribute="top" secondItem="HoN-dc-sbF" secondAttribute="top" id="Yl4-9l-TEg"/>
                         <constraint firstItem="7ps-vR-gx9" firstAttribute="leading" secondItem="HoN-dc-sbF" secondAttribute="leading" constant="15" id="ajB-nN-Lxc"/>
-                        <constraint firstItem="e1g-nk-Kfv" firstAttribute="centerY" secondItem="HoN-dc-sbF" secondAttribute="centerY" id="hX4-gn-5gv"/>
+                        <constraint firstItem="Wgb-WM-oYO" firstAttribute="centerY" secondItem="HoN-dc-sbF" secondAttribute="centerY" id="bY2-YB-6b5"/>
+                        <constraint firstAttribute="bottom" secondItem="Om4-IQ-o2X" secondAttribute="bottom" id="e5E-ve-FC4"/>
+                        <constraint firstItem="8QD-py-hzf" firstAttribute="trailing" secondItem="Om4-IQ-o2X" secondAttribute="trailing" id="jN2-Vh-PpL"/>
                         <constraint firstItem="7ps-vR-gx9" firstAttribute="centerY" secondItem="HoN-dc-sbF" secondAttribute="centerY" id="kt0-Ya-4o6"/>
                     </constraints>
                 </view>
@@ -79,9 +94,15 @@
             </constraints>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
             <connections>
+                <outlet property="iconImageView" destination="8QD-py-hzf" id="OsJ-Vx-5L1"/>
+                <outlet property="lineView" destination="ioh-uG-Xv6" id="Hcj-pV-29B"/>
+                <outlet property="subtileLabel" destination="Wgb-WM-oYO" id="o2u-6X-Ev6"/>
                 <outlet property="titleLabel" destination="RlQ-cp-3Qg" id="N4F-4w-ec7"/>
             </connections>
             <point key="canvasLocation" x="4" y="26.5"/>
         </collectionReusableView>
     </objects>
+    <resources>
+        <image name="my_arrows" width="32" height="32"/>
+    </resources>
 </document>

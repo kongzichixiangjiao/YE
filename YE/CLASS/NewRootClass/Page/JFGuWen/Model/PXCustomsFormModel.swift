@@ -11,6 +11,7 @@ import HandyJSON
 
 class PXCustomsFormModel: HandyJSON {
     var isSelected: Bool = false
+    var isShowLine: Bool = false
     var title = ""
     var subtitle = ""
     
@@ -25,6 +26,7 @@ class PXCustomsFormItemsModel: HandyJSON {
     
     var name = ""
     var text = ""
+    var placeText = ""
     var isMust = false
     var isEdit = false
     var isClicked = false 

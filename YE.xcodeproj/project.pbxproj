@@ -172,6 +172,15 @@
 		94D38A611F39C2F600F974A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D38A5E1F39C2F600F974A6 /* Main.storyboard */; };
 		94D38A631F39C33300F974A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94D38A621F39C33300F974A6 /* Assets.xcassets */; };
 		94DED68A1F7F38030036AE1F /* YYCDemo.c in Sources */ = {isa = PBXBuildFile; fileRef = 94DFE4131F581B6B004D71F3 /* YYCDemo.c */; };
+		DC0009A7209BFA650038D956 /* PXCustomsFormEditCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0009A5209BFA650038D956 /* PXCustomsFormEditCell.swift */; };
+		DC0009A8209BFA650038D956 /* PXCustomsFormEditCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC0009A6209BFA650038D956 /* PXCustomsFormEditCell.xib */; };
+		DC0009AB209C09860038D956 /* PXCustomsFormImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0009A9209C09860038D956 /* PXCustomsFormImageCell.swift */; };
+		DC0009AC209C09860038D956 /* PXCustomsFormImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC0009AA209C09860038D956 /* PXCustomsFormImageCell.xib */; };
+		DC0009AE209C2FE10038D956 /* PXDatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0009AD209C2FE10038D956 /* PXDatePickerView.swift */; };
+		DC0009B0209C2FEB0038D956 /* PXDatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC0009AF209C2FEB0038D956 /* PXDatePickerView.xib */; };
+		DC0009B2209C37F10038D956 /* PXManagerBankCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0009B1209C37F10038D956 /* PXManagerBankCardViewController.swift */; };
+		DC0009B8209C41310038D956 /* PXManagerBankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0009B6209C41310038D956 /* PXManagerBankCell.swift */; };
+		DC0009B9209C41310038D956 /* PXManagerBankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC0009B7209C41310038D956 /* PXManagerBankCell.xib */; };
 		DC04E2B82021664E00046CDC /* YYLockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC04E2B72021664E00046CDC /* YYLockViewController.swift */; };
 		DC0BB65D209951CC00F0E8C7 /* YYNewRootOther.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0BB65C209951CC00F0E8C7 /* YYNewRootOther.swift */; };
 		DC10DDFD1FEA12E500770158 /* YYTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC10DDFC1FEA12E500770158 /* YYTabBar.swift */; };
@@ -658,6 +667,15 @@
 		94DFE4111F5819F8004D71F3 /* YE-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YE-Bridging-Header.h"; sourceTree = "<group>"; };
 		94DFE4131F581B6B004D71F3 /* YYCDemo.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = YYCDemo.c; sourceTree = "<group>"; };
 		9B059CB7E9DD2575F5847CD7 /* Pods-YE.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YE.release.xcconfig"; path = "Pods/Target Support Files/Pods-YE/Pods-YE.release.xcconfig"; sourceTree = "<group>"; };
+		DC0009A5209BFA650038D956 /* PXCustomsFormEditCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PXCustomsFormEditCell.swift; sourceTree = "<group>"; };
+		DC0009A6209BFA650038D956 /* PXCustomsFormEditCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PXCustomsFormEditCell.xib; sourceTree = "<group>"; };
+		DC0009A9209C09860038D956 /* PXCustomsFormImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PXCustomsFormImageCell.swift; sourceTree = "<group>"; };
+		DC0009AA209C09860038D956 /* PXCustomsFormImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PXCustomsFormImageCell.xib; sourceTree = "<group>"; };
+		DC0009AD209C2FE10038D956 /* PXDatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PXDatePickerView.swift; sourceTree = "<group>"; };
+		DC0009AF209C2FEB0038D956 /* PXDatePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PXDatePickerView.xib; sourceTree = "<group>"; };
+		DC0009B1209C37F10038D956 /* PXManagerBankCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PXManagerBankCardViewController.swift; sourceTree = "<group>"; };
+		DC0009B6209C41310038D956 /* PXManagerBankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PXManagerBankCell.swift; sourceTree = "<group>"; };
+		DC0009B7209C41310038D956 /* PXManagerBankCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PXManagerBankCell.xib; sourceTree = "<group>"; };
 		DC04E2B72021664E00046CDC /* YYLockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYLockViewController.swift; sourceTree = "<group>"; };
 		DC0BB65C209951CC00F0E8C7 /* YYNewRootOther.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYNewRootOther.swift; sourceTree = "<group>"; };
 		DC10DDFC1FEA12E500770158 /* YYTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYTabBar.swift; sourceTree = "<group>"; };
@@ -1512,6 +1530,15 @@
 				DC6692CD1FFDD12E004669EE /* IntentsUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC0009B3209C3C9C0038D956 /* MangerBankView */ = {
+			isa = PBXGroup;
+			children = (
+				DC0009B6209C41310038D956 /* PXManagerBankCell.swift */,
+				DC0009B7209C41310038D956 /* PXManagerBankCell.xib */,
+			);
+			path = MangerBankView;
 			sourceTree = "<group>";
 		};
 		DC04E2B62021663C00046CDC /* Lock */ = {
@@ -2538,10 +2565,17 @@
 		DCAF0C2A209AFA12007BF505 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DC0009B3209C3C9C0038D956 /* MangerBankView */,
 				DCAF0C2B209AFA12007BF505 /* PXCustomsFormHeaderCell.swift */,
 				DCAF0C2C209AFA12007BF505 /* PXCustomsFormHeaderCell.xib */,
 				DCAF0C2D209AFA12007BF505 /* PXCustomsFormTextCell.swift */,
 				DCAF0C2E209AFA12007BF505 /* PXCustomsFormTextCell.xib */,
+				DC0009A5209BFA650038D956 /* PXCustomsFormEditCell.swift */,
+				DC0009A6209BFA650038D956 /* PXCustomsFormEditCell.xib */,
+				DC0009A9209C09860038D956 /* PXCustomsFormImageCell.swift */,
+				DC0009AA209C09860038D956 /* PXCustomsFormImageCell.xib */,
+				DC0009AD209C2FE10038D956 /* PXDatePickerView.swift */,
+				DC0009AF209C2FEB0038D956 /* PXDatePickerView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2550,6 +2584,7 @@
 			isa = PBXGroup;
 			children = (
 				DCAF0C30209AFA13007BF505 /* PXCustomsFormViewController.swift */,
+				DC0009B1209C37F10038D956 /* PXManagerBankCardViewController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -2907,6 +2942,7 @@
 				DC61E4B4204926B500CBA4F6 /* flash_close_pic.png in Resources */,
 				DC75E40A1FD12AA400332BE5 /* LYPlayer_fullscreen.png in Resources */,
 				DC3858EA1FC7E8B700244649 /* yy_rsa_public_key.pem in Resources */,
+				DC0009AC209C09860038D956 /* PXCustomsFormImageCell.xib in Resources */,
 				94D38A531F39C23A00F974A6 /* YYCompetitionDetailsHeaderView.xib in Resources */,
 				94D38A361F39C23A00F974A6 /* YYIMAddFriendCell.xib in Resources */,
 				94D38A491F39C23A00F974A6 /* YYSettingFooterChangeButton.xib in Resources */,
@@ -2929,6 +2965,7 @@
 				DC511BDB2099BAB800FE4935 /* Player_pause.png in Resources */,
 				DC511BDE2099BAB800FE4935 /* Player_slider.png in Resources */,
 				94D38A371F39C23A00F974A6 /* YYIMDetailsAddFriendButton.xib in Resources */,
+				DC0009A8209BFA650038D956 /* PXCustomsFormEditCell.xib in Resources */,
 				DC511BDD2099BAB800FE4935 /* Player_shrinkscreen.png in Resources */,
 				DCD6519920901A5B001AD58D /* YYTestListCell.xib in Resources */,
 				94D38A571F39C23A00F974A6 /* YYCompetitionReplyCell.xib in Resources */,
@@ -2979,6 +3016,7 @@
 				DC74B8831FDA2DD100640964 /* YYRxSwiftViewCell.xib in Resources */,
 				DC8A700A1FD4F8EE006D22D6 /* LYPlayer_center_pause.png in Resources */,
 				DC61E4B9204926B500CBA4F6 /* select_no.png in Resources */,
+				DC0009B0209C2FEB0038D956 /* PXDatePickerView.xib in Resources */,
 				DC60140D1FFF4BD20051D76D /* 3.jpg in Resources */,
 				DC75E3E21FD107BC00332BE5 /* YYPlayerViewController.xib in Resources */,
 				DC6014141FFF4BD20051D76D /* IMG_0490.jpg in Resources */,
@@ -3029,6 +3067,7 @@
 				DC78ED692022AD6900962369 /* signUp.html in Resources */,
 				94D38A0D1F39C23A00F974A6 /* YYIMCreatChatGroupViewController.xib in Resources */,
 				94D38A221F39C23A00F974A6 /* YYApplyAddImageTableViewCell.xib in Resources */,
+				DC0009B9209C41310038D956 /* PXManagerBankCell.xib in Resources */,
 				94D389A41F39C23A00F974A6 /* YYBaseNavigationViewImageButton.xib in Resources */,
 				DC511BDF2099BAB800FE4935 /* Player_top_shadel.png in Resources */,
 				DC60141D1FFF4BD20051D76D /* IMG_8227.JPG in Resources */,
@@ -3180,8 +3219,10 @@
 				DCD651A1209022D5001AD58D /* NSArray+Extension.swift in Sources */,
 				DCD4BDB42004BE2400094947 /* YYSourceTransitionViewController.swift in Sources */,
 				DCA26B6320940DC60033229D /* View+GestureRecognizer.swift in Sources */,
+				DC0009AE209C2FE10038D956 /* PXDatePickerView.swift in Sources */,
 				94D38A351F39C23A00F974A6 /* YYIMAddFriendCell.swift in Sources */,
 				DC3858F51FC7E9A100244649 /* YYReuseCollectionView.swift in Sources */,
+				DC0009A7209BFA650038D956 /* PXCustomsFormEditCell.swift in Sources */,
 				94D38A0A1F39C23A00F974A6 /* YYIMContactSelectionViewController.swift in Sources */,
 				DCDAF7F81FDE7E2100E7CE3A /* YYResizeImageViewController.swift in Sources */,
 				DCB75D9E20933015006D43C9 /* YYTopSheetViewController.swift in Sources */,
@@ -3276,6 +3317,7 @@
 				94D38A0E1F39C23A00F974A6 /* YYIMCreatChatRoomViewController.swift in Sources */,
 				DC30DAC61FCC1D8400AF7248 /* String+Extension.swift in Sources */,
 				DC74B87D1FDA2DD100640964 /* YYRxSwiftTestTableViewController.swift in Sources */,
+				DC0009AB209C09860038D956 /* PXCustomsFormImageCell.swift in Sources */,
 				DC75E3F71FD12A1E00332BE5 /* LYPlayerConfigure.swift in Sources */,
 				DCA8A4AC1FD808E80042537E /* Log.swift in Sources */,
 				DC7E7FCF1FD9206400859B00 /* RepositoryViewModel.swift in Sources */,
@@ -3341,10 +3383,12 @@
 				DCAB5CD720033DD100A8CD87 /* YYActivityDetailsViewController.swift in Sources */,
 				94D38A541F39C23A00F974A6 /* YYCompetitionListCell.swift in Sources */,
 				DC65BD5D1FD8E16F00204B7E /* YYRxMVCViewController.swift in Sources */,
+				DC0009B2209C37F10038D956 /* PXManagerBankCardViewController.swift in Sources */,
 				DCB75D8F20932985006D43C9 /* YYJFHomeCircleViewCell.swift in Sources */,
 				94D389B61F39C23A00F974A6 /* UIView+Extension.swift in Sources */,
 				DC5F86001FD7A27B0092FDB4 /* AppDelegate+HuanXin.swift in Sources */,
 				DCB75D8C20932985006D43C9 /* YYJFTreasureViewController.swift in Sources */,
+				DC0009B8209C41310038D956 /* PXManagerBankCell.swift in Sources */,
 				DC75E3D01FD0F34100332BE5 /* YYTargetType+Extension.swift in Sources */,
 				94D18E3B1F50111E00750F87 /* YYXIBBaseViewController.swift in Sources */,
 				94D38A3E1F39C23A00F974A6 /* YYIMGroupInfoSectionView.swift in Sources */,

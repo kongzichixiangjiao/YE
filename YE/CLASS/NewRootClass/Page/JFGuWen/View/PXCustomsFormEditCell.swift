@@ -1,21 +1,19 @@
 //
-//  PXCustomsFormTextCell.swift
+//  PXCustomsFormEditCell.swift
 //  YE
 //
-//  Created by 侯佳男 on 2018/5/3.
+//  Created by 侯佳男 on 2018/5/4.
 //  Copyright © 2018年 侯佳男. All rights reserved.
 //
 
 import UIKit
 
-class PXCustomsFormTextCell: UICollectionViewCell {
+class PXCustomsFormEditCell: UICollectionViewCell, UITextFieldDelegate {
     
-    static let identifier = "PXCustomsFormTextCell"
+    static let identifier = "PXCustomsFormEditCell"
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var textLabel: UILabel!
-    
-    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var textField: UITextField!
     
     var model: PXCustomsFormItemsModel! {
         didSet {
@@ -30,16 +28,22 @@ class PXCustomsFormTextCell: UICollectionViewCell {
             attributed.addAttribute(NSAttributedStringKey.kern, value: kernValue, range: NSMakeRange(0, attributed.length - 1))
             titleLabel.attributedText = attributed
             
-            textLabel.text = model.isClicked ? model.placeText : model.text
-            
-            iconImageView.isHidden = !model.isClicked
+            textField.placeholder = model.placeText
+            textField.text = model.text
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        textField.delegate = self
+    }
+
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        model.text = textField.text!
     }
     
 }
-
-
