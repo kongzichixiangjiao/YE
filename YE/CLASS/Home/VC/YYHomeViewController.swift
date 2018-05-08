@@ -221,7 +221,7 @@ class YYHomeViewController: YYBaseTableViewController {
         tableHeaderView.showLineView(10)
         
         tableHeaderView.imageNames = ["IMG_2787.jpg", "IMG_3260.JPG", "IMG_2719.jpg", "IMG_3027.jpg", "IMG_3027.jpg"]
-        tableHeaderView.data = [["title" : "活动", "icon" : "home_middle_activity"], ["title" : "直播", "icon" : "home_middle_live"], ["title" : "周边", "icon" : "home_middle_surrounding"], ["title" : "文章", "icon" : "home_middle_article"], ["title" : "首页", "icon" : "home_middle_article"], ["title" : "金服", "icon" : "home_middle_surrounding"]]
+        tableHeaderView.data = [["title" : "负能量", "icon" : "home_middle_activity"], ["title" : "活动", "icon" : "home_middle_activity"], ["title" : "直播", "icon" : "home_middle_live"], ["title" : "周边", "icon" : "home_middle_surrounding"], ["title" : "文章", "icon" : "home_middle_article"], ["title" : "首页", "icon" : "home_middle_article"], ["title" : "金服", "icon" : "home_middle_surrounding"]]
         
         return tableHeaderView
     }
@@ -230,21 +230,24 @@ class YYHomeViewController: YYBaseTableViewController {
     func topViewModuleSelected(_ row: Int) {
         switch row {
         case 0:
-            self.push(YYActivityListViewController())
+            yy_push(storyboardName: "NegativeEnergy")
             break
         case 1:
-            self.push(YYCompetitionListViewController())
+            self.push(YYActivityListViewController())
             break
         case 2:
-            self.push(YYLiveListViewController())
+            self.push(YYCompetitionListViewController())
             break
         case 3:
-            self.push(YYSurroundingListViewController())
+            self.push(YYLiveListViewController())
             break
         case 4:
-            self.push(YYJFHomeViewController())
+            self.push(YYSurroundingListViewController())
             break
         case 5:
+            self.push(YYJFHomeViewController())
+            break
+        case 6:
             self.push(YYJFTreasureViewController())
             break
         default:

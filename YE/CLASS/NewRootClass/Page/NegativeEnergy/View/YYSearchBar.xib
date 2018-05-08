@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="YYSearchBar" customModule="YE" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="512" height="85"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oc1-DH-9ep">
+                    <rect key="frame" x="452" y="0.0" width="60" height="85"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="gym-W1-PA9"/>
+                    </constraints>
+                    <state key="normal" title="cancle"/>
+                    <connections>
+                        <action selector="cancleAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="sCn-dz-hQd"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="src-Fw-gHB">
+                    <rect key="frame" x="0.0" y="0.0" width="512" height="85"/>
+                    <color key="backgroundColor" red="0.70588235290000001" green="0.53333333329999999" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="textFieldChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="rJc-Ll-B46"/>
+                        <action selector="textFieldEditingChanged:" destination="iN0-l3-epB" eventType="editingChanged" id="LgK-Xq-8uW"/>
+                    </connections>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="src-Fw-gHB" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="8ni-cQ-aCh"/>
+                <constraint firstItem="src-Fw-gHB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="9sq-fW-yOr"/>
+                <constraint firstItem="oc1-DH-9ep" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ef2-ZC-7Px"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="src-Fw-gHB" secondAttribute="bottom" id="fEw-M4-4hh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="oc1-DH-9ep" secondAttribute="bottom" id="hjS-Ne-oOz"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="src-Fw-gHB" secondAttribute="trailing" id="uh4-g0-uyK"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="oc1-DH-9ep" secondAttribute="trailing" id="yOk-Mc-ZUb"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="cancleButton" destination="oc1-DH-9ep" id="j8m-uS-tb9"/>
+                <outlet property="rightConstraint" destination="uh4-g0-uyK" id="PzJ-Ur-eVa"/>
+                <outlet property="textField" destination="src-Fw-gHB" id="dFm-vA-HpY"/>
+            </connections>
+            <point key="canvasLocation" x="102" y="-237.5"/>
+        </view>
+    </objects>
+</document>

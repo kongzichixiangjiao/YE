@@ -6,6 +6,16 @@
 		<key>isNib</key>
 		<true/>
 		<key>name</key>
+		<string>负能量</string>
+		<key>tag</key>
+		<string>0</string>
+		<key>vcName</key>
+		<string>YYNegativeEnergyViewController</string>
+	</dict>
+	<dict>
+		<key>isNib</key>
+		<true/>
+		<key>name</key>
 		<string>push转场动画</string>
 		<key>tag</key>
 		<string>0</string>
