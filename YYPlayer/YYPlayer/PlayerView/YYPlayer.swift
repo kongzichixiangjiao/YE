@@ -37,6 +37,8 @@ open class YYPlayer: NSObject {
     
     override init() {
         super.init()
+        
+        
     }
     
     // url
