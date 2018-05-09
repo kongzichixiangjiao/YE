@@ -63,12 +63,12 @@ open class YYPlayer: NSObject {
     }()
     
     public lazy var playerLayer: AVPlayerLayer = {
-        let playerLayer = AVPlayerLayer(player: player)
+        let playerLayer = AVPlayerLayer(player: self.player)
         return playerLayer
     }()
     
     lazy var player: AVPlayer = {
-        let player = AVPlayer(playerItem: playerItem)
+        let player = AVPlayer(playerItem: self.playerItem)
         return player
     }()
     
