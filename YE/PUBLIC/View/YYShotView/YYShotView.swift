@@ -6,6 +6,14 @@
 //  Copyright © 2017年 侯佳男. All rights reserved.
 //  按钮点击弹出框
 
+/*
+ YYShotView.show(sender, items: [YYEventShotViewList.creatGroup.rawValue, YYEventShotViewList.addFriend.rawValue, YYEventShotViewList.presentStepNumber.rawValue]) {
+        [weak self] title in
+            if let weakSelf = self {
+                weakSelf.clickedShotViewList(title)
+            }
+        }
+ */
 import UIKit
 
 extension YYShotView {

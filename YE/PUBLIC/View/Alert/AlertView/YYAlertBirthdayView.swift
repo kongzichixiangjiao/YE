@@ -17,7 +17,7 @@ extension UIView: BirthdayProtocol {
         get {
             guard let b: YYAlertBirthdayView = objc_getAssociatedObject(self, &YYAlertKey.kBirthdayView) as? YYAlertBirthdayView else {
                 let birthdayView = Bundle.main.loadNibNamed("YYAlertBirthdayView", owner: self, options: nil)?.last as! YYAlertBirthdayView
-                birthdayView.frame = CGRect(x: 0, y: MainScreenHeight, width: MainScreenWidth, height: YYAlertBirthdayView.height)
+                birthdayView.frame = CGRect(x: 0, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width, height: YYAlertBirthdayView.height)
                 birthdayView.myDelegate = self
                 objc_setAssociatedObject(self, &YYAlertKey.kBirthdayView, birthdayView, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
                 return birthdayView
@@ -32,16 +32,16 @@ extension UIView: BirthdayProtocol {
     func showBirthdayView(_ handler: @escaping DidSelectedHandler) {
         self.alertWindow.addSubview(self.birthdayView)
         UIView.animate(withDuration: 0.25) {
-            self.birthdayView.frame = CGRect(x: 0, y: MainScreenHeight - YYAlertBirthdayView.height, width: MainScreenWidth, height: YYAlertBirthdayView.height)
+            self.birthdayView.frame = CGRect(x: 0, y: UIScreen.main.bounds.height - YYAlertBirthdayView.height, width: UIScreen.main.bounds.width, height: YYAlertBirthdayView.height)
         }
         
-        self.didSelectedHandler = handler
+        self.ga_didSelectedHandler = handler
         objc_setAssociatedObject(self, &YYAlertKey.kDidSelectedHandler, handler, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
     }
 
     func hideBirthdayView() {
         UIView.animate(withDuration: 0.25, animations: { 
-            self.birthdayView.frame = CGRect(x: 0, y: MainScreenHeight, width: MainScreenWidth, height: YYAlertBirthdayView.height)
+            self.birthdayView.frame = CGRect(x: 0, y: UIScreen.main.bounds.height, width: UIScreen.main.bounds.width, height: YYAlertBirthdayView.height)
         }) { (bo) in
             objc_setAssociatedObject(self, &YYAlertKey.kBirthdayView, nil, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
             objc_setAssociatedObject(self, &YYAlertKey.kDidSelectedHandler, nil, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
@@ -55,7 +55,7 @@ extension UIView: YYAlertBirthdayViewDelegate {
     }
     
     func value(_ date: Date) {
-        self.didSelectedHandler!(9999, date)
+        self.ga_didSelectedHandler!(9999, date)
         ga_dissmissBlackWindow()
     }
 }

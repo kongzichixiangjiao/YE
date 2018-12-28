@@ -186,6 +186,7 @@
 		DC10DDFD1FEA12E500770158 /* YYTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC10DDFC1FEA12E500770158 /* YYTabBar.swift */; };
 		DC10DE001FEA46AB00770158 /* MainRoot.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC10DDFE1FEA46AB00770158 /* MainRoot.storyboard */; };
 		DC10DE021FEA486A00770158 /* YYMainRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC10DE011FEA486A00770158 /* YYMainRootViewController.swift */; };
+		DC2598AE20F45A8F008C8A57 /* address_new.plist in Resources */ = {isa = PBXBuildFile; fileRef = DC2598AD20F45A8E008C8A57 /* address_new.plist */; };
 		DC30DAC61FCC1D8400AF7248 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC30DAC51FCC1D8400AF7248 /* String+Extension.swift */; };
 		DC3858E81FC7E8B700244649 /* rsa.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3858E51FC7E8B700244649 /* rsa.swift */; };
 		DC3858E91FC7E8B700244649 /* yy_private_key.pem in Resources */ = {isa = PBXBuildFile; fileRef = DC3858E61FC7E8B700244649 /* yy_private_key.pem */; };
@@ -283,6 +284,7 @@
 		DC6691A71FFDBA37004669EE /* YYDrawerTableViewCell_EG.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6691A61FFDBA37004669EE /* YYDrawerTableViewCell_EG.swift */; };
 		DC680762208F1B4D00ADE4BA /* YYProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC680761208F1B4D00ADE4BA /* YYProgressView.swift */; };
 		DC680765208F1EAA00ADE4BA /* YYLineProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC680764208F1EAA00ADE4BA /* YYLineProgressView.swift */; };
+		DC6C271D2137E86C0091CFD8 /* ScrollView+PlaceHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6C271C2137E86B0091CFD8 /* ScrollView+PlaceHolder.swift */; };
 		DC70066D20999AC300C37320 /* YYDrawerTableViewCell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC70066C20999AC300C37320 /* YYDrawerTableViewCell.framework */; };
 		DC70066F20999AC300C37320 /* YYPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC70066E20999AC300C37320 /* YYPlayer.framework */; };
 		DC70067120999AC300C37320 /* YYPresentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC70067020999AC300C37320 /* YYPresentation.framework */; };
@@ -297,7 +299,6 @@
 		DC7006B22099B67C00C37320 /* YYPlayerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC7006B02099B67B00C37320 /* YYPlayerView.xib */; };
 		DC7006B32099B67C00C37320 /* YYPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7006B12099B67C00C37320 /* YYPlayerView.swift */; };
 		DC749EE71FF1D8C300D5E2B8 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC749EE61FF1D8C300D5E2B8 /* UITableView+Extension.swift */; };
-		DC749EE91FF1D90500D5E2B8 /* UITableView+PlaceHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC749EE81FF1D90500D5E2B8 /* UITableView+PlaceHolder.swift */; };
 		DC74B87A1FDA2DD100640964 /* YYRxSwiftNewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74B86C1FDA2DD100640964 /* YYRxSwiftNewsModel.swift */; };
 		DC74B87B1FDA2DD100640964 /* YYRxSwiftPlusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC74B86E1FDA2DD100640964 /* YYRxSwiftPlusViewController.swift */; };
 		DC74B87C1FDA2DD100640964 /* YYRxSwiftPlusViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC74B86F1FDA2DD100640964 /* YYRxSwiftPlusViewController.xib */; };
@@ -694,6 +695,7 @@
 		DC10DDFC1FEA12E500770158 /* YYTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYTabBar.swift; sourceTree = "<group>"; };
 		DC10DDFF1FEA46AB00770158 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = MainRoot.storyboard; sourceTree = "<group>"; };
 		DC10DE011FEA486A00770158 /* YYMainRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYMainRootViewController.swift; sourceTree = "<group>"; };
+		DC2598AD20F45A8E008C8A57 /* address_new.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = address_new.plist; sourceTree = "<group>"; };
 		DC30DAC51FCC1D8400AF7248 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		DC3858E51FC7E8B700244649 /* rsa.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = rsa.swift; sourceTree = "<group>"; };
 		DC3858E61FC7E8B700244649 /* yy_private_key.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = yy_private_key.pem; sourceTree = "<group>"; };
@@ -792,6 +794,7 @@
 		DC6692CD1FFDD12E004669EE /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		DC680761208F1B4D00ADE4BA /* YYProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYProgressView.swift; sourceTree = "<group>"; };
 		DC680764208F1EAA00ADE4BA /* YYLineProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YYLineProgressView.swift; sourceTree = "<group>"; };
+		DC6C271C2137E86B0091CFD8 /* ScrollView+PlaceHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ScrollView+PlaceHolder.swift"; sourceTree = "<group>"; };
 		DC70066C20999AC300C37320 /* YYDrawerTableViewCell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YYDrawerTableViewCell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC70066E20999AC300C37320 /* YYPlayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YYPlayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC70067020999AC300C37320 /* YYPresentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = YYPresentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -800,7 +803,6 @@
 		DC7006B02099B67B00C37320 /* YYPlayerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYPlayerView.xib; sourceTree = "<group>"; };
 		DC7006B12099B67C00C37320 /* YYPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYPlayerView.swift; sourceTree = "<group>"; };
 		DC749EE61FF1D8C300D5E2B8 /* UITableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
-		DC749EE81FF1D90500D5E2B8 /* UITableView+PlaceHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+PlaceHolder.swift"; sourceTree = "<group>"; };
 		DC74B86C1FDA2DD100640964 /* YYRxSwiftNewsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYRxSwiftNewsModel.swift; sourceTree = "<group>"; };
 		DC74B86E1FDA2DD100640964 /* YYRxSwiftPlusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YYRxSwiftPlusViewController.swift; sourceTree = "<group>"; };
 		DC74B86F1FDA2DD100640964 /* YYRxSwiftPlusViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YYRxSwiftPlusViewController.xib; sourceTree = "<group>"; };
@@ -2207,7 +2209,7 @@
 		DC749F571FF21DCA00D5E2B8 /* EmptyTableView */ = {
 			isa = PBXGroup;
 			children = (
-				DC749EE81FF1D90500D5E2B8 /* UITableView+PlaceHolder.swift */,
+				DC6C271C2137E86B0091CFD8 /* ScrollView+PlaceHolder.swift */,
 				94D389181F39C23900F974A6 /* YYEmptyTableView.swift */,
 			);
 			path = EmptyTableView;
@@ -2417,6 +2419,7 @@
 				DC7CC453209FFBA600216980 /* YYNegativeEnergyResultCell.swift */,
 				DC7CC454209FFBA600216980 /* YYNegativeEnergyResultCell.xib */,
 				DC7CC45720A001EF00216980 /* YYNegativeEnergyAdvanceCell.swift */,
+				DC2598AD20F45A8E008C8A57 /* address_new.plist */,
 				DC7CC45820A001EF00216980 /* YYNegativeEnergyAdvanceCell.xib */,
 				DC7CC46320A04E0600216980 /* YYNegativeEnergyAdvanceItemCell.swift */,
 				DC7CC46420A04E0600216980 /* YYNegativeEnergyAdvanceItemCell.xib */,
@@ -3050,6 +3053,7 @@
 				94D38A3D1F39C23A00F974A6 /* YYIMGroupInfoCell.xib in Resources */,
 				DC75E40F1FD12AA400332BE5 /* LYPlayer_slider.png in Resources */,
 				DC6014131FFF4BD20051D76D /* IMG_0487.jpg in Resources */,
+				DC2598AE20F45A8F008C8A57 /* address_new.plist in Resources */,
 				DC3858E91FC7E8B700244649 /* yy_private_key.pem in Resources */,
 				DC7CC45C20A0328800216980 /* Search.storyboard in Resources */,
 				DC511BDB2099BAB800FE4935 /* Player_pause.png in Resources */,
@@ -3289,6 +3293,7 @@
 				94D38A3C1F39C23A00F974A6 /* YYIMGroupInfoCell.swift in Sources */,
 				94D38A091F39C23A00F974A6 /* YYEaseUsersListViewController.swift in Sources */,
 				94D389FA1F39C23A00F974A6 /* YYShotView.swift in Sources */,
+				DC6C271D2137E86C0091CFD8 /* ScrollView+PlaceHolder.swift in Sources */,
 				94D389A11F39C23A00F974A6 /* YYBaseTableViewController.swift in Sources */,
 				94D389AD1F39C23A00F974A6 /* Bundle+Extension.swift in Sources */,
 				94D38A1C1F39C23A00F974A6 /* YYCompetitionDetailsViewController.swift in Sources */,
@@ -3324,7 +3329,6 @@
 				DCFABD5D1FEB664100E5E997 /* DispatchQueue+Extension.swift in Sources */,
 				DC75E3DC1FD1037A00332BE5 /* MediaManager.swift in Sources */,
 				DC65BD621FD8E2DD00204B7E /* RepositoryCell.swift in Sources */,
-				DC749EE91FF1D90500D5E2B8 /* UITableView+PlaceHolder.swift in Sources */,
 				94D38A301F39C23A00F974A6 /* YYHomeBasicCell.swift in Sources */,
 				DCFC30761FFB5D8900B2801E /* YYAlertSelectedView.swift in Sources */,
 				DC511BE32099C2C400FE4935 /* YYDownloadManager.swift in Sources */,

@@ -9,7 +9,7 @@
 import UIKit
 import Foundation
 
-// MARK: 计算宽度
+// MARK: 计算宽高
 extension String {
     func ga_widthWith(_ fontSize: CGFloat, height: CGFloat) -> CGFloat {
         let font = UIFont.systemFont(ofSize: fontSize)

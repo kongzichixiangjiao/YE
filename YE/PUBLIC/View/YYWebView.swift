@@ -204,8 +204,6 @@ extension YYWebView: WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler 
 
     }
     
-    
-    
     // <a href="tel:13222223333”>打电话</a>
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         let url = navigationAction.request.url

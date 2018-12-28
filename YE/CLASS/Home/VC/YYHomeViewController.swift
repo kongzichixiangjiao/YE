@@ -258,9 +258,9 @@ class YYHomeViewController: YYBaseTableViewController {
     // MARK: 扫码事件
     override func clickedLeftButtonAction() {
         print("扫码")
-        _ = YYSourceTransitionViewController(nibName: "YYSourceTransitionViewController", bundle: nil)
+//        _ = YYSourceTransitionViewController(nibName: "YYSourceTransitionViewController", bundle: nil)
 //        yy_push(vc: vc)
-//        yy_push(vc: YYRootViewController())
+        yy_push(vc: YYRootViewController())
         
         let newRoot = "NewRoot".yy_storyboard().instantiateInitialViewController()
         yy_push(vc: newRoot!)
@@ -268,9 +268,9 @@ class YYHomeViewController: YYBaseTableViewController {
     
     override func clickedRightButtonAction(_ sender: UIButton) {
 //        push(YYTestViewController())
-//        yy_push(storyboardName: "YYResizeImageViewController")
+        yy_push(storyboardName: "YYResizeImageViewController")
         
-        yy_push(vc: YYADViewController(nibName: "YYADViewController", bundle: nil))
+//        yy_push(vc: YYADViewController(nibName: "YYADViewController", bundle: nil))
     }
     
     override func didReceiveMemoryWarning() {

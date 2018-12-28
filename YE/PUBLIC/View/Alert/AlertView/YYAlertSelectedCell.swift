@@ -13,7 +13,6 @@ public var kYYAlertSelectedCellHeight: CGFloat = 44
 
 class YYAlertSelectedCell: YYBaseTableViewCell {
 
-    static let identifier: String = "YYAlertSelectedCell"
     static let height: CGFloat = 44
     
     @IBOutlet weak var myTitleLabel: UILabel!

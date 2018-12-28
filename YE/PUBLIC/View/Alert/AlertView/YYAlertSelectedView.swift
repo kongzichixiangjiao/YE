@@ -12,14 +12,14 @@ typealias DidSelectedHandler = (_: Int, _ obj: Any?) -> ()
 
 // MARK: selected
 protocol SelectedProtocol {
-    var tableView: UITableView { set get }
-    var didSelectedHandler: DidSelectedHandler? { set get }
-    var selectedData: [Any]? { set get }
-    var headerView: YYAlertSelectedTableViewHeaderView { set get }
+    var ga_tableView: UITableView { set get }
+    var ga_didSelectedHandler: DidSelectedHandler? { set get }
+    var ga_selectedData: [Any]? { set get }
+    var ga_headerView: YYAlertSelectedTableViewHeaderView { set get }
 }
 
 extension UIView: SelectedProtocol {
-    var headerView: YYAlertSelectedTableViewHeaderView {
+    var ga_headerView: YYAlertSelectedTableViewHeaderView {
         get {
             guard let h: YYAlertSelectedTableViewHeaderView = objc_getAssociatedObject(self, &YYAlertKey.kSelectedHeaderView) as? YYAlertSelectedTableViewHeaderView else {
                 let headerView = Bundle.main.loadNibNamed("YYAlertSelectedTableViewHeaderView", owner: self, options: nil)?.last as! YYAlertSelectedTableViewHeaderView
@@ -36,7 +36,7 @@ extension UIView: SelectedProtocol {
         }
     }
 
-    var selectedData: [Any]? {
+    var ga_selectedData: [Any]? {
         get {
             guard let d: [Any] = objc_getAssociatedObject(self, &YYAlertKey.kSelectedData) as? [Any] else {
                 
@@ -49,7 +49,7 @@ extension UIView: SelectedProtocol {
         }
     }
     
-    var didSelectedHandler: DidSelectedHandler? {
+    var ga_didSelectedHandler: DidSelectedHandler? {
         get {
             guard let handler: DidSelectedHandler = objc_getAssociatedObject(self, &YYAlertKey.kDidSelectedHandler) as? DidSelectedHandler else {
                 
@@ -62,11 +62,11 @@ extension UIView: SelectedProtocol {
         }
     }
     
-    var tableView: UITableView {
+    var ga_tableView: UITableView {
         get {
             guard let tableView: UITableView = objc_getAssociatedObject(self, &YYAlertKey.kTableView) as? UITableView else {
                 let t = UITableView()
-                t.frame = CGRect(x: 0, y: 0, width: self.alertWindow.bounds.size.width * 0.5, height: self.selectedData!.count.cgFloat * kYYAlertSelectedCellHeight)
+                t.frame = CGRect(x: 0, y: 0, width: self.alertWindow.bounds.size.width * 0.5, height: self.ga_selectedData!.count.cgFloat * kYYAlertSelectedCellHeight)
                 t.delegate = self
                 t.dataSource = self
                 t.isUserInteractionEnabled = true
@@ -94,20 +94,20 @@ extension UIView: SelectedProtocol {
     }
     
     func showSelectedLoading(_ title: String = "请选择", data: [Any], _ handler: @escaping DidSelectedHandler) {
-        self.selectedData = data
+        self.ga_selectedData = data
         objc_setAssociatedObject(self, &YYAlertKey.kSelectedData, data, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         
         self.alertWindow.gestureRecognizers?.removeAll()
-        self.tableView.frame = CGRect(x: 0, y: 0, width: self.alertWindow.bounds.size.width * 0.5, height: self.selectedData!.count.cgFloat * kYYAlertSelectedCellHeight)
-        self.tableView.center = self.alertWindow.center
+        self.ga_tableView.frame = CGRect(x: 0, y: 0, width: self.alertWindow.bounds.size.width * 0.5, height: self.ga_selectedData!.count.cgFloat * kYYAlertSelectedCellHeight)
+        self.ga_tableView.center = self.alertWindow.center
         
-        self.alertWindow.addSubview(self.tableView)
+        self.alertWindow.addSubview(self.ga_tableView)
         
-        self.alertWindow.addSubview(self.headerView)
-        self.headerView.myTitle = title
-        self.headerView.frame = CGRect(x: self.tableView.x, y: self.tableView.y - kYYAlertSelectedTableViewHeaderViewHeight, width: self.alertWindow.bounds.size.width * 0.5, height: kYYAlertSelectedTableViewHeaderViewHeight)
+        self.alertWindow.addSubview(self.ga_headerView)
+        self.ga_headerView.myTitle = title
+        self.ga_headerView.frame = CGRect(x: self.ga_tableView.x, y: self.ga_tableView.y - kYYAlertSelectedTableViewHeaderViewHeight, width: self.alertWindow.bounds.size.width * 0.5, height: kYYAlertSelectedTableViewHeaderViewHeight)
         
-        self.didSelectedHandler = handler
+        self.ga_didSelectedHandler = handler
         objc_setAssociatedObject(self, &YYAlertKey.kDidSelectedHandler, handler, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
     }
 
@@ -131,7 +131,7 @@ extension UIView: UITableViewDelegate, UITableViewDataSource {
     }
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let d = self.selectedData else {
+        guard let d = self.ga_selectedData else {
             return 0
         }
         return d.count
@@ -143,12 +143,12 @@ extension UIView: UITableViewDelegate, UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: YYAlertSelectedCell = tableView.dequeueReusableCell(withIdentifier: kYYAlertSelectedCell) as! YYAlertSelectedCell
-        cell.myTitle = self.selectedData?[indexPath.row] as? String
+        cell.myTitle = self.ga_selectedData?[indexPath.row] as? String
         return cell
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.didSelectedHandler?(indexPath.row, nil)
+        self.ga_didSelectedHandler?(indexPath.row, nil)
         ga_dissmissBlackWindow()
         tableView.deselectRow(at: indexPath, animated: true);
     }

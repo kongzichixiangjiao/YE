@@ -12,9 +12,8 @@ import UIKit
 public let TabBarHeight: CGFloat = 49
 public let NavigationViewHeight: CGFloat = 64
 
-public let MainScreenScale = UIScreen.main.scale
-public let MainScreenWidth = UIScreen.main.bounds.width
-public let MainScreenHeight = UIScreen.main.bounds.height
+public let MainScreenWidth = UIScreen.main.bounds.size.width
+public let MainScreenHeight = UIScreen.main.bounds.size.height
 
 public let ScreenWidth = UIScreen.main.bounds.size.width
 public let ScreenHeight = UIScreen.main.bounds.size.height
